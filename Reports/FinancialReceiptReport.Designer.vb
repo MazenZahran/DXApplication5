@@ -137,6 +137,11 @@ Partial Public Class FinancialReceiptReport
         Me.XrLabel44 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel36 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel35 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.ChecksTotal = New DevExpress.XtraReports.Parameters.Parameter()
+        Me.XrLabel52 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel53 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.ChecksCount = New DevExpress.XtraReports.Parameters.Parameter()
+        Me.XrLabel54 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.CrmDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
@@ -913,17 +918,17 @@ Partial Public Class FinancialReceiptReport
         '
         'ReportFooter
         '
-        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel51, Me.XrLabel50, Me.XrLabel34, Me.XrLabel49, Me.XrLabel48, Me.XrLabel47, Me.XrLabel46, Me.XrLabel45, Me.XrLabel44, Me.XrLabel36, Me.XrLabel35})
+        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel54, Me.XrLabel53, Me.XrLabel52, Me.XrLabel51, Me.XrLabel50, Me.XrLabel34, Me.XrLabel49, Me.XrLabel48, Me.XrLabel47, Me.XrLabel46, Me.XrLabel45, Me.XrLabel44, Me.XrLabel36, Me.XrLabel35})
         Me.ReportFooter.HeightF = 130.0!
         Me.ReportFooter.Name = "ReportFooter"
         '
         'XrLabel51
         '
         Me.XrLabel51.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel51.LocationFloat = New DevExpress.Utils.PointFloat(510.3749!, 9.999974!)
+        Me.XrLabel51.LocationFloat = New DevExpress.Utils.PointFloat(487.8755!, 9.999974!)
         Me.XrLabel51.Name = "XrLabel51"
         Me.XrLabel51.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel51.SizeF = New System.Drawing.SizeF(70.24948!, 22.99998!)
+        Me.XrLabel51.SizeF = New System.Drawing.SizeF(92.7489!, 22.99998!)
         Me.XrLabel51.StylePriority.UseBorders = False
         Me.XrLabel51.Text = "شيكات اجلة"
         '
@@ -1038,6 +1043,48 @@ Partial Public Class FinancialReceiptReport
         Me.XrLabel35.StylePriority.UseBorders = False
         Me.XrLabel35.Text = "XrLabel35"
         '
+        'ChecksTotal
+        '
+        Me.ChecksTotal.Description = "الشيكات الاجلة"
+        Me.ChecksTotal.Name = "ChecksTotal"
+        Me.ChecksTotal.Type = GetType(Integer)
+        Me.ChecksTotal.ValueInfo = "0"
+        '
+        'XrLabel52
+        '
+        Me.XrLabel52.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding(Me.ChecksTotal, "Text", "")})
+        Me.XrLabel52.LocationFloat = New DevExpress.Utils.PointFloat(583.5406!, 9.999974!)
+        Me.XrLabel52.Name = "XrLabel52"
+        Me.XrLabel52.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
+        Me.XrLabel52.SizeF = New System.Drawing.SizeF(183.3755!, 23.0!)
+        Me.XrLabel52.Text = "XrLabel52"
+        '
+        'XrLabel53
+        '
+        Me.XrLabel53.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel53.LocationFloat = New DevExpress.Utils.PointFloat(487.8755!, 32.99999!)
+        Me.XrLabel53.Name = "XrLabel53"
+        Me.XrLabel53.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel53.SizeF = New System.Drawing.SizeF(92.7489!, 22.99998!)
+        Me.XrLabel53.StylePriority.UseBorders = False
+        Me.XrLabel53.Text = "عدد الشيكات الاجلة"
+        '
+        'ChecksCount
+        '
+        Me.ChecksCount.Description = "عدد الشيكات"
+        Me.ChecksCount.Name = "ChecksCount"
+        Me.ChecksCount.Type = GetType(Integer)
+        Me.ChecksCount.ValueInfo = "0"
+        '
+        'XrLabel54
+        '
+        Me.XrLabel54.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding(Me.ChecksCount, "Text", "")})
+        Me.XrLabel54.LocationFloat = New DevExpress.Utils.PointFloat(583.5406!, 32.99999!)
+        Me.XrLabel54.Name = "XrLabel54"
+        Me.XrLabel54.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
+        Me.XrLabel54.SizeF = New System.Drawing.SizeF(183.3755!, 23.0!)
+        Me.XrLabel54.Text = "XrLabel54"
+        '
         'FinancialReceiptReport
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportHeader, Me.ReportFooter})
@@ -1048,7 +1095,7 @@ Partial Public Class FinancialReceiptReport
         Me.FilterString = "[RecNO] = ?Parameter1"
         Me.FormattingRuleSheet.AddRange(New DevExpress.XtraReports.UI.FormattingRule() {Me.FormattingRule1})
         Me.Margins = New System.Drawing.Printing.Margins(35, 41, 126, 104)
-        Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() {Me.Parameter1, Me.Parameter2, Me.Balance})
+        Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() {Me.Parameter1, Me.Parameter2, Me.Balance, Me.ChecksTotal, Me.ChecksCount})
         Me.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
         Me.RightToLeftLayout = DevExpress.XtraReports.UI.RightToLeftLayout.Yes
         Me.ScriptLanguage = DevExpress.XtraReports.ScriptLanguage.VisualBasic
@@ -1127,4 +1174,9 @@ Partial Public Class FinancialReceiptReport
     Friend WithEvents XrLabel34 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents Balance As DevExpress.XtraReports.Parameters.Parameter
     Friend WithEvents XrLabel51 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel52 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents ChecksTotal As DevExpress.XtraReports.Parameters.Parameter
+    Friend WithEvents XrLabel54 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents ChecksCount As DevExpress.XtraReports.Parameters.Parameter
+    Friend WithEvents XrLabel53 As DevExpress.XtraReports.UI.XRLabel
 End Class

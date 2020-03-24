@@ -19,51 +19,52 @@ Partial Class FinanceChequsImages
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim SelectQuery1 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
-        Dim Column1 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression1 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table1 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim Column2 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression2 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column3 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression3 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column4 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression4 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column5 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression5 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column6 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression6 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column7 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression7 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column8 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression8 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column9 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression9 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column10 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression10 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column11 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression11 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column12 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression12 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim SelectQuery2 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
+        Dim Column13 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression13 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table2 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim Column14 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression14 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column15 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression15 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column16 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression16 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column17 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression17 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column18 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression18 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column19 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression19 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column20 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression20 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column21 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression21 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column22 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression22 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column23 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression23 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column24 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression24 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim QueryParameter3 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter4 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FinanceChequsImages))
-        Dim TableColumnDefinition1 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition2 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition3 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableRowDefinition1 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition2 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition3 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableSpan1 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TileViewItemElement1 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement2 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement3 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement4 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TableColumnDefinition4 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition5 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition6 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableRowDefinition4 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition5 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition6 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableSpan2 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TileViewItemElement5 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement6 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement7 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement8 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
         Me.colFrontImage = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.colCHECK_NO = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.colACCOUNT_NO = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.colIB_BANK_ID = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
-        Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
+        Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource()
         Me.TileView1 = New DevExpress.XtraGrid.Views.Tile.TileView()
         Me.colID = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.colBANK_ID = New DevExpress.XtraGrid.Columns.TileViewColumn()
@@ -73,6 +74,7 @@ Partial Class FinanceChequsImages
         Me.colRUN_DATE = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.colRUN_USER = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.colRearimage = New DevExpress.XtraGrid.Columns.TileViewColumn()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TileView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -121,59 +123,68 @@ Partial Class FinanceChequsImages
         '
         Me.SqlDataSource1.ConnectionName = "ChequesConnectionString"
         Me.SqlDataSource1.Name = "SqlDataSource1"
-        ColumnExpression1.ColumnName = "ID"
-        Table1.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""723"" />"
-        Table1.Name = "Checks"
-        ColumnExpression1.Table = Table1
-        Column1.Expression = ColumnExpression1
-        ColumnExpression2.ColumnName = "BANK_ID"
-        ColumnExpression2.Table = Table1
-        Column2.Expression = ColumnExpression2
-        ColumnExpression3.ColumnName = "BRANCH_ID"
-        ColumnExpression3.Table = Table1
-        Column3.Expression = ColumnExpression3
-        ColumnExpression4.ColumnName = "IB_BANK_ID"
-        ColumnExpression4.Table = Table1
-        Column4.Expression = ColumnExpression4
-        ColumnExpression5.ColumnName = "IB_BRANCH_ID"
-        ColumnExpression5.Table = Table1
-        Column5.Expression = ColumnExpression5
-        ColumnExpression6.ColumnName = "SORT_ID"
-        ColumnExpression6.Table = Table1
-        Column6.Expression = ColumnExpression6
-        ColumnExpression7.ColumnName = "CHECK_NO"
-        ColumnExpression7.Table = Table1
-        Column7.Expression = ColumnExpression7
-        ColumnExpression8.ColumnName = "ACCOUNT_NO"
-        ColumnExpression8.Table = Table1
-        Column8.Expression = ColumnExpression8
-        ColumnExpression9.ColumnName = "RUN_DATE"
-        ColumnExpression9.Table = Table1
-        Column9.Expression = ColumnExpression9
-        ColumnExpression10.ColumnName = "RUN_USER"
-        ColumnExpression10.Table = Table1
-        Column10.Expression = ColumnExpression10
-        ColumnExpression11.ColumnName = "FrontImage"
-        ColumnExpression11.Table = Table1
-        Column11.Expression = ColumnExpression11
-        ColumnExpression12.ColumnName = "Rearimage"
-        ColumnExpression12.Table = Table1
-        Column12.Expression = ColumnExpression12
-        SelectQuery1.Columns.Add(Column1)
-        SelectQuery1.Columns.Add(Column2)
-        SelectQuery1.Columns.Add(Column3)
-        SelectQuery1.Columns.Add(Column4)
-        SelectQuery1.Columns.Add(Column5)
-        SelectQuery1.Columns.Add(Column6)
-        SelectQuery1.Columns.Add(Column7)
-        SelectQuery1.Columns.Add(Column8)
-        SelectQuery1.Columns.Add(Column9)
-        SelectQuery1.Columns.Add(Column10)
-        SelectQuery1.Columns.Add(Column11)
-        SelectQuery1.Columns.Add(Column12)
-        SelectQuery1.Name = "Checks"
-        SelectQuery1.Tables.Add(Table1)
-        Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {SelectQuery1})
+        ColumnExpression13.ColumnName = "ID"
+        Table2.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""723"" />"
+        Table2.Name = "Checks"
+        ColumnExpression13.Table = Table2
+        Column13.Expression = ColumnExpression13
+        ColumnExpression14.ColumnName = "BANK_ID"
+        ColumnExpression14.Table = Table2
+        Column14.Expression = ColumnExpression14
+        ColumnExpression15.ColumnName = "BRANCH_ID"
+        ColumnExpression15.Table = Table2
+        Column15.Expression = ColumnExpression15
+        ColumnExpression16.ColumnName = "IB_BANK_ID"
+        ColumnExpression16.Table = Table2
+        Column16.Expression = ColumnExpression16
+        ColumnExpression17.ColumnName = "IB_BRANCH_ID"
+        ColumnExpression17.Table = Table2
+        Column17.Expression = ColumnExpression17
+        ColumnExpression18.ColumnName = "SORT_ID"
+        ColumnExpression18.Table = Table2
+        Column18.Expression = ColumnExpression18
+        ColumnExpression19.ColumnName = "CHECK_NO"
+        ColumnExpression19.Table = Table2
+        Column19.Expression = ColumnExpression19
+        ColumnExpression20.ColumnName = "ACCOUNT_NO"
+        ColumnExpression20.Table = Table2
+        Column20.Expression = ColumnExpression20
+        ColumnExpression21.ColumnName = "RUN_DATE"
+        ColumnExpression21.Table = Table2
+        Column21.Expression = ColumnExpression21
+        ColumnExpression22.ColumnName = "RUN_USER"
+        ColumnExpression22.Table = Table2
+        Column22.Expression = ColumnExpression22
+        ColumnExpression23.ColumnName = "FrontImage"
+        ColumnExpression23.Table = Table2
+        Column23.Expression = ColumnExpression23
+        ColumnExpression24.ColumnName = "Rearimage"
+        ColumnExpression24.Table = Table2
+        Column24.Expression = ColumnExpression24
+        SelectQuery2.Columns.Add(Column13)
+        SelectQuery2.Columns.Add(Column14)
+        SelectQuery2.Columns.Add(Column15)
+        SelectQuery2.Columns.Add(Column16)
+        SelectQuery2.Columns.Add(Column17)
+        SelectQuery2.Columns.Add(Column18)
+        SelectQuery2.Columns.Add(Column19)
+        SelectQuery2.Columns.Add(Column20)
+        SelectQuery2.Columns.Add(Column21)
+        SelectQuery2.Columns.Add(Column22)
+        SelectQuery2.Columns.Add(Column23)
+        SelectQuery2.Columns.Add(Column24)
+        SelectQuery2.FilterString = "[Checks.CHECK_NO] = ?CheckNo And [Checks.ACCOUNT_NO] = ?AccNo"
+        SelectQuery2.GroupFilterString = ""
+        SelectQuery2.MetaSerializable = Nothing
+        SelectQuery2.Name = "Checks"
+        QueryParameter3.Name = "CheckNo"
+        QueryParameter3.Type = GetType(String)
+        QueryParameter4.Name = "AccNo"
+        QueryParameter4.Type = GetType(String)
+        SelectQuery2.Parameters.Add(QueryParameter3)
+        SelectQuery2.Parameters.Add(QueryParameter4)
+        SelectQuery2.Tables.Add(Table2)
+        Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {SelectQuery2})
         Me.SqlDataSource1.ResultSchemaSerializable = resources.GetString("SqlDataSource1.ResultSchemaSerializable")
         '
         'TileView1
@@ -182,53 +193,53 @@ Partial Class FinanceChequsImages
         Me.TileView1.GridControl = Me.GridControl1
         Me.TileView1.Name = "TileView1"
         Me.TileView1.OptionsFind.AlwaysVisible = True
-        Me.TileView1.OptionsTiles.ItemSize = New System.Drawing.Size(340, 144)
+        Me.TileView1.OptionsTiles.ItemSize = New System.Drawing.Size(592, 440)
         Me.TileView1.OptionsTiles.Orientation = System.Windows.Forms.Orientation.Vertical
         Me.TileView1.OptionsTiles.RowCount = 0
-        TableColumnDefinition1.Length.Value = 76.0R
-        TableColumnDefinition2.Length.Value = 71.0R
-        TableColumnDefinition3.Length.Value = 77.0R
-        Me.TileView1.TileColumns.Add(TableColumnDefinition1)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition2)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition3)
-        TableRowDefinition1.Length.Value = 100.0R
-        TableRowDefinition2.Length.Value = 13.0R
-        TableRowDefinition3.Length.Value = 15.0R
-        Me.TileView1.TileRows.Add(TableRowDefinition1)
-        Me.TileView1.TileRows.Add(TableRowDefinition2)
-        Me.TileView1.TileRows.Add(TableRowDefinition3)
-        TableSpan1.ColumnSpan = 3
-        TableSpan1.RowSpan = 2
-        Me.TileView1.TileSpans.Add(TableSpan1)
-        TileViewItemElement1.Column = Me.colFrontImage
-        TileViewItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement1.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement1.Text = "colFrontImage"
-        TileViewItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement2.Column = Me.colCHECK_NO
-        TileViewItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement2.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement2.RowIndex = 2
-        TileViewItemElement2.Text = "colCHECK_NO"
-        TileViewItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement3.Column = Me.colACCOUNT_NO
-        TileViewItemElement3.ColumnIndex = 2
-        TileViewItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement3.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement3.RowIndex = 2
-        TileViewItemElement3.Text = "colACCOUNT_NO"
-        TileViewItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement4.Column = Me.colIB_BANK_ID
-        TileViewItemElement4.ColumnIndex = 1
-        TileViewItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement4.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement4.RowIndex = 2
-        TileViewItemElement4.Text = "colIB_BANK_ID"
-        TileViewItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        Me.TileView1.TileTemplate.Add(TileViewItemElement1)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement2)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement3)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement4)
+        TableColumnDefinition4.Length.Value = 77.0R
+        TableColumnDefinition5.Length.Value = 71.0R
+        TableColumnDefinition6.Length.Value = 77.0R
+        Me.TileView1.TileColumns.Add(TableColumnDefinition4)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition5)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition6)
+        TableRowDefinition4.Length.Value = 245.0R
+        TableRowDefinition5.Length.Value = 3.0R
+        TableRowDefinition6.Length.Value = 30.0R
+        Me.TileView1.TileRows.Add(TableRowDefinition4)
+        Me.TileView1.TileRows.Add(TableRowDefinition5)
+        Me.TileView1.TileRows.Add(TableRowDefinition6)
+        TableSpan2.ColumnSpan = 3
+        TableSpan2.RowSpan = 2
+        Me.TileView1.TileSpans.Add(TableSpan2)
+        TileViewItemElement5.Column = Me.colFrontImage
+        TileViewItemElement5.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement5.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement5.Text = "colFrontImage"
+        TileViewItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement6.Column = Me.colCHECK_NO
+        TileViewItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement6.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement6.RowIndex = 2
+        TileViewItemElement6.Text = "colCHECK_NO"
+        TileViewItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement7.Column = Me.colACCOUNT_NO
+        TileViewItemElement7.ColumnIndex = 2
+        TileViewItemElement7.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement7.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement7.RowIndex = 2
+        TileViewItemElement7.Text = "colACCOUNT_NO"
+        TileViewItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement8.Column = Me.colIB_BANK_ID
+        TileViewItemElement8.ColumnIndex = 1
+        TileViewItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement8.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement8.RowIndex = 2
+        TileViewItemElement8.Text = "colIB_BANK_ID"
+        TileViewItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        Me.TileView1.TileTemplate.Add(TileViewItemElement5)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement6)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement7)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement8)
         '
         'colID
         '
@@ -286,11 +297,22 @@ Partial Class FinanceChequsImages
         Me.colRearimage.Visible = True
         Me.colRearimage.VisibleIndex = 11
         '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton1.Location = New System.Drawing.Point(12, 52)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(117, 39)
+        Me.SimpleButton1.TabIndex = 1
+        Me.SimpleButton1.Text = "طباعة"
+        '
         'FinanceChequsImages
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(990, 585)
+        Me.Controls.Add(Me.SimpleButton1)
         Me.Controls.Add(Me.GridControl1)
         Me.Name = "FinanceChequsImages"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -317,4 +339,5 @@ Partial Class FinanceChequsImages
     Friend WithEvents colRUN_USER As DevExpress.XtraGrid.Columns.TileViewColumn
     Friend WithEvents colFrontImage As DevExpress.XtraGrid.Columns.TileViewColumn
     Friend WithEvents colRearimage As DevExpress.XtraGrid.Columns.TileViewColumn
+    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
 End Class

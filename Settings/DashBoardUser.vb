@@ -282,4 +282,14 @@ Public Class DashBoardUser
     Private Sub SimpleButton7_Click(sender As Object, e As EventArgs) Handles SimpleButton7.Click
         GetCurrExchange()
     End Sub
+
+
+    Private Sub GetTasks()
+        Dim sql As New SQLControl
+        Dim SqlString As String = "Select * from CRMEvents where ToUser=" & My.Settings.UserName & " or ToUser = '*' "
+        sql.CRMRunQuery(SqlString)
+        If sql.SQLDS.Tables.Count = 0 Then Exit Sub
+        Me.GridControl1.DataSource = sql.SQLDS.Tables(0)
+
+    End Sub
 End Class

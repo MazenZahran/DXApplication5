@@ -30,7 +30,7 @@ Public Class CRMTasks
         'If TaskMonth = 1 Then TaskMonth = 12
 
         'Me.TaskMonthText.Text = CType(TaskMonth, String)
-        Dim TaskMonth As Integer = 201801
+        Dim TaskMonth As String = TaskMonthText.Text
 
         Me.TaskStatusText.Text = "مفتوحة"
         Me.TaskTypeCombo.Text = "دين" '
@@ -76,6 +76,11 @@ Public Class CRMTasks
 
         If result = System.Windows.Forms.DialogResult.Yes Then
             '      Try
+
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800013", My.Settings.UserName, "True")
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800013", My.Settings.UserName, "True")
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800013", My.Settings.UserName, "True")
+
             Dim TaskID As String = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "TaskID"), String)
 
             Dim sql As New SQLControl
@@ -85,6 +90,10 @@ Public Class CRMTasks
             Dim sql2 As New SQLControl
             Dim SQLUpdateDate As String = "Update [CRM].[dbo].[CRMTasks]  set [CloseDate] = CONVERT(DATETIME, '" & strDate & "', 102) where [TaskID]= " & TaskID
             sql2.CRMRunQuery(SQLUpdateDate)
+
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800013", My.Settings.UserName, "True")
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800013", My.Settings.UserName, "True")
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800013", My.Settings.UserName, "True")
 
             If CType(Global.DevExpress.XtraEditors.XtraMessageBox.Show(CType("تم تحصيل واغلاق المهمة، هل تريد ارسال رسالة الى المحصل", String), CType("تأكيد", String), CType(Global.System.Windows.Forms.MessageBoxButtons.YesNo, Global.System.Windows.Forms.MessageBoxButtons)), Global.System.Windows.Forms.DialogResult) = Global.System.Windows.Forms.DialogResult.Yes Then
                 Dim msg As String = DevExpress.XtraEditors.XtraInputBox.Show("ملاحظة المحصل", " ادخل ملاحظات للمحصل حول دفعة الزبون", "")
@@ -106,14 +115,28 @@ Public Class CRMTasks
     Private Sub RepositoryItemButtonEdit2_Click(sender As Object, e As EventArgs) Handles RepositoryItemButtonEdit2.Click
 
         '  MsgBox("تم التاجيل")
-        My.Forms.CRMEditTaskDate.TextEdit1.Text = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "Note"), String)
-        My.Forms.CRMEditTaskDate.LookUpEdit1.EditValue = Me.LookUpEdit1.EditValue
-        My.Forms.CRMEditTaskDate.DateEdit1.EditValue = Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "AccrualDate")
-        My.Forms.CRMEditTaskDate.TaskIDText.Text = CStr(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "TaskID"))
-        My.Forms.CRMEditTaskDate.CustomerNameText.Text = CStr(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustomerName"))
-        My.Forms.CRMEditTaskDate.OwnUserTextEdit.Text = CType(Me.LookUpEdit1.EditValue, String)
+        Dim forms As New CRMEditTaskDate
+        CRMEditTaskDate.Visible = False
+        With forms
+            .TextEdit1.Text = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "Note"), String)
+            .LookUpEdit1.EditValue = Me.LookUpEdit1.EditValue
+            .DateEdit1.EditValue = Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "AccrualDate")
+            .TaskIDText.Text = CStr(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "TaskID"))
+            .CustomerNameText.Text = CStr(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustomerName"))
+            .CustomerCodeText.Text = CStr(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustID"))
+            .OwnUserTextEdit.Text = CType(Me.LookUpEdit1.EditValue, String)
+        End With
+        forms.ShowDialog()
 
-        CRMEditTaskDate.Show()
+        'My.Forms.CRMEditTaskDate.TextEdit1.Text = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "Note"), String)
+        'My.Forms.CRMEditTaskDate.LookUpEdit1.EditValue = Me.LookUpEdit1.EditValue
+        'My.Forms.CRMEditTaskDate.DateEdit1.EditValue = Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "AccrualDate")
+        'My.Forms.CRMEditTaskDate.TaskIDText.Text = CStr(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "TaskID"))
+        'My.Forms.CRMEditTaskDate.CustomerNameText.Text = CStr(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustomerName"))
+        'My.Forms.CRMEditTaskDate.CustomerCodeText.Text = CStr(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustID"))
+        'My.Forms.CRMEditTaskDate.OwnUserTextEdit.Text = CType(Me.LookUpEdit1.EditValue, String)
+
+        'CRMEditTaskDate.Show()
 
         '  LoadData(My.Settings.UserName, CStr(Me.TaskMonthText.Text), Me.TaskStatusText.Text, Me.TaskTypeCombo.Text)
 
@@ -183,13 +206,15 @@ Public Class CRMTasks
     End Sub
 
     Private Sub RepositoryItemButtonEdit3_ButtonClick(sender As Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles RepositoryItemButtonEdit3.ButtonClick
-        ' MsgBox(CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustID"), String))
-        My.Forms.FinancialAccountsDet.AccountKeyTextEdit.Text = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustID"), String)
-        My.Forms.FinancialAccountsDet.SqlDataSource1.Queries(0).Parameters(0).Value = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustID"), String)
-        My.Forms.FinancialAccountsDet.SqlDataSource1.Queries(1).Parameters(0).Value = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustID"), String)
+        'My.Forms.FinancialAccountsDet.AccountKeyTextEdit.Text = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustID"), String)
+        'My.Forms.FinancialAccountsDet.SqlDataSource1.Queries(0).Parameters(0).Value = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustID"), String)
+        'My.Forms.FinancialAccountsDet.SqlDataSource1.Fill()
+        'My.Forms.FinancialAccountsDet.FullNameTextEdit.Select()
+        'FinancialAccountsDet.Show()
+        My.Forms.FinanceAccDetails.TextEditAccountKey.Text = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustID"), String)
+        FinanceAccDetails.ShowDialog()
 
-        My.Forms.FinancialAccountsDet.SqlDataSource1.Fill()
-        FinancialAccountsDet.Show()
+
     End Sub
 
     Private Sub RepositoryItemButtonEdit3_Click(sender As Object, e As EventArgs) Handles RepositoryItemButtonEdit3.Click
@@ -234,8 +259,6 @@ Public Class CRMTasks
         Dim TodayString As String = Format(Today, "yyyy-MM-dd")
         GridView1.ActiveFilter.NonColumnFilter = "[AccrualDate] Between (#" & TodayString & "#, #" & TodayString & "#) "
 
-
-
     End Sub
 
     Private Sub GridControl1_Click(sender As Object, e As EventArgs) Handles GridControl1.Click
@@ -254,6 +277,11 @@ Public Class CRMTasks
         Dim result As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show(ACCNAME, "تأكيد", MessageBoxButtons.YesNo)
 
         If result = System.Windows.Forms.DialogResult.Yes Then
+
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800013", My.Settings.UserName, "True")
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800102", My.Settings.UserName, "True")
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800666", My.Settings.UserName, "True")
+
             Try
                 Dim TaskID As String = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "TaskID"), String)
 
@@ -308,11 +336,13 @@ ByVal e As DevExpress.XtraBars.Alerter.AlertFormEventArgs) Handles AlertControl1
         End If
     End Sub
 
-    Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+    Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles ButtonStop.Click
 
         Try
-
-            Dim result As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("  هل تريد ارسال مسجات تحذير عدد:   " & GridView1.RowCount, "تأكيد", MessageBoxButtons.YesNo)
+            If GridView1.RowCount = 0 Then MsgBox("لا يوجد مهام") : Exit Sub
+            Dim CustCount As String = CStr(GridView1.RowCount - 1)
+            If CInt(GetSMSBalance()) < CInt(CustCount) Then MsgBox("لا يوجد رصيد كافي") : Exit Sub
+            Dim result As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("  هل تريد ارسال مسجات تحذير عدد:   " & CustCount, "تأكيد", MessageBoxButtons.YesNo)
 
             If result = System.Windows.Forms.DialogResult.Yes Then
                 Dim AcNo, SentNo As Integer
@@ -327,7 +357,9 @@ ByVal e As DevExpress.XtraBars.Alerter.AlertFormEventArgs) Handles AlertControl1
 
                 Dim sql As New SQLControl
                 Dim i As Integer
-                Dim SQLUpdateStatus As String = "select count(TaskID) as SentCount from [CRM].[dbo].[CRMTasks] where [AlertMessage] = 'Message Sent Successfully!'"
+                Dim SQLUpdateStatus As String = "select count(TaskID) as SentCount from [CRM].[dbo].[CRMTasks]
+                                                 where TaskMonth  ='" & CStr(TaskMonthText.EditValue) & "' and [AlertMessage] = 'Message Sent Successfully!'
+                                                 and ToUser='" & CStr(LookUpEdit1.EditValue) & "'"
                 sql.CRMRunQuery(SQLUpdateStatus)
                 If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("SentCount")) Then SentNo = CInt(sql.SQLDS.Tables(0).Rows(i).Item("SentCount"))
 
@@ -349,15 +381,23 @@ ByVal e As DevExpress.XtraBars.Alerter.AlertFormEventArgs) Handles AlertControl1
 
     Sub SendAlertMessage(TaskIdAlert As Integer, Result As String)
         Dim sql As New SQLControl
-        Dim SQLUpdateStatus As String = "Update [CRM].[dbo].[CRMTasks]  set [AlertMessage] ='" & Result & "'  where [TaskID]= " & TaskIdAlert
+        Dim SQLUpdateStatus As String = "Update [CRM].[dbo].[CRMTasks]  set [AlertMessage] ='" & Result & "' ,AlertMessageDateTime = GETDATE()    where [TaskID]= " & TaskIdAlert
+        sql.CRMRunQuery(SQLUpdateStatus)
+
+    End Sub
+    Sub SendBalanceMessage(TaskIdAlert As Integer, Result As String, SMSString As String)
+        Dim sql As New SQLControl
+        Dim SQLUpdateStatus As String = "Update [CRM].[dbo].[CRMTasks]  set [BalanceMessage] ='" & Result & "' ,BalanceMessageDateTime = GETDATE() ,BalanceMessageTEXT= '" & SMSString & "'   where [TaskID]= " & TaskIdAlert
         sql.CRMRunQuery(SQLUpdateStatus)
 
     End Sub
 
-    Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
+    Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles ButtonAlarm.Click
         Try
-
-            Dim result As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("  هل تريد ارسال مسجات تحذير عدد:   " & GridView1.RowCount, "تأكيد", MessageBoxButtons.YesNo)
+            If GridView1.RowCount = 0 Then MsgBox("لا يوجد مهام") : Exit Sub
+            Dim CustCount As String = CStr(GridView1.RowCount - 1)
+            If CInt(GetSMSBalance()) < CInt(CustCount) Then MsgBox("لا يوجد رصيد كافي") : Exit Sub
+            Dim result As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("  هل تريد ارسال مسجات تحذير عدد:   " & CustCount, "تأكيد", MessageBoxButtons.YesNo)
 
             If result = System.Windows.Forms.DialogResult.Yes Then
                 Dim AcNo, SentNo As Integer
@@ -372,7 +412,9 @@ ByVal e As DevExpress.XtraBars.Alerter.AlertFormEventArgs) Handles AlertControl1
 
                 Dim sql As New SQLControl
                 Dim i As Integer
-                Dim SQLUpdateStatus As String = "select count(TaskID) as SentCount from [CRM].[dbo].[CRMTasks] where [AlertMessage] = 'Message Sent Successfully!'"
+                Dim SQLUpdateStatus As String = "select count(TaskID) as SentCount from [CRM].[dbo].[CRMTasks]
+                                                 where TaskMonth  ='" & CStr(TaskMonthText.EditValue) & "' and [AlertMessage] = 'Message Sent Successfully!'
+                                                 and ToUser='" & CStr(LookUpEdit1.EditValue) & "'"
                 sql.CRMRunQuery(SQLUpdateStatus)
                 If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("SentCount")) Then SentNo = CInt(sql.SQLDS.Tables(0).Rows(i).Item("SentCount"))
 
@@ -404,6 +446,9 @@ ByVal e As DevExpress.XtraBars.Alerter.AlertFormEventArgs) Handles AlertControl1
     Private Sub SimpleButton7_Click(sender As Object, e As EventArgs) Handles SimpleButton7.Click
         GridControl1.ShowPrintPreview()
 
+
+
+
     End Sub
 
     Private Sub RepositoryItemButtonEdit1_Click(sender As Object, e As EventArgs)
@@ -421,6 +466,11 @@ ByVal e As DevExpress.XtraBars.Alerter.AlertFormEventArgs) Handles AlertControl1
 
         If result = System.Windows.Forms.DialogResult.Yes Then
             '      Try
+
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800013", My.Settings.UserName, "True")
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800013", My.Settings.UserName, "True")
+            AddEvents("تنبيه", "  تم تحصيل الزبون " & " " & CustName, Me.Text, "1800013", My.Settings.UserName, "True")
+
             Dim TaskID As String = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "TaskID"), String)
 
             Dim sql As New SQLControl
@@ -431,7 +481,7 @@ ByVal e As DevExpress.XtraBars.Alerter.AlertFormEventArgs) Handles AlertControl1
             Dim SQLUpdateDate As String = "Update [CRM].[dbo].[CRMTasks]  set [CloseDate] = CONVERT(DATETIME, '" & strDate & "', 102) where [TaskID]= " & TaskID
             sql2.CRMRunQuery(SQLUpdateDate)
 
-            InsertLogs(CInt(TaskID), My.Settings.UserName, "", "تحصيل")
+            '   InsertLogs(CInt(TaskID), My.Settings.UserName, "", "تحصيل")
 
             If CType(Global.DevExpress.XtraEditors.XtraMessageBox.Show(CType("تم تحصيل واغلاق المهمة، هل تريد ارسال رسالة الى المحصل", String), CType("تأكيد", String), CType(Global.System.Windows.Forms.MessageBoxButtons.YesNo, Global.System.Windows.Forms.MessageBoxButtons)), Global.System.Windows.Forms.DialogResult) = Global.System.Windows.Forms.DialogResult.Yes Then
                 Dim msg As String = DevExpress.XtraEditors.XtraInputBox.Show("ملاحظة المحصل", " ادخل ملاحظات للمحصل حول دفعة الزبون", "")
@@ -451,18 +501,18 @@ ByVal e As DevExpress.XtraBars.Alerter.AlertFormEventArgs) Handles AlertControl1
 
     End Sub
 
-    Private Sub InsertLogs(TaskID As Integer, User As String, TaskType As String, TaskLogType As String)
-        Dim sql As New SQLControl
-        Dim SQLInsertTaskLog As String = " insert into  [CRM].[dbo].[CRMTasksLogs]  set
-                                           [TaskID] = " & TaskID & ", " & "
-                                           [TaskType]= " & TaskType & ", " & "
-                                           [TaskLogDate] = " & "'" & Today.ToString & "', " & "
-                                           [TaskLogType] = " & "'" & TaskLogType & "', " & "
-                                           [TaskLogUser] = " & "'" & TaskLogType & "', " & "
-                                           [TaskLogTime] = " & "'" & Now.ToShortTimeString & "' "
-        MsgBox(SQLInsertTaskLog)
-        sql.CRMRunQuery(SQLInsertTaskLog)
-    End Sub
+    'Private Sub InsertLogs(TaskID As Integer, User As String, TaskType As String, TaskLogType As String)
+    '    Dim sql As New SQLControl
+    '    Dim SQLInsertTaskLog As String = " insert into  [CRM].[dbo].[CRMTasksLogs]  set
+    '                                       [TaskID] = " & TaskID & ", " & "
+    '                                       [TaskType]= " & TaskType & ", " & "
+    '                                       [TaskLogDate] = " & "'" & Today.ToString & "', " & "
+    '                                       [TaskLogType] = " & "'" & TaskLogType & "', " & "
+    '                                       [TaskLogUser] = " & "'" & TaskLogType & "', " & "
+    '                                       [TaskLogTime] = " & "'" & Now.ToShortTimeString & "' "
+    '    MsgBox(SQLInsertTaskLog)
+    '    sql.CRMRunQuery(SQLInsertTaskLog)
+    'End Sub
 
     Public Sub CreatTableSummery()
         ' Declare DataTable
@@ -592,4 +642,61 @@ ByVal e As RowCellCustomDrawEventArgs) Handles GridView1.CustomDrawCell
 
     End Sub
 
+    Private Sub SimpleButton3_Click_1(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+
+        Try
+
+            If GridView1.RowCount = 0 Then MsgBox("لا يوجد مهام") : Exit Sub
+            Dim CustCount As String = CStr(GridView1.RowCount - 1)
+            If CInt(GetSMSBalance()) < CInt(CustCount) Then MsgBox("لا يوجد رصيد كافي") : Exit Sub
+            Dim result As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("  هل تريد ارسال مسجات  عدد:   " & CustCount, "تأكيد", MessageBoxButtons.YesNo)
+            If result = System.Windows.Forms.DialogResult.Yes Then
+                Dim AcNo As Integer = 0, SentNo As Integer = 0
+                Dim MonthString As Integer = CInt(Mid(TaskMonthText.Text, 5, 2))
+                Dim YearString As Integer = CInt(Mid(TaskMonthText.Text, 1, 4))
+                For AcNo = 0 To GridView1.RowCount - 1
+                    Dim CusID As String = CType(GridView1.GetRowCellValue(AcNo, "CustID"), String)
+                    Dim CustName As String = CType(GridView1.GetRowCellValue(AcNo, "CustomerName"), String)
+
+                    Dim CustDebit As Decimal = GetDebitBalance(CusID, YearString, MonthString)
+                    Dim Msg As String = " يسرنا ابلاغكم بأن سحوبات شهر   " & MonthString & "/" & YearString & " بلغت " & CStr(CustDebit) & " NIS " & " للاستفسار يرجى الاتصال على رقم 022222222 "
+                    Dim CustMobile As String = GetAccData(CusID).sphone
+                    Dim TaskID As Integer = CType(GridView1.GetRowCellValue(AcNo, "TaskID"), Integer)
+
+                    If Not String.IsNullOrEmpty(CustMobile) And CustDebit > 10 Then
+                        SendBalanceMessage(TaskID, FunSendSmS2(CustMobile, Msg), Msg)
+                    End If
+
+                Next
+
+                Dim sql As New SQLControl
+                Dim i As Integer
+                Dim SQLUpdateStatus As String = "select count(TaskID) as SentCount from [CRM].[dbo].[CRMTasks]
+                                                 where TaskMonth  ='" & CStr(TaskMonthText.EditValue) & "' and [BalanceMessage] = 'Message Sent Successfully!'
+                                                 and ToUser='" & CStr(LookUpEdit1.EditValue) & "'"
+                sql.CRMRunQuery(SQLUpdateStatus)
+                If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("SentCount")) Then SentNo = CInt(sql.SQLDS.Tables(0).Rows(i).Item("SentCount"))
+
+                DevExpress.XtraEditors.XtraMessageBox.Show("تم ارسال " + CType(SentNo, String) + " " + "زبون")
+
+                Dim aa2 As String = ""
+                Dim row2 As Object = LookUpEdit1.Properties.GetDataSourceRowByKeyValue(LookUpEdit1.EditValue)
+                aa2 = TryCast(row2, DataRowView)("userid").ToString()
+                LoadData(aa2, TaskMonthText.Text, TaskStatusText.Text, TaskTypeCombo.Text)
+
+                ColAlertMessage.Visible = True
+
+            End If
+        Catch ex As Exception
+            MsgBox("Error")
+        End Try
+
+    End Sub
+
+    Private Sub RepositorySendSMS_ButtonClick(sender As Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles RepositorySendSMS.ButtonClick
+        Dim CustMobile As String = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "Mobile"), String)
+        My.Forms.CRMSendSMSMessages.TextMobileNo.Text = CustMobile
+        My.Forms.CRMSendSMSMessages.MemoEdit1.Select()
+        CRMSendSMSMessages.Show()
+    End Sub
 End Class

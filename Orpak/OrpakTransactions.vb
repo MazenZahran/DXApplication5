@@ -15,6 +15,7 @@
     End Sub
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+
         SqlDataSource1.Queries(0).Parameters(0).Value = Format(DateTimePicker1.Value, "MM/dd/yyyy")
         SqlDataSource1.Queries(0).Parameters(1).Value = Format(DateTimePicker2.Value, "MM/dd/yyyy")
         SqlDataSource1.Fill()

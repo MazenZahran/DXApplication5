@@ -50,7 +50,7 @@ Public Class Login
                 Me.Close()
             End If
         Catch ex As Exception
-            Exit Sub
+            MsgBox(ex.ToString)
         End Try
     End Sub
 
@@ -94,5 +94,7 @@ Public Class Login
         End Try
     End Sub
 
-
+    Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
+        Password()
+    End Sub
 End Class

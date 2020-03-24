@@ -72,14 +72,30 @@ Partial Class FinancialBawaqe
         Dim ColumnExpression24 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
         Dim Column25 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
         Dim ColumnExpression25 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table2 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
         Dim Column26 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
         Dim ColumnExpression26 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table2 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim Table3 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim Column27 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression27 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table4 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
         Dim QueryParameter1 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
         Dim Join1 As DevExpress.DataAccess.Sql.Join = New DevExpress.DataAccess.Sql.Join()
         Dim RelationColumnInfo1 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
+        Dim Join2 As DevExpress.DataAccess.Sql.Join = New DevExpress.DataAccess.Sql.Join()
+        Dim RelationColumnInfo2 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
+        Dim Join3 As DevExpress.DataAccess.Sql.Join = New DevExpress.DataAccess.Sql.Join()
+        Dim RelationColumnInfo3 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FinancialBawaqe))
+        Dim GridFormatRule1 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleValue1 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
+        Dim GridFormatRule2 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleValue2 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
+        Dim GridFormatRule3 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleValue3 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
+        Me.colBR_ST_NAME = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
+        Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -100,20 +116,46 @@ Partial Class FinancialBawaqe
         Me.colBDATE_SR = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colLOOKID_SR = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colUSERNAME = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colNAME_AR = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl2.SuspendLayout()
+        CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelControl3.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelControl1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'colBR_ST_NAME
+        '
+        Me.colBR_ST_NAME.Caption = "حالة الباقي"
+        Me.colBR_ST_NAME.FieldName = "BR_ST_NAME"
+        Me.colBR_ST_NAME.Name = "colBR_ST_NAME"
+        Me.colBR_ST_NAME.Visible = True
+        Me.colBR_ST_NAME.VisibleIndex = 0
         '
         'PanelControl2
         '
-        Me.PanelControl2.Controls.Add(Me.GridControl1)
+        Me.PanelControl2.Controls.Add(Me.PanelControl3)
+        Me.PanelControl2.Controls.Add(Me.PanelControl1)
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl2.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl2.Name = "PanelControl2"
         Me.PanelControl2.Size = New System.Drawing.Size(1374, 574)
         Me.PanelControl2.TabIndex = 1
+        '
+        'PanelControl3
+        '
+        Me.PanelControl3.Controls.Add(Me.GridControl1)
+        Me.PanelControl3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelControl3.Location = New System.Drawing.Point(2, 50)
+        Me.PanelControl3.Name = "PanelControl3"
+        Me.PanelControl3.Size = New System.Drawing.Size(1370, 522)
+        Me.PanelControl3.TabIndex = 2
         '
         'GridControl1
         '
@@ -124,7 +166,7 @@ Partial Class FinancialBawaqe
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GridControl1.Size = New System.Drawing.Size(1370, 570)
+        Me.GridControl1.Size = New System.Drawing.Size(1366, 518)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -173,47 +215,54 @@ Partial Class FinancialBawaqe
         ColumnExpression13.ColumnName = "DETAILS"
         ColumnExpression13.Table = Table1
         Column13.Expression = ColumnExpression13
-        ColumnExpression14.ColumnName = "STATUS"
+        ColumnExpression14.ColumnName = "LOOKID"
         ColumnExpression14.Table = Table1
         Column14.Expression = ColumnExpression14
-        ColumnExpression15.ColumnName = "LOOKID"
+        ColumnExpression15.ColumnName = "USERID"
         ColumnExpression15.Table = Table1
         Column15.Expression = ColumnExpression15
-        ColumnExpression16.ColumnName = "USERID"
+        ColumnExpression16.ColumnName = "EMPNAME_SR"
         ColumnExpression16.Table = Table1
         Column16.Expression = ColumnExpression16
-        ColumnExpression17.ColumnName = "EMPNAME_SR"
+        ColumnExpression17.ColumnName = "SHIFT_ID_SR"
         ColumnExpression17.Table = Table1
         Column17.Expression = ColumnExpression17
-        ColumnExpression18.ColumnName = "SHIFT_ID_SR"
+        ColumnExpression18.ColumnName = "STN_ID_SR"
         ColumnExpression18.Table = Table1
         Column18.Expression = ColumnExpression18
-        ColumnExpression19.ColumnName = "STN_ID_SR"
+        ColumnExpression19.ColumnName = "BDATE_SR"
         ColumnExpression19.Table = Table1
         Column19.Expression = ColumnExpression19
-        ColumnExpression20.ColumnName = "BDATE_SR"
+        ColumnExpression20.ColumnName = "DETAILS_SR"
         ColumnExpression20.Table = Table1
         Column20.Expression = ColumnExpression20
-        ColumnExpression21.ColumnName = "DETAILS_SR"
+        ColumnExpression21.ColumnName = "LOOKID_SR"
         ColumnExpression21.Table = Table1
         Column21.Expression = ColumnExpression21
-        ColumnExpression22.ColumnName = "LOOKID_SR"
+        ColumnExpression22.ColumnName = "USERID_SR"
         ColumnExpression22.Table = Table1
         Column22.Expression = ColumnExpression22
-        ColumnExpression23.ColumnName = "USERID_SR"
+        ColumnExpression23.ColumnName = "BATCH_IS"
         ColumnExpression23.Table = Table1
         Column23.Expression = ColumnExpression23
-        ColumnExpression24.ColumnName = "BATCH_IS"
+        ColumnExpression24.ColumnName = "BATCH_SR"
         ColumnExpression24.Table = Table1
         Column24.Expression = ColumnExpression24
-        ColumnExpression25.ColumnName = "BATCH_SR"
-        ColumnExpression25.Table = Table1
-        Column25.Expression = ColumnExpression25
-        ColumnExpression26.ColumnName = "USERNAME"
+        ColumnExpression25.ColumnName = "USERNAME"
         Table2.MetaSerializable = "<Meta X=""185"" Y=""30"" Width=""125"" Height=""495"" />"
         Table2.Name = "USERS"
-        ColumnExpression26.Table = Table2
+        ColumnExpression25.Table = Table2
+        Column25.Expression = ColumnExpression25
+        ColumnExpression26.ColumnName = "NAME_AR"
+        Table3.MetaSerializable = "<Meta X=""340"" Y=""30"" Width=""125"" Height=""248"" />"
+        Table3.Name = "STATIONS"
+        ColumnExpression26.Table = Table3
         Column26.Expression = ColumnExpression26
+        ColumnExpression27.ColumnName = "BR_ST_NAME"
+        Table4.MetaSerializable = "<Meta X=""495"" Y=""30"" Width=""125"" Height=""96"" />"
+        Table4.Name = "BOOKRECPSTATUS"
+        ColumnExpression27.Table = Table4
+        Column27.Expression = ColumnExpression27
         SelectQuery1.Columns.Add(Column1)
         SelectQuery1.Columns.Add(Column2)
         SelectQuery1.Columns.Add(Column3)
@@ -240,6 +289,7 @@ Partial Class FinancialBawaqe
         SelectQuery1.Columns.Add(Column24)
         SelectQuery1.Columns.Add(Column25)
         SelectQuery1.Columns.Add(Column26)
+        SelectQuery1.Columns.Add(Column27)
         SelectQuery1.FilterString = ""
         SelectQuery1.GroupFilterString = ""
         SelectQuery1.Name = "BOOKSRECPT"
@@ -252,27 +302,76 @@ Partial Class FinancialBawaqe
         Join1.KeyColumns.Add(RelationColumnInfo1)
         Join1.Nested = Table2
         Join1.Parent = Table1
+        Join1.Type = DevExpress.Xpo.DB.JoinType.LeftOuter
+        RelationColumnInfo2.NestedKeyColumn = "STN_ID"
+        RelationColumnInfo2.ParentKeyColumn = "STN_ID_SR"
+        Join2.KeyColumns.Add(RelationColumnInfo2)
+        Join2.Nested = Table3
+        Join2.Parent = Table1
+        Join2.Type = DevExpress.Xpo.DB.JoinType.LeftOuter
+        RelationColumnInfo3.NestedKeyColumn = "BR_ST_ID"
+        RelationColumnInfo3.ParentKeyColumn = "STATUS"
+        Join3.KeyColumns.Add(RelationColumnInfo3)
+        Join3.Nested = Table4
+        Join3.Parent = Table1
         SelectQuery1.Relations.Add(Join1)
+        SelectQuery1.Relations.Add(Join2)
+        SelectQuery1.Relations.Add(Join3)
         SelectQuery1.Tables.Add(Table1)
         SelectQuery1.Tables.Add(Table2)
+        SelectQuery1.Tables.Add(Table3)
+        SelectQuery1.Tables.Add(Table4)
         Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {SelectQuery1})
         Me.SqlDataSource1.ResultSchemaSerializable = resources.GetString("SqlDataSource1.ResultSchemaSerializable")
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colBNUMBER, Me.colACCOUNTNAME, Me.colDRIVER, Me.colEMPNAME, Me.colSHIFT_ID, Me.colSTN_ID, Me.colBDATE, Me.colAMOUNT, Me.colDETAILS, Me.colSTATUS, Me.colLOOKID, Me.colEMPNAME_SR, Me.colSHIFT_ID_SR, Me.colSTN_ID_SR, Me.colBDATE_SR, Me.colLOOKID_SR, Me.colUSERNAME})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colBNUMBER, Me.colACCOUNTNAME, Me.colDRIVER, Me.colEMPNAME, Me.colSHIFT_ID, Me.colSTN_ID, Me.colBDATE, Me.colAMOUNT, Me.colDETAILS, Me.colSTATUS, Me.colLOOKID, Me.colEMPNAME_SR, Me.colSHIFT_ID_SR, Me.colSTN_ID_SR, Me.colBDATE_SR, Me.colLOOKID_SR, Me.colUSERNAME, Me.colNAME_AR, Me.colBR_ST_NAME})
+        GridFormatRule1.ApplyToRow = True
+        GridFormatRule1.Column = Me.colBR_ST_NAME
+        GridFormatRule1.Name = "Format0"
+        FormatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal
+        FormatConditionRuleValue1.PredefinedName = "Red Fill"
+        FormatConditionRuleValue1.Value1 = "مصروف"
+        GridFormatRule1.Rule = FormatConditionRuleValue1
+        GridFormatRule2.ApplyToRow = True
+        GridFormatRule2.Column = Me.colBR_ST_NAME
+        GridFormatRule2.Name = "Format1"
+        FormatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        FormatConditionRuleValue2.Appearance.Options.UseBackColor = True
+        FormatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Equal
+        FormatConditionRuleValue2.Value1 = "مغلق"
+        GridFormatRule2.Rule = FormatConditionRuleValue2
+        GridFormatRule3.ApplyToRow = True
+        GridFormatRule3.Column = Me.colBR_ST_NAME
+        GridFormatRule3.Name = "Format2"
+        FormatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.Turquoise
+        FormatConditionRuleValue3.Appearance.Options.UseBackColor = True
+        FormatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Equal
+        FormatConditionRuleValue3.Value1 = "مصدر"
+        GridFormatRule3.Rule = FormatConditionRuleValue3
+        Me.GridView1.FormatRules.Add(GridFormatRule1)
+        Me.GridView1.FormatRules.Add(GridFormatRule2)
+        Me.GridView1.FormatRules.Add(GridFormatRule3)
         Me.GridView1.GridControl = Me.GridControl1
+        Me.GridView1.GroupCount = 1
+        Me.GridView1.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "AMOUNT", Me.colAMOUNT, "{0} NIS"), New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "BOOKID", Me.colBNUMBER, "عدد {0}")})
         Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsBehavior.AlignGroupSummaryInGroupRow = DevExpress.Utils.DefaultBoolean.[True]
+        Me.GridView1.OptionsBehavior.AutoExpandAllGroups = True
+        Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowFooter = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
+        Me.GridView1.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.colBR_ST_NAME, DevExpress.Data.ColumnSortOrder.Ascending)})
         '
         'colBNUMBER
         '
         Me.colBNUMBER.Caption = "رقم الباقي"
         Me.colBNUMBER.FieldName = "BNUMBER"
         Me.colBNUMBER.Name = "colBNUMBER"
+        Me.colBNUMBER.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "BNUMBER", "{0}")})
         Me.colBNUMBER.Visible = True
-        Me.colBNUMBER.VisibleIndex = 0
+        Me.colBNUMBER.VisibleIndex = 1
         '
         'colACCOUNTNAME
         '
@@ -280,7 +379,7 @@ Partial Class FinancialBawaqe
         Me.colACCOUNTNAME.FieldName = "ACCOUNTNAME"
         Me.colACCOUNTNAME.Name = "colACCOUNTNAME"
         Me.colACCOUNTNAME.Visible = True
-        Me.colACCOUNTNAME.VisibleIndex = 1
+        Me.colACCOUNTNAME.VisibleIndex = 2
         '
         'colDRIVER
         '
@@ -288,7 +387,7 @@ Partial Class FinancialBawaqe
         Me.colDRIVER.FieldName = "DRIVER"
         Me.colDRIVER.Name = "colDRIVER"
         Me.colDRIVER.Visible = True
-        Me.colDRIVER.VisibleIndex = 2
+        Me.colDRIVER.VisibleIndex = 3
         '
         'colEMPNAME
         '
@@ -296,7 +395,7 @@ Partial Class FinancialBawaqe
         Me.colEMPNAME.FieldName = "EMPNAME"
         Me.colEMPNAME.Name = "colEMPNAME"
         Me.colEMPNAME.Visible = True
-        Me.colEMPNAME.VisibleIndex = 3
+        Me.colEMPNAME.VisibleIndex = 4
         '
         'colSHIFT_ID
         '
@@ -304,7 +403,7 @@ Partial Class FinancialBawaqe
         Me.colSHIFT_ID.FieldName = "SHIFT_ID"
         Me.colSHIFT_ID.Name = "colSHIFT_ID"
         Me.colSHIFT_ID.Visible = True
-        Me.colSHIFT_ID.VisibleIndex = 4
+        Me.colSHIFT_ID.VisibleIndex = 5
         '
         'colSTN_ID
         '
@@ -312,7 +411,7 @@ Partial Class FinancialBawaqe
         Me.colSTN_ID.FieldName = "STN_ID"
         Me.colSTN_ID.Name = "colSTN_ID"
         Me.colSTN_ID.Visible = True
-        Me.colSTN_ID.VisibleIndex = 5
+        Me.colSTN_ID.VisibleIndex = 6
         '
         'colBDATE
         '
@@ -320,15 +419,16 @@ Partial Class FinancialBawaqe
         Me.colBDATE.FieldName = "BDATE"
         Me.colBDATE.Name = "colBDATE"
         Me.colBDATE.Visible = True
-        Me.colBDATE.VisibleIndex = 6
+        Me.colBDATE.VisibleIndex = 7
         '
         'colAMOUNT
         '
         Me.colAMOUNT.Caption = "مبلغ الاصدار"
         Me.colAMOUNT.FieldName = "AMOUNT"
         Me.colAMOUNT.Name = "colAMOUNT"
+        Me.colAMOUNT.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "AMOUNT", "{0}")})
         Me.colAMOUNT.Visible = True
-        Me.colAMOUNT.VisibleIndex = 7
+        Me.colAMOUNT.VisibleIndex = 8
         '
         'colDETAILS
         '
@@ -336,15 +436,13 @@ Partial Class FinancialBawaqe
         Me.colDETAILS.FieldName = "DETAILS"
         Me.colDETAILS.Name = "colDETAILS"
         Me.colDETAILS.Visible = True
-        Me.colDETAILS.VisibleIndex = 8
+        Me.colDETAILS.VisibleIndex = 9
         '
         'colSTATUS
         '
         Me.colSTATUS.Caption = "حالة الباقي"
         Me.colSTATUS.FieldName = "STATUS"
         Me.colSTATUS.Name = "colSTATUS"
-        Me.colSTATUS.Visible = True
-        Me.colSTATUS.VisibleIndex = 9
         '
         'colLOOKID
         '
@@ -375,8 +473,6 @@ Partial Class FinancialBawaqe
         Me.colSTN_ID_SR.Caption = "المحطة (الصرف)"
         Me.colSTN_ID_SR.FieldName = "STN_ID_SR"
         Me.colSTN_ID_SR.Name = "colSTN_ID_SR"
-        Me.colSTN_ID_SR.Visible = True
-        Me.colSTN_ID_SR.VisibleIndex = 13
         '
         'colBDATE_SR
         '
@@ -384,7 +480,7 @@ Partial Class FinancialBawaqe
         Me.colBDATE_SR.FieldName = "BDATE_SR"
         Me.colBDATE_SR.Name = "colBDATE_SR"
         Me.colBDATE_SR.Visible = True
-        Me.colBDATE_SR.VisibleIndex = 14
+        Me.colBDATE_SR.VisibleIndex = 13
         '
         'colLOOKID_SR
         '
@@ -392,7 +488,7 @@ Partial Class FinancialBawaqe
         Me.colLOOKID_SR.FieldName = "LOOKID_SR"
         Me.colLOOKID_SR.Name = "colLOOKID_SR"
         Me.colLOOKID_SR.Visible = True
-        Me.colLOOKID_SR.VisibleIndex = 15
+        Me.colLOOKID_SR.VisibleIndex = 14
         '
         'colUSERNAME
         '
@@ -400,7 +496,43 @@ Partial Class FinancialBawaqe
         Me.colUSERNAME.FieldName = "USERNAME"
         Me.colUSERNAME.Name = "colUSERNAME"
         Me.colUSERNAME.Visible = True
-        Me.colUSERNAME.VisibleIndex = 16
+        Me.colUSERNAME.VisibleIndex = 15
+        '
+        'colNAME_AR
+        '
+        Me.colNAME_AR.Caption = "المحطة (الصرف)"
+        Me.colNAME_AR.FieldName = "NAME_AR"
+        Me.colNAME_AR.Name = "colNAME_AR"
+        Me.colNAME_AR.Visible = True
+        Me.colNAME_AR.VisibleIndex = 16
+        '
+        'PanelControl1
+        '
+        Me.PanelControl1.Controls.Add(Me.SimpleButton1)
+        Me.PanelControl1.Controls.Add(Me.SimpleButton2)
+        Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelControl1.Location = New System.Drawing.Point(2, 2)
+        Me.PanelControl1.Name = "PanelControl1"
+        Me.PanelControl1.Size = New System.Drawing.Size(1370, 48)
+        Me.PanelControl1.TabIndex = 1
+        '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton1.Location = New System.Drawing.Point(1011, 5)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(170, 37)
+        Me.SimpleButton1.TabIndex = 2
+        Me.SimpleButton1.Text = "طباعة"
+        '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton2.Location = New System.Drawing.Point(1187, 5)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(178, 37)
+        Me.SimpleButton2.TabIndex = 3
+        Me.SimpleButton2.Text = "تحديث"
         '
         'FinancialBawaqe
         '
@@ -409,12 +541,16 @@ Partial Class FinancialBawaqe
         Me.ClientSize = New System.Drawing.Size(1374, 574)
         Me.Controls.Add(Me.PanelControl2)
         Me.Name = "FinancialBawaqe"
-        Me.Text = "البواقي"
+        Me.Text = "استعلام البواقي"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl2.ResumeLayout(False)
+        CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelControl3.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelControl1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -439,4 +575,10 @@ Partial Class FinancialBawaqe
     Friend WithEvents colBDATE_SR As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colLOOKID_SR As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colUSERNAME As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colNAME_AR As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents PanelControl3 As DevExpress.XtraEditors.PanelControl
+    Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
+    Friend WithEvents colBR_ST_NAME As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
 End Class

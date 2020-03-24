@@ -137,7 +137,20 @@ Partial Class CRMTasks
         Dim SerializableAppearanceObject3 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim SerializableAppearanceObject4 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim EditorButtonImageOptions2 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
+        Dim SerializableAppearanceObject5 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject6 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject7 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject8 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim EditorButtonImageOptions3 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
+        Dim SerializableAppearanceObject9 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject10 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject11 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject12 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim EditorButtonImageOptions4 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
+        Dim SerializableAppearanceObject13 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject14 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject15 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject16 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
         Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SideBySideBarSeriesView1 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
@@ -178,6 +191,9 @@ Partial Class CRMTasks
         Me.ColSendSMS = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemButtonEdit4 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.colMobile = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colCustID = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridSendSMS = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositorySendSMS = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.TextEdit4 = New DevExpress.XtraEditors.TextEdit()
         Me.TextEdit3 = New DevExpress.XtraEditors.TextEdit()
@@ -189,6 +205,7 @@ Partial Class CRMTasks
         Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
         Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
+        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton8 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
         Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
@@ -199,9 +216,9 @@ Partial Class CRMTasks
         Me.TaskMonthText = New DevExpress.XtraEditors.SpinEdit()
         Me.TextEdit7 = New DevExpress.XtraEditors.TextEdit()
         Me.TaskStatusText = New DevExpress.XtraEditors.ComboBoxEdit()
-        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
+        Me.ButtonStop = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton6 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
+        Me.ButtonAlarm = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.TaskTypeCombo = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
@@ -222,6 +239,7 @@ Partial Class CRMTasks
         Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.GroupControl3 = New DevExpress.XtraEditors.GroupControl()
         Me.ChartControl1 = New DevExpress.XtraCharts.ChartControl()
         Me.usersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
@@ -250,6 +268,7 @@ Partial Class CRMTasks
         CType(Me.RepositoryItemButtonEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemButtonEdit3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemButtonEdit4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositorySendSMS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit4.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit3.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -287,6 +306,7 @@ Partial Class CRMTasks
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl3.SuspendLayout()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -638,14 +658,14 @@ Partial Class CRMTasks
         Me.GridControl1.Location = New System.Drawing.Point(2, 2)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit2, Me.RepositoryItemButtonEdit3, Me.RepositoryItemButtonEdit4})
+        Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit2, Me.RepositoryItemButtonEdit3, Me.RepositoryItemButtonEdit4, Me.RepositorySendSMS})
         Me.GridControl1.Size = New System.Drawing.Size(849, 413)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colTaskID, Me.colInputDate, Me.colInputTime, Me.colUser, Me.colCustomerName, Me.colPerson, Me.colNote, Me.colNoteStatus, Me.colToUser, Me.colAccrualDate, Me.colCloseDate, Me.colCloseNote, Me.colTaskType, Me.colAccSort, Me.colAmount, Me.colTaskMonth, Me.colImportance, Me.colUserName, Me.GridColumn2, Me.GridColumn3, Me.ColSendSMS, Me.colMobile, Me.ColAlertMessage})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colTaskID, Me.colInputDate, Me.colInputTime, Me.colUser, Me.colCustomerName, Me.colPerson, Me.colNote, Me.colNoteStatus, Me.colToUser, Me.colAccrualDate, Me.colCloseDate, Me.colCloseNote, Me.colTaskType, Me.colAccSort, Me.colAmount, Me.colTaskMonth, Me.colImportance, Me.colUserName, Me.GridColumn2, Me.GridColumn3, Me.ColSendSMS, Me.colMobile, Me.ColAlertMessage, Me.colCustID, Me.GridSendSMS})
         GridFormatRule1.ApplyToRow = True
         GridFormatRule1.Column = Me.colAccrualDate
         GridFormatRule1.Name = "Format0"
@@ -783,7 +803,7 @@ Partial Class CRMTasks
         '
         Me.GridColumn2.Caption = "تاجيل"
         Me.GridColumn2.ColumnEdit = Me.RepositoryItemButtonEdit2
-        Me.GridColumn2.ImageAlignment = System.Drawing.StringAlignment.Center
+        Me.GridColumn2.ImageOptions.Alignment = System.Drawing.StringAlignment.Center
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways
         Me.GridColumn2.Visible = True
@@ -800,7 +820,7 @@ Partial Class CRMTasks
         SerializableAppearanceObject2.Options.UseImage = True
         SerializableAppearanceObject3.Options.UseImage = True
         SerializableAppearanceObject4.Options.UseImage = True
-        Me.RepositoryItemButtonEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions1, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "", Nothing, Nothing)})
+        Me.RepositoryItemButtonEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions1, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.RepositoryItemButtonEdit2.Name = "RepositoryItemButtonEdit2"
         Me.RepositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
@@ -817,7 +837,7 @@ Partial Class CRMTasks
         '
         Me.RepositoryItemButtonEdit3.AutoHeight = False
         EditorButtonImageOptions2.Image = CType(resources.GetObject("EditorButtonImageOptions2.Image"), System.Drawing.Image)
-        Me.RepositoryItemButtonEdit3.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(EditorButtonImageOptions2, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, Nothing)})
+        Me.RepositoryItemButtonEdit3.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions2, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject5, SerializableAppearanceObject6, SerializableAppearanceObject7, SerializableAppearanceObject8, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.RepositoryItemButtonEdit3.Name = "RepositoryItemButtonEdit3"
         Me.RepositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
@@ -834,7 +854,7 @@ Partial Class CRMTasks
         '
         Me.RepositoryItemButtonEdit4.AutoHeight = False
         EditorButtonImageOptions3.Image = CType(resources.GetObject("EditorButtonImageOptions3.Image"), System.Drawing.Image)
-        Me.RepositoryItemButtonEdit4.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(EditorButtonImageOptions3, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, Nothing)})
+        Me.RepositoryItemButtonEdit4.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions3, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject9, SerializableAppearanceObject10, SerializableAppearanceObject11, SerializableAppearanceObject12, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.RepositoryItemButtonEdit4.Name = "RepositoryItemButtonEdit4"
         Me.RepositoryItemButtonEdit4.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
@@ -846,6 +866,29 @@ Partial Class CRMTasks
         Me.colMobile.Visible = True
         Me.colMobile.VisibleIndex = 4
         Me.colMobile.Width = 103
+        '
+        'colCustID
+        '
+        Me.colCustID.FieldName = "CustID"
+        Me.colCustID.Name = "colCustID"
+        '
+        'GridSendSMS
+        '
+        Me.GridSendSMS.Caption = "مسج"
+        Me.GridSendSMS.ColumnEdit = Me.RepositorySendSMS
+        Me.GridSendSMS.MaxWidth = 50
+        Me.GridSendSMS.Name = "GridSendSMS"
+        Me.GridSendSMS.Visible = True
+        Me.GridSendSMS.VisibleIndex = 11
+        Me.GridSendSMS.Width = 30
+        '
+        'RepositorySendSMS
+        '
+        Me.RepositorySendSMS.AutoHeight = False
+        EditorButtonImageOptions4.Image = CType(resources.GetObject("EditorButtonImageOptions4.Image"), System.Drawing.Image)
+        Me.RepositorySendSMS.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions4, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject13, SerializableAppearanceObject14, SerializableAppearanceObject15, SerializableAppearanceObject16, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
+        Me.RepositorySendSMS.Name = "RepositorySendSMS"
+        Me.RepositorySendSMS.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
         'PanelControl1
         '
@@ -959,15 +1002,16 @@ Partial Class CRMTasks
         'SimpleButton7
         '
         Me.SimpleButton7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton7.Location = New System.Drawing.Point(12, 435)
+        Me.SimpleButton7.Location = New System.Drawing.Point(29, 461)
         Me.SimpleButton7.Name = "SimpleButton7"
-        Me.SimpleButton7.Size = New System.Drawing.Size(263, 22)
+        Me.SimpleButton7.Size = New System.Drawing.Size(246, 22)
         Me.SimpleButton7.StyleController = Me.LayoutControl1
         Me.SimpleButton7.TabIndex = 14
         Me.SimpleButton7.Text = "طباعة"
         '
         'LayoutControl1
         '
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton3)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton8)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton5)
         Me.LayoutControl1.Controls.Add(Me.PictureEdit1)
@@ -977,9 +1021,9 @@ Partial Class CRMTasks
         Me.LayoutControl1.Controls.Add(Me.SimpleButton7)
         Me.LayoutControl1.Controls.Add(Me.TextEdit7)
         Me.LayoutControl1.Controls.Add(Me.TaskStatusText)
-        Me.LayoutControl1.Controls.Add(Me.SimpleButton3)
+        Me.LayoutControl1.Controls.Add(Me.ButtonStop)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton6)
-        Me.LayoutControl1.Controls.Add(Me.SimpleButton4)
+        Me.LayoutControl1.Controls.Add(Me.ButtonAlarm)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton2)
         Me.LayoutControl1.Controls.Add(Me.TaskTypeCombo)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton1)
@@ -994,11 +1038,21 @@ Partial Class CRMTasks
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
         '
+        'SimpleButton3
+        '
+        Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton3.Location = New System.Drawing.Point(29, 435)
+        Me.SimpleButton3.Name = "SimpleButton3"
+        Me.SimpleButton3.Size = New System.Drawing.Size(246, 22)
+        Me.SimpleButton3.StyleController = Me.LayoutControl1
+        Me.SimpleButton3.TabIndex = 16
+        Me.SimpleButton3.Text = "مسج تبليغ بالحساب"
+        '
         'SimpleButton8
         '
-        Me.SimpleButton8.Location = New System.Drawing.Point(12, 357)
+        Me.SimpleButton8.Location = New System.Drawing.Point(29, 357)
         Me.SimpleButton8.Name = "SimpleButton8"
-        Me.SimpleButton8.Size = New System.Drawing.Size(263, 22)
+        Me.SimpleButton8.Size = New System.Drawing.Size(246, 22)
         Me.SimpleButton8.StyleController = Me.LayoutControl1
         Me.SimpleButton8.TabIndex = 15
         Me.SimpleButton8.Text = "مهام مغلقة"
@@ -1007,16 +1061,16 @@ Partial Class CRMTasks
         '
         Me.SimpleButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton5.ImageOptions.Image = CType(resources.GetObject("SimpleButton5.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton5.Location = New System.Drawing.Point(12, 383)
+        Me.SimpleButton5.Location = New System.Drawing.Point(29, 383)
         Me.SimpleButton5.Name = "SimpleButton5"
-        Me.SimpleButton5.Size = New System.Drawing.Size(27, 22)
+        Me.SimpleButton5.Size = New System.Drawing.Size(30, 22)
         Me.SimpleButton5.StyleController = Me.LayoutControl1
         Me.SimpleButton5.TabIndex = 12
         '
         'PictureEdit1
         '
         Me.PictureEdit1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureEdit1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureEdit1.Location = New System.Drawing.Point(31, 12)
         Me.PictureEdit1.Name = "PictureEdit1"
         Me.PictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
         Me.PictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch
@@ -1026,19 +1080,19 @@ Partial Class CRMTasks
         '
         'MobileText
         '
-        Me.MobileText.EditValue = "0599123793"
-        Me.MobileText.Location = New System.Drawing.Point(12, 461)
+        Me.MobileText.EditValue = "0593055055"
+        Me.MobileText.Location = New System.Drawing.Point(29, 487)
         Me.MobileText.Name = "MobileText"
         Me.MobileText.Properties.Appearance.Options.UseTextOptions = True
         Me.MobileText.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.MobileText.Size = New System.Drawing.Size(263, 20)
+        Me.MobileText.Size = New System.Drawing.Size(246, 20)
         Me.MobileText.StyleController = Me.LayoutControl1
         Me.MobileText.TabIndex = 10
         '
         'LookUpEdit1
         '
         Me.LookUpEdit1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LookUpEdit1.Location = New System.Drawing.Point(12, 201)
+        Me.LookUpEdit1.Location = New System.Drawing.Point(29, 201)
         Me.LookUpEdit1.Name = "LookUpEdit1"
         Me.LookUpEdit1.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
         Me.LookUpEdit1.Properties.Appearance.Options.UseFont = True
@@ -1050,7 +1104,7 @@ Partial Class CRMTasks
         Me.LookUpEdit1.Properties.DisplayMember = "UserName"
         Me.LookUpEdit1.Properties.NullText = "الرجاء اختيار المستخدم"
         Me.LookUpEdit1.Properties.ValueMember = "UserID"
-        Me.LookUpEdit1.Size = New System.Drawing.Size(263, 22)
+        Me.LookUpEdit1.Size = New System.Drawing.Size(246, 22)
         Me.LookUpEdit1.StyleController = Me.LayoutControl1
         Me.LookUpEdit1.TabIndex = 7
         '
@@ -1068,7 +1122,7 @@ Partial Class CRMTasks
         '
         Me.TaskMonthText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TaskMonthText.EditValue = New Decimal(New Integer() {201801, 0, 0, 0})
-        Me.TaskMonthText.Location = New System.Drawing.Point(12, 227)
+        Me.TaskMonthText.Location = New System.Drawing.Point(29, 227)
         Me.TaskMonthText.Name = "TaskMonthText"
         Me.TaskMonthText.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
         Me.TaskMonthText.Properties.Appearance.Options.UseFont = True
@@ -1077,26 +1131,26 @@ Partial Class CRMTasks
         Me.TaskMonthText.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.TaskMonthText.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
         Me.TaskMonthText.Properties.Mask.EditMask = "d"
-        Me.TaskMonthText.Properties.MaxValue = New Decimal(New Integer() {201812, 0, 0, 0})
+        Me.TaskMonthText.Properties.MaxValue = New Decimal(New Integer() {203012, 0, 0, 0})
         Me.TaskMonthText.Properties.MinValue = New Decimal(New Integer() {201801, 0, 0, 0})
-        Me.TaskMonthText.Size = New System.Drawing.Size(263, 22)
+        Me.TaskMonthText.Size = New System.Drawing.Size(246, 22)
         Me.TaskMonthText.StyleController = Me.LayoutControl1
         Me.TaskMonthText.TabIndex = 4
         '
         'TextEdit7
         '
-        Me.TextEdit7.Location = New System.Drawing.Point(12, 177)
+        Me.TextEdit7.Location = New System.Drawing.Point(29, 177)
         Me.TextEdit7.Name = "TextEdit7"
         Me.TextEdit7.Properties.Appearance.Options.UseTextOptions = True
         Me.TextEdit7.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.TextEdit7.Size = New System.Drawing.Size(263, 20)
+        Me.TextEdit7.Size = New System.Drawing.Size(246, 20)
         Me.TextEdit7.StyleController = Me.LayoutControl1
         Me.TextEdit7.TabIndex = 5
         '
         'TaskStatusText
         '
         Me.TaskStatusText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TaskStatusText.Location = New System.Drawing.Point(12, 253)
+        Me.TaskStatusText.Location = New System.Drawing.Point(29, 253)
         Me.TaskStatusText.Name = "TaskStatusText"
         Me.TaskStatusText.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
         Me.TaskStatusText.Properties.Appearance.Options.UseFont = True
@@ -1104,47 +1158,47 @@ Partial Class CRMTasks
         Me.TaskStatusText.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TaskStatusText.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.TaskStatusText.Properties.Items.AddRange(New Object() {"مفتوحة", "تم التحصيل", "مغلقة"})
-        Me.TaskStatusText.Size = New System.Drawing.Size(263, 22)
+        Me.TaskStatusText.Size = New System.Drawing.Size(246, 22)
         Me.TaskStatusText.StyleController = Me.LayoutControl1
         Me.TaskStatusText.TabIndex = 8
         '
-        'SimpleButton3
+        'ButtonStop
         '
-        Me.SimpleButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton3.Location = New System.Drawing.Point(43, 409)
-        Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(232, 22)
-        Me.SimpleButton3.StyleController = Me.LayoutControl1
-        Me.SimpleButton3.TabIndex = 11
-        Me.SimpleButton3.Text = "مسج ايقاف"
+        Me.ButtonStop.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonStop.ImageOptions.Image = CType(resources.GetObject("ButtonStop.ImageOptions.Image"), System.Drawing.Image)
+        Me.ButtonStop.Location = New System.Drawing.Point(63, 409)
+        Me.ButtonStop.Name = "ButtonStop"
+        Me.ButtonStop.Size = New System.Drawing.Size(212, 22)
+        Me.ButtonStop.StyleController = Me.LayoutControl1
+        Me.ButtonStop.TabIndex = 11
+        Me.ButtonStop.Text = "مسج ايقاف"
         '
         'SimpleButton6
         '
         Me.SimpleButton6.ImageOptions.Image = CType(resources.GetObject("SimpleButton6.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton6.Location = New System.Drawing.Point(12, 409)
+        Me.SimpleButton6.Location = New System.Drawing.Point(29, 409)
         Me.SimpleButton6.Name = "SimpleButton6"
-        Me.SimpleButton6.Size = New System.Drawing.Size(27, 22)
+        Me.SimpleButton6.Size = New System.Drawing.Size(30, 22)
         Me.SimpleButton6.StyleController = Me.LayoutControl1
         Me.SimpleButton6.TabIndex = 12
         '
-        'SimpleButton4
+        'ButtonAlarm
         '
-        Me.SimpleButton4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton4.ImageOptions.Image = CType(resources.GetObject("SimpleButton4.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton4.Location = New System.Drawing.Point(43, 383)
-        Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(232, 22)
-        Me.SimpleButton4.StyleController = Me.LayoutControl1
-        Me.SimpleButton4.TabIndex = 11
-        Me.SimpleButton4.Text = "مسح تحذير"
+        Me.ButtonAlarm.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonAlarm.ImageOptions.Image = CType(resources.GetObject("ButtonAlarm.ImageOptions.Image"), System.Drawing.Image)
+        Me.ButtonAlarm.Location = New System.Drawing.Point(63, 383)
+        Me.ButtonAlarm.Name = "ButtonAlarm"
+        Me.ButtonAlarm.Size = New System.Drawing.Size(212, 22)
+        Me.ButtonAlarm.StyleController = Me.LayoutControl1
+        Me.ButtonAlarm.TabIndex = 11
+        Me.ButtonAlarm.Text = "مسح تحذير"
         '
         'SimpleButton2
         '
         Me.SimpleButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton2.Location = New System.Drawing.Point(12, 331)
+        Me.SimpleButton2.Location = New System.Drawing.Point(29, 331)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(263, 22)
+        Me.SimpleButton2.Size = New System.Drawing.Size(246, 22)
         Me.SimpleButton2.StyleController = Me.LayoutControl1
         Me.SimpleButton2.TabIndex = 9
         Me.SimpleButton2.Text = "مهام مستحقة اليوم"
@@ -1152,7 +1206,7 @@ Partial Class CRMTasks
         'TaskTypeCombo
         '
         Me.TaskTypeCombo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TaskTypeCombo.Location = New System.Drawing.Point(12, 279)
+        Me.TaskTypeCombo.Location = New System.Drawing.Point(29, 279)
         Me.TaskTypeCombo.Name = "TaskTypeCombo"
         Me.TaskTypeCombo.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
         Me.TaskTypeCombo.Properties.Appearance.Options.UseFont = True
@@ -1160,7 +1214,7 @@ Partial Class CRMTasks
         Me.TaskTypeCombo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TaskTypeCombo.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.TaskTypeCombo.Properties.Items.AddRange(New Object() {"دين", "مطابقة حسابات", "مهام بطاقات"})
-        Me.TaskTypeCombo.Size = New System.Drawing.Size(263, 22)
+        Me.TaskTypeCombo.Size = New System.Drawing.Size(246, 22)
         Me.TaskTypeCombo.StyleController = Me.LayoutControl1
         Me.TaskTypeCombo.TabIndex = 8
         '
@@ -1168,9 +1222,9 @@ Partial Class CRMTasks
         '
         Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(12, 305)
+        Me.SimpleButton1.Location = New System.Drawing.Point(29, 305)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(263, 22)
+        Me.SimpleButton1.Size = New System.Drawing.Size(246, 22)
         Me.SimpleButton1.StyleController = Me.LayoutControl1
         Me.SimpleButton1.TabIndex = 6
         Me.SimpleButton1.Text = "تحديث"
@@ -1179,10 +1233,9 @@ Partial Class CRMTasks
         '
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup1.GroupBordersVisible = False
-        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.EmptySpaceItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem11, Me.LayoutControlItem13, Me.LayoutControlItem14, Me.LayoutControlItem10, Me.LayoutControlItem12, Me.LayoutControlItem15})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.EmptySpaceItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem11, Me.LayoutControlItem13, Me.LayoutControlItem14, Me.LayoutControlItem10, Me.LayoutControlItem12, Me.LayoutControlItem15, Me.LayoutControlItem16})
         Me.LayoutControlGroup1.Name = "Root"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(287, 507)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(270, 529)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem1
@@ -1192,7 +1245,7 @@ Partial Class CRMTasks
         Me.LayoutControlItem1.MaxSize = New System.Drawing.Size(248, 165)
         Me.LayoutControlItem1.MinSize = New System.Drawing.Size(248, 165)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(267, 165)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(250, 165)
         Me.LayoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
@@ -1200,9 +1253,9 @@ Partial Class CRMTasks
         'EmptySpaceItem1
         '
         Me.EmptySpaceItem1.AllowHotTrack = False
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 473)
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 499)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(267, 14)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(250, 10)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem2
@@ -1210,7 +1263,7 @@ Partial Class CRMTasks
         Me.LayoutControlItem2.Control = Me.TextEdit7
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 165)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(267, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(250, 24)
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem2.TextVisible = False
         '
@@ -1219,7 +1272,7 @@ Partial Class CRMTasks
         Me.LayoutControlItem3.Control = Me.LookUpEdit1
         Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 189)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(267, 26)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(250, 26)
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
         '
@@ -1228,7 +1281,7 @@ Partial Class CRMTasks
         Me.LayoutControlItem4.Control = Me.TaskMonthText
         Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 215)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(267, 26)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(250, 26)
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
@@ -1237,7 +1290,7 @@ Partial Class CRMTasks
         Me.LayoutControlItem5.Control = Me.TaskStatusText
         Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 241)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(267, 26)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(250, 26)
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem5.TextVisible = False
         '
@@ -1246,7 +1299,7 @@ Partial Class CRMTasks
         Me.LayoutControlItem6.Control = Me.TaskTypeCombo
         Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 267)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(267, 26)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(250, 26)
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem6.TextVisible = False
         '
@@ -1255,7 +1308,7 @@ Partial Class CRMTasks
         Me.LayoutControlItem7.Control = Me.SimpleButton1
         Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 293)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(267, 26)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(250, 26)
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem7.TextVisible = False
         '
@@ -1264,43 +1317,43 @@ Partial Class CRMTasks
         Me.LayoutControlItem8.Control = Me.SimpleButton2
         Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 319)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(267, 26)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(250, 26)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem8.TextVisible = False
         '
         'LayoutControlItem9
         '
-        Me.LayoutControlItem9.Control = Me.SimpleButton4
-        Me.LayoutControlItem9.Location = New System.Drawing.Point(31, 371)
+        Me.LayoutControlItem9.Control = Me.ButtonAlarm
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(34, 371)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(236, 26)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(216, 26)
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem9.TextVisible = False
         '
         'LayoutControlItem11
         '
-        Me.LayoutControlItem11.Control = Me.SimpleButton3
-        Me.LayoutControlItem11.Location = New System.Drawing.Point(31, 397)
+        Me.LayoutControlItem11.Control = Me.ButtonStop
+        Me.LayoutControlItem11.Location = New System.Drawing.Point(34, 397)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(236, 26)
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(216, 26)
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem11.TextVisible = False
         '
         'LayoutControlItem13
         '
         Me.LayoutControlItem13.Control = Me.SimpleButton7
-        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 423)
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 449)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
-        Me.LayoutControlItem13.Size = New System.Drawing.Size(267, 26)
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(250, 26)
         Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem13.TextVisible = False
         '
         'LayoutControlItem14
         '
         Me.LayoutControlItem14.Control = Me.MobileText
-        Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 449)
+        Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 475)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
-        Me.LayoutControlItem14.Size = New System.Drawing.Size(267, 24)
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(250, 24)
         Me.LayoutControlItem14.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem14.TextVisible = False
         '
@@ -1309,7 +1362,7 @@ Partial Class CRMTasks
         Me.LayoutControlItem10.Control = Me.SimpleButton6
         Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 397)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(31, 26)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(34, 26)
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem10.TextVisible = False
         '
@@ -1318,7 +1371,7 @@ Partial Class CRMTasks
         Me.LayoutControlItem12.Control = Me.SimpleButton5
         Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 371)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(31, 26)
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(34, 26)
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem12.TextVisible = False
         '
@@ -1327,9 +1380,18 @@ Partial Class CRMTasks
         Me.LayoutControlItem15.Control = Me.SimpleButton8
         Me.LayoutControlItem15.Location = New System.Drawing.Point(0, 345)
         Me.LayoutControlItem15.Name = "LayoutControlItem15"
-        Me.LayoutControlItem15.Size = New System.Drawing.Size(267, 26)
+        Me.LayoutControlItem15.Size = New System.Drawing.Size(250, 26)
         Me.LayoutControlItem15.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem15.TextVisible = False
+        '
+        'LayoutControlItem16
+        '
+        Me.LayoutControlItem16.Control = Me.SimpleButton3
+        Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 423)
+        Me.LayoutControlItem16.Name = "LayoutControlItem16"
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(250, 26)
+        Me.LayoutControlItem16.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem16.TextVisible = False
         '
         'GroupControl3
         '
@@ -1348,7 +1410,6 @@ Partial Class CRMTasks
         Me.ChartControl1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged
         Me.ChartControl1.AppearanceNameSerializable = "Light"
         Me.ChartControl1.BorderOptions.Thickness = 2
-        Me.ChartControl1.DataBindings = Nothing
         XyDiagram1.AxisX.Reverse = True
         XyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
         XyDiagram1.AxisY.Interlaced = True
@@ -1383,9 +1444,9 @@ Partial Class CRMTasks
         '
         'AlertControl1
         '
-        AlertButton1.Image = CType(resources.GetObject("AlertButton1.Image"), System.Drawing.Image)
+        AlertButton1.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
         AlertButton1.Name = "EDITDATE"
-        AlertButton2.Image = CType(resources.GetObject("AlertButton2.Image"), System.Drawing.Image)
+        AlertButton2.ImageOptions.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         AlertButton2.Name = "Tahsel"
         Me.AlertControl1.Buttons.Add(AlertButton1)
         Me.AlertControl1.Buttons.Add(AlertButton2)
@@ -1412,7 +1473,6 @@ Partial Class CRMTasks
         '
         'TileBar1
         '
-        Me.TileBar1.AllowDrag = False
         Me.TileBar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.TileBar1.Cursor = System.Windows.Forms.Cursors.Default
         Me.TileBar1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1443,9 +1503,9 @@ Partial Class CRMTasks
         'TileBarItem1
         '
         Me.TileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement1.Image = CType(resources.GetObject("TileItemElement1.Image"), System.Drawing.Image)
-        TileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement1.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
+        TileItemElement1.ImageOptions.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
+        TileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
+        TileItemElement1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
         TileItemElement1.Text = "كل المهام"
         TileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter
         Me.TileBarItem1.Elements.Add(TileItemElement1)
@@ -1456,9 +1516,9 @@ Partial Class CRMTasks
         'TileBarItem2
         '
         Me.TileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement2.Image = CType(resources.GetObject("TileItemElement2.Image"), System.Drawing.Image)
-        TileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement2.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
+        TileItemElement2.ImageOptions.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
+        TileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
+        TileItemElement2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
         TileItemElement2.Text = "مستحقة"
         TileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter
         Me.TileBarItem2.Elements.Add(TileItemElement2)
@@ -1469,9 +1529,9 @@ Partial Class CRMTasks
         'TileBarItem3
         '
         Me.TileBarItem3.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement3.Image = CType(resources.GetObject("TileItemElement3.Image"), System.Drawing.Image)
-        TileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement3.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
+        TileItemElement3.ImageOptions.Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
+        TileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
+        TileItemElement3.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
         TileItemElement3.Text = "محصلة"
         Me.TileBarItem3.Elements.Add(TileItemElement3)
         Me.TileBarItem3.Id = 5
@@ -1481,9 +1541,9 @@ Partial Class CRMTasks
         'TileBarItem4
         '
         Me.TileBarItem4.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement4.Image = CType(resources.GetObject("TileItemElement4.Image"), System.Drawing.Image)
-        TileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement4.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
+        TileItemElement4.ImageOptions.Image = CType(resources.GetObject("resource.Image5"), System.Drawing.Image)
+        TileItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
+        TileItemElement4.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
         TileItemElement4.Text = "مغلقة"
         Me.TileBarItem4.Elements.Add(TileItemElement4)
         Me.TileBarItem4.Id = 7
@@ -1493,9 +1553,9 @@ Partial Class CRMTasks
         'TileBarItem5
         '
         Me.TileBarItem5.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement5.Image = CType(resources.GetObject("TileItemElement5.Image"), System.Drawing.Image)
-        TileItemElement5.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement5.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
+        TileItemElement5.ImageOptions.Image = CType(resources.GetObject("resource.Image6"), System.Drawing.Image)
+        TileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
+        TileItemElement5.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
         TileItemElement5.Text = "طباعة"
         Me.TileBarItem5.Elements.Add(TileItemElement5)
         Me.TileBarItem5.Id = 8
@@ -1505,9 +1565,9 @@ Partial Class CRMTasks
         'TileBarItem6
         '
         Me.TileBarItem6.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement6.Image = CType(resources.GetObject("TileItemElement6.Image"), System.Drawing.Image)
-        TileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement6.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
+        TileItemElement6.ImageOptions.Image = CType(resources.GetObject("resource.Image7"), System.Drawing.Image)
+        TileItemElement6.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
+        TileItemElement6.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
         TileItemElement6.Text = "بحث"
         Me.TileBarItem6.Elements.Add(TileItemElement6)
         Me.TileBarItem6.Id = 9
@@ -1618,6 +1678,7 @@ Partial Class CRMTasks
         CType(Me.RepositoryItemButtonEdit2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemButtonEdit3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemButtonEdit4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositorySendSMS, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEdit4.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEdit3.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1655,6 +1716,7 @@ Partial Class CRMTasks
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl3.ResumeLayout(False)
         CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1717,8 +1779,8 @@ Partial Class CRMTasks
     Friend WithEvents RepositoryItemButtonEdit4 As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
     Friend WithEvents AlertControl1 As DevExpress.XtraBars.Alerter.AlertControl
     Friend WithEvents TaskTypeCombo As DevExpress.XtraEditors.ComboBoxEdit
-    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton4 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents ButtonStop As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents ButtonAlarm As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton6 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton5 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton7 As DevExpress.XtraEditors.SimpleButton
@@ -1768,4 +1830,9 @@ Partial Class CRMTasks
     Friend WithEvents TileBarItem4 As DevExpress.XtraBars.Navigation.TileBarItem
     Friend WithEvents TileBarItem5 As DevExpress.XtraBars.Navigation.TileBarItem
     Friend WithEvents TileBarItem6 As DevExpress.XtraBars.Navigation.TileBarItem
+    Friend WithEvents colCustID As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents LayoutControlItem16 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents GridSendSMS As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents RepositorySendSMS As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
 End Class

@@ -88,41 +88,44 @@
         </ColumnUISetting>
       </ColumnUISettings>
     </TableUISetting>
-    <TableUISetting Name="FinancialChequesBack">
+    <TableUISetting Name="CRMCustomersOrders">
       <ColumnUISettings>
-        <ColumnUISetting Name="ID">
+        <ColumnUISetting Name="CustImage">
           <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-              <BindableControlInfo Name="TextEdit" Type="DevExpress.XtraEditors.TextEdit" AssemblyName="DevExpress.XtraEditors.v17.1" />
+              <BindableControlInfo Name="PictureBox" Type="System.Windows.Forms.PictureBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
             </ControlSetting></ControlSettings>
         </ColumnUISetting>
-        <ColumnUISetting Name="AccID">
+      </ColumnUISettings>
+    </TableUISetting>
+    <TableUISetting Name="PrintingSystemDocs">
+      <ColumnUISettings>
+        <ColumnUISetting Name="DocID">
           <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-              <BindableControlInfo Name="SearchLookUpEdit" Type="DevExpress.XtraEditors.SearchLookUpEdit" AssemblyName="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Frameworks=".NETFramework,Version=v4.0;.NETFramework,Version=v4.5;.NETFramework,Version=v4.6.1" />
+              <BindableControlInfo Name="TextEdit" Type="DevExpress.XtraEditors.TextEdit" AssemblyName="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Frameworks=".NETFramework,Version=v4.0;.NETFramework,Version=v4.6.1" />
             </ControlSetting></ControlSettings>
         </ColumnUISetting>
-        <ColumnUISetting Name="ChequesNo">
+        <ColumnUISetting Name="DocFile">
           <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-              <BindableControlInfo Name="TextEdit" Type="DevExpress.XtraEditors.TextEdit" AssemblyName="DevExpress.XtraEditors.v17.1" />
+              <BindableControlInfo Name="[None]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />
             </ControlSetting></ControlSettings>
         </ColumnUISetting>
-        <ColumnUISetting Name="BankName">
+      </ColumnUISettings>
+    </TableUISetting>
+    <TableUISetting Name="PrintingSystemJobs">
+      <ColumnUISettings>
+        <ColumnUISetting Name="JobReceive">
           <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-              <BindableControlInfo Name="TextEdit" Type="DevExpress.XtraEditors.TextEdit" AssemblyName="DevExpress.XtraEditors.v17.1" />
+              <BindableControlInfo Name="DateEdit" Type="DevExpress.XtraEditors.DateEdit" AssemblyName="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Frameworks=".NETFramework,Version=v4.0;.NETFramework,Version=v4.6.1" />
             </ControlSetting></ControlSettings>
         </ColumnUISetting>
-        <ColumnUISetting Name="Amount">
+        <ColumnUISetting Name="JobPaidDate">
           <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-              <BindableControlInfo Name="TextEdit" Type="DevExpress.XtraEditors.TextEdit" AssemblyName="DevExpress.XtraEditors.v17.1" />
+              <BindableControlInfo Name="DateEdit" Type="DevExpress.XtraEditors.DateEdit" AssemblyName="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Frameworks=".NETFramework,Version=v4.0;.NETFramework,Version=v4.6.1" />
             </ControlSetting></ControlSettings>
         </ColumnUISetting>
-        <ColumnUISetting Name="Currency">
+        <ColumnUISetting Name="JobVoucherNO">
           <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-              <BindableControlInfo Name="ComboBox" Type="System.Windows.Forms.ComboBox" AssemblyName="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-            </ControlSetting></ControlSettings>
-        </ColumnUISetting>
-        <ColumnUISetting Name="CheckPic">
-          <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-              <BindableControlInfo Name="ImageEdit" Type="DevExpress.XtraEditors.ImageEdit" AssemblyName="DevExpress.XtraEditors.v17.1" />
+              <BindableControlInfo Name="TextEdit" Type="DevExpress.XtraEditors.TextEdit" AssemblyName="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Frameworks=".NETFramework,Version=v4.0;.NETFramework,Version=v4.6.1" />
             </ControlSetting></ControlSettings>
         </ColumnUISetting>
       </ColumnUISettings>
@@ -131,7 +134,7 @@
       <ColumnUISettings>
         <ColumnUISetting Name="Picture">
           <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-              <BindableControlInfo Name="PictureBox" Type="System.Windows.Forms.PictureBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+              <BindableControlInfo Name="PictureEdit" Type="DevExpress.XtraEditors.PictureEdit" AssemblyName="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Frameworks=".NETFramework,Version=v4.0;.NETFramework,Version=v4.6.1" />
             </ControlSetting></ControlSettings>
         </ColumnUISetting>
       </ColumnUISettings>

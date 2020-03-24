@@ -83,10 +83,12 @@ Public Class ReceiptsAudit
             If GridView2.DataRowCount = 0 Then MsgBox("لا يوجد بيانات للترحيل") : Exit Sub
             Dim row As Object = LookUpEdit2.Properties.GetDataSourceRowByKeyValue(LookUpEdit2.EditValue)
             Dim aa As String = TryCast(row, DataRowView)("userid").ToString()
+            MsgBox(GridView2.RowCount - 1)
             For i As Integer = 0 To GridView2.RowCount - 1
                 Dim RecNO As String = CType(GridView2.GetRowCellValue(i, "RecNO"), String)
                 Transfer(RecNO, aa)
             Next
+
         Catch ex As Exception
             MsgBox("خطا")
         End Try

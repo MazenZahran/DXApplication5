@@ -35,6 +35,18 @@ Public Class FinancialBawaqe
 
     Private Sub FinancialBawaqe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SqlDataSource1.Fill()
-        GridControl1.DataSource = SqlDataSource1
+        '    GridControl1.DataSource = SqlDataSource1
+    End Sub
+
+    Private Sub SimpleButton1_Click(sender As Object, e As EventArgs)
+        GridControl1.ShowPrintPreview()
+    End Sub
+
+    Private Sub SimpleButton2_Click(sender As Object, e As EventArgs)
+        SqlDataSource1.Fill()
+    End Sub
+
+    Private Sub GridControl1_Click(sender As Object, e As EventArgs) Handles GridControl1.Click
+
     End Sub
 End Class

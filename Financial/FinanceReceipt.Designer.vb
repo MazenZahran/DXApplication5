@@ -20,20 +20,7 @@ Partial Class FinanceReceipt
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Label2 As System.Windows.Forms.Label
-        Dim Label3 As System.Windows.Forms.Label
-        Dim RecRateLabel As System.Windows.Forms.Label
-        Dim RecDateLabel As System.Windows.Forms.Label
-        Dim RecNOLabel As System.Windows.Forms.Label
-        Dim RecCustNoLabel As System.Windows.Forms.Label
-        Dim RecOtherLabel As System.Windows.Forms.Label
-        Dim RecTotalLabel As System.Windows.Forms.Label
-        Dim RecChequeLabel As System.Windows.Forms.Label
-        Dim RecCashLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FinanceReceipt))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim SelectQuery1 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
         Dim Column1 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
         Dim ColumnExpression1 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
@@ -105,25 +92,40 @@ Partial Class FinanceReceipt
         Dim Sorting2 As DevExpress.DataAccess.Sql.Sorting = New DevExpress.DataAccess.Sql.Sorting()
         Dim ColumnExpression30 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
         Me.NavigationPane1 = New DevExpress.XtraBars.Navigation.NavigationPane()
-        Me.NavigationPage1 = New DevExpress.XtraBars.Navigation.NavigationPage()
-        Me.DashboardViewer1 = New DevExpress.DashboardWin.DashboardViewer(Me.components)
         Me.NavigationPage2 = New DevExpress.XtraBars.Navigation.NavigationPage()
-        Me.PanelControl4 = New DevExpress.XtraEditors.PanelControl()
-        Me.SimpleButton15 = New DevExpress.XtraEditors.SimpleButton()
-        Me.RecTotalSpinEdit = New System.Windows.Forms.TextBox()
-        Me.ReceiptDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
+        Me.ChequeDataGridControl = New DevExpress.XtraGrid.GridControl()
+        Me.ChequeDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CRMDataSet = New DXApplication5.CRMDataSet()
-        Me.RecOtherSpinEdit = New System.Windows.Forms.TextBox()
-        Me.RecChequeSpinEdit = New System.Windows.Forms.TextBox()
-        Me.RecCashSpinEdit = New System.Windows.Forms.TextBox()
-        Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
-        Me.RecRateSpinEdit = New System.Windows.Forms.TextBox()
-        Me.smallcurrencylabel = New DevExpress.XtraEditors.LabelControl()
-        Me.AmountInNisText = New DevExpress.XtraEditors.TextEdit()
-        Me.RecCurrTextEdit = New DevExpress.XtraEditors.ComboBoxEdit()
-        Me.PanelControl5 = New DevExpress.XtraEditors.PanelControl()
-        Me.RecNoteTextEdit = New DevExpress.XtraEditors.MemoEdit()
-        Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
+        Me.GridView5 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.colChequeNO = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colChequeBank = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colChequeBranch = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colChequeAccount = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colChequeAccDate = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colChequeAmount = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colChequeReceiptNo = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colID = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.SimpleButton17 = New DevExpress.XtraEditors.SimpleButton()
+        Me.TextEditAccountBalance = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEditAccChequesTotal = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEditAccChequeNO = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEditChequeNO = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEditChequesTotal = New DevExpress.XtraEditors.TextEdit()
+        Me.RecCurrRate = New DevExpress.XtraEditors.TextEdit()
+        Me.ReceiptDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RecTotalSpinEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.RecOtherSpinEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.RecChequeSpinEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.RecCashSpinEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.RecInputDateDateEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.RecUserTextEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.RecSmallCurrName = New DevExpress.XtraEditors.TextEdit()
+        Me.RecOwnerTextEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.RecDeviceNameTextEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.RecAuditSpinEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.RecStatusSpinEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.SimpleButton15 = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl4 = New DevExpress.XtraGrid.GridControl()
         Me.GridView4 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.ColAccrualDate = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -134,44 +136,75 @@ Partial Class FinanceReceipt
         Me.ColTaskMonth = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColNote = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColTaskID = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ColState = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemCheckEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit()
-        Me.SumChequesLabel = New DevExpress.XtraEditors.LabelControl()
-        Me.CountChequesLabel = New DevExpress.XtraEditors.LabelControl()
-        Me.ChequeDataDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ChequeDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PanelControl6 = New DevExpress.XtraEditors.PanelControl()
-        Me.RecOwnerTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.RecInputDateDateEdit = New DevExpress.XtraEditors.DateEdit()
-        Me.RecUserTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.RecAuditSpinEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.RecDeviceNameTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.RecStatusSpinEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
-        Me.CheckEdit1 = New DevExpress.XtraEditors.CheckEdit()
-        Me.SimpleButton9 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton6 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton8 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-        Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
-        Me.RecDateDateEdit = New DevExpress.XtraEditors.DateEdit()
-        Me.RecNOSpinEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
-        Me.RecCustNoTextEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.RecNoteTextEdit = New DevExpress.XtraEditors.MemoEdit()
+        Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
         Me.RecCustNameTextEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.RecDateDateEdit = New DevExpress.XtraEditors.DateEdit()
+        Me.AmountInNisText = New DevExpress.XtraEditors.TextEdit()
+        Me.CheckEdit1 = New DevExpress.XtraEditors.CheckEdit()
+        Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
+        Me.RecNOSpinEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.SimpleButton9 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton8 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton6 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
+        Me.RecCurrTextEdit = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.RecCustNoTextEdit = New DevExpress.XtraEditors.SearchLookUpEdit()
+        Me.Accounts1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.WizCountDataSet = New DXApplication5.WizCountDataSet()
+        Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.LayoutControlItem24 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem11 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem3 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.LayoutControlItem22 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem4 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem39 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup3 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem14 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem38 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem37 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem20 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup4 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem27 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem25 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem17 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup5 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem21 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem26 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem34 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem35 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem36 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem29 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem28 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem30 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem31 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem32 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem33 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem18 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem19 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem23 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.NavigationPage3 = New DevExpress.XtraBars.Navigation.NavigationPage()
         Me.PanelControl8 = New DevExpress.XtraEditors.PanelControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
@@ -234,59 +267,98 @@ Partial Class FinanceReceipt
         Me.TableAdapterManager = New DXApplication5.CRMDataSetTableAdapters.TableAdapterManager()
         Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
-        Label2 = New System.Windows.Forms.Label()
-        Label3 = New System.Windows.Forms.Label()
-        RecRateLabel = New System.Windows.Forms.Label()
-        RecDateLabel = New System.Windows.Forms.Label()
-        RecNOLabel = New System.Windows.Forms.Label()
-        RecCustNoLabel = New System.Windows.Forms.Label()
-        RecOtherLabel = New System.Windows.Forms.Label()
-        RecTotalLabel = New System.Windows.Forms.Label()
-        RecChequeLabel = New System.Windows.Forms.Label()
-        RecCashLabel = New System.Windows.Forms.Label()
+        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.EmptySpaceItem5 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.Accounts1TableAdapter = New DXApplication5.WizCountDataSetTableAdapters.Accounts1TableAdapter()
         CType(Me.NavigationPane1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavigationPane1.SuspendLayout()
-        Me.NavigationPage1.SuspendLayout()
-        CType(Me.DashboardViewer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavigationPage2.SuspendLayout()
-        CType(Me.PanelControl4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl4.SuspendLayout()
-        CType(Me.ReceiptDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LayoutControl1.SuspendLayout()
+        CType(Me.ChequeDataGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChequeDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AmountInNisText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecCurrTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PanelControl5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl5.SuspendLayout()
-        CType(Me.RecNoteTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupControl1.SuspendLayout()
+        CType(Me.GridView5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEditAccountBalance.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEditAccChequesTotal.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEditAccChequeNO.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEditChequeNO.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEditChequesTotal.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecCurrRate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReceiptDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecTotalSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecOtherSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecChequeSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecCashSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecInputDateDateEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecUserTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecSmallCurrName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecOwnerTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecDeviceNameTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecAuditSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecStatusSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemCheckEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ChequeDataDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ChequeDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PanelControl6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl6.SuspendLayout()
-        CType(Me.RecOwnerTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecInputDateDateEdit.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecInputDateDateEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecUserTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecAuditSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecDeviceNameTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecStatusSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl1.SuspendLayout()
-        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl2.SuspendLayout()
+        CType(Me.RecNoteTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecCustNameTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RecDateDateEdit.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RecDateDateEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AmountInNisText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RecNOSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl3.SuspendLayout()
+        CType(Me.RecCurrTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RecCustNoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecCustNameTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Accounts1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.WizCountDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem39, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem27, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem26, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem29, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem28, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem30, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem23, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavigationPage3.SuspendLayout()
         CType(Me.PanelControl8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl8.SuspendLayout()
@@ -319,116 +391,12 @@ Partial Class FinanceReceipt
         CType(Me.PanelControl12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl12.SuspendLayout()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label2
-        '
-        Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Label2.AutoSize = True
-        Label2.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label2.Location = New System.Drawing.Point(963, 22)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(47, 19)
-        Label2.TabIndex = 24
-        Label2.Text = "العملة:"
-        '
-        'Label3
-        '
-        Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Label3.AutoSize = True
-        Label3.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label3.Location = New System.Drawing.Point(177, 16)
-        Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(75, 19)
-        Label3.TabIndex = 24
-        Label3.Text = "المبلغ مقيم:"
-        '
-        'RecRateLabel
-        '
-        RecRateLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        RecRateLabel.AutoSize = True
-        RecRateLabel.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RecRateLabel.Location = New System.Drawing.Point(538, 16)
-        RecRateLabel.Name = "RecRateLabel"
-        RecRateLabel.Size = New System.Drawing.Size(83, 19)
-        RecRateLabel.TabIndex = 24
-        RecRateLabel.Text = "سعر الصرف:"
-        '
-        'RecDateLabel
-        '
-        RecDateLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        RecDateLabel.AutoSize = True
-        RecDateLabel.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RecDateLabel.Location = New System.Drawing.Point(309, 15)
-        RecDateLabel.Name = "RecDateLabel"
-        RecDateLabel.Size = New System.Drawing.Size(79, 19)
-        RecDateLabel.TabIndex = 2
-        RecDateLabel.Text = "تاريخ السند:"
-        '
-        'RecNOLabel
-        '
-        RecNOLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        RecNOLabel.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RecNOLabel.Location = New System.Drawing.Point(946, 16)
-        RecNOLabel.Name = "RecNOLabel"
-        RecNOLabel.Size = New System.Drawing.Size(74, 22)
-        RecNOLabel.TabIndex = 0
-        RecNOLabel.Text = "رقم السند:"
-        '
-        'RecCustNoLabel
-        '
-        RecCustNoLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        RecCustNoLabel.AutoSize = True
-        RecCustNoLabel.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RecCustNoLabel.Location = New System.Drawing.Point(955, 14)
-        RecCustNoLabel.Name = "RecCustNoLabel"
-        RecCustNoLabel.Size = New System.Drawing.Size(57, 19)
-        RecCustNoLabel.TabIndex = 4
-        RecCustNoLabel.Text = "الحساب:"
-        '
-        'RecOtherLabel
-        '
-        RecOtherLabel.AutoSize = True
-        RecOtherLabel.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RecOtherLabel.Location = New System.Drawing.Point(434, 54)
-        RecOtherLabel.Name = "RecOtherLabel"
-        RecOtherLabel.Size = New System.Drawing.Size(46, 19)
-        RecOtherLabel.TabIndex = 106
-        RecOtherLabel.Text = "أخرى:"
-        '
-        'RecTotalLabel
-        '
-        RecTotalLabel.AutoSize = True
-        RecTotalLabel.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RecTotalLabel.Location = New System.Drawing.Point(163, 54)
-        RecTotalLabel.Name = "RecTotalLabel"
-        RecTotalLabel.Size = New System.Drawing.Size(63, 19)
-        RecTotalLabel.TabIndex = 107
-        RecTotalLabel.Text = "المجموع:"
-        '
-        'RecChequeLabel
-        '
-        RecChequeLabel.AutoSize = True
-        RecChequeLabel.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RecChequeLabel.Location = New System.Drawing.Point(690, 54)
-        RecChequeLabel.Name = "RecChequeLabel"
-        RecChequeLabel.Size = New System.Drawing.Size(51, 19)
-        RecChequeLabel.TabIndex = 105
-        RecChequeLabel.Text = "شيكات:"
-        '
-        'RecCashLabel
-        '
-        RecCashLabel.AutoSize = True
-        RecCashLabel.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RecCashLabel.Location = New System.Drawing.Point(972, 54)
-        RecCashLabel.Name = "RecCashLabel"
-        RecCashLabel.Size = New System.Drawing.Size(36, 19)
-        RecCashLabel.TabIndex = 104
-        RecCashLabel.Text = "نقدا:"
         '
         'NavigationPane1
         '
-        Me.NavigationPane1.Controls.Add(Me.NavigationPage1)
         Me.NavigationPane1.Controls.Add(Me.NavigationPage2)
         Me.NavigationPane1.Controls.Add(Me.NavigationPage3)
         Me.NavigationPane1.Controls.Add(Me.NavigationPage4)
@@ -436,233 +404,440 @@ Partial Class FinanceReceipt
         Me.NavigationPane1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NavigationPane1.Location = New System.Drawing.Point(0, 0)
         Me.NavigationPane1.Name = "NavigationPane1"
-        Me.NavigationPane1.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.NavigationPage1, Me.NavigationPage2, Me.NavigationPage3, Me.NavigationPage4, Me.NavigationPage5})
-        Me.NavigationPane1.RegularSize = New System.Drawing.Size(1184, 711)
-        Me.NavigationPane1.SelectedPage = Me.NavigationPage1
-        Me.NavigationPane1.Size = New System.Drawing.Size(1184, 711)
+        Me.NavigationPane1.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.NavigationPage2, Me.NavigationPage3, Me.NavigationPage4, Me.NavigationPage5})
+        Me.NavigationPane1.RegularSize = New System.Drawing.Size(1262, 711)
+        Me.NavigationPane1.SelectedPage = Me.NavigationPage2
+        Me.NavigationPane1.Size = New System.Drawing.Size(1262, 711)
         Me.NavigationPane1.TabIndex = 0
         Me.NavigationPane1.Text = "الرئيسية"
-        '
-        'NavigationPage1
-        '
-        Me.NavigationPage1.Caption = "الرئيسية"
-        Me.NavigationPage1.Controls.Add(Me.DashboardViewer1)
-        Me.NavigationPage1.Name = "NavigationPage1"
-        Me.NavigationPage1.Size = New System.Drawing.Size(1043, 651)
-        '
-        'DashboardViewer1
-        '
-        Me.DashboardViewer1.DashboardSource = GetType(DXApplication5.Win_Dashboards.Dashboard1)
-        Me.DashboardViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DashboardViewer1.Location = New System.Drawing.Point(0, 0)
-        Me.DashboardViewer1.Name = "DashboardViewer1"
-        Me.DashboardViewer1.Size = New System.Drawing.Size(1043, 651)
-        Me.DashboardViewer1.TabIndex = 0
         '
         'NavigationPage2
         '
         Me.NavigationPage2.Caption = "سند قبض"
-        Me.NavigationPage2.Controls.Add(Me.PanelControl4)
-        Me.NavigationPage2.Controls.Add(Me.PanelControl5)
-        Me.NavigationPage2.Controls.Add(Me.GroupControl1)
-        Me.NavigationPage2.Controls.Add(Me.PanelControl6)
-        Me.NavigationPage2.Controls.Add(Me.PanelControl1)
-        Me.NavigationPage2.Controls.Add(Me.PanelControl2)
-        Me.NavigationPage2.Controls.Add(Me.PanelControl3)
+        Me.NavigationPage2.Controls.Add(Me.LayoutControl1)
         Me.NavigationPage2.Name = "NavigationPage2"
-        Me.NavigationPage2.Size = New System.Drawing.Size(1043, 651)
+        Me.NavigationPage2.Size = New System.Drawing.Size(1125, 663)
         '
-        'PanelControl4
+        'LayoutControl1
         '
-        Me.PanelControl4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelControl4.Controls.Add(Me.SimpleButton15)
-        Me.PanelControl4.Controls.Add(Me.RecTotalSpinEdit)
-        Me.PanelControl4.Controls.Add(Me.RecOtherSpinEdit)
-        Me.PanelControl4.Controls.Add(Me.RecChequeSpinEdit)
-        Me.PanelControl4.Controls.Add(Me.RecCashSpinEdit)
-        Me.PanelControl4.Controls.Add(Me.TextEdit1)
-        Me.PanelControl4.Controls.Add(RecOtherLabel)
-        Me.PanelControl4.Controls.Add(RecTotalLabel)
-        Me.PanelControl4.Controls.Add(RecChequeLabel)
-        Me.PanelControl4.Controls.Add(RecCashLabel)
-        Me.PanelControl4.Controls.Add(Me.RecRateSpinEdit)
-        Me.PanelControl4.Controls.Add(Me.smallcurrencylabel)
-        Me.PanelControl4.Controls.Add(Me.AmountInNisText)
-        Me.PanelControl4.Controls.Add(Label2)
-        Me.PanelControl4.Controls.Add(Label3)
-        Me.PanelControl4.Controls.Add(RecRateLabel)
-        Me.PanelControl4.Controls.Add(Me.RecCurrTextEdit)
-        Me.PanelControl4.Location = New System.Drawing.Point(8, 156)
-        Me.PanelControl4.Name = "PanelControl4"
-        Me.PanelControl4.Size = New System.Drawing.Size(1034, 117)
-        Me.PanelControl4.TabIndex = 102
+        Me.LayoutControl1.Controls.Add(Me.ChequeDataGridControl)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton17)
+        Me.LayoutControl1.Controls.Add(Me.TextEditAccountBalance)
+        Me.LayoutControl1.Controls.Add(Me.TextEditAccChequesTotal)
+        Me.LayoutControl1.Controls.Add(Me.TextEditAccChequeNO)
+        Me.LayoutControl1.Controls.Add(Me.TextEditChequeNO)
+        Me.LayoutControl1.Controls.Add(Me.TextEditChequesTotal)
+        Me.LayoutControl1.Controls.Add(Me.RecCurrRate)
+        Me.LayoutControl1.Controls.Add(Me.RecTotalSpinEdit)
+        Me.LayoutControl1.Controls.Add(Me.RecOtherSpinEdit)
+        Me.LayoutControl1.Controls.Add(Me.RecChequeSpinEdit)
+        Me.LayoutControl1.Controls.Add(Me.RecCashSpinEdit)
+        Me.LayoutControl1.Controls.Add(Me.RecInputDateDateEdit)
+        Me.LayoutControl1.Controls.Add(Me.RecUserTextEdit)
+        Me.LayoutControl1.Controls.Add(Me.RecSmallCurrName)
+        Me.LayoutControl1.Controls.Add(Me.RecOwnerTextEdit)
+        Me.LayoutControl1.Controls.Add(Me.RecDeviceNameTextEdit)
+        Me.LayoutControl1.Controls.Add(Me.RecAuditSpinEdit)
+        Me.LayoutControl1.Controls.Add(Me.RecStatusSpinEdit)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton15)
+        Me.LayoutControl1.Controls.Add(Me.GridControl4)
+        Me.LayoutControl1.Controls.Add(Me.RecNoteTextEdit)
+        Me.LayoutControl1.Controls.Add(Me.TextEdit1)
+        Me.LayoutControl1.Controls.Add(Me.RecCustNameTextEdit)
+        Me.LayoutControl1.Controls.Add(Me.RecDateDateEdit)
+        Me.LayoutControl1.Controls.Add(Me.AmountInNisText)
+        Me.LayoutControl1.Controls.Add(Me.CheckEdit1)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton7)
+        Me.LayoutControl1.Controls.Add(Me.RecNOSpinEdit)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton9)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton8)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton5)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton4)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton6)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton3)
+        Me.LayoutControl1.Controls.Add(Me.RecCurrTextEdit)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton1)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton2)
+        Me.LayoutControl1.Controls.Add(Me.RecCustNoTextEdit)
+        Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutControl1.HiddenItems.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem24})
+        Me.LayoutControl1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControl1.Name = "LayoutControl1"
+        Me.LayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(1047, 604, 450, 400)
+        Me.LayoutControl1.OptionsFocus.EnableAutoTabOrder = False
+        Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
+        Me.LayoutControl1.Root = Me.LayoutControlGroup1
+        Me.LayoutControl1.Size = New System.Drawing.Size(1125, 663)
+        Me.LayoutControl1.TabIndex = 0
+        Me.LayoutControl1.Text = "LayoutControl1"
         '
-        'SimpleButton15
+        'ChequeDataGridControl
         '
-        Me.SimpleButton15.ImageOptions.Image = CType(resources.GetObject("SimpleButton15.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton15.Location = New System.Drawing.Point(350, 13)
-        Me.SimpleButton15.Name = "SimpleButton15"
-        Me.SimpleButton15.Size = New System.Drawing.Size(24, 27)
-        Me.SimpleButton15.TabIndex = 113
+        Me.ChequeDataGridControl.DataSource = Me.ChequeDataBindingSource
+        Me.ChequeDataGridControl.Location = New System.Drawing.Point(12, 410)
+        Me.ChequeDataGridControl.MainView = Me.GridView5
+        Me.ChequeDataGridControl.Name = "ChequeDataGridControl"
+        Me.ChequeDataGridControl.Size = New System.Drawing.Size(1101, 187)
+        Me.ChequeDataGridControl.TabIndex = 10
+        Me.ChequeDataGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView5})
         '
-        'RecTotalSpinEdit
+        'ChequeDataBindingSource
         '
-        Me.RecTotalSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReceiptDataBindingSource, "RecTotal", True))
-        Me.RecTotalSpinEdit.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold)
-        Me.RecTotalSpinEdit.Location = New System.Drawing.Point(7, 51)
-        Me.RecTotalSpinEdit.Name = "RecTotalSpinEdit"
-        Me.RecTotalSpinEdit.ReadOnly = True
-        Me.RecTotalSpinEdit.Size = New System.Drawing.Size(150, 27)
-        Me.RecTotalSpinEdit.TabIndex = 112
-        '
-        'ReceiptDataBindingSource
-        '
-        Me.ReceiptDataBindingSource.DataMember = "ReceiptData"
-        Me.ReceiptDataBindingSource.DataSource = Me.CRMDataSet
+        Me.ChequeDataBindingSource.DataMember = "ChequeData"
+        Me.ChequeDataBindingSource.DataSource = Me.CRMDataSet
         '
         'CRMDataSet
         '
         Me.CRMDataSet.DataSetName = "CRMDataSet"
         Me.CRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'GridView5
+        '
+        Me.GridView5.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colChequeNO, Me.colChequeBank, Me.colChequeBranch, Me.colChequeAccount, Me.colChequeAccDate, Me.colChequeAmount, Me.colChequeReceiptNo, Me.colID})
+        Me.GridView5.GridControl = Me.ChequeDataGridControl
+        Me.GridView5.Name = "GridView5"
+        Me.GridView5.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom
+        Me.GridView5.OptionsView.ShowFooter = True
+        Me.GridView5.OptionsView.ShowGroupPanel = False
+        '
+        'colChequeNO
+        '
+        Me.colChequeNO.Caption = "رقم الشيك"
+        Me.colChequeNO.FieldName = "ChequeNO"
+        Me.colChequeNO.Name = "colChequeNO"
+        Me.colChequeNO.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ChequeNO", "عدد الشيكات {0}")})
+        Me.colChequeNO.Visible = True
+        Me.colChequeNO.VisibleIndex = 0
+        '
+        'colChequeBank
+        '
+        Me.colChequeBank.Caption = "البنك"
+        Me.colChequeBank.FieldName = "ChequeBank"
+        Me.colChequeBank.Name = "colChequeBank"
+        Me.colChequeBank.Visible = True
+        Me.colChequeBank.VisibleIndex = 1
+        '
+        'colChequeBranch
+        '
+        Me.colChequeBranch.Caption = "الفرع"
+        Me.colChequeBranch.FieldName = "ChequeBranch"
+        Me.colChequeBranch.Name = "colChequeBranch"
+        Me.colChequeBranch.Visible = True
+        Me.colChequeBranch.VisibleIndex = 2
+        '
+        'colChequeAccount
+        '
+        Me.colChequeAccount.Caption = "الحساب"
+        Me.colChequeAccount.FieldName = "ChequeAccount"
+        Me.colChequeAccount.Name = "colChequeAccount"
+        Me.colChequeAccount.Visible = True
+        Me.colChequeAccount.VisibleIndex = 3
+        '
+        'colChequeAccDate
+        '
+        Me.colChequeAccDate.Caption = "تاريخ الاستحقاق"
+        Me.colChequeAccDate.FieldName = "ChequeAccDate"
+        Me.colChequeAccDate.Name = "colChequeAccDate"
+        Me.colChequeAccDate.Visible = True
+        Me.colChequeAccDate.VisibleIndex = 4
+        '
+        'colChequeAmount
+        '
+        Me.colChequeAmount.Caption = "المبلغ"
+        Me.colChequeAmount.FieldName = "ChequeAmount"
+        Me.colChequeAmount.Name = "colChequeAmount"
+        Me.colChequeAmount.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ChequeAmount", "{0}")})
+        Me.colChequeAmount.Visible = True
+        Me.colChequeAmount.VisibleIndex = 5
+        '
+        'colChequeReceiptNo
+        '
+        Me.colChequeReceiptNo.Caption = "رقم القبض"
+        Me.colChequeReceiptNo.FieldName = "ChequeReceiptNo"
+        Me.colChequeReceiptNo.Name = "colChequeReceiptNo"
+        Me.colChequeReceiptNo.Visible = True
+        Me.colChequeReceiptNo.VisibleIndex = 6
+        '
+        'colID
+        '
+        Me.colID.Caption = "رقم"
+        Me.colID.FieldName = "ID"
+        Me.colID.Name = "colID"
+        Me.colID.Visible = True
+        Me.colID.VisibleIndex = 7
+        '
+        'SimpleButton17
+        '
+        Me.SimpleButton17.Location = New System.Drawing.Point(1033, 90)
+        Me.SimpleButton17.Name = "SimpleButton17"
+        Me.SimpleButton17.Size = New System.Drawing.Size(68, 26)
+        Me.SimpleButton17.StyleController = Me.LayoutControl1
+        Me.SimpleButton17.TabIndex = 20
+        Me.SimpleButton17.Text = "بحث"
+        '
+        'TextEditAccountBalance
+        '
+        Me.TextEditAccountBalance.Location = New System.Drawing.Point(24, 144)
+        Me.TextEditAccountBalance.Name = "TextEditAccountBalance"
+        Me.TextEditAccountBalance.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold)
+        Me.TextEditAccountBalance.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.TextEditAccountBalance.Properties.Appearance.Options.UseFont = True
+        Me.TextEditAccountBalance.Properties.Appearance.Options.UseForeColor = True
+        Me.TextEditAccountBalance.Properties.Mask.EditMask = "{0:0}"
+        Me.TextEditAccountBalance.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.TextEditAccountBalance.Properties.ReadOnly = True
+        Me.TextEditAccountBalance.Size = New System.Drawing.Size(97, 26)
+        Me.TextEditAccountBalance.StyleController = Me.LayoutControl1
+        Me.TextEditAccountBalance.TabIndex = 26
+        '
+        'TextEditAccChequesTotal
+        '
+        Me.TextEditAccChequesTotal.Location = New System.Drawing.Point(182, 144)
+        Me.TextEditAccChequesTotal.Name = "TextEditAccChequesTotal"
+        Me.TextEditAccChequesTotal.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold)
+        Me.TextEditAccChequesTotal.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.TextEditAccChequesTotal.Properties.Appearance.Options.UseFont = True
+        Me.TextEditAccChequesTotal.Properties.Appearance.Options.UseForeColor = True
+        Me.TextEditAccChequesTotal.Properties.ReadOnly = True
+        Me.TextEditAccChequesTotal.Size = New System.Drawing.Size(87, 26)
+        Me.TextEditAccChequesTotal.StyleController = Me.LayoutControl1
+        Me.TextEditAccChequesTotal.TabIndex = 25
+        '
+        'TextEditAccChequeNO
+        '
+        Me.TextEditAccChequeNO.Location = New System.Drawing.Point(369, 144)
+        Me.TextEditAccChequeNO.Name = "TextEditAccChequeNO"
+        Me.TextEditAccChequeNO.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold)
+        Me.TextEditAccChequeNO.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.TextEditAccChequeNO.Properties.Appearance.Options.UseFont = True
+        Me.TextEditAccChequeNO.Properties.Appearance.Options.UseForeColor = True
+        Me.TextEditAccChequeNO.Properties.ReadOnly = True
+        Me.TextEditAccChequeNO.Size = New System.Drawing.Size(59, 26)
+        Me.TextEditAccChequeNO.StyleController = Me.LayoutControl1
+        Me.TextEditAccChequeNO.TabIndex = 24
+        '
+        'TextEditChequeNO
+        '
+        Me.TextEditChequeNO.Location = New System.Drawing.Point(603, 601)
+        Me.TextEditChequeNO.Name = "TextEditChequeNO"
+        Me.TextEditChequeNO.Properties.ReadOnly = True
+        Me.TextEditChequeNO.Size = New System.Drawing.Size(432, 20)
+        Me.TextEditChequeNO.StyleController = Me.LayoutControl1
+        Me.TextEditChequeNO.TabIndex = 27
+        '
+        'TextEditChequesTotal
+        '
+        Me.TextEditChequesTotal.Location = New System.Drawing.Point(12, 601)
+        Me.TextEditChequesTotal.Name = "TextEditChequesTotal"
+        Me.TextEditChequesTotal.Properties.ReadOnly = True
+        Me.TextEditChequesTotal.Size = New System.Drawing.Size(509, 20)
+        Me.TextEditChequesTotal.StyleController = Me.LayoutControl1
+        Me.TextEditChequesTotal.TabIndex = 28
+        '
+        'RecCurrRate
+        '
+        Me.RecCurrRate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReceiptDataBindingSource, "RecRate", True))
+        Me.RecCurrRate.Location = New System.Drawing.Point(313, 198)
+        Me.RecCurrRate.Name = "RecCurrRate"
+        Me.RecCurrRate.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold)
+        Me.RecCurrRate.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.RecCurrRate.Properties.Appearance.Options.UseFont = True
+        Me.RecCurrRate.Properties.Appearance.Options.UseForeColor = True
+        Me.RecCurrRate.Size = New System.Drawing.Size(159, 26)
+        Me.RecCurrRate.StyleController = Me.LayoutControl1
+        Me.RecCurrRate.TabIndex = 5
+        '
+        'ReceiptDataBindingSource
+        '
+        Me.ReceiptDataBindingSource.DataMember = "ReceiptData"
+        Me.ReceiptDataBindingSource.DataSource = Me.CRMDataSet
+        '
+        'RecTotalSpinEdit
+        '
+        Me.RecTotalSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReceiptDataBindingSource, "RecTotal", True))
+        Me.RecTotalSpinEdit.Location = New System.Drawing.Point(24, 252)
+        Me.RecTotalSpinEdit.Name = "RecTotalSpinEdit"
+        Me.RecTotalSpinEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.RecTotalSpinEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.RecTotalSpinEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecTotalSpinEdit.Properties.Appearance.Options.UseForeColor = True
+        Me.RecTotalSpinEdit.Properties.ReadOnly = True
+        Me.RecTotalSpinEdit.Size = New System.Drawing.Size(216, 26)
+        Me.RecTotalSpinEdit.StyleController = Me.LayoutControl1
+        Me.RecTotalSpinEdit.TabIndex = 35
+        '
         'RecOtherSpinEdit
         '
         Me.RecOtherSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReceiptDataBindingSource, "RecOther", True))
-        Me.RecOtherSpinEdit.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold)
-        Me.RecOtherSpinEdit.Location = New System.Drawing.Point(288, 51)
+        Me.RecOtherSpinEdit.Location = New System.Drawing.Point(322, 252)
         Me.RecOtherSpinEdit.Name = "RecOtherSpinEdit"
-        Me.RecOtherSpinEdit.Size = New System.Drawing.Size(140, 27)
-        Me.RecOtherSpinEdit.TabIndex = 111
+        Me.RecOtherSpinEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.RecOtherSpinEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.RecOtherSpinEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecOtherSpinEdit.Properties.Appearance.Options.UseForeColor = True
+        Me.RecOtherSpinEdit.Size = New System.Drawing.Size(208, 26)
+        Me.RecOtherSpinEdit.StyleController = Me.LayoutControl1
+        Me.RecOtherSpinEdit.TabIndex = 8
         '
         'RecChequeSpinEdit
         '
         Me.RecChequeSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReceiptDataBindingSource, "RecCheque", True))
-        Me.RecChequeSpinEdit.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold)
-        Me.RecChequeSpinEdit.Location = New System.Drawing.Point(538, 51)
+        Me.RecChequeSpinEdit.Location = New System.Drawing.Point(612, 252)
         Me.RecChequeSpinEdit.Name = "RecChequeSpinEdit"
-        Me.RecChequeSpinEdit.Size = New System.Drawing.Size(146, 27)
-        Me.RecChequeSpinEdit.TabIndex = 110
+        Me.RecChequeSpinEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.RecChequeSpinEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.RecChequeSpinEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecChequeSpinEdit.Properties.Appearance.Options.UseForeColor = True
+        Me.RecChequeSpinEdit.Size = New System.Drawing.Size(169, 26)
+        Me.RecChequeSpinEdit.StyleController = Me.LayoutControl1
+        Me.RecChequeSpinEdit.TabIndex = 7
         '
         'RecCashSpinEdit
         '
         Me.RecCashSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReceiptDataBindingSource, "RecCash", True))
-        Me.RecCashSpinEdit.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold)
-        Me.RecCashSpinEdit.Location = New System.Drawing.Point(826, 51)
+        Me.RecCashSpinEdit.Location = New System.Drawing.Point(863, 252)
         Me.RecCashSpinEdit.Name = "RecCashSpinEdit"
-        Me.RecCashSpinEdit.Size = New System.Drawing.Size(140, 27)
-        Me.RecCashSpinEdit.TabIndex = 109
+        Me.RecCashSpinEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.RecCashSpinEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.RecCashSpinEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecCashSpinEdit.Properties.Appearance.Options.UseForeColor = True
+        Me.RecCashSpinEdit.Size = New System.Drawing.Size(160, 26)
+        Me.RecCashSpinEdit.StyleController = Me.LayoutControl1
+        Me.RecCashSpinEdit.TabIndex = 6
         '
-        'TextEdit1
+        'RecInputDateDateEdit
         '
-        Me.TextEdit1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TextEdit1.Enabled = False
-        Me.TextEdit1.Location = New System.Drawing.Point(2, 88)
-        Me.TextEdit1.Name = "TextEdit1"
-        Me.TextEdit1.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextEdit1.Properties.Appearance.Options.UseFont = True
-        Me.TextEdit1.Properties.AutoHeight = False
-        Me.TextEdit1.Properties.ReadOnly = True
-        Me.TextEdit1.Size = New System.Drawing.Size(1030, 27)
-        Me.TextEdit1.TabIndex = 108
+        Me.RecInputDateDateEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RecInputDateDateEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecInputDate", True))
+        Me.RecInputDateDateEdit.Enabled = False
+        Me.RecInputDateDateEdit.Location = New System.Drawing.Point(12, 625)
+        Me.RecInputDateDateEdit.Name = "RecInputDateDateEdit"
+        Me.RecInputDateDateEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecInputDateDateEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecInputDateDateEdit.Properties.ReadOnly = True
+        Me.RecInputDateDateEdit.Size = New System.Drawing.Size(139, 26)
+        Me.RecInputDateDateEdit.StyleController = Me.LayoutControl1
+        Me.RecInputDateDateEdit.TabIndex = 34
         '
-        'RecRateSpinEdit
+        'RecUserTextEdit
         '
-        Me.RecRateSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReceiptDataBindingSource, "RecRate", True))
-        Me.RecRateSpinEdit.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold)
-        Me.RecRateSpinEdit.Location = New System.Drawing.Point(375, 13)
-        Me.RecRateSpinEdit.Name = "RecRateSpinEdit"
-        Me.RecRateSpinEdit.Size = New System.Drawing.Size(157, 27)
-        Me.RecRateSpinEdit.TabIndex = 103
+        Me.RecUserTextEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RecUserTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecUser", True))
+        Me.RecUserTextEdit.Enabled = False
+        Me.RecUserTextEdit.Location = New System.Drawing.Point(155, 625)
+        Me.RecUserTextEdit.Name = "RecUserTextEdit"
+        Me.RecUserTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecUserTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecUserTextEdit.Properties.ReadOnly = True
+        Me.RecUserTextEdit.Size = New System.Drawing.Size(190, 26)
+        Me.RecUserTextEdit.StyleController = Me.LayoutControl1
+        Me.RecUserTextEdit.TabIndex = 33
         '
-        'smallcurrencylabel
+        'RecSmallCurrName
         '
-        Me.smallcurrencylabel.Location = New System.Drawing.Point(992, 5)
-        Me.smallcurrencylabel.Name = "smallcurrencylabel"
-        Me.smallcurrencylabel.Size = New System.Drawing.Size(24, 13)
-        Me.smallcurrencylabel.TabIndex = 102
-        Me.smallcurrencylabel.Text = "اغورة"
-        Me.smallcurrencylabel.Visible = False
+        Me.RecSmallCurrName.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RecSmallCurrName.Enabled = False
+        Me.RecSmallCurrName.Location = New System.Drawing.Point(554, 198)
+        Me.RecSmallCurrName.Name = "RecSmallCurrName"
+        Me.RecSmallCurrName.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecSmallCurrName.Properties.Appearance.Options.UseFont = True
+        Me.RecSmallCurrName.Properties.ReadOnly = True
+        Me.RecSmallCurrName.Size = New System.Drawing.Size(219, 26)
+        Me.RecSmallCurrName.StyleController = Me.LayoutControl1
+        Me.RecSmallCurrName.TabIndex = 22
         '
-        'AmountInNisText
+        'RecOwnerTextEdit
         '
-        Me.AmountInNisText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.AmountInNisText.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.AmountInNisText.Location = New System.Drawing.Point(7, 11)
-        Me.AmountInNisText.Name = "AmountInNisText"
-        Me.AmountInNisText.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AmountInNisText.Properties.Appearance.Options.UseFont = True
-        Me.AmountInNisText.Properties.AutoHeight = False
-        Me.AmountInNisText.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
-        Me.AmountInNisText.Properties.Mask.BeepOnError = True
-        Me.AmountInNisText.Properties.Mask.EditMask = "c2"
-        Me.AmountInNisText.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.AmountInNisText.Properties.ReadOnly = True
-        Me.AmountInNisText.Size = New System.Drawing.Size(162, 30)
-        Me.AmountInNisText.TabIndex = 4
+        Me.RecOwnerTextEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RecOwnerTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecOwner", True))
+        Me.RecOwnerTextEdit.Enabled = False
+        Me.RecOwnerTextEdit.Location = New System.Drawing.Point(349, 625)
+        Me.RecOwnerTextEdit.Name = "RecOwnerTextEdit"
+        Me.RecOwnerTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold)
+        Me.RecOwnerTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecOwnerTextEdit.Properties.AutoHeight = False
+        Me.RecOwnerTextEdit.Properties.ReadOnly = True
+        Me.RecOwnerTextEdit.Size = New System.Drawing.Size(228, 26)
+        Me.RecOwnerTextEdit.StyleController = Me.LayoutControl1
+        Me.RecOwnerTextEdit.TabIndex = 32
         '
-        'RecCurrTextEdit
+        'RecDeviceNameTextEdit
         '
-        Me.RecCurrTextEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RecCurrTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecCurr", True))
-        Me.RecCurrTextEdit.EditValue = "شيكل"
-        Me.RecCurrTextEdit.Location = New System.Drawing.Point(756, 11)
-        Me.RecCurrTextEdit.Name = "RecCurrTextEdit"
-        Me.RecCurrTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecCurrTextEdit.Properties.Appearance.Options.UseFont = True
-        Me.RecCurrTextEdit.Properties.AutoHeight = False
-        Me.RecCurrTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RecCurrTextEdit.Properties.Items.AddRange(New Object() {"شيكل", "دولار", "دينار", "يورو"})
-        Me.RecCurrTextEdit.Size = New System.Drawing.Size(186, 30)
-        Me.RecCurrTextEdit.TabIndex = 2
+        Me.RecDeviceNameTextEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RecDeviceNameTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecDeviceName", True))
+        Me.RecDeviceNameTextEdit.Enabled = False
+        Me.RecDeviceNameTextEdit.Location = New System.Drawing.Point(581, 625)
+        Me.RecDeviceNameTextEdit.Name = "RecDeviceNameTextEdit"
+        Me.RecDeviceNameTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecDeviceNameTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecDeviceNameTextEdit.Properties.ReadOnly = True
+        Me.RecDeviceNameTextEdit.Size = New System.Drawing.Size(217, 26)
+        Me.RecDeviceNameTextEdit.StyleController = Me.LayoutControl1
+        Me.RecDeviceNameTextEdit.TabIndex = 31
         '
-        'PanelControl5
+        'RecAuditSpinEdit
         '
-        Me.PanelControl5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelControl5.Controls.Add(Me.RecNoteTextEdit)
-        Me.PanelControl5.Location = New System.Drawing.Point(8, 277)
-        Me.PanelControl5.Name = "PanelControl5"
-        Me.PanelControl5.Size = New System.Drawing.Size(1032, 69)
-        Me.PanelControl5.TabIndex = 104
+        Me.RecAuditSpinEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RecAuditSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecAudit", True))
+        Me.RecAuditSpinEdit.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.RecAuditSpinEdit.Enabled = False
+        Me.RecAuditSpinEdit.Location = New System.Drawing.Point(955, 625)
+        Me.RecAuditSpinEdit.Name = "RecAuditSpinEdit"
+        Me.RecAuditSpinEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecAuditSpinEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecAuditSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
+        Me.RecAuditSpinEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
+        Me.RecAuditSpinEdit.Properties.ReadOnly = True
+        Me.RecAuditSpinEdit.Size = New System.Drawing.Size(158, 26)
+        Me.RecAuditSpinEdit.StyleController = Me.LayoutControl1
+        Me.RecAuditSpinEdit.TabIndex = 29
         '
-        'RecNoteTextEdit
+        'RecStatusSpinEdit
         '
-        Me.RecNoteTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecNote", True))
-        Me.RecNoteTextEdit.Location = New System.Drawing.Point(7, 5)
-        Me.RecNoteTextEdit.Name = "RecNoteTextEdit"
-        Me.RecNoteTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecNoteTextEdit.Properties.Appearance.Options.UseFont = True
-        Me.RecNoteTextEdit.Size = New System.Drawing.Size(1018, 56)
-        Me.RecNoteTextEdit.TabIndex = 9
+        Me.RecStatusSpinEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RecStatusSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecStatus", True))
+        Me.RecStatusSpinEdit.EditValue = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.RecStatusSpinEdit.Enabled = False
+        Me.RecStatusSpinEdit.Location = New System.Drawing.Point(802, 625)
+        Me.RecStatusSpinEdit.Name = "RecStatusSpinEdit"
+        Me.RecStatusSpinEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecStatusSpinEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecStatusSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
+        Me.RecStatusSpinEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
+        Me.RecStatusSpinEdit.Properties.ReadOnly = True
+        Me.RecStatusSpinEdit.Size = New System.Drawing.Size(149, 26)
+        Me.RecStatusSpinEdit.StyleController = Me.LayoutControl1
+        Me.RecStatusSpinEdit.TabIndex = 30
         '
-        'GroupControl1
+        'SimpleButton15
         '
-        Me.GroupControl1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupControl1.Controls.Add(Me.GridControl4)
-        Me.GroupControl1.Controls.Add(Me.SumChequesLabel)
-        Me.GroupControl1.Controls.Add(Me.CountChequesLabel)
-        Me.GroupControl1.Controls.Add(Me.ChequeDataDataGridView)
-        Me.GroupControl1.Location = New System.Drawing.Point(13, 364)
-        Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.Size = New System.Drawing.Size(1015, 244)
-        Me.GroupControl1.TabIndex = 105
-        Me.GroupControl1.Text = "تفاصيل الشيكات"
+        Me.SimpleButton15.ImageOptions.Image = CType(resources.GetObject("SimpleButton15.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton15.Location = New System.Drawing.Point(777, 198)
+        Me.SimpleButton15.Name = "SimpleButton15"
+        Me.SimpleButton15.Size = New System.Drawing.Size(24, 26)
+        Me.SimpleButton15.StyleController = Me.LayoutControl1
+        Me.SimpleButton15.TabIndex = 21
         '
         'GridControl4
         '
-        Me.GridControl4.Location = New System.Drawing.Point(7, 163)
+        Me.GridControl4.Location = New System.Drawing.Point(12, 534)
         Me.GridControl4.MainView = Me.GridView4
         Me.GridControl4.Name = "GridControl4"
         Me.GridControl4.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit1})
-        Me.GridControl4.Size = New System.Drawing.Size(1000, 76)
-        Me.GridControl4.TabIndex = 11
+        Me.GridControl4.Size = New System.Drawing.Size(1097, 75)
+        Me.GridControl4.TabIndex = 17
         Me.GridControl4.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView4})
+        Me.GridControl4.Visible = False
         '
         'GridView4
         '
-        Me.GridView4.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.ColAccrualDate, Me.ColCustomerName, Me.ColToUser, Me.ColTaskType, Me.ColAmount, Me.ColTaskMonth, Me.ColNote, Me.ColTaskID, Me.ColState})
+        Me.GridView4.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.ColAccrualDate, Me.ColCustomerName, Me.ColToUser, Me.ColTaskType, Me.ColAmount, Me.ColTaskMonth, Me.ColNote, Me.ColTaskID, Me.GridColumn1})
         Me.GridView4.GridControl = Me.GridControl4
         Me.GridView4.Name = "GridView4"
+        Me.GridView4.OptionsSelection.CheckBoxSelectorColumnWidth = 30
+        Me.GridView4.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.[True]
+        Me.GridView4.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.[True]
+        Me.GridView4.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.[True]
         Me.GridView4.OptionsView.ShowGroupPanel = False
         '
         'ColAccrualDate
@@ -681,7 +856,7 @@ Partial Class FinanceReceipt
         Me.ColCustomerName.FieldName = "CustomerName"
         Me.ColCustomerName.Name = "ColCustomerName"
         Me.ColCustomerName.Visible = True
-        Me.ColCustomerName.VisibleIndex = 2
+        Me.ColCustomerName.VisibleIndex = 3
         Me.ColCustomerName.Width = 208
         '
         'ColToUser
@@ -690,7 +865,7 @@ Partial Class FinanceReceipt
         Me.ColToUser.FieldName = "ToUser"
         Me.ColToUser.Name = "ColToUser"
         Me.ColToUser.Visible = True
-        Me.ColToUser.VisibleIndex = 3
+        Me.ColToUser.VisibleIndex = 2
         Me.ColToUser.Width = 76
         '
         'ColTaskType
@@ -739,299 +914,152 @@ Partial Class FinanceReceipt
         Me.ColTaskID.VisibleIndex = 0
         Me.ColTaskID.Width = 50
         '
-        'ColState
+        'GridColumn1
         '
-        Me.ColState.Caption = "اغلاق"
-        Me.ColState.ColumnEdit = Me.RepositoryItemCheckEdit1
-        Me.ColState.FieldName = "State"
-        Me.ColState.Name = "ColState"
-        Me.ColState.Visible = True
-        Me.ColState.VisibleIndex = 8
-        Me.ColState.Width = 115
+        Me.GridColumn1.Caption = "الحالة"
+        Me.GridColumn1.ColumnEdit = Me.RepositoryItemCheckEdit1
+        Me.GridColumn1.FieldName = "NoteStatus"
+        Me.GridColumn1.Name = "GridColumn1"
+        Me.GridColumn1.Visible = True
+        Me.GridColumn1.VisibleIndex = 8
         '
         'RepositoryItemCheckEdit1
         '
         Me.RepositoryItemCheckEdit1.AutoHeight = False
-        Me.RepositoryItemCheckEdit1.Caption = "اغلاق"
-        Me.RepositoryItemCheckEdit1.DisplayValueChecked = "1"
-        Me.RepositoryItemCheckEdit1.DisplayValueUnchecked = "0"
+        Me.RepositoryItemCheckEdit1.DisplayValueChecked = "مغلقة"
+        Me.RepositoryItemCheckEdit1.DisplayValueUnchecked = "مفتوحة"
         Me.RepositoryItemCheckEdit1.Name = "RepositoryItemCheckEdit1"
-        Me.RepositoryItemCheckEdit1.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
+        Me.RepositoryItemCheckEdit1.ValueChecked = "مغلقة"
+        Me.RepositoryItemCheckEdit1.ValueUnchecked = "مفتوحة"
         '
-        'SumChequesLabel
+        'RecNoteTextEdit
         '
-        Me.SumChequesLabel.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-        Me.SumChequesLabel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.SumChequesLabel.Location = New System.Drawing.Point(80, 0)
-        Me.SumChequesLabel.Name = "SumChequesLabel"
-        Me.SumChequesLabel.Size = New System.Drawing.Size(89, 17)
-        Me.SumChequesLabel.TabIndex = 2
-        Me.SumChequesLabel.Text = "مجموع الشيكات"
-        Me.SumChequesLabel.Visible = False
+        Me.RecNoteTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecNote", True))
+        Me.RecNoteTextEdit.Location = New System.Drawing.Point(12, 325)
+        Me.RecNoteTextEdit.Name = "RecNoteTextEdit"
+        Me.RecNoteTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecNoteTextEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.RecNoteTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecNoteTextEdit.Properties.Appearance.Options.UseForeColor = True
+        Me.RecNoteTextEdit.Size = New System.Drawing.Size(1101, 81)
+        Me.RecNoteTextEdit.StyleController = Me.LayoutControl1
+        Me.RecNoteTextEdit.TabIndex = 9
         '
-        'CountChequesLabel
+        'TextEdit1
         '
-        Me.CountChequesLabel.Location = New System.Drawing.Point(2, 2)
-        Me.CountChequesLabel.Name = "CountChequesLabel"
-        Me.CountChequesLabel.Size = New System.Drawing.Size(61, 13)
-        Me.CountChequesLabel.TabIndex = 1
-        Me.CountChequesLabel.Text = "عدد الشيكات"
-        Me.CountChequesLabel.Visible = False
+        Me.TextEdit1.Enabled = False
+        Me.TextEdit1.Location = New System.Drawing.Point(24, 282)
+        Me.TextEdit1.Name = "TextEdit1"
+        Me.TextEdit1.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextEdit1.Properties.Appearance.Options.UseFont = True
+        Me.TextEdit1.Properties.AutoHeight = False
+        Me.TextEdit1.Properties.ReadOnly = True
+        Me.TextEdit1.Size = New System.Drawing.Size(1077, 27)
+        Me.TextEdit1.StyleController = Me.LayoutControl1
+        Me.TextEdit1.TabIndex = 36
         '
-        'ChequeDataDataGridView
+        'RecCustNameTextEdit
         '
-        Me.ChequeDataDataGridView.AutoGenerateColumns = False
-        Me.ChequeDataDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.ChequeDataDataGridView.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ChequeDataDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.ChequeDataDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ChequeDataDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
-        Me.ChequeDataDataGridView.DataSource = Me.ChequeDataBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ChequeDataDataGridView.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ChequeDataDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ChequeDataDataGridView.Location = New System.Drawing.Point(7, 23)
-        Me.ChequeDataDataGridView.Name = "ChequeDataDataGridView"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ChequeDataDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.ChequeDataDataGridView.Size = New System.Drawing.Size(1003, 134)
-        Me.ChequeDataDataGridView.TabIndex = 10
+        Me.RecCustNameTextEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RecCustNameTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecCustName", True))
+        Me.RecCustNameTextEdit.Location = New System.Drawing.Point(493, 144)
+        Me.RecCustNameTextEdit.Name = "RecCustNameTextEdit"
+        Me.RecCustNameTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecCustNameTextEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.RecCustNameTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecCustNameTextEdit.Properties.Appearance.Options.UseForeColor = True
+        Me.RecCustNameTextEdit.Properties.AutoHeight = False
+        Me.RecCustNameTextEdit.Size = New System.Drawing.Size(351, 26)
+        Me.RecCustNameTextEdit.StyleController = Me.LayoutControl1
+        Me.RecCustNameTextEdit.TabIndex = 3
         '
-        'DataGridViewTextBoxColumn1
+        'RecDateDateEdit
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ChequeNO"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "رقم الشيك"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.RecDateDateEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RecDateDateEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecDate", True))
+        Me.RecDateDateEdit.EditValue = Nothing
+        Me.RecDateDateEdit.Location = New System.Drawing.Point(24, 90)
+        Me.RecDateDateEdit.Name = "RecDateDateEdit"
+        Me.RecDateDateEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecDateDateEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.RecDateDateEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecDateDateEdit.Properties.Appearance.Options.UseForeColor = True
+        Me.RecDateDateEdit.Properties.AutoHeight = False
+        Me.RecDateDateEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RecDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RecDateDateEdit.Size = New System.Drawing.Size(277, 26)
+        Me.RecDateDateEdit.StyleController = Me.LayoutControl1
+        Me.RecDateDateEdit.TabIndex = 1
         '
-        'DataGridViewTextBoxColumn2
+        'AmountInNisText
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "ChequeBank"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "البنك"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "ChequeBranch"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "الفرع"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "ChequeAccount"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "الحساب البنكي"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "ChequeAccDate"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "تاريخ الاستحقاق"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "ChequeAmount"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "قيمة الشيك"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "ChequeReceiptNo"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "رقم سند القبض"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.Visible = False
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "ID"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Visible = False
-        '
-        'ChequeDataBindingSource
-        '
-        Me.ChequeDataBindingSource.DataMember = "ChequeData"
-        Me.ChequeDataBindingSource.DataSource = Me.CRMDataSet
-        '
-        'PanelControl6
-        '
-        Me.PanelControl6.Controls.Add(Me.RecOwnerTextEdit)
-        Me.PanelControl6.Controls.Add(Me.RecInputDateDateEdit)
-        Me.PanelControl6.Controls.Add(Me.RecUserTextEdit)
-        Me.PanelControl6.Controls.Add(Me.RecAuditSpinEdit)
-        Me.PanelControl6.Controls.Add(Me.RecDeviceNameTextEdit)
-        Me.PanelControl6.Controls.Add(Me.RecStatusSpinEdit)
-        Me.PanelControl6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelControl6.Location = New System.Drawing.Point(0, 614)
-        Me.PanelControl6.Name = "PanelControl6"
-        Me.PanelControl6.Size = New System.Drawing.Size(1043, 37)
-        Me.PanelControl6.TabIndex = 106
-        '
-        'RecOwnerTextEdit
-        '
-        Me.RecOwnerTextEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.RecOwnerTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecOwner", True))
-        Me.RecOwnerTextEdit.Location = New System.Drawing.Point(355, 5)
-        Me.RecOwnerTextEdit.Name = "RecOwnerTextEdit"
-        Me.RecOwnerTextEdit.Properties.AutoHeight = False
-        Me.RecOwnerTextEdit.Properties.ReadOnly = True
-        Me.RecOwnerTextEdit.Size = New System.Drawing.Size(100, 26)
-        Me.RecOwnerTextEdit.TabIndex = 32
-        '
-        'RecInputDateDateEdit
-        '
-        Me.RecInputDateDateEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.RecInputDateDateEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecInputDate", True))
-        Me.RecInputDateDateEdit.EditValue = Nothing
-        Me.RecInputDateDateEdit.Enabled = False
-        Me.RecInputDateDateEdit.Location = New System.Drawing.Point(1114, 5)
-        Me.RecInputDateDateEdit.Name = "RecInputDateDateEdit"
-        Me.RecInputDateDateEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecInputDateDateEdit.Properties.Appearance.Options.UseFont = True
-        Me.RecInputDateDateEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RecInputDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RecInputDateDateEdit.Properties.ReadOnly = True
-        Me.RecInputDateDateEdit.Size = New System.Drawing.Size(188, 26)
-        Me.RecInputDateDateEdit.TabIndex = 19
-        '
-        'RecUserTextEdit
-        '
-        Me.RecUserTextEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.RecUserTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecUser", True))
-        Me.RecUserTextEdit.Enabled = False
-        Me.RecUserTextEdit.Location = New System.Drawing.Point(1305, 5)
-        Me.RecUserTextEdit.Name = "RecUserTextEdit"
-        Me.RecUserTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecUserTextEdit.Properties.Appearance.Options.UseFont = True
-        Me.RecUserTextEdit.Properties.ReadOnly = True
-        Me.RecUserTextEdit.Size = New System.Drawing.Size(100, 26)
-        Me.RecUserTextEdit.TabIndex = 17
-        '
-        'RecAuditSpinEdit
-        '
-        Me.RecAuditSpinEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.RecAuditSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecAudit", True))
-        Me.RecAuditSpinEdit.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.RecAuditSpinEdit.Enabled = False
-        Me.RecAuditSpinEdit.Location = New System.Drawing.Point(750, 5)
-        Me.RecAuditSpinEdit.Name = "RecAuditSpinEdit"
-        Me.RecAuditSpinEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecAuditSpinEdit.Properties.Appearance.Options.UseFont = True
-        Me.RecAuditSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
-        Me.RecAuditSpinEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.RecAuditSpinEdit.Properties.ReadOnly = True
-        Me.RecAuditSpinEdit.Size = New System.Drawing.Size(130, 26)
-        Me.RecAuditSpinEdit.TabIndex = 29
-        '
-        'RecDeviceNameTextEdit
-        '
-        Me.RecDeviceNameTextEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.RecDeviceNameTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecDeviceName", True))
-        Me.RecDeviceNameTextEdit.Enabled = False
-        Me.RecDeviceNameTextEdit.Location = New System.Drawing.Point(460, 5)
-        Me.RecDeviceNameTextEdit.Name = "RecDeviceNameTextEdit"
-        Me.RecDeviceNameTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecDeviceNameTextEdit.Properties.Appearance.Options.UseFont = True
-        Me.RecDeviceNameTextEdit.Properties.ReadOnly = True
-        Me.RecDeviceNameTextEdit.Size = New System.Drawing.Size(285, 26)
-        Me.RecDeviceNameTextEdit.TabIndex = 31
-        '
-        'RecStatusSpinEdit
-        '
-        Me.RecStatusSpinEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.RecStatusSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecStatus", True))
-        Me.RecStatusSpinEdit.EditValue = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.RecStatusSpinEdit.Enabled = False
-        Me.RecStatusSpinEdit.Location = New System.Drawing.Point(886, 5)
-        Me.RecStatusSpinEdit.Name = "RecStatusSpinEdit"
-        Me.RecStatusSpinEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecStatusSpinEdit.Properties.Appearance.Options.UseFont = True
-        Me.RecStatusSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
-        Me.RecStatusSpinEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.RecStatusSpinEdit.Properties.ReadOnly = True
-        Me.RecStatusSpinEdit.Size = New System.Drawing.Size(144, 26)
-        Me.RecStatusSpinEdit.TabIndex = 21
-        '
-        'PanelControl1
-        '
-        Me.PanelControl1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelControl1.Controls.Add(Me.CheckEdit1)
-        Me.PanelControl1.Controls.Add(Me.SimpleButton9)
-        Me.PanelControl1.Controls.Add(Me.SimpleButton7)
-        Me.PanelControl1.Controls.Add(Me.SimpleButton6)
-        Me.PanelControl1.Controls.Add(Me.SimpleButton5)
-        Me.PanelControl1.Controls.Add(Me.SimpleButton8)
-        Me.PanelControl1.Controls.Add(Me.SimpleButton4)
-        Me.PanelControl1.Controls.Add(Me.SimpleButton3)
-        Me.PanelControl1.Controls.Add(Me.SimpleButton2)
-        Me.PanelControl1.Controls.Add(Me.SimpleButton1)
-        Me.PanelControl1.Location = New System.Drawing.Point(8, 7)
-        Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(1032, 43)
-        Me.PanelControl1.TabIndex = 0
+        Me.AmountInNisText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.AmountInNisText.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.AmountInNisText.Location = New System.Drawing.Point(24, 198)
+        Me.AmountInNisText.Name = "AmountInNisText"
+        Me.AmountInNisText.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AmountInNisText.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.AmountInNisText.Properties.Appearance.Options.UseFont = True
+        Me.AmountInNisText.Properties.Appearance.Options.UseForeColor = True
+        Me.AmountInNisText.Properties.AutoHeight = False
+        Me.AmountInNisText.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
+        Me.AmountInNisText.Properties.Mask.BeepOnError = True
+        Me.AmountInNisText.Properties.Mask.EditMask = "c2"
+        Me.AmountInNisText.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
+        Me.AmountInNisText.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.AmountInNisText.Properties.ReadOnly = True
+        Me.AmountInNisText.Size = New System.Drawing.Size(207, 26)
+        Me.AmountInNisText.StyleController = Me.LayoutControl1
+        Me.AmountInNisText.TabIndex = 23
         '
         'CheckEdit1
         '
-        Me.CheckEdit1.Location = New System.Drawing.Point(-1, 18)
+        Me.CheckEdit1.Location = New System.Drawing.Point(12, 54)
         Me.CheckEdit1.Name = "CheckEdit1"
         Me.CheckEdit1.Properties.Caption = "اظهار الرصيد والشيكات الاجلة عند طباعة السند"
-        Me.CheckEdit1.Size = New System.Drawing.Size(248, 19)
-        Me.CheckEdit1.TabIndex = 3
-        '
-        'SimpleButton9
-        '
-        Me.SimpleButton9.ImageOptions.Image = CType(resources.GetObject("SimpleButton9.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton9.Location = New System.Drawing.Point(288, 5)
-        Me.SimpleButton9.Name = "SimpleButton9"
-        Me.SimpleButton9.Size = New System.Drawing.Size(81, 36)
-        Me.SimpleButton9.TabIndex = 2
-        Me.SimpleButton9.Text = "تعديل السند"
+        Me.CheckEdit1.Size = New System.Drawing.Size(1101, 20)
+        Me.CheckEdit1.StyleController = Me.LayoutControl1
+        Me.CheckEdit1.TabIndex = 37
         '
         'SimpleButton7
         '
         Me.SimpleButton7.ImageOptions.Image = CType(resources.GetObject("SimpleButton7.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton7.Location = New System.Drawing.Point(375, 5)
+        Me.SimpleButton7.Location = New System.Drawing.Point(172, 12)
         Me.SimpleButton7.Name = "SimpleButton7"
-        Me.SimpleButton7.Size = New System.Drawing.Size(118, 36)
-        Me.SimpleButton7.TabIndex = 1
+        Me.SimpleButton7.Size = New System.Drawing.Size(291, 38)
+        Me.SimpleButton7.StyleController = Me.LayoutControl1
+        Me.SimpleButton7.TabIndex = 19
         Me.SimpleButton7.Text = "معاينة الطباعة"
         '
-        'SimpleButton6
+        'RecNOSpinEdit
         '
-        Me.SimpleButton6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton6.ImageOptions.Image = CType(resources.GetObject("SimpleButton6.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton6.Location = New System.Drawing.Point(754, 5)
-        Me.SimpleButton6.Name = "SimpleButton6"
-        Me.SimpleButton6.Size = New System.Drawing.Size(43, 36)
-        Me.SimpleButton6.TabIndex = 0
+        Me.RecNOSpinEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RecNOSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecNO", True))
+        Me.RecNOSpinEdit.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.RecNOSpinEdit.Location = New System.Drawing.Point(787, 90)
+        Me.RecNOSpinEdit.Name = "RecNOSpinEdit"
+        Me.RecNOSpinEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecNOSpinEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.RecNOSpinEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecNOSpinEdit.Properties.Appearance.Options.UseForeColor = True
+        Me.RecNOSpinEdit.Properties.AutoHeight = False
+        Me.RecNOSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
+        Me.RecNOSpinEdit.Properties.Mask.BeepOnError = True
+        Me.RecNOSpinEdit.Properties.Mask.EditMask = "d"
+        Me.RecNOSpinEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
+        Me.RecNOSpinEdit.Size = New System.Drawing.Size(164, 26)
+        Me.RecNOSpinEdit.StyleController = Me.LayoutControl1
+        Me.RecNOSpinEdit.TabIndex = 0
         '
-        'SimpleButton5
+        'SimpleButton9
         '
-        Me.SimpleButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton5.ImageOptions.Image = CType(resources.GetObject("SimpleButton5.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton5.Location = New System.Drawing.Point(665, 5)
-        Me.SimpleButton5.Name = "SimpleButton5"
-        Me.SimpleButton5.Size = New System.Drawing.Size(43, 36)
-        Me.SimpleButton5.TabIndex = 0
+        Me.SimpleButton9.ImageOptions.Image = CType(resources.GetObject("SimpleButton9.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton9.Location = New System.Drawing.Point(785, 12)
+        Me.SimpleButton9.Name = "SimpleButton9"
+        Me.SimpleButton9.Size = New System.Drawing.Size(107, 38)
+        Me.SimpleButton9.StyleController = Me.LayoutControl1
+        Me.SimpleButton9.TabIndex = 13
+        Me.SimpleButton9.Text = "تعديل السند"
         '
         'SimpleButton8
         '
@@ -1039,128 +1067,595 @@ Partial Class FinanceReceipt
         Me.SimpleButton8.Appearance.Image = CType(resources.GetObject("SimpleButton8.Appearance.Image"), System.Drawing.Image)
         Me.SimpleButton8.Appearance.Options.UseImage = True
         Me.SimpleButton8.ImageOptions.Image = CType(resources.GetObject("SimpleButton8.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton8.Location = New System.Drawing.Point(499, 5)
+        Me.SimpleButton8.Location = New System.Drawing.Point(467, 12)
         Me.SimpleButton8.Name = "SimpleButton8"
-        Me.SimpleButton8.Size = New System.Drawing.Size(116, 36)
-        Me.SimpleButton8.TabIndex = 0
+        Me.SimpleButton8.Size = New System.Drawing.Size(131, 38)
+        Me.SimpleButton8.StyleController = Me.LayoutControl1
+        Me.SimpleButton8.TabIndex = 18
         Me.SimpleButton8.Text = "طباعة"
+        '
+        'SimpleButton5
+        '
+        Me.SimpleButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton5.ImageOptions.Image = CType(resources.GetObject("SimpleButton5.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton5.Location = New System.Drawing.Point(647, 12)
+        Me.SimpleButton5.Name = "SimpleButton5"
+        Me.SimpleButton5.Size = New System.Drawing.Size(43, 38)
+        Me.SimpleButton5.StyleController = Me.LayoutControl1
+        Me.SimpleButton5.TabIndex = 16
         '
         'SimpleButton4
         '
         Me.SimpleButton4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton4.ImageOptions.Image = CType(resources.GetObject("SimpleButton4.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton4.Location = New System.Drawing.Point(621, 5)
+        Me.SimpleButton4.Location = New System.Drawing.Point(602, 12)
         Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(43, 36)
-        Me.SimpleButton4.TabIndex = 0
+        Me.SimpleButton4.Size = New System.Drawing.Size(41, 38)
+        Me.SimpleButton4.StyleController = Me.LayoutControl1
+        Me.SimpleButton4.TabIndex = 17
+        '
+        'SimpleButton6
+        '
+        Me.SimpleButton6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton6.ImageOptions.Image = CType(resources.GetObject("SimpleButton6.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton6.Location = New System.Drawing.Point(738, 12)
+        Me.SimpleButton6.Name = "SimpleButton6"
+        Me.SimpleButton6.Size = New System.Drawing.Size(43, 38)
+        Me.SimpleButton6.StyleController = Me.LayoutControl1
+        Me.SimpleButton6.TabIndex = 14
         '
         'SimpleButton3
         '
         Me.SimpleButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton3.Location = New System.Drawing.Point(710, 5)
+        Me.SimpleButton3.Location = New System.Drawing.Point(694, 12)
         Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(43, 36)
-        Me.SimpleButton3.TabIndex = 0
+        Me.SimpleButton3.Size = New System.Drawing.Size(40, 38)
+        Me.SimpleButton3.StyleController = Me.LayoutControl1
+        Me.SimpleButton3.TabIndex = 15
         '
-        'SimpleButton2
+        'RecCurrTextEdit
         '
-        Me.SimpleButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton2.Location = New System.Drawing.Point(803, 5)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(109, 36)
-        Me.SimpleButton2.TabIndex = 0
-        Me.SimpleButton2.Text = "جديد"
+        Me.RecCurrTextEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RecCurrTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecCurr", True))
+        Me.RecCurrTextEdit.EditValue = "شيكل"
+        Me.RecCurrTextEdit.Location = New System.Drawing.Point(805, 198)
+        Me.RecCurrTextEdit.Name = "RecCurrTextEdit"
+        Me.RecCurrTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecCurrTextEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.RecCurrTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecCurrTextEdit.Properties.Appearance.Options.UseForeColor = True
+        Me.RecCurrTextEdit.Properties.AutoHeight = False
+        Me.RecCurrTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RecCurrTextEdit.Properties.Items.AddRange(New Object() {"شيكل", "دولار", "دينار", "يورو"})
+        Me.RecCurrTextEdit.Size = New System.Drawing.Size(218, 26)
+        Me.RecCurrTextEdit.StyleController = Me.LayoutControl1
+        Me.RecCurrTextEdit.TabIndex = 4
         '
         'SimpleButton1
         '
         Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(916, 4)
+        Me.SimpleButton1.Location = New System.Drawing.Point(1006, 12)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(109, 39)
-        Me.SimpleButton1.TabIndex = 0
-        Me.SimpleButton1.Text = "حفظ"
+        Me.SimpleButton1.Size = New System.Drawing.Size(107, 36)
+        Me.SimpleButton1.StyleController = Me.LayoutControl1
+        Me.SimpleButton1.TabIndex = 11
+        Me.SimpleButton1.Text = "حفظ F3"
         '
-        'PanelControl2
+        'SimpleButton2
         '
-        Me.PanelControl2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelControl2.Controls.Add(RecDateLabel)
-        Me.PanelControl2.Controls.Add(RecNOLabel)
-        Me.PanelControl2.Controls.Add(Me.RecDateDateEdit)
-        Me.PanelControl2.Controls.Add(Me.RecNOSpinEdit)
-        Me.PanelControl2.Location = New System.Drawing.Point(8, 54)
-        Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(1032, 47)
-        Me.PanelControl2.TabIndex = 1
-        '
-        'RecDateDateEdit
-        '
-        Me.RecDateDateEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RecDateDateEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecDate", True))
-        Me.RecDateDateEdit.EditValue = Nothing
-        Me.RecDateDateEdit.Location = New System.Drawing.Point(5, 8)
-        Me.RecDateDateEdit.Name = "RecDateDateEdit"
-        Me.RecDateDateEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecDateDateEdit.Properties.Appearance.Options.UseFont = True
-        Me.RecDateDateEdit.Properties.AutoHeight = False
-        Me.RecDateDateEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RecDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RecDateDateEdit.Size = New System.Drawing.Size(300, 30)
-        Me.RecDateDateEdit.TabIndex = 3
-        '
-        'RecNOSpinEdit
-        '
-        Me.RecNOSpinEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RecNOSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecNO", True))
-        Me.RecNOSpinEdit.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.RecNOSpinEdit.Location = New System.Drawing.Point(750, 10)
-        Me.RecNOSpinEdit.Name = "RecNOSpinEdit"
-        Me.RecNOSpinEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecNOSpinEdit.Properties.Appearance.Options.UseFont = True
-        Me.RecNOSpinEdit.Properties.AutoHeight = False
-        Me.RecNOSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
-        Me.RecNOSpinEdit.Properties.Mask.BeepOnError = True
-        Me.RecNOSpinEdit.Properties.Mask.EditMask = "d"
-        Me.RecNOSpinEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.RecNOSpinEdit.Size = New System.Drawing.Size(192, 30)
-        Me.RecNOSpinEdit.TabIndex = 1
-        '
-        'PanelControl3
-        '
-        Me.PanelControl3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelControl3.Controls.Add(Me.RecCustNoTextEdit)
-        Me.PanelControl3.Controls.Add(Me.RecCustNameTextEdit)
-        Me.PanelControl3.Controls.Add(RecCustNoLabel)
-        Me.PanelControl3.Location = New System.Drawing.Point(8, 107)
-        Me.PanelControl3.Name = "PanelControl3"
-        Me.PanelControl3.Size = New System.Drawing.Size(1032, 45)
-        Me.PanelControl3.TabIndex = 2
+        Me.SimpleButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton2.Location = New System.Drawing.Point(896, 12)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(106, 36)
+        Me.SimpleButton2.StyleController = Me.LayoutControl1
+        Me.SimpleButton2.TabIndex = 12
+        Me.SimpleButton2.Text = "جديد F6"
         '
         'RecCustNoTextEdit
         '
         Me.RecCustNoTextEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RecCustNoTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecCustNo", True))
-        Me.RecCustNoTextEdit.Location = New System.Drawing.Point(756, 11)
+        Me.RecCustNoTextEdit.Location = New System.Drawing.Point(848, 144)
         Me.RecCustNoTextEdit.Name = "RecCustNoTextEdit"
         Me.RecCustNoTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecCustNoTextEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
         Me.RecCustNoTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.RecCustNoTextEdit.Properties.Appearance.Options.UseForeColor = True
         Me.RecCustNoTextEdit.Properties.AutoHeight = False
-        Me.RecCustNoTextEdit.Size = New System.Drawing.Size(186, 30)
-        Me.RecCustNoTextEdit.TabIndex = 0
+        Me.RecCustNoTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RecCustNoTextEdit.Properties.DataSource = Me.Accounts1BindingSource
+        Me.RecCustNoTextEdit.Properties.DisplayMember = "AccountKey"
+        Me.RecCustNoTextEdit.Properties.NullText = ""
+        Me.RecCustNoTextEdit.Properties.PopupView = Me.SearchLookUpEdit1View
+        Me.RecCustNoTextEdit.Properties.ValueMember = "AccountKey"
+        Me.RecCustNoTextEdit.Size = New System.Drawing.Size(175, 26)
+        Me.RecCustNoTextEdit.StyleController = Me.LayoutControl1
+        Me.RecCustNoTextEdit.TabIndex = 2
         '
-        'RecCustNameTextEdit
+        'Accounts1BindingSource
         '
-        Me.RecCustNameTextEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RecCustNameTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReceiptDataBindingSource, "RecCustName", True))
-        Me.RecCustNameTextEdit.Location = New System.Drawing.Point(7, 11)
-        Me.RecCustNameTextEdit.Name = "RecCustNameTextEdit"
-        Me.RecCustNameTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecCustNameTextEdit.Properties.Appearance.Options.UseFont = True
-        Me.RecCustNameTextEdit.Properties.AutoHeight = False
-        Me.RecCustNameTextEdit.Size = New System.Drawing.Size(743, 30)
-        Me.RecCustNameTextEdit.TabIndex = 1
+        Me.Accounts1BindingSource.DataMember = "Accounts1"
+        Me.Accounts1BindingSource.DataSource = Me.WizCountDataSet
+        '
+        'WizCountDataSet
+        '
+        Me.WizCountDataSet.DataSetName = "WizCountDataSet"
+        Me.WizCountDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SearchLookUpEdit1View
+        '
+        Me.SearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.SearchLookUpEdit1View.Name = "SearchLookUpEdit1View"
+        Me.SearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.SearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
+        '
+        'LayoutControlItem24
+        '
+        Me.LayoutControlItem24.Control = Me.GridControl4
+        Me.LayoutControlItem24.Location = New System.Drawing.Point(0, 522)
+        Me.LayoutControlItem24.Name = "LayoutControlItem24"
+        Me.LayoutControlItem24.Size = New System.Drawing.Size(1101, 79)
+        Me.LayoutControlItem24.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem24.TextVisible = False
+        '
+        'LayoutControlGroup1
+        '
+        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.LayoutControlGroup1.GroupBordersVisible = False
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem10, Me.LayoutControlItem11, Me.LayoutControlItem6, Me.EmptySpaceItem3, Me.LayoutControlItem22, Me.LayoutControlGroup2, Me.LayoutControlGroup3, Me.LayoutControlGroup4, Me.LayoutControlGroup5, Me.LayoutControlItem29, Me.LayoutControlItem28, Me.LayoutControlItem30, Me.LayoutControlItem31, Me.LayoutControlItem32, Me.LayoutControlItem33, Me.LayoutControlItem18, Me.LayoutControlItem19, Me.LayoutControlItem23})
+        Me.LayoutControlGroup1.Name = "Root"
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1125, 663)
+        Me.LayoutControlGroup1.TextVisible = False
+        '
+        'LayoutControlItem2
+        '
+        Me.LayoutControlItem2.Control = Me.SimpleButton1
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(994, 0)
+        Me.LayoutControlItem2.Name = "LayoutControlItem2"
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(111, 42)
+        Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem2.TextVisible = False
+        '
+        'LayoutControlItem3
+        '
+        Me.LayoutControlItem3.Control = Me.SimpleButton2
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(884, 0)
+        Me.LayoutControlItem3.Name = "LayoutControlItem3"
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(110, 42)
+        Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem3.TextVisible = False
+        '
+        'LayoutControlItem4
+        '
+        Me.LayoutControlItem4.Control = Me.SimpleButton6
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(726, 0)
+        Me.LayoutControlItem4.MaxSize = New System.Drawing.Size(47, 42)
+        Me.LayoutControlItem4.MinSize = New System.Drawing.Size(47, 42)
+        Me.LayoutControlItem4.Name = "LayoutControlItem4"
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(47, 42)
+        Me.LayoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem4.TextVisible = False
+        '
+        'LayoutControlItem5
+        '
+        Me.LayoutControlItem5.Control = Me.SimpleButton3
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(682, 0)
+        Me.LayoutControlItem5.MaxSize = New System.Drawing.Size(44, 42)
+        Me.LayoutControlItem5.MinSize = New System.Drawing.Size(44, 42)
+        Me.LayoutControlItem5.Name = "LayoutControlItem5"
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(44, 42)
+        Me.LayoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem5.TextVisible = False
+        '
+        'LayoutControlItem7
+        '
+        Me.LayoutControlItem7.Control = Me.SimpleButton5
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(635, 0)
+        Me.LayoutControlItem7.MaxSize = New System.Drawing.Size(47, 42)
+        Me.LayoutControlItem7.MinSize = New System.Drawing.Size(47, 42)
+        Me.LayoutControlItem7.Name = "LayoutControlItem7"
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(47, 42)
+        Me.LayoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem7.TextVisible = False
+        '
+        'LayoutControlItem8
+        '
+        Me.LayoutControlItem8.Control = Me.SimpleButton4
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(590, 0)
+        Me.LayoutControlItem8.MaxSize = New System.Drawing.Size(45, 42)
+        Me.LayoutControlItem8.MinSize = New System.Drawing.Size(45, 42)
+        Me.LayoutControlItem8.Name = "LayoutControlItem8"
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(45, 42)
+        Me.LayoutControlItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem8.TextVisible = False
+        '
+        'LayoutControlItem9
+        '
+        Me.LayoutControlItem9.Control = Me.SimpleButton8
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(455, 0)
+        Me.LayoutControlItem9.MinSize = New System.Drawing.Size(59, 26)
+        Me.LayoutControlItem9.Name = "LayoutControlItem9"
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(135, 42)
+        Me.LayoutControlItem9.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem9.TextVisible = False
+        '
+        'LayoutControlItem10
+        '
+        Me.LayoutControlItem10.Control = Me.SimpleButton7
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(160, 0)
+        Me.LayoutControlItem10.MinSize = New System.Drawing.Size(97, 26)
+        Me.LayoutControlItem10.Name = "LayoutControlItem10"
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(295, 42)
+        Me.LayoutControlItem10.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem10.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem10.TextVisible = False
+        '
+        'LayoutControlItem11
+        '
+        Me.LayoutControlItem11.Control = Me.CheckEdit1
+        Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 42)
+        Me.LayoutControlItem11.Name = "LayoutControlItem11"
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(1105, 24)
+        Me.LayoutControlItem11.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem11.TextVisible = False
+        '
+        'LayoutControlItem6
+        '
+        Me.LayoutControlItem6.Control = Me.SimpleButton9
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(773, 0)
+        Me.LayoutControlItem6.MinSize = New System.Drawing.Size(89, 26)
+        Me.LayoutControlItem6.Name = "LayoutControlItem6"
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(111, 42)
+        Me.LayoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem6.TextVisible = False
+        '
+        'EmptySpaceItem3
+        '
+        Me.EmptySpaceItem3.AllowHotTrack = False
+        Me.EmptySpaceItem3.Location = New System.Drawing.Point(0, 0)
+        Me.EmptySpaceItem3.Name = "EmptySpaceItem3"
+        Me.EmptySpaceItem3.Size = New System.Drawing.Size(160, 42)
+        Me.EmptySpaceItem3.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'LayoutControlItem22
+        '
+        Me.LayoutControlItem22.Control = Me.RecNoteTextEdit
+        Me.LayoutControlItem22.Location = New System.Drawing.Point(0, 313)
+        Me.LayoutControlItem22.MaxSize = New System.Drawing.Size(0, 85)
+        Me.LayoutControlItem22.MinSize = New System.Drawing.Size(14, 85)
+        Me.LayoutControlItem22.Name = "LayoutControlItem22"
+        Me.LayoutControlItem22.Size = New System.Drawing.Size(1105, 85)
+        Me.LayoutControlItem22.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem22.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem22.TextVisible = False
+        '
+        'LayoutControlGroup2
+        '
+        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.EmptySpaceItem4, Me.LayoutControlItem12, Me.LayoutControlItem39})
+        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 66)
+        Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(1105, 54)
+        Me.LayoutControlGroup2.Text = "."
+        Me.LayoutControlGroup2.TextVisible = False
+        '
+        'LayoutControlItem1
+        '
+        Me.LayoutControlItem1.Control = Me.RecNOSpinEdit
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(763, 0)
+        Me.LayoutControlItem1.MaxSize = New System.Drawing.Size(0, 30)
+        Me.LayoutControlItem1.MinSize = New System.Drawing.Size(160, 30)
+        Me.LayoutControlItem1.Name = "LayoutControlItem1"
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(246, 30)
+        Me.LayoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem1.Text = "رقم السند"
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'EmptySpaceItem4
+        '
+        Me.EmptySpaceItem4.AllowHotTrack = False
+        Me.EmptySpaceItem4.Location = New System.Drawing.Point(359, 0)
+        Me.EmptySpaceItem4.Name = "EmptySpaceItem4"
+        Me.EmptySpaceItem4.Size = New System.Drawing.Size(404, 30)
+        Me.EmptySpaceItem4.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'LayoutControlItem12
+        '
+        Me.LayoutControlItem12.Control = Me.RecDateDateEdit
+        Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem12.MaxSize = New System.Drawing.Size(0, 30)
+        Me.LayoutControlItem12.MinSize = New System.Drawing.Size(160, 30)
+        Me.LayoutControlItem12.Name = "LayoutControlItem12"
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(359, 30)
+        Me.LayoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem12.Text = "التاريخ"
+        Me.LayoutControlItem12.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'LayoutControlItem39
+        '
+        Me.LayoutControlItem39.Control = Me.SimpleButton17
+        Me.LayoutControlItem39.Location = New System.Drawing.Point(1009, 0)
+        Me.LayoutControlItem39.MaxSize = New System.Drawing.Size(72, 30)
+        Me.LayoutControlItem39.MinSize = New System.Drawing.Size(72, 30)
+        Me.LayoutControlItem39.Name = "LayoutControlItem39"
+        Me.LayoutControlItem39.Size = New System.Drawing.Size(72, 30)
+        Me.LayoutControlItem39.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem39.Text = "بحث"
+        Me.LayoutControlItem39.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem39.TextVisible = False
+        '
+        'LayoutControlGroup3
+        '
+        Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem13, Me.LayoutControlItem14, Me.LayoutControlItem38, Me.LayoutControlItem37, Me.LayoutControlItem20})
+        Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 120)
+        Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(1105, 54)
+        Me.LayoutControlGroup3.Text = "."
+        Me.LayoutControlGroup3.TextVisible = False
+        '
+        'LayoutControlItem13
+        '
+        Me.LayoutControlItem13.Control = Me.RecCustNoTextEdit
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(824, 0)
+        Me.LayoutControlItem13.MinSize = New System.Drawing.Size(50, 25)
+        Me.LayoutControlItem13.Name = "LayoutControlItem13"
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(257, 30)
+        Me.LayoutControlItem13.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem13.Text = "الحساب"
+        Me.LayoutControlItem13.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'LayoutControlItem14
+        '
+        Me.LayoutControlItem14.Control = Me.RecCustNameTextEdit
+        Me.LayoutControlItem14.Location = New System.Drawing.Point(469, 0)
+        Me.LayoutControlItem14.MaxSize = New System.Drawing.Size(0, 30)
+        Me.LayoutControlItem14.MinSize = New System.Drawing.Size(54, 30)
+        Me.LayoutControlItem14.Name = "LayoutControlItem14"
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(355, 30)
+        Me.LayoutControlItem14.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem14.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem14.TextVisible = False
+        '
+        'LayoutControlItem38
+        '
+        Me.LayoutControlItem38.Control = Me.TextEditAccountBalance
+        Me.LayoutControlItem38.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem38.Name = "LayoutControlItem38"
+        Me.LayoutControlItem38.Size = New System.Drawing.Size(158, 30)
+        Me.LayoutControlItem38.Text = "رصيد الزبون"
+        Me.LayoutControlItem38.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
+        Me.LayoutControlItem38.TextSize = New System.Drawing.Size(52, 13)
+        Me.LayoutControlItem38.TextToControlDistance = 5
+        '
+        'LayoutControlItem37
+        '
+        Me.LayoutControlItem37.Control = Me.TextEditAccChequesTotal
+        Me.LayoutControlItem37.Location = New System.Drawing.Point(158, 0)
+        Me.LayoutControlItem37.Name = "LayoutControlItem37"
+        Me.LayoutControlItem37.Size = New System.Drawing.Size(187, 30)
+        Me.LayoutControlItem37.Text = "مجموع شيكات اجلة"
+        Me.LayoutControlItem37.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
+        Me.LayoutControlItem37.TextSize = New System.Drawing.Size(91, 13)
+        Me.LayoutControlItem37.TextToControlDistance = 5
+        '
+        'LayoutControlItem20
+        '
+        Me.LayoutControlItem20.Control = Me.TextEditAccChequeNO
+        Me.LayoutControlItem20.Location = New System.Drawing.Point(345, 0)
+        Me.LayoutControlItem20.Name = "LayoutControlItem20"
+        Me.LayoutControlItem20.Size = New System.Drawing.Size(124, 30)
+        Me.LayoutControlItem20.Text = "شيكات اجلة"
+        Me.LayoutControlItem20.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
+        Me.LayoutControlItem20.TextSize = New System.Drawing.Size(56, 13)
+        Me.LayoutControlItem20.TextToControlDistance = 5
+        '
+        'LayoutControlGroup4
+        '
+        Me.LayoutControlGroup4.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem15, Me.LayoutControlItem27, Me.LayoutControlItem16, Me.LayoutControlItem25, Me.LayoutControlItem17})
+        Me.LayoutControlGroup4.Location = New System.Drawing.Point(0, 174)
+        Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
+        Me.LayoutControlGroup4.Size = New System.Drawing.Size(1105, 54)
+        Me.LayoutControlGroup4.Text = "."
+        Me.LayoutControlGroup4.TextVisible = False
+        '
+        'LayoutControlItem15
+        '
+        Me.LayoutControlItem15.Control = Me.RecCurrTextEdit
+        Me.LayoutControlItem15.Location = New System.Drawing.Point(781, 0)
+        Me.LayoutControlItem15.MaxSize = New System.Drawing.Size(0, 30)
+        Me.LayoutControlItem15.MinSize = New System.Drawing.Size(160, 30)
+        Me.LayoutControlItem15.Name = "LayoutControlItem15"
+        Me.LayoutControlItem15.Size = New System.Drawing.Size(300, 30)
+        Me.LayoutControlItem15.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem15.Text = "العملة"
+        Me.LayoutControlItem15.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'LayoutControlItem27
+        '
+        Me.LayoutControlItem27.Control = Me.SimpleButton15
+        Me.LayoutControlItem27.Location = New System.Drawing.Point(753, 0)
+        Me.LayoutControlItem27.MaxSize = New System.Drawing.Size(28, 30)
+        Me.LayoutControlItem27.MinSize = New System.Drawing.Size(28, 30)
+        Me.LayoutControlItem27.Name = "LayoutControlItem27"
+        Me.LayoutControlItem27.Size = New System.Drawing.Size(28, 30)
+        Me.LayoutControlItem27.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem27.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem27.TextVisible = False
+        '
+        'LayoutControlItem16
+        '
+        Me.LayoutControlItem16.Control = Me.AmountInNisText
+        Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem16.Name = "LayoutControlItem16"
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(289, 30)
+        Me.LayoutControlItem16.Text = "المبلغ مقيم"
+        Me.LayoutControlItem16.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'LayoutControlItem25
+        '
+        Me.LayoutControlItem25.Control = Me.RecSmallCurrName
+        Me.LayoutControlItem25.Location = New System.Drawing.Point(530, 0)
+        Me.LayoutControlItem25.Name = "LayoutControlItem25"
+        Me.LayoutControlItem25.Size = New System.Drawing.Size(223, 30)
+        Me.LayoutControlItem25.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem25.TextVisible = False
+        '
+        'LayoutControlItem17
+        '
+        Me.LayoutControlItem17.Control = Me.RecCurrRate
+        Me.LayoutControlItem17.Location = New System.Drawing.Point(289, 0)
+        Me.LayoutControlItem17.Name = "LayoutControlItem17"
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(241, 30)
+        Me.LayoutControlItem17.Text = "سعر الصرف"
+        Me.LayoutControlItem17.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'LayoutControlGroup5
+        '
+        Me.LayoutControlGroup5.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem21, Me.LayoutControlItem26, Me.LayoutControlItem34, Me.LayoutControlItem35, Me.LayoutControlItem36})
+        Me.LayoutControlGroup5.Location = New System.Drawing.Point(0, 228)
+        Me.LayoutControlGroup5.Name = "LayoutControlGroup5"
+        Me.LayoutControlGroup5.Size = New System.Drawing.Size(1105, 85)
+        Me.LayoutControlGroup5.Text = "."
+        Me.LayoutControlGroup5.TextVisible = False
+        '
+        'LayoutControlItem21
+        '
+        Me.LayoutControlItem21.Control = Me.TextEdit1
+        Me.LayoutControlItem21.Location = New System.Drawing.Point(0, 30)
+        Me.LayoutControlItem21.MaxSize = New System.Drawing.Size(0, 31)
+        Me.LayoutControlItem21.MinSize = New System.Drawing.Size(54, 31)
+        Me.LayoutControlItem21.Name = "LayoutControlItem21"
+        Me.LayoutControlItem21.Size = New System.Drawing.Size(1081, 31)
+        Me.LayoutControlItem21.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem21.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem21.TextVisible = False
+        '
+        'LayoutControlItem26
+        '
+        Me.LayoutControlItem26.Control = Me.RecCashSpinEdit
+        Me.LayoutControlItem26.Location = New System.Drawing.Point(839, 0)
+        Me.LayoutControlItem26.MinSize = New System.Drawing.Size(111, 24)
+        Me.LayoutControlItem26.Name = "LayoutControlItem26"
+        Me.LayoutControlItem26.Size = New System.Drawing.Size(242, 30)
+        Me.LayoutControlItem26.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
+        Me.LayoutControlItem26.Text = "نقدا"
+        Me.LayoutControlItem26.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'LayoutControlItem34
+        '
+        Me.LayoutControlItem34.Control = Me.RecChequeSpinEdit
+        Me.LayoutControlItem34.Location = New System.Drawing.Point(588, 0)
+        Me.LayoutControlItem34.Name = "LayoutControlItem34"
+        Me.LayoutControlItem34.Size = New System.Drawing.Size(251, 30)
+        Me.LayoutControlItem34.Text = "شيكات"
+        Me.LayoutControlItem34.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'LayoutControlItem35
+        '
+        Me.LayoutControlItem35.Control = Me.RecOtherSpinEdit
+        Me.LayoutControlItem35.Location = New System.Drawing.Point(298, 0)
+        Me.LayoutControlItem35.Name = "LayoutControlItem35"
+        Me.LayoutControlItem35.Size = New System.Drawing.Size(290, 30)
+        Me.LayoutControlItem35.Text = "اخرى"
+        Me.LayoutControlItem35.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'LayoutControlItem36
+        '
+        Me.LayoutControlItem36.Control = Me.RecTotalSpinEdit
+        Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem36.Name = "LayoutControlItem36"
+        Me.LayoutControlItem36.Size = New System.Drawing.Size(298, 30)
+        Me.LayoutControlItem36.Text = "المجموع"
+        Me.LayoutControlItem36.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'LayoutControlItem29
+        '
+        Me.LayoutControlItem29.Control = Me.RecAuditSpinEdit
+        Me.LayoutControlItem29.Location = New System.Drawing.Point(943, 613)
+        Me.LayoutControlItem29.Name = "LayoutControlItem29"
+        Me.LayoutControlItem29.Size = New System.Drawing.Size(162, 30)
+        Me.LayoutControlItem29.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem29.TextVisible = False
+        '
+        'LayoutControlItem28
+        '
+        Me.LayoutControlItem28.Control = Me.RecStatusSpinEdit
+        Me.LayoutControlItem28.Location = New System.Drawing.Point(790, 613)
+        Me.LayoutControlItem28.Name = "LayoutControlItem28"
+        Me.LayoutControlItem28.Size = New System.Drawing.Size(153, 30)
+        Me.LayoutControlItem28.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem28.TextVisible = False
+        '
+        'LayoutControlItem30
+        '
+        Me.LayoutControlItem30.Control = Me.RecDeviceNameTextEdit
+        Me.LayoutControlItem30.Location = New System.Drawing.Point(569, 613)
+        Me.LayoutControlItem30.Name = "LayoutControlItem30"
+        Me.LayoutControlItem30.Size = New System.Drawing.Size(221, 30)
+        Me.LayoutControlItem30.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem30.TextVisible = False
+        '
+        'LayoutControlItem31
+        '
+        Me.LayoutControlItem31.Control = Me.RecOwnerTextEdit
+        Me.LayoutControlItem31.Location = New System.Drawing.Point(337, 613)
+        Me.LayoutControlItem31.Name = "LayoutControlItem31"
+        Me.LayoutControlItem31.Size = New System.Drawing.Size(232, 30)
+        Me.LayoutControlItem31.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem31.TextVisible = False
+        '
+        'LayoutControlItem32
+        '
+        Me.LayoutControlItem32.Control = Me.RecUserTextEdit
+        Me.LayoutControlItem32.Location = New System.Drawing.Point(143, 613)
+        Me.LayoutControlItem32.Name = "LayoutControlItem32"
+        Me.LayoutControlItem32.Size = New System.Drawing.Size(194, 30)
+        Me.LayoutControlItem32.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem32.TextVisible = False
+        '
+        'LayoutControlItem33
+        '
+        Me.LayoutControlItem33.Control = Me.RecInputDateDateEdit
+        Me.LayoutControlItem33.Location = New System.Drawing.Point(0, 613)
+        Me.LayoutControlItem33.Name = "LayoutControlItem33"
+        Me.LayoutControlItem33.Size = New System.Drawing.Size(143, 30)
+        Me.LayoutControlItem33.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem33.TextVisible = False
+        '
+        'LayoutControlItem18
+        '
+        Me.LayoutControlItem18.Control = Me.TextEditChequesTotal
+        Me.LayoutControlItem18.Location = New System.Drawing.Point(0, 589)
+        Me.LayoutControlItem18.Name = "LayoutControlItem18"
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(591, 24)
+        Me.LayoutControlItem18.Text = "مجموع الشيكات"
+        Me.LayoutControlItem18.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'LayoutControlItem19
+        '
+        Me.LayoutControlItem19.Control = Me.TextEditChequeNO
+        Me.LayoutControlItem19.Location = New System.Drawing.Point(591, 589)
+        Me.LayoutControlItem19.Name = "LayoutControlItem19"
+        Me.LayoutControlItem19.Size = New System.Drawing.Size(514, 24)
+        Me.LayoutControlItem19.Text = "عدد الشيكات"
+        Me.LayoutControlItem19.TextSize = New System.Drawing.Size(75, 13)
+        '
+        'LayoutControlItem23
+        '
+        Me.LayoutControlItem23.Control = Me.ChequeDataGridControl
+        Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 398)
+        Me.LayoutControlItem23.Name = "LayoutControlItem23"
+        Me.LayoutControlItem23.Size = New System.Drawing.Size(1105, 191)
+        Me.LayoutControlItem23.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem23.TextVisible = False
         '
         'NavigationPage3
         '
@@ -1168,7 +1663,7 @@ Partial Class FinanceReceipt
         Me.NavigationPage3.Controls.Add(Me.PanelControl8)
         Me.NavigationPage3.Controls.Add(Me.PanelControl7)
         Me.NavigationPage3.Name = "NavigationPage3"
-        Me.NavigationPage3.Size = New System.Drawing.Size(1043, 651)
+        Me.NavigationPage3.Size = New System.Drawing.Size(1125, 663)
         '
         'PanelControl8
         '
@@ -1176,7 +1671,7 @@ Partial Class FinanceReceipt
         Me.PanelControl8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl8.Location = New System.Drawing.Point(0, 40)
         Me.PanelControl8.Name = "PanelControl8"
-        Me.PanelControl8.Size = New System.Drawing.Size(1043, 611)
+        Me.PanelControl8.Size = New System.Drawing.Size(1125, 623)
         Me.PanelControl8.TabIndex = 1
         '
         'GridControl1
@@ -1185,7 +1680,7 @@ Partial Class FinanceReceipt
         Me.GridControl1.Location = New System.Drawing.Point(2, 2)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(1039, 607)
+        Me.GridControl1.Size = New System.Drawing.Size(1121, 619)
         Me.GridControl1.TabIndex = 1
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -1208,13 +1703,13 @@ Partial Class FinanceReceipt
         Me.PanelControl7.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelControl7.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl7.Name = "PanelControl7"
-        Me.PanelControl7.Size = New System.Drawing.Size(1043, 40)
+        Me.PanelControl7.Size = New System.Drawing.Size(1125, 40)
         Me.PanelControl7.TabIndex = 0
         '
         'TextEdit2
         '
         Me.TextEdit2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextEdit2.Location = New System.Drawing.Point(27, 7)
+        Me.TextEdit2.Location = New System.Drawing.Point(-26, 7)
         Me.TextEdit2.Name = "TextEdit2"
         Me.TextEdit2.Properties.AutoHeight = False
         Me.TextEdit2.Properties.ReadOnly = True
@@ -1225,7 +1720,7 @@ Partial Class FinanceReceipt
         '
         Me.SimpleButton11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton11.ImageOptions.Image = CType(resources.GetObject("SimpleButton11.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton11.Location = New System.Drawing.Point(527, 6)
+        Me.SimpleButton11.Location = New System.Drawing.Point(474, 6)
         Me.SimpleButton11.Name = "SimpleButton11"
         Me.SimpleButton11.Size = New System.Drawing.Size(86, 30)
         Me.SimpleButton11.TabIndex = 3
@@ -1235,7 +1730,7 @@ Partial Class FinanceReceipt
         '
         Me.SimpleButton10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton10.ImageOptions.Image = CType(resources.GetObject("SimpleButton10.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton10.Location = New System.Drawing.Point(619, 6)
+        Me.SimpleButton10.Location = New System.Drawing.Point(566, 6)
         Me.SimpleButton10.Name = "SimpleButton10"
         Me.SimpleButton10.Size = New System.Drawing.Size(86, 30)
         Me.SimpleButton10.TabIndex = 2
@@ -1245,7 +1740,7 @@ Partial Class FinanceReceipt
         '
         Me.DateEditTo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateEditTo.EditValue = Nothing
-        Me.DateEditTo.Location = New System.Drawing.Point(715, 6)
+        Me.DateEditTo.Location = New System.Drawing.Point(662, 6)
         Me.DateEditTo.Name = "DateEditTo"
         Me.DateEditTo.Properties.AutoHeight = False
         Me.DateEditTo.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -1257,7 +1752,7 @@ Partial Class FinanceReceipt
         '
         Me.DateEditFrom.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateEditFrom.EditValue = Nothing
-        Me.DateEditFrom.Location = New System.Drawing.Point(880, 6)
+        Me.DateEditFrom.Location = New System.Drawing.Point(827, 6)
         Me.DateEditFrom.Name = "DateEditFrom"
         Me.DateEditFrom.Properties.AutoHeight = False
         Me.DateEditFrom.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -1271,7 +1766,7 @@ Partial Class FinanceReceipt
         Me.NavigationPage4.Controls.Add(Me.PanelControl11)
         Me.NavigationPage4.Controls.Add(Me.PanelControl10)
         Me.NavigationPage4.Name = "NavigationPage4"
-        Me.NavigationPage4.Size = New System.Drawing.Size(1043, 651)
+        Me.NavigationPage4.Size = New System.Drawing.Size(1262, 711)
         '
         'PanelControl11
         '
@@ -1279,7 +1774,7 @@ Partial Class FinanceReceipt
         Me.PanelControl11.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl11.Location = New System.Drawing.Point(0, 40)
         Me.PanelControl11.Name = "PanelControl11"
-        Me.PanelControl11.Size = New System.Drawing.Size(1043, 611)
+        Me.PanelControl11.Size = New System.Drawing.Size(1262, 671)
         Me.PanelControl11.TabIndex = 2
         '
         'GridControl2
@@ -1290,7 +1785,7 @@ Partial Class FinanceReceipt
         Me.GridControl2.Location = New System.Drawing.Point(2, 2)
         Me.GridControl2.MainView = Me.GridView2
         Me.GridControl2.Name = "GridControl2"
-        Me.GridControl2.Size = New System.Drawing.Size(1039, 607)
+        Me.GridControl2.Size = New System.Drawing.Size(1258, 667)
         Me.GridControl2.TabIndex = 0
         Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -1468,7 +1963,7 @@ Partial Class FinanceReceipt
         Me.PanelControl10.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelControl10.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl10.Name = "PanelControl10"
-        Me.PanelControl10.Size = New System.Drawing.Size(1043, 40)
+        Me.PanelControl10.Size = New System.Drawing.Size(1262, 40)
         Me.PanelControl10.TabIndex = 1
         '
         'SimpleButton16
@@ -1482,7 +1977,7 @@ Partial Class FinanceReceipt
         'TextEdit3
         '
         Me.TextEdit3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextEdit3.Location = New System.Drawing.Point(88, 7)
+        Me.TextEdit3.Location = New System.Drawing.Point(172, 7)
         Me.TextEdit3.Name = "TextEdit3"
         Me.TextEdit3.Properties.AutoHeight = False
         Me.TextEdit3.Properties.ReadOnly = True
@@ -1493,7 +1988,7 @@ Partial Class FinanceReceipt
         '
         Me.SimpleButton13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton13.ImageOptions.Image = CType(resources.GetObject("SimpleButton13.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton13.Location = New System.Drawing.Point(530, 5)
+        Me.SimpleButton13.Location = New System.Drawing.Point(614, 5)
         Me.SimpleButton13.Name = "SimpleButton13"
         Me.SimpleButton13.Size = New System.Drawing.Size(86, 30)
         Me.SimpleButton13.TabIndex = 6
@@ -1503,7 +1998,7 @@ Partial Class FinanceReceipt
         '
         Me.DateEdit1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateEdit1.EditValue = Nothing
-        Me.DateEdit1.Location = New System.Drawing.Point(879, 5)
+        Me.DateEdit1.Location = New System.Drawing.Point(963, 5)
         Me.DateEdit1.Name = "DateEdit1"
         Me.DateEdit1.Properties.AutoHeight = False
         Me.DateEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -1515,7 +2010,7 @@ Partial Class FinanceReceipt
         '
         Me.DateEdit2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateEdit2.EditValue = Nothing
-        Me.DateEdit2.Location = New System.Drawing.Point(714, 4)
+        Me.DateEdit2.Location = New System.Drawing.Point(798, 4)
         Me.DateEdit2.Name = "DateEdit2"
         Me.DateEdit2.Properties.AutoHeight = False
         Me.DateEdit2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -1527,7 +2022,7 @@ Partial Class FinanceReceipt
         '
         Me.SimpleButton12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton12.ImageOptions.Image = CType(resources.GetObject("SimpleButton12.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton12.Location = New System.Drawing.Point(622, 6)
+        Me.SimpleButton12.Location = New System.Drawing.Point(706, 6)
         Me.SimpleButton12.Name = "SimpleButton12"
         Me.SimpleButton12.Size = New System.Drawing.Size(86, 30)
         Me.SimpleButton12.TabIndex = 3
@@ -1539,7 +2034,7 @@ Partial Class FinanceReceipt
         Me.NavigationPage5.Controls.Add(Me.PanelControl13)
         Me.NavigationPage5.Controls.Add(Me.PanelControl12)
         Me.NavigationPage5.Name = "NavigationPage5"
-        Me.NavigationPage5.Size = New System.Drawing.Size(1043, 651)
+        Me.NavigationPage5.Size = New System.Drawing.Size(1262, 711)
         '
         'PanelControl13
         '
@@ -1547,7 +2042,7 @@ Partial Class FinanceReceipt
         Me.PanelControl13.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl13.Location = New System.Drawing.Point(0, 45)
         Me.PanelControl13.Name = "PanelControl13"
-        Me.PanelControl13.Size = New System.Drawing.Size(1043, 606)
+        Me.PanelControl13.Size = New System.Drawing.Size(1262, 666)
         Me.PanelControl13.TabIndex = 1
         '
         'GridControl3
@@ -1558,7 +2053,7 @@ Partial Class FinanceReceipt
         Me.GridControl3.Location = New System.Drawing.Point(2, 2)
         Me.GridControl3.MainView = Me.GridView3
         Me.GridControl3.Name = "GridControl3"
-        Me.GridControl3.Size = New System.Drawing.Size(1039, 602)
+        Me.GridControl3.Size = New System.Drawing.Size(1258, 662)
         Me.GridControl3.TabIndex = 0
         Me.GridControl3.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
@@ -1793,7 +2288,7 @@ Partial Class FinanceReceipt
         Me.PanelControl12.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelControl12.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl12.Name = "PanelControl12"
-        Me.PanelControl12.Size = New System.Drawing.Size(1043, 45)
+        Me.PanelControl12.Size = New System.Drawing.Size(1262, 45)
         Me.PanelControl12.TabIndex = 0
         '
         'SimpleButton14
@@ -1817,19 +2312,40 @@ Partial Class FinanceReceipt
         'TableAdapterManager
         '
         Me.TableAdapterManager.AccountsAddDataTableAdapter = Nothing
+        Me.TableAdapterManager.ArchiveDocsSortTableAdapter = Nothing
+        Me.TableAdapterManager.ArchiveDocsTableAdapter = Nothing
+        Me.TableAdapterManager.ArchiveDocTypesTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CardsTableAdapter = Nothing
+        Me.TableAdapterManager.CardsTransTableAdapter = Nothing
+        Me.TableAdapterManager.CarsAccidentTableAdapter = Nothing
+        Me.TableAdapterManager.CarsInsurancCompaniesTableAdapter = Nothing
+        Me.TableAdapterManager.CarsInsuranceTransTableAdapter = Nothing
         Me.TableAdapterManager.CarsMarkaTableAdapter = Nothing
         Me.TableAdapterManager.CarsModelTableAdapter = Nothing
         Me.TableAdapterManager.CarsNotesTableAdapter = Nothing
         Me.TableAdapterManager.CarsSort2TableAdapter = Nothing
         Me.TableAdapterManager.CarsSortTableAdapter = Nothing
         Me.TableAdapterManager.carsTableAdapter = Nothing
+        Me.TableAdapterManager.CarsTarkhesTransTableAdapter = Nothing
         Me.TableAdapterManager.ChequeDataTableAdapter = Me.ChequeDataTableAdapter
+        Me.TableAdapterManager.CRMCustomersOrdersTableAdapter = Nothing
+        Me.TableAdapterManager.CRMJobNameTableAdapter = Nothing
         Me.TableAdapterManager.CRMTasksTableAdapter = Nothing
         Me.TableAdapterManager.DevelopNotesTableAdapter = Nothing
         Me.TableAdapterManager.EmployeesDataTableAdapter = Nothing
+        Me.TableAdapterManager.FinancialBanksDocTableAdapter = Nothing
         Me.TableAdapterManager.FinancialChequesBackTableAdapter = Nothing
+        Me.TableAdapterManager.PrintingSystemDocsTableAdapter = Nothing
+        Me.TableAdapterManager.PrintingSystemJobsTableAdapter = Nothing
         Me.TableAdapterManager.ReceiptDataTableAdapter = Me.ReceiptDataTableAdapter
+        Me.TableAdapterManager.StockMoveDocSort11TableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveDocSort1TableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveDocStatusTableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveDocumentsTableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveTableAdapter = Nothing
+        Me.TableAdapterManager.transDocTableAdapter = Nothing
+        Me.TableAdapterManager.transTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = DXApplication5.CRMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UsersLogInLogsTableAdapter = Nothing
         Me.TableAdapterManager.UsersTableAdapter = Nothing
@@ -1839,62 +2355,124 @@ Partial Class FinanceReceipt
         Me.RibbonPage2.Name = "RibbonPage2"
         Me.RibbonPage2.Text = "RibbonPage2"
         '
+        'EmptySpaceItem1
+        '
+        Me.EmptySpaceItem1.AllowHotTrack = False
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 0)
+        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(264, 181)
+        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'EmptySpaceItem5
+        '
+        Me.EmptySpaceItem5.AllowHotTrack = False
+        Me.EmptySpaceItem5.Location = New System.Drawing.Point(0, 155)
+        Me.EmptySpaceItem5.Name = "EmptySpaceItem5"
+        Me.EmptySpaceItem5.Size = New System.Drawing.Size(696, 17)
+        Me.EmptySpaceItem5.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'Accounts1TableAdapter
+        '
+        Me.Accounts1TableAdapter.ClearBeforeFill = True
+        '
         'FinanceReceipt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1184, 711)
+        Me.ClientSize = New System.Drawing.Size(1262, 711)
         Me.Controls.Add(Me.NavigationPane1)
         Me.Name = "FinanceReceipt"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Text = "سند قبض"
         CType(Me.NavigationPane1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavigationPane1.ResumeLayout(False)
-        Me.NavigationPage1.ResumeLayout(False)
-        CType(Me.DashboardViewer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavigationPage2.ResumeLayout(False)
-        CType(Me.PanelControl4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl4.ResumeLayout(False)
-        Me.PanelControl4.PerformLayout()
-        CType(Me.ReceiptDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LayoutControl1.ResumeLayout(False)
+        CType(Me.ChequeDataGridControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChequeDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AmountInNisText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecCurrTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PanelControl5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl5.ResumeLayout(False)
-        CType(Me.RecNoteTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupControl1.ResumeLayout(False)
-        Me.GroupControl1.PerformLayout()
+        CType(Me.GridView5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEditAccountBalance.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEditAccChequesTotal.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEditAccChequeNO.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEditChequeNO.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEditChequesTotal.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecCurrRate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReceiptDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecTotalSpinEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecOtherSpinEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecChequeSpinEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecCashSpinEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecInputDateDateEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecUserTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecSmallCurrName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecOwnerTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecDeviceNameTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecAuditSpinEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecStatusSpinEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemCheckEdit1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ChequeDataDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ChequeDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PanelControl6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl6.ResumeLayout(False)
-        CType(Me.RecOwnerTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecInputDateDateEdit.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecInputDateDateEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecUserTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecAuditSpinEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecDeviceNameTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecStatusSpinEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl1.ResumeLayout(False)
-        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl2.ResumeLayout(False)
-        Me.PanelControl2.PerformLayout()
+        CType(Me.RecNoteTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecCustNameTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RecDateDateEdit.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RecDateDateEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AmountInNisText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RecNOSpinEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl3.ResumeLayout(False)
-        Me.PanelControl3.PerformLayout()
+        CType(Me.RecCurrTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RecCustNoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecCustNameTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Accounts1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WizCountDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem39, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem27, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem28, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem23, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavigationPage3.ResumeLayout(False)
         CType(Me.PanelControl8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl8.ResumeLayout(False)
@@ -1927,32 +2505,23 @@ Partial Class FinanceReceipt
         CType(Me.PanelControl12, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl12.ResumeLayout(False)
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents NavigationPane1 As DevExpress.XtraBars.Navigation.NavigationPane
-    Friend WithEvents NavigationPage1 As DevExpress.XtraBars.Navigation.NavigationPage
     Friend WithEvents NavigationPage2 As DevExpress.XtraBars.Navigation.NavigationPage
-    Friend WithEvents PanelControl4 As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents smallcurrencylabel As DevExpress.XtraEditors.LabelControl
     Friend WithEvents AmountInNisText As DevExpress.XtraEditors.TextEdit
     Friend WithEvents RecCurrTextEdit As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents ReceiptDataBindingSource As BindingSource
     Friend WithEvents CRMDataSet As CRMDataSet
-    Friend WithEvents PanelControl5 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents RecNoteTextEdit As DevExpress.XtraEditors.MemoEdit
-    Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
-    Friend WithEvents CountChequesLabel As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents ChequeDataDataGridView As DataGridView
     Friend WithEvents ChequeDataBindingSource As BindingSource
-    Friend WithEvents PanelControl6 As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents RecInputDateDateEdit As DevExpress.XtraEditors.DateEdit
-    Friend WithEvents RecUserTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents RecAuditSpinEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents RecDeviceNameTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents RecStatusSpinEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents SimpleButton7 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton6 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton5 As DevExpress.XtraEditors.SimpleButton
@@ -1960,11 +2529,8 @@ Partial Class FinanceReceipt
     Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents PanelControl2 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents RecDateDateEdit As DevExpress.XtraEditors.DateEdit
     Friend WithEvents RecNOSpinEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents PanelControl3 As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents RecCustNoTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents RecCustNameTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents ChequeDataTableAdapter As CRMDataSetTableAdapters.ChequeDataTableAdapter
     Friend WithEvents ReceiptDataTableAdapter As CRMDataSetTableAdapters.ReceiptDataTableAdapter
@@ -1973,9 +2539,7 @@ Partial Class FinanceReceipt
     Friend WithEvents NavigationPage3 As DevExpress.XtraBars.Navigation.NavigationPage
     Friend WithEvents NavigationPage4 As DevExpress.XtraBars.Navigation.NavigationPage
     Friend WithEvents SimpleButton8 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SumChequesLabel As DevExpress.XtraEditors.LabelControl
     Friend WithEvents BehaviorManager1 As DevExpress.Utils.Behaviors.BehaviorManager
-    Friend WithEvents DashboardViewer1 As DevExpress.DashboardWin.DashboardViewer
     Friend WithEvents SimpleButton9 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents PanelControl8 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
@@ -2032,13 +2596,8 @@ Partial Class FinanceReceipt
     Friend WithEvents TextEdit2 As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TextEdit3 As DevExpress.XtraEditors.TextEdit
     Friend WithEvents RecOwnerTextEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents RecRateSpinEdit As TextBox
     Friend WithEvents GridControl4 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView4 As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents RecTotalSpinEdit As TextBox
-    Friend WithEvents RecOtherSpinEdit As TextBox
-    Friend WithEvents RecChequeSpinEdit As TextBox
-    Friend WithEvents RecCashSpinEdit As TextBox
     Friend WithEvents TextEdit1 As DevExpress.XtraEditors.TextEdit
     Friend WithEvents ColAccrualDate As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ColCustomerName As DevExpress.XtraGrid.Columns.GridColumn
@@ -2048,17 +2607,87 @@ Partial Class FinanceReceipt
     Friend WithEvents ColTaskMonth As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ColNote As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ColTaskID As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents ColState As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents RepositoryItemCheckEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
     Friend WithEvents SimpleButton15 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton16 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents CheckEdit1 As DevExpress.XtraEditors.CheckEdit
+    Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents RepositoryItemCheckEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
+    Friend WithEvents LayoutControl1 As DevExpress.XtraLayout.LayoutControl
+    Friend WithEvents LayoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem5 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem7 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem8 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem9 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem10 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem11 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem6 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents EmptySpaceItem3 As DevExpress.XtraLayout.EmptySpaceItem
+    Friend WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem12 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents EmptySpaceItem4 As DevExpress.XtraLayout.EmptySpaceItem
+    Friend WithEvents LayoutControlItem13 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem14 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem15 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents EmptySpaceItem5 As DevExpress.XtraLayout.EmptySpaceItem
+    Friend WithEvents EmptySpaceItem1 As DevExpress.XtraLayout.EmptySpaceItem
+    Friend WithEvents LayoutControlItem16 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem21 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem22 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem24 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem27 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlGroup2 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlGroup3 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlGroup4 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlGroup5 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlItem29 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem28 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem30 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem31 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents RecInputDateDateEdit As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents RecUserTextEdit As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents RecSmallCurrName As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControlItem25 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem32 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem33 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents RecTotalSpinEdit As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents RecOtherSpinEdit As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents RecChequeSpinEdit As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents RecCashSpinEdit As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControlItem26 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem34 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem35 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem36 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents RecCurrRate As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControlItem17 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents RecCustNoTextEdit As DevExpress.XtraEditors.SearchLookUpEdit
+    Friend WithEvents SearchLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents WizCountDataSet As WizCountDataSet
+    Friend WithEvents Accounts1BindingSource As BindingSource
+    Friend WithEvents Accounts1TableAdapter As WizCountDataSetTableAdapters.Accounts1TableAdapter
+    Friend WithEvents TextEditChequeNO As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TextEditChequesTotal As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControlItem18 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem19 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents TextEditAccChequesTotal As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TextEditAccChequeNO As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TextEditAccountBalance As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControlItem38 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem37 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem20 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents SimpleButton17 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents LayoutControlItem39 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents ChequeDataGridControl As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView5 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents LayoutControlItem23 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents colChequeNO As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colChequeBank As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colChequeBranch As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colChequeAccount As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colChequeAccDate As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colChequeAmount As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colChequeReceiptNo As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colID As DevExpress.XtraGrid.Columns.GridColumn
 End Class

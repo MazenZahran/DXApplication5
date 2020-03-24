@@ -5,6 +5,7 @@ Imports DevExpress.XtraGrid.Views.Grid
 
 Public Class FinancialAlhudaWherhouses
 
+
     Private Sub FinancialAlhudaWherhouses_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim sql_string As String = " SELECT     [AccountKey] ,  [FullName]
@@ -21,6 +22,8 @@ Public Class FinancialAlhudaWherhouses
 
     End Sub
 
+
+
     Private Sub UpdateTrans(Acc As String)
 
         Try
@@ -36,14 +39,19 @@ Public Class FinancialAlhudaWherhouses
             '   Dim Acc As String = CStr(GridView2.GetRowCellValue(GridView2.FocusedRowHandle, "AccountKey"))
 
             Dim sql_string As String = " SELECT     [StockMoves].Warehouse  ,  [Stock].Reference  , " _
-                                       & " [Stock].ValueDate  , stock.AccountName  , " _
-                                       & " [StockMoves].ItemKey    , " _
-                                       & " case when [Stock].TransStore=999999999 then [StockMoves].Quantity  else 0 end as sss , " _
-                                       & " case when [Stock].Warehouse=999999999 then [StockMoves].Quantity when [Stock].TransStore =0 then [StockMoves].Quantity  else 0 end as ss     " _
-                                       & " ,[StockMoves].TFtal " _
+                                       & " [Stock].ValueDate  , stock.AccountName   "
+            If CheckEdit1.Checked = True Then
+                sql_string = sql_string + " ,Case When [StockMoves].ItemKey= 3 Then 2 When [StockMoves].ItemKey= 4 Then 1 Else  [StockMoves].ItemKey End As ItemKey   "
+            Else
+                sql_string = sql_string + " ,[StockMoves].ItemKey "
+            End If
+
+            sql_string = sql_string + "  ,Case When [Stock].TransStore=999999999 Then [StockMoves].Quantity  Else 0 End As sss , " _
+                                       & " Case When [Stock].Warehouse=999999999 Then [StockMoves].Quantity When [Stock].TransStore =0 Then [StockMoves].Quantity  Else 0 End As ss     " _
+                                       & " ,[StockMoves].TFtal,Year([Stock].ValueDate) As ValYear,Month([Stock].ValueDate) As ValMonth " _
                                        & " FROM [ALHUDA].[dbo].[Stock], [ALHUDA].[dbo].[StockMoves]" _
                                        & " where ([StockMoves].StockID = [Stock].ID) " _
-                                       & " and  ( ValueDate between '" & FromDatee & "'  and '" & ToDatee & "' ) " _
+                                       & " And  ( ValueDate between '" & FromDatee & "'  and '" & ToDatee & "' ) " _
                                        & " and ( [StockMoves].Warehouse between " & "999999999" & " and " & "999999999" & " ) " _
                                        & " and( [StockMoves].ItemKey between " & FromStock.Text & " and " & ToStock.Text & " ) " _
                                        & " and ( stock.AccountKey = '" & Acc & "' ) "
@@ -73,14 +81,18 @@ Public Class FinancialAlhudaWherhouses
             '   Dim Acc As String = CStr(GridView2.GetRowCellValue(GridView2.FocusedRowHandle, "AccountKey"))
 
             Dim sql_string As String = " SELECT     [StockMoves].Warehouse  ,  [Stock].Reference  , " _
-                                       & " [Stock].ValueDate  , stock.AccountName  , " _
-                                       & " [StockMoves].ItemKey    , " _
-                                       & " case when [Stock].TransStore=999999999 then [StockMoves].Quantity  else 0 end as sss , " _
-                                       & " case when [Stock].Warehouse=999999999 then [StockMoves].Quantity when [Stock].TransStore =0 then [StockMoves].Quantity  else 0 end as ss     " _
-                                       & " ,[StockMoves].TFtal " _
+                                       & " [Stock].ValueDate  , stock.AccountName   "
+            If CheckEdit1.Checked = True Then
+                sql_string = sql_string + " ,Case When [StockMoves].ItemKey= 3 Then 2 When [StockMoves].ItemKey= 4 Then 1 Else  [StockMoves].ItemKey End As ItemKey   "
+            Else
+                sql_string = sql_string + " ,[StockMoves].ItemKey "
+            End If
+            sql_string = sql_string + "  ,Case When [Stock].TransStore=999999999 Then [StockMoves].Quantity  Else 0 End As sss , " _
+                                       & " Case When [Stock].Warehouse=999999999 Then [StockMoves].Quantity When [Stock].TransStore =0 Then [StockMoves].Quantity  Else 0 End As ss     " _
+                                       & " ,[StockMoves].TFtal,Year([Stock].ValueDate) As ValYear,Month([Stock].ValueDate) As ValMonth " _
                                        & " FROM [ALHUDA].[dbo].[Stock], [ALHUDA].[dbo].[StockMoves]" _
                                        & " where ([StockMoves].StockID = [Stock].ID) " _
-                                       & " and  ( ValueDate between '" & FromDatee & "'  and '" & ToDatee & "' ) " _
+                                       & " And  ( ValueDate between '" & FromDatee & "'  and '" & ToDatee & "' ) " _
                                        & " and ( [StockMoves].Warehouse between " & "999999999" & " and " & "999999999" & " ) " _
                                        & " and( [StockMoves].ItemKey between " & FromStock.Text & " and " & ToStock.Text & " ) " _
                                        & " and ( stock.AccountKey = '" & Acc & "' ) "
@@ -121,16 +133,24 @@ Public Class FinancialAlhudaWherhouses
     End Sub
 
     Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
-        Dim i As Integer
-        Dim NewTable As New DataTable
-        Dim NewTable2 As New DataTable
-        For i = 0 To GridView2.RowCount - 1
-            Dim aa As String = CStr(GridView2.GetRowCellValue(i, "AccountKey"))
-            NewTable = TransTable(aa)
-            NewTable2.Merge(NewTable)
 
-        Next
-        GridControl3.DataSource = NewTable2
+        Try
+            If FromStock.Text = "" Or ToStock.Text = "" Then Exit Sub
+            Dim i As Integer
+            Dim NewTable As New DataTable
+            Dim NewTable2 As New DataTable
+            For i = 0 To GridView2.RowCount - 1
+                Dim aa As String = CStr(GridView2.GetRowCellValue(i, "AccountKey"))
+                NewTable = TransTable(aa)
+                NewTable2.Merge(NewTable)
+
+            Next
+            GridControl3.DataSource = NewTable2
+        Catch ex As Exception
+
+        End Try
+
+
     End Sub
 
     Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click

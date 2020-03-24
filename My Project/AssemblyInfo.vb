@@ -5,11 +5,11 @@ Imports System.Runtime.InteropServices
 ' General Information about an assembly is controlled through the following 
 ' set of attributes. Change these attribute values to modify the information
 ' associated with an assembly.
-<Assembly: AssemblyTitle("DXApplication5")>
+<Assembly: AssemblyTitle("AlhudaERP")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("DXApplication5")>
+<Assembly: AssemblyProduct("AlhudaERP")>
 <Assembly: AssemblyCopyright("Copyright ©  2017")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>

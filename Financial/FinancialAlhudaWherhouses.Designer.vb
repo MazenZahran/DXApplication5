@@ -43,18 +43,19 @@ Partial Class FinancialAlhudaWherhouses
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColDelete = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemButtonEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
-        Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
         Me.GridControl3 = New DevExpress.XtraGrid.GridControl()
         Me.GridView3 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn9 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColAccountName = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColItemKey = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colsss = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colss = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColValYear = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColValMonth = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GroupControl3 = New DevExpress.XtraEditors.GroupControl()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -64,6 +65,11 @@ Partial Class FinancialAlhudaWherhouses
         Me.TransportText = New DevExpress.XtraEditors.TextEdit()
         Me.NaqelPrice = New DevExpress.XtraEditors.TextEdit()
         Me.TtayorText = New DevExpress.XtraEditors.TextEdit()
+        Me.CheckEdit1 = New DevExpress.XtraEditors.CheckEdit()
+        Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
+        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.AccountNameText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,8 +85,6 @@ Partial Class FinancialAlhudaWherhouses
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupControl1.SuspendLayout()
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl3.SuspendLayout()
         CType(Me.GridControl3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,10 +97,17 @@ Partial Class FinancialAlhudaWherhouses
         CType(Me.TransportText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NaqelPrice.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TtayorText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LayoutControl1.SuspendLayout()
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelControl1
         '
+        Me.PanelControl1.Controls.Add(Me.CheckEdit1)
         Me.PanelControl1.Controls.Add(Me.SimpleButton4)
         Me.PanelControl1.Controls.Add(Me.AccountNameText)
         Me.PanelControl1.Controls.Add(Me.AccountIDText)
@@ -142,9 +153,8 @@ Partial Class FinancialAlhudaWherhouses
         '
         'SimpleButton2
         '
-        Me.SimpleButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton2.Location = New System.Drawing.Point(111, 64)
+        Me.SimpleButton2.Location = New System.Drawing.Point(6, 76)
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(75, 28)
         Me.SimpleButton2.TabIndex = 5
@@ -201,11 +211,10 @@ Partial Class FinancialAlhudaWherhouses
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(192, 64)
+        Me.SimpleButton1.Location = New System.Drawing.Point(87, 76)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(83, 28)
+        Me.SimpleButton1.Size = New System.Drawing.Size(83, 27)
         Me.SimpleButton1.TabIndex = 2
         Me.SimpleButton1.Text = "تحديث"
         '
@@ -235,24 +244,26 @@ Partial Class FinancialAlhudaWherhouses
         '
         Me.SimpleButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton5.ImageOptions.Image = CType(resources.GetObject("SimpleButton5.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton5.Location = New System.Drawing.Point(173, 10)
+        Me.SimpleButton5.Location = New System.Drawing.Point(171, 10)
         Me.SimpleButton5.Name = "SimpleButton5"
         Me.SimpleButton5.Size = New System.Drawing.Size(43, 45)
         Me.SimpleButton5.TabIndex = 9
         Me.SimpleButton5.Text = "SimpleButton5"
+        Me.SimpleButton5.Visible = False
         '
         'SimpleButton3
         '
-        Me.SimpleButton3.Location = New System.Drawing.Point(6, 7)
+        Me.SimpleButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton3.Location = New System.Drawing.Point(12, 481)
         Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(64, 20)
+        Me.SimpleButton3.Size = New System.Drawing.Size(307, 22)
+        Me.SimpleButton3.StyleController = Me.LayoutControl1
         Me.SimpleButton3.TabIndex = 6
-        Me.SimpleButton3.Text = "كل الحركات"
+        Me.SimpleButton3.Text = "تقرير للقائمة ادناه"
         '
         'PanelControl2
         '
-        Me.PanelControl2.Controls.Add(Me.GridControl2)
-        Me.PanelControl2.Controls.Add(Me.GroupControl1)
+        Me.PanelControl2.Controls.Add(Me.LayoutControl1)
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelControl2.Location = New System.Drawing.Point(0, 108)
         Me.PanelControl2.Name = "PanelControl2"
@@ -261,12 +272,11 @@ Partial Class FinancialAlhudaWherhouses
         '
         'GridControl2
         '
-        Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl2.Location = New System.Drawing.Point(2, 36)
+        Me.GridControl2.Location = New System.Drawing.Point(12, 12)
         Me.GridControl2.MainView = Me.GridView2
         Me.GridControl2.Name = "GridControl2"
         Me.GridControl2.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit1})
-        Me.GridControl2.Size = New System.Drawing.Size(333, 483)
+        Me.GridControl2.Size = New System.Drawing.Size(307, 465)
         Me.GridControl2.TabIndex = 0
         Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -275,7 +285,6 @@ Partial Class FinancialAlhudaWherhouses
         Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.ColDelete})
         Me.GridView2.GridControl = Me.GridControl2
         Me.GridView2.Name = "GridView2"
-        Me.GridView2.OptionsView.ShowFooter = True
         Me.GridView2.OptionsView.ShowGroupPanel = False
         '
         'GridColumn1
@@ -306,22 +315,10 @@ Partial Class FinancialAlhudaWherhouses
         '
         'RepositoryItemButtonEdit1
         '
-        Me.RepositoryItemButtonEdit1.AutoHeight = False
         EditorButtonImageOptions1.Image = CType(resources.GetObject("EditorButtonImageOptions1.Image"), System.Drawing.Image)
         Me.RepositoryItemButtonEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(EditorButtonImageOptions1, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, Nothing)})
         Me.RepositoryItemButtonEdit1.Name = "RepositoryItemButtonEdit1"
-        Me.RepositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
-        '
-        'GroupControl1
-        '
-        Me.GroupControl1.Controls.Add(Me.SimpleButton3)
-        Me.GroupControl1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupControl1.Location = New System.Drawing.Point(2, 2)
-        Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.ShowCaption = False
-        Me.GroupControl1.Size = New System.Drawing.Size(333, 34)
-        Me.GroupControl1.TabIndex = 0
-        Me.GroupControl1.Text = "GroupControl1"
+        Me.RepositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
         'PanelControl3
         '
@@ -336,20 +333,26 @@ Partial Class FinancialAlhudaWherhouses
         'GridControl3
         '
         Me.GridControl3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl3.Location = New System.Drawing.Point(2, 67)
+        Me.GridControl3.Location = New System.Drawing.Point(3, 68)
         Me.GridControl3.MainView = Me.GridView3
         Me.GridControl3.Name = "GridControl3"
-        Me.GridControl3.Size = New System.Drawing.Size(672, 452)
+        Me.GridControl3.Size = New System.Drawing.Size(670, 450)
         Me.GridControl3.TabIndex = 2
         Me.GridControl3.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
         'GridView3
         '
-        Me.GridView3.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6, Me.GridColumn7, Me.GridColumn8, Me.GridColumn9, Me.GridColumn10})
+        Me.GridView3.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.ColAccountName, Me.ColItemKey, Me.Colsss, Me.Colss, Me.GridColumn10, Me.ColValYear, Me.ColValMonth})
         Me.GridView3.GridControl = Me.GridControl3
+        Me.GridView3.GroupCount = 2
+        Me.GridView3.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ss", Me.Colss, "{0:n0}")})
         Me.GridView3.Name = "GridView3"
+        Me.GridView3.OptionsBehavior.AlignGroupSummaryInGroupRow = DevExpress.Utils.DefaultBoolean.[True]
+        Me.GridView3.OptionsBehavior.AutoExpandAllGroups = True
+        Me.GridView3.OptionsMenu.ShowGroupSummaryEditorItem = True
+        Me.GridView3.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways
         Me.GridView3.OptionsView.ShowFooter = True
-        Me.GridView3.OptionsView.ShowGroupPanel = False
+        Me.GridView3.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.ColValYear, DevExpress.Data.ColumnSortOrder.Ascending), New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.ColValMonth, DevExpress.Data.ColumnSortOrder.Ascending)})
         '
         'GridColumn3
         '
@@ -357,7 +360,7 @@ Partial Class FinancialAlhudaWherhouses
         Me.GridColumn3.FieldName = "Warehouse"
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.Visible = True
-        Me.GridColumn3.VisibleIndex = 0
+        Me.GridColumn3.VisibleIndex = 2
         Me.GridColumn3.Width = 81
         '
         'GridColumn4
@@ -367,7 +370,7 @@ Partial Class FinancialAlhudaWherhouses
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Reference", "{0}")})
         Me.GridColumn4.Visible = True
-        Me.GridColumn4.VisibleIndex = 1
+        Me.GridColumn4.VisibleIndex = 3
         Me.GridColumn4.Width = 81
         '
         'GridColumn5
@@ -376,56 +379,72 @@ Partial Class FinancialAlhudaWherhouses
         Me.GridColumn5.FieldName = "ValueDate"
         Me.GridColumn5.Name = "GridColumn5"
         Me.GridColumn5.Visible = True
-        Me.GridColumn5.VisibleIndex = 2
+        Me.GridColumn5.VisibleIndex = 4
         Me.GridColumn5.Width = 81
         '
-        'GridColumn6
+        'ColAccountName
         '
-        Me.GridColumn6.Caption = "الحساب"
-        Me.GridColumn6.FieldName = "AccountName"
-        Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.Visible = True
-        Me.GridColumn6.VisibleIndex = 3
-        Me.GridColumn6.Width = 200
+        Me.ColAccountName.Caption = "الحساب"
+        Me.ColAccountName.FieldName = "AccountName"
+        Me.ColAccountName.Name = "ColAccountName"
+        Me.ColAccountName.Visible = True
+        Me.ColAccountName.VisibleIndex = 5
+        Me.ColAccountName.Width = 200
         '
-        'GridColumn7
+        'ColItemKey
         '
-        Me.GridColumn7.Caption = "رقم الصنف"
-        Me.GridColumn7.FieldName = "ItemKey"
-        Me.GridColumn7.Name = "GridColumn7"
-        Me.GridColumn7.Visible = True
-        Me.GridColumn7.VisibleIndex = 4
-        Me.GridColumn7.Width = 51
+        Me.ColItemKey.Caption = "رقم الصنف"
+        Me.ColItemKey.FieldName = "ItemKey"
+        Me.ColItemKey.Name = "ColItemKey"
+        Me.ColItemKey.Visible = True
+        Me.ColItemKey.VisibleIndex = 6
+        Me.ColItemKey.Width = 51
         '
-        'GridColumn8
+        'Colsss
         '
-        Me.GridColumn8.Caption = "داخل"
-        Me.GridColumn8.FieldName = "sss"
-        Me.GridColumn8.Name = "GridColumn8"
-        Me.GridColumn8.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "sss", "{0}")})
-        Me.GridColumn8.Visible = True
-        Me.GridColumn8.VisibleIndex = 5
-        Me.GridColumn8.Width = 51
+        Me.Colsss.Caption = "داخل"
+        Me.Colsss.FieldName = "sss"
+        Me.Colsss.Name = "Colsss"
+        Me.Colsss.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "sss", "{0}")})
+        Me.Colsss.Visible = True
+        Me.Colsss.VisibleIndex = 7
+        Me.Colsss.Width = 51
         '
-        'GridColumn9
+        'Colss
         '
-        Me.GridColumn9.Caption = "خارج"
-        Me.GridColumn9.FieldName = "ss"
-        Me.GridColumn9.Name = "GridColumn9"
-        Me.GridColumn9.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ss", "{0}")})
-        Me.GridColumn9.Visible = True
-        Me.GridColumn9.VisibleIndex = 6
-        Me.GridColumn9.Width = 51
+        Me.Colss.Caption = "خارج"
+        Me.Colss.FieldName = "ss"
+        Me.Colss.Name = "Colss"
+        Me.Colss.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ss", "{0:n0}")})
+        Me.Colss.Visible = True
+        Me.Colss.VisibleIndex = 8
+        Me.Colss.Width = 51
         '
         'GridColumn10
         '
         Me.GridColumn10.Caption = "المبلغ"
         Me.GridColumn10.FieldName = "TFtal"
         Me.GridColumn10.Name = "GridColumn10"
-        Me.GridColumn10.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TFtal", "{0}")})
+        Me.GridColumn10.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TFtal", "{0:n0}")})
         Me.GridColumn10.Visible = True
-        Me.GridColumn10.VisibleIndex = 7
+        Me.GridColumn10.VisibleIndex = 9
         Me.GridColumn10.Width = 58
+        '
+        'ColValYear
+        '
+        Me.ColValYear.Caption = "السنة"
+        Me.ColValYear.FieldName = "ValYear"
+        Me.ColValYear.Name = "ColValYear"
+        Me.ColValYear.Visible = True
+        Me.ColValYear.VisibleIndex = 0
+        '
+        'ColValMonth
+        '
+        Me.ColValMonth.Caption = "الشهر"
+        Me.ColValMonth.FieldName = "ValMonth"
+        Me.ColValMonth.Name = "ColValMonth"
+        Me.ColValMonth.Visible = True
+        Me.ColValMonth.VisibleIndex = 1
         '
         'GroupControl3
         '
@@ -439,10 +458,10 @@ Partial Class FinancialAlhudaWherhouses
         Me.GroupControl3.Controls.Add(Me.NaqelPrice)
         Me.GroupControl3.Controls.Add(Me.TtayorText)
         Me.GroupControl3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupControl3.Location = New System.Drawing.Point(2, 2)
+        Me.GroupControl3.Location = New System.Drawing.Point(3, 3)
         Me.GroupControl3.Name = "GroupControl3"
         Me.GroupControl3.ShowCaption = False
-        Me.GroupControl3.Size = New System.Drawing.Size(672, 65)
+        Me.GroupControl3.Size = New System.Drawing.Size(670, 65)
         Me.GroupControl3.TabIndex = 0
         Me.GroupControl3.Text = "GroupControl3"
         '
@@ -450,7 +469,7 @@ Partial Class FinancialAlhudaWherhouses
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(594, 37)
+        Me.Label2.Location = New System.Drawing.Point(592, 37)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(31, 13)
         Me.Label2.TabIndex = 1
@@ -460,7 +479,7 @@ Partial Class FinancialAlhudaWherhouses
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(594, 13)
+        Me.Label1.Location = New System.Drawing.Point(592, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 13)
         Me.Label1.TabIndex = 1
@@ -469,7 +488,7 @@ Partial Class FinancialAlhudaWherhouses
         'MyTotal
         '
         Me.MyTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MyTotal.Location = New System.Drawing.Point(224, 10)
+        Me.MyTotal.Location = New System.Drawing.Point(222, 10)
         Me.MyTotal.Name = "MyTotal"
         Me.MyTotal.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!, System.Drawing.FontStyle.Bold)
         Me.MyTotal.Properties.Appearance.Options.UseFont = True
@@ -485,7 +504,7 @@ Partial Class FinancialAlhudaWherhouses
         'TtayorAmountText
         '
         Me.TtayorAmountText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TtayorAmountText.Location = New System.Drawing.Point(321, 9)
+        Me.TtayorAmountText.Location = New System.Drawing.Point(319, 9)
         Me.TtayorAmountText.Name = "TtayorAmountText"
         Me.TtayorAmountText.Properties.Mask.EditMask = "n2"
         Me.TtayorAmountText.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
@@ -496,7 +515,7 @@ Partial Class FinancialAlhudaWherhouses
         'UnleadedPriceText
         '
         Me.UnleadedPriceText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.UnleadedPriceText.Location = New System.Drawing.Point(418, 9)
+        Me.UnleadedPriceText.Location = New System.Drawing.Point(416, 9)
         Me.UnleadedPriceText.Name = "UnleadedPriceText"
         Me.UnleadedPriceText.Properties.Mask.EditMask = "n2"
         Me.UnleadedPriceText.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
@@ -507,7 +526,7 @@ Partial Class FinancialAlhudaWherhouses
         'TransportText
         '
         Me.TransportText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TransportText.Location = New System.Drawing.Point(321, 35)
+        Me.TransportText.Location = New System.Drawing.Point(319, 35)
         Me.TransportText.Name = "TransportText"
         Me.TransportText.Properties.ReadOnly = True
         Me.TransportText.Size = New System.Drawing.Size(186, 20)
@@ -516,8 +535,8 @@ Partial Class FinancialAlhudaWherhouses
         'NaqelPrice
         '
         Me.NaqelPrice.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.NaqelPrice.EditValue = "56.0345"
-        Me.NaqelPrice.Location = New System.Drawing.Point(513, 34)
+        Me.NaqelPrice.EditValue = "0"
+        Me.NaqelPrice.Location = New System.Drawing.Point(511, 34)
         Me.NaqelPrice.Name = "NaqelPrice"
         Me.NaqelPrice.Size = New System.Drawing.Size(79, 20)
         Me.NaqelPrice.TabIndex = 0
@@ -525,11 +544,61 @@ Partial Class FinancialAlhudaWherhouses
         'TtayorText
         '
         Me.TtayorText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TtayorText.Location = New System.Drawing.Point(487, 9)
+        Me.TtayorText.Location = New System.Drawing.Point(485, 9)
         Me.TtayorText.Name = "TtayorText"
         Me.TtayorText.Properties.ReadOnly = True
         Me.TtayorText.Size = New System.Drawing.Size(101, 20)
         Me.TtayorText.TabIndex = 0
+        '
+        'CheckEdit1
+        '
+        Me.CheckEdit1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckEdit1.Location = New System.Drawing.Point(173, 74)
+        Me.CheckEdit1.Name = "CheckEdit1"
+        Me.CheckEdit1.Properties.Caption = "سولار وبنزين"
+        Me.CheckEdit1.Size = New System.Drawing.Size(90, 19)
+        Me.CheckEdit1.TabIndex = 9
+        '
+        'LayoutControl1
+        '
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton3)
+        Me.LayoutControl1.Controls.Add(Me.GridControl2)
+        Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutControl1.Location = New System.Drawing.Point(3, 3)
+        Me.LayoutControl1.Name = "LayoutControl1"
+        Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
+        Me.LayoutControl1.Root = Me.LayoutControlGroup1
+        Me.LayoutControl1.Size = New System.Drawing.Size(331, 515)
+        Me.LayoutControl1.TabIndex = 1
+        Me.LayoutControl1.Text = "LayoutControl1"
+        '
+        'LayoutControlGroup1
+        '
+        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.LayoutControlGroup1.GroupBordersVisible = False
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2})
+        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(331, 515)
+        Me.LayoutControlGroup1.TextVisible = False
+        '
+        'LayoutControlItem1
+        '
+        Me.LayoutControlItem1.Control = Me.GridControl2
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem1.Name = "LayoutControlItem1"
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(311, 469)
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem1.TextVisible = False
+        '
+        'LayoutControlItem2
+        '
+        Me.LayoutControlItem2.Control = Me.SimpleButton3
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 469)
+        Me.LayoutControlItem2.Name = "LayoutControlItem2"
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(311, 26)
+        Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem2.TextVisible = False
         '
         'FinancialAlhudaWherhouses
         '
@@ -558,8 +627,6 @@ Partial Class FinancialAlhudaWherhouses
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupControl1.ResumeLayout(False)
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl3.ResumeLayout(False)
         CType(Me.GridControl3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -573,6 +640,12 @@ Partial Class FinancialAlhudaWherhouses
         CType(Me.TransportText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NaqelPrice.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TtayorText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LayoutControl1.ResumeLayout(False)
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -599,17 +672,16 @@ Partial Class FinancialAlhudaWherhouses
     Friend WithEvents AccountNameText As DevExpress.XtraEditors.TextEdit
     Friend WithEvents ColDelete As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents RepositoryItemButtonEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
-    Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
     Friend WithEvents SimpleButton5 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents GridControl3 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView3 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn8 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn9 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents ColAccountName As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents ColItemKey As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colsss As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colss As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn10 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GroupControl3 As DevExpress.XtraEditors.GroupControl
     Friend WithEvents Label1 As Label
@@ -620,4 +692,11 @@ Partial Class FinancialAlhudaWherhouses
     Friend WithEvents NaqelPrice As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TtayorAmountText As DevExpress.XtraEditors.TextEdit
     Friend WithEvents MyTotal As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents ColValYear As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents ColValMonth As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents CheckEdit1 As DevExpress.XtraEditors.CheckEdit
+    Friend WithEvents LayoutControl1 As DevExpress.XtraLayout.LayoutControl
+    Friend WithEvents LayoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
 End Class

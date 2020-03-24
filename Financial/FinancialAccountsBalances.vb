@@ -9,8 +9,68 @@ Public Class FinancialAccountsBalances
         If FromSortText.Text = "" Or ToSortText.Text = "" Then MsgBox("يرجى اختيار التصنيف") : Exit Sub
         SplashScreenManager1.ShowWaitForm()
         Getbalance2()
-        SplashScreenManager1.CloseWaitForm
+        SplashScreenManager1.CloseWaitForm()
+
+
+        Dim SqlCmd As SqlCommand
+        Dim SQLDA As SqlDataAdapter
+        Dim SQLDS As DataSet
+        Dim SqlConWizCount As New SqlConnection With {.ConnectionString = WizCountString}
+        SqlConWizCount.Open()
+
+        For i = 0 To GridView1.RowCount - 1
+            Dim AccountKey As String = CType(GridView1.GetRowCellValue(i, "AccountID"), String)
+            Try
+                Dim LastDate As String
+                Dim query As String = "    Select top 1 JVALUEDATE  from [ALHUDA].[dbo].RPHSTRANSRETRIV      
+                                           Where  JMACCOUNTKEY     ='" & AccountKey & "'
+                                           Order by  jmtransid   desc"
+                SqlCmd = New SqlCommand(query, SqlConWizCount)
+                SQLDA = New SqlDataAdapter(SqlCmd)
+                SQLDS = New DataSet
+                SQLDA.Fill(SQLDS)
+                LastDate = Format(CDate(SQLDS.Tables(0).Rows(0).Item("JVALUEDATE")), "yyyy-MM-dd")
+                GridView1.SetRowCellValue(i, ColAccLastTrans, LastDate)
+
+            Catch ex As Exception
+                GridView1.SetRowCellValue(i, ColAccLastTrans, "2000-01-01")
+                SqlConWizCount.Close()
+            End Try
+
+
+        Next
+
+        SqlConWizCount.Close()
+
+        For i = 0 To GridView1.RowCount - 1
+            Dim AccountKey As String = CType(GridView1.GetRowCellValue(i, "AccountID"), String)
+            GridView1.SetRowCellValue(i, ColUnAccrualChecks, GetSumCheks(CStr(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000")), AccountKey))
+        Next i
+        InsertLog(Me.Name, CStr(FromSortText.EditValue) & " and " & CStr(ToSortText.EditValue))
     End Sub
+    Private Function GetSumCheks(FromDate As String, AccNo As String) As Integer
+
+        Try
+            Dim sql As New SQLControl
+            Dim i As Integer
+
+            Dim SqlString As String = "SELECT Sum(NIS) as NIS2
+                                    FROM
+                                    (  SELECT  CASE WHEN SuFDlr= 0 THEN SuF else SuFDlr END AS NIS
+		                            FROM [ALHUDA].[dbo].[Cheqs]
+		                            where AccKey='" & AccNo & "' and ValueDate > '" & FromDate & "' ) as TotalNis"
+
+            sql.WizCountRunQuery(SqlString)
+            If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("NIS2")) Then GetSumCheks = CType(sql.SQLDS.Tables(0).Rows(i).Item("NIS2"), Integer)
+
+            Return GetSumCheks
+        Catch ex As Exception
+
+        End Try
+
+        Return GetSumCheks
+
+    End Function
 
     Private Sub Getbalance()
 
@@ -20,13 +80,11 @@ Public Class FinancialAccountsBalances
             Dim AccountsSQl As String
 
 
-            AccountsSQl = " SELECT  DISTINCT (JMACCOUNTKEY)  As AccountID, AFULLNAME , Acountry ,ASORTGROUP ,APHONE,Afilter,AEmail,ACOSTCODE,ASphone,'' As DebitBalance, '' As CreditBalance , '' as AccBalance  " _
-            & " from RPHSTRANSRETRIV " _
-            & " WHERE  ASORTGROUP between " & FromSortText.Text & " and " & ToSortText.Text & "  And  (  " _
-            & "   (JVALUEDATE between '" & CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")) & "' and  '" & CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")) & "' ) " _
-            & " AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
-
-
+            AccountsSQl = " SELECT  DISTINCT (JMACCOUNTKEY)  As AccountID, AFULLNAME , Acountry ,ASORTGROUP ,APHONE,Afilter,AEmail,ACOSTCODE,ASphone,'' As DebitBalance, '' As CreditBalance , '' as AccBalance  
+                            From RPHSTRANSRETRIV 
+                            WHERE  ASORTGROUP between " & FromSortText.Text & " and " & ToSortText.Text & "  And  ( 
+                                  (JVALUEDATE between '" & CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")) & "' and  '" & CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")) & "' ) 
+                                   AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
 
             sql.WizCountRunQuery(AccountsSQl)
             GridControl1.DataSource = sql.SQLDS.Tables(0)
@@ -51,11 +109,6 @@ Public Class FinancialAccountsBalances
 
         End Try
 
-
-
-
-
-
     End Sub
 
 
@@ -68,11 +121,16 @@ Public Class FinancialAccountsBalances
             Dim AccountsSQl As String
 
 
-            AccountsSQl = " SELECT  DISTINCT (JMACCOUNTKEY)  As AccountID, AFULLNAME , Acountry ,ASORTGROUP,ACSORTCODENAME,APHONE,Afilter,AEmail,ACOSTCODE,ASphone, 0.00 As DebitBalance, 0.00 As CreditBalance , 0.00 as AccBalance  " _
+            AccountsSQl = " SELECT   DISTINCT (JMACCOUNTKEY)  As AccountID, AFULLNAME ,AMAXCREDIT,convert(datetime,'2000-01-01') as AccLastTrans ,
+                            convert(decimal(10,2),'0') As UnAccrualChecks, Acountry ,ASORTGROUP,ACSORTCODENAME,APHONE,
+                            Afilter,AEmail,ACOSTCODE,ASphone, 0.00 As DebitBalance, 0.00 As CreditBalance ,
+                            0.00 as AccBalance" _
             & " from RPHSTRANSRETRIV " _
             & " WHERE  ASORTGROUP between " & CStr(FromSortText.EditValue) & " and " & CStr(ToSortText.EditValue) & "  And  (  " _
             & "   (JVALUEDATE between '" & CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")) & "' and  '" & CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")) & "' ) " _
             & " AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
+
+            Dim i As Integer
 
 
 
@@ -94,11 +152,22 @@ Public Class FinancialAccountsBalances
                 AccTable.Rows(i).Item("CreditBalance") = Crd
                 AccTable.Rows(i).Item("AccBalance") = CDec(Deb) - CDec(Crd)
 
-                If CInt(AccTable.Rows(i).Item("AccBalance").ToString) = 0 Then AccTable.Rows(i).Delete()
+                If CheckShowZeroBalances.Checked = False Then
+                    If CInt(AccTable.Rows(i).Item("AccBalance").ToString) = 0 Then AccTable.Rows(i).Delete()
+                End If
+
+
+
+
+
 
             Next
             AccTable.AcceptChanges()
             GridControl1.DataSource = AccTable
+
+
+
+
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
@@ -113,11 +182,11 @@ Public Class FinancialAccountsBalances
         Try
             Dim DebitBalance As String
             Dim sql As New SQLControl
-            DebitBalance = " SELECT    cast(  sum( JMSUF ) as decimal(10,2)) As DebitBalance     " _
-                                & " from RPHSTRANSRETRIV" _
-                                & " WHERE   JMDEBITCREDIT=1 and       ( JMACCOUNTKEY = '" & AccountID & "'" _
-                                & " AND  (JVALUEDATE between '" & CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")) & "' and  '" & CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")) & "' ) " _
-                                & " AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
+            DebitBalance = " SELECT    cast(  sum( JMSUF ) as decimal(10,2)) As DebitBalance     
+                                 From RPHSTRANSRETRIV
+                                 WHERE   JMDEBITCREDIT=1 and       ( JMACCOUNTKEY = '" & AccountID & "'
+                                 AND  (JVALUEDATE between '" & CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")) & "' and  '" & CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")) & "' ) 
+                                 AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
             sql.WizCountRunQuery(DebitBalance)
             GetDebitBalance = sql.SQLDS.Tables(0).Rows(0).Item("DebitBalance").ToString
         Catch ex As Exception
@@ -132,11 +201,11 @@ Public Class FinancialAccountsBalances
         Try
             Dim CreditBalance As String
             Dim sql As New SQLControl
-            CreditBalance = " SELECT  cast(  sum( JMSUF ) as decimal(10,2)) As CreditBalance   " _
-                                & " from RPHSTRANSRETRIV" _
-                                & " WHERE   JMDEBITCREDIT=0 and       ( JMACCOUNTKEY = '" & AccountID & "'" _
-                                & " AND  (JVALUEDATE between '" & CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")) & "' and  '" & CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")) & "' ) " _
-                                & " AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
+            CreditBalance = " SELECT  cast(  sum( JMSUF ) as decimal(10,2)) As CreditBalance   
+                                from RPHSTRANSRETRIV
+                                WHERE   JMDEBITCREDIT=0 and       ( JMACCOUNTKEY = '" & AccountID & "'
+                                AND  (JVALUEDATE between '" & CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")) & "' and  '" & CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")) & "' ) 
+                                 AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
             sql.WizCountRunQuery(CreditBalance)
             GetCreditBalance = sql.SQLDS.Tables(0).Rows(0).Item("CreditBalance").ToString
         Catch ex As Exception
@@ -146,13 +215,15 @@ Public Class FinancialAccountsBalances
 
     End Function
 
+
+
     Private Sub FinancialAccountsBalances_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'WizCountDataSet.AccSortNames' table. You can move, or remove it, as needed.
         Me.AccSortNamesTableAdapter.Fill(Me.WizCountDataSet.AccSortNames)
         'TODO: This line of code loads data into the 'CRMDataSet.Users' table. You can move, or remove it, as needed.
         Me.UsersTableAdapter.Fill(Me.CRMDataSet.Users)
         DateEditTo.DateTime = CDate(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000"))
-        DateEditFrom.DateTime = CDate(DateTime.Now.AddYears(-1).ToString("yyyy-MM-dd 00:00:00.000"))
+        DateEditFrom.DateTime = CDate(DateTime.Now.AddYears(-20).ToString("yyyy-MM-dd 00:00:00.000"))
         MonthText.Text = Format(Today.AddMonths(-1), "yyyyMM")
     End Sub
 
@@ -279,4 +350,8 @@ ByVal e As RowCellCustomDrawEventArgs) Handles GridView1.CustomDrawCell
 
     End Sub
 
+    Private Sub RepositoryItemOpen_Click(sender As Object, e As EventArgs) Handles RepositoryItemOpen.Click
+        My.Forms.FinanceAccDetails.TextEditAccountKey.Text = CStr(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "AccountID"))
+        FinanceAccDetails.Show()
+    End Sub
 End Class

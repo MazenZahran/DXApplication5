@@ -87,7 +87,7 @@ Partial Class CRMQuery
         Me.TableAdapterManager.CRMTasksTableAdapter = Me.CRMTasksTableAdapter
         Me.TableAdapterManager.DevelopNotesTableAdapter = Nothing
         Me.TableAdapterManager.EmployeesDataTableAdapter = Nothing
-        Me.TableAdapterManager.FinancialChequesBackTableAdapter = Nothing
+        'Me.TableAdapterManager.FinancialChequesBackTableAdapter = Nothing
         Me.TableAdapterManager.ReceiptDataTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = DXApplication5.CRMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UsersLogInLogsTableAdapter = Nothing

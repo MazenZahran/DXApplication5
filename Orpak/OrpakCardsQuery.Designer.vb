@@ -19,7 +19,6 @@ Partial Class OrpakCardsQuery
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim SplashScreenManager2 As DevExpress.XtraSplashScreen.SplashScreenManager = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, Nothing, True, True)
         Dim CustomSqlQuery1 As DevExpress.DataAccess.Sql.CustomSqlQuery = New DevExpress.DataAccess.Sql.CustomSqlQuery()
         Dim QueryParameter1 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
@@ -73,7 +72,7 @@ Partial Class OrpakCardsQuery
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.PanelControl6 = New DevExpress.XtraEditors.PanelControl()
         Me.GridControl3 = New DevExpress.XtraGrid.GridControl()
-        Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
+        Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource()
         Me.CardView1 = New DevExpress.XtraGrid.Views.Card.CardView()
         Me.colname = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colplate = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -91,8 +90,8 @@ Partial Class OrpakCardsQuery
         Me.CheckEdit2 = New DevExpress.XtraEditors.CheckEdit()
         Me.SimpleButton6 = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl23 = New DevExpress.XtraEditors.LabelControl()
-        Me.SqlDataSource4 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
-        Me.SqlDataSource3 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
+        Me.SqlDataSource4 = New DevExpress.DataAccess.Sql.SqlDataSource()
+        Me.SqlDataSource3 = New DevExpress.DataAccess.Sql.SqlDataSource()
         Me.NavigationPage8 = New DevExpress.XtraBars.Navigation.NavigationPage()
         Me.NavigationPane1 = New DevExpress.XtraBars.Navigation.NavigationPane()
         Me.NavigationPage1 = New DevExpress.XtraBars.Navigation.NavigationPage()
@@ -163,6 +162,7 @@ Partial Class OrpakCardsQuery
         Me.NavigationPage2 = New DevExpress.XtraBars.Navigation.NavigationPage()
         Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
         Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.GridControl11 = New DevExpress.XtraGrid.GridControl()
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.coldate = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -178,6 +178,8 @@ Partial Class OrpakCardsQuery
         Me.ColFleetCode = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColFleetName = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Colodometer = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColtheDayName = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColTag = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton8 = New DevExpress.XtraEditors.SimpleButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
@@ -191,6 +193,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.LayoutControlItem38 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.NavigationPage3 = New DevExpress.XtraBars.Navigation.NavigationPage()
         Me.GroupControl8 = New DevExpress.XtraEditors.GroupControl()
         Me.LabelControl34 = New DevExpress.XtraEditors.LabelControl()
@@ -275,10 +278,10 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem35 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem36 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem37 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem7 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.PanelControl10 = New DevExpress.XtraEditors.PanelControl()
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.EmptySpaceItem6 = New DevExpress.XtraLayout.EmptySpaceItem()
-        Me.ColtheDayName = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.Plate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CardCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PlatePart.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -377,6 +380,7 @@ Partial Class OrpakCardsQuery
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavigationPage3.SuspendLayout()
         CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl8.SuspendLayout()
@@ -433,11 +437,16 @@ Partial Class OrpakCardsQuery
         CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl10.SuspendLayout()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'SplashScreenManager2
+        '
+        SplashScreenManager2.ClosingDelay = 500
         '
         'Colstatus
         '
@@ -454,10 +463,6 @@ Partial Class OrpakCardsQuery
         Me.collast_used.Name = "collast_used"
         Me.collast_used.Visible = True
         Me.collast_used.VisibleIndex = 2
-        '
-        'SplashScreenManager2
-        '
-        SplashScreenManager2.ClosingDelay = 500
         '
         'Plate
         '
@@ -545,9 +550,9 @@ Partial Class OrpakCardsQuery
         '
         Me.PanelControl6.Controls.Add(Me.GridControl3)
         Me.PanelControl6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelControl6.Location = New System.Drawing.Point(2, 20)
+        Me.PanelControl6.Location = New System.Drawing.Point(2, 22)
         Me.PanelControl6.Name = "PanelControl6"
-        Me.PanelControl6.Size = New System.Drawing.Size(875, 230)
+        Me.PanelControl6.Size = New System.Drawing.Size(875, 228)
         Me.PanelControl6.TabIndex = 1
         '
         'GridControl3
@@ -555,10 +560,10 @@ Partial Class OrpakCardsQuery
         Me.GridControl3.DataMember = "means"
         Me.GridControl3.DataSource = Me.SqlDataSource1
         Me.GridControl3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl3.Location = New System.Drawing.Point(2, 2)
+        Me.GridControl3.Location = New System.Drawing.Point(3, 3)
         Me.GridControl3.MainView = Me.CardView1
         Me.GridControl3.Name = "GridControl3"
-        Me.GridControl3.Size = New System.Drawing.Size(871, 226)
+        Me.GridControl3.Size = New System.Drawing.Size(869, 222)
         Me.GridControl3.TabIndex = 7
         Me.GridControl3.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.CardView1})
         '
@@ -701,9 +706,9 @@ Partial Class OrpakCardsQuery
         Me.PanelControl2.Controls.Add(Me.LabelControl23)
         Me.PanelControl2.Controls.Add(Me.Plate)
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PanelControl2.Location = New System.Drawing.Point(877, 20)
+        Me.PanelControl2.Location = New System.Drawing.Point(877, 22)
         Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(229, 230)
+        Me.PanelControl2.Size = New System.Drawing.Size(229, 228)
         Me.PanelControl2.TabIndex = 0
         '
         'CheckActive
@@ -857,12 +862,12 @@ Partial Class OrpakCardsQuery
         Me.NavigationPane1.Controls.Add(Me.NavigationPage7)
         Me.NavigationPane1.Controls.Add(Me.NavigationPage9)
         Me.NavigationPane1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NavigationPane1.Location = New System.Drawing.Point(2, 2)
+        Me.NavigationPane1.Location = New System.Drawing.Point(3, 3)
         Me.NavigationPane1.Name = "NavigationPane1"
         Me.NavigationPane1.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.NavigationPage1, Me.NavigationPage2, Me.NavigationPage3, Me.NavigationPage4, Me.NavigationPage5, Me.NavigationPage7, Me.NavigationPage9, Me.NavigationPage6})
-        Me.NavigationPane1.RegularSize = New System.Drawing.Size(1104, 706)
+        Me.NavigationPane1.RegularSize = New System.Drawing.Size(1102, 481)
         Me.NavigationPane1.SelectedPage = Me.NavigationPage1
-        Me.NavigationPane1.Size = New System.Drawing.Size(1104, 706)
+        Me.NavigationPane1.Size = New System.Drawing.Size(1102, 481)
         Me.NavigationPane1.TabIndex = 5
         Me.NavigationPane1.Text = "بحث عن بطاقة / مركبة"
         '
@@ -871,7 +876,7 @@ Partial Class OrpakCardsQuery
         Me.NavigationPage1.Caption = "بيانات البطاقة"
         Me.NavigationPage1.Controls.Add(Me.LayoutControl3)
         Me.NavigationPage1.Name = "NavigationPage1"
-        Me.NavigationPage1.Size = New System.Drawing.Size(969, 646)
+        Me.NavigationPage1.Size = New System.Drawing.Size(973, 420)
         '
         'LayoutControl3
         '
@@ -907,7 +912,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControl3.Name = "LayoutControl3"
         Me.LayoutControl3.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl3.Root = Me.LayoutControlGroup3
-        Me.LayoutControl3.Size = New System.Drawing.Size(969, 646)
+        Me.LayoutControl3.Size = New System.Drawing.Size(973, 420)
         Me.LayoutControl3.TabIndex = 4
         Me.LayoutControl3.Text = "LayoutControl3"
         '
@@ -919,15 +924,15 @@ Partial Class OrpakCardsQuery
         Me.ListBoxControl1.Appearance.Options.UseForeColor = True
         Me.ListBoxControl1.Cursor = System.Windows.Forms.Cursors.Default
         Me.ListBoxControl1.Items.AddRange(New Object() {"مشاكل البطاقة"})
-        Me.ListBoxControl1.Location = New System.Drawing.Point(134, 546)
+        Me.ListBoxControl1.Location = New System.Drawing.Point(150, 504)
         Me.ListBoxControl1.Name = "ListBoxControl1"
-        Me.ListBoxControl1.Size = New System.Drawing.Size(823, 88)
+        Me.ListBoxControl1.Size = New System.Drawing.Size(811, 0)
         Me.ListBoxControl1.StyleController = Me.LayoutControl3
         Me.ListBoxControl1.TabIndex = 4
         '
         'TextAvailableCard
         '
-        Me.TextAvailableCard.Location = New System.Drawing.Point(548, 448)
+        Me.TextAvailableCard.Location = New System.Drawing.Point(558, 455)
         Me.TextAvailableCard.Name = "TextAvailableCard"
         Me.TextAvailableCard.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextAvailableCard.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -939,13 +944,13 @@ Partial Class OrpakCardsQuery
         Me.TextAvailableCard.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextAvailableCard.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextAvailableCard.Properties.ReadOnly = True
-        Me.TextAvailableCard.Size = New System.Drawing.Size(284, 22)
+        Me.TextAvailableCard.Size = New System.Drawing.Size(277, 22)
         Me.TextAvailableCard.StyleController = Me.LayoutControl3
         Me.TextAvailableCard.TabIndex = 0
         '
         'FleetIDText
         '
-        Me.FleetIDText.Location = New System.Drawing.Point(146, 266)
+        Me.FleetIDText.Location = New System.Drawing.Point(163, 273)
         Me.FleetIDText.Name = "FleetIDText"
         Me.FleetIDText.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FleetIDText.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -957,13 +962,13 @@ Partial Class OrpakCardsQuery
         Me.FleetIDText.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.FleetIDText.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.FleetIDText.Properties.ReadOnly = True
-        Me.FleetIDText.Size = New System.Drawing.Size(261, 22)
+        Me.FleetIDText.Size = New System.Drawing.Size(252, 22)
         Me.FleetIDText.StyleController = Me.LayoutControl3
         Me.FleetIDText.TabIndex = 0
         '
         'TextFleetID
         '
-        Me.TextFleetID.Location = New System.Drawing.Point(146, 396)
+        Me.TextFleetID.Location = New System.Drawing.Point(163, 403)
         Me.TextFleetID.Name = "TextFleetID"
         Me.TextFleetID.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextFleetID.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -975,14 +980,14 @@ Partial Class OrpakCardsQuery
         Me.TextFleetID.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextFleetID.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextFleetID.Properties.ReadOnly = True
-        Me.TextFleetID.Size = New System.Drawing.Size(261, 22)
+        Me.TextFleetID.Size = New System.Drawing.Size(252, 22)
         Me.TextFleetID.StyleController = Me.LayoutControl3
         Me.TextFleetID.TabIndex = 0
         '
         'TextIssueDate
         '
         Me.TextIssueDate.EditValue = ""
-        Me.TextIssueDate.Location = New System.Drawing.Point(146, 42)
+        Me.TextIssueDate.Location = New System.Drawing.Point(163, 45)
         Me.TextIssueDate.Name = "TextIssueDate"
         Me.TextIssueDate.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextIssueDate.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -994,13 +999,13 @@ Partial Class OrpakCardsQuery
         Me.TextIssueDate.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextIssueDate.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextIssueDate.Properties.ReadOnly = True
-        Me.TextIssueDate.Size = New System.Drawing.Size(261, 22)
+        Me.TextIssueDate.Size = New System.Drawing.Size(252, 22)
         Me.TextIssueDate.StyleController = Me.LayoutControl3
         Me.TextIssueDate.TabIndex = 0
         '
         'TextFleetName
         '
-        Me.TextFleetName.Location = New System.Drawing.Point(146, 370)
+        Me.TextFleetName.Location = New System.Drawing.Point(163, 377)
         Me.TextFleetName.Name = "TextFleetName"
         Me.TextFleetName.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextFleetName.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1012,14 +1017,14 @@ Partial Class OrpakCardsQuery
         Me.TextFleetName.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextFleetName.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextFleetName.Properties.ReadOnly = True
-        Me.TextFleetName.Size = New System.Drawing.Size(261, 22)
+        Me.TextFleetName.Size = New System.Drawing.Size(252, 22)
         Me.TextFleetName.StyleController = Me.LayoutControl3
         Me.TextFleetName.TabIndex = 0
         '
         'TextLastEdit
         '
         Me.TextLastEdit.EditValue = ""
-        Me.TextLastEdit.Location = New System.Drawing.Point(146, 94)
+        Me.TextLastEdit.Location = New System.Drawing.Point(163, 97)
         Me.TextLastEdit.Name = "TextLastEdit"
         Me.TextLastEdit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextLastEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1031,13 +1036,13 @@ Partial Class OrpakCardsQuery
         Me.TextLastEdit.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextLastEdit.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextLastEdit.Properties.ReadOnly = True
-        Me.TextLastEdit.Size = New System.Drawing.Size(261, 22)
+        Me.TextLastEdit.Size = New System.Drawing.Size(252, 22)
         Me.TextLastEdit.StyleController = Me.LayoutControl3
         Me.TextLastEdit.TabIndex = 0
         '
         'TextFleetType
         '
-        Me.TextFleetType.Location = New System.Drawing.Point(146, 344)
+        Me.TextFleetType.Location = New System.Drawing.Point(163, 351)
         Me.TextFleetType.Name = "TextFleetType"
         Me.TextFleetType.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextFleetType.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1049,13 +1054,13 @@ Partial Class OrpakCardsQuery
         Me.TextFleetType.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextFleetType.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextFleetType.Properties.ReadOnly = True
-        Me.TextFleetType.Size = New System.Drawing.Size(261, 22)
+        Me.TextFleetType.Size = New System.Drawing.Size(252, 22)
         Me.TextFleetType.StyleController = Me.LayoutControl3
         Me.TextFleetType.TabIndex = 0
         '
         'TextAvailableFleet
         '
-        Me.TextAvailableFleet.Location = New System.Drawing.Point(146, 318)
+        Me.TextAvailableFleet.Location = New System.Drawing.Point(163, 325)
         Me.TextAvailableFleet.Name = "TextAvailableFleet"
         Me.TextAvailableFleet.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextAvailableFleet.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1067,13 +1072,13 @@ Partial Class OrpakCardsQuery
         Me.TextAvailableFleet.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextAvailableFleet.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextAvailableFleet.Properties.ReadOnly = True
-        Me.TextAvailableFleet.Size = New System.Drawing.Size(261, 22)
+        Me.TextAvailableFleet.Size = New System.Drawing.Size(252, 22)
         Me.TextAvailableFleet.StyleController = Me.LayoutControl3
         Me.TextAvailableFleet.TabIndex = 0
         '
         'WeekLIT
         '
-        Me.WeekLIT.Location = New System.Drawing.Point(548, 422)
+        Me.WeekLIT.Location = New System.Drawing.Point(558, 429)
         Me.WeekLIT.Name = "WeekLIT"
         Me.WeekLIT.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.WeekLIT.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1085,13 +1090,13 @@ Partial Class OrpakCardsQuery
         Me.WeekLIT.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.WeekLIT.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.WeekLIT.Properties.ReadOnly = True
-        Me.WeekLIT.Size = New System.Drawing.Size(284, 22)
+        Me.WeekLIT.Size = New System.Drawing.Size(277, 22)
         Me.WeekLIT.StyleController = Me.LayoutControl3
         Me.WeekLIT.TabIndex = 0
         '
         'TextFleetStatus
         '
-        Me.TextFleetStatus.Location = New System.Drawing.Point(146, 292)
+        Me.TextFleetStatus.Location = New System.Drawing.Point(163, 299)
         Me.TextFleetStatus.Name = "TextFleetStatus"
         Me.TextFleetStatus.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextFleetStatus.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1103,14 +1108,14 @@ Partial Class OrpakCardsQuery
         Me.TextFleetStatus.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextFleetStatus.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextFleetStatus.Properties.ReadOnly = True
-        Me.TextFleetStatus.Size = New System.Drawing.Size(261, 22)
+        Me.TextFleetStatus.Size = New System.Drawing.Size(252, 22)
         Me.TextFleetStatus.StyleController = Me.LayoutControl3
         Me.TextFleetStatus.TabIndex = 0
         '
         'TextLastUsed
         '
         Me.TextLastUsed.EditValue = ""
-        Me.TextLastUsed.Location = New System.Drawing.Point(146, 68)
+        Me.TextLastUsed.Location = New System.Drawing.Point(163, 71)
         Me.TextLastUsed.Name = "TextLastUsed"
         Me.TextLastUsed.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextLastUsed.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1122,13 +1127,13 @@ Partial Class OrpakCardsQuery
         Me.TextLastUsed.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextLastUsed.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextLastUsed.Properties.ReadOnly = True
-        Me.TextLastUsed.Size = New System.Drawing.Size(261, 22)
+        Me.TextLastUsed.Size = New System.Drawing.Size(252, 22)
         Me.TextLastUsed.StyleController = Me.LayoutControl3
         Me.TextLastUsed.TabIndex = 0
         '
         'TextEdit1
         '
-        Me.TextEdit1.Location = New System.Drawing.Point(146, 172)
+        Me.TextEdit1.Location = New System.Drawing.Point(163, 175)
         Me.TextEdit1.Name = "TextEdit1"
         Me.TextEdit1.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1140,13 +1145,13 @@ Partial Class OrpakCardsQuery
         Me.TextEdit1.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextEdit1.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextEdit1.Properties.ReadOnly = True
-        Me.TextEdit1.Size = New System.Drawing.Size(261, 22)
+        Me.TextEdit1.Size = New System.Drawing.Size(252, 22)
         Me.TextEdit1.StyleController = Me.LayoutControl3
         Me.TextEdit1.TabIndex = 0
         '
         'DelivPersonText
         '
-        Me.DelivPersonText.Location = New System.Drawing.Point(146, 198)
+        Me.DelivPersonText.Location = New System.Drawing.Point(163, 201)
         Me.DelivPersonText.Name = "DelivPersonText"
         Me.DelivPersonText.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DelivPersonText.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1158,13 +1163,13 @@ Partial Class OrpakCardsQuery
         Me.DelivPersonText.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.DelivPersonText.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.DelivPersonText.Properties.ReadOnly = True
-        Me.DelivPersonText.Size = New System.Drawing.Size(261, 22)
+        Me.DelivPersonText.Size = New System.Drawing.Size(252, 22)
         Me.DelivPersonText.StyleController = Me.LayoutControl3
         Me.DelivPersonText.TabIndex = 0
         '
         'TextName
         '
-        Me.TextName.Location = New System.Drawing.Point(548, 68)
+        Me.TextName.Location = New System.Drawing.Point(558, 71)
         Me.TextName.Name = "TextName"
         Me.TextName.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextName.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1176,13 +1181,13 @@ Partial Class OrpakCardsQuery
         Me.TextName.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextName.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextName.Properties.ReadOnly = True
-        Me.TextName.Size = New System.Drawing.Size(284, 22)
+        Me.TextName.Size = New System.Drawing.Size(277, 22)
         Me.TextName.StyleController = Me.LayoutControl3
         Me.TextName.TabIndex = 0
         '
         'TextDayLit
         '
-        Me.TextDayLit.Location = New System.Drawing.Point(548, 396)
+        Me.TextDayLit.Location = New System.Drawing.Point(558, 403)
         Me.TextDayLit.Name = "TextDayLit"
         Me.TextDayLit.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextDayLit.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1194,13 +1199,13 @@ Partial Class OrpakCardsQuery
         Me.TextDayLit.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextDayLit.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextDayLit.Properties.ReadOnly = True
-        Me.TextDayLit.Size = New System.Drawing.Size(284, 22)
+        Me.TextDayLit.Size = New System.Drawing.Size(277, 22)
         Me.TextDayLit.StyleController = Me.LayoutControl3
         Me.TextDayLit.TabIndex = 0
         '
         'TextCstatus
         '
-        Me.TextCstatus.Location = New System.Drawing.Point(548, 94)
+        Me.TextCstatus.Location = New System.Drawing.Point(558, 97)
         Me.TextCstatus.Name = "TextCstatus"
         Me.TextCstatus.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextCstatus.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1212,13 +1217,13 @@ Partial Class OrpakCardsQuery
         Me.TextCstatus.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextCstatus.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextCstatus.Properties.ReadOnly = True
-        Me.TextCstatus.Size = New System.Drawing.Size(284, 22)
+        Me.TextCstatus.Size = New System.Drawing.Size(277, 22)
         Me.TextCstatus.StyleController = Me.LayoutControl3
         Me.TextCstatus.TabIndex = 0
         '
         'TextDayMony
         '
-        Me.TextDayMony.Location = New System.Drawing.Point(548, 370)
+        Me.TextDayMony.Location = New System.Drawing.Point(558, 377)
         Me.TextDayMony.Name = "TextDayMony"
         Me.TextDayMony.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextDayMony.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1230,13 +1235,13 @@ Partial Class OrpakCardsQuery
         Me.TextDayMony.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextDayMony.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextDayMony.Properties.ReadOnly = True
-        Me.TextDayMony.Size = New System.Drawing.Size(284, 22)
+        Me.TextDayMony.Size = New System.Drawing.Size(277, 22)
         Me.TextDayMony.StyleController = Me.LayoutControl3
         Me.TextDayMony.TabIndex = 0
         '
         'TextCardType
         '
-        Me.TextCardType.Location = New System.Drawing.Point(548, 120)
+        Me.TextCardType.Location = New System.Drawing.Point(558, 123)
         Me.TextCardType.Name = "TextCardType"
         Me.TextCardType.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextCardType.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1248,13 +1253,13 @@ Partial Class OrpakCardsQuery
         Me.TextCardType.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextCardType.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextCardType.Properties.ReadOnly = True
-        Me.TextCardType.Size = New System.Drawing.Size(284, 22)
+        Me.TextCardType.Size = New System.Drawing.Size(277, 22)
         Me.TextCardType.StyleController = Me.LayoutControl3
         Me.TextCardType.TabIndex = 0
         '
         'WeekMony
         '
-        Me.WeekMony.Location = New System.Drawing.Point(548, 344)
+        Me.WeekMony.Location = New System.Drawing.Point(558, 351)
         Me.WeekMony.Name = "WeekMony"
         Me.WeekMony.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.WeekMony.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1266,13 +1271,13 @@ Partial Class OrpakCardsQuery
         Me.WeekMony.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.WeekMony.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.WeekMony.Properties.ReadOnly = True
-        Me.WeekMony.Size = New System.Drawing.Size(284, 22)
+        Me.WeekMony.Size = New System.Drawing.Size(277, 22)
         Me.WeekMony.StyleController = Me.LayoutControl3
         Me.WeekMony.TabIndex = 0
         '
         'TextID
         '
-        Me.TextID.Location = New System.Drawing.Point(548, 198)
+        Me.TextID.Location = New System.Drawing.Point(558, 201)
         Me.TextID.Name = "TextID"
         Me.TextID.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextID.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1284,13 +1289,13 @@ Partial Class OrpakCardsQuery
         Me.TextID.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextID.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextID.Properties.ReadOnly = True
-        Me.TextID.Size = New System.Drawing.Size(284, 22)
+        Me.TextID.Size = New System.Drawing.Size(277, 22)
         Me.TextID.StyleController = Me.LayoutControl3
         Me.TextID.TabIndex = 0
         '
         'TextRule
         '
-        Me.TextRule.Location = New System.Drawing.Point(548, 318)
+        Me.TextRule.Location = New System.Drawing.Point(558, 325)
         Me.TextRule.Name = "TextRule"
         Me.TextRule.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextRule.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1302,13 +1307,13 @@ Partial Class OrpakCardsQuery
         Me.TextRule.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextRule.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextRule.Properties.ReadOnly = True
-        Me.TextRule.Size = New System.Drawing.Size(284, 22)
+        Me.TextRule.Size = New System.Drawing.Size(277, 22)
         Me.TextRule.StyleController = Me.LayoutControl3
         Me.TextRule.TabIndex = 0
         '
         'TextString
         '
-        Me.TextString.Location = New System.Drawing.Point(548, 172)
+        Me.TextString.Location = New System.Drawing.Point(558, 175)
         Me.TextString.Name = "TextString"
         Me.TextString.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextString.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1320,13 +1325,13 @@ Partial Class OrpakCardsQuery
         Me.TextString.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextString.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextString.Properties.ReadOnly = True
-        Me.TextString.Size = New System.Drawing.Size(284, 22)
+        Me.TextString.Size = New System.Drawing.Size(277, 22)
         Me.TextString.StyleController = Me.LayoutControl3
         Me.TextString.TabIndex = 0
         '
         'TextPlate
         '
-        Me.TextPlate.Location = New System.Drawing.Point(548, 42)
+        Me.TextPlate.Location = New System.Drawing.Point(558, 45)
         Me.TextPlate.Name = "TextPlate"
         Me.TextPlate.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextPlate.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1338,13 +1343,13 @@ Partial Class OrpakCardsQuery
         Me.TextPlate.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextPlate.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextPlate.Properties.ReadOnly = True
-        Me.TextPlate.Size = New System.Drawing.Size(284, 22)
+        Me.TextPlate.Size = New System.Drawing.Size(277, 22)
         Me.TextPlate.StyleController = Me.LayoutControl3
         Me.TextPlate.TabIndex = 0
         '
         'TextOdometer
         '
-        Me.TextOdometer.Location = New System.Drawing.Point(548, 146)
+        Me.TextOdometer.Location = New System.Drawing.Point(558, 149)
         Me.TextOdometer.Name = "TextOdometer"
         Me.TextOdometer.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextOdometer.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1356,13 +1361,13 @@ Partial Class OrpakCardsQuery
         Me.TextOdometer.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextOdometer.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextOdometer.Properties.ReadOnly = True
-        Me.TextOdometer.Size = New System.Drawing.Size(284, 22)
+        Me.TextOdometer.Size = New System.Drawing.Size(277, 22)
         Me.TextOdometer.StyleController = Me.LayoutControl3
         Me.TextOdometer.TabIndex = 0
         '
         'TextMonthNIS
         '
-        Me.TextMonthNIS.Location = New System.Drawing.Point(548, 266)
+        Me.TextMonthNIS.Location = New System.Drawing.Point(558, 273)
         Me.TextMonthNIS.Name = "TextMonthNIS"
         Me.TextMonthNIS.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextMonthNIS.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1374,13 +1379,13 @@ Partial Class OrpakCardsQuery
         Me.TextMonthNIS.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextMonthNIS.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextMonthNIS.Properties.ReadOnly = True
-        Me.TextMonthNIS.Size = New System.Drawing.Size(284, 22)
+        Me.TextMonthNIS.Size = New System.Drawing.Size(277, 22)
         Me.TextMonthNIS.StyleController = Me.LayoutControl3
         Me.TextMonthNIS.TabIndex = 0
         '
         'TextMonthLIT
         '
-        Me.TextMonthLIT.Location = New System.Drawing.Point(548, 292)
+        Me.TextMonthLIT.Location = New System.Drawing.Point(558, 299)
         Me.TextMonthLIT.Name = "TextMonthLIT"
         Me.TextMonthLIT.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextMonthLIT.Properties.Appearance.ForeColor = System.Drawing.Color.Black
@@ -1392,7 +1397,7 @@ Partial Class OrpakCardsQuery
         Me.TextMonthLIT.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TextMonthLIT.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.TextMonthLIT.Properties.ReadOnly = True
-        Me.TextMonthLIT.Size = New System.Drawing.Size(284, 22)
+        Me.TextMonthLIT.Size = New System.Drawing.Size(277, 22)
         Me.TextMonthLIT.StyleController = Me.LayoutControl3
         Me.TextMonthLIT.TabIndex = 0
         '
@@ -1401,17 +1406,17 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup3.GroupBordersVisible = False
         Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup1, Me.LayoutControlGroup4, Me.LayoutControlGroup5, Me.LayoutControlGroup7, Me.LayoutControlItem34, Me.EmptySpaceItem4})
-        Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup3.Location = New System.Drawing.Point(17, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(969, 646)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(956, 516)
         Me.LayoutControlGroup3.TextVisible = False
         '
         'LayoutControlGroup1
         '
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem23, Me.LayoutControlItem20, Me.LayoutControlItem17, Me.LayoutControlItem16, Me.LayoutControlItem22, Me.LayoutControlItem27, Me.LayoutControlItem19})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(524, 0)
+        Me.LayoutControlGroup1.Location = New System.Drawing.Point(516, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(425, 224)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(420, 228)
         Me.LayoutControlGroup1.Text = "بيانات البطاقة"
         '
         'LayoutControlItem23
@@ -1419,7 +1424,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem23.Control = Me.TextID
         Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 156)
         Me.LayoutControlItem23.Name = "LayoutControlItem23"
-        Me.LayoutControlItem23.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem23.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem23.Text = "ID"
         Me.LayoutControlItem23.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1428,7 +1433,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem20.Control = Me.TextOdometer
         Me.LayoutControlItem20.Location = New System.Drawing.Point(0, 104)
         Me.LayoutControlItem20.Name = "LayoutControlItem20"
-        Me.LayoutControlItem20.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem20.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem20.Text = "سبيدوميتر"
         Me.LayoutControlItem20.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1437,7 +1442,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem17.Control = Me.TextCardType
         Me.LayoutControlItem17.Location = New System.Drawing.Point(0, 78)
         Me.LayoutControlItem17.Name = "LayoutControlItem17"
-        Me.LayoutControlItem17.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem17.Text = "النوع"
         Me.LayoutControlItem17.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1446,7 +1451,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem16.Control = Me.TextCstatus
         Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 52)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem16.Text = "حالة البطاقة"
         Me.LayoutControlItem16.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1455,7 +1460,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem22.Control = Me.TextPlate
         Me.LayoutControlItem22.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem22.Name = "LayoutControlItem22"
-        Me.LayoutControlItem22.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem22.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem22.Text = "رقم المركبة"
         Me.LayoutControlItem22.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1464,7 +1469,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem27.Control = Me.TextName
         Me.LayoutControlItem27.Location = New System.Drawing.Point(0, 26)
         Me.LayoutControlItem27.Name = "LayoutControlItem27"
-        Me.LayoutControlItem27.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem27.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem27.Text = "رقم البطاقة"
         Me.LayoutControlItem27.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1473,16 +1478,16 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem19.Control = Me.TextString
         Me.LayoutControlItem19.Location = New System.Drawing.Point(0, 130)
         Me.LayoutControlItem19.Name = "LayoutControlItem19"
-        Me.LayoutControlItem19.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem19.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem19.Text = "الكود"
         Me.LayoutControlItem19.TextSize = New System.Drawing.Size(110, 13)
         '
         'LayoutControlGroup4
         '
         Me.LayoutControlGroup4.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem14, Me.LayoutControlItem15, Me.LayoutControlItem18, Me.EmptySpaceItem5, Me.LayoutControlItem21, Me.LayoutControlItem31})
-        Me.LayoutControlGroup4.Location = New System.Drawing.Point(122, 0)
+        Me.LayoutControlGroup4.Location = New System.Drawing.Point(121, 0)
         Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
-        Me.LayoutControlGroup4.Size = New System.Drawing.Size(402, 224)
+        Me.LayoutControlGroup4.Size = New System.Drawing.Size(395, 228)
         Me.LayoutControlGroup4.Text = "تواريخ مهمة"
         '
         'LayoutControlItem14
@@ -1490,7 +1495,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem14.Control = Me.TextIssueDate
         Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
-        Me.LayoutControlItem14.Size = New System.Drawing.Size(378, 26)
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(369, 26)
         Me.LayoutControlItem14.Text = "تاريخ اصدار البطاقة"
         Me.LayoutControlItem14.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1499,7 +1504,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem15.Control = Me.TextLastUsed
         Me.LayoutControlItem15.Location = New System.Drawing.Point(0, 26)
         Me.LayoutControlItem15.Name = "LayoutControlItem15"
-        Me.LayoutControlItem15.Size = New System.Drawing.Size(378, 26)
+        Me.LayoutControlItem15.Size = New System.Drawing.Size(369, 26)
         Me.LayoutControlItem15.Text = "تاريخ اخر استخدام"
         Me.LayoutControlItem15.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1508,7 +1513,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem18.Control = Me.TextLastEdit
         Me.LayoutControlItem18.Location = New System.Drawing.Point(0, 52)
         Me.LayoutControlItem18.Name = "LayoutControlItem18"
-        Me.LayoutControlItem18.Size = New System.Drawing.Size(378, 26)
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(369, 26)
         Me.LayoutControlItem18.Text = "تاريخ اخر تعديل"
         Me.LayoutControlItem18.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1517,7 +1522,7 @@ Partial Class OrpakCardsQuery
         Me.EmptySpaceItem5.AllowHotTrack = False
         Me.EmptySpaceItem5.Location = New System.Drawing.Point(0, 78)
         Me.EmptySpaceItem5.Name = "EmptySpaceItem5"
-        Me.EmptySpaceItem5.Size = New System.Drawing.Size(378, 52)
+        Me.EmptySpaceItem5.Size = New System.Drawing.Size(369, 52)
         Me.EmptySpaceItem5.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem21
@@ -1525,7 +1530,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem21.Control = Me.TextEdit1
         Me.LayoutControlItem21.Location = New System.Drawing.Point(0, 130)
         Me.LayoutControlItem21.Name = "LayoutControlItem21"
-        Me.LayoutControlItem21.Size = New System.Drawing.Size(378, 26)
+        Me.LayoutControlItem21.Size = New System.Drawing.Size(369, 26)
         Me.LayoutControlItem21.Text = "تاريخ التسليم"
         Me.LayoutControlItem21.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1534,16 +1539,16 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem31.Control = Me.DelivPersonText
         Me.LayoutControlItem31.Location = New System.Drawing.Point(0, 156)
         Me.LayoutControlItem31.Name = "LayoutControlItem31"
-        Me.LayoutControlItem31.Size = New System.Drawing.Size(378, 26)
+        Me.LayoutControlItem31.Size = New System.Drawing.Size(369, 26)
         Me.LayoutControlItem31.Text = "مستلم البطاقة"
         Me.LayoutControlItem31.TextSize = New System.Drawing.Size(110, 13)
         '
         'LayoutControlGroup5
         '
         Me.LayoutControlGroup5.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem30, Me.LayoutControlItem29, Me.LayoutControlItem28, Me.LayoutControlItem26, Me.LayoutControlItem25, Me.LayoutControlItem24, Me.LayoutControlItem32, Me.LayoutControlItem33, Me.EmptySpaceItem2})
-        Me.LayoutControlGroup5.Location = New System.Drawing.Point(524, 224)
+        Me.LayoutControlGroup5.Location = New System.Drawing.Point(516, 228)
         Me.LayoutControlGroup5.Name = "LayoutControlGroup5"
-        Me.LayoutControlGroup5.Size = New System.Drawing.Size(425, 310)
+        Me.LayoutControlGroup5.Size = New System.Drawing.Size(420, 264)
         Me.LayoutControlGroup5.Text = "بيانات"
         '
         'LayoutControlItem30
@@ -1551,7 +1556,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem30.Control = Me.TextDayLit
         Me.LayoutControlItem30.Location = New System.Drawing.Point(0, 130)
         Me.LayoutControlItem30.Name = "LayoutControlItem30"
-        Me.LayoutControlItem30.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem30.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem30.Text = "سحوبات اليوم لتر"
         Me.LayoutControlItem30.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1560,7 +1565,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem29.Control = Me.TextDayMony
         Me.LayoutControlItem29.Location = New System.Drawing.Point(0, 104)
         Me.LayoutControlItem29.Name = "LayoutControlItem29"
-        Me.LayoutControlItem29.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem29.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem29.Text = "سحوبات اليوم شيكل"
         Me.LayoutControlItem29.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1569,7 +1574,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem28.Control = Me.WeekMony
         Me.LayoutControlItem28.Location = New System.Drawing.Point(0, 78)
         Me.LayoutControlItem28.Name = "LayoutControlItem28"
-        Me.LayoutControlItem28.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem28.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem28.Text = "سحوبات الاسبوع شيكل"
         Me.LayoutControlItem28.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1578,7 +1583,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem26.Control = Me.TextRule
         Me.LayoutControlItem26.Location = New System.Drawing.Point(0, 52)
         Me.LayoutControlItem26.Name = "LayoutControlItem26"
-        Me.LayoutControlItem26.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem26.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem26.Text = "السقف"
         Me.LayoutControlItem26.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1587,7 +1592,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem25.Control = Me.TextMonthLIT
         Me.LayoutControlItem25.Location = New System.Drawing.Point(0, 26)
         Me.LayoutControlItem25.Name = "LayoutControlItem25"
-        Me.LayoutControlItem25.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem25.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem25.Text = "سحوبات الشهر لتر"
         Me.LayoutControlItem25.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1596,7 +1601,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem24.Control = Me.TextMonthNIS
         Me.LayoutControlItem24.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem24.Name = "LayoutControlItem24"
-        Me.LayoutControlItem24.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem24.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem24.Text = "سحوبات الشهر شيكل"
         Me.LayoutControlItem24.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1605,7 +1610,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem32.Control = Me.WeekLIT
         Me.LayoutControlItem32.Location = New System.Drawing.Point(0, 156)
         Me.LayoutControlItem32.Name = "LayoutControlItem32"
-        Me.LayoutControlItem32.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem32.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem32.Text = "سحوبات الاسبوع لتر"
         Me.LayoutControlItem32.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1614,7 +1619,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem33.Control = Me.TextAvailableCard
         Me.LayoutControlItem33.Location = New System.Drawing.Point(0, 182)
         Me.LayoutControlItem33.Name = "LayoutControlItem33"
-        Me.LayoutControlItem33.Size = New System.Drawing.Size(401, 26)
+        Me.LayoutControlItem33.Size = New System.Drawing.Size(394, 26)
         Me.LayoutControlItem33.Text = "المبلغ المسحوب"
         Me.LayoutControlItem33.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1623,15 +1628,15 @@ Partial Class OrpakCardsQuery
         Me.EmptySpaceItem2.AllowHotTrack = False
         Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 208)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(401, 60)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(394, 10)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlGroup7
         '
         Me.LayoutControlGroup7.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem7, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem1, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.EmptySpaceItem3})
-        Me.LayoutControlGroup7.Location = New System.Drawing.Point(122, 224)
+        Me.LayoutControlGroup7.Location = New System.Drawing.Point(121, 228)
         Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
-        Me.LayoutControlGroup7.Size = New System.Drawing.Size(402, 310)
+        Me.LayoutControlGroup7.Size = New System.Drawing.Size(395, 264)
         Me.LayoutControlGroup7.Text = "بيانات الزبون"
         '
         'LayoutControlItem7
@@ -1639,7 +1644,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem7.Control = Me.FleetIDText
         Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(378, 26)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(369, 26)
         Me.LayoutControlItem7.Text = "رقم الزبون"
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1648,7 +1653,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem2.Control = Me.TextFleetStatus
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 26)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(378, 26)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(369, 26)
         Me.LayoutControlItem2.Text = "حالة الزبون"
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1657,7 +1662,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem3.Control = Me.TextAvailableFleet
         Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 52)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(378, 26)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(369, 26)
         Me.LayoutControlItem3.Text = "رصيد الزبون"
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1666,7 +1671,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem1.Control = Me.TextFleetType
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 78)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(378, 26)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(369, 26)
         Me.LayoutControlItem1.Text = "نوع الزبون"
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1675,7 +1680,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem4.Control = Me.TextFleetName
         Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 104)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(378, 26)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(369, 26)
         Me.LayoutControlItem4.Text = "الزبون"
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1684,7 +1689,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem5.Control = Me.TextFleetID
         Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 130)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(378, 26)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(369, 26)
         Me.LayoutControlItem5.Text = "ID الزبون"
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(110, 13)
         '
@@ -1693,15 +1698,15 @@ Partial Class OrpakCardsQuery
         Me.EmptySpaceItem3.AllowHotTrack = False
         Me.EmptySpaceItem3.Location = New System.Drawing.Point(0, 156)
         Me.EmptySpaceItem3.Name = "EmptySpaceItem3"
-        Me.EmptySpaceItem3.Size = New System.Drawing.Size(378, 112)
+        Me.EmptySpaceItem3.Size = New System.Drawing.Size(369, 62)
         Me.EmptySpaceItem3.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem34
         '
         Me.LayoutControlItem34.Control = Me.ListBoxControl1
-        Me.LayoutControlItem34.Location = New System.Drawing.Point(122, 534)
+        Me.LayoutControlItem34.Location = New System.Drawing.Point(121, 492)
         Me.LayoutControlItem34.Name = "LayoutControlItem34"
-        Me.LayoutControlItem34.Size = New System.Drawing.Size(827, 92)
+        Me.LayoutControlItem34.Size = New System.Drawing.Size(815, 4)
         Me.LayoutControlItem34.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem34.TextVisible = False
         '
@@ -1710,7 +1715,7 @@ Partial Class OrpakCardsQuery
         Me.EmptySpaceItem4.AllowHotTrack = False
         Me.EmptySpaceItem4.Location = New System.Drawing.Point(0, 0)
         Me.EmptySpaceItem4.Name = "EmptySpaceItem4"
-        Me.EmptySpaceItem4.Size = New System.Drawing.Size(122, 626)
+        Me.EmptySpaceItem4.Size = New System.Drawing.Size(121, 496)
         Me.EmptySpaceItem4.TextSize = New System.Drawing.Size(0, 0)
         '
         'NavigationPage2
@@ -1718,7 +1723,7 @@ Partial Class OrpakCardsQuery
         Me.NavigationPage2.Caption = "حركات البطاقة"
         Me.NavigationPage2.Controls.Add(Me.PanelControl3)
         Me.NavigationPage2.Name = "NavigationPage2"
-        Me.NavigationPage2.Size = New System.Drawing.Size(969, 646)
+        Me.NavigationPage2.Size = New System.Drawing.Size(969, 423)
         '
         'PanelControl3
         '
@@ -1726,11 +1731,12 @@ Partial Class OrpakCardsQuery
         Me.PanelControl3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl3.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl3.Name = "PanelControl3"
-        Me.PanelControl3.Size = New System.Drawing.Size(969, 646)
+        Me.PanelControl3.Size = New System.Drawing.Size(969, 423)
         Me.PanelControl3.TabIndex = 1
         '
         'LayoutControl2
         '
+        Me.LayoutControl2.Controls.Add(Me.RadioButton4)
         Me.LayoutControl2.Controls.Add(Me.GridControl11)
         Me.LayoutControl2.Controls.Add(Me.SimpleButton1)
         Me.LayoutControl2.Controls.Add(Me.SimpleButton8)
@@ -1738,20 +1744,29 @@ Partial Class OrpakCardsQuery
         Me.LayoutControl2.Controls.Add(Me.RadioButton2)
         Me.LayoutControl2.Controls.Add(Me.RadioButton1)
         Me.LayoutControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LayoutControl2.Location = New System.Drawing.Point(2, 2)
+        Me.LayoutControl2.Location = New System.Drawing.Point(3, 3)
         Me.LayoutControl2.Name = "LayoutControl2"
         Me.LayoutControl2.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl2.Root = Me.LayoutControlGroup2
-        Me.LayoutControl2.Size = New System.Drawing.Size(965, 642)
+        Me.LayoutControl2.Size = New System.Drawing.Size(963, 417)
         Me.LayoutControl2.TabIndex = 9
         Me.LayoutControl2.Text = "LayoutControl2"
         '
+        'RadioButton4
+        '
+        Me.RadioButton4.Location = New System.Drawing.Point(815, 12)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(136, 25)
+        Me.RadioButton4.TabIndex = 9
+        Me.RadioButton4.Text = "بحث حسب كود البطاقة"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
         'GridControl11
         '
-        Me.GridControl11.Location = New System.Drawing.Point(12, 67)
+        Me.GridControl11.Location = New System.Drawing.Point(12, 65)
         Me.GridControl11.MainView = Me.GridView2
         Me.GridControl11.Name = "GridControl11"
-        Me.GridControl11.Size = New System.Drawing.Size(941, 563)
+        Me.GridControl11.Size = New System.Drawing.Size(939, 340)
         Me.GridControl11.TabIndex = 1
         Me.GridControl11.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -1763,7 +1778,7 @@ Partial Class OrpakCardsQuery
         Me.GridView2.AppearancePrint.HeaderPanel.Options.UseBackColor = True
         Me.GridView2.AppearancePrint.OddRow.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.GridView2.AppearancePrint.OddRow.Options.UseBackColor = True
-        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.coldate, Me.coltime, Me.colquantity, Me.colppv, Me.colsale, Me.colplate1, Me.colproduct_name, Me.colstn_name, Me.colpump, Me.ColCardName, Me.ColFleetCode, Me.ColFleetName, Me.Colodometer, Me.ColtheDayName})
+        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.coldate, Me.coltime, Me.colquantity, Me.colppv, Me.colsale, Me.colplate1, Me.colproduct_name, Me.colstn_name, Me.colpump, Me.ColCardName, Me.ColFleetCode, Me.ColFleetName, Me.Colodometer, Me.ColtheDayName, Me.ColTag})
         Me.GridView2.GridControl = Me.GridControl11
         Me.GridView2.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "sale", Me.colsale, "(sale: SUM={0:0.##})")})
         Me.GridView2.Name = "GridView2"
@@ -1784,7 +1799,7 @@ Partial Class OrpakCardsQuery
         Me.coldate.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "date", "عدد الحركات {0}", "")})
         Me.coldate.Visible = True
         Me.coldate.VisibleIndex = 0
-        Me.coldate.Width = 107
+        Me.coldate.Width = 73
         '
         'coltime
         '
@@ -1795,7 +1810,7 @@ Partial Class OrpakCardsQuery
         Me.coltime.Name = "coltime"
         Me.coltime.Visible = True
         Me.coltime.VisibleIndex = 1
-        Me.coltime.Width = 107
+        Me.coltime.Width = 73
         '
         'colquantity
         '
@@ -1805,7 +1820,7 @@ Partial Class OrpakCardsQuery
         Me.colquantity.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", "{0}")})
         Me.colquantity.Visible = True
         Me.colquantity.VisibleIndex = 2
-        Me.colquantity.Width = 107
+        Me.colquantity.Width = 73
         '
         'colppv
         '
@@ -1814,7 +1829,7 @@ Partial Class OrpakCardsQuery
         Me.colppv.Name = "colppv"
         Me.colppv.Visible = True
         Me.colppv.VisibleIndex = 3
-        Me.colppv.Width = 107
+        Me.colppv.Width = 73
         '
         'colsale
         '
@@ -1824,7 +1839,7 @@ Partial Class OrpakCardsQuery
         Me.colsale.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "sale", "{0}")})
         Me.colsale.Visible = True
         Me.colsale.VisibleIndex = 4
-        Me.colsale.Width = 107
+        Me.colsale.Width = 73
         '
         'colplate1
         '
@@ -1833,7 +1848,7 @@ Partial Class OrpakCardsQuery
         Me.colplate1.Name = "colplate1"
         Me.colplate1.Visible = True
         Me.colplate1.VisibleIndex = 5
-        Me.colplate1.Width = 107
+        Me.colplate1.Width = 73
         '
         'colproduct_name
         '
@@ -1842,7 +1857,7 @@ Partial Class OrpakCardsQuery
         Me.colproduct_name.Name = "colproduct_name"
         Me.colproduct_name.Visible = True
         Me.colproduct_name.VisibleIndex = 6
-        Me.colproduct_name.Width = 107
+        Me.colproduct_name.Width = 73
         '
         'colstn_name
         '
@@ -1851,18 +1866,16 @@ Partial Class OrpakCardsQuery
         Me.colstn_name.Name = "colstn_name"
         Me.colstn_name.Visible = True
         Me.colstn_name.VisibleIndex = 8
-        Me.colstn_name.Width = 118
+        Me.colstn_name.Width = 70
         '
         'colpump
         '
         Me.colpump.Caption = "الطرمبة"
         Me.colpump.FieldName = "pump"
-        Me.colpump.MaxWidth = 50
-        Me.colpump.MinWidth = 50
         Me.colpump.Name = "colpump"
         Me.colpump.Visible = True
         Me.colpump.VisibleIndex = 9
-        Me.colpump.Width = 50
+        Me.colpump.Width = 70
         '
         'ColCardName
         '
@@ -1871,7 +1884,6 @@ Partial Class OrpakCardsQuery
         Me.ColCardName.Name = "ColCardName"
         Me.ColCardName.Visible = True
         Me.ColCardName.VisibleIndex = 7
-        Me.ColCardName.Width = 107
         '
         'ColFleetCode
         '
@@ -1883,11 +1895,9 @@ Partial Class OrpakCardsQuery
         '
         Me.ColFleetName.Caption = "الزبون"
         Me.ColFleetName.FieldName = "FleetName"
-        Me.ColFleetName.MinWidth = 150
         Me.ColFleetName.Name = "ColFleetName"
         Me.ColFleetName.Visible = True
         Me.ColFleetName.VisibleIndex = 10
-        Me.ColFleetName.Width = 150
         '
         'Colodometer
         '
@@ -1896,6 +1906,20 @@ Partial Class OrpakCardsQuery
         Me.Colodometer.Name = "Colodometer"
         Me.Colodometer.Visible = True
         Me.Colodometer.VisibleIndex = 11
+        '
+        'ColtheDayName
+        '
+        Me.ColtheDayName.Caption = "اليوم"
+        Me.ColtheDayName.FieldName = "theDayName"
+        Me.ColtheDayName.Name = "ColtheDayName"
+        Me.ColtheDayName.Visible = True
+        Me.ColtheDayName.VisibleIndex = 12
+        '
+        'ColTag
+        '
+        Me.ColTag.Caption = "Tag"
+        Me.ColTag.FieldName = "Tag"
+        Me.ColTag.Name = "ColTag"
         '
         'SimpleButton1
         '
@@ -1914,36 +1938,34 @@ Partial Class OrpakCardsQuery
         Me.SimpleButton8.ImageOptions.Image = CType(resources.GetObject("SimpleButton8.ImageOptions.Image"), System.Drawing.Image)
         Me.SimpleButton8.Location = New System.Drawing.Point(126, 12)
         Me.SimpleButton8.Name = "SimpleButton8"
-        Me.SimpleButton8.Size = New System.Drawing.Size(107, 22)
+        Me.SimpleButton8.Size = New System.Drawing.Size(106, 22)
         Me.SimpleButton8.StyleController = Me.LayoutControl2
         Me.SimpleButton8.TabIndex = 7
         Me.SimpleButton8.Text = "بحث"
         '
         'RadioButton3
         '
-        Me.RadioButton3.Checked = True
-        Me.RadioButton3.Location = New System.Drawing.Point(749, 12)
+        Me.RadioButton3.Location = New System.Drawing.Point(663, 12)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(204, 25)
+        Me.RadioButton3.Size = New System.Drawing.Size(148, 25)
         Me.RadioButton3.TabIndex = 8
-        Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "بحث حسب رقم البطاقة"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'RadioButton2
         '
-        Me.RadioButton2.Location = New System.Drawing.Point(520, 12)
+        Me.RadioButton2.Location = New System.Drawing.Point(517, 12)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(225, 25)
+        Me.RadioButton2.Size = New System.Drawing.Size(142, 25)
         Me.RadioButton2.TabIndex = 8
         Me.RadioButton2.Text = "بحث حسب رقم المركبة"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'RadioButton1
         '
-        Me.RadioButton1.Location = New System.Drawing.Point(237, 12)
+        Me.RadioButton1.Location = New System.Drawing.Point(236, 12)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(279, 25)
+        Me.RadioButton1.Size = New System.Drawing.Size(277, 25)
         Me.RadioButton1.TabIndex = 8
         Me.RadioButton1.Text = "بحث حسب ID"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -1952,27 +1974,27 @@ Partial Class OrpakCardsQuery
         '
         Me.LayoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup2.GroupBordersVisible = False
-        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem8, Me.LayoutControlItem10, Me.LayoutControlItem11, Me.LayoutControlItem12, Me.LayoutControlItem13, Me.LayoutControlItem9, Me.EmptySpaceItem1})
+        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem8, Me.LayoutControlItem10, Me.LayoutControlItem11, Me.LayoutControlItem12, Me.LayoutControlItem13, Me.LayoutControlItem9, Me.EmptySpaceItem1, Me.LayoutControlItem38})
         Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(965, 642)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(963, 417)
         Me.LayoutControlGroup2.TextVisible = False
         '
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.RadioButton1
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(225, 0)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(224, 0)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(283, 29)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(281, 29)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem8.TextVisible = False
         '
         'LayoutControlItem10
         '
         Me.LayoutControlItem10.Control = Me.RadioButton3
-        Me.LayoutControlItem10.Location = New System.Drawing.Point(737, 0)
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(651, 0)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(208, 29)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(152, 29)
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem10.TextVisible = False
         '
@@ -1981,7 +2003,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem11.Control = Me.SimpleButton8
         Me.LayoutControlItem11.Location = New System.Drawing.Point(114, 0)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(111, 29)
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(110, 29)
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem11.TextVisible = False
         '
@@ -1997,18 +2019,18 @@ Partial Class OrpakCardsQuery
         'LayoutControlItem13
         '
         Me.LayoutControlItem13.Control = Me.GridControl11
-        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 55)
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 53)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
-        Me.LayoutControlItem13.Size = New System.Drawing.Size(945, 567)
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(943, 344)
         Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem13.TextVisible = False
         '
         'LayoutControlItem9
         '
         Me.LayoutControlItem9.Control = Me.RadioButton2
-        Me.LayoutControlItem9.Location = New System.Drawing.Point(508, 0)
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(505, 0)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(229, 29)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(146, 29)
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem9.TextVisible = False
         '
@@ -2017,8 +2039,17 @@ Partial Class OrpakCardsQuery
         Me.EmptySpaceItem1.AllowHotTrack = False
         Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 29)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(945, 26)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(943, 24)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'LayoutControlItem38
+        '
+        Me.LayoutControlItem38.Control = Me.RadioButton4
+        Me.LayoutControlItem38.Location = New System.Drawing.Point(803, 0)
+        Me.LayoutControlItem38.Name = "LayoutControlItem38"
+        Me.LayoutControlItem38.Size = New System.Drawing.Size(140, 29)
+        Me.LayoutControlItem38.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem38.TextVisible = False
         '
         'NavigationPage3
         '
@@ -2026,7 +2057,7 @@ Partial Class OrpakCardsQuery
         Me.NavigationPage3.Controls.Add(Me.GroupControl8)
         Me.NavigationPage3.Controls.Add(Me.GroupControl6)
         Me.NavigationPage3.Name = "NavigationPage3"
-        Me.NavigationPage3.Size = New System.Drawing.Size(969, 646)
+        Me.NavigationPage3.Size = New System.Drawing.Size(973, 420)
         '
         'GroupControl8
         '
@@ -2035,9 +2066,9 @@ Partial Class OrpakCardsQuery
         Me.GroupControl8.Controls.Add(Me.LabelControl25)
         Me.GroupControl8.Controls.Add(Me.TextِAddress)
         Me.GroupControl8.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GroupControl8.Location = New System.Drawing.Point(-57, 0)
+        Me.GroupControl8.Location = New System.Drawing.Point(-53, 0)
         Me.GroupControl8.Name = "GroupControl8"
-        Me.GroupControl8.Size = New System.Drawing.Size(456, 646)
+        Me.GroupControl8.Size = New System.Drawing.Size(456, 420)
         Me.GroupControl8.TabIndex = 10
         Me.GroupControl8.Text = "بيانات أخرى"
         '
@@ -2102,9 +2133,9 @@ Partial Class OrpakCardsQuery
         Me.GroupControl6.Controls.Add(Me.TextFilter)
         Me.GroupControl6.Controls.Add(Me.LabelControl29)
         Me.GroupControl6.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GroupControl6.Location = New System.Drawing.Point(399, 0)
+        Me.GroupControl6.Location = New System.Drawing.Point(403, 0)
         Me.GroupControl6.Name = "GroupControl6"
-        Me.GroupControl6.Size = New System.Drawing.Size(570, 646)
+        Me.GroupControl6.Size = New System.Drawing.Size(570, 420)
         Me.GroupControl6.TabIndex = 8
         '
         'TextCountry
@@ -2303,7 +2334,7 @@ Partial Class OrpakCardsQuery
         Me.NavigationPage4.Controls.Add(Me.PanelControl8)
         Me.NavigationPage4.Controls.Add(Me.PanelControl5)
         Me.NavigationPage4.Name = "NavigationPage4"
-        Me.NavigationPage4.Size = New System.Drawing.Size(969, 646)
+        Me.NavigationPage4.Size = New System.Drawing.Size(973, 420)
         '
         'PanelControl8
         '
@@ -2311,16 +2342,16 @@ Partial Class OrpakCardsQuery
         Me.PanelControl8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl8.Location = New System.Drawing.Point(0, 32)
         Me.PanelControl8.Name = "PanelControl8"
-        Me.PanelControl8.Size = New System.Drawing.Size(969, 614)
+        Me.PanelControl8.Size = New System.Drawing.Size(973, 388)
         Me.PanelControl8.TabIndex = 2
         '
         'GridControl13
         '
         Me.GridControl13.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl13.Location = New System.Drawing.Point(2, 2)
+        Me.GridControl13.Location = New System.Drawing.Point(3, 3)
         Me.GridControl13.MainView = Me.GridView3
         Me.GridControl13.Name = "GridControl13"
-        Me.GridControl13.Size = New System.Drawing.Size(965, 610)
+        Me.GridControl13.Size = New System.Drawing.Size(967, 382)
         Me.GridControl13.TabIndex = 0
         Me.GridControl13.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
@@ -2392,14 +2423,14 @@ Partial Class OrpakCardsQuery
         Me.PanelControl5.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelControl5.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl5.Name = "PanelControl5"
-        Me.PanelControl5.Size = New System.Drawing.Size(969, 32)
+        Me.PanelControl5.Size = New System.Drawing.Size(973, 32)
         Me.PanelControl5.TabIndex = 1
         '
         'SimpleButton5
         '
         Me.SimpleButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton5.ImageOptions.Image = CType(resources.GetObject("SimpleButton5.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton5.Location = New System.Drawing.Point(570, 5)
+        Me.SimpleButton5.Location = New System.Drawing.Point(574, 5)
         Me.SimpleButton5.Name = "SimpleButton5"
         Me.SimpleButton5.Size = New System.Drawing.Size(104, 20)
         Me.SimpleButton5.TabIndex = 9
@@ -2409,7 +2440,7 @@ Partial Class OrpakCardsQuery
         '
         Me.DateEditFrom.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateEditFrom.EditValue = Nothing
-        Me.DateEditFrom.Location = New System.Drawing.Point(825, 5)
+        Me.DateEditFrom.Location = New System.Drawing.Point(829, 5)
         Me.DateEditFrom.Name = "DateEditFrom"
         Me.DateEditFrom.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DateEditFrom.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -2420,7 +2451,7 @@ Partial Class OrpakCardsQuery
         '
         Me.DateEditTo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateEditTo.EditValue = Nothing
-        Me.DateEditTo.Location = New System.Drawing.Point(680, 5)
+        Me.DateEditTo.Location = New System.Drawing.Point(684, 5)
         Me.DateEditTo.Name = "DateEditTo"
         Me.DateEditTo.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DateEditTo.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -2431,7 +2462,7 @@ Partial Class OrpakCardsQuery
         '
         Me.SimpleButton4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton4.ImageOptions.Image = CType(resources.GetObject("SimpleButton4.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton4.Location = New System.Drawing.Point(462, 5)
+        Me.SimpleButton4.Location = New System.Drawing.Point(466, 5)
         Me.SimpleButton4.Name = "SimpleButton4"
         Me.SimpleButton4.Size = New System.Drawing.Size(102, 20)
         Me.SimpleButton4.TabIndex = 6
@@ -2443,7 +2474,7 @@ Partial Class OrpakCardsQuery
         Me.NavigationPage5.Controls.Add(Me.PanelControl7)
         Me.NavigationPage5.Controls.Add(Me.PanelControl4)
         Me.NavigationPage5.Name = "NavigationPage5"
-        Me.NavigationPage5.Size = New System.Drawing.Size(969, 646)
+        Me.NavigationPage5.Size = New System.Drawing.Size(973, 420)
         '
         'PanelControl7
         '
@@ -2451,7 +2482,7 @@ Partial Class OrpakCardsQuery
         Me.PanelControl7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl7.Location = New System.Drawing.Point(0, 32)
         Me.PanelControl7.Name = "PanelControl7"
-        Me.PanelControl7.Size = New System.Drawing.Size(969, 614)
+        Me.PanelControl7.Size = New System.Drawing.Size(973, 388)
         Me.PanelControl7.TabIndex = 2
         '
         'GridControl1
@@ -2459,10 +2490,10 @@ Partial Class OrpakCardsQuery
         Me.GridControl1.DataMember = "Cheqs"
         Me.GridControl1.DataSource = Me.SqlDataSource4
         Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl1.Location = New System.Drawing.Point(2, 2)
+        Me.GridControl1.Location = New System.Drawing.Point(3, 3)
         Me.GridControl1.MainView = Me.GridView4
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(965, 610)
+        Me.GridControl1.Size = New System.Drawing.Size(967, 382)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView4})
         '
@@ -2543,14 +2574,14 @@ Partial Class OrpakCardsQuery
         Me.PanelControl4.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelControl4.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl4.Name = "PanelControl4"
-        Me.PanelControl4.Size = New System.Drawing.Size(969, 32)
+        Me.PanelControl4.Size = New System.Drawing.Size(973, 32)
         Me.PanelControl4.TabIndex = 1
         '
         'SimpleButton10
         '
         Me.SimpleButton10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton10.ImageOptions.Image = CType(resources.GetObject("SimpleButton10.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton10.Location = New System.Drawing.Point(529, 5)
+        Me.SimpleButton10.Location = New System.Drawing.Point(533, 5)
         Me.SimpleButton10.Name = "SimpleButton10"
         Me.SimpleButton10.Size = New System.Drawing.Size(90, 22)
         Me.SimpleButton10.TabIndex = 10
@@ -2560,7 +2591,7 @@ Partial Class OrpakCardsQuery
         '
         Me.DateEdit1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateEdit1.EditValue = Nothing
-        Me.DateEdit1.Location = New System.Drawing.Point(792, 5)
+        Me.DateEdit1.Location = New System.Drawing.Point(796, 5)
         Me.DateEdit1.Name = "DateEdit1"
         Me.DateEdit1.Properties.AutoHeight = False
         Me.DateEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -2572,7 +2603,7 @@ Partial Class OrpakCardsQuery
         '
         Me.DateEdit2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateEdit2.EditValue = Nothing
-        Me.DateEdit2.Location = New System.Drawing.Point(627, 5)
+        Me.DateEdit2.Location = New System.Drawing.Point(631, 5)
         Me.DateEdit2.Name = "DateEdit2"
         Me.DateEdit2.Properties.AutoHeight = False
         Me.DateEdit2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -2584,7 +2615,7 @@ Partial Class OrpakCardsQuery
         '
         Me.CheckButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CheckButton1.ImageOptions.Image = CType(resources.GetObject("CheckButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.CheckButton1.Location = New System.Drawing.Point(434, 5)
+        Me.CheckButton1.Location = New System.Drawing.Point(438, 5)
         Me.CheckButton1.Name = "CheckButton1"
         Me.CheckButton1.Size = New System.Drawing.Size(90, 22)
         Me.CheckButton1.TabIndex = 7
@@ -2594,7 +2625,7 @@ Partial Class OrpakCardsQuery
         '
         Me.SimpleButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton2.Location = New System.Drawing.Point(340, 5)
+        Me.SimpleButton2.Location = New System.Drawing.Point(344, 5)
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(90, 22)
         Me.SimpleButton2.TabIndex = 6
@@ -2627,7 +2658,7 @@ Partial Class OrpakCardsQuery
         Me.NavigationPage7.Caption = "ملخص شهري للبطاقة"
         Me.NavigationPage7.Controls.Add(Me.PanelControl9)
         Me.NavigationPage7.Name = "NavigationPage7"
-        Me.NavigationPage7.Size = New System.Drawing.Size(969, 646)
+        Me.NavigationPage7.Size = New System.Drawing.Size(973, 420)
         '
         'PanelControl9
         '
@@ -2636,9 +2667,9 @@ Partial Class OrpakCardsQuery
         Me.PanelControl9.Controls.Add(Me.ChartControl1)
         Me.PanelControl9.Controls.Add(Me.GridControl2)
         Me.PanelControl9.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PanelControl9.Location = New System.Drawing.Point(125, 0)
+        Me.PanelControl9.Location = New System.Drawing.Point(129, 0)
         Me.PanelControl9.Name = "PanelControl9"
-        Me.PanelControl9.Size = New System.Drawing.Size(844, 646)
+        Me.PanelControl9.Size = New System.Drawing.Size(844, 420)
         Me.PanelControl9.TabIndex = 5
         '
         'SimpleButton7
@@ -2692,7 +2723,7 @@ Partial Class OrpakCardsQuery
         Me.NavigationPage9.Caption = "حركات شحن الزبون"
         Me.NavigationPage9.Controls.Add(Me.LayoutControl1)
         Me.NavigationPage9.Name = "NavigationPage9"
-        Me.NavigationPage9.Size = New System.Drawing.Size(969, 646)
+        Me.NavigationPage9.Size = New System.Drawing.Size(973, 420)
         '
         'LayoutControl1
         '
@@ -2704,7 +2735,7 @@ Partial Class OrpakCardsQuery
         Me.LayoutControl1.Name = "LayoutControl1"
         Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl1.Root = Me.LayoutControlGroup6
-        Me.LayoutControl1.Size = New System.Drawing.Size(969, 646)
+        Me.LayoutControl1.Size = New System.Drawing.Size(973, 420)
         Me.LayoutControl1.TabIndex = 1
         Me.LayoutControl1.Text = "LayoutControl1"
         '
@@ -2712,16 +2743,16 @@ Partial Class OrpakCardsQuery
         '
         Me.SimpleButton11.Location = New System.Drawing.Point(12, 12)
         Me.SimpleButton11.Name = "SimpleButton11"
-        Me.SimpleButton11.Size = New System.Drawing.Size(470, 22)
+        Me.SimpleButton11.Size = New System.Drawing.Size(152, 22)
         Me.SimpleButton11.StyleController = Me.LayoutControl1
         Me.SimpleButton11.TabIndex = 5
         Me.SimpleButton11.Text = "طباعة"
         '
         'SimpleButton9
         '
-        Me.SimpleButton9.Location = New System.Drawing.Point(486, 12)
+        Me.SimpleButton9.Location = New System.Drawing.Point(817, 12)
         Me.SimpleButton9.Name = "SimpleButton9"
-        Me.SimpleButton9.Size = New System.Drawing.Size(471, 22)
+        Me.SimpleButton9.Size = New System.Drawing.Size(144, 22)
         Me.SimpleButton9.StyleController = Me.LayoutControl1
         Me.SimpleButton9.TabIndex = 4
         Me.SimpleButton9.Text = "تحديث"
@@ -2731,7 +2762,7 @@ Partial Class OrpakCardsQuery
         Me.GridControl4.Location = New System.Drawing.Point(12, 38)
         Me.GridControl4.MainView = Me.GridView1
         Me.GridControl4.Name = "GridControl4"
-        Me.GridControl4.Size = New System.Drawing.Size(945, 596)
+        Me.GridControl4.Size = New System.Drawing.Size(949, 370)
         Me.GridControl4.TabIndex = 0
         Me.GridControl4.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -2794,10 +2825,10 @@ Partial Class OrpakCardsQuery
         '
         Me.LayoutControlGroup6.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup6.GroupBordersVisible = False
-        Me.LayoutControlGroup6.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem35, Me.LayoutControlItem36, Me.LayoutControlItem37})
+        Me.LayoutControlGroup6.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem35, Me.LayoutControlItem36, Me.LayoutControlItem37, Me.EmptySpaceItem7})
         Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
-        Me.LayoutControlGroup6.Size = New System.Drawing.Size(969, 646)
+        Me.LayoutControlGroup6.Size = New System.Drawing.Size(973, 420)
         Me.LayoutControlGroup6.TextVisible = False
         '
         'LayoutControlItem35
@@ -2805,16 +2836,19 @@ Partial Class OrpakCardsQuery
         Me.LayoutControlItem35.Control = Me.GridControl4
         Me.LayoutControlItem35.Location = New System.Drawing.Point(0, 26)
         Me.LayoutControlItem35.Name = "LayoutControlItem35"
-        Me.LayoutControlItem35.Size = New System.Drawing.Size(949, 600)
+        Me.LayoutControlItem35.Size = New System.Drawing.Size(953, 374)
         Me.LayoutControlItem35.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem35.TextVisible = False
         '
         'LayoutControlItem36
         '
         Me.LayoutControlItem36.Control = Me.SimpleButton9
-        Me.LayoutControlItem36.Location = New System.Drawing.Point(474, 0)
+        Me.LayoutControlItem36.Location = New System.Drawing.Point(805, 0)
+        Me.LayoutControlItem36.MaxSize = New System.Drawing.Size(148, 26)
+        Me.LayoutControlItem36.MinSize = New System.Drawing.Size(148, 26)
         Me.LayoutControlItem36.Name = "LayoutControlItem36"
-        Me.LayoutControlItem36.Size = New System.Drawing.Size(475, 26)
+        Me.LayoutControlItem36.Size = New System.Drawing.Size(148, 26)
+        Me.LayoutControlItem36.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItem36.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem36.TextVisible = False
         '
@@ -2822,10 +2856,21 @@ Partial Class OrpakCardsQuery
         '
         Me.LayoutControlItem37.Control = Me.SimpleButton11
         Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem37.MaxSize = New System.Drawing.Size(156, 26)
+        Me.LayoutControlItem37.MinSize = New System.Drawing.Size(156, 26)
         Me.LayoutControlItem37.Name = "LayoutControlItem37"
-        Me.LayoutControlItem37.Size = New System.Drawing.Size(474, 26)
+        Me.LayoutControlItem37.Size = New System.Drawing.Size(156, 26)
+        Me.LayoutControlItem37.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItem37.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem37.TextVisible = False
+        '
+        'EmptySpaceItem7
+        '
+        Me.EmptySpaceItem7.AllowHotTrack = False
+        Me.EmptySpaceItem7.Location = New System.Drawing.Point(156, 0)
+        Me.EmptySpaceItem7.Name = "EmptySpaceItem7"
+        Me.EmptySpaceItem7.Size = New System.Drawing.Size(649, 26)
+        Me.EmptySpaceItem7.TextSize = New System.Drawing.Size(0, 0)
         '
         'PanelControl10
         '
@@ -2833,7 +2878,7 @@ Partial Class OrpakCardsQuery
         Me.PanelControl10.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl10.Location = New System.Drawing.Point(0, 252)
         Me.PanelControl10.Name = "PanelControl10"
-        Me.PanelControl10.Size = New System.Drawing.Size(1108, 710)
+        Me.PanelControl10.Size = New System.Drawing.Size(1108, 487)
         Me.PanelControl10.TabIndex = 6
         '
         'LayoutControlItem6
@@ -2851,20 +2896,12 @@ Partial Class OrpakCardsQuery
         Me.EmptySpaceItem6.Size = New System.Drawing.Size(402, 64)
         Me.EmptySpaceItem6.TextSize = New System.Drawing.Size(0, 0)
         '
-        'ColtheDayName
-        '
-        Me.ColtheDayName.Caption = "اليوم"
-        Me.ColtheDayName.FieldName = "TheDayName"
-        Me.ColtheDayName.Name = "ColtheDayName"
-        Me.ColtheDayName.Visible = True
-        Me.ColtheDayName.VisibleIndex = 12
-        '
         'OrpakCardsQuery
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1108, 962)
+        Me.ClientSize = New System.Drawing.Size(1108, 739)
         Me.Controls.Add(Me.PanelControl10)
         Me.Controls.Add(Me.GroupControl1)
         Me.Name = "OrpakCardsQuery"
@@ -2971,6 +3008,7 @@ Partial Class OrpakCardsQuery
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavigationPage3.ResumeLayout(False)
         CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl8.ResumeLayout(False)
@@ -3027,6 +3065,7 @@ Partial Class OrpakCardsQuery
         CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelControl10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl10.ResumeLayout(False)
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3257,4 +3296,8 @@ Partial Class OrpakCardsQuery
     Friend WithEvents LayoutControlItem36 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem37 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents ColtheDayName As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents LayoutControlItem38 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents ColTag As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents EmptySpaceItem7 As DevExpress.XtraLayout.EmptySpaceItem
 End Class

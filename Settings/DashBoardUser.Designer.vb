@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class DashBoardUser
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,7 +17,7 @@ Partial Class DashBoardUser
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashBoardUser))
@@ -182,9 +182,9 @@ Partial Class DashBoardUser
         Me.GroupControl4.Controls.Add(Me.SystemTypeText)
         Me.GroupControl4.Controls.Add(Me.SystemDetails)
         Me.GroupControl4.Controls.Add(Me.CopmuterNameText)
-        Me.GroupControl4.Location = New System.Drawing.Point(28, 12)
+        Me.GroupControl4.Location = New System.Drawing.Point(23, 405)
         Me.GroupControl4.Name = "GroupControl4"
-        Me.GroupControl4.Size = New System.Drawing.Size(21, 21)
+        Me.GroupControl4.Size = New System.Drawing.Size(10, 19)
         Me.GroupControl4.TabIndex = 6
         Me.GroupControl4.Text = "بيانات أخرى"
         Me.GroupControl4.Visible = False
@@ -395,7 +395,7 @@ Partial Class DashBoardUser
         Me.NavigationPane1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NavigationPane1.Location = New System.Drawing.Point(0, 0)
         Me.NavigationPane1.Name = "NavigationPane1"
-        Me.NavigationPane1.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.NavigationPage2, Me.NavigationPage3, Me.NavigationPage1})
+        Me.NavigationPane1.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.NavigationPage1, Me.NavigationPage2, Me.NavigationPage3})
         Me.NavigationPane1.RegularSize = New System.Drawing.Size(1108, 619)
         Me.NavigationPane1.SelectedPage = Me.NavigationPage2
         Me.NavigationPane1.Size = New System.Drawing.Size(1108, 619)
@@ -406,9 +406,9 @@ Partial Class DashBoardUser
         '
         Me.NavigationPage2.Caption = "اعدادات المستخدم"
         Me.NavigationPage2.Controls.Add(Me.LayoutControl1)
-        Me.NavigationPage2.Image = CType(resources.GetObject("NavigationPage2.Image"), System.Drawing.Image)
+        Me.NavigationPage2.ImageOptions.Image = CType(resources.GetObject("NavigationPage2.ImageOptions.Image"), System.Drawing.Image)
         Me.NavigationPage2.Name = "NavigationPage2"
-        Me.NavigationPage2.Size = New System.Drawing.Size(1048, 558)
+        Me.NavigationPage2.Size = New System.Drawing.Size(1020, 546)
         '
         'LayoutControl1
         '
@@ -423,26 +423,26 @@ Partial Class DashBoardUser
         Me.LayoutControl1.Name = "LayoutControl1"
         Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(1048, 558)
+        Me.LayoutControl1.Size = New System.Drawing.Size(1020, 546)
         Me.LayoutControl1.TabIndex = 7
         Me.LayoutControl1.Text = "LayoutControl1"
         '
         'GroupControl6
         '
         Me.GroupControl6.Controls.Add(Me.GridControl2)
-        Me.GroupControl6.Location = New System.Drawing.Point(594, 211)
+        Me.GroupControl6.Location = New System.Drawing.Point(578, 207)
         Me.GroupControl6.Name = "GroupControl6"
-        Me.GroupControl6.Size = New System.Drawing.Size(442, 309)
+        Me.GroupControl6.Size = New System.Drawing.Size(430, 301)
         Me.GroupControl6.TabIndex = 7
         Me.GroupControl6.Text = "أسعار العملات"
         '
         'GridControl2
         '
         Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl2.Location = New System.Drawing.Point(2, 22)
+        Me.GridControl2.Location = New System.Drawing.Point(2, 23)
         Me.GridControl2.MainView = Me.GridView2
         Me.GridControl2.Name = "GridControl2"
-        Me.GridControl2.Size = New System.Drawing.Size(438, 285)
+        Me.GridControl2.Size = New System.Drawing.Size(426, 276)
         Me.GridControl2.TabIndex = 9
         Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -463,11 +463,12 @@ Partial Class DashBoardUser
         Me.GroupControl2.Controls.Add(Me.SimpleButton5)
         Me.GroupControl2.Controls.Add(Me.LabelControl12)
         Me.GroupControl2.Controls.Add(Me.LabelControl11)
-        Me.GroupControl2.Location = New System.Drawing.Point(378, 12)
+        Me.GroupControl2.Location = New System.Drawing.Point(368, 12)
         Me.GroupControl2.Name = "GroupControl2"
-        Me.GroupControl2.Size = New System.Drawing.Size(335, 195)
+        Me.GroupControl2.Size = New System.Drawing.Size(326, 191)
         Me.GroupControl2.TabIndex = 4
         Me.GroupControl2.Text = "تواريخ هامة"
+        Me.GroupControl2.Visible = False
         '
         'DateEdit1
         '
@@ -534,9 +535,10 @@ Partial Class DashBoardUser
         Me.GroupControl3.Controls.Add(Me.LabelControl14)
         Me.GroupControl3.Location = New System.Drawing.Point(12, 12)
         Me.GroupControl3.Name = "GroupControl3"
-        Me.GroupControl3.Size = New System.Drawing.Size(362, 195)
+        Me.GroupControl3.Size = New System.Drawing.Size(352, 191)
         Me.GroupControl3.TabIndex = 5
         Me.GroupControl3.Text = "بيانات الاتصال"
+        Me.GroupControl3.Visible = False
         '
         'SimpleButton4
         '
@@ -653,19 +655,19 @@ Partial Class DashBoardUser
         '
         Me.GroupControl5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupControl5.Controls.Add(Me.WebBrowser2)
-        Me.GroupControl5.Location = New System.Drawing.Point(12, 211)
+        Me.GroupControl5.Location = New System.Drawing.Point(12, 207)
         Me.GroupControl5.Name = "GroupControl5"
-        Me.GroupControl5.Size = New System.Drawing.Size(578, 335)
+        Me.GroupControl5.Size = New System.Drawing.Size(562, 327)
         Me.GroupControl5.TabIndex = 6
         Me.GroupControl5.Text = "طقس فلسطين"
         '
         'WebBrowser2
         '
         Me.WebBrowser2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser2.Location = New System.Drawing.Point(2, 22)
+        Me.WebBrowser2.Location = New System.Drawing.Point(2, 23)
         Me.WebBrowser2.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser2.Name = "WebBrowser2"
-        Me.WebBrowser2.Size = New System.Drawing.Size(574, 311)
+        Me.WebBrowser2.Size = New System.Drawing.Size(558, 302)
         Me.WebBrowser2.TabIndex = 0
         Me.WebBrowser2.Url = New System.Uri("http://palweather.ps/temps/days/web_service", System.UriKind.Absolute)
         '
@@ -679,11 +681,12 @@ Partial Class DashBoardUser
         Me.GroupControl1.Controls.Add(Me.LabelControl9)
         Me.GroupControl1.Controls.Add(Me.NewPassword2Text)
         Me.GroupControl1.Controls.Add(Me.LabelControl8)
-        Me.GroupControl1.Location = New System.Drawing.Point(717, 12)
+        Me.GroupControl1.Location = New System.Drawing.Point(698, 12)
         Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.Size = New System.Drawing.Size(319, 195)
+        Me.GroupControl1.Size = New System.Drawing.Size(310, 191)
         Me.GroupControl1.TabIndex = 3
         Me.GroupControl1.Text = "تغيير كلمة المرور"
+        Me.GroupControl1.Visible = False
         '
         'LabelControl10
         '
@@ -744,9 +747,9 @@ Partial Class DashBoardUser
         '
         'SimpleButton7
         '
-        Me.SimpleButton7.Location = New System.Drawing.Point(594, 524)
+        Me.SimpleButton7.Location = New System.Drawing.Point(578, 512)
         Me.SimpleButton7.Name = "SimpleButton7"
-        Me.SimpleButton7.Size = New System.Drawing.Size(442, 22)
+        Me.SimpleButton7.Size = New System.Drawing.Size(430, 22)
         Me.SimpleButton7.StyleController = Me.LayoutControl1
         Me.SimpleButton7.TabIndex = 8
         Me.SimpleButton7.Text = "تحديث"
@@ -756,9 +759,8 @@ Partial Class DashBoardUser
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup1.GroupBordersVisible = False
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem2, Me.LayoutControlItem1, Me.LayoutControlItem6})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1048, 558)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1020, 546)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem3
@@ -766,52 +768,52 @@ Partial Class DashBoardUser
         Me.LayoutControlItem3.Control = Me.GroupControl3
         Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(366, 199)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(356, 195)
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
         '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.GroupControl1
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(705, 0)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(686, 0)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(323, 199)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(314, 195)
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
         'LayoutControlItem5
         '
         Me.LayoutControlItem5.Control = Me.GroupControl2
-        Me.LayoutControlItem5.Location = New System.Drawing.Point(366, 0)
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(356, 0)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(339, 199)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(330, 195)
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem5.TextVisible = False
         '
         'LayoutControlItem2
         '
         Me.LayoutControlItem2.Control = Me.GroupControl5
-        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 199)
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 195)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(582, 339)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(566, 331)
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem2.TextVisible = False
         '
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.GroupControl6
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(582, 199)
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(566, 195)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(446, 313)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(434, 305)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.Control = Me.SimpleButton7
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(582, 512)
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(566, 500)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(446, 26)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(434, 26)
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem6.TextVisible = False
         '
@@ -819,9 +821,9 @@ Partial Class DashBoardUser
         '
         Me.NavigationPage3.Caption = "البريد"
         Me.NavigationPage3.Controls.Add(Me.GridControl1)
-        Me.NavigationPage3.Image = CType(resources.GetObject("NavigationPage3.Image"), System.Drawing.Image)
+        Me.NavigationPage3.ImageOptions.Image = CType(resources.GetObject("NavigationPage3.ImageOptions.Image"), System.Drawing.Image)
         Me.NavigationPage3.Name = "NavigationPage3"
-        Me.NavigationPage3.Size = New System.Drawing.Size(1042, 559)
+        Me.NavigationPage3.Size = New System.Drawing.Size(1108, 619)
         '
         'GridControl1
         '
@@ -829,7 +831,7 @@ Partial Class DashBoardUser
         Me.GridControl1.Location = New System.Drawing.Point(0, 0)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(1042, 559)
+        Me.GridControl1.Size = New System.Drawing.Size(1108, 619)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -841,9 +843,9 @@ Partial Class DashBoardUser
         'NavigationPage1
         '
         Me.NavigationPage1.Caption = "اللوحة الرئيسية"
-        Me.NavigationPage1.Image = CType(resources.GetObject("NavigationPage1.Image"), System.Drawing.Image)
+        Me.NavigationPage1.ImageOptions.Image = CType(resources.GetObject("NavigationPage1.ImageOptions.Image"), System.Drawing.Image)
         Me.NavigationPage1.Name = "NavigationPage1"
-        Me.NavigationPage1.Size = New System.Drawing.Size(1042, 559)
+        Me.NavigationPage1.Size = New System.Drawing.Size(1048, 558)
         '
         'WebBrowser3
         '

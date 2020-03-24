@@ -21,133 +21,133 @@ Partial Class OrpakCustomerTrans
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(OrpakCustomerTrans))
-        Dim FieldInfo33 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo34 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo35 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo36 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo37 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo38 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo39 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo40 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo41 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo42 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo43 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo44 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo45 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo46 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo47 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim FieldInfo48 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
-        Dim ExcelWorksheetSettings3 As DevExpress.DataAccess.Excel.ExcelWorksheetSettings = New DevExpress.DataAccess.Excel.ExcelWorksheetSettings()
-        Dim ExcelSourceOptions3 As DevExpress.DataAccess.Excel.ExcelSourceOptions = New DevExpress.DataAccess.Excel.ExcelSourceOptions(ExcelWorksheetSettings3)
-        Dim ChartControlCommandGalleryItemGroup2DColumn3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn()
-        Dim CreateBarChartItem3 As DevExpress.XtraCharts.UI.CreateBarChartItem = New DevExpress.XtraCharts.UI.CreateBarChartItem()
-        Dim CreateFullStackedBarChartItem3 As DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem()
-        Dim CreateSideBySideFullStackedBarChartItem3 As DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem()
-        Dim CreateSideBySideStackedBarChartItem3 As DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem()
-        Dim CreateStackedBarChartItem3 As DevExpress.XtraCharts.UI.CreateStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateStackedBarChartItem()
-        Dim ChartControlCommandGalleryItemGroup3DColumn3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn()
-        Dim CreateBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateBar3DChartItem = New DevExpress.XtraCharts.UI.CreateBar3DChartItem()
-        Dim CreateFullStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem()
-        Dim CreateManhattanBarChartItem3 As DevExpress.XtraCharts.UI.CreateManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreateManhattanBarChartItem()
-        Dim CreateSideBySideFullStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem()
-        Dim CreateSideBySideStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem()
-        Dim CreateStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem()
-        Dim ChartControlCommandGalleryItemGroupCylinderColumn3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn()
-        Dim CreateCylinderBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem()
-        Dim CreateCylinderFullStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem()
-        Dim CreateCylinderManhattanBarChartItem3 As DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem()
-        Dim CreateCylinderSideBySideFullStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem()
-        Dim CreateCylinderSideBySideStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem()
-        Dim CreateCylinderStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem()
-        Dim ChartControlCommandGalleryItemGroupConeColumn3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn()
-        Dim CreateConeBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateConeBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeBar3DChartItem()
-        Dim CreateConeFullStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem()
-        Dim CreateConeManhattanBarChartItem3 As DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem()
-        Dim CreateConeSideBySideFullStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem()
-        Dim CreateConeSideBySideStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem()
-        Dim CreateConeStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem()
-        Dim ChartControlCommandGalleryItemGroupPyramidColumn3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn()
-        Dim CreatePyramidBar3DChartItem3 As DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem()
-        Dim CreatePyramidFullStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem()
-        Dim CreatePyramidManhattanBarChartItem3 As DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem()
-        Dim CreatePyramidSideBySideFullStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem()
-        Dim CreatePyramidSideBySideStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem()
-        Dim CreatePyramidStackedBar3DChartItem3 As DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem()
-        Dim ChartControlCommandGalleryItemGroup2DLine3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine()
-        Dim CreateLineChartItem3 As DevExpress.XtraCharts.UI.CreateLineChartItem = New DevExpress.XtraCharts.UI.CreateLineChartItem()
-        Dim CreateFullStackedLineChartItem3 As DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem()
-        Dim CreateScatterLineChartItem3 As DevExpress.XtraCharts.UI.CreateScatterLineChartItem = New DevExpress.XtraCharts.UI.CreateScatterLineChartItem()
-        Dim CreateSplineChartItem3 As DevExpress.XtraCharts.UI.CreateSplineChartItem = New DevExpress.XtraCharts.UI.CreateSplineChartItem()
-        Dim CreateStackedLineChartItem3 As DevExpress.XtraCharts.UI.CreateStackedLineChartItem = New DevExpress.XtraCharts.UI.CreateStackedLineChartItem()
-        Dim CreateStepLineChartItem3 As DevExpress.XtraCharts.UI.CreateStepLineChartItem = New DevExpress.XtraCharts.UI.CreateStepLineChartItem()
-        Dim ChartControlCommandGalleryItemGroup3DLine3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine()
-        Dim CreateLine3DChartItem3 As DevExpress.XtraCharts.UI.CreateLine3DChartItem = New DevExpress.XtraCharts.UI.CreateLine3DChartItem()
-        Dim CreateFullStackedLine3DChartItem3 As DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem()
-        Dim CreateSpline3DChartItem3 As DevExpress.XtraCharts.UI.CreateSpline3DChartItem = New DevExpress.XtraCharts.UI.CreateSpline3DChartItem()
-        Dim CreateStackedLine3DChartItem3 As DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem()
-        Dim CreateStepLine3DChartItem3 As DevExpress.XtraCharts.UI.CreateStepLine3DChartItem = New DevExpress.XtraCharts.UI.CreateStepLine3DChartItem()
-        Dim ChartControlCommandGalleryItemGroup2DPie3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie()
-        Dim CreatePieChartItem3 As DevExpress.XtraCharts.UI.CreatePieChartItem = New DevExpress.XtraCharts.UI.CreatePieChartItem()
-        Dim CreateDoughnutChartItem3 As DevExpress.XtraCharts.UI.CreateDoughnutChartItem = New DevExpress.XtraCharts.UI.CreateDoughnutChartItem()
-        Dim CreateNestedDoughnutChartItem3 As DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem = New DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem()
-        Dim ChartControlCommandGalleryItemGroup3DPie3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie()
-        Dim CreatePie3DChartItem3 As DevExpress.XtraCharts.UI.CreatePie3DChartItem = New DevExpress.XtraCharts.UI.CreatePie3DChartItem()
-        Dim CreateDoughnut3DChartItem3 As DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem = New DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem()
-        Dim ChartControlCommandGalleryItemGroup2DBar3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar()
-        Dim CreateRotatedBarChartItem3 As DevExpress.XtraCharts.UI.CreateRotatedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedBarChartItem()
-        Dim CreateRotatedFullStackedBarChartItem3 As DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem()
-        Dim CreateRotatedSideBySideFullStackedBarChartItem3 As DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem()
-        Dim CreateRotatedSideBySideStackedBarChartItem3 As DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem()
-        Dim CreateRotatedStackedBarChartItem3 As DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem()
-        Dim ChartControlCommandGalleryItemGroup2DArea3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea()
-        Dim CreateAreaChartItem3 As DevExpress.XtraCharts.UI.CreateAreaChartItem = New DevExpress.XtraCharts.UI.CreateAreaChartItem()
-        Dim CreateFullStackedAreaChartItem3 As DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem()
-        Dim CreateFullStackedSplineAreaChartItem3 As DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem()
-        Dim CreateFullStackedStepAreaChartItem3 As DevExpress.XtraCharts.UI.CreateFullStackedStepAreaChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedStepAreaChartItem()
-        Dim CreateSplineAreaChartItem3 As DevExpress.XtraCharts.UI.CreateSplineAreaChartItem = New DevExpress.XtraCharts.UI.CreateSplineAreaChartItem()
-        Dim CreateStackedAreaChartItem3 As DevExpress.XtraCharts.UI.CreateStackedAreaChartItem = New DevExpress.XtraCharts.UI.CreateStackedAreaChartItem()
-        Dim CreateStackedStepAreaChartItem3 As DevExpress.XtraCharts.UI.CreateStackedStepAreaChartItem = New DevExpress.XtraCharts.UI.CreateStackedStepAreaChartItem()
-        Dim CreateStackedSplineAreaChartItem3 As DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem = New DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem()
-        Dim CreateStepAreaChartItem3 As DevExpress.XtraCharts.UI.CreateStepAreaChartItem = New DevExpress.XtraCharts.UI.CreateStepAreaChartItem()
-        Dim ChartControlCommandGalleryItemGroup3DArea3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea()
-        Dim CreateArea3DChartItem3 As DevExpress.XtraCharts.UI.CreateArea3DChartItem = New DevExpress.XtraCharts.UI.CreateArea3DChartItem()
-        Dim CreateFullStackedArea3DChartItem3 As DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem()
-        Dim CreateFullStackedSplineArea3DChartItem3 As DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem()
-        Dim CreateSplineArea3DChartItem3 As DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem = New DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem()
-        Dim CreateStackedArea3DChartItem3 As DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem()
-        Dim CreateStackedSplineArea3DChartItem3 As DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem()
-        Dim CreateStepArea3DChartItem3 As DevExpress.XtraCharts.UI.CreateStepArea3DChartItem = New DevExpress.XtraCharts.UI.CreateStepArea3DChartItem()
-        Dim ChartControlCommandGalleryItemGroupPoint3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint()
-        Dim CreatePointChartItem3 As DevExpress.XtraCharts.UI.CreatePointChartItem = New DevExpress.XtraCharts.UI.CreatePointChartItem()
-        Dim CreateBubbleChartItem3 As DevExpress.XtraCharts.UI.CreateBubbleChartItem = New DevExpress.XtraCharts.UI.CreateBubbleChartItem()
-        Dim ChartControlCommandGalleryItemGroupFunnel3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel()
-        Dim CreateFunnelChartItem3 As DevExpress.XtraCharts.UI.CreateFunnelChartItem = New DevExpress.XtraCharts.UI.CreateFunnelChartItem()
-        Dim CreateFunnel3DChartItem3 As DevExpress.XtraCharts.UI.CreateFunnel3DChartItem = New DevExpress.XtraCharts.UI.CreateFunnel3DChartItem()
-        Dim ChartControlCommandGalleryItemGroupFinancial3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial()
-        Dim CreateStockChartItem3 As DevExpress.XtraCharts.UI.CreateStockChartItem = New DevExpress.XtraCharts.UI.CreateStockChartItem()
-        Dim CreateCandleStickChartItem3 As DevExpress.XtraCharts.UI.CreateCandleStickChartItem = New DevExpress.XtraCharts.UI.CreateCandleStickChartItem()
-        Dim ChartControlCommandGalleryItemGroupRadar3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar()
-        Dim CreateRadarPointChartItem3 As DevExpress.XtraCharts.UI.CreateRadarPointChartItem = New DevExpress.XtraCharts.UI.CreateRadarPointChartItem()
-        Dim CreateRadarLineChartItem3 As DevExpress.XtraCharts.UI.CreateRadarLineChartItem = New DevExpress.XtraCharts.UI.CreateRadarLineChartItem()
-        Dim CreateRadarAreaChartItem3 As DevExpress.XtraCharts.UI.CreateRadarAreaChartItem = New DevExpress.XtraCharts.UI.CreateRadarAreaChartItem()
-        Dim CreateRadarRangeAreaChartItem3 As DevExpress.XtraCharts.UI.CreateRadarRangeAreaChartItem = New DevExpress.XtraCharts.UI.CreateRadarRangeAreaChartItem()
-        Dim CreateScatterRadarLineChartItem3 As DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem = New DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem()
-        Dim ChartControlCommandGalleryItemGroupPolar3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar()
-        Dim CreatePolarPointChartItem3 As DevExpress.XtraCharts.UI.CreatePolarPointChartItem = New DevExpress.XtraCharts.UI.CreatePolarPointChartItem()
-        Dim CreatePolarLineChartItem3 As DevExpress.XtraCharts.UI.CreatePolarLineChartItem = New DevExpress.XtraCharts.UI.CreatePolarLineChartItem()
-        Dim CreatePolarAreaChartItem3 As DevExpress.XtraCharts.UI.CreatePolarAreaChartItem = New DevExpress.XtraCharts.UI.CreatePolarAreaChartItem()
-        Dim CreatePolarRangeAreaChartItem3 As DevExpress.XtraCharts.UI.CreatePolarRangeAreaChartItem = New DevExpress.XtraCharts.UI.CreatePolarRangeAreaChartItem()
-        Dim CreateScatterPolarLineChartItem3 As DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem = New DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem()
-        Dim ChartControlCommandGalleryItemGroupRange3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange()
-        Dim CreateRangeBarChartItem3 As DevExpress.XtraCharts.UI.CreateRangeBarChartItem = New DevExpress.XtraCharts.UI.CreateRangeBarChartItem()
-        Dim CreateSideBySideRangeBarChartItem3 As DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem()
-        Dim CreateRangeAreaChartItem3 As DevExpress.XtraCharts.UI.CreateRangeAreaChartItem = New DevExpress.XtraCharts.UI.CreateRangeAreaChartItem()
-        Dim CreateRangeArea3DChartItem3 As DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem = New DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem()
-        Dim ChartControlCommandGalleryItemGroupGantt3 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt()
-        Dim CreateGanttChartItem3 As DevExpress.XtraCharts.UI.CreateGanttChartItem = New DevExpress.XtraCharts.UI.CreateGanttChartItem()
-        Dim CreateSideBySideGanttChartItem3 As DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem()
-        Dim SkinPaddingEdges5 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
-        Dim SkinPaddingEdges6 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
+        Dim FieldInfo1 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo2 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo3 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo4 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo5 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo6 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo7 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo8 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo9 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo10 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo11 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo12 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo13 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo14 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo15 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim FieldInfo16 As DevExpress.DataAccess.Excel.FieldInfo = New DevExpress.DataAccess.Excel.FieldInfo()
+        Dim ExcelWorksheetSettings1 As DevExpress.DataAccess.Excel.ExcelWorksheetSettings = New DevExpress.DataAccess.Excel.ExcelWorksheetSettings()
+        Dim ExcelSourceOptions1 As DevExpress.DataAccess.Excel.ExcelSourceOptions = New DevExpress.DataAccess.Excel.ExcelSourceOptions(ExcelWorksheetSettings1)
+        Dim ChartControlCommandGalleryItemGroup2DColumn1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn()
+        Dim CreateBarChartItem1 As DevExpress.XtraCharts.UI.CreateBarChartItem = New DevExpress.XtraCharts.UI.CreateBarChartItem()
+        Dim CreateFullStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem()
+        Dim CreateSideBySideFullStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem()
+        Dim CreateSideBySideStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem()
+        Dim CreateStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateStackedBarChartItem()
+        Dim ChartControlCommandGalleryItemGroup3DColumn1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn()
+        Dim CreateBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateBar3DChartItem = New DevExpress.XtraCharts.UI.CreateBar3DChartItem()
+        Dim CreateFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem()
+        Dim CreateManhattanBarChartItem1 As DevExpress.XtraCharts.UI.CreateManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreateManhattanBarChartItem()
+        Dim CreateSideBySideFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem()
+        Dim CreateSideBySideStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem()
+        Dim CreateStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupCylinderColumn1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn()
+        Dim CreateCylinderBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem()
+        Dim CreateCylinderFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem()
+        Dim CreateCylinderManhattanBarChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem()
+        Dim CreateCylinderSideBySideFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem()
+        Dim CreateCylinderSideBySideStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem()
+        Dim CreateCylinderStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupConeColumn1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn()
+        Dim CreateConeBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateConeBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeBar3DChartItem()
+        Dim CreateConeFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem()
+        Dim CreateConeManhattanBarChartItem1 As DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem()
+        Dim CreateConeSideBySideFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem()
+        Dim CreateConeSideBySideStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem()
+        Dim CreateConeStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupPyramidColumn1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn()
+        Dim CreatePyramidBar3DChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem()
+        Dim CreatePyramidFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem()
+        Dim CreatePyramidManhattanBarChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem()
+        Dim CreatePyramidSideBySideFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem()
+        Dim CreatePyramidSideBySideStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem()
+        Dim CreatePyramidStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem()
+        Dim ChartControlCommandGalleryItemGroup2DLine1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine()
+        Dim CreateLineChartItem1 As DevExpress.XtraCharts.UI.CreateLineChartItem = New DevExpress.XtraCharts.UI.CreateLineChartItem()
+        Dim CreateFullStackedLineChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem()
+        Dim CreateScatterLineChartItem1 As DevExpress.XtraCharts.UI.CreateScatterLineChartItem = New DevExpress.XtraCharts.UI.CreateScatterLineChartItem()
+        Dim CreateSplineChartItem1 As DevExpress.XtraCharts.UI.CreateSplineChartItem = New DevExpress.XtraCharts.UI.CreateSplineChartItem()
+        Dim CreateStackedLineChartItem1 As DevExpress.XtraCharts.UI.CreateStackedLineChartItem = New DevExpress.XtraCharts.UI.CreateStackedLineChartItem()
+        Dim CreateStepLineChartItem1 As DevExpress.XtraCharts.UI.CreateStepLineChartItem = New DevExpress.XtraCharts.UI.CreateStepLineChartItem()
+        Dim ChartControlCommandGalleryItemGroup3DLine1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine()
+        Dim CreateLine3DChartItem1 As DevExpress.XtraCharts.UI.CreateLine3DChartItem = New DevExpress.XtraCharts.UI.CreateLine3DChartItem()
+        Dim CreateFullStackedLine3DChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem()
+        Dim CreateSpline3DChartItem1 As DevExpress.XtraCharts.UI.CreateSpline3DChartItem = New DevExpress.XtraCharts.UI.CreateSpline3DChartItem()
+        Dim CreateStackedLine3DChartItem1 As DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem()
+        Dim CreateStepLine3DChartItem1 As DevExpress.XtraCharts.UI.CreateStepLine3DChartItem = New DevExpress.XtraCharts.UI.CreateStepLine3DChartItem()
+        Dim ChartControlCommandGalleryItemGroup2DPie1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie()
+        Dim CreatePieChartItem1 As DevExpress.XtraCharts.UI.CreatePieChartItem = New DevExpress.XtraCharts.UI.CreatePieChartItem()
+        Dim CreateDoughnutChartItem1 As DevExpress.XtraCharts.UI.CreateDoughnutChartItem = New DevExpress.XtraCharts.UI.CreateDoughnutChartItem()
+        Dim CreateNestedDoughnutChartItem1 As DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem = New DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem()
+        Dim ChartControlCommandGalleryItemGroup3DPie1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie()
+        Dim CreatePie3DChartItem1 As DevExpress.XtraCharts.UI.CreatePie3DChartItem = New DevExpress.XtraCharts.UI.CreatePie3DChartItem()
+        Dim CreateDoughnut3DChartItem1 As DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem = New DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem()
+        Dim ChartControlCommandGalleryItemGroup2DBar1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar()
+        Dim CreateRotatedBarChartItem1 As DevExpress.XtraCharts.UI.CreateRotatedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedBarChartItem()
+        Dim CreateRotatedFullStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem()
+        Dim CreateRotatedSideBySideFullStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem()
+        Dim CreateRotatedSideBySideStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem()
+        Dim CreateRotatedStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem()
+        Dim ChartControlCommandGalleryItemGroup2DArea1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea()
+        Dim CreateAreaChartItem1 As DevExpress.XtraCharts.UI.CreateAreaChartItem = New DevExpress.XtraCharts.UI.CreateAreaChartItem()
+        Dim CreateFullStackedAreaChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem()
+        Dim CreateFullStackedSplineAreaChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem()
+        Dim CreateFullStackedStepAreaChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedStepAreaChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedStepAreaChartItem()
+        Dim CreateSplineAreaChartItem1 As DevExpress.XtraCharts.UI.CreateSplineAreaChartItem = New DevExpress.XtraCharts.UI.CreateSplineAreaChartItem()
+        Dim CreateStackedAreaChartItem1 As DevExpress.XtraCharts.UI.CreateStackedAreaChartItem = New DevExpress.XtraCharts.UI.CreateStackedAreaChartItem()
+        Dim CreateStackedStepAreaChartItem1 As DevExpress.XtraCharts.UI.CreateStackedStepAreaChartItem = New DevExpress.XtraCharts.UI.CreateStackedStepAreaChartItem()
+        Dim CreateStackedSplineAreaChartItem1 As DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem = New DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem()
+        Dim CreateStepAreaChartItem1 As DevExpress.XtraCharts.UI.CreateStepAreaChartItem = New DevExpress.XtraCharts.UI.CreateStepAreaChartItem()
+        Dim ChartControlCommandGalleryItemGroup3DArea1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea()
+        Dim CreateArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateArea3DChartItem = New DevExpress.XtraCharts.UI.CreateArea3DChartItem()
+        Dim CreateFullStackedArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem()
+        Dim CreateFullStackedSplineArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem()
+        Dim CreateSplineArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem = New DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem()
+        Dim CreateStackedArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem()
+        Dim CreateStackedSplineArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem()
+        Dim CreateStepArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateStepArea3DChartItem = New DevExpress.XtraCharts.UI.CreateStepArea3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupPoint1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint()
+        Dim CreatePointChartItem1 As DevExpress.XtraCharts.UI.CreatePointChartItem = New DevExpress.XtraCharts.UI.CreatePointChartItem()
+        Dim CreateBubbleChartItem1 As DevExpress.XtraCharts.UI.CreateBubbleChartItem = New DevExpress.XtraCharts.UI.CreateBubbleChartItem()
+        Dim ChartControlCommandGalleryItemGroupFunnel1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel()
+        Dim CreateFunnelChartItem1 As DevExpress.XtraCharts.UI.CreateFunnelChartItem = New DevExpress.XtraCharts.UI.CreateFunnelChartItem()
+        Dim CreateFunnel3DChartItem1 As DevExpress.XtraCharts.UI.CreateFunnel3DChartItem = New DevExpress.XtraCharts.UI.CreateFunnel3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupFinancial1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial()
+        Dim CreateStockChartItem1 As DevExpress.XtraCharts.UI.CreateStockChartItem = New DevExpress.XtraCharts.UI.CreateStockChartItem()
+        Dim CreateCandleStickChartItem1 As DevExpress.XtraCharts.UI.CreateCandleStickChartItem = New DevExpress.XtraCharts.UI.CreateCandleStickChartItem()
+        Dim ChartControlCommandGalleryItemGroupRadar1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar()
+        Dim CreateRadarPointChartItem1 As DevExpress.XtraCharts.UI.CreateRadarPointChartItem = New DevExpress.XtraCharts.UI.CreateRadarPointChartItem()
+        Dim CreateRadarLineChartItem1 As DevExpress.XtraCharts.UI.CreateRadarLineChartItem = New DevExpress.XtraCharts.UI.CreateRadarLineChartItem()
+        Dim CreateRadarAreaChartItem1 As DevExpress.XtraCharts.UI.CreateRadarAreaChartItem = New DevExpress.XtraCharts.UI.CreateRadarAreaChartItem()
+        Dim CreateRadarRangeAreaChartItem1 As DevExpress.XtraCharts.UI.CreateRadarRangeAreaChartItem = New DevExpress.XtraCharts.UI.CreateRadarRangeAreaChartItem()
+        Dim CreateScatterRadarLineChartItem1 As DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem = New DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem()
+        Dim ChartControlCommandGalleryItemGroupPolar1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar()
+        Dim CreatePolarPointChartItem1 As DevExpress.XtraCharts.UI.CreatePolarPointChartItem = New DevExpress.XtraCharts.UI.CreatePolarPointChartItem()
+        Dim CreatePolarLineChartItem1 As DevExpress.XtraCharts.UI.CreatePolarLineChartItem = New DevExpress.XtraCharts.UI.CreatePolarLineChartItem()
+        Dim CreatePolarAreaChartItem1 As DevExpress.XtraCharts.UI.CreatePolarAreaChartItem = New DevExpress.XtraCharts.UI.CreatePolarAreaChartItem()
+        Dim CreatePolarRangeAreaChartItem1 As DevExpress.XtraCharts.UI.CreatePolarRangeAreaChartItem = New DevExpress.XtraCharts.UI.CreatePolarRangeAreaChartItem()
+        Dim CreateScatterPolarLineChartItem1 As DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem = New DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem()
+        Dim ChartControlCommandGalleryItemGroupRange1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange()
+        Dim CreateRangeBarChartItem1 As DevExpress.XtraCharts.UI.CreateRangeBarChartItem = New DevExpress.XtraCharts.UI.CreateRangeBarChartItem()
+        Dim CreateSideBySideRangeBarChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem()
+        Dim CreateRangeAreaChartItem1 As DevExpress.XtraCharts.UI.CreateRangeAreaChartItem = New DevExpress.XtraCharts.UI.CreateRangeAreaChartItem()
+        Dim CreateRangeArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem = New DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupGantt1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt()
+        Dim CreateGanttChartItem1 As DevExpress.XtraCharts.UI.CreateGanttChartItem = New DevExpress.XtraCharts.UI.CreateGanttChartItem()
+        Dim CreateSideBySideGanttChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem()
+        Dim SkinPaddingEdges1 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
+        Dim SkinPaddingEdges2 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
@@ -391,7 +391,7 @@ Partial Class OrpakCustomerTrans
         Me.GridControl1.Location = New System.Drawing.Point(24, 45)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(1180, 446)
+        Me.GridControl1.Size = New System.Drawing.Size(1176, 449)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -533,45 +533,45 @@ Partial Class OrpakCustomerTrans
         Me.ExcelDataSource1.FileName = "Z:\CRLite\DATA.xlsm"
         Me.ExcelDataSource1.Name = "ExcelDataSource1"
         Me.ExcelDataSource1.ResultSchemaSerializable = resources.GetString("ExcelDataSource1.ResultSchemaSerializable")
-        FieldInfo33.Name = "no"
-        FieldInfo33.Type = GetType(String)
-        FieldInfo34.Name = "SerNo"
-        FieldInfo34.Type = GetType(String)
-        FieldInfo35.Name = "Date"
-        FieldInfo35.Type = GetType(String)
-        FieldInfo36.Name = "Time"
-        FieldInfo36.Type = GetType(String)
-        FieldInfo37.Name = "Fleet"
-        FieldInfo37.Type = GetType(String)
-        FieldInfo38.Name = "Vehicle Number"
-        FieldInfo38.Type = GetType(String)
-        FieldInfo39.Name = "Product"
-        FieldInfo39.Type = GetType(String)
-        FieldInfo40.Name = "Quantity"
-        FieldInfo40.Type = GetType(Double)
-        FieldInfo41.Name = "TotalSale"
-        FieldInfo41.Type = GetType(Double)
-        FieldInfo42.Name = "StationName"
-        FieldInfo42.Type = GetType(String)
-        FieldInfo43.Name = "Receipt"
-        FieldInfo43.Type = GetType(String)
-        FieldInfo44.Name = "FleetCode"
-        FieldInfo44.Type = GetType(Double)
-        FieldInfo45.Name = "DeviceName"
-        FieldInfo45.Type = GetType(String)
-        FieldInfo46.Name = "month"
-        FieldInfo46.Type = GetType(Double)
-        FieldInfo47.Name = "Year"
-        FieldInfo47.Type = GetType(Double)
-        FieldInfo48.Name = "Odometer"
-        FieldInfo48.Type = GetType(String)
-        Me.ExcelDataSource1.Schema.AddRange(New DevExpress.DataAccess.Excel.FieldInfo() {FieldInfo33, FieldInfo34, FieldInfo35, FieldInfo36, FieldInfo37, FieldInfo38, FieldInfo39, FieldInfo40, FieldInfo41, FieldInfo42, FieldInfo43, FieldInfo44, FieldInfo45, FieldInfo46, FieldInfo47, FieldInfo48})
-        ExcelWorksheetSettings3.CellRange = Nothing
-        ExcelWorksheetSettings3.WorksheetName = "DATA"
-        ExcelSourceOptions3.ImportSettings = ExcelWorksheetSettings3
-        ExcelSourceOptions3.SkipHiddenColumns = False
-        ExcelSourceOptions3.SkipHiddenRows = False
-        Me.ExcelDataSource1.SourceOptions = ExcelSourceOptions3
+        FieldInfo1.Name = "no"
+        FieldInfo1.Type = GetType(String)
+        FieldInfo2.Name = "SerNo"
+        FieldInfo2.Type = GetType(String)
+        FieldInfo3.Name = "Date"
+        FieldInfo3.Type = GetType(String)
+        FieldInfo4.Name = "Time"
+        FieldInfo4.Type = GetType(String)
+        FieldInfo5.Name = "Fleet"
+        FieldInfo5.Type = GetType(String)
+        FieldInfo6.Name = "Vehicle Number"
+        FieldInfo6.Type = GetType(String)
+        FieldInfo7.Name = "Product"
+        FieldInfo7.Type = GetType(String)
+        FieldInfo8.Name = "Quantity"
+        FieldInfo8.Type = GetType(Double)
+        FieldInfo9.Name = "TotalSale"
+        FieldInfo9.Type = GetType(Double)
+        FieldInfo10.Name = "StationName"
+        FieldInfo10.Type = GetType(String)
+        FieldInfo11.Name = "Receipt"
+        FieldInfo11.Type = GetType(String)
+        FieldInfo12.Name = "FleetCode"
+        FieldInfo12.Type = GetType(Double)
+        FieldInfo13.Name = "DeviceName"
+        FieldInfo13.Type = GetType(String)
+        FieldInfo14.Name = "month"
+        FieldInfo14.Type = GetType(Double)
+        FieldInfo15.Name = "Year"
+        FieldInfo15.Type = GetType(Double)
+        FieldInfo16.Name = "Odometer"
+        FieldInfo16.Type = GetType(String)
+        Me.ExcelDataSource1.Schema.AddRange(New DevExpress.DataAccess.Excel.FieldInfo() {FieldInfo1, FieldInfo2, FieldInfo3, FieldInfo4, FieldInfo5, FieldInfo6, FieldInfo7, FieldInfo8, FieldInfo9, FieldInfo10, FieldInfo11, FieldInfo12, FieldInfo13, FieldInfo14, FieldInfo15, FieldInfo16})
+        ExcelWorksheetSettings1.CellRange = Nothing
+        ExcelWorksheetSettings1.WorksheetName = "DATA"
+        ExcelSourceOptions1.ImportSettings = ExcelWorksheetSettings1
+        ExcelSourceOptions1.SkipHiddenColumns = False
+        ExcelSourceOptions1.SkipHiddenRows = False
+        Me.ExcelDataSource1.SourceOptions = ExcelSourceOptions1
         '
         'PanelControl2
         '
@@ -604,7 +604,7 @@ Partial Class OrpakCustomerTrans
         Me.NavigationPage1.Caption = "حركات المركبات"
         Me.NavigationPage1.Controls.Add(Me.LayoutControl1)
         Me.NavigationPage1.Name = "NavigationPage1"
-        Me.NavigationPage1.Size = New System.Drawing.Size(1228, 515)
+        Me.NavigationPage1.Size = New System.Drawing.Size(1224, 518)
         '
         'LayoutControl1
         '
@@ -616,7 +616,7 @@ Partial Class OrpakCustomerTrans
         Me.LayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(1338, 150, 450, 400)
         Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(1228, 515)
+        Me.LayoutControl1.Size = New System.Drawing.Size(1224, 518)
         Me.LayoutControl1.TabIndex = 1
         Me.LayoutControl1.Text = "LayoutControl1"
         '
@@ -626,7 +626,7 @@ Partial Class OrpakCustomerTrans
         Me.GridControl2.MainView = Me.GridView2
         Me.GridControl2.MenuManager = Me.BarManager1
         Me.GridControl2.Name = "GridControl2"
-        Me.GridControl2.Size = New System.Drawing.Size(1180, 446)
+        Me.GridControl2.Size = New System.Drawing.Size(1176, 449)
         Me.GridControl2.TabIndex = 2
         Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -728,12 +728,12 @@ Partial Class OrpakCustomerTrans
         '
         Me.CommandBarGalleryDropDown1.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown1.Gallery.ColumnCount = 4
-        ChartControlCommandGalleryItemGroup2DColumn3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBarChartItem3, CreateFullStackedBarChartItem3, CreateSideBySideFullStackedBarChartItem3, CreateSideBySideStackedBarChartItem3, CreateStackedBarChartItem3})
-        ChartControlCommandGalleryItemGroup3DColumn3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBar3DChartItem3, CreateFullStackedBar3DChartItem3, CreateManhattanBarChartItem3, CreateSideBySideFullStackedBar3DChartItem3, CreateSideBySideStackedBar3DChartItem3, CreateStackedBar3DChartItem3})
-        ChartControlCommandGalleryItemGroupCylinderColumn3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateCylinderBar3DChartItem3, CreateCylinderFullStackedBar3DChartItem3, CreateCylinderManhattanBarChartItem3, CreateCylinderSideBySideFullStackedBar3DChartItem3, CreateCylinderSideBySideStackedBar3DChartItem3, CreateCylinderStackedBar3DChartItem3})
-        ChartControlCommandGalleryItemGroupConeColumn3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateConeBar3DChartItem3, CreateConeFullStackedBar3DChartItem3, CreateConeManhattanBarChartItem3, CreateConeSideBySideFullStackedBar3DChartItem3, CreateConeSideBySideStackedBar3DChartItem3, CreateConeStackedBar3DChartItem3})
-        ChartControlCommandGalleryItemGroupPyramidColumn3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePyramidBar3DChartItem3, CreatePyramidFullStackedBar3DChartItem3, CreatePyramidManhattanBarChartItem3, CreatePyramidSideBySideFullStackedBar3DChartItem3, CreatePyramidSideBySideStackedBar3DChartItem3, CreatePyramidStackedBar3DChartItem3})
-        Me.CommandBarGalleryDropDown1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DColumn3, ChartControlCommandGalleryItemGroup3DColumn3, ChartControlCommandGalleryItemGroupCylinderColumn3, ChartControlCommandGalleryItemGroupConeColumn3, ChartControlCommandGalleryItemGroupPyramidColumn3})
+        ChartControlCommandGalleryItemGroup2DColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBarChartItem1, CreateFullStackedBarChartItem1, CreateSideBySideFullStackedBarChartItem1, CreateSideBySideStackedBarChartItem1, CreateStackedBarChartItem1})
+        ChartControlCommandGalleryItemGroup3DColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBar3DChartItem1, CreateFullStackedBar3DChartItem1, CreateManhattanBarChartItem1, CreateSideBySideFullStackedBar3DChartItem1, CreateSideBySideStackedBar3DChartItem1, CreateStackedBar3DChartItem1})
+        ChartControlCommandGalleryItemGroupCylinderColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateCylinderBar3DChartItem1, CreateCylinderFullStackedBar3DChartItem1, CreateCylinderManhattanBarChartItem1, CreateCylinderSideBySideFullStackedBar3DChartItem1, CreateCylinderSideBySideStackedBar3DChartItem1, CreateCylinderStackedBar3DChartItem1})
+        ChartControlCommandGalleryItemGroupConeColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateConeBar3DChartItem1, CreateConeFullStackedBar3DChartItem1, CreateConeManhattanBarChartItem1, CreateConeSideBySideFullStackedBar3DChartItem1, CreateConeSideBySideStackedBar3DChartItem1, CreateConeStackedBar3DChartItem1})
+        ChartControlCommandGalleryItemGroupPyramidColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePyramidBar3DChartItem1, CreatePyramidFullStackedBar3DChartItem1, CreatePyramidManhattanBarChartItem1, CreatePyramidSideBySideFullStackedBar3DChartItem1, CreatePyramidSideBySideStackedBar3DChartItem1, CreatePyramidStackedBar3DChartItem1})
+        Me.CommandBarGalleryDropDown1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DColumn1, ChartControlCommandGalleryItemGroup3DColumn1, ChartControlCommandGalleryItemGroupCylinderColumn1, ChartControlCommandGalleryItemGroupConeColumn1, ChartControlCommandGalleryItemGroupPyramidColumn1})
         Me.CommandBarGalleryDropDown1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown1.Gallery.RowCount = 10
         Me.CommandBarGalleryDropDown1.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -753,9 +753,9 @@ Partial Class OrpakCustomerTrans
         '
         Me.CommandBarGalleryDropDown2.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown2.Gallery.ColumnCount = 3
-        ChartControlCommandGalleryItemGroup2DLine3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateLineChartItem3, CreateFullStackedLineChartItem3, CreateScatterLineChartItem3, CreateSplineChartItem3, CreateStackedLineChartItem3, CreateStepLineChartItem3})
-        ChartControlCommandGalleryItemGroup3DLine3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateLine3DChartItem3, CreateFullStackedLine3DChartItem3, CreateSpline3DChartItem3, CreateStackedLine3DChartItem3, CreateStepLine3DChartItem3})
-        Me.CommandBarGalleryDropDown2.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DLine3, ChartControlCommandGalleryItemGroup3DLine3})
+        ChartControlCommandGalleryItemGroup2DLine1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateLineChartItem1, CreateFullStackedLineChartItem1, CreateScatterLineChartItem1, CreateSplineChartItem1, CreateStackedLineChartItem1, CreateStepLineChartItem1})
+        ChartControlCommandGalleryItemGroup3DLine1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateLine3DChartItem1, CreateFullStackedLine3DChartItem1, CreateSpline3DChartItem1, CreateStackedLine3DChartItem1, CreateStepLine3DChartItem1})
+        Me.CommandBarGalleryDropDown2.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DLine1, ChartControlCommandGalleryItemGroup3DLine1})
         Me.CommandBarGalleryDropDown2.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown2.Gallery.RowCount = 4
         Me.CommandBarGalleryDropDown2.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -775,9 +775,9 @@ Partial Class OrpakCustomerTrans
         '
         Me.CommandBarGalleryDropDown3.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown3.Gallery.ColumnCount = 3
-        ChartControlCommandGalleryItemGroup2DPie3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePieChartItem3, CreateDoughnutChartItem3, CreateNestedDoughnutChartItem3})
-        ChartControlCommandGalleryItemGroup3DPie3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePie3DChartItem3, CreateDoughnut3DChartItem3})
-        Me.CommandBarGalleryDropDown3.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DPie3, ChartControlCommandGalleryItemGroup3DPie3})
+        ChartControlCommandGalleryItemGroup2DPie1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePieChartItem1, CreateDoughnutChartItem1, CreateNestedDoughnutChartItem1})
+        ChartControlCommandGalleryItemGroup3DPie1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePie3DChartItem1, CreateDoughnut3DChartItem1})
+        Me.CommandBarGalleryDropDown3.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DPie1, ChartControlCommandGalleryItemGroup3DPie1})
         Me.CommandBarGalleryDropDown3.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown3.Gallery.RowCount = 2
         Me.CommandBarGalleryDropDown3.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -797,8 +797,8 @@ Partial Class OrpakCustomerTrans
         '
         Me.CommandBarGalleryDropDown4.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown4.Gallery.ColumnCount = 3
-        ChartControlCommandGalleryItemGroup2DBar3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRotatedBarChartItem3, CreateRotatedFullStackedBarChartItem3, CreateRotatedSideBySideFullStackedBarChartItem3, CreateRotatedSideBySideStackedBarChartItem3, CreateRotatedStackedBarChartItem3})
-        Me.CommandBarGalleryDropDown4.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DBar3})
+        ChartControlCommandGalleryItemGroup2DBar1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRotatedBarChartItem1, CreateRotatedFullStackedBarChartItem1, CreateRotatedSideBySideFullStackedBarChartItem1, CreateRotatedSideBySideStackedBarChartItem1, CreateRotatedStackedBarChartItem1})
+        Me.CommandBarGalleryDropDown4.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DBar1})
         Me.CommandBarGalleryDropDown4.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown4.Gallery.RowCount = 2
         Me.CommandBarGalleryDropDown4.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -818,9 +818,9 @@ Partial Class OrpakCustomerTrans
         '
         Me.CommandBarGalleryDropDown5.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown5.Gallery.ColumnCount = 4
-        ChartControlCommandGalleryItemGroup2DArea3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateAreaChartItem3, CreateFullStackedAreaChartItem3, CreateFullStackedSplineAreaChartItem3, CreateFullStackedStepAreaChartItem3, CreateSplineAreaChartItem3, CreateStackedAreaChartItem3, CreateStackedStepAreaChartItem3, CreateStackedSplineAreaChartItem3, CreateStepAreaChartItem3})
-        ChartControlCommandGalleryItemGroup3DArea3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateArea3DChartItem3, CreateFullStackedArea3DChartItem3, CreateFullStackedSplineArea3DChartItem3, CreateSplineArea3DChartItem3, CreateStackedArea3DChartItem3, CreateStackedSplineArea3DChartItem3, CreateStepArea3DChartItem3})
-        Me.CommandBarGalleryDropDown5.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DArea3, ChartControlCommandGalleryItemGroup3DArea3})
+        ChartControlCommandGalleryItemGroup2DArea1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateAreaChartItem1, CreateFullStackedAreaChartItem1, CreateFullStackedSplineAreaChartItem1, CreateFullStackedStepAreaChartItem1, CreateSplineAreaChartItem1, CreateStackedAreaChartItem1, CreateStackedStepAreaChartItem1, CreateStackedSplineAreaChartItem1, CreateStepAreaChartItem1})
+        ChartControlCommandGalleryItemGroup3DArea1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateArea3DChartItem1, CreateFullStackedArea3DChartItem1, CreateFullStackedSplineArea3DChartItem1, CreateSplineArea3DChartItem1, CreateStackedArea3DChartItem1, CreateStackedSplineArea3DChartItem1, CreateStepArea3DChartItem1})
+        Me.CommandBarGalleryDropDown5.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DArea1, ChartControlCommandGalleryItemGroup3DArea1})
         Me.CommandBarGalleryDropDown5.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown5.Gallery.RowCount = 5
         Me.CommandBarGalleryDropDown5.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -840,14 +840,14 @@ Partial Class OrpakCustomerTrans
         '
         Me.CommandBarGalleryDropDown6.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown6.Gallery.ColumnCount = 4
-        ChartControlCommandGalleryItemGroupPoint3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePointChartItem3, CreateBubbleChartItem3})
-        ChartControlCommandGalleryItemGroupFunnel3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateFunnelChartItem3, CreateFunnel3DChartItem3})
-        ChartControlCommandGalleryItemGroupFinancial3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateStockChartItem3, CreateCandleStickChartItem3})
-        ChartControlCommandGalleryItemGroupRadar3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRadarPointChartItem3, CreateRadarLineChartItem3, CreateRadarAreaChartItem3, CreateRadarRangeAreaChartItem3, CreateScatterRadarLineChartItem3})
-        ChartControlCommandGalleryItemGroupPolar3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePolarPointChartItem3, CreatePolarLineChartItem3, CreatePolarAreaChartItem3, CreatePolarRangeAreaChartItem3, CreateScatterPolarLineChartItem3})
-        ChartControlCommandGalleryItemGroupRange3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRangeBarChartItem3, CreateSideBySideRangeBarChartItem3, CreateRangeAreaChartItem3, CreateRangeArea3DChartItem3})
-        ChartControlCommandGalleryItemGroupGantt3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateGanttChartItem3, CreateSideBySideGanttChartItem3})
-        Me.CommandBarGalleryDropDown6.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroupPoint3, ChartControlCommandGalleryItemGroupFunnel3, ChartControlCommandGalleryItemGroupFinancial3, ChartControlCommandGalleryItemGroupRadar3, ChartControlCommandGalleryItemGroupPolar3, ChartControlCommandGalleryItemGroupRange3, ChartControlCommandGalleryItemGroupGantt3})
+        ChartControlCommandGalleryItemGroupPoint1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePointChartItem1, CreateBubbleChartItem1})
+        ChartControlCommandGalleryItemGroupFunnel1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateFunnelChartItem1, CreateFunnel3DChartItem1})
+        ChartControlCommandGalleryItemGroupFinancial1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateStockChartItem1, CreateCandleStickChartItem1})
+        ChartControlCommandGalleryItemGroupRadar1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRadarPointChartItem1, CreateRadarLineChartItem1, CreateRadarAreaChartItem1, CreateRadarRangeAreaChartItem1, CreateScatterRadarLineChartItem1})
+        ChartControlCommandGalleryItemGroupPolar1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePolarPointChartItem1, CreatePolarLineChartItem1, CreatePolarAreaChartItem1, CreatePolarRangeAreaChartItem1, CreateScatterPolarLineChartItem1})
+        ChartControlCommandGalleryItemGroupRange1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRangeBarChartItem1, CreateSideBySideRangeBarChartItem1, CreateRangeAreaChartItem1, CreateRangeArea3DChartItem1})
+        ChartControlCommandGalleryItemGroupGantt1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateGanttChartItem1, CreateSideBySideGanttChartItem1})
+        Me.CommandBarGalleryDropDown6.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroupPoint1, ChartControlCommandGalleryItemGroupFunnel1, ChartControlCommandGalleryItemGroupFinancial1, ChartControlCommandGalleryItemGroupRadar1, ChartControlCommandGalleryItemGroupPolar1, ChartControlCommandGalleryItemGroupRange1, ChartControlCommandGalleryItemGroupGantt1})
         Me.CommandBarGalleryDropDown6.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown6.Gallery.RowCount = 9
         Me.CommandBarGalleryDropDown6.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -888,12 +888,12 @@ Partial Class OrpakCustomerTrans
         Me.CommandBarGalleryDropDown7.Gallery.ImageSize = New System.Drawing.Size(160, 10)
         Me.CommandBarGalleryDropDown7.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft
         Me.CommandBarGalleryDropDown7.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Right
-        SkinPaddingEdges5.Bottom = -3
-        SkinPaddingEdges5.Top = -3
-        Me.CommandBarGalleryDropDown7.Gallery.ItemImagePadding = SkinPaddingEdges5
-        SkinPaddingEdges6.Bottom = -3
-        SkinPaddingEdges6.Top = -3
-        Me.CommandBarGalleryDropDown7.Gallery.ItemTextPadding = SkinPaddingEdges6
+        SkinPaddingEdges1.Bottom = -3
+        SkinPaddingEdges1.Top = -3
+        Me.CommandBarGalleryDropDown7.Gallery.ItemImagePadding = SkinPaddingEdges1
+        SkinPaddingEdges2.Bottom = -3
+        SkinPaddingEdges2.Top = -3
+        Me.CommandBarGalleryDropDown7.Gallery.ItemTextPadding = SkinPaddingEdges2
         Me.CommandBarGalleryDropDown7.Gallery.RowCount = 10
         Me.CommandBarGalleryDropDown7.Gallery.ShowGroupCaption = False
         Me.CommandBarGalleryDropDown7.Gallery.ShowItemText = True
@@ -1022,7 +1022,7 @@ Partial Class OrpakCustomerTrans
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.tabbedControlGroup1})
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "Root"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1228, 515)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1224, 518)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'tabbedControlGroup1
@@ -1032,7 +1032,7 @@ Partial Class OrpakCustomerTrans
         Me.tabbedControlGroup1.Name = "tabbedControlGroup1"
         Me.tabbedControlGroup1.SelectedTabPage = Me.layoutControlGroup3
         Me.tabbedControlGroup1.SelectedTabPageIndex = 0
-        Me.tabbedControlGroup1.Size = New System.Drawing.Size(1208, 495)
+        Me.tabbedControlGroup1.Size = New System.Drawing.Size(1204, 498)
         Me.tabbedControlGroup1.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutControlGroup3, Me.layoutControlGroup4})
         '
         'layoutControlGroup3
@@ -1041,7 +1041,7 @@ Partial Class OrpakCustomerTrans
         Me.layoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1})
         Me.layoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.layoutControlGroup3.Name = "layoutControlGroup3"
-        Me.layoutControlGroup3.Size = New System.Drawing.Size(1184, 450)
+        Me.layoutControlGroup3.Size = New System.Drawing.Size(1180, 453)
         Me.layoutControlGroup3.Text = "Tab1"
         '
         'LayoutControlItem1
@@ -1049,7 +1049,7 @@ Partial Class OrpakCustomerTrans
         Me.LayoutControlItem1.Control = Me.GridControl1
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(1184, 450)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(1180, 453)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
@@ -1059,7 +1059,7 @@ Partial Class OrpakCustomerTrans
         Me.layoutControlGroup4.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem2})
         Me.layoutControlGroup4.Location = New System.Drawing.Point(0, 0)
         Me.layoutControlGroup4.Name = "layoutControlGroup4"
-        Me.layoutControlGroup4.Size = New System.Drawing.Size(1184, 450)
+        Me.layoutControlGroup4.Size = New System.Drawing.Size(1180, 453)
         Me.layoutControlGroup4.Text = "Tab2"
         '
         'LayoutControlItem2
@@ -1067,7 +1067,7 @@ Partial Class OrpakCustomerTrans
         Me.LayoutControlItem2.Control = Me.GridControl2
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(1184, 450)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(1180, 453)
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem2.TextVisible = False
         '

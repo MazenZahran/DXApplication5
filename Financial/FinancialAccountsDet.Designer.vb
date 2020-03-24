@@ -170,8 +170,19 @@ Partial Class FinancialAccountsDet
         Me.DateEditTo = New DevExpress.XtraEditors.DateEdit()
         Me.DateEditFrom = New DevExpress.XtraEditors.DateEdit()
         Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
+        Me.XtraTabPage3 = New DevExpress.XtraTab.XtraTabPage()
+        Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
+        Me.CRMJobNameGridControl = New DevExpress.XtraGrid.GridControl()
+        Me.GridView3 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.CRMJobNameBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CRMDataSet = New DXApplication5.CRMDataSet()
         Me.Accounts1TableAdapter = New DXApplication5.WizCountDataSetTableAdapters.Accounts1TableAdapter()
         Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
+        Me.TableAdapterManager = New DXApplication5.CRMDataSetTableAdapters.TableAdapterManager()
+        Me.CRMJobNameTableAdapter = New DXApplication5.CRMDataSetTableAdapters.CRMJobNameTableAdapter()
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl2.SuspendLayout()
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -238,6 +249,16 @@ Partial Class FinancialAccountsDet
         CType(Me.DateEditFrom.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateEditFrom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.XtraTabPage3.SuspendLayout()
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LayoutControl1.SuspendLayout()
+        CType(Me.CRMJobNameGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CRMJobNameBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -271,7 +292,7 @@ Partial Class FinancialAccountsDet
         Me.XtraTabControl1.SelectedTabPage = Me.XtraTabPage1
         Me.XtraTabControl1.Size = New System.Drawing.Size(1204, 460)
         Me.XtraTabControl1.TabIndex = 1
-        Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2})
+        Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2, Me.XtraTabPage3})
         '
         'XtraTabPage1
         '
@@ -1173,9 +1194,121 @@ Partial Class FinancialAccountsDet
         Me.TextEdit2.Size = New System.Drawing.Size(308, 20)
         Me.TextEdit2.TabIndex = 0
         '
+        'XtraTabPage3
+        '
+        Me.XtraTabPage3.AutoScroll = True
+        Me.XtraTabPage3.Controls.Add(Me.LayoutControl1)
+        Me.XtraTabPage3.Name = "XtraTabPage3"
+        Me.XtraTabPage3.Size = New System.Drawing.Size(1196, 430)
+        Me.XtraTabPage3.Text = "تفاصيل المهمة"
+        '
+        'LayoutControl1
+        '
+        Me.LayoutControl1.Controls.Add(Me.CRMJobNameGridControl)
+        Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutControl1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControl1.Name = "LayoutControl1"
+        Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
+        Me.LayoutControl1.Root = Me.LayoutControlGroup2
+        Me.LayoutControl1.Size = New System.Drawing.Size(1196, 430)
+        Me.LayoutControl1.TabIndex = 1
+        Me.LayoutControl1.Text = "LayoutControl1"
+        '
+        'CRMJobNameGridControl
+        '
+        Me.CRMJobNameGridControl.Location = New System.Drawing.Point(12, 12)
+        Me.CRMJobNameGridControl.MainView = Me.GridView3
+        Me.CRMJobNameGridControl.Name = "CRMJobNameGridControl"
+        Me.CRMJobNameGridControl.Size = New System.Drawing.Size(1172, 361)
+        Me.CRMJobNameGridControl.TabIndex = 0
+        Me.CRMJobNameGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
+        '
+        'GridView3
+        '
+        Me.GridView3.GridControl = Me.CRMJobNameGridControl
+        Me.GridView3.Name = "GridView3"
+        Me.GridView3.OptionsView.ShowGroupPanel = False
+        '
+        'LayoutControlGroup2
+        '
+        Me.LayoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.LayoutControlGroup2.GroupBordersVisible = False
+        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem5, Me.EmptySpaceItem2})
+        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(1196, 430)
+        Me.LayoutControlGroup2.TextVisible = False
+        '
+        'LayoutControlItem5
+        '
+        Me.LayoutControlItem5.Control = Me.CRMJobNameGridControl
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem5.Name = "LayoutControlItem5"
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(1176, 365)
+        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem5.TextVisible = False
+        '
+        'EmptySpaceItem2
+        '
+        Me.EmptySpaceItem2.AllowHotTrack = False
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 365)
+        Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(1176, 45)
+        Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'CRMJobNameBindingSource
+        '
+        Me.CRMJobNameBindingSource.DataMember = "CRMJobName"
+        Me.CRMJobNameBindingSource.DataSource = Me.CRMDataSet
+        '
+        'CRMDataSet
+        '
+        Me.CRMDataSet.DataSetName = "CRMDataSet"
+        Me.CRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Accounts1TableAdapter
         '
         Me.Accounts1TableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AccountsAddDataTableAdapter = Nothing
+        Me.TableAdapterManager.ArchiveDocsSortTableAdapter = Nothing
+        Me.TableAdapterManager.ArchiveDocsTableAdapter = Nothing
+        Me.TableAdapterManager.ArchiveDocTypesTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CardsTableAdapter = Nothing
+        Me.TableAdapterManager.CardsTransTableAdapter = Nothing
+        Me.TableAdapterManager.CarsInsurancCompaniesTableAdapter = Nothing
+        Me.TableAdapterManager.CarsInsuranceTransTableAdapter = Nothing
+        Me.TableAdapterManager.CarsMarkaTableAdapter = Nothing
+        Me.TableAdapterManager.CarsModelTableAdapter = Nothing
+        Me.TableAdapterManager.CarsNotesTableAdapter = Nothing
+        Me.TableAdapterManager.CarsSort2TableAdapter = Nothing
+        Me.TableAdapterManager.CarsSortTableAdapter = Nothing
+        Me.TableAdapterManager.carsTableAdapter = Nothing
+        Me.TableAdapterManager.CarsTarkhesTransTableAdapter = Nothing
+        Me.TableAdapterManager.ChequeDataTableAdapter = Nothing
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.CRMCustomersOrdersTableAdapter = Nothing
+        Me.TableAdapterManager.CRMJobNameTableAdapter = Nothing
+        Me.TableAdapterManager.CRMTasksTableAdapter = Nothing
+        Me.TableAdapterManager.DevelopNotesTableAdapter = Nothing
+        Me.TableAdapterManager.EmployeesDataTableAdapter = Nothing
+        Me.TableAdapterManager.FinancialBanksDocTableAdapter = Nothing
+        'Me.TableAdapterManager.FinancialChequesBackTableAdapter = Nothing
+        Me.TableAdapterManager.PrintingSystemDocsTableAdapter = Nothing
+        Me.TableAdapterManager.PrintingSystemJobsTableAdapter = Nothing
+        Me.TableAdapterManager.ReceiptDataTableAdapter = Nothing
+        Me.TableAdapterManager.transDocTableAdapter = Nothing
+        Me.TableAdapterManager.transTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = DXApplication5.CRMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsersLogInLogsTableAdapter = Nothing
+        Me.TableAdapterManager.UsersTableAdapter = Nothing
+        '
+        'CRMJobNameTableAdapter
+        '
+        Me.CRMJobNameTableAdapter.ClearBeforeFill = True
         '
         'FinancialAccountsDet
         '
@@ -1254,6 +1387,16 @@ Partial Class FinancialAccountsDet
         CType(Me.DateEditFrom.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateEditFrom.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.XtraTabPage3.ResumeLayout(False)
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LayoutControl1.ResumeLayout(False)
+        CType(Me.CRMJobNameGridControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CRMJobNameBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1347,4 +1490,15 @@ Partial Class FinancialAccountsDet
     Friend WithEvents ColCredit As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ColSorting As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ColID As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents XtraTabPage3 As DevExpress.XtraTab.XtraTabPage
+    Friend WithEvents TableAdapterManager As CRMDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents CRMDataSet As CRMDataSet
+    Friend WithEvents CRMJobNameBindingSource As BindingSource
+    Friend WithEvents CRMJobNameTableAdapter As CRMDataSetTableAdapters.CRMJobNameTableAdapter
+    Friend WithEvents CRMJobNameGridControl As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView3 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents LayoutControl1 As DevExpress.XtraLayout.LayoutControl
+    Friend WithEvents LayoutControlGroup2 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlItem5 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents EmptySpaceItem2 As DevExpress.XtraLayout.EmptySpaceItem
 End Class

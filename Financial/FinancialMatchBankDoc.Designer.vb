@@ -19,7 +19,6 @@ Partial Class FinancialMatchBankDoc
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FinancialMatchBankDoc))
         Dim EditorButtonImageOptions1 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
         Dim SelectQuery1 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
@@ -84,7 +83,7 @@ Partial Class FinancialMatchBankDoc
         Me.PanelControl4 = New DevExpress.XtraEditors.PanelControl()
         Me.NavigationPane1 = New DevExpress.XtraBars.Navigation.NavigationPane()
         Me.NavigationPage1 = New DevExpress.XtraBars.Navigation.NavigationPage()
-        Me.DashboardViewer1 = New DevExpress.DashboardWin.DashboardViewer(Me.components)
+        Me.DashboardViewer1 = New DevExpress.DashboardWin.DashboardViewer()
         Me.NavigationPage2 = New DevExpress.XtraBars.Navigation.NavigationPage()
         Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
@@ -96,7 +95,7 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControl3 = New DevExpress.XtraLayout.LayoutControl()
         Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl3 = New DevExpress.XtraGrid.GridControl()
-        Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
+        Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource()
         Me.GridView3 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colID = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colRef22 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -169,7 +168,7 @@ Partial Class FinancialMatchBankDoc
         Me.GridControl2.MainView = Me.GridView1
         Me.GridControl2.Name = "GridControl2"
         Me.GridControl2.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit2, Me.RepositoryItemButtonEdit1, Me.RepositoryItemCheckEdit1})
-        Me.GridControl2.Size = New System.Drawing.Size(943, 218)
+        Me.GridControl2.Size = New System.Drawing.Size(881, 181)
         Me.GridControl2.TabIndex = 1
         Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -278,14 +277,14 @@ Partial Class FinancialMatchBankDoc
         Me.PanelControl1.Controls.Add(Me.TextDeff)
         Me.PanelControl1.Location = New System.Drawing.Point(12, 12)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(971, 42)
+        Me.PanelControl1.Size = New System.Drawing.Size(911, 42)
         Me.PanelControl1.TabIndex = 2
         '
         'SimpleButton3
         '
         Me.SimpleButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton3.Location = New System.Drawing.Point(830, 8)
+        Me.SimpleButton3.Location = New System.Drawing.Point(770, 8)
         Me.SimpleButton3.Name = "SimpleButton3"
         Me.SimpleButton3.Size = New System.Drawing.Size(129, 23)
         Me.SimpleButton3.TabIndex = 0
@@ -345,11 +344,11 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControl1.Controls.Add(Me.SimpleButton2)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton1)
         Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LayoutControl1.Location = New System.Drawing.Point(2, 2)
+        Me.LayoutControl1.Location = New System.Drawing.Point(3, 3)
         Me.LayoutControl1.Name = "LayoutControl1"
         Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(967, 292)
+        Me.LayoutControl1.Size = New System.Drawing.Size(905, 255)
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
         '
@@ -357,7 +356,7 @@ Partial Class FinancialMatchBankDoc
         '
         Me.TextNote.Location = New System.Drawing.Point(12, 38)
         Me.TextNote.Name = "TextNote"
-        Me.TextNote.Size = New System.Drawing.Size(899, 20)
+        Me.TextNote.Size = New System.Drawing.Size(837, 20)
         Me.TextNote.StyleController = Me.LayoutControl1
         Me.TextNote.TabIndex = 11
         '
@@ -369,16 +368,16 @@ Partial Class FinancialMatchBankDoc
         Me.TextEdit1.Properties.Mask.BeepOnError = True
         Me.TextEdit1.Properties.Mask.EditMask = "n"
         Me.TextEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.TextEdit1.Size = New System.Drawing.Size(250, 20)
+        Me.TextEdit1.Size = New System.Drawing.Size(225, 20)
         Me.TextEdit1.StyleController = Me.LayoutControl1
         Me.TextEdit1.TabIndex = 10
         '
         'TextNotes
         '
-        Me.TextNotes.Location = New System.Drawing.Point(506, 12)
+        Me.TextNotes.Location = New System.Drawing.Point(481, 12)
         Me.TextNotes.Name = "TextNotes"
         Me.TextNotes.Properties.ReadOnly = True
-        Me.TextNotes.Size = New System.Drawing.Size(449, 20)
+        Me.TextNotes.Size = New System.Drawing.Size(412, 20)
         Me.TextNotes.StyleController = Me.LayoutControl1
         Me.TextNotes.TabIndex = 9
         '
@@ -398,15 +397,15 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem7, Me.LayoutControlItem3, Me.LayoutControlItem5, Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem9})
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(967, 292)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(905, 255)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem7
         '
         Me.LayoutControlItem7.Control = Me.TextNotes
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(494, 0)
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(469, 0)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(453, 26)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(416, 26)
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem7.TextVisible = False
         '
@@ -439,7 +438,7 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControlItem1.Control = Me.TextEdit1
         Me.LayoutControlItem1.Location = New System.Drawing.Point(196, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(298, 26)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(273, 26)
         Me.LayoutControlItem1.Text = "فروقات"
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(41, 13)
         '
@@ -448,7 +447,7 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControlItem2.Control = Me.TextNote
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 26)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(947, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(885, 24)
         Me.LayoutControlItem2.Text = "ملاحظات"
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(41, 13)
         '
@@ -457,7 +456,7 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControlItem9.Control = Me.GridControl2
         Me.LayoutControlItem9.Location = New System.Drawing.Point(0, 50)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(947, 222)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(885, 185)
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem9.TextVisible = False
         '
@@ -466,17 +465,17 @@ Partial Class FinancialMatchBankDoc
         Me.PanelControl2.Controls.Add(Me.GridControl1)
         Me.PanelControl2.Location = New System.Drawing.Point(12, 58)
         Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(971, 203)
+        Me.PanelControl2.Size = New System.Drawing.Size(911, 179)
         Me.PanelControl2.TabIndex = 3
         '
         'GridControl1
         '
         Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl1.Location = New System.Drawing.Point(2, 2)
+        Me.GridControl1.Location = New System.Drawing.Point(3, 3)
         Me.GridControl1.MainView = Me.GridView2
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit3})
-        Me.GridControl1.Size = New System.Drawing.Size(967, 199)
+        Me.GridControl1.Size = New System.Drawing.Size(905, 173)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -552,9 +551,9 @@ Partial Class FinancialMatchBankDoc
         'PanelControl4
         '
         Me.PanelControl4.Controls.Add(Me.LayoutControl1)
-        Me.PanelControl4.Location = New System.Drawing.Point(12, 265)
+        Me.PanelControl4.Location = New System.Drawing.Point(12, 241)
         Me.PanelControl4.Name = "PanelControl4"
-        Me.PanelControl4.Size = New System.Drawing.Size(971, 296)
+        Me.PanelControl4.Size = New System.Drawing.Size(911, 261)
         Me.PanelControl4.TabIndex = 5
         '
         'NavigationPane1
@@ -579,7 +578,7 @@ Partial Class FinancialMatchBankDoc
         Me.NavigationPage1.Controls.Add(Me.DashboardViewer1)
         Me.NavigationPage1.Image = CType(resources.GetObject("NavigationPage1.Image"), System.Drawing.Image)
         Me.NavigationPage1.Name = "NavigationPage1"
-        Me.NavigationPage1.Size = New System.Drawing.Size(929, 527)
+        Me.NavigationPage1.Size = New System.Drawing.Size(935, 526)
         '
         'DashboardViewer1
         '
@@ -587,7 +586,7 @@ Partial Class FinancialMatchBankDoc
         Me.DashboardViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DashboardViewer1.Location = New System.Drawing.Point(0, 0)
         Me.DashboardViewer1.Name = "DashboardViewer1"
-        Me.DashboardViewer1.Size = New System.Drawing.Size(929, 527)
+        Me.DashboardViewer1.Size = New System.Drawing.Size(935, 526)
         Me.DashboardViewer1.TabIndex = 0
         '
         'NavigationPage2
@@ -596,7 +595,7 @@ Partial Class FinancialMatchBankDoc
         Me.NavigationPage2.Controls.Add(Me.LayoutControl2)
         Me.NavigationPage2.Image = CType(resources.GetObject("NavigationPage2.Image"), System.Drawing.Image)
         Me.NavigationPage2.Name = "NavigationPage2"
-        Me.NavigationPage2.Size = New System.Drawing.Size(995, 587)
+        Me.NavigationPage2.Size = New System.Drawing.Size(935, 526)
         '
         'LayoutControl2
         '
@@ -608,7 +607,7 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControl2.Name = "LayoutControl2"
         Me.LayoutControl2.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl2.Root = Me.LayoutControlGroup2
-        Me.LayoutControl2.Size = New System.Drawing.Size(995, 587)
+        Me.LayoutControl2.Size = New System.Drawing.Size(935, 526)
         Me.LayoutControl2.TabIndex = 0
         Me.LayoutControl2.Text = "LayoutControl2"
         '
@@ -619,7 +618,7 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem4, Me.LayoutControlItem6, Me.EmptySpaceItem1, Me.LayoutControlItem8})
         Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(995, 587)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(935, 526)
         Me.LayoutControlGroup2.TextVisible = False
         '
         'LayoutControlItem4
@@ -629,7 +628,7 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControlItem4.MaxSize = New System.Drawing.Size(0, 46)
         Me.LayoutControlItem4.MinSize = New System.Drawing.Size(5, 46)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(975, 46)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(915, 46)
         Me.LayoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
@@ -639,24 +638,24 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControlItem6.Control = Me.PanelControl2
         Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 46)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(975, 207)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(915, 183)
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem6.TextVisible = False
         '
         'EmptySpaceItem1
         '
         Me.EmptySpaceItem1.AllowHotTrack = False
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 553)
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 494)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(975, 14)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(915, 12)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.PanelControl4
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 253)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 229)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(975, 300)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(915, 265)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem8.TextVisible = False
         '
@@ -666,7 +665,7 @@ Partial Class FinancialMatchBankDoc
         Me.NavigationPage3.Controls.Add(Me.LayoutControl3)
         Me.NavigationPage3.Image = CType(resources.GetObject("NavigationPage3.Image"), System.Drawing.Image)
         Me.NavigationPage3.Name = "NavigationPage3"
-        Me.NavigationPage3.Size = New System.Drawing.Size(995, 587)
+        Me.NavigationPage3.Size = New System.Drawing.Size(935, 526)
         '
         'LayoutControl3
         '
@@ -677,7 +676,7 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControl3.Name = "LayoutControl3"
         Me.LayoutControl3.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl3.Root = Me.LayoutControlGroup3
-        Me.LayoutControl3.Size = New System.Drawing.Size(995, 587)
+        Me.LayoutControl3.Size = New System.Drawing.Size(935, 526)
         Me.LayoutControl3.TabIndex = 0
         Me.LayoutControl3.Text = "LayoutControl3"
         '
@@ -686,7 +685,7 @@ Partial Class FinancialMatchBankDoc
         Me.SimpleButton4.ImageOptions.Image = CType(resources.GetObject("SimpleButton4.ImageOptions.Image"), System.Drawing.Image)
         Me.SimpleButton4.Location = New System.Drawing.Point(12, 12)
         Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(186, 22)
+        Me.SimpleButton4.Size = New System.Drawing.Size(174, 22)
         Me.SimpleButton4.StyleController = Me.LayoutControl3
         Me.SimpleButton4.TabIndex = 5
         Me.SimpleButton4.Text = "تحديث"
@@ -698,7 +697,7 @@ Partial Class FinancialMatchBankDoc
         Me.GridControl3.Location = New System.Drawing.Point(12, 38)
         Me.GridControl3.MainView = Me.GridView3
         Me.GridControl3.Name = "GridControl3"
-        Me.GridControl3.Size = New System.Drawing.Size(971, 537)
+        Me.GridControl3.Size = New System.Drawing.Size(911, 476)
         Me.GridControl3.TabIndex = 4
         Me.GridControl3.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
@@ -836,7 +835,7 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem10, Me.LayoutControlItem11, Me.EmptySpaceItem2})
         Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(995, 587)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(935, 526)
         Me.LayoutControlGroup3.TextVisible = False
         '
         'LayoutControlItem10
@@ -844,7 +843,7 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControlItem10.Control = Me.GridControl3
         Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 26)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(975, 541)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(915, 480)
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem10.TextVisible = False
         '
@@ -853,16 +852,16 @@ Partial Class FinancialMatchBankDoc
         Me.LayoutControlItem11.Control = Me.SimpleButton4
         Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(190, 26)
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(178, 26)
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem11.TextVisible = False
         '
         'EmptySpaceItem2
         '
         Me.EmptySpaceItem2.AllowHotTrack = False
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(190, 0)
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(178, 0)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(785, 26)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(737, 26)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'FinancialMatchBankDoc

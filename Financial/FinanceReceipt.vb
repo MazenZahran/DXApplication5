@@ -1,4 +1,7 @@
-﻿Imports DevExpress.XtraBars.Navigation
+﻿Imports System.Windows.Controls
+Imports DevExpress.XtraBars.Navigation
+Imports DevExpress.XtraGrid.Views.Base
+Imports DevExpress.XtraGrid.Views.Grid
 Imports DevExpress.XtraReports.UI
 
 Public Class FinanceReceipt
@@ -16,13 +19,10 @@ Public Class FinanceReceipt
     Dim sql As New SQLControl
     Dim i As Integer
 
-    Private Sub Financereceipt_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-        If e.KeyCode = Keys.F2 Then
-            SaviingReceipt()
-        End If
-    End Sub
 
     Private Sub FinanceReceipt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'WizCountDataSet.Accounts1' table. You can move, or remove it, as needed.
+        Me.Accounts1TableAdapter.Fill(Me.WizCountDataSet.Accounts1)
         Me.ReceiptDataTableAdapter.Fill(Me.CRMDataSet.ReceiptData)
         Me.ReceiptDataBindingSource.MoveLast()
         Me.KeyPreview = True
@@ -33,6 +33,8 @@ Public Class FinanceReceipt
         DateEdit2.DateTime = CDate(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000"))
         DateEdit1.DateTime = CDate(DateTime.Now.AddYears(-1).ToString("yyyy-MM-dd 00:00:00.000"))
 
+
+
     End Sub
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
@@ -42,29 +44,50 @@ Public Class FinanceReceipt
     End Sub
 
     Sub SaviingReceipt()
-        If RecCustNoTextEdit.Text = "" Or RecCustNameTextEdit.Text = "" Or RecDateDateEdit.Text = "" Or RecCurrTextEdit.Text = "" Or RecRateSpinEdit.Text = "" _
-    Or AmountInNisText.Text = "" Or RecTotalSpinEdit.Text = "" Then
+
+        RecCustNoTextEdit.Select()
+
+
+        If RecCustNoTextEdit.Text = "" Or RecCustNameTextEdit.Text = "" Or RecDateDateEdit.Text = "" Or RecCurrTextEdit.Text = "" Or RecSmallCurrName.Text = "" _
+            Or AmountInNisText.Text = "" Or RecTotalSpinEdit.Text = "" Then
             MsgBox("الرجاء تعبئة كل البيانات المطلوبة")
             Exit Sub
         End If
 
+
         If RecNoteTextEdit.Text = "" Then MsgBox("لا تنسى كتابة ملاحظة") : Exit Sub
 
-        Deleteemptyrows()
+
+        'Dim TasksCountAnnswer As MsgBoxResult
+        'If CheckCRMTaskCount() = True Then TasksCountAnnswer = MsgBox("لم يتم اغلاق اي مهمة هل تريد المتابعة", vbYesNo)
+        'If TasksCountAnnswer = vbNo Then Exit Sub
+
+        'Deleteemptyrows()
 
         'If SumChequesLabel.Text <> RecChequeSpinEdit.Text Then
         '    MsgBox("خطا: مجموع الشيكات لا يتفق مع المبلغ في خانة الشيكات")
         '    Exit Sub
         'End If
 
+        CheckTasks()
+
         If CInt(RecNOSpinEdit.Text) < 0 Then
-            For i As Integer = 0 To Me.ChequeDataDataGridView.Rows.Count - 1
-                ChequeDataDataGridView.Rows(i).Cells(6).Value = Me.ReceiptDataTableAdapter.GetMaxRec.ToString
+            For i As Integer = 0 To Me.GridView5.RowCount - 1
+                Me.GridView5.SetRowCellValue(i, "ChequeReceiptNo", Me.ReceiptDataTableAdapter.GetMaxRec.ToString)
             Next i
             RecStatusSpinEdit.EditValue = 1
         End If
 
+        AddEvents("تنبيه", "  تم قبض من الزبون " & " " & RecCustNameTextEdit.Text, Me.Text, "1800013", My.Settings.UserName, "True")
+        AddEvents("تنبيه", "  تم قبض من الزبون " & " " & RecCustNameTextEdit.Text, Me.Text, "1800102", My.Settings.UserName, "True")
+        AddEvents("تنبيه", "  تم قبض من الزبون " & " " & RecCustNameTextEdit.Text, Me.Text, "1800666", My.Settings.UserName, "True")
+
+
         SaveEdit()
+
+
+
+
     End Sub
 
     Private Sub SaveEdit()
@@ -105,7 +128,7 @@ Public Class FinanceReceipt
 
             DevExpress.XtraEditors.XtraMessageBox.Show("تم حفظ سند القبض")
 
-            EndCRMTask()
+            '  EndCRMTask()
 
             PrintRec()
 
@@ -132,36 +155,26 @@ Public Class FinanceReceipt
         End Try
     End Sub
 
-    Sub Deleteemptyrows()
+    'Sub Deleteemptyrows()
 
-        'For r As Integer = ChequeDataDataGridView.Rows.Count - 1 To 0 Step -1
-        '    Dim empty As Boolean = True
-        '    For Each cell As DataGridViewCell In ChequeDataDataGridView.Rows(r).Cells
-        '        If Not IsNothing(cell.Value) Then
-        '            empty = False
-        '            Exit For
-        '        End If
-        '    Next
-        '    If empty Then ChequeDataDataGridView.Rows.RemoveAt(r)
-        'Next
 
-        Dim blank As Boolean = True
-        For Each _row As DataGridViewRow In ChequeDataDataGridView.Rows
-            blank = True
-            For i As Integer = 0 To _row.Cells.Count - 1
-                If _row.Cells(i).Value IsNot Nothing AndAlso _row.Cells(i).Value IsNot "" Then
-                    blank = False
-                    Exit For
-                End If
-            Next
-            If blank Then
-                If Not _row.IsNewRow Then
-                    ChequeDataDataGridView.Rows.Remove(_row)
-                End If
-            End If
-        Next
+    '    Dim blank As Boolean = True
+    '    For Each _row As DataGridViewRow In ChequeDataDataGridView.Rows
+    '        blank = True
+    '        For i As Integer = 0 To _row.Cells.Count - 1
+    '            If _row.Cells(i).Value IsNot Nothing AndAlso _row.Cells(i).Value IsNot "" Then
+    '                blank = False
+    '                Exit For
+    '            End If
+    '        Next
+    '        If blank Then
+    '            If Not _row.IsNewRow Then
+    '                ChequeDataDataGridView.Rows.Remove(_row)
+    '            End If
+    '        End If
+    '    Next
 
-    End Sub
+    'End Sub
 
     Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
         Me.ReceiptDataBindingSource.CancelEdit()
@@ -170,6 +183,11 @@ Public Class FinanceReceipt
 
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
 
+
+        NewReceipt()
+    End Sub
+
+    Private Sub NewReceipt()
         If CInt(RecNOSpinEdit.Text) < 0 Then
             ClearRecData()
             Exit Sub
@@ -179,12 +197,11 @@ Public Class FinanceReceipt
             Me.ChequeDataBindingSource.AddNew()
             Me.ReceiptDataBindingSource.AddNew()
             ClearRecData()
-        Catch
-            Exit Sub
+        Catch ex As Exception
+            MsgBox(ex.ToString)
         End Try
 
         RecCustNoTextEdit.Select()
-
     End Sub
 
     Private Sub ClearRecData()
@@ -192,7 +209,8 @@ Public Class FinanceReceipt
             RecCustNoTextEdit.Text = ""
             RecCustNameTextEdit.Text = ""
             RecCurrTextEdit.Text = "شيكل"
-            RecRateSpinEdit.Text = "1"
+            RecSmallCurrName.Text = "اغورة"
+            RecCurrRate.Text = "1"
             AmountInNisText.EditValue = 0
             RecCashSpinEdit.Text = "0"
             RecChequeSpinEdit.Text = "0"
@@ -206,9 +224,13 @@ Public Class FinanceReceipt
             RecInputDateDateEdit.EditValue = Today
             RecStatusSpinEdit.EditValue = 0
             RecCustNoTextEdit.Select()
-            SumChequesLabel.Text = "0"
+            ''SumChequesLabel.Text = "0"
             RecOwnerTextEdit.Text = My.Settings.UserName
             GridControl4.DataSource = ""
+            TextEditAccChequeNO.Text = "0"
+            TextEditChequeNO.Text = "0"
+            TextEditChequesTotal.Text = "0"
+            TextEditAccChequesTotal.Text = "0"
         Catch ex As Exception
             MsgBox("خطا لا يمكن حذف البيانات")
         End Try
@@ -240,91 +262,71 @@ Public Class FinanceReceipt
         If RecNOSpinEdit.Text = "" Then Exit Sub
         Try
             Me.ChequeDataTableAdapter.FillBy(Me.CRMDataSet.ChequeData, (CType(RecNOSpinEdit.Text, Integer)))
+            'Me.ReceiptDataTableAdapter.FillBy(Me.CRMDataSet.ReceiptData, (CType(RecNOSpinEdit.Text, Integer)))
+            'Me.ChequeDataTableAdapter.FillBy(Me.CRMDataSet.ChequeData, (CType(RecNOSpinEdit.Text, Integer)))
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
 
         If CInt(RecNOSpinEdit.Text) > 0 Then
-            PanelControl3.Enabled = False
-            PanelControl4.Enabled = False
+            '  PanelControl3.Enabled = False
+            '  PanelControl4.Enabled = False
             'PanelControl9.Enabled = False
-            PanelControl5.Enabled = False
-            GroupControl1.Enabled = False
-            PanelControl2.Enabled = False
+            '    PanelControl5.Enabled = False
+            '    GroupControl1.Enabled = False
+            'PanelControl2.Enabled = False
             SimpleButton1.Enabled = False
         Else
-            PanelControl3.Enabled = True
-            PanelControl4.Enabled = True
+            '  PanelControl3.Enabled = True
+            '   PanelControl4.Enabled = True
             ' PanelControl9.Enabled = True
-            PanelControl5.Enabled = True
-            GroupControl1.Enabled = True
-            PanelControl2.Enabled = True
+            '  PanelControl5.Enabled = True
+            '   GroupControl1.Enabled = True
+            '  PanelControl2.Enabled = True
             SimpleButton1.Enabled = True
         End If
 
     End Sub
 
-    Private Sub Form1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
-        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
-            SendKeys.Send("{TAB}")
-            e.Handled = True
+    Private Sub Financereceipt_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.F3 Then
+            SaviingReceipt()
+        ElseIf e.KeyCode = Keys.F6 Then
+            NewReceipt()
+            'ElseIf e.KeyCode = Keys.Enter Then
+            '    SendKeys.Send("{TAB}")
         End If
     End Sub
 
-    Private Sub ChequeDataDataGridView_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles ChequeDataDataGridView.CellEndEdit
-        '   If CInt(RecNOSpinEdit.Text) > 0 Then
-        For i As Integer = 0 To Me.ChequeDataDataGridView.Rows.Count - 1
-            ChequeDataDataGridView.Rows(i).Cells(6).Value = RecNOSpinEdit.Text
-        Next i
-        '  End If
-    End Sub
 
-    Private Sub ChequeDataDataGridView_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles ChequeDataDataGridView.CellValueChanged
-        SumCheks()
-    End Sub
 
-    Private Sub SumCheks()
 
-        On Error Resume Next
-        Dim total As Decimal = 0
-        For i As Integer = 0 To ChequeDataDataGridView.RowCount - 1
-#Disable Warning BC42019 ' Operands of type Object used for operator
-            total = CDec(ChequeDataDataGridView.Rows(i).Cells(5).Value + total)
-#Enable Warning BC42019 ' Operands of type Object used for operator
-            'Change the number 2 to your column index number (The first column has a 0 index column)
-            'In this example the column index of Price is 2
-            SumChequesLabel.Text = CType(total, String)
-            '   RecChequeSpinEdit.Text = CType(total, String)
-        Next
-    End Sub
+    'Private Sub SumCheks()
 
-    Private Sub ChequeDataDataGridView_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles ChequeDataDataGridView.RowsAdded
-        Try
-            'Dim Stotal As Integer = 0
-            'For i As Integer = 0 To Me.ChequeDataDataGridView.Rows.Count - 1
-            '    '     If ChequeDataDataGridView.Rows(i).Cells(5).Value IsNot DBNull Then
-            '    ChequeDataDataGridView.Rows(i).Cells(5).Value = ChequeDataDataGridView.Rows(i).Cells(5).Value + Stotal
-            '    '  End If
-            'Next i
-            'RecChequeSpinEdit.Text = Stotal
+    '    Try
+    '        Dim SumCheqs As Double = 0
+    '        Dim CountCheqs As Double = -1
+    '        If ChequeDataDataGridView.Rows(i).Cells(5).Value.ToString <> "" Then
+    '            For i As Integer = 0 To Me.ChequeDataDataGridView.Rows.Count - 1
+    '                SumCheqs += Convert.ToDouble(ChequeDataDataGridView.Rows(i).Cells(5).Value)
+    '                CountCheqs += 1
+    '            Next i
+    '            RecChequeSpinEdit.EditValue = SumCheqs
+    '            TextEditChequesTotal.EditValue = SumCheqs
+    '            TextEditChequeNO.EditValue = CountCheqs
 
-            Dim total As Integer = 0
-            For i As Integer = 0 To ChequeDataDataGridView.RowCount - 1
-#Disable Warning BC42016 ' Implicit conversion
-#Disable Warning BC42019 ' Operands of type Object used for operator
-                total = ChequeDataDataGridView.Rows(i).Cells(5).Value + total
-#Enable Warning BC42019 ' Operands of type Object used for operator
-#Enable Warning BC42016 ' Implicit conversion
-                'Change the number 2 to your column index number (The first column has a 0 index column)
-                'In this example the column index of Price is 2
-                SumChequesLabel.Text = total.ToString
-                CountChequesLabel.Text = CType(CInt(ChequeDataDataGridView.Rows.Count.ToString) - 1, String)
-            Next
-            SumCheks()
-        Catch
+    '            TextEditAccChequesTotal.EditValue = GetSumCheks(CStr(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000")), RecCustNoTextEdit.Text) + Val(TextEditChequesTotal.EditValue)
+    '            TextEditAccChequeNO.EditValue = GetCountCheks(CStr(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000")), RecCustNoTextEdit.Text) + Val(TextEditChequeNO.EditValue)
+    '            TextEditAccountBalance.EditValue = GetAccBalance(CStr(Format(Today, "yyyy-MM-dd")), RecCustNoTextEdit.Text) - Val(AmountInNisText.EditValue)
 
-        End Try
-    End Sub
+
+    '        End If
+    '    Catch ex As Exception
+
+    '    End Try
+    'End Sub
+
+
 
     Private Sub SimpleButton7_Click_1(sender As Object, e As EventArgs) Handles SimpleButton7.Click
         Dim report As New FinancialReceiptReport()
@@ -334,6 +336,7 @@ Public Class FinanceReceipt
         report.Parameter2.Visible = False
         Dim printTool As New ReportPrintTool(report)
         printTool.ShowPreviewDialog()
+
 
     End Sub
 
@@ -349,10 +352,10 @@ Public Class FinanceReceipt
     End Sub
 
     Private Sub RecCurrTextEdit_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RecCurrTextEdit.SelectedIndexChanged
-        If RecCurrTextEdit.Text = "شيكل" Then Me.smallcurrencylabel.Text = "اغورة"
-        If RecCurrTextEdit.Text = "دولار" Then Me.smallcurrencylabel.Text = "سنت"
-        If RecCurrTextEdit.Text = "يورو" Then Me.smallcurrencylabel.Text = "سنت"
-        If RecCurrTextEdit.Text = "دينار" Then Me.smallcurrencylabel.Text = "قرش"
+        If RecCurrTextEdit.Text = "شيكل" Then Me.RecSmallCurrName.Text = "اغورة"
+        If RecCurrTextEdit.Text = "دولار" Then Me.RecSmallCurrName.Text = "سنت"
+        If RecCurrTextEdit.Text = "يورو" Then Me.RecSmallCurrName.Text = "سنت"
+        If RecCurrTextEdit.Text = "دينار" Then Me.RecSmallCurrName.Text = "قرش"
 
         Write()
 
@@ -364,7 +367,7 @@ Public Class FinanceReceipt
         Try
             Dim aa As Decimal
             aa = CDec(RecTotalSpinEdit.Text)
-            Me.TextEdit1.Text = NoToTxt(aa, RecCurrTextEdit.Text, smallcurrencylabel.Text)
+            Me.TextEdit1.Text = NoToTxt(aa, RecCurrTextEdit.Text, RecSmallCurrName.Text)
         Catch
             Exit Sub
         End Try
@@ -384,7 +387,8 @@ Public Class FinanceReceipt
     Private Sub CalcTotal()
         Try
             RecTotalSpinEdit.Text = CType(CDec(RecCashSpinEdit.Text) + CDec(RecChequeSpinEdit.Text) + CDec(RecOtherSpinEdit.Text), String)
-            AmountInNisText.Text = CType(CType(CDec(RecTotalSpinEdit.Text) * CDec(RecRateSpinEdit.Text), Decimal), String)
+            AmountInNisText.Text = CType(CType(CDec(RecTotalSpinEdit.Text) * CDec(RecCurrRate.Text), Decimal), String)
+            TextEditAccountBalance.EditValue = Val(TextEditAccountBalance.EditValue) - Val(AmountInNisText.EditValue)
         Catch
             Exit Sub
         End Try
@@ -404,7 +408,7 @@ Public Class FinanceReceipt
 
     Private Sub CalcInNis()
         Try
-            AmountInNisText.Text = CType(CDec(RecTotalSpinEdit.Text) * CDec(RecRateSpinEdit.Text), String)
+            AmountInNisText.Text = CType(CDec(RecTotalSpinEdit.Text) * CDec(RecSmallCurrName.Text), String)
             Write()
         Catch
             Exit Sub
@@ -412,22 +416,31 @@ Public Class FinanceReceipt
     End Sub
 
     Private Sub SimpleButton8_Click(sender As Object, e As EventArgs) Handles SimpleButton8.Click
-        ' My.Forms.FinancialReceiptReport.XrLabel17 = "fgf"
+
         PrintRec()
+
+        'If SumChequesLabel.Text <> RecChequeSpinEdit.Text Then
+        '    MsgBox("خطا: مجموع الشيكات لا يتفق مع المبلغ في خانة الشيكات")
+        '    Exit Sub
+        'End If
+
+
+
+
 
     End Sub
 
-    Private Sub ChequeDataDataGridView_CellLeave(sender As Object, e As DataGridViewCellEventArgs) Handles ChequeDataDataGridView.CellLeave
+    Private Sub ChequeDataDataGridView_CellLeave(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
 
     Private Sub SimpleButton9_Click(sender As Object, e As EventArgs) Handles SimpleButton9.Click
-        PanelControl3.Enabled = True
-        PanelControl4.Enabled = True
+        ' PanelControl3.Enabled = True
+        '   PanelControl4.Enabled = True
         'PanelControl9.Enabled = True
-        PanelControl5.Enabled = True
-        GroupControl1.Enabled = True
-        PanelControl2.Enabled = True
+        '    PanelControl5.Enabled = True
+        '   GroupControl1.Enabled = True
+        'PanelControl2.Enabled = True
         SimpleButton1.Enabled = True
     End Sub
 
@@ -441,7 +454,10 @@ Public Class FinanceReceipt
             report.Parameter2.Visible = False
             report.Balance.Visible = False
             If CheckEdit1.Checked = True Then
-                report.Balance.Value = GetAccBalance(CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")))
+                report.Balance.Value = GetAccBalance(CStr(Format(Today, "yyyy-MM-dd")), RecCustNoTextEdit.Text)
+                report.ChecksTotal.Value = GetSumCheks(CStr(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000")), RecCustNoTextEdit.Text) + CInt(RecChequeSpinEdit.EditValue)
+                report.ChecksCount.Value = GetCountCheks(CStr(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000")), RecCustNoTextEdit.Text) + CInt(Me.GridView5.RowCount - 1)
+
             Else
                 report.Balance.Value = ""
             End If
@@ -450,6 +466,7 @@ Public Class FinanceReceipt
             report.Print()
         Catch ex As Exception
             MsgBox("خطا: لم يتمكن البرنامج من طباعة سند القبض")
+            MsgBox(ex.ToString)
         End Try
 
     End Sub
@@ -609,70 +626,95 @@ Public Class FinanceReceipt
 
     End Sub
 
-    Private Sub gridView1_RowUpdated(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.RowObjectEventArgs)
-        If GridView1.IsNewItemRow(e.RowHandle) Then
-            ChequeDataDataGridView.Rows(i).Cells(6).Value = RecNOSpinEdit.Text
-        End If
-    End Sub
 
-    Private Sub RecRateSpinEdit_TextChanged(sender As Object, e As EventArgs) Handles RecRateSpinEdit.TextChanged
+
+    Private Sub RecRateSpinEdit_TextChanged(sender As Object, e As EventArgs) Handles RecSmallCurrName.TextChanged
         Write()
 
         CalcTotal()
     End Sub
 
-    Private Sub ChequeDataDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ChequeDataDataGridView.CellContentClick
-        'MsgBox("editing")
-    End Sub
 
-    Private Sub ChequeDataDataGridView_CellBeginEdit(sender As Object, e As DataGridViewCellCancelEventArgs) Handles ChequeDataDataGridView.CellBeginEdit
-        ChequeDataDataGridView.Rows(i).Cells(6).Value = RecNOSpinEdit.Text
 
-        For i As Integer = 0 To Me.ChequeDataDataGridView.Rows.Count - 1
-            ChequeDataDataGridView.Rows(i).Cells(6).Value = RecNOSpinEdit.Text
-        Next i
+    Private Sub ChequeDataDataGridView_CellBeginEdit(sender As Object, e As DataGridViewCellCancelEventArgs)
+
+
+
+
+
+
 
     End Sub
 
     Private Sub EndCRMTask()
 
         Try
-            Dim TaskID As String = GridView4.GetRowCellValue(GridView4.FocusedRowHandle, "TaskID").ToString
-            Dim strDate As String = Date.Now.ToString("yyyy-MM-dd HH:mm:ss.000")
-            Dim sql As New SQLControl
-            Dim SQLUpdateStatus As String = "Update [CRM].[dbo].[CRMTasks]  set [NoteStatus] ='تم التحصيل' where [TaskID]= " & TaskID
-            sql.CRMRunQuery(SQLUpdateStatus)
+            For i = 0 To GridView4.RowCount - 1
+                If CType(Me.GridView4.GetRowCellValue(i, "NoteStatus"), String) = "مغلقة" Then
+                    Dim TaskID As String = GridView4.GetRowCellValue(i, "TaskID").ToString
+                    Dim strDate As String = Date.Now.ToString("yyyy-MM-dd HH:mm:ss.000")
+                    Dim sql As New SQLControl
+                    Dim SQLUpdateStatus As String = "Update [CRM].[dbo].[CRMTasks]  set [NoteStatus] ='تم التحصيل' , [CloseDate] = CONVERT(DATETIME, '" & strDate & "', 102) , [CloseNote] = 'من سند قبض' where [TaskID]= " & TaskID
+                    sql.CRMRunQuery(SQLUpdateStatus)
+                End If
+            Next
 
-            Dim sql2 As New SQLControl
-            Dim SQLUpdateDate As String = "Update [CRM].[dbo].[CRMTasks]  set [CloseDate] = CONVERT(DATETIME, '" & strDate & "', 102) , [CloseNote] = 'من سند قبض' where [TaskID]= " & TaskID
-            sql2.CRMRunQuery(SQLUpdateDate)
         Catch ex As Exception
             Exit Sub
         End Try
 
     End Sub
 
-    Private Sub ChequeDataDataGridView_RowStateChanged(sender As Object, e As DataGridViewRowStateChangedEventArgs) Handles ChequeDataDataGridView.RowStateChanged
-        '  ChequeDataDataGridView.Rows(i).Cells(6).Value = RecNOSpinEdit.Text
-    End Sub
+
+    Private Function CheckCRMTaskCount() As Boolean
+
+        If GridView4.RowCount = 0 Then
+            Return False
+        Else
+            Dim j As Integer = 0
+            For i = 0 To GridView4.RowCount - 1
+                If CType(Me.GridView4.GetRowCellValue(i, "NoteStatus"), String) = "مفتوحة" Then j = j + 1
+            Next
+
+            If j = GridView4.RowCount Then
+                Return True
+            Else
+                Return False
+            End If
+        End If
+
+
+    End Function
+
+
+
 
     Private Sub CheckTasks()
 
         Dim sql As New SQLControl
         Try
-            Dim SqlString As String = "Select  AccrualDate,CustomerName,ToUser,TaskType,Amount,TaskMonth,Note,TaskID,'True' as State from CRMTasks where CustID = " & RecCustNoTextEdit.Text & "  and NoteStatus = 'مفتوحة' "
+            Dim SqlString As String = "Select  AccrualDate,CustomerName,ToUser,TaskType,Amount,TaskMonth,Note,TaskID, NoteStatus from CRMTasks where CustID = " & RecCustNoTextEdit.Text & "  and NoteStatus = 'مفتوحة' "
             sql.CRMRunQuery(SqlString)
-            GridControl4.DataSource = sql.SQLDS.Tables(0)
+            If sql.SQLDS.Tables(0).Rows.Count = 0 Then Exit Sub
+
+            '  GridControl4.DataSource = sql.SQLDS.Tables(0)
+            '  My.Forms.FinancialReceiptUnPaidTasks.GridControl4.DataSource = sql.SQLDS.Tables(0)
         Catch ex As Exception
             MsgBox("خطا مهمة غير موجودة")
         End Try
+
+        Dim forms As New FinancialReceiptUnPaidTasks
+        FinancialReceiptUnPaidTasks.Visible = False
+        forms.GridControl4.DataSource = sql.SQLDS.Tables(0)
+        forms.ShowDialog()
+
 
         '  RepositoryItemCheckEdit1.ValueChecked = True
         '   GridView4.SetRowCellValue(0, "State", True)
         '   GridView4.SetRowCellValue(1, GridView4.Columns("State"), 1)
     End Sub
 
-    Private Sub PanelControl3_Paint(sender As Object, e As PaintEventArgs) Handles PanelControl3.Paint
+    Private Sub PanelControl3_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
@@ -680,13 +722,16 @@ Public Class FinanceReceipt
 
     End Sub
 
-    Private Sub RepositoryItemCheckEdit1_Click(sender As Object, e As EventArgs) Handles RepositoryItemCheckEdit1.Click
+    Private Sub RepositoryItemCheckEdit1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub RecCustNoTextEdit_Leave(sender As Object, e As EventArgs) Handles RecCustNoTextEdit.Leave
         If RecCustNoTextEdit.Text <> "" Then
-            CheckTasks()
+            ' CheckTasks()
+            TextEditAccChequesTotal.EditValue = GetSumCheks(CStr(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000")), RecCustNoTextEdit.Text)
+            TextEditAccChequeNO.EditValue = GetCountCheks(CStr(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000")), RecCustNoTextEdit.Text)
+            TextEditAccountBalance.EditValue = GetAccBalance(CStr(Format(Today, "yyyy-MM-dd")), RecCustNoTextEdit.Text)
         End If
     End Sub
 
@@ -718,38 +763,225 @@ Public Class FinanceReceipt
         GridControl2.ShowPrintPreview()
     End Sub
 
-    Private Function GetAccBalance(ToDate As String) As Integer
+    'Private Function GetAccBalance(ToDate As String) As Integer
 
-        Dim DebitBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2)) as Debit    " _
-        & " from RPHSTRANSRETRIV" _
-        & " WHERE   JMDEBITCREDIT=1 and       ( JMACCOUNTKEY = '" & RecCustNoTextEdit.Text & "'  AND ('" & ToDate & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
+    '    Dim DebitBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2)) as Debit    " _
+    '    & " from RPHSTRANSRETRIV" _
+    '    & " WHERE   JMDEBITCREDIT=1 and       ( JMACCOUNTKEY = '" & RecCustNoTextEdit.Text & "'  AND ('" & ToDate & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
 
-        Dim CreditBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2))  as Credit " _
-        & " from RPHSTRANSRETRIV" _
-        & " WHERE   JMDEBITCREDIT=0 and       ( JMACCOUNTKEY = '" & RecCustNoTextEdit.Text & "'  AND ('" & ToDate & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
+    '    Dim CreditBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2))  as Credit " _
+    '    & " from RPHSTRANSRETRIV" _
+    '    & " WHERE   JMDEBITCREDIT=0 and       ( JMACCOUNTKEY = '" & RecCustNoTextEdit.Text & "'  AND ('" & ToDate & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
 
-        Dim DebitBalanceString As String = "0", CreditBalanceString As String = "0"
-        sql.WizCountRunQuery(DebitBalance)
-        If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("Debit")) Then DebitBalanceString = CType(sql.SQLDS.Tables(0).Rows(i).Item("Debit"), String)
+    '    Dim DebitBalanceString As String = "0", CreditBalanceString As String = "0"
+    '    sql.WizCountRunQuery(DebitBalance)
+    '    If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("Debit")) Then DebitBalanceString = CType(sql.SQLDS.Tables(0).Rows(i).Item("Debit"), String)
 
-        sql.WizCountRunQuery(CreditBalance)
-        If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("Credit")) Then CreditBalanceString = CType(sql.SQLDS.Tables(0).Rows(i).Item("Credit"), String)
+    '    sql.WizCountRunQuery(CreditBalance)
+    '    If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("Credit")) Then CreditBalanceString = CType(sql.SQLDS.Tables(0).Rows(i).Item("Credit"), String)
 
-        GetAccBalance = CInt(DebitBalanceString) - CInt(CreditBalanceString) - CInt(AmountInNisText.EditValue)
-        'Dim DrBalance, CrBalance As Integer
-        'DrBalance = 0 : CrBalance = 0
-        'GetAccBalance = CInt(DebitBalanceString) - CInt(CreditBalanceString)
-        'If GetAccBalance >= 0 Then DrBalance = GetAccBalance Else CrBalance = -1 * GetAccBalance
+    '    GetAccBalance = CInt(DebitBalanceString) - CInt(CreditBalanceString) - CInt(AmountInNisText.EditValue)
+
+    '    'Dim DrBalance, CrBalance As Integer
+    '    'DrBalance = 0 : CrBalance = 0
+    '    'GetAccBalance = CInt(DebitBalanceString) - CInt(CreditBalanceString)
+    '    'If GetAccBalance >= 0 Then DrBalance = GetAccBalance Else CrBalance = -1 * GetAccBalance
+
+    '    Return GetAccBalance
+
+    'End Function
+
+    Private Function GetAccBalance(ToDate As String, AccNo As String) As Integer
+
+        Try
+
+            Dim sql As New SQLControl
+            Dim i As Integer
+            Dim DebitBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2)) as Debit    " _
+            & " from RPHSTRANSRETRIV" _
+            & " WHERE   JMDEBITCREDIT=1 and       ( JMACCOUNTKEY = '" & AccNo & "'  AND ('" & ToDate & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
+
+            Dim CreditBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2))  as Credit " _
+            & " from RPHSTRANSRETRIV" _
+            & " WHERE   JMDEBITCREDIT=0 and       ( JMACCOUNTKEY = '" & AccNo & "'  AND ('" & ToDate & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
+
+            Dim DebitBalanceString As String = "0", CreditBalanceString As String = "0"
+            sql.WizCountRunQuery(DebitBalance)
+            If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("Debit")) Then DebitBalanceString = CType(sql.SQLDS.Tables(0).Rows(i).Item("Debit"), String)
+
+            sql.WizCountRunQuery(CreditBalance)
+            If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("Credit")) Then CreditBalanceString = CType(sql.SQLDS.Tables(0).Rows(i).Item("Credit"), String)
+
+            GetAccBalance = CInt(DebitBalanceString) - CInt(CreditBalanceString)
+
+            Return GetAccBalance
+        Catch ex As Exception
+
+        End Try
 
         Return GetAccBalance
 
     End Function
 
-    Private Sub GetCheqs()
-        'Dim DebitBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2)) as Debit    " _
-        '& " from RPHSTRANSRETRIV" _
-        '& " WHERE   JMDEBITCREDIT=1 and       ( JMACCOUNTKEY = '" & RecCustNoTextEdit.Text & "'  AND ('" & ToDate & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
+
+    'Private Sub GetCheqs()
+    '    Dim DebitBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2)) as Debit    " _
+    '    & " from RPHSTRANSRETRIV" _
+    '    & " WHERE   JMDEBITCREDIT=1 and       ( JMACCOUNTKEY = '" & RecCustNoTextEdit.Text & "'  AND ('" & Format(Today, "yyyy-MM-dd") & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
+    '    sql.WizCountRunQuery(DebitBalance)
+    '    If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("Debit")) Then DebitBalanceString = CType(sql.SQLDS.Tables(0).Rows(i).Item("Debit"), String)
+    'End Sub
+
+    Private Sub RecCashSpinEdit_EditValueChanged_1(sender As Object, e As EventArgs) Handles RecCashSpinEdit.EditValueChanged
 
     End Sub
 
+    Private Sub RecCurrRate_EditValueChanged(sender As Object, e As EventArgs) Handles RecCurrRate.EditValueChanged
+        Write()
+
+        CalcTotal()
+    End Sub
+
+    Private Sub RecNoteTextEdit_EditValueChanged(sender As Object, e As EventArgs) Handles RecNoteTextEdit.EditValueChanged
+
+    End Sub
+
+    Private Sub RecNoteTextEdit_Leave(sender As Object, e As EventArgs) Handles RecNoteTextEdit.Leave
+        Try
+            If CDec(RecChequeSpinEdit.Text) = 0 Or RecChequeSpinEdit.Text = "" Then SimpleButton1.Select()
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Function GetSumCheks(FromDate As String, AccNo As String) As Integer
+
+        Try
+            Dim sql As New SQLControl
+            Dim i As Integer
+
+            Dim SqlString As String = "SELECT Sum(NIS) as NIS2
+                                    FROM
+                                    (  SELECT  CASE WHEN SuFDlr= 0 THEN SuF else SuFDlr END AS NIS
+		                            FROM [ALHUDA].[dbo].[Cheqs]
+		                            where AccKey='" & AccNo & "' and ValueDate > '" & FromDate & "' ) as TotalNis"
+
+            sql.WizCountRunQuery(SqlString)
+            If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("NIS2")) Then GetSumCheks = CType(sql.SQLDS.Tables(0).Rows(i).Item("NIS2"), Integer)
+
+            Return GetSumCheks
+        Catch ex As Exception
+
+        End Try
+
+        Return GetSumCheks
+
+    End Function
+
+    Private Function GetCountCheks(FromDate As String, AccNo As String) As Integer
+
+        Try
+            Dim sql As New SQLControl
+            Dim i As Integer
+
+            Dim SqlString As String = "SELECT Count(NIS) as NIS2
+                                    FROM
+                                    (  SELECT  CASE WHEN SuFDlr= 0 THEN SuF else SuFDlr END AS NIS
+		                            FROM [ALHUDA].[dbo].[Cheqs]
+		                            where AccKey='" & AccNo & "' and ValueDate > '" & FromDate & "' ) as TotalNis"
+
+            sql.WizCountRunQuery(SqlString)
+            If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("NIS2")) Then GetCountCheks = CType(sql.SQLDS.Tables(0).Rows(i).Item("NIS2"), Integer)
+        Catch ex As Exception
+
+        End Try
+
+        Return GetCountCheks
+
+    End Function
+
+    Private Sub ChequeDataDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub SimpleButton17_Click(sender As Object, e As EventArgs) Handles SimpleButton17.Click
+        Me.ReceiptDataTableAdapter.FillBy(Me.CRMDataSet.ReceiptData, (CType(RecNOSpinEdit.Text, Integer)))
+        Me.ChequeDataTableAdapter.FillBy(Me.CRMDataSet.ChequeData, (CType(RecNOSpinEdit.Text, Integer)))
+    End Sub
+
+    Private Sub ChequeDataDataGridView_Validated(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ChequeDataGridControl_Click(sender As Object, e As EventArgs) Handles ChequeDataGridControl.Click
+
+    End Sub
+
+    Private Sub GridView5_InitNewRow(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs) Handles GridView5.InitNewRow
+
+        Try
+            With Me.GridView5
+                ' .SetRowCellValue(e.RowHandle, "ChequeAccDate", Today)
+                .SetRowCellValue(e.RowHandle, "ChequeAmount", "0")
+                .SetRowCellValue(e.RowHandle, "ChequeReceiptNo", RecNOSpinEdit.Text)
+                ' .SetRowCellValue(e.RowHandle, "ChequeBank", Me.GridView5.GetRowCellValue(GridView5.FocusedRowHandle - 1, "ChequeBank"))
+            End With
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+
+        Try
+            Dim lastRowHandle = GridView5.DataRowCount - 1
+            If Not GridView5.IsValidRowHandle(lastRowHandle) Then Return
+
+            GridView5.SetRowCellValue(e.RowHandle, colChequeNO,
+                                     CInt(GridView5.GetRowCellValue(lastRowHandle, colChequeNO)) + 1)
+
+            GridView5.SetRowCellValue(e.RowHandle, colChequeBank,
+                                      GridView5.GetRowCellValue(lastRowHandle, colChequeBank))
+
+            GridView5.SetRowCellValue(e.RowHandle, colChequeBranch,
+                                      GridView5.GetRowCellValue(lastRowHandle, colChequeBranch))
+
+            GridView5.SetRowCellValue(e.RowHandle, colChequeAccount,
+                          GridView5.GetRowCellValue(lastRowHandle, colChequeAccount))
+
+            GridView5.SetRowCellValue(e.RowHandle, colChequeAmount,
+                          GridView5.GetRowCellValue(lastRowHandle, colChequeAmount))
+
+            Dim AccDate As String = CStr(GridView5.GetRowCellValue(lastRowHandle, colChequeAccDate))
+            GridView5.SetRowCellValue(e.RowHandle, colChequeAccDate, CDate(AccDate).AddMonths(1))
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub GridView5_CellValueChanged(sender As Object, e As CellValueChangedEventArgs) Handles GridView5.CellValueChanged
+        'Dim view As GridView = TryCast(sender, GridView)
+        'If view Is Nothing Then Return
+        'If e.Column.Caption <> "ChequeAmount" Then Return
+        'RecChequeSpinEdit.Text = CStr(colChequeAmount.SummaryItem.SummaryValue)
+        ' MsgBox(CStr(colChequeAmount.SummaryItem.SummaryValue))
+    End Sub
+
+    Private Sub GridView5_RowUpdated(sender As Object, e As RowObjectEventArgs) Handles GridView5.RowUpdated
+        RecChequeSpinEdit.Text = CStr(colChequeAmount.SummaryItem.SummaryValue)
+    End Sub
+
+    Private Sub GridView5_CellValueChanging(sender As Object, e As CellValueChangedEventArgs) Handles GridView5.CellValueChanging
+        'Dim view As GridView = TryCast(sender, GridView)
+        'If view Is Nothing Then Return
+        'If e.Column.Caption <> "ChequeAmount" Then Return
+        'RecChequeSpinEdit.Text = CStr(colChequeAmount.SummaryItem.SummaryValue)
+    End Sub
+
+    Private Sub GridView5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles GridView5.KeyPress
+        RecChequeSpinEdit.Text = CStr(colChequeAmount.SummaryItem.SummaryValue)
+    End Sub
+
+    Private Sub GridView5_CustomRowCellEdit(sender As Object, e As CustomRowCellEditEventArgs) Handles GridView5.CustomRowCellEdit
+        RecChequeSpinEdit.Text = (CStr(colChequeAmount.SummaryItem.SummaryValue))
+    End Sub
 End Class

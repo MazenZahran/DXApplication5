@@ -1,0 +1,1524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C136CD1-5AB9-4E76-B0F8-84C2A034064D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DXApplication5</RootNamespace>
+    <AssemblyName>ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <StartupObject>DXApplication5.Program</StartupObject>
+    <FileAlignment>512</FileAlignment>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DXApplication5.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\logo_1_NIs_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v17.1.Win, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Drawing, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Core.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Printing.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Extensions, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Presets, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Win, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1.Extensions, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Dynamsoft.BarcodeGenerator">
+      <HintPath>C:\Program Files (x86)\Dynamsoft\Dynamic .NET TWAIN 8.0\Redistributable\Assembly\For .NETFramework 4.0\Dynamsoft.BarcodeGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamsoft.BarcodeReader">
+      <HintPath>C:\Program Files (x86)\Dynamsoft\Dynamic .NET TWAIN 8.0\Redistributable\Assembly\For .NETFramework 4.0\Dynamsoft.BarcodeReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamsoft.Camera">
+      <HintPath>C:\Program Files (x86)\Dynamsoft\Dynamic .NET TWAIN 8.0\Redistributable\Assembly\For .NETFramework 4.0\Dynamsoft.Camera.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamsoft.Forms.Viewer">
+      <HintPath>C:\Program Files (x86)\Dynamsoft\Dynamic .NET TWAIN 8.0\Redistributable\Assembly\For .NETFramework 4.0\Dynamsoft.Forms.Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamsoft.ImageCore">
+      <HintPath>C:\Program Files (x86)\Dynamsoft\Dynamic .NET TWAIN 8.0\Redistributable\Assembly\For .NETFramework 4.0\Dynamsoft.ImageCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamsoft.OCR">
+      <HintPath>C:\Program Files (x86)\Dynamsoft\Dynamic .NET TWAIN 8.0\Redistributable\Assembly\For .NETFramework 4.0\Dynamsoft.OCR.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamsoft.PDF">
+      <HintPath>C:\Program Files (x86)\Dynamsoft\Dynamic .NET TWAIN 8.0\Redistributable\Assembly\For .NETFramework 4.0\Dynamsoft.PDF.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamsoft.Twain">
+      <HintPath>C:\Program Files (x86)\Dynamsoft\Dynamic .NET TWAIN 8.0\Samples\Bin\For .NETFramework 4.0\Dynamsoft.Twain.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SqlClient, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.3.0\lib\net46\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TableDependency.SqlClient, Version=8.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SqlTableDependency.8.5.3\lib\net451\TableDependency.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchiveSystem\ArchiveDocuments.Designer.vb">
+      <DependentUpon>ArchiveDocuments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveSystem\ArchiveDocuments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveSystem\ArchiveDocuTypes.Designer.vb">
+      <DependentUpon>ArchiveDocuTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveSystem\ArchiveDocuTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveSystem\ArchiveInputFromScanner.Designer.vb">
+      <DependentUpon>ArchiveInputFromScanner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveSystem\ArchiveInputFromScanner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveSystem\ArchiveInputFromFolderPDF.Designer.vb">
+      <DependentUpon>ArchiveInputFromFolderPDF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveSystem\ArchiveInputFromFolderPDF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveSystem\SpreadeSheets.Designer.vb">
+      <DependentUpon>SpreadeSheets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveSystem\SpreadeSheets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cars\CarsOtherLists.Designer.vb">
+      <DependentUpon>CarsOtherLists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cars\CarsOtherLists.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CRMCardsIssuedAudit.Designer.vb">
+      <DependentUpon>CRMCardsIssuedAudit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMCardsIssuedAudit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CRMSendSMSMessages.Designer.vb">
+      <DependentUpon>CRMSendSMSMessages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMSendSMSMessages.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\AccountStatmentForSort.Designer.vb">
+      <DependentUpon>AccountStatmentForSort.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\AccountStatmentForSort.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialChequesBackFromBankStatment.Designer.vb">
+      <DependentUpon>FinancialChequesBackFromBankStatment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialChequesBackFromBankStatment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\ShiftsAudit.Designer.vb">
+      <DependentUpon>ShiftsAudit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\ShiftsAudit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\XtraForm1.Designer.vb">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\XtraForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\XtraForm5.Designer.vb">
+      <DependentUpon>XtraForm5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\XtraForm5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalSuppressions.vb" />
+    <Compile Include="HR\EmployeeFromHRExcel.Designer.vb">
+      <DependentUpon>EmployeeFromHRExcel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeFromHRExcel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\OnlineUploadTransactions.Designer.vb">
+      <DependentUpon>OnlineUploadTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Online\OnlineUploadTransactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\UploadAttData.Designer.vb">
+      <DependentUpon>UploadAttData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Online\UploadAttData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakTransactionsForSort.Designer.vb">
+      <DependentUpon>OrpakTransactionsForSort.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakTransactionsForSort.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\PreparOrpakMonthTrans.Designer.vb">
+      <DependentUpon>PreparOrpakMonthTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\PreparOrpakMonthTrans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherTools\BlackCheques.Designer.vb">
+      <DependentUpon>BlackCheques.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherTools\BlackCheques.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cars\CarsEdit.Designer.vb">
+      <DependentUpon>CarsEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cars\CarsEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cars\CarsListCards.Designer.vb">
+      <DependentUpon>CarsListCards.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cars\CarsListCards.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CRMPrintForms.Designer.vb">
+      <DependentUpon>CRMPrintForms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMPrintForms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinanceAllAccounts.Designer.vb">
+      <DependentUpon>FinanceAllAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinanceAllAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CRMCardIssue.Designer.vb">
+      <DependentUpon>CRMCardIssue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMCardIssue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CustomersOrders.Designer.vb">
+      <DependentUpon>CustomersOrders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CustomersOrders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CustomersOrdersAdd.Designer.vb">
+      <DependentUpon>CustomersOrdersAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CustomersOrdersAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoards\BanksMatch.Designer.vb">
+      <DependentUpon>BanksMatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\BanksMatch.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DashBoards\OrpakStationsSalesDash.Designer.vb">
+      <DependentUpon>OrpakStationsSalesDash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\OrpakStationsSalesDash.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DashBoards\StocksHeata.Designer.vb">
+      <DependentUpon>StocksHeata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\StocksHeata.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Financial\FinanceAccDetails.Designer.vb">
+      <DependentUpon>FinanceAccDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinanceAccDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinanceChequesAllReport.Designer.vb">
+      <DependentUpon>FinanceChequesAllReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinanceChequesAllReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinanceStockStatment.Designer.vb">
+      <DependentUpon>FinanceStockStatment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinanceStockStatment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountingStatment2.designer.vb">
+      <DependentUpon>FinancialAccountingStatment2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountingStatment2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialBalanceRetrive.Designer.vb">
+      <DependentUpon>FinancialBalanceRetrive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialBalanceRetrive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialReceiptUnPaidTasks.Designer.vb">
+      <DependentUpon>FinancialReceiptUnPaidTasks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialReceiptUnPaidTasks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialStockBalances.Designer.vb">
+      <DependentUpon>FinancialStockBalances.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialStockBalances.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialVISA.Designer.vb">
+      <DependentUpon>FinancialVISA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialVISA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialVouchers.Designer.vb">
+      <DependentUpon>FinancialVouchers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialVouchers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialStockProfit.Designer.vb">
+      <DependentUpon>FinancialStockProfit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialStockProfit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyDataSet\ClearingSystemDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClearingSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMTasksFromExcel.Designer.vb">
+      <DependentUpon>CRMTasksFromExcel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMTasksFromExcel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\XtraForm4.Designer.vb">
+      <DependentUpon>XtraForm4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\XtraForm4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoards\ChequesImages.Designer.vb">
+      <DependentUpon>ChequesImages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\ChequesImages.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Financial\FinanceChequsImages.Designer.vb">
+      <DependentUpon>FinanceChequsImages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinanceChequsImages.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinanceCheksReport.Designer.vb">
+      <DependentUpon>FinanceCheksReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinanceCheksReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountingStatment.Designer.vb">
+      <DependentUpon>FinancialAccountingStatment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountingStatment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyDataSet\WALLETDataSet.vb">
+      <DependentUpon>WALLETDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Online\OnlineEUCoops.Designer.vb">
+      <DependentUpon>OnlineEUCoops.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Online\OnlineEUCoops.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\OnlineUploadLogs.Designer.vb">
+      <DependentUpon>OnlineUploadLogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Online\OnlineUploadLogs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakCustomerTrans2.Designer.vb">
+      <DependentUpon>OrpakCustomerTrans2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakCustomerTrans2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakReadExcel.Designer.vb">
+      <DependentUpon>OrpakReadExcel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakReadExcel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakShifts.Designer.vb">
+      <DependentUpon>OrpakShifts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakShifts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakStations.vb.Designer.vb">
+      <DependentUpon>OrpakStations.vb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakStations.vb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakStationsEmpTrans.designer.vb">
+      <DependentUpon>OrpakStationsEmpTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakStationsEmpTrans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakStationsSales2.Designer.vb">
+      <DependentUpon>OrpakStationsSales2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakStationsSales2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakStationsSalesByHours.Designer.vb">
+      <DependentUpon>OrpakStationsSalesByHours.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakStationsSalesByHours.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakTestSales.Designer.vb">
+      <DependentUpon>OrpakTestSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakTestSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherTools\FormsPrinting.Designer.vb">
+      <DependentUpon>FormsPrinting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherTools\FormsPrinting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherTools\PrintingSystem\PrintingAddDoc.Designer.vb">
+      <DependentUpon>PrintingAddDoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherTools\PrintingSystem\PrintingAddDoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherTools\PrintingSystem\PrintingAllJobs.Designer.vb">
+      <DependentUpon>PrintingAllJobs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherTools\PrintingSystem\PrintingAllJobs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherTools\PrintingSystem\PrintingDocs.Designer.vb">
+      <DependentUpon>PrintingDocs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherTools\PrintingSystem\PrintingDocs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherTools\PrintingSystem\PrintingJobs.Designer.vb">
+      <DependentUpon>PrintingJobs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherTools\PrintingSystem\PrintingJobs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CardsIssues.Designer.vb">
+      <DependentUpon>CardsIssues.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CardsIssues.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ChequesImages.Designer.vb">
+      <DependentUpon>ChequesImages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ChequesImages.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CheuqsReport2.Designer.vb">
+      <DependentUpon>CheuqsReport2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CheuqsReport2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CRMCustomersOrders.Designer.vb">
+      <DependentUpon>CRMCustomersOrders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CRMCustomersOrders.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinanceAccountDetails.Designer.vb">
+      <DependentUpon>FinanceAccountDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinanceAccountDetails.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CRM\CRMAlarmMessages.Designer.vb">
+      <DependentUpon>CRMAlarmMessages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMAlarmMessages.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CRMEditTaskDate.Designer.vb">
+      <DependentUpon>CRMEditTaskDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMEditTaskDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CRMGetTasks.Designer.vb">
+      <DependentUpon>CRMGetTasks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMGetTasks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CRMImportTasks.Designer.vb">
+      <DependentUpon>CRMImportTasks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMImportTasks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CRMQuery.Designer.vb">
+      <DependentUpon>CRMQuery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMQuery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CRMTahsel.Designer.vb">
+      <DependentUpon>CRMTahsel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMTahsel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CRMTasks.Designer.vb">
+      <DependentUpon>CRMTasks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMTasks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CRMTasksDashBoard.Designer.vb">
+      <DependentUpon>CRMTasksDashBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CRMTasksDashBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoards\FinanceBackCheks.Designer.vb">
+      <DependentUpon>FinanceBackCheks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\FinanceBackCheks.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DashBoards\StationsSales.Designer.vb">
+      <DependentUpon>StationsSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\StationsSales.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountingRetrive.Designer.vb">
+      <DependentUpon>FinancialAccountingRetrive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountingRetrive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinanceReceiptQuery.Designer.vb">
+      <DependentUpon>FinanceReceiptQuery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinanceReceiptQuery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountsBalances.Designer.vb">
+      <DependentUpon>FinancialAccountsBalances.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountsBalances.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountsDet.Designer.vb">
+      <DependentUpon>FinancialAccountsDet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountsDet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinanceSelectAccount.Designer.vb">
+      <DependentUpon>FinanceSelectAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinanceSelectAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountsQuery.Designer.vb">
+      <DependentUpon>FinancialAccountsQuery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialAccountsQuery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialAlhudaWherhouses.Designer.vb">
+      <DependentUpon>FinancialAlhudaWherhouses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialAlhudaWherhouses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialBulkReceipt.Designer.vb">
+      <DependentUpon>FinancialBulkReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialBulkReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialChequesBack.Designer.vb">
+      <DependentUpon>FinancialChequesBack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialChequesBack.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialMatchBankDoc.Designer.vb">
+      <DependentUpon>FinancialMatchBankDoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialMatchBankDoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialStock.Designer.vb">
+      <DependentUpon>FinancialStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialTransDet.Designer.vb">
+      <DependentUpon>FinancialTransDet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialTransDet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\ReceiptsAudit.Designer.vb">
+      <DependentUpon>ReceiptsAudit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\ReceiptsAudit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\WhatsUp.vb" />
+    <Compile Include="MyDataSet\ALHUDADataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ALHUDADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\FinanceMain.Designer.vb">
+      <DependentUpon>FinanceMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\FinanceMain.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Financial\FinanceMainForm.Designer.vb">
+      <DependentUpon>FinanceMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinanceMainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinanceReceipt.Designer.vb">
+      <DependentUpon>FinanceReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinanceReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinanceUtilites.Designer.vb">
+      <DependentUpon>FinanceUtilites.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinanceUtilites.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyDataSet\ALHUDADataSet.vb">
+      <DependentUpon>ALHUDADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyDataSet\CRMDataSet.vb">
+      <DependentUpon>CRMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\Dashboard1.Designer.vb">
+      <DependentUpon>Dashboard1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\Dashboard1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakCardsIssue.Designer.vb">
+      <DependentUpon>OrpakCardsIssue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakCardsIssue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakExcelData.Designer.vb">
+      <DependentUpon>OrpakExcelData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakExcelData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveSystem\SourceListForm.Designer.vb">
+      <DependentUpon>SourceListForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveSystem\SourceListForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockManagement\StockBalances.Designer.vb">
+      <DependentUpon>StockBalances.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StockManagement\StockBalances.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockManagement\StockInvoiceReport.Designer.vb">
+      <DependentUpon>StockInvoiceReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StockManagement\StockInvoiceReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StockManagement\StockItemMoves.Designer.vb">
+      <DependentUpon>StockItemMoves.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StockManagement\StockItemMoves.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockManagement\StockManagementLists.Designer.vb">
+      <DependentUpon>StockManagementLists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StockManagement\StockManagementLists.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockManagement\StockMoves.Designer.vb">
+      <DependentUpon>StockMoves.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StockManagement\StockMoves.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockManagement\StockReportViwer.Designer.vb">
+      <DependentUpon>StockReportViwer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StockManagement\StockReportViwer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.vb">
+      <DependentUpon>test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\WaitForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\DashBoardUser.Designer.vb">
+      <DependentUpon>DashBoardUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\DashBoardUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyDataSet\CRMDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialBawaqe.Designer.vb">
+      <DependentUpon>FinancialBawaqe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\FinancialBawaqe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyDataSet\HO_DATADataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HO_DATADataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakTransactions.Designer.vb">
+      <DependentUpon>OrpakTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakTransactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakCardsAll.Designer.vb">
+      <DependentUpon>OrpakCardsAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakCardsAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Module1.vb" />
+    <Compile Include="Module\Module4.vb" />
+    <Compile Include="Module\MyFunctions.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Orpak\OrpakCardsQuery.Designer.vb">
+      <DependentUpon>OrpakCardsQuery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakCardsQuery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakFleetsWithCards.Designer.vb">
+      <DependentUpon>OrpakFleetsWithCards.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakFleetsWithCards.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsTheme.Designer.vb">
+      <DependentUpon>SettingsTheme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SettingsTheme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakCustomerTrans.Designer.vb">
+      <DependentUpon>OrpakCustomerTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakCustomerTrans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Users.Designer.vb">
+      <DependentUpon>Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyDataSet\WALLETDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WALLETDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\Tasks.Designer.vb">
+      <DependentUpon>Tasks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\Tasks.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReceiptReport.Designer.vb">
+      <DependentUpon>FinancialReceiptReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReceiptReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Orpak\StationsStock.Designer.vb">
+      <DependentUpon>StationsStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\StationsStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stations\StationsSales.Designer.vb">
+      <DependentUpon>StationsSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stations\StationsSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoards\ٍStockInStations.Designer.vb">
+      <DependentUpon>ٍStockInStations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoards\ٍStockInStations.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Orpak\OrpakStationSales.Designer.vb">
+      <DependentUpon>OrpakStationSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orpak\OrpakStationSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="ArchiveSystem\ArchiveDocuments.resx">
+      <DependentUpon>ArchiveDocuments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveSystem\ArchiveDocuTypes.resx">
+      <DependentUpon>ArchiveDocuTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveSystem\ArchiveInputFromScanner.resx">
+      <DependentUpon>ArchiveInputFromScanner.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveSystem\ArchiveInputFromFolderPDF.resx">
+      <DependentUpon>ArchiveInputFromFolderPDF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveSystem\SpreadeSheets.resx">
+      <DependentUpon>SpreadeSheets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cars\CarsOtherLists.resx">
+      <DependentUpon>CarsOtherLists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMCardsIssuedAudit.resx">
+      <DependentUpon>CRMCardsIssuedAudit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMSendSMSMessages.resx">
+      <DependentUpon>CRMSendSMSMessages.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\AccountStatmentForSort.resx">
+      <DependentUpon>AccountStatmentForSort.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialChequesBackFromBankStatment.resx">
+      <DependentUpon>FinancialChequesBackFromBankStatment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\ShiftsAudit.resx">
+      <DependentUpon>ShiftsAudit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\XtraForm1.resx">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\XtraForm5.resx">
+      <DependentUpon>XtraForm5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeFromHRExcel.resx">
+      <DependentUpon>EmployeeFromHRExcel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\OnlineUploadTransactions.resx">
+      <DependentUpon>OnlineUploadTransactions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\UploadAttData.resx">
+      <DependentUpon>UploadAttData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakTransactionsForSort.resx">
+      <DependentUpon>OrpakTransactionsForSort.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\PreparOrpakMonthTrans.resx">
+      <DependentUpon>PreparOrpakMonthTrans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherTools\BlackCheques.resx">
+      <DependentUpon>BlackCheques.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cars\CarsEdit.resx">
+      <DependentUpon>CarsEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cars\CarsListCards.resx">
+      <DependentUpon>CarsListCards.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMPrintForms.resx">
+      <DependentUpon>CRMPrintForms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinanceAllAccounts.resx">
+      <DependentUpon>FinanceAllAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMCardIssue.resx">
+      <DependentUpon>CRMCardIssue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMTasksFromExcel.resx">
+      <DependentUpon>CRMTasksFromExcel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CustomersOrders.resx">
+      <DependentUpon>CustomersOrders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CustomersOrdersAdd.resx">
+      <DependentUpon>CustomersOrdersAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\XtraForm4.resx">
+      <DependentUpon>XtraForm4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoards\BanksMatch.resx">
+      <DependentUpon>BanksMatch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoards\ChequesImages.resx">
+      <DependentUpon>ChequesImages.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoards\OrpakStationsSalesDash.resx">
+      <DependentUpon>OrpakStationsSalesDash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinanceAccDetails.resx">
+      <DependentUpon>FinanceAccDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinanceChequsImages.resx">
+      <DependentUpon>FinanceChequsImages.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinanceStockStatment.resx">
+      <DependentUpon>FinanceStockStatment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialAccountingStatment2.resx">
+      <DependentUpon>FinancialAccountingStatment2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialBalanceRetrive.resx">
+      <DependentUpon>FinancialBalanceRetrive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinanceCheksReport.resx">
+      <DependentUpon>FinanceCheksReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinanceChequesAllReport.resx">
+      <DependentUpon>FinanceChequesAllReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialAccountingStatment.resx">
+      <DependentUpon>FinancialAccountingStatment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialReceiptUnPaidTasks.resx">
+      <DependentUpon>FinancialReceiptUnPaidTasks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialStockBalances.resx">
+      <DependentUpon>FinancialStockBalances.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialVISA.resx">
+      <DependentUpon>FinancialVISA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialVouchers.resx">
+      <DependentUpon>FinancialVouchers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialStockProfit.resx">
+      <DependentUpon>FinancialStockProfit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\OnlineEUCoops.resx">
+      <DependentUpon>OnlineEUCoops.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\OnlineUploadLogs.resx">
+      <DependentUpon>OnlineUploadLogs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakCustomerTrans2.resx">
+      <DependentUpon>OrpakCustomerTrans2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakReadExcel.resx">
+      <DependentUpon>OrpakReadExcel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakShifts.resx">
+      <DependentUpon>OrpakShifts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakStations.vb.resx">
+      <DependentUpon>OrpakStations.vb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakStationsEmpTrans.resx">
+      <DependentUpon>OrpakStationsEmpTrans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakStationsSales2.resx">
+      <DependentUpon>OrpakStationsSales2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakStationsSalesByHours.resx">
+      <DependentUpon>OrpakStationsSalesByHours.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakTestSales.resx">
+      <DependentUpon>OrpakTestSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherTools\FormsPrinting.resx">
+      <DependentUpon>FormsPrinting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherTools\PrintingSystem\PrintingAddDoc.resx">
+      <DependentUpon>PrintingAddDoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherTools\PrintingSystem\PrintingAllJobs.resx">
+      <DependentUpon>PrintingAllJobs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherTools\PrintingSystem\PrintingDocs.resx">
+      <DependentUpon>PrintingDocs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherTools\PrintingSystem\PrintingJobs.resx">
+      <DependentUpon>PrintingJobs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CardsIssues.resx">
+      <DependentUpon>CardsIssues.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ChequesImages.resx">
+      <DependentUpon>ChequesImages.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CheuqsReport2.resx">
+      <DependentUpon>CheuqsReport2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CRMCustomersOrders.resx">
+      <DependentUpon>CRMCustomersOrders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinanceAccountDetails.resx">
+      <DependentUpon>FinanceAccountDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMAlarmMessages.resx">
+      <DependentUpon>CRMAlarmMessages.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMEditTaskDate.resx">
+      <DependentUpon>CRMEditTaskDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMGetTasks.resx">
+      <DependentUpon>CRMGetTasks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMImportTasks.resx">
+      <DependentUpon>CRMImportTasks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMQuery.resx">
+      <DependentUpon>CRMQuery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMTahsel.resx">
+      <DependentUpon>CRMTahsel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMTasks.resx">
+      <DependentUpon>CRMTasks.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CRMTasksDashBoard.resx">
+      <DependentUpon>CRMTasksDashBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoards\FinanceBackCheks.resx">
+      <DependentUpon>FinanceBackCheks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoards\StationsSales.resx">
+      <DependentUpon>StationsSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoards\FinanceMain.resx">
+      <DependentUpon>FinanceMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialAccountingRetrive.resx">
+      <DependentUpon>FinancialAccountingRetrive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinanceReceiptQuery.resx">
+      <DependentUpon>FinanceReceiptQuery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialAccountsBalances.resx">
+      <DependentUpon>FinancialAccountsBalances.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialAccountsDet.resx">
+      <DependentUpon>FinancialAccountsDet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinanceSelectAccount.resx">
+      <DependentUpon>FinanceSelectAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinanceMainForm.resx">
+      <DependentUpon>FinanceMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinanceReceipt.resx">
+      <DependentUpon>FinanceReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinanceUtilites.resx">
+      <DependentUpon>FinanceUtilites.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoards\Dashboard1.resx">
+      <DependentUpon>Dashboard1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialAccountsQuery.resx">
+      <DependentUpon>FinancialAccountsQuery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialAlhudaWherhouses.resx">
+      <DependentUpon>FinancialAlhudaWherhouses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialBulkReceipt.resx">
+      <DependentUpon>FinancialBulkReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialChequesBack.resx">
+      <DependentUpon>FinancialChequesBack.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialMatchBankDoc.resx">
+      <DependentUpon>FinancialMatchBankDoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialStock.resx">
+      <DependentUpon>FinancialStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialTransDet.resx">
+      <DependentUpon>FinancialTransDet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\ReceiptsAudit.resx">
+      <DependentUpon>ReceiptsAudit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakCardsIssue.resx">
+      <DependentUpon>OrpakCardsIssue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakExcelData.resx">
+      <DependentUpon>OrpakExcelData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveSystem\SourceListForm.resx">
+      <DependentUpon>SourceListForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockManagement\StockBalances.resx">
+      <DependentUpon>StockBalances.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockManagement\StockInvoiceReport.resx">
+      <DependentUpon>StockInvoiceReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockManagement\StockItemMoves.resx">
+      <DependentUpon>StockItemMoves.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockManagement\StockManagementLists.resx">
+      <DependentUpon>StockManagementLists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockManagement\StockMoves.resx">
+      <DependentUpon>StockMoves.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockManagement\StockReportViwer.resx">
+      <DependentUpon>StockReportViwer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\DashBoardUser.resx">
+      <DependentUpon>DashBoardUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialBawaqe.resx">
+      <DependentUpon>FinancialBawaqe.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakTransactions.resx">
+      <DependentUpon>OrpakTransactions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakCardsAll.resx">
+      <DependentUpon>OrpakCardsAll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Orpak\OrpakCardsQuery.resx">
+      <DependentUpon>OrpakCardsQuery.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakFleetsWithCards.resx">
+      <DependentUpon>OrpakFleetsWithCards.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SettingsTheme.resx">
+      <DependentUpon>SettingsTheme.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakCustomerTrans.resx">
+      <DependentUpon>OrpakCustomerTrans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Users.resx">
+      <DependentUpon>Users.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoards\Tasks.resx">
+      <DependentUpon>Tasks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReceiptReport.resx">
+      <DependentUpon>FinancialReceiptReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\StationsStock.resx">
+      <DependentUpon>StationsStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stations\StationsSales.resx">
+      <DependentUpon>StationsSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoards\ٍStockInStations.resx">
+      <DependentUpon>ٍStockInStations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orpak\OrpakStationSales.resx">
+      <DependentUpon>OrpakStationSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MyDataSet\ClearingSystemDataSet.xsc">
+      <DependentUpon>ClearingSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyDataSet\ClearingSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClearingSystemDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDataSet\ClearingSystemDataSet.xss">
+      <DependentUpon>ClearingSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="MyDataSet\ALHUDADataSet.xsc">
+      <DependentUpon>ALHUDADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyDataSet\ALHUDADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ALHUDADataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDataSet\ALHUDADataSet.xss">
+      <DependentUpon>ALHUDADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="MyDataSet\CRMDataSet.xsc">
+      <DependentUpon>CRMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyDataSet\CRMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDataSet\CRMDataSet.xss">
+      <DependentUpon>CRMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyDataSet\HO_DATADataSet1.xsc">
+      <DependentUpon>HO_DATADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MyDataSet\HO_DATADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HO_DATADataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDataSet\HO_DATADataSet1.xss">
+      <DependentUpon>HO_DATADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="MyDataSet\WALLETDataSet.xsc">
+      <DependentUpon>WALLETDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyDataSet\WALLETDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WALLETDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDataSet\WALLETDataSet.xss">
+      <DependentUpon>WALLETDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\8puiO.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarwesa-NEW.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarwesa2222 - Copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarwesa2222 - Copy1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ADODB\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Employee.ico" />
+    <None Include="Resources\rejectedcheq.wav" />
+    <None Include="Resources\Sold.png" />
+    <None Include="Resources\false.jpg" />
+    <None Include="Resources\true.jpg" />
+    <None Include="Sent.png" />
+    <Content Include="Resources\logo_1_NIs_icon.ico" />
+    <None Include="Resources\Sent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -14,7 +14,8 @@ Public Class SQLControl
     Public SqlConWizCount As New SqlConnection With {.ConnectionString = WizCountString}
     Public SqlConCRM As New SqlConnection With {.ConnectionString = CRMString}
     Public SqlConCheuqes As New SqlConnection With {.ConnectionString = CheuqesString}
-
+    Public SqlConWallet As New SqlConnection With {.ConnectionString = WalletString}
+    Public SqlConTrueTime As New SqlConnection With {.ConnectionString = TrueTimeString}
 
 
     ' Public SqlExcel As New SqlConnection With {.ConnectionString = ExcelString}
@@ -65,6 +66,16 @@ Public Class SQLControl
         End Try
         Return False
     End Function
+    Public Function TrueTimeHasConnection() As Boolean
+        Try
+            SqlCon.Open()
+            SqlConTrueTime.Close()
+            Return True
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        Return False
+    End Function
 
 
     Public Sub RunQuery(query As String)
@@ -98,7 +109,7 @@ Public Class SQLControl
             SqlConWizCount.Close()
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            '  MsgBox(ex.Message)
             If SqlConWizCount.State = ConnectionState.Open Then
                 SqlConWizCount.Close()
             End If
@@ -141,6 +152,43 @@ Public Class SQLControl
         End Try
     End Sub
 
+    Public Sub WalletRunQuery(query As String)
+        Try
+            SqlConWallet.Open()
+            SqlCmd = New SqlCommand(query, SqlConWallet)
+            SQLDA = New SqlDataAdapter(SqlCmd)
+            SQLDS = New DataSet
+            SQLDA.Fill(SQLDS)
+
+
+            SqlConWallet.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            If SqlConWallet.State = ConnectionState.Open Then
+                SqlConWallet.Close()
+            End If
+        End Try
+    End Sub
+
+
+    Public Sub TrueTimeRunQuery(query As String)
+        Try
+            SqlConTrueTime.Open()
+            SqlCmd = New SqlCommand(query, SqlConTrueTime)
+            SQLDA = New SqlDataAdapter(SqlCmd)
+            SQLDS = New DataSet
+            SQLDA.Fill(SQLDS)
+
+            SqlConTrueTime.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            If SqlConTrueTime.State = ConnectionState.Open Then
+                SqlConTrueTime.Close()
+            End If
+        End Try
+    End Sub
 End Class
 
 

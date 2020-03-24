@@ -32,6 +32,7 @@ Partial Class CRMEditTaskDate
         Me.CustomerNameText = New DevExpress.XtraEditors.TextEdit()
         Me.OwnUserTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.CustomerCodeText = New DevExpress.XtraEditors.TextEdit()
         CType(Me.DateEdit1.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,33 +42,34 @@ Partial Class CRMEditTaskDate
         CType(Me.TaskIDText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CustomerNameText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OwnUserTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CustomerCodeText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DateEdit1
         '
         Me.DateEdit1.EditValue = Nothing
-        Me.DateEdit1.Location = New System.Drawing.Point(25, 57)
+        Me.DateEdit1.Location = New System.Drawing.Point(57, 56)
         Me.DateEdit1.Name = "DateEdit1"
         Me.DateEdit1.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.0!)
         Me.DateEdit1.Properties.Appearance.Options.UseFont = True
         Me.DateEdit1.Properties.AutoHeight = False
         Me.DateEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEdit1.Size = New System.Drawing.Size(370, 40)
+        Me.DateEdit1.Size = New System.Drawing.Size(418, 40)
         Me.DateEdit1.TabIndex = 2
         '
         'TextEdit1
         '
-        Me.TextEdit1.Location = New System.Drawing.Point(25, 103)
+        Me.TextEdit1.Location = New System.Drawing.Point(57, 102)
         Me.TextEdit1.Name = "TextEdit1"
         Me.TextEdit1.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextEdit1.Properties.Appearance.Options.UseFont = True
-        Me.TextEdit1.Size = New System.Drawing.Size(370, 158)
+        Me.TextEdit1.Size = New System.Drawing.Size(418, 158)
         Me.TextEdit1.TabIndex = 1
         '
         'LookUpEdit1
         '
-        Me.LookUpEdit1.Location = New System.Drawing.Point(25, 267)
+        Me.LookUpEdit1.Location = New System.Drawing.Point(57, 266)
         Me.LookUpEdit1.Name = "LookUpEdit1"
         Me.LookUpEdit1.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LookUpEdit1.Properties.Appearance.Options.UseFont = True
@@ -77,7 +79,7 @@ Partial Class CRMEditTaskDate
         Me.LookUpEdit1.Properties.DisplayMember = "UserName"
         Me.LookUpEdit1.Properties.NullText = "اختر المستخدم"
         Me.LookUpEdit1.Properties.ValueMember = "UserID"
-        Me.LookUpEdit1.Size = New System.Drawing.Size(370, 28)
+        Me.LookUpEdit1.Size = New System.Drawing.Size(418, 28)
         Me.LookUpEdit1.TabIndex = 3
         '
         'UsersBindingSource
@@ -96,26 +98,27 @@ Partial Class CRMEditTaskDate
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(25, 312)
+        Me.SimpleButton1.Location = New System.Drawing.Point(57, 311)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(277, 41)
+        Me.SimpleButton1.Size = New System.Drawing.Size(325, 41)
         Me.SimpleButton1.TabIndex = 4
         Me.SimpleButton1.Text = "موافق"
         '
         'TaskIDText
         '
-        Me.TaskIDText.Location = New System.Drawing.Point(25, 12)
+        Me.TaskIDText.Location = New System.Drawing.Point(12, 12)
         Me.TaskIDText.Name = "TaskIDText"
         Me.TaskIDText.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TaskIDText.Properties.Appearance.Options.UseFont = True
         Me.TaskIDText.Properties.AutoHeight = False
         Me.TaskIDText.Properties.ReadOnly = True
-        Me.TaskIDText.Size = New System.Drawing.Size(94, 41)
+        Me.TaskIDText.Size = New System.Drawing.Size(43, 41)
         Me.TaskIDText.TabIndex = 5
+        Me.TaskIDText.Visible = False
         '
         'CustomerNameText
         '
-        Me.CustomerNameText.Location = New System.Drawing.Point(125, 12)
+        Me.CustomerNameText.Location = New System.Drawing.Point(205, 11)
         Me.CustomerNameText.Name = "CustomerNameText"
         Me.CustomerNameText.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CustomerNameText.Properties.Appearance.Options.UseFont = True
@@ -126,26 +129,38 @@ Partial Class CRMEditTaskDate
         '
         'OwnUserTextEdit
         '
-        Me.OwnUserTextEdit.Location = New System.Drawing.Point(25, 359)
+        Me.OwnUserTextEdit.Location = New System.Drawing.Point(57, 358)
         Me.OwnUserTextEdit.Name = "OwnUserTextEdit"
-        Me.OwnUserTextEdit.Size = New System.Drawing.Size(370, 20)
+        Me.OwnUserTextEdit.Size = New System.Drawing.Size(418, 20)
         Me.OwnUserTextEdit.TabIndex = 6
         Me.OwnUserTextEdit.Visible = False
         '
         'SimpleButton2
         '
         Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton2.Location = New System.Drawing.Point(306, 312)
+        Me.SimpleButton2.Location = New System.Drawing.Point(386, 311)
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(89, 41)
         Me.SimpleButton2.TabIndex = 7
         Me.SimpleButton2.Text = "اغلاق"
         '
+        'CustomerCodeText
+        '
+        Me.CustomerCodeText.Location = New System.Drawing.Point(57, 12)
+        Me.CustomerCodeText.Name = "CustomerCodeText"
+        Me.CustomerCodeText.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustomerCodeText.Properties.Appearance.Options.UseFont = True
+        Me.CustomerCodeText.Properties.AutoHeight = False
+        Me.CustomerCodeText.Properties.ReadOnly = True
+        Me.CustomerCodeText.Size = New System.Drawing.Size(142, 41)
+        Me.CustomerCodeText.TabIndex = 8
+        '
         'CRMEditTaskDate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(425, 389)
+        Me.ClientSize = New System.Drawing.Size(493, 389)
+        Me.Controls.Add(Me.CustomerCodeText)
         Me.Controls.Add(Me.SimpleButton2)
         Me.Controls.Add(Me.OwnUserTextEdit)
         Me.Controls.Add(Me.CustomerNameText)
@@ -167,6 +182,7 @@ Partial Class CRMEditTaskDate
         CType(Me.TaskIDText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CustomerNameText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OwnUserTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CustomerCodeText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -182,4 +198,5 @@ Partial Class CRMEditTaskDate
     Friend WithEvents CustomerNameText As DevExpress.XtraEditors.TextEdit
     Friend WithEvents OwnUserTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents CustomerCodeText As DevExpress.XtraEditors.TextEdit
 End Class

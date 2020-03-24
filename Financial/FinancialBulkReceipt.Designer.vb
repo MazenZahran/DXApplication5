@@ -99,7 +99,7 @@ Partial Class FinancialBulkReceipt
         Me.TableAdapterManager.CRMTasksTableAdapter = Nothing
         Me.TableAdapterManager.DevelopNotesTableAdapter = Nothing
         Me.TableAdapterManager.EmployeesDataTableAdapter = Nothing
-        Me.TableAdapterManager.FinancialChequesBackTableAdapter = Nothing
+        'Me.TableAdapterManager.FinancialChequesBackTableAdapter = Nothing
         Me.TableAdapterManager.ReceiptDataTableAdapter = Me.ReceiptDataTableAdapter
         Me.TableAdapterManager.UpdateOrder = DXApplication5.CRMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UsersLogInLogsTableAdapter = Nothing

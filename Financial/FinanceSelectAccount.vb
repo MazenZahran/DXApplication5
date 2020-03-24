@@ -137,8 +137,9 @@ Public Class FinanceSelectAccount
                 If TypeOf f Is FinanceReceipt Then
                     child = f
                     f.ActiveControl.Text = AccountID.ToString
+                    MsgBox(f.ActiveControl.Text)
                     Exit For
-                End If
+                    End If
             Next f
             Me.Hide()
         End If
@@ -176,6 +177,10 @@ Public Class FinanceSelectAccount
 
     Private Sub PanelControl1_Paint(sender As Object, e As PaintEventArgs) Handles PanelControl1.Paint
 
+    End Sub
+
+    Private Sub FinanceSelectAccount_Leave(sender As Object, e As EventArgs) Handles Me.Leave
+        '   My.Forms.FinanceReceipt.RecCustNoTextEdit.Text = CInt(GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "AccountKey")).ToString
     End Sub
 End Class
 

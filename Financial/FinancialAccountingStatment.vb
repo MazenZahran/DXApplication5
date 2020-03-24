@@ -19,6 +19,8 @@ Public Class FinancialAccountingStatment
     End Sub
 
     Private Sub AccountingStatment2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'WizCountDataSet.Accounts' table. You can move, or remove it, as needed.
+        '   Me.AccountsTableAdapter.Fill(Me.WizCountDataSet.Accounts)
         RadioGroup1.EditValue = 2
         RadioGroup1.SelectedIndex = 1
         With YearText.Properties.Items
@@ -27,6 +29,7 @@ Public Class FinancialAccountingStatment
                 .Add(CInt(Format(Today, "yyyy")) - i)
             Next i
         End With
+
         YearText.EditValue = CInt(Format(Today, "yyyy"))
 
         CheckBox3.Checked = True
@@ -37,7 +40,7 @@ Public Class FinancialAccountingStatment
         DateEditFrom.DateTime = CDate(DateTime.Now.AddYears(-1).ToString("yyyy-MM-dd 00:00:00.000"))
         AccountKeyTextEdit.Select()
 
-        DateEdit1.DateTime = CDate(DateTime.Now.AddYears(-1).ToString("yyyy-MM-dd 00:00:00.000"))
+        DateEdit1.DateTime = CDate(DateTime.Now.AddMonths(-1).ToString("yyyy-MM-dd 00:00:00.000"))
         DateEdit2.DateTime = CDate(DateTime.Now.AddYears(+1).ToString("yyyy-MM-dd 00:00:00.000"))
         CheckBox1.Checked = True
     End Sub
@@ -71,7 +74,7 @@ Public Class FinancialAccountingStatment
 
     Private Sub AccounStatment(FromDate As String, ToDate As String)
 
-        If CInt(AccountKeyTextEdit.Text) = 0 Or AccountKeyTextEdit.Text = "" Then Exit Sub
+        If AccountKeyTextEdit.Text = "0" Or AccountKeyTextEdit.Text = "" Then Exit Sub
 
         Try
             If AccountKeyTextEdit.Text = String.Empty Then Exit Sub
@@ -158,7 +161,7 @@ Public Class FinancialAccountingStatment
                 OptimizeGrid()
             End If
         Catch ex As Exception
-            Exit Sub
+            MsgBox(ex.ToString)
         End Try
 
     End Sub
@@ -210,10 +213,15 @@ Public Class FinancialAccountingStatment
     End Sub
 
     Private Sub AccountKeyTextEdit_EditValueChanged(sender As Object, e As EventArgs) Handles AccountKeyTextEdit.EditValueChanged
+        AccountStatmentReport()
 
+    End Sub
 
-
+    Private Sub AccountStatmentReport()
+        GridControl2.DataSource = ""
         GetDat()
+        Dim CustSort As String = GetAccData(AccountKeyTextEdit.Text).SortGroup
+        If CheckIfAuth(GlobalVariables.UserIDWallet, CInt(CustSort)) = False Then XtraMessageBox.Show("لا يوجد صلاحية") : Exit Sub
 
         AccounStatment(CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")), CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")))
 
@@ -221,11 +229,12 @@ Public Class FinancialAccountingStatment
 
         GetCheks(CStr(Format(DateEdit1.DateTime, "yyyy-MM-dd")), CStr(Format(DateEdit2.DateTime, "yyyy-MM-dd")), AccountKeyTextEdit.Text)
 
-
+        InsertLog(Me.Name, AccountKeyTextEdit.Text)
     End Sub
 
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
-
+        InsertLog(Me.Name, AccountKeyTextEdit.Text & "Chk")
+        If AccountKeyTextEdit.Text = "1800013" Then Exit Sub
         GetCheks(CStr(Format(DateEdit1.DateTime, "yyyy-MM-dd")), CStr(Format(DateEdit2.DateTime, "yyyy-MM-dd")), AccountKeyTextEdit.Text)
 
     End Sub
@@ -330,70 +339,70 @@ Public Class FinancialAccountingStatment
     End Sub
 
     Private Sub SimpleButton1_Click_1(sender As Object, e As EventArgs) Handles SimpleButton1.Click
-        GetDat()
-        GetAddData()
-        AccounStatment(CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")), CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")))
-        GetCheks(CStr(Format(DateEdit1.DateTime, "yyyy-MM-dd")), CStr(Format(DateEdit2.DateTime, "yyyy-MM-dd")), AccountKeyTextEdit.Text)
+        AccountStatmentReport()
     End Sub
 
+
+
+
     Private Sub SimpleButton5_Click(sender As Object, e As EventArgs) Handles SimpleButton5.Click
-        'Try
-        '    Dim RightHeader As String, MiddleHeader As String, LeftHeader As String
-        '    RightHeader = String.Empty
-        '    MiddleHeader = "  كشف حساب  " & " " & " " & Me.TextEdit2.Text & " " & Me.AccountKeyTextEdit.Text
-        '    LeftHeader = WizCountOrpak.Text
+        Try
+            Dim RightHeader As String, MiddleHeader As String, LeftHeader As String
+            RightHeader = String.Empty
+            MiddleHeader = "  كشف حساب  " & " " & " " & Me.TextEdit2.Text & " " & Me.AccountKeyTextEdit.Text
+            LeftHeader = WizCountOrpak.Text
 
-        '    Dim RightFooter As String = "Pages: [Page # of Pages #]"
-        '    Dim MiddleFooter As String = "User: [User Name]"
-        '    Dim LeftFooter As String = "Date: [Date Printed]"
-
-
+            Dim RightFooter As String = "Pages: [Page # of Pages #]"
+            Dim MiddleFooter As String = "User: [User Name]"
+            Dim LeftFooter As String = "Date: [Date Printed]"
 
 
-        '    Dim grids As Control() = New Control() {GridControl2}
-
-        '    Dim ps As New DevExpress.XtraPrinting.PrintingSystem()
-        '    Dim compositeLink As New DevExpress.XtraPrintingLinks.CompositeLink()
-        '    compositeLink.PrintingSystem = ps
-
-        '    For Each grid As Control In grids
-        '        Dim link As New DevExpress.XtraPrinting.PrintableComponentLink()
-        '        link.Component = CType(grid, DevExpress.XtraPrinting.IPrintable)
-        '        compositeLink.Links.Add(link)
-        '        link.PrintingSystem.Document.AutoFitToPagesWidth = 1
-        '    Next
-
-        '    compositeLink.Landscape = False
-        '    compositeLink.Margins.Left = 2
-        '    compositeLink.Margins.Right = 2
-
-        '    compositeLink.Margins.Bottom = 10
-        '    compositeLink.Margins.Top = 10
-
-        '    'compositeLink.PrintingSystem.PageMargins.Left = 0
-        '    'compositeLink.PrintingSystem.PageMargins.Right = 0
-        '    'compositeLink.PrintingSystem.PageMargins.Top = 0
-        '    'compositeLink.PrintingSystem.PageMargins.Bottom = 0
-
-        '    Dim phf As DevExpress.XtraPrinting.PageHeaderFooter =
-        '   TryCast(compositeLink.PageHeaderFooter, DevExpress.XtraPrinting.PageHeaderFooter)
-        '    phf.Header.Content.Clear()
-        '    phf.Header.Content.AddRange(New String() _
-        '    {RightHeader, MiddleHeader, LeftHeader})
-        '    phf.Header.LineAlignment = DevExpress.XtraPrinting.BrickAlignment.Far
-
-        '    phf.Footer.Content.Clear()
-        '    phf.Footer.Content.AddRange(New String() _
-        '    {RightFooter, MiddleFooter, LeftFooter})
-        '    phf.Footer.LineAlignment = DevExpress.XtraPrinting.BrickAlignment.Far
 
 
-        '    compositeLink.CreateDocument()
+            Dim grids As Control() = New Control() {GridControl2}
 
-        '    compositeLink.ShowPreview()
-        'Catch ex As Exception
-        '    MsgBox("لا يوجد بيانات")
-        'End Try
+            Dim ps As New DevExpress.XtraPrinting.PrintingSystem()
+            Dim compositeLink As New DevExpress.XtraPrintingLinks.CompositeLink()
+            compositeLink.PrintingSystem = ps
+
+            For Each grid As Control In grids
+                Dim link As New DevExpress.XtraPrinting.PrintableComponentLink()
+                link.Component = CType(grid, DevExpress.XtraPrinting.IPrintable)
+                compositeLink.Links.Add(link)
+                link.PrintingSystem.Document.AutoFitToPagesWidth = 1
+            Next
+
+            compositeLink.Landscape = False
+            compositeLink.Margins.Left = 2
+            compositeLink.Margins.Right = 2
+
+            compositeLink.Margins.Bottom = 10
+            compositeLink.Margins.Top = 10
+
+            'compositeLink.PrintingSystem.PageMargins.Left = 0
+            'compositeLink.PrintingSystem.PageMargins.Right = 0
+            'compositeLink.PrintingSystem.PageMargins.Top = 0
+            'compositeLink.PrintingSystem.PageMargins.Bottom = 0
+
+            Dim phf As DevExpress.XtraPrinting.PageHeaderFooter =
+           TryCast(compositeLink.PageHeaderFooter, DevExpress.XtraPrinting.PageHeaderFooter)
+            phf.Header.Content.Clear()
+            phf.Header.Content.AddRange(New String() _
+            {RightHeader, MiddleHeader, LeftHeader})
+            phf.Header.LineAlignment = DevExpress.XtraPrinting.BrickAlignment.Far
+
+            phf.Footer.Content.Clear()
+            phf.Footer.Content.AddRange(New String() _
+            {RightFooter, MiddleFooter, LeftFooter})
+            phf.Footer.LineAlignment = DevExpress.XtraPrinting.BrickAlignment.Far
+
+
+            compositeLink.CreateDocument()
+
+            compositeLink.ShowPreview()
+        Catch ex As Exception
+            MsgBox("لا يوجد بيانات")
+        End Try
     End Sub
 
     Private Sub SimpleButton6_Click(sender As Object, e As EventArgs) Handles SimpleButton6.Click
@@ -461,7 +470,7 @@ Public Class FinancialAccountingStatment
     End Sub
 
     Private Sub DateEditTo_EditValueChanged(sender As Object, e As EventArgs) Handles DateEditTo.EditValueChanged
-        AccounStatment(CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")), CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")))
+
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
@@ -469,17 +478,18 @@ Public Class FinancialAccountingStatment
     End Sub
 
     Private Sub DateEditFrom_EditValueChanging(sender As Object, e As ChangingEventArgs) Handles DateEditFrom.EditValueChanging
-        AccounStatment(CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")), CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")))
+
     End Sub
 
     Private Sub DateEditFrom_EditValueChanged(sender As Object, e As EventArgs) Handles DateEditFrom.EditValueChanged
-        AccounStatment(CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")), CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")))
+
     End Sub
 
     Private Sub SimpleButton7_Click(sender As Object, e As EventArgs) Handles SimpleButton7.Click
         '  Me.LayoutControl1.ShowPrintPreview()
         '  GetAccBalance()
-
+        Dim CustSort As String = GetAccData(AccountKeyTextEdit.Text).SortGroup
+        If CheckIfAuth(GlobalVariables.UserIDWallet, CInt(CustSort)) = False Then Exit Sub
         Try
             Dim report As New FinanceAccountDetails()
             report.AccountNo.Value = AccountNo.Text
@@ -571,11 +581,15 @@ Public Class FinancialAccountingStatment
 
     Private Function GetCheks(FromDate As String, ToDate As String, AccNo As String) As Integer
 
+        If AccNo = "1800013" Then
+            ToDate = "2020-12-31"
+        End If
+
         Try
             Dim sql As New SQLControl
             Dim SqlString As String = " SELECT  [CheqNumber]      ,[BankNumber]      ,[Branch]      ,[BankAccNum]      ,[ValueDate]      ,[SuF] ,
                                                 [Currency]      ,[DepositID]      ,[DepositFlag]      ,CASE WHEN SuFDlr  = 0 THEN SuF   else SuFDlr   END AS NIS,
-                                                 CONVERT(nvarchar(6), ValueDate, 112) As ValueMonth 
+                                                CONVERT(nvarchar(6), ValueDate, 112) As ValueMonth 
                                         FROM [ALHUDA].[dbo].[Cheqs]
                                         Where AccKey='" & AccNo & "' and ValueDate between  '" & FromDate & "' and  '" & ToDate & "'  Order By ValueDate"
 
@@ -592,6 +606,7 @@ Public Class FinancialAccountingStatment
         DateEdit1.DateTime = CDate(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000"))
         DateEdit2.DateTime = CDate(DateTime.Now.AddYears(+1).ToString("yyyy-MM-dd 00:00:00.000"))
         GetCheks(CStr(Format(DateEdit1.DateTime, "yyyy-MM-dd")), CStr(Format(DateEdit2.DateTime, "yyyy-MM-dd")), AccountKeyTextEdit.Text)
+        InsertLog(Me.Name, AccountKeyTextEdit.Text & "Chk")
     End Sub
 
     Private Sub SimpleButton10_Click(sender As Object, e As EventArgs) Handles SimpleButton10.Click
@@ -601,10 +616,12 @@ Public Class FinancialAccountingStatment
             Dim SqlString As String = " SELECT  [CheqNumber]      ,[BankNumber]      ,[Branch]      ,[BankAccNum]      ,[ValueDate]      ,[SuF] ,
                                            [Currency]      ,[DepositID]      ,[DepositFlag]      ,CASE WHEN SuFDlr  = 0 THEN SuF   else SuFDlr   END AS NIS
                                     FROM [ALHUDA].[dbo].[Cheqs]
-                                    Where DepositFlag=0 and AccKey='" & AccountKeyTextEdit.Text & "'  Order By ValueDate"
-
+                                    Where DepositFlag=0 and AccKey='" & AccountKeyTextEdit.Text & "' "
+            If AccountKeyTextEdit.Text = "1800013" Then SqlString = SqlString + " and ValueDate <  '2020-12-31' "
+            SqlString = SqlString + "  Order By ValueDate "
             sql.WizCountRunQuery(SqlString)
             GridControl1.DataSource = sql.SQLDS.Tables(0)
+            InsertLog(Me.Name, AccountKeyTextEdit.Text & "Chk")
         Catch ex As Exception
 
         End Try
@@ -982,4 +999,44 @@ ByVal e As RowCellCustomDrawEventArgs) Handles GridView1.CustomDrawCell
     Private Sub SimpleButton18_Click(sender As Object, e As EventArgs) Handles SimpleButton18.Click
         ShowGridPreview()
     End Sub
+
+    Private Sub SimpleButton19_Click(sender As Object, e As EventArgs) Handles SimpleButton19.Click
+
+    End Sub
+
+    Private Sub DateEditFrom_Leave(sender As Object, e As EventArgs) Handles DateEditFrom.Leave
+        AccounStatment(CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")), CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")))
+    End Sub
+
+    Private Sub DateEditTo_Leave(sender As Object, e As EventArgs) Handles DateEditTo.Leave
+        AccounStatment(CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")), CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")))
+    End Sub
+
+    Private Sub GetAccountsList()
+        Dim Sql As New SQLControl
+        Dim SqlString As String
+        SqlString = " se"
+
+    End Sub
+
+    Private Function CheckIfAuth(UserID As Integer, AccountStatmentForSort As Integer) As Boolean
+
+        Try
+            Dim sql As New SQLControl
+            Dim SqlString As String
+            SqlString = "  select *
+                       From [WALLET].[dbo].[ACCSORT_FILTER] 
+                       Where USERID =" & UserID & "
+                       and " & AccountStatmentForSort & " between SORT_FROM and SORT_TO "
+            sql.WalletRunQuery(SqlString)
+            If sql.SQLDS.Tables(0).Rows.Count > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
 End Class

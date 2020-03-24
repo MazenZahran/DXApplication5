@@ -62,15 +62,12 @@
             Dim Dimension2 As DevExpress.DashboardCommon.Dimension = New DevExpress.DashboardCommon.Dimension()
             Dim Dimension3 As DevExpress.DashboardCommon.Dimension = New DevExpress.DashboardCommon.Dimension()
             Dim Dimension4 As DevExpress.DashboardCommon.Dimension = New DevExpress.DashboardCommon.Dimension()
-            Dim Measure1 As DevExpress.DashboardCommon.Measure = New DevExpress.DashboardCommon.Measure()
-            Dim Measure2 As DevExpress.DashboardCommon.Measure = New DevExpress.DashboardCommon.Measure()
-            Dim Measure3 As DevExpress.DashboardCommon.Measure = New DevExpress.DashboardCommon.Measure()
             Dim Dimension5 As DevExpress.DashboardCommon.Dimension = New DevExpress.DashboardCommon.Dimension()
             Dim Dimension6 As DevExpress.DashboardCommon.Dimension = New DevExpress.DashboardCommon.Dimension()
-            Dim Measure4 As DevExpress.DashboardCommon.Measure = New DevExpress.DashboardCommon.Measure()
+            Dim Measure1 As DevExpress.DashboardCommon.Measure = New DevExpress.DashboardCommon.Measure()
             Dim ChartPane1 As DevExpress.DashboardCommon.ChartPane = New DevExpress.DashboardCommon.ChartPane()
             Dim SimpleSeries1 As DevExpress.DashboardCommon.SimpleSeries = New DevExpress.DashboardCommon.SimpleSeries()
-            Dim Measure5 As DevExpress.DashboardCommon.Measure = New DevExpress.DashboardCommon.Measure()
+            Dim Measure2 As DevExpress.DashboardCommon.Measure = New DevExpress.DashboardCommon.Measure()
             Dim Card1 As DevExpress.DashboardCommon.Card = New DevExpress.DashboardCommon.Card()
             Dim CardStretchedLayoutTemplate1 As DevExpress.DashboardCommon.CardStretchedLayoutTemplate = New DevExpress.DashboardCommon.CardStretchedLayoutTemplate()
             Dim Dimension7 As DevExpress.DashboardCommon.Dimension = New DevExpress.DashboardCommon.Dimension()
@@ -81,11 +78,12 @@
             Dim DashboardLayoutGroup3 As DevExpress.DashboardCommon.DashboardLayoutGroup = New DevExpress.DashboardCommon.DashboardLayoutGroup()
             Dim DashboardLayoutItem3 As DevExpress.DashboardCommon.DashboardLayoutItem = New DevExpress.DashboardCommon.DashboardLayoutItem()
             Dim DashboardLayoutItem4 As DevExpress.DashboardCommon.DashboardLayoutItem = New DevExpress.DashboardCommon.DashboardLayoutItem()
-            Dim DashboardLayoutItem5 As DevExpress.DashboardCommon.DashboardLayoutItem = New DevExpress.DashboardCommon.DashboardLayoutItem()
+            Dim DashboardParameter1 As DevExpress.DashboardCommon.DashboardParameter = New DevExpress.DashboardCommon.DashboardParameter()
+            Dim DashboardParameter2 As DevExpress.DashboardCommon.DashboardParameter = New DevExpress.DashboardCommon.DashboardParameter()
+            Dim DashboardParameter3 As DevExpress.DashboardCommon.DashboardParameter = New DevExpress.DashboardCommon.DashboardParameter()
             Me.ListBoxDashboardItem1 = New DevExpress.DashboardCommon.ListBoxDashboardItem()
             Me.DashboardSqlDataSource1 = New DevExpress.DashboardCommon.DashboardSqlDataSource()
             Me.TreeViewDashboardItem1 = New DevExpress.DashboardCommon.TreeViewDashboardItem()
-            Me.TreemapDashboardItem1 = New DevExpress.DashboardCommon.TreemapDashboardItem()
             Me.ChartDashboardItem1 = New DevExpress.DashboardCommon.ChartDashboardItem()
             Me.CardDashboardItem1 = New DevExpress.DashboardCommon.CardDashboardItem()
             CType(Me.ListBoxDashboardItem1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,16 +93,12 @@
             CType(Dimension2, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Dimension3, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Dimension4, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.TreemapDashboardItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Measure1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Measure2, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Measure3, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.ChartDashboardItem1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Dimension5, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Dimension6, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Measure4, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Measure1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.CardDashboardItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Measure5, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Measure2, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Dimension7, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
             '
@@ -117,6 +111,7 @@
             Me.ListBoxDashboardItem1.DataMember = "ReceiptData"
             Me.ListBoxDashboardItem1.DataSource = Me.DashboardSqlDataSource1
             Me.ListBoxDashboardItem1.FilterDimensions.AddRange(New DevExpress.DashboardCommon.Dimension() {Dimension1})
+            Me.ListBoxDashboardItem1.FilterString = "StartsWith([DataItem0], ?Parameter1)"
             Me.ListBoxDashboardItem1.InteractivityOptions.IgnoreMasterFilters = True
             Me.ListBoxDashboardItem1.Name = "المستخدمين"
             Me.ListBoxDashboardItem1.ShowCaption = True
@@ -214,40 +209,25 @@
             Me.TreeViewDashboardItem1.DataMember = "ReceiptData"
             Me.TreeViewDashboardItem1.DataSource = Me.DashboardSqlDataSource1
             Me.TreeViewDashboardItem1.FilterDimensions.AddRange(New DevExpress.DashboardCommon.Dimension() {Dimension2, Dimension3, Dimension4})
+            Me.TreeViewDashboardItem1.FilterString = "[DataItem0] = ?Parameter2 And [DataItem1] = ?Parameter3"
             Me.TreeViewDashboardItem1.InteractivityOptions.IgnoreMasterFilters = True
             Me.TreeViewDashboardItem1.Name = "الفترات"
             Me.TreeViewDashboardItem1.ShowCaption = True
             '
-            'TreemapDashboardItem1
-            '
-            Me.TreemapDashboardItem1.ComponentName = "TreemapDashboardItem1"
-            Measure1.DataMember = "RecCash"
-            Measure2.DataMember = "RecCheque"
-            Measure3.DataMember = "RecOther"
-            Me.TreemapDashboardItem1.DataItemRepository.Clear()
-            Me.TreemapDashboardItem1.DataItemRepository.Add(Measure1, "DataItem0")
-            Me.TreemapDashboardItem1.DataItemRepository.Add(Measure2, "DataItem1")
-            Me.TreemapDashboardItem1.DataItemRepository.Add(Measure3, "DataItem2")
-            Me.TreemapDashboardItem1.DataMember = "ReceiptData"
-            Me.TreemapDashboardItem1.DataSource = Me.DashboardSqlDataSource1
-            Me.TreemapDashboardItem1.InteractivityOptions.IgnoreMasterFilters = False
-            Me.TreemapDashboardItem1.Name = "طريقة التحيل"
-            Me.TreemapDashboardItem1.ShowCaption = True
-            Me.TreemapDashboardItem1.Values.AddRange(New DevExpress.DashboardCommon.Measure() {Measure1, Measure2, Measure3})
-            '
             'ChartDashboardItem1
             '
             Dimension5.DataMember = "RecDate"
-            Dimension5.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.Month
+            Dimension5.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.Day
+            Dimension5.SortOrder = DevExpress.DashboardCommon.DimensionSortOrder.Descending
             Me.ChartDashboardItem1.Arguments.AddRange(New DevExpress.DashboardCommon.Dimension() {Dimension5})
             Me.ChartDashboardItem1.AxisX.TitleVisible = False
             Me.ChartDashboardItem1.ComponentName = "ChartDashboardItem1"
             Dimension6.DataMember = "RecUser"
-            Measure4.DataMember = "RecTotal"
+            Measure1.DataMember = "RecTotal"
             Me.ChartDashboardItem1.DataItemRepository.Clear()
             Me.ChartDashboardItem1.DataItemRepository.Add(Dimension5, "DataItem1")
             Me.ChartDashboardItem1.DataItemRepository.Add(Dimension6, "DataItem3")
-            Me.ChartDashboardItem1.DataItemRepository.Add(Measure4, "DataItem0")
+            Me.ChartDashboardItem1.DataItemRepository.Add(Measure1, "DataItem0")
             Me.ChartDashboardItem1.DataMember = "ReceiptData"
             Me.ChartDashboardItem1.DataSource = Me.DashboardSqlDataSource1
             Me.ChartDashboardItem1.InteractivityOptions.IgnoreMasterFilters = False
@@ -260,7 +240,7 @@
             ChartPane1.SecondaryAxisY.ShowGridLines = False
             ChartPane1.SecondaryAxisY.TitleVisible = True
             SimpleSeries1.PointLabelOptions.Orientation = DevExpress.DashboardCommon.PointLabelOrientation.RotateRight
-            SimpleSeries1.AddDataItem("Value", Measure4)
+            SimpleSeries1.AddDataItem("Value", Measure1)
             ChartPane1.Series.AddRange(New DevExpress.DashboardCommon.ChartSeries() {SimpleSeries1})
             Me.ChartDashboardItem1.Panes.AddRange(New DevExpress.DashboardCommon.ChartPane() {ChartPane1})
             Me.ChartDashboardItem1.SeriesDimensions.AddRange(New DevExpress.DashboardCommon.Dimension() {Dimension6})
@@ -268,7 +248,7 @@
             '
             'CardDashboardItem1
             '
-            Measure5.DataMember = "RecTotal"
+            Measure2.DataMember = "RecTotal"
             Card1.AbsoluteVariationNumericFormat.FormatType = DevExpress.DashboardCommon.DataItemNumericFormatType.Number
             Card1.AbsoluteVariationNumericFormat.Precision = 0
             CardStretchedLayoutTemplate1.BottomValue1.DimensionIndex = 0
@@ -291,16 +271,16 @@
             Card1.LayoutTemplate = CardStretchedLayoutTemplate1
             Card1.PercentOfTargetNumericFormat.FormatType = DevExpress.DashboardCommon.DataItemNumericFormatType.Percent
             Card1.PercentVariationNumericFormat.FormatType = DevExpress.DashboardCommon.DataItemNumericFormatType.Percent
-            Card1.AddDataItem("ActualValue", Measure5)
+            Card1.AddDataItem("ActualValue", Measure2)
             Me.CardDashboardItem1.Cards.AddRange(New DevExpress.DashboardCommon.Card() {Card1})
             Me.CardDashboardItem1.ComponentName = "CardDashboardItem1"
             Dimension7.DataMember = "RecCustName"
             Dimension7.TopNOptions.Count = 10
             Dimension7.TopNOptions.Enabled = True
-            Dimension7.TopNOptions.Measure = Measure5
+            Dimension7.TopNOptions.Measure = Measure2
             Me.CardDashboardItem1.DataItemRepository.Clear()
             Me.CardDashboardItem1.DataItemRepository.Add(Dimension7, "DataItem0")
-            Me.CardDashboardItem1.DataItemRepository.Add(Measure5, "DataItem1")
+            Me.CardDashboardItem1.DataItemRepository.Add(Measure2, "DataItem1")
             Me.CardDashboardItem1.DataMember = "ReceiptData"
             Me.CardDashboardItem1.DataSource = Me.DashboardSqlDataSource1
             Me.CardDashboardItem1.InteractivityOptions.IgnoreMasterFilters = False
@@ -311,7 +291,7 @@
             'Dashboard1
             '
             Me.DataSources.AddRange(New DevExpress.DashboardCommon.IDashboardDataSource() {Me.DashboardSqlDataSource1})
-            Me.Items.AddRange(New DevExpress.DashboardCommon.DashboardItem() {Me.ChartDashboardItem1, Me.CardDashboardItem1, Me.ListBoxDashboardItem1, Me.TreeViewDashboardItem1, Me.TreemapDashboardItem1})
+            Me.Items.AddRange(New DevExpress.DashboardCommon.DashboardItem() {Me.ChartDashboardItem1, Me.CardDashboardItem1, Me.ListBoxDashboardItem1, Me.TreeViewDashboardItem1})
             DashboardLayoutItem1.DashboardItem = Me.ListBoxDashboardItem1
             DashboardLayoutItem1.Weight = 44.319460067491562R
             DashboardLayoutItem2.DashboardItem = Me.TreeViewDashboardItem1
@@ -319,19 +299,27 @@
             DashboardLayoutGroup2.ChildNodes.AddRange(New DevExpress.DashboardCommon.DashboardLayoutNode() {DashboardLayoutItem1, DashboardLayoutItem2})
             DashboardLayoutGroup2.DashboardItem = Nothing
             DashboardLayoutGroup2.Weight = 25.0R
-            DashboardLayoutItem3.DashboardItem = Me.TreemapDashboardItem1
-            DashboardLayoutItem3.Weight = 24.9718785151856R
-            DashboardLayoutItem4.DashboardItem = Me.ChartDashboardItem1
-            DashboardLayoutItem4.Weight = 41.169853768278962R
-            DashboardLayoutItem5.DashboardItem = Me.CardDashboardItem1
-            DashboardLayoutItem5.Weight = 33.85826771653543R
-            DashboardLayoutGroup3.ChildNodes.AddRange(New DevExpress.DashboardCommon.DashboardLayoutNode() {DashboardLayoutItem3, DashboardLayoutItem4, DashboardLayoutItem5})
+            DashboardLayoutItem3.DashboardItem = Me.ChartDashboardItem1
+            DashboardLayoutItem3.Weight = 41.169853768278962R
+            DashboardLayoutItem4.DashboardItem = Me.CardDashboardItem1
+            DashboardLayoutItem4.Weight = 33.85826771653543R
+            DashboardLayoutGroup3.ChildNodes.AddRange(New DevExpress.DashboardCommon.DashboardLayoutNode() {DashboardLayoutItem3, DashboardLayoutItem4})
             DashboardLayoutGroup3.DashboardItem = Nothing
             DashboardLayoutGroup3.Weight = 75.0R
             DashboardLayoutGroup1.ChildNodes.AddRange(New DevExpress.DashboardCommon.DashboardLayoutNode() {DashboardLayoutGroup2, DashboardLayoutGroup3})
             DashboardLayoutGroup1.DashboardItem = Nothing
             DashboardLayoutGroup1.Orientation = DevExpress.DashboardCommon.DashboardLayoutGroupOrientation.Vertical
             Me.LayoutRoot = DashboardLayoutGroup1
+            DashboardParameter1.Name = "Parameter1"
+            DashboardParameter1.Type = GetType(Integer)
+            DashboardParameter1.Value = 0
+            DashboardParameter2.Name = "Parameter2"
+            DashboardParameter2.Type = GetType(Integer)
+            DashboardParameter2.Value = 0
+            DashboardParameter3.Name = "Parameter3"
+            DashboardParameter3.Type = GetType(Integer)
+            DashboardParameter3.Value = 0
+            Me.Parameters.AddRange(New DevExpress.DashboardCommon.DashboardParameter() {DashboardParameter1, DashboardParameter2, DashboardParameter3})
             Me.Title.ShowMasterFilterState = False
             Me.Title.Text = "ملخص حركات القبض"
             CType(Dimension1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -341,15 +329,11 @@
             CType(Dimension3, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Dimension4, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.TreeViewDashboardItem1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Measure1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Measure2, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Measure3, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.TreemapDashboardItem1, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Dimension5, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Dimension6, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Measure4, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Measure1, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.ChartDashboardItem1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Measure5, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Measure2, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Dimension7, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.CardDashboardItem1, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
@@ -360,7 +344,6 @@
         Friend WithEvents ListBoxDashboardItem1 As DevExpress.DashboardCommon.ListBoxDashboardItem
         Friend WithEvents TreeViewDashboardItem1 As DevExpress.DashboardCommon.TreeViewDashboardItem
         Friend WithEvents CardDashboardItem1 As DevExpress.DashboardCommon.CardDashboardItem
-        Friend WithEvents TreemapDashboardItem1 As DevExpress.DashboardCommon.TreemapDashboardItem
 
 #End Region
     End Class

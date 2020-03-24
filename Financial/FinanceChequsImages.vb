@@ -12,6 +12,12 @@
     End Sub
 
     Private Sub FinanceChequsImages_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SqlDataSource1.Fill()
+        '  SqlDataSource1.Queries(0).Parameters(0).Value = "31944860"
+        '  SqlDataSource1.Queries(0).Parameters(1).Value = "2585448570"
+        ' SqlDataSource1.Fill()
+    End Sub
+
+    Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+        GridControl1.ShowPrintPreview()
     End Sub
 End Class

@@ -26,6 +26,7 @@ Partial Class Login
         Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelLastDate = New DevExpress.XtraEditors.LabelControl()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -95,6 +96,7 @@ Partial Class Login
         'PanelControl2
         '
         Me.PanelControl2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PanelControl2.Controls.Add(Me.SimpleButton2)
         Me.PanelControl2.Controls.Add(Me.LabelLastDate)
         Me.PanelControl2.Controls.Add(Me.SimpleButton1)
         Me.PanelControl2.Controls.Add(Me.PictureBox1)
@@ -107,6 +109,14 @@ Partial Class Login
         Me.PanelControl2.Name = "PanelControl2"
         Me.PanelControl2.Size = New System.Drawing.Size(621, 501)
         Me.PanelControl2.TabIndex = 3
+        '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.Location = New System.Drawing.Point(233, 431)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(182, 36)
+        Me.SimpleButton2.TabIndex = 7
+        Me.SimpleButton2.Text = "موافق"
         '
         'LabelLastDate
         '
@@ -212,4 +222,5 @@ Partial Class Login
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LabelLastDate As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
 End Class

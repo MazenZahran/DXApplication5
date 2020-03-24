@@ -20,10 +20,40 @@ Partial Class OrpakTransactions
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim SelectQuery2 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
+        Dim SelectQuery1 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
+        Dim Column1 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression1 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table1 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim Column2 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression2 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column3 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression3 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column4 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression4 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column5 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression5 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column6 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression6 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column7 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression7 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column8 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression8 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column9 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression9 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column10 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression10 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column11 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression11 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column12 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression12 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table2 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim Column13 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression13 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column14 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression14 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table3 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
         Dim Column15 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
         Dim ColumnExpression15 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table4 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
         Dim Column16 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
         Dim ColumnExpression16 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
         Dim Column17 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
@@ -34,30 +64,12 @@ Partial Class OrpakTransactions
         Dim ColumnExpression19 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
         Dim Column20 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
         Dim ColumnExpression20 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column21 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression21 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column22 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression22 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column23 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression23 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column24 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression24 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column25 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression25 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column26 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression26 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table5 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim Column27 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression27 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column28 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression28 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table6 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim QueryParameter3 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter4 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim Join3 As DevExpress.DataAccess.Sql.Join = New DevExpress.DataAccess.Sql.Join()
-        Dim RelationColumnInfo3 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
-        Dim Join4 As DevExpress.DataAccess.Sql.Join = New DevExpress.DataAccess.Sql.Join()
-        Dim RelationColumnInfo4 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
+        Dim QueryParameter1 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter2 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim Join1 As DevExpress.DataAccess.Sql.Join = New DevExpress.DataAccess.Sql.Join()
+        Dim RelationColumnInfo1 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
+        Dim Join2 As DevExpress.DataAccess.Sql.Join = New DevExpress.DataAccess.Sql.Join()
+        Dim RelationColumnInfo2 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(OrpakTransactions))
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
@@ -77,11 +89,17 @@ Partial Class OrpakTransactions
         Me.colname = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colstn_name = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.colplate = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colodometer = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colmean_id = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colfleet_id = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.coldate = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.coltime = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,101 +124,126 @@ Partial Class OrpakTransactions
         '
         Me.SqlDataSource1.ConnectionName = "HO_DATAConnectionString"
         Me.SqlDataSource1.Name = "SqlDataSource1"
-        ColumnExpression15.ColumnName = "shift_id"
-        Table4.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""1426"" />"
-        Table4.Name = "transactions"
-        ColumnExpression15.Table = Table4
+        ColumnExpression1.ColumnName = "shift_id"
+        Table1.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""1426"" />"
+        Table1.Name = "transactions"
+        ColumnExpression1.Table = Table1
+        Column1.Expression = ColumnExpression1
+        ColumnExpression2.ColumnName = "timestamp"
+        ColumnExpression2.Table = Table1
+        Column2.Expression = ColumnExpression2
+        ColumnExpression3.ColumnName = "id"
+        ColumnExpression3.Table = Table1
+        Column3.Expression = ColumnExpression3
+        ColumnExpression4.ColumnName = "type"
+        ColumnExpression4.Table = Table1
+        Column4.Expression = ColumnExpression4
+        ColumnExpression5.ColumnName = "pump"
+        ColumnExpression5.Table = Table1
+        Column5.Expression = ColumnExpression5
+        ColumnExpression6.ColumnName = "product_code"
+        ColumnExpression6.Table = Table1
+        Column6.Expression = ColumnExpression6
+        ColumnExpression7.ColumnName = "sale"
+        ColumnExpression7.Table = Table1
+        Column7.Expression = ColumnExpression7
+        ColumnExpression8.ColumnName = "ppv"
+        ColumnExpression8.Table = Table1
+        Column8.Expression = ColumnExpression8
+        ColumnExpression9.ColumnName = "quantity"
+        ColumnExpression9.Table = Table1
+        Column9.Expression = ColumnExpression9
+        ColumnExpression10.ColumnName = "mean_name"
+        ColumnExpression10.Table = Table1
+        Column10.Expression = ColumnExpression10
+        ColumnExpression11.ColumnName = "product_name"
+        ColumnExpression11.Table = Table1
+        Column11.Expression = ColumnExpression11
+        ColumnExpression12.ColumnName = "code"
+        Table2.MetaSerializable = "<Meta X=""185"" Y=""30"" Width=""125"" Height=""1046"" />"
+        Table2.Name = "fleets"
+        ColumnExpression12.Table = Table2
+        Column12.Expression = ColumnExpression12
+        ColumnExpression13.ColumnName = "name"
+        ColumnExpression13.Table = Table2
+        Column13.Expression = ColumnExpression13
+        ColumnExpression14.ColumnName = "stn_name"
+        Table3.MetaSerializable = "<Meta X=""340"" Y=""30"" Width=""125"" Height=""875"" />"
+        Table3.Name = "stations"
+        ColumnExpression14.Table = Table3
+        Column14.Expression = ColumnExpression14
+        ColumnExpression15.ColumnName = "odometer"
+        ColumnExpression15.Table = Table1
         Column15.Expression = ColumnExpression15
-        ColumnExpression16.ColumnName = "timestamp"
-        ColumnExpression16.Table = Table4
+        ColumnExpression16.ColumnName = "fleet_id"
+        ColumnExpression16.Table = Table1
         Column16.Expression = ColumnExpression16
-        ColumnExpression17.ColumnName = "id"
-        ColumnExpression17.Table = Table4
+        ColumnExpression17.ColumnName = "mean_id"
+        ColumnExpression17.Table = Table1
         Column17.Expression = ColumnExpression17
-        ColumnExpression18.ColumnName = "type"
-        ColumnExpression18.Table = Table4
+        ColumnExpression18.ColumnName = "plate"
+        ColumnExpression18.Table = Table1
         Column18.Expression = ColumnExpression18
-        ColumnExpression19.ColumnName = "pump"
-        ColumnExpression19.Table = Table4
+        ColumnExpression19.ColumnName = "date"
+        ColumnExpression19.Table = Table1
         Column19.Expression = ColumnExpression19
-        ColumnExpression20.ColumnName = "product_code"
-        ColumnExpression20.Table = Table4
+        ColumnExpression20.ColumnName = "time"
+        ColumnExpression20.Table = Table1
         Column20.Expression = ColumnExpression20
-        ColumnExpression21.ColumnName = "sale"
-        ColumnExpression21.Table = Table4
-        Column21.Expression = ColumnExpression21
-        ColumnExpression22.ColumnName = "ppv"
-        ColumnExpression22.Table = Table4
-        Column22.Expression = ColumnExpression22
-        ColumnExpression23.ColumnName = "quantity"
-        ColumnExpression23.Table = Table4
-        Column23.Expression = ColumnExpression23
-        ColumnExpression24.ColumnName = "mean_name"
-        ColumnExpression24.Table = Table4
-        Column24.Expression = ColumnExpression24
-        ColumnExpression25.ColumnName = "product_name"
-        ColumnExpression25.Table = Table4
-        Column25.Expression = ColumnExpression25
-        ColumnExpression26.ColumnName = "code"
-        Table5.MetaSerializable = "<Meta X=""185"" Y=""30"" Width=""125"" Height=""1046"" />"
-        Table5.Name = "fleets"
-        ColumnExpression26.Table = Table5
-        Column26.Expression = ColumnExpression26
-        ColumnExpression27.ColumnName = "name"
-        ColumnExpression27.Table = Table5
-        Column27.Expression = ColumnExpression27
-        ColumnExpression28.ColumnName = "stn_name"
-        Table6.MetaSerializable = "<Meta X=""340"" Y=""30"" Width=""125"" Height=""875"" />"
-        Table6.Name = "stations"
-        ColumnExpression28.Table = Table6
-        Column28.Expression = ColumnExpression28
-        SelectQuery2.Columns.Add(Column15)
-        SelectQuery2.Columns.Add(Column16)
-        SelectQuery2.Columns.Add(Column17)
-        SelectQuery2.Columns.Add(Column18)
-        SelectQuery2.Columns.Add(Column19)
-        SelectQuery2.Columns.Add(Column20)
-        SelectQuery2.Columns.Add(Column21)
-        SelectQuery2.Columns.Add(Column22)
-        SelectQuery2.Columns.Add(Column23)
-        SelectQuery2.Columns.Add(Column24)
-        SelectQuery2.Columns.Add(Column25)
-        SelectQuery2.Columns.Add(Column26)
-        SelectQuery2.Columns.Add(Column27)
-        SelectQuery2.Columns.Add(Column28)
-        SelectQuery2.FilterString = "[transactions.date] Between(?Parameter2, ?Parameter3)"
-        SelectQuery2.GroupFilterString = ""
-        SelectQuery2.Name = "transactions"
-        QueryParameter3.Name = "Parameter2"
-        QueryParameter3.Type = GetType(Date)
-        QueryParameter3.ValueInfo = "1753-01-01"
-        QueryParameter4.Name = "Parameter3"
-        QueryParameter4.Type = GetType(Date)
-        QueryParameter4.ValueInfo = "1753-01-01"
-        SelectQuery2.Parameters.Add(QueryParameter3)
-        SelectQuery2.Parameters.Add(QueryParameter4)
-        RelationColumnInfo3.NestedKeyColumn = "id"
-        RelationColumnInfo3.ParentKeyColumn = "fleet_id"
-        Join3.KeyColumns.Add(RelationColumnInfo3)
-        Join3.Nested = Table5
-        Join3.Parent = Table4
-        RelationColumnInfo4.NestedKeyColumn = "stn_id"
-        RelationColumnInfo4.ParentKeyColumn = "stn_id"
-        Join4.KeyColumns.Add(RelationColumnInfo4)
-        Join4.Nested = Table6
-        Join4.Parent = Table4
-        SelectQuery2.Relations.Add(Join3)
-        SelectQuery2.Relations.Add(Join4)
-        SelectQuery2.Tables.Add(Table4)
-        SelectQuery2.Tables.Add(Table5)
-        SelectQuery2.Tables.Add(Table6)
-        SelectQuery2.Top = 100000
-        Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {SelectQuery2})
+        SelectQuery1.Columns.Add(Column1)
+        SelectQuery1.Columns.Add(Column2)
+        SelectQuery1.Columns.Add(Column3)
+        SelectQuery1.Columns.Add(Column4)
+        SelectQuery1.Columns.Add(Column5)
+        SelectQuery1.Columns.Add(Column6)
+        SelectQuery1.Columns.Add(Column7)
+        SelectQuery1.Columns.Add(Column8)
+        SelectQuery1.Columns.Add(Column9)
+        SelectQuery1.Columns.Add(Column10)
+        SelectQuery1.Columns.Add(Column11)
+        SelectQuery1.Columns.Add(Column12)
+        SelectQuery1.Columns.Add(Column13)
+        SelectQuery1.Columns.Add(Column14)
+        SelectQuery1.Columns.Add(Column15)
+        SelectQuery1.Columns.Add(Column16)
+        SelectQuery1.Columns.Add(Column17)
+        SelectQuery1.Columns.Add(Column18)
+        SelectQuery1.Columns.Add(Column19)
+        SelectQuery1.Columns.Add(Column20)
+        SelectQuery1.FilterString = "[transactions.date] Between(?Parameter2, ?Parameter3)"
+        SelectQuery1.GroupFilterString = ""
+        SelectQuery1.MetaSerializable = Nothing
+        SelectQuery1.Name = "transactions"
+        QueryParameter1.Name = "Parameter2"
+        QueryParameter1.Type = GetType(Date)
+        QueryParameter1.ValueInfo = "1753-01-01"
+        QueryParameter2.Name = "Parameter3"
+        QueryParameter2.Type = GetType(Date)
+        QueryParameter2.ValueInfo = "1753-01-01"
+        SelectQuery1.Parameters.Add(QueryParameter1)
+        SelectQuery1.Parameters.Add(QueryParameter2)
+        RelationColumnInfo1.NestedKeyColumn = "id"
+        RelationColumnInfo1.ParentKeyColumn = "fleet_id"
+        Join1.KeyColumns.Add(RelationColumnInfo1)
+        Join1.Nested = Table2
+        Join1.Parent = Table1
+        RelationColumnInfo2.NestedKeyColumn = "stn_id"
+        RelationColumnInfo2.ParentKeyColumn = "stn_id"
+        Join2.KeyColumns.Add(RelationColumnInfo2)
+        Join2.Nested = Table3
+        Join2.Parent = Table1
+        SelectQuery1.Relations.Add(Join1)
+        SelectQuery1.Relations.Add(Join2)
+        SelectQuery1.Tables.Add(Table1)
+        SelectQuery1.Tables.Add(Table2)
+        SelectQuery1.Tables.Add(Table3)
+        SelectQuery1.Top = 1000000
+        Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {SelectQuery1})
         Me.SqlDataSource1.ResultSchemaSerializable = resources.GetString("SqlDataSource1.ResultSchemaSerializable")
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colshift_id, Me.coltimestamp, Me.colid, Me.coltype, Me.colpump, Me.colproduct_code, Me.colsale, Me.colppv, Me.colquantity, Me.colmean_name, Me.colproduct_name, Me.colcode, Me.colname, Me.colstn_name})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colshift_id, Me.coltimestamp, Me.colid, Me.coltype, Me.colpump, Me.colproduct_code, Me.colsale, Me.colppv, Me.colquantity, Me.colmean_name, Me.colproduct_name, Me.colcode, Me.colname, Me.colstn_name, Me.colplate, Me.colodometer, Me.colmean_id, Me.colfleet_id, Me.coldate, Me.coltime})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsView.ShowFooter = True
@@ -322,6 +365,14 @@ Partial Class OrpakTransactions
         Me.PanelControl1.Size = New System.Drawing.Size(1204, 59)
         Me.PanelControl1.TabIndex = 1
         '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.Location = New System.Drawing.Point(60, 20)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(54, 34)
+        Me.SimpleButton2.TabIndex = 3
+        Me.SimpleButton2.Text = "طباعة"
+        '
         'SimpleButton1
         '
         Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
@@ -356,13 +407,47 @@ Partial Class OrpakTransactions
         Me.PanelControl2.Size = New System.Drawing.Size(1204, 495)
         Me.PanelControl2.TabIndex = 2
         '
-        'SimpleButton2
+        'colplate
         '
-        Me.SimpleButton2.Location = New System.Drawing.Point(60, 20)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(54, 34)
-        Me.SimpleButton2.TabIndex = 3
-        Me.SimpleButton2.Text = "طباعة"
+        Me.colplate.FieldName = "plate"
+        Me.colplate.Name = "colplate"
+        Me.colplate.Visible = True
+        Me.colplate.VisibleIndex = 14
+        '
+        'colodometer
+        '
+        Me.colodometer.FieldName = "odometer"
+        Me.colodometer.Name = "colodometer"
+        Me.colodometer.Visible = True
+        Me.colodometer.VisibleIndex = 15
+        '
+        'colmean_id
+        '
+        Me.colmean_id.FieldName = "mean_id"
+        Me.colmean_id.Name = "colmean_id"
+        Me.colmean_id.Visible = True
+        Me.colmean_id.VisibleIndex = 16
+        '
+        'colfleet_id
+        '
+        Me.colfleet_id.FieldName = "fleet_id"
+        Me.colfleet_id.Name = "colfleet_id"
+        Me.colfleet_id.Visible = True
+        Me.colfleet_id.VisibleIndex = 17
+        '
+        'coldate
+        '
+        Me.coldate.FieldName = "date"
+        Me.coldate.Name = "coldate"
+        Me.coldate.Visible = True
+        Me.coldate.VisibleIndex = 18
+        '
+        'coltime
+        '
+        Me.coltime.FieldName = "time"
+        Me.coltime.Name = "coltime"
+        Me.coltime.Visible = True
+        Me.coltime.VisibleIndex = 19
         '
         'OrpakTransactions
         '
@@ -408,4 +493,10 @@ Partial Class OrpakTransactions
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents colplate As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colodometer As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colmean_id As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colfleet_id As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents coldate As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents coltime As DevExpress.XtraGrid.Columns.GridColumn
 End Class

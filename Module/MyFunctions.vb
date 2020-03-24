@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 Imports System.Net
+Imports System.Text
+
 
 Structure AccountData
     Dim FullNamee As String
@@ -67,10 +69,17 @@ Module MyFunctions
     End Function
 
     Function FunSendSmS2(destination As String, sms As String) As String
-
+        If CInt(GetSMSBalance()) = 0 Then MsgBox("لا يوجد رصيد") : Return "لا يوجد رصيد" : Exit Function
         destination = CType(Val(destination), String)
-        If Len(destination) = 9 Then destination = "972" & destination
-        If Len(destination) = 12 Then destination = destination
+
+        Select Case Len(destination)
+            Case 9
+                destination = "972" & destination
+            Case 12
+                destination = destination
+            Case Else
+                Return "خطا بالرقم"
+        End Select
 
         Dim strUrl As String = "http://sms.zone.ps/API/SendSMS.aspx?id=771b1fe76febcab8618c7356d6e884f7&sender=Alhuda&to= " & destination & "&msg=" & sms & ""
 
@@ -255,6 +264,155 @@ Module MyFunctions
         Public Shared UserNameString As String
         Public Shared UserIDString As String
         Public Shared UserIDInteger As Integer
+        Public Shared AccountSelection As String
+        Public Shared UserIDWallet As Integer
     End Class
+
+
+    Public Sub AddEvents(EventsType As String, EventsDetails As String, EventsName As String, EventsToUser As String, EventsOwner As String, EventStatus As String)
+
+        Try
+            Dim sql As New SQLControl
+            Dim InsertSql As String
+
+
+            InsertSql = " Insert into CRMEnents (EventsType,EventsDetails,EventsName,EventsToUser,EventsOwner,EventStatus,EventDate) values 
+                                                              ('" & EventsType & "','" & EventsDetails & "','" & EventsName & "','" & EventsToUser & "','" & EventsOwner & "','" & EventStatus & "',GETDATE() 
+                                                              )"
+
+            sql.CRMRunQuery(InsertSql)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+
+
+    End Sub
+
+
+    'Public Sub SendSMS(Mobile As String, MessageTXT As String)
+    '    Dim url As String = "http://sms.zone.ps/API/SendSMS.aspx?id=771b1fe76febcab8618c7356d6e884f7&sender=Alhuda&to= 970" & Mobile & "&msg=" & MessageTXT & ""
+    '    Dim request As HttpWebRequest
+    '    Dim response As HttpWebResponse = Nothing
+    '    request = DirectCast(WebRequest.Create(url), HttpWebRequest)
+    '    response = DirectCast(request.GetResponse(), HttpWebResponse)
+    '    ' MessageBox.Show("Response: " & response.StatusDescription)
+    'End Sub
+
+    Public Function GetSMSBalance() As String
+        Try
+            Dim request As WebRequest = WebRequest.Create("http://sms.zone.ps/API/GetCredit.aspx?id=771b1fe76febcab8618c7356d6e884f7")
+            request.Credentials = CredentialCache.DefaultCredentials
+            Dim response As WebResponse = request.GetResponse()
+            Console.WriteLine((CType(response, HttpWebResponse)).StatusDescription)
+            Dim dataStream As Stream = response.GetResponseStream()
+            Dim reader As StreamReader = New StreamReader(dataStream)
+            Dim responseFromServer As String = reader.ReadToEnd()
+            Console.WriteLine(responseFromServer)
+            Return responseFromServer
+            reader.Close()
+            response.Close()
+        Catch ex As Exception
+            Return "0"
+        End Try
+    End Function
+
+    Public Function GetDebitBalance(Acc As String, YYear As Integer, MMonth As Integer) As Decimal
+        Dim SqlStr As String = "SELECT  Cast(  sum( JMSUF ) as decimal(10,2)) As DebitBalance     
+                                From    [ALHUDA].[dbo].RPHSTRANSRETRIV
+                                WHERE   JMDEBITCREDIT=1 and    DATEPART(month, JVALUEDATE)=" & MMonth & " and DATEPART(year, JVALUEDATE)= " & YYear & " and ( JMACCOUNTKEY = '" & Acc & "'
+                                        AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND 
+                                        ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3"
+        Dim DebitBalance As Decimal = 0
+        Try
+            Dim Sql As New SQLControl
+            Sql.WizCountRunQuery(SqlStr)
+            DebitBalance = CDec(Sql.SQLDS.Tables(0).Rows(0).Item("DebitBalance"))
+            Return DebitBalance
+        Catch ex As Exception
+            Return 0
+        End Try
+    End Function
+    Public Function GetSreenAccess(Form As String, USERID As String) As Boolean
+
+        Dim Access As Boolean = False
+        Try
+
+            Dim SqlStr As String = " select [ID] from [UsersAccess] 
+                                 where USERID = '" & USERID & "' and [ScreenName] ='" & Form & "'"
+            Dim Sql As New SQLControl
+            Sql.CRMRunQuery(SqlStr)
+            If Sql.SQLDS.Tables(0).Rows.Count > 0 Then
+                Access = True
+            Else
+                Access = False
+            End If
+        Catch ex As Exception
+            Access = False
+        End Try
+
+
+        Try
+            Dim SqlSt2 As String = " select UserType from [Users]
+                                 where [UserID]  = '" & USERID & "'"
+            Dim Sql2 As New SQLControl
+            Sql2.CRMRunQuery(SqlSt2)
+            If Sql2.SQLDS.Tables(0).Rows(0).Item("UserType").ToString = "Admin" Then
+                Access = True
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
+        Return Access
+
+    End Function
+
+    Public Sub InsertLog(ReportName As String, ReportNotes As String)
+        Try
+            Dim Sql As New SQLControl
+            Dim SqlString As String
+            Dim UserID As String = GlobalVariables.UserIDString
+            Dim UserName As String = GlobalVariables.UserNameString
+            Dim ReportDateTime As String = CStr(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
+
+            SqlString = " INSERT INTO [CRM].[dbo].[LogReports]
+           ([UserID]
+           ,[UserName]
+           ,[ReportName]
+           ,[ReportNotes]
+           ,[ReportDateTime])
+     VALUES
+           ('" & UserID & "' ,
+           '" & UserName & "' ,
+            '" & ReportName & "' ,
+            '" & ReportNotes & "' ,
+            '" & ReportDateTime & "')"
+
+            Sql.CRMRunQuery(SqlString)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+    End Sub
+
+    Public Function GetItemBalanceWallet(ItemID As String, DateFrom As String, DateTo As String, WhareHouse As String) As Decimal
+
+        If String.IsNullOrEmpty(ItemID) Or String.IsNullOrEmpty(WhareHouse) Then Return 0
+
+        Try
+            Dim SqlString As String
+            Dim sql As New SQLControl
+            SqlString = "Select  SUM(SMSUPPLYQUANTITY*(1-2*DSALESDOC)) as ItemBalance 
+                         FROM      [ALHUDA].[dbo].TEMPDYNJOINQUERY_WIZCOUNT
+                         Where SMITEMKEY= '" & ItemID & "' and SMWAREHOUSE='" & WhareHouse & "'"
+            If DateFrom <> "" Then SqlString += " ('2050-01-01' >= SMBASEDATE) AND ('2000-12-31' <= SMBASEDATE) "
+            sql.WizCountRunQuery(SqlString)
+            Return CDec(sql.SQLDS.Tables(0).Rows(0).Item("ItemBalance"))
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            Return 0
+        End Try
+
+    End Function
 
 End Module
