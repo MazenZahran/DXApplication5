@@ -139,7 +139,7 @@ Partial Class OrpakTestSales
         Me.CommandBarGalleryDropDown7 = New DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(Me.components)
         Me.HO_DATADataSet = New DXApplication5.HO_DATADataSet()
         Me.TransactionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransactionsTableAdapter = New DXApplication5.HO_DATADataSetTableAdapters.transactionsTableAdapter()
+        ' Me.TransactionsTableAdapter = New DXApplication5.HO_DATADataSetTableAdapters.transactionsTableAdapter()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartBarController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CommandBarGalleryDropDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -155,7 +155,7 @@ Partial Class OrpakTestSales
         '
         'ChartControl1
         '
-        Me.ChartControl1.DataAdapter = Me.TransactionsTableAdapter
+        '   Me.ChartControl1.DataAdapter = Me.TransactionsTableAdapter
         Me.ChartControl1.DataBindings = Nothing
         Me.ChartControl1.DataSource = Me.TransactionsBindingSource
         Me.ChartControl1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -667,7 +667,7 @@ Partial Class OrpakTestSales
         '
         'TransactionsTableAdapter
         '
-        Me.TransactionsTableAdapter.ClearBeforeFill = True
+        'Me.TransactionsTableAdapter.ClearBeforeFill = True
         '
         'OrpakTestSales
         '
@@ -701,7 +701,7 @@ Partial Class OrpakTestSales
     Friend WithEvents CommandBarGalleryDropDown6 As DevExpress.XtraBars.Commands.CommandBarGalleryDropDown
     Friend WithEvents CommandBarGalleryDropDown7 As DevExpress.XtraBars.Commands.CommandBarGalleryDropDown
     Friend WithEvents ChartBarController1 As DevExpress.XtraCharts.UI.ChartBarController
-    Friend WithEvents TransactionsTableAdapter As HO_DATADataSetTableAdapters.transactionsTableAdapter
+    ' Friend WithEvents TransactionsTableAdapter As HO_DATADataSetTableAdapters.transactionsTableAdapter
     Friend WithEvents HO_DATADataSet As HO_DATADataSet
     Friend WithEvents TransactionsBindingSource As BindingSource
 End Class

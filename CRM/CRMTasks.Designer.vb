@@ -20,148 +20,142 @@ Partial Class CRMTasks
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim SelectQuery1 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
-        Dim Column1 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression1 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table1 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim Column2 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression2 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column3 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression3 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column4 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression4 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column5 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression5 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column6 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression6 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column7 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression7 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column8 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression8 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column9 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression9 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column10 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression10 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column11 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression11 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column12 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression12 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column13 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression13 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column14 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression14 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column15 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression15 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column16 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression16 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column17 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression17 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column18 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression18 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table2 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim Column19 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression19 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column20 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression20 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim QueryParameter1 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter2 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter3 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter4 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim Join1 As DevExpress.DataAccess.Sql.Join = New DevExpress.DataAccess.Sql.Join()
-        Dim RelationColumnInfo1 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
-        Dim Sorting1 As DevExpress.DataAccess.Sql.Sorting = New DevExpress.DataAccess.Sql.Sorting()
-        Dim ColumnExpression21 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Sorting2 As DevExpress.DataAccess.Sql.Sorting = New DevExpress.DataAccess.Sql.Sorting()
-        Dim ColumnExpression22 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Sorting3 As DevExpress.DataAccess.Sql.Sorting = New DevExpress.DataAccess.Sql.Sorting()
-        Dim ColumnExpression23 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim SelectQuery2 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
-        Dim Column21 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression24 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table3 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim QueryParameter5 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter6 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter7 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter8 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim SelectQuery3 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
-        Dim Column22 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression25 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table4 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim QueryParameter9 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter10 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter11 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter12 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim SelectQuery4 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
-        Dim Column23 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression26 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table5 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim QueryParameter13 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter14 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter15 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim SelectQuery5 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
-        Dim Column24 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression27 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table6 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim QueryParameter16 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter17 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter18 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter19 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter20 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim SelectQuery6 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
-        Dim Column25 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression28 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table7 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim QueryParameter21 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter22 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter23 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter24 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter25 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim SelectQuery7 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
-        Dim Column26 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression29 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table8 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim QueryParameter26 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter27 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter28 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter29 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim SelectQuery8 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
+        Dim Column27 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression30 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table9 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim Column28 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression31 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column29 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression32 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column30 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression33 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column31 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression34 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column32 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression35 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column33 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression36 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column34 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression37 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column35 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression38 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column36 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression39 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column37 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression40 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column38 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression41 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column39 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression42 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column40 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression43 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column41 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression44 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column42 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression45 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column43 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression46 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column44 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression47 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table10 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim Column45 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression48 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Column46 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression49 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim QueryParameter30 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter31 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter32 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter33 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim Join2 As DevExpress.DataAccess.Sql.Join = New DevExpress.DataAccess.Sql.Join()
+        Dim RelationColumnInfo2 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
+        Dim Sorting4 As DevExpress.DataAccess.Sql.Sorting = New DevExpress.DataAccess.Sql.Sorting()
+        Dim ColumnExpression50 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Sorting5 As DevExpress.DataAccess.Sql.Sorting = New DevExpress.DataAccess.Sql.Sorting()
+        Dim ColumnExpression51 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Sorting6 As DevExpress.DataAccess.Sql.Sorting = New DevExpress.DataAccess.Sql.Sorting()
+        Dim ColumnExpression52 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim SelectQuery9 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
+        Dim Column47 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression53 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table11 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim QueryParameter34 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter35 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter36 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter37 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim SelectQuery10 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
+        Dim Column48 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression54 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table12 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim QueryParameter38 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter39 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter40 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter41 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim SelectQuery11 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
+        Dim Column49 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression55 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table13 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim QueryParameter42 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter43 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter44 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim SelectQuery12 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
+        Dim Column50 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression56 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table14 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim QueryParameter45 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter46 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter47 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter48 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter49 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim SelectQuery13 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
+        Dim Column51 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression57 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table15 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim QueryParameter50 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter51 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter52 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter53 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter54 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim SelectQuery14 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
+        Dim Column52 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+        Dim ColumnExpression58 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim Table16 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+        Dim QueryParameter55 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter56 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter57 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter58 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CRMTasks))
-        Dim GridFormatRule1 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
-        Dim FormatConditionRuleDateOccuring1 As DevExpress.XtraEditors.FormatConditionRuleDateOccuring = New DevExpress.XtraEditors.FormatConditionRuleDateOccuring()
-        Dim GridFormatRule2 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
-        Dim FormatConditionRuleAboveBelowAverage1 As DevExpress.XtraEditors.FormatConditionRuleAboveBelowAverage = New DevExpress.XtraEditors.FormatConditionRuleAboveBelowAverage()
-        Dim GridFormatRule3 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
-        Dim FormatConditionRuleValue1 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
-        Dim EditorButtonImageOptions1 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
-        Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject2 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject3 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject4 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim EditorButtonImageOptions2 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
-        Dim SerializableAppearanceObject5 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject6 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject7 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject8 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim EditorButtonImageOptions3 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
-        Dim SerializableAppearanceObject9 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject10 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject11 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject12 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim EditorButtonImageOptions4 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
-        Dim SerializableAppearanceObject13 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject14 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject15 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim SerializableAppearanceObject16 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-        Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
-        Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SideBySideBarSeriesView1 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
-        Dim AlertButton1 As DevExpress.XtraBars.Alerter.AlertButton = New DevExpress.XtraBars.Alerter.AlertButton()
-        Dim AlertButton2 As DevExpress.XtraBars.Alerter.AlertButton = New DevExpress.XtraBars.Alerter.AlertButton()
-        Dim TileItemElement1 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement2 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement3 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement4 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement5 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement6 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
+        Dim GridFormatRule4 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleDateOccuring2 As DevExpress.XtraEditors.FormatConditionRuleDateOccuring = New DevExpress.XtraEditors.FormatConditionRuleDateOccuring()
+        Dim GridFormatRule5 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleAboveBelowAverage2 As DevExpress.XtraEditors.FormatConditionRuleAboveBelowAverage = New DevExpress.XtraEditors.FormatConditionRuleAboveBelowAverage()
+        Dim GridFormatRule6 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleValue2 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
+        Dim EditorButtonImageOptions5 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
+        Dim SerializableAppearanceObject17 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject18 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject19 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject20 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim EditorButtonImageOptions6 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
+        Dim SerializableAppearanceObject21 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject22 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject23 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject24 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim EditorButtonImageOptions7 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
+        Dim SerializableAppearanceObject25 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject26 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject27 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject28 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim EditorButtonImageOptions8 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
+        Dim SerializableAppearanceObject29 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject30 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject31 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject32 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim XyDiagram2 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
+        Dim Series2 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim SideBySideBarSeriesView2 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
+        Dim AlertButton3 As DevExpress.XtraBars.Alerter.AlertButton = New DevExpress.XtraBars.Alerter.AlertButton()
+        Dim AlertButton4 As DevExpress.XtraBars.Alerter.AlertButton = New DevExpress.XtraBars.Alerter.AlertButton()
         Me.colAccrualDate = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colAmount = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColAlertMessage = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -196,35 +190,44 @@ Partial Class CRMTasks
         Me.RepositorySendSMS = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.TextEdit4 = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.TextEdit3 = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEdit5 = New DevExpress.XtraEditors.TextEdit()
+        Me.AllTasksText = New DevExpress.XtraEditors.TextEdit()
         Me.TextEdit6 = New DevExpress.XtraEditors.TextEdit()
         Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
-        Me.TextEdit5 = New DevExpress.XtraEditors.TextEdit()
-        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
-        Me.AllTasksText = New DevExpress.XtraEditors.TextEdit()
-        Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
-        Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
-        Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
-        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton8 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
-        Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
-        Me.MobileText = New DevExpress.XtraEditors.TextEdit()
-        Me.LookUpEdit1 = New DevExpress.XtraEditors.LookUpEdit()
-        Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CRMDataSet = New DXApplication5.CRMDataSet()
-        Me.TaskMonthText = New DevExpress.XtraEditors.SpinEdit()
-        Me.TextEdit7 = New DevExpress.XtraEditors.TextEdit()
-        Me.TaskStatusText = New DevExpress.XtraEditors.ComboBoxEdit()
-        Me.ButtonStop = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton6 = New DevExpress.XtraEditors.SimpleButton()
-        Me.ButtonAlarm = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.TaskTypeCombo = New DevExpress.XtraEditors.ComboBoxEdit()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.LayoutControlItem17 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem18 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem19 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem20 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem21 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem22 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
+        Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
+        Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton6 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
+        Me.ButtonStop = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
+        Me.MobileText = New DevExpress.XtraEditors.TextEdit()
+        Me.ButtonAlarm = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.TaskTypeCombo = New DevExpress.XtraEditors.SearchLookUpEdit()
+        Me.AccSortNamesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.WizCountDataSet = New DXApplication5.WizCountDataSet()
+        Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.TaskStatusText = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.TaskMonthText = New DevExpress.XtraEditors.SpinEdit()
+        Me.LookUpEdit1 = New DevExpress.XtraEditors.LookUpEdit()
+        Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CRMDataSet = New DXApplication5.CRMDataSet()
+        Me.TextEdit7 = New DevExpress.XtraEditors.TextEdit()
+        Me.Root = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -234,35 +237,26 @@ Partial Class CRMTasks
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem11 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem14 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.GroupControl3 = New DevExpress.XtraEditors.GroupControl()
         Me.ChartControl1 = New DevExpress.XtraCharts.ChartControl()
+        Me.ACCSORT_FILTERTableAdapter = New DXApplication5.WizCountDataSetTableAdapters.ACCSORT_FILTERTableAdapter()
         Me.usersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsersTableAdapter = New DXApplication5.CRMDataSetTableAdapters.UsersTableAdapter()
         Me.AlertControl1 = New DevExpress.XtraBars.Alerter.AlertControl(Me.components)
-        Me.GroupControl5 = New DevExpress.XtraEditors.GroupControl()
-        Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
-        Me.TileBar1 = New DevExpress.XtraBars.Navigation.TileBar()
-        Me.TileBarGroup2 = New DevExpress.XtraBars.Navigation.TileBarGroup()
-        Me.TileBarItem1 = New DevExpress.XtraBars.Navigation.TileBarItem()
-        Me.TileBarItem2 = New DevExpress.XtraBars.Navigation.TileBarItem()
-        Me.TileBarItem3 = New DevExpress.XtraBars.Navigation.TileBarItem()
-        Me.TileBarItem4 = New DevExpress.XtraBars.Navigation.TileBarItem()
-        Me.TileBarItem5 = New DevExpress.XtraBars.Navigation.TileBarItem()
-        Me.TileBarItem6 = New DevExpress.XtraBars.Navigation.TileBarItem()
         Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
-        Me.SimpleButton9 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton10 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton11 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton12 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton13 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton14 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton15 = New DevExpress.XtraEditors.SimpleButton()
+        Me.ACCSORTFILTERBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AccSortNamesTableAdapter = New DXApplication5.WizCountDataSetTableAdapters.AccSortNamesTableAdapter()
+        Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
+        Me.DockPanel1 = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
+        Me.DockPanel2 = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.DockPanel2_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemButtonEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -271,27 +265,38 @@ Partial Class CRMTasks
         CType(Me.RepositorySendSMS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit4.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit3.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit6.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit5.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AllTasksText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
-        CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MobileText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TaskMonthText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit7.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TaskStatusText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TaskTypeCombo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit3.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit5.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AllTasksText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit6.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LayoutControl2.SuspendLayout()
+        CType(Me.MobileText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TaskTypeCombo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AccSortNamesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.WizCountDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TaskStatusText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TaskMonthText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit7.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Root, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -301,25 +306,27 @@ Partial Class CRMTasks
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl3.SuspendLayout()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(XyDiagram2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SideBySideBarSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.usersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GroupControl5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupControl5.SuspendLayout()
-        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl2.SuspendLayout()
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl3.SuspendLayout()
+        CType(Me.ACCSORTFILTERBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DockPanel1.SuspendLayout()
+        Me.DockPanel1_Container.SuspendLayout()
+        Me.DockPanel2.SuspendLayout()
+        Me.DockPanel2_Container.SuspendLayout()
         Me.SuspendLayout()
         '
         'colAccrualDate
@@ -351,293 +358,293 @@ Partial Class CRMTasks
         '
         Me.SqlDataSource1.ConnectionName = "CRMConnectionString"
         Me.SqlDataSource1.Name = "SqlDataSource1"
-        ColumnExpression1.ColumnName = "TaskID"
-        Table1.MetaSerializable = "<Meta X=""185"" Y=""30"" Width=""125"" Height=""438"" />"
-        Table1.Name = "CRMTasks"
-        ColumnExpression1.Table = Table1
-        Column1.Expression = ColumnExpression1
-        ColumnExpression2.ColumnName = "InputDate"
-        ColumnExpression2.Table = Table1
-        Column2.Expression = ColumnExpression2
-        ColumnExpression3.ColumnName = "InputTime"
-        ColumnExpression3.Table = Table1
-        Column3.Expression = ColumnExpression3
-        ColumnExpression4.ColumnName = "User"
-        ColumnExpression4.Table = Table1
-        Column4.Expression = ColumnExpression4
-        ColumnExpression5.ColumnName = "CustID"
-        ColumnExpression5.Table = Table1
-        Column5.Expression = ColumnExpression5
-        ColumnExpression6.ColumnName = "CustomerName"
-        ColumnExpression6.Table = Table1
-        Column6.Expression = ColumnExpression6
-        ColumnExpression7.ColumnName = "Person"
-        ColumnExpression7.Table = Table1
-        Column7.Expression = ColumnExpression7
-        ColumnExpression8.ColumnName = "Note"
-        ColumnExpression8.Table = Table1
-        Column8.Expression = ColumnExpression8
-        ColumnExpression9.ColumnName = "NoteStatus"
-        ColumnExpression9.Table = Table1
-        Column9.Expression = ColumnExpression9
-        ColumnExpression10.ColumnName = "AccrualDate"
-        ColumnExpression10.Table = Table1
-        Column10.Expression = ColumnExpression10
-        ColumnExpression11.ColumnName = "CloseDate"
-        ColumnExpression11.Table = Table1
-        Column11.Expression = ColumnExpression11
-        ColumnExpression12.ColumnName = "CloseNote"
-        ColumnExpression12.Table = Table1
-        Column12.Expression = ColumnExpression12
-        ColumnExpression13.ColumnName = "TaskType"
-        ColumnExpression13.Table = Table1
-        Column13.Expression = ColumnExpression13
-        ColumnExpression14.ColumnName = "AccSort"
-        ColumnExpression14.Table = Table1
-        Column14.Expression = ColumnExpression14
-        ColumnExpression15.ColumnName = "Amount"
-        ColumnExpression15.Table = Table1
-        Column15.Expression = ColumnExpression15
-        ColumnExpression16.ColumnName = "TaskMonth"
-        ColumnExpression16.Table = Table1
-        Column16.Expression = ColumnExpression16
-        ColumnExpression17.ColumnName = "Importance"
-        ColumnExpression17.Table = Table1
-        Column17.Expression = ColumnExpression17
-        ColumnExpression18.ColumnName = "UserName"
-        Table2.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""210"" />"
-        Table2.Name = "Users"
-        ColumnExpression18.Table = Table2
-        Column18.Expression = ColumnExpression18
-        ColumnExpression19.ColumnName = "Mobile"
-        ColumnExpression19.Table = Table1
-        Column19.Expression = ColumnExpression19
-        ColumnExpression20.ColumnName = "AlertMessage"
-        ColumnExpression20.Table = Table1
-        Column20.Expression = ColumnExpression20
-        SelectQuery1.Columns.Add(Column1)
-        SelectQuery1.Columns.Add(Column2)
-        SelectQuery1.Columns.Add(Column3)
-        SelectQuery1.Columns.Add(Column4)
-        SelectQuery1.Columns.Add(Column5)
-        SelectQuery1.Columns.Add(Column6)
-        SelectQuery1.Columns.Add(Column7)
-        SelectQuery1.Columns.Add(Column8)
-        SelectQuery1.Columns.Add(Column9)
-        SelectQuery1.Columns.Add(Column10)
-        SelectQuery1.Columns.Add(Column11)
-        SelectQuery1.Columns.Add(Column12)
-        SelectQuery1.Columns.Add(Column13)
-        SelectQuery1.Columns.Add(Column14)
-        SelectQuery1.Columns.Add(Column15)
-        SelectQuery1.Columns.Add(Column16)
-        SelectQuery1.Columns.Add(Column17)
-        SelectQuery1.Columns.Add(Column18)
-        SelectQuery1.Columns.Add(Column19)
-        SelectQuery1.Columns.Add(Column20)
-        SelectQuery1.FilterString = "[CRMTasks.ToUser] = ?ToUser And [CRMTasks.TaskMonth] = ?TaskMonth And [CRMTasks.N" &
+        ColumnExpression30.ColumnName = "TaskID"
+        Table9.MetaSerializable = "<Meta X=""185"" Y=""30"" Width=""125"" Height=""438"" />"
+        Table9.Name = "CRMTasks"
+        ColumnExpression30.Table = Table9
+        Column27.Expression = ColumnExpression30
+        ColumnExpression31.ColumnName = "InputDate"
+        ColumnExpression31.Table = Table9
+        Column28.Expression = ColumnExpression31
+        ColumnExpression32.ColumnName = "InputTime"
+        ColumnExpression32.Table = Table9
+        Column29.Expression = ColumnExpression32
+        ColumnExpression33.ColumnName = "User"
+        ColumnExpression33.Table = Table9
+        Column30.Expression = ColumnExpression33
+        ColumnExpression34.ColumnName = "CustID"
+        ColumnExpression34.Table = Table9
+        Column31.Expression = ColumnExpression34
+        ColumnExpression35.ColumnName = "CustomerName"
+        ColumnExpression35.Table = Table9
+        Column32.Expression = ColumnExpression35
+        ColumnExpression36.ColumnName = "Person"
+        ColumnExpression36.Table = Table9
+        Column33.Expression = ColumnExpression36
+        ColumnExpression37.ColumnName = "Note"
+        ColumnExpression37.Table = Table9
+        Column34.Expression = ColumnExpression37
+        ColumnExpression38.ColumnName = "NoteStatus"
+        ColumnExpression38.Table = Table9
+        Column35.Expression = ColumnExpression38
+        ColumnExpression39.ColumnName = "AccrualDate"
+        ColumnExpression39.Table = Table9
+        Column36.Expression = ColumnExpression39
+        ColumnExpression40.ColumnName = "CloseDate"
+        ColumnExpression40.Table = Table9
+        Column37.Expression = ColumnExpression40
+        ColumnExpression41.ColumnName = "CloseNote"
+        ColumnExpression41.Table = Table9
+        Column38.Expression = ColumnExpression41
+        ColumnExpression42.ColumnName = "TaskType"
+        ColumnExpression42.Table = Table9
+        Column39.Expression = ColumnExpression42
+        ColumnExpression43.ColumnName = "AccSort"
+        ColumnExpression43.Table = Table9
+        Column40.Expression = ColumnExpression43
+        ColumnExpression44.ColumnName = "Amount"
+        ColumnExpression44.Table = Table9
+        Column41.Expression = ColumnExpression44
+        ColumnExpression45.ColumnName = "TaskMonth"
+        ColumnExpression45.Table = Table9
+        Column42.Expression = ColumnExpression45
+        ColumnExpression46.ColumnName = "Importance"
+        ColumnExpression46.Table = Table9
+        Column43.Expression = ColumnExpression46
+        ColumnExpression47.ColumnName = "UserName"
+        Table10.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""210"" />"
+        Table10.Name = "Users"
+        ColumnExpression47.Table = Table10
+        Column44.Expression = ColumnExpression47
+        ColumnExpression48.ColumnName = "Mobile"
+        ColumnExpression48.Table = Table9
+        Column45.Expression = ColumnExpression48
+        ColumnExpression49.ColumnName = "AlertMessage"
+        ColumnExpression49.Table = Table9
+        Column46.Expression = ColumnExpression49
+        SelectQuery8.Columns.Add(Column27)
+        SelectQuery8.Columns.Add(Column28)
+        SelectQuery8.Columns.Add(Column29)
+        SelectQuery8.Columns.Add(Column30)
+        SelectQuery8.Columns.Add(Column31)
+        SelectQuery8.Columns.Add(Column32)
+        SelectQuery8.Columns.Add(Column33)
+        SelectQuery8.Columns.Add(Column34)
+        SelectQuery8.Columns.Add(Column35)
+        SelectQuery8.Columns.Add(Column36)
+        SelectQuery8.Columns.Add(Column37)
+        SelectQuery8.Columns.Add(Column38)
+        SelectQuery8.Columns.Add(Column39)
+        SelectQuery8.Columns.Add(Column40)
+        SelectQuery8.Columns.Add(Column41)
+        SelectQuery8.Columns.Add(Column42)
+        SelectQuery8.Columns.Add(Column43)
+        SelectQuery8.Columns.Add(Column44)
+        SelectQuery8.Columns.Add(Column45)
+        SelectQuery8.Columns.Add(Column46)
+        SelectQuery8.FilterString = "[CRMTasks.ToUser] = ?ToUser And [CRMTasks.TaskMonth] = ?TaskMonth And [CRMTasks.N" &
     "oteStatus] = ?NoteStatus And [CRMTasks.TaskType] = ?Parameter1"
-        SelectQuery1.GroupFilterString = ""
-        SelectQuery1.Name = "Users"
-        QueryParameter1.Name = "ToUser"
-        QueryParameter1.Type = GetType(String)
-        QueryParameter2.Name = "TaskMonth"
-        QueryParameter2.Type = GetType(Double)
-        QueryParameter2.ValueInfo = "0"
-        QueryParameter3.Name = "NoteStatus"
-        QueryParameter3.Type = GetType(String)
-        QueryParameter4.Name = "Parameter1"
-        QueryParameter4.Type = GetType(String)
-        SelectQuery1.Parameters.Add(QueryParameter1)
-        SelectQuery1.Parameters.Add(QueryParameter2)
-        SelectQuery1.Parameters.Add(QueryParameter3)
-        SelectQuery1.Parameters.Add(QueryParameter4)
-        RelationColumnInfo1.NestedKeyColumn = "ToUser"
-        RelationColumnInfo1.ParentKeyColumn = "UserID"
-        Join1.KeyColumns.Add(RelationColumnInfo1)
-        Join1.Nested = Table1
-        Join1.Parent = Table2
-        Join1.Type = DevExpress.Xpo.DB.JoinType.LeftOuter
-        SelectQuery1.Relations.Add(Join1)
-        ColumnExpression21.ColumnName = "Importance"
-        ColumnExpression21.Table = Table1
-        Sorting1.Expression = ColumnExpression21
-        ColumnExpression22.ColumnName = "AccrualDate"
-        ColumnExpression22.Table = Table1
-        Sorting2.Expression = ColumnExpression22
-        ColumnExpression23.ColumnName = "TaskID"
-        ColumnExpression23.Table = Table1
-        Sorting3.Expression = ColumnExpression23
-        SelectQuery1.Sorting.Add(Sorting1)
-        SelectQuery1.Sorting.Add(Sorting2)
-        SelectQuery1.Sorting.Add(Sorting3)
-        SelectQuery1.Tables.Add(Table2)
-        SelectQuery1.Tables.Add(Table1)
-        Column21.Alias = "Count_TaskID"
-        ColumnExpression24.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
-        ColumnExpression24.ColumnName = "TaskID"
-        Table3.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""400"" />"
-        Table3.Name = "CRMTasks"
-        ColumnExpression24.Table = Table3
-        Column21.Expression = ColumnExpression24
-        SelectQuery2.Columns.Add(Column21)
-        SelectQuery2.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
+        SelectQuery8.GroupFilterString = ""
+        SelectQuery8.Name = "Users"
+        QueryParameter30.Name = "ToUser"
+        QueryParameter30.Type = GetType(String)
+        QueryParameter31.Name = "TaskMonth"
+        QueryParameter31.Type = GetType(Double)
+        QueryParameter31.ValueInfo = "0"
+        QueryParameter32.Name = "NoteStatus"
+        QueryParameter32.Type = GetType(String)
+        QueryParameter33.Name = "Parameter1"
+        QueryParameter33.Type = GetType(String)
+        SelectQuery8.Parameters.Add(QueryParameter30)
+        SelectQuery8.Parameters.Add(QueryParameter31)
+        SelectQuery8.Parameters.Add(QueryParameter32)
+        SelectQuery8.Parameters.Add(QueryParameter33)
+        RelationColumnInfo2.NestedKeyColumn = "ToUser"
+        RelationColumnInfo2.ParentKeyColumn = "UserID"
+        Join2.KeyColumns.Add(RelationColumnInfo2)
+        Join2.Nested = Table9
+        Join2.Parent = Table10
+        Join2.Type = DevExpress.Xpo.DB.JoinType.LeftOuter
+        SelectQuery8.Relations.Add(Join2)
+        ColumnExpression50.ColumnName = "Importance"
+        ColumnExpression50.Table = Table9
+        Sorting4.Expression = ColumnExpression50
+        ColumnExpression51.ColumnName = "AccrualDate"
+        ColumnExpression51.Table = Table9
+        Sorting5.Expression = ColumnExpression51
+        ColumnExpression52.ColumnName = "TaskID"
+        ColumnExpression52.Table = Table9
+        Sorting6.Expression = ColumnExpression52
+        SelectQuery8.Sorting.Add(Sorting4)
+        SelectQuery8.Sorting.Add(Sorting5)
+        SelectQuery8.Sorting.Add(Sorting6)
+        SelectQuery8.Tables.Add(Table10)
+        SelectQuery8.Tables.Add(Table9)
+        Column47.Alias = "Count_TaskID"
+        ColumnExpression53.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
+        ColumnExpression53.ColumnName = "TaskID"
+        Table11.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""400"" />"
+        Table11.Name = "CRMTasks"
+        ColumnExpression53.Table = Table11
+        Column47.Expression = ColumnExpression53
+        SelectQuery9.Columns.Add(Column47)
+        SelectQuery9.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
     "sks.NoteStatus] = ?Parameter3 And [CRMTasks.TaskType] = ?Parameter4"
-        SelectQuery2.GroupFilterString = ""
-        SelectQuery2.Name = "CRMTasksOpen"
-        QueryParameter5.Name = "Parameter1"
-        QueryParameter5.Type = GetType(String)
-        QueryParameter6.Name = "Parameter2"
-        QueryParameter6.Type = GetType(Double)
-        QueryParameter6.ValueInfo = "0"
-        QueryParameter7.Name = "Parameter3"
-        QueryParameter7.Type = GetType(String)
-        QueryParameter8.Name = "Parameter4"
-        QueryParameter8.Type = GetType(String)
-        SelectQuery2.Parameters.Add(QueryParameter5)
-        SelectQuery2.Parameters.Add(QueryParameter6)
-        SelectQuery2.Parameters.Add(QueryParameter7)
-        SelectQuery2.Parameters.Add(QueryParameter8)
-        SelectQuery2.Tables.Add(Table3)
-        Column22.Alias = "Count_TaskID"
-        ColumnExpression25.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
-        ColumnExpression25.ColumnName = "TaskID"
-        Table4.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""400"" />"
-        Table4.Name = "CRMTasks"
-        ColumnExpression25.Table = Table4
-        Column22.Expression = ColumnExpression25
-        SelectQuery3.Columns.Add(Column22)
-        SelectQuery3.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
+        SelectQuery9.GroupFilterString = ""
+        SelectQuery9.Name = "CRMTasksOpen"
+        QueryParameter34.Name = "Parameter1"
+        QueryParameter34.Type = GetType(String)
+        QueryParameter35.Name = "Parameter2"
+        QueryParameter35.Type = GetType(Double)
+        QueryParameter35.ValueInfo = "0"
+        QueryParameter36.Name = "Parameter3"
+        QueryParameter36.Type = GetType(String)
+        QueryParameter37.Name = "Parameter4"
+        QueryParameter37.Type = GetType(String)
+        SelectQuery9.Parameters.Add(QueryParameter34)
+        SelectQuery9.Parameters.Add(QueryParameter35)
+        SelectQuery9.Parameters.Add(QueryParameter36)
+        SelectQuery9.Parameters.Add(QueryParameter37)
+        SelectQuery9.Tables.Add(Table11)
+        Column48.Alias = "Count_TaskID"
+        ColumnExpression54.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
+        ColumnExpression54.ColumnName = "TaskID"
+        Table12.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""400"" />"
+        Table12.Name = "CRMTasks"
+        ColumnExpression54.Table = Table12
+        Column48.Expression = ColumnExpression54
+        SelectQuery10.Columns.Add(Column48)
+        SelectQuery10.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
     "sks.NoteStatus] = ?Parameter3 And [CRMTasks.TaskType] = ?Parameter4"
-        SelectQuery3.GroupFilterString = ""
-        SelectQuery3.Name = "CRMTasksClose"
-        QueryParameter9.Name = "Parameter1"
-        QueryParameter9.Type = GetType(String)
-        QueryParameter10.Name = "Parameter2"
-        QueryParameter10.Type = GetType(Double)
-        QueryParameter10.ValueInfo = "0"
-        QueryParameter11.Name = "Parameter3"
-        QueryParameter11.Type = GetType(Short)
-        QueryParameter11.ValueInfo = "0"
-        QueryParameter12.Name = "Parameter4"
-        QueryParameter12.Type = GetType(String)
-        SelectQuery3.Parameters.Add(QueryParameter9)
-        SelectQuery3.Parameters.Add(QueryParameter10)
-        SelectQuery3.Parameters.Add(QueryParameter11)
-        SelectQuery3.Parameters.Add(QueryParameter12)
-        SelectQuery3.Tables.Add(Table4)
-        Column23.Alias = "Count_TaskID"
-        ColumnExpression26.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
-        ColumnExpression26.ColumnName = "TaskID"
-        Table5.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""400"" />"
-        Table5.Name = "CRMTasks"
-        ColumnExpression26.Table = Table5
-        Column23.Expression = ColumnExpression26
-        SelectQuery4.Columns.Add(Column23)
-        SelectQuery4.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
+        SelectQuery10.GroupFilterString = ""
+        SelectQuery10.Name = "CRMTasksClose"
+        QueryParameter38.Name = "Parameter1"
+        QueryParameter38.Type = GetType(String)
+        QueryParameter39.Name = "Parameter2"
+        QueryParameter39.Type = GetType(Double)
+        QueryParameter39.ValueInfo = "0"
+        QueryParameter40.Name = "Parameter3"
+        QueryParameter40.Type = GetType(Short)
+        QueryParameter40.ValueInfo = "0"
+        QueryParameter41.Name = "Parameter4"
+        QueryParameter41.Type = GetType(String)
+        SelectQuery10.Parameters.Add(QueryParameter38)
+        SelectQuery10.Parameters.Add(QueryParameter39)
+        SelectQuery10.Parameters.Add(QueryParameter40)
+        SelectQuery10.Parameters.Add(QueryParameter41)
+        SelectQuery10.Tables.Add(Table12)
+        Column49.Alias = "Count_TaskID"
+        ColumnExpression55.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
+        ColumnExpression55.ColumnName = "TaskID"
+        Table13.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""400"" />"
+        Table13.Name = "CRMTasks"
+        ColumnExpression55.Table = Table13
+        Column49.Expression = ColumnExpression55
+        SelectQuery11.Columns.Add(Column49)
+        SelectQuery11.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
     "sks.TaskType] = ?Parameter3"
-        SelectQuery4.GroupFilterString = ""
-        SelectQuery4.Name = "CRMTasksAll"
-        QueryParameter13.Name = "Parameter1"
-        QueryParameter13.Type = GetType(String)
-        QueryParameter14.Name = "Parameter2"
-        QueryParameter14.Type = GetType(Double)
-        QueryParameter14.ValueInfo = "0"
-        QueryParameter15.Name = "Parameter3"
-        QueryParameter15.Type = GetType(String)
-        SelectQuery4.Parameters.Add(QueryParameter13)
-        SelectQuery4.Parameters.Add(QueryParameter14)
-        SelectQuery4.Parameters.Add(QueryParameter15)
-        SelectQuery4.Tables.Add(Table5)
-        Column24.Alias = "Count_TaskID"
-        ColumnExpression27.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
-        ColumnExpression27.ColumnName = "TaskID"
-        Table6.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""400"" />"
-        Table6.Name = "CRMTasks"
-        ColumnExpression27.Table = Table6
-        Column24.Expression = ColumnExpression27
-        SelectQuery5.Columns.Add(Column24)
-        SelectQuery5.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
+        SelectQuery11.GroupFilterString = ""
+        SelectQuery11.Name = "CRMTasksAll"
+        QueryParameter42.Name = "Parameter1"
+        QueryParameter42.Type = GetType(String)
+        QueryParameter43.Name = "Parameter2"
+        QueryParameter43.Type = GetType(Double)
+        QueryParameter43.ValueInfo = "0"
+        QueryParameter44.Name = "Parameter3"
+        QueryParameter44.Type = GetType(String)
+        SelectQuery11.Parameters.Add(QueryParameter42)
+        SelectQuery11.Parameters.Add(QueryParameter43)
+        SelectQuery11.Parameters.Add(QueryParameter44)
+        SelectQuery11.Tables.Add(Table13)
+        Column50.Alias = "Count_TaskID"
+        ColumnExpression56.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
+        ColumnExpression56.ColumnName = "TaskID"
+        Table14.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""400"" />"
+        Table14.Name = "CRMTasks"
+        ColumnExpression56.Table = Table14
+        Column50.Expression = ColumnExpression56
+        SelectQuery12.Columns.Add(Column50)
+        SelectQuery12.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
     "sks.NoteStatus] = ?Parameter3 And IsOutlookIntervalToday([CRMTasks.CloseDate]) A" &
     "nd [CRMTasks.TaskType] = ?Parameter5"
-        SelectQuery5.GroupFilterString = ""
-        SelectQuery5.Name = "CRMTasks"
-        QueryParameter16.Name = "Parameter1"
-        QueryParameter16.Type = GetType(String)
-        QueryParameter17.Name = "Parameter2"
-        QueryParameter17.Type = GetType(Double)
-        QueryParameter17.ValueInfo = "0"
-        QueryParameter18.Name = "Parameter3"
-        QueryParameter18.Type = GetType(String)
-        QueryParameter19.Name = "Parameter4"
-        QueryParameter19.Type = GetType(Date)
-        QueryParameter19.ValueInfo = "1753-01-01"
-        QueryParameter20.Name = "Parameter5"
-        QueryParameter20.Type = GetType(String)
-        SelectQuery5.Parameters.Add(QueryParameter16)
-        SelectQuery5.Parameters.Add(QueryParameter17)
-        SelectQuery5.Parameters.Add(QueryParameter18)
-        SelectQuery5.Parameters.Add(QueryParameter19)
-        SelectQuery5.Parameters.Add(QueryParameter20)
-        SelectQuery5.Tables.Add(Table6)
-        Column25.Alias = "Count_TaskID"
-        ColumnExpression28.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
-        ColumnExpression28.ColumnName = "TaskID"
-        Table7.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""419"" />"
-        Table7.Name = "CRMTasks"
-        ColumnExpression28.Table = Table7
-        Column25.Expression = ColumnExpression28
-        SelectQuery6.Columns.Add(Column25)
-        SelectQuery6.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
+        SelectQuery12.GroupFilterString = ""
+        SelectQuery12.Name = "CRMTasks"
+        QueryParameter45.Name = "Parameter1"
+        QueryParameter45.Type = GetType(String)
+        QueryParameter46.Name = "Parameter2"
+        QueryParameter46.Type = GetType(Double)
+        QueryParameter46.ValueInfo = "0"
+        QueryParameter47.Name = "Parameter3"
+        QueryParameter47.Type = GetType(String)
+        QueryParameter48.Name = "Parameter4"
+        QueryParameter48.Type = GetType(Date)
+        QueryParameter48.ValueInfo = "1753-01-01"
+        QueryParameter49.Name = "Parameter5"
+        QueryParameter49.Type = GetType(String)
+        SelectQuery12.Parameters.Add(QueryParameter45)
+        SelectQuery12.Parameters.Add(QueryParameter46)
+        SelectQuery12.Parameters.Add(QueryParameter47)
+        SelectQuery12.Parameters.Add(QueryParameter48)
+        SelectQuery12.Parameters.Add(QueryParameter49)
+        SelectQuery12.Tables.Add(Table14)
+        Column51.Alias = "Count_TaskID"
+        ColumnExpression57.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
+        ColumnExpression57.ColumnName = "TaskID"
+        Table15.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""419"" />"
+        Table15.Name = "CRMTasks"
+        ColumnExpression57.Table = Table15
+        Column51.Expression = ColumnExpression57
+        SelectQuery13.Columns.Add(Column51)
+        SelectQuery13.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
     "sks.NoteStatus] = ?Parameter3 And [CRMTasks.TaskType] = ?Parameter5"
-        SelectQuery6.GroupFilterString = ""
-        SelectQuery6.Name = "CRMTasksClosee"
-        QueryParameter21.Name = "Parameter1"
-        QueryParameter21.Type = GetType(String)
-        QueryParameter22.Name = "Parameter2"
-        QueryParameter22.Type = GetType(Double)
-        QueryParameter22.ValueInfo = "0"
-        QueryParameter23.Name = "Parameter3"
-        QueryParameter23.Type = GetType(String)
-        QueryParameter24.Name = "Parameter4"
-        QueryParameter24.Type = GetType(Short)
-        QueryParameter24.ValueInfo = "0"
-        QueryParameter25.Name = "Parameter5"
-        QueryParameter25.Type = GetType(String)
-        SelectQuery6.Parameters.Add(QueryParameter21)
-        SelectQuery6.Parameters.Add(QueryParameter22)
-        SelectQuery6.Parameters.Add(QueryParameter23)
-        SelectQuery6.Parameters.Add(QueryParameter24)
-        SelectQuery6.Parameters.Add(QueryParameter25)
-        SelectQuery6.Tables.Add(Table7)
-        Column26.Alias = "Count_TaskID"
-        ColumnExpression29.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
-        ColumnExpression29.ColumnName = "TaskID"
-        Table8.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""419"" />"
-        Table8.Name = "CRMTasks"
-        ColumnExpression29.Table = Table8
-        Column26.Expression = ColumnExpression29
-        SelectQuery7.Columns.Add(Column26)
-        SelectQuery7.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
+        SelectQuery13.GroupFilterString = ""
+        SelectQuery13.Name = "CRMTasksClosee"
+        QueryParameter50.Name = "Parameter1"
+        QueryParameter50.Type = GetType(String)
+        QueryParameter51.Name = "Parameter2"
+        QueryParameter51.Type = GetType(Double)
+        QueryParameter51.ValueInfo = "0"
+        QueryParameter52.Name = "Parameter3"
+        QueryParameter52.Type = GetType(String)
+        QueryParameter53.Name = "Parameter4"
+        QueryParameter53.Type = GetType(Short)
+        QueryParameter53.ValueInfo = "0"
+        QueryParameter54.Name = "Parameter5"
+        QueryParameter54.Type = GetType(String)
+        SelectQuery13.Parameters.Add(QueryParameter50)
+        SelectQuery13.Parameters.Add(QueryParameter51)
+        SelectQuery13.Parameters.Add(QueryParameter52)
+        SelectQuery13.Parameters.Add(QueryParameter53)
+        SelectQuery13.Parameters.Add(QueryParameter54)
+        SelectQuery13.Tables.Add(Table15)
+        Column52.Alias = "Count_TaskID"
+        ColumnExpression58.Aggregate = DevExpress.DataAccess.Sql.AggregationType.Count
+        ColumnExpression58.ColumnName = "TaskID"
+        Table16.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""419"" />"
+        Table16.Name = "CRMTasks"
+        ColumnExpression58.Table = Table16
+        Column52.Expression = ColumnExpression58
+        SelectQuery14.Columns.Add(Column52)
+        SelectQuery14.FilterString = "[CRMTasks.ToUser] = ?Parameter1 And [CRMTasks.TaskMonth] = ?Parameter2 And [CRMTa" &
     "sks.NoteStatus] = ?Parameter3 And IsOutlookIntervalToday([CRMTasks.AccrualDate])" &
     " And [CRMTasks.TaskType] = ?Parameter4"
-        SelectQuery7.GroupFilterString = ""
-        SelectQuery7.Name = "CRMTasksAccrualToday"
-        QueryParameter26.Name = "Parameter1"
-        QueryParameter26.Type = GetType(String)
-        QueryParameter27.Name = "Parameter2"
-        QueryParameter27.Type = GetType(Double)
-        QueryParameter27.ValueInfo = "0"
-        QueryParameter28.Name = "Parameter3"
-        QueryParameter28.Type = GetType(String)
-        QueryParameter29.Name = "Parameter4"
-        QueryParameter29.Type = GetType(String)
-        SelectQuery7.Parameters.Add(QueryParameter26)
-        SelectQuery7.Parameters.Add(QueryParameter27)
-        SelectQuery7.Parameters.Add(QueryParameter28)
-        SelectQuery7.Parameters.Add(QueryParameter29)
-        SelectQuery7.Tables.Add(Table8)
-        Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {SelectQuery1, SelectQuery2, SelectQuery3, SelectQuery4, SelectQuery5, SelectQuery6, SelectQuery7})
+        SelectQuery14.GroupFilterString = ""
+        SelectQuery14.Name = "CRMTasksAccrualToday"
+        QueryParameter55.Name = "Parameter1"
+        QueryParameter55.Type = GetType(String)
+        QueryParameter56.Name = "Parameter2"
+        QueryParameter56.Type = GetType(Double)
+        QueryParameter56.ValueInfo = "0"
+        QueryParameter57.Name = "Parameter3"
+        QueryParameter57.Type = GetType(String)
+        QueryParameter58.Name = "Parameter4"
+        QueryParameter58.Type = GetType(String)
+        SelectQuery14.Parameters.Add(QueryParameter55)
+        SelectQuery14.Parameters.Add(QueryParameter56)
+        SelectQuery14.Parameters.Add(QueryParameter57)
+        SelectQuery14.Parameters.Add(QueryParameter58)
+        SelectQuery14.Tables.Add(Table16)
+        Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {SelectQuery8, SelectQuery9, SelectQuery10, SelectQuery11, SelectQuery12, SelectQuery13, SelectQuery14})
         Me.SqlDataSource1.ResultSchemaSerializable = resources.GetString("SqlDataSource1.ResultSchemaSerializable")
         '
         'colTaskID
@@ -659,37 +666,37 @@ Partial Class CRMTasks
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit2, Me.RepositoryItemButtonEdit3, Me.RepositoryItemButtonEdit4, Me.RepositorySendSMS})
-        Me.GridControl1.Size = New System.Drawing.Size(849, 413)
+        Me.GridControl1.Size = New System.Drawing.Size(847, 320)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
         '
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colTaskID, Me.colInputDate, Me.colInputTime, Me.colUser, Me.colCustomerName, Me.colPerson, Me.colNote, Me.colNoteStatus, Me.colToUser, Me.colAccrualDate, Me.colCloseDate, Me.colCloseNote, Me.colTaskType, Me.colAccSort, Me.colAmount, Me.colTaskMonth, Me.colImportance, Me.colUserName, Me.GridColumn2, Me.GridColumn3, Me.ColSendSMS, Me.colMobile, Me.ColAlertMessage, Me.colCustID, Me.GridSendSMS})
-        GridFormatRule1.ApplyToRow = True
-        GridFormatRule1.Column = Me.colAccrualDate
-        GridFormatRule1.Name = "Format0"
-        FormatConditionRuleDateOccuring1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        FormatConditionRuleDateOccuring1.Appearance.Options.UseBackColor = True
-        FormatConditionRuleDateOccuring1.DateType = DevExpress.XtraEditors.FilterDateType.Today
-        FormatConditionRuleDateOccuring1.PredefinedName = "Red Fill"
-        GridFormatRule1.Rule = FormatConditionRuleDateOccuring1
-        GridFormatRule2.Column = Me.colAmount
-        GridFormatRule2.ColumnApplyTo = Me.colAmount
-        GridFormatRule2.Name = "Format1"
-        FormatConditionRuleAboveBelowAverage1.PredefinedName = "Red Text"
-        GridFormatRule2.Rule = FormatConditionRuleAboveBelowAverage1
-        GridFormatRule3.Column = Me.ColAlertMessage
-        GridFormatRule3.Name = "Format2"
-        FormatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        FormatConditionRuleValue1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        FormatConditionRuleValue1.Appearance.Options.UseBackColor = True
-        FormatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal
-        FormatConditionRuleValue1.Value1 = "Message Sent Successfully!"
-        GridFormatRule3.Rule = FormatConditionRuleValue1
-        Me.GridView1.FormatRules.Add(GridFormatRule1)
-        Me.GridView1.FormatRules.Add(GridFormatRule2)
-        Me.GridView1.FormatRules.Add(GridFormatRule3)
+        GridFormatRule4.ApplyToRow = True
+        GridFormatRule4.Column = Me.colAccrualDate
+        GridFormatRule4.Name = "Format0"
+        FormatConditionRuleDateOccuring2.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        FormatConditionRuleDateOccuring2.Appearance.Options.UseBackColor = True
+        FormatConditionRuleDateOccuring2.DateType = DevExpress.XtraEditors.FilterDateType.Today
+        FormatConditionRuleDateOccuring2.PredefinedName = "Red Fill"
+        GridFormatRule4.Rule = FormatConditionRuleDateOccuring2
+        GridFormatRule5.Column = Me.colAmount
+        GridFormatRule5.ColumnApplyTo = Me.colAmount
+        GridFormatRule5.Name = "Format1"
+        FormatConditionRuleAboveBelowAverage2.PredefinedName = "Red Text"
+        GridFormatRule5.Rule = FormatConditionRuleAboveBelowAverage2
+        GridFormatRule6.Column = Me.ColAlertMessage
+        GridFormatRule6.Name = "Format2"
+        FormatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        FormatConditionRuleValue2.Appearance.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        FormatConditionRuleValue2.Appearance.Options.UseBackColor = True
+        FormatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Equal
+        FormatConditionRuleValue2.Value1 = "Message Sent Successfully!"
+        GridFormatRule6.Rule = FormatConditionRuleValue2
+        Me.GridView1.FormatRules.Add(GridFormatRule4)
+        Me.GridView1.FormatRules.Add(GridFormatRule5)
+        Me.GridView1.FormatRules.Add(GridFormatRule6)
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.GroupCount = 1
         Me.GridView1.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "TaskID", Me.colTaskID, "{0}"), New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Amount", Me.colAmount, "{0}")})
@@ -815,12 +822,12 @@ Partial Class CRMTasks
         Me.RepositoryItemButtonEdit2.Appearance.Image = CType(resources.GetObject("RepositoryItemButtonEdit2.Appearance.Image"), System.Drawing.Image)
         Me.RepositoryItemButtonEdit2.Appearance.Options.UseImage = True
         Me.RepositoryItemButtonEdit2.AutoHeight = False
-        EditorButtonImageOptions1.Image = CType(resources.GetObject("EditorButtonImageOptions1.Image"), System.Drawing.Image)
-        SerializableAppearanceObject1.Options.UseImage = True
-        SerializableAppearanceObject2.Options.UseImage = True
-        SerializableAppearanceObject3.Options.UseImage = True
-        SerializableAppearanceObject4.Options.UseImage = True
-        Me.RepositoryItemButtonEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions1, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
+        EditorButtonImageOptions5.Image = CType(resources.GetObject("EditorButtonImageOptions5.Image"), System.Drawing.Image)
+        SerializableAppearanceObject17.Options.UseImage = True
+        SerializableAppearanceObject18.Options.UseImage = True
+        SerializableAppearanceObject19.Options.UseImage = True
+        SerializableAppearanceObject20.Options.UseImage = True
+        Me.RepositoryItemButtonEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions5, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject17, SerializableAppearanceObject18, SerializableAppearanceObject19, SerializableAppearanceObject20, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.RepositoryItemButtonEdit2.Name = "RepositoryItemButtonEdit2"
         Me.RepositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
@@ -836,8 +843,8 @@ Partial Class CRMTasks
         'RepositoryItemButtonEdit3
         '
         Me.RepositoryItemButtonEdit3.AutoHeight = False
-        EditorButtonImageOptions2.Image = CType(resources.GetObject("EditorButtonImageOptions2.Image"), System.Drawing.Image)
-        Me.RepositoryItemButtonEdit3.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions2, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject5, SerializableAppearanceObject6, SerializableAppearanceObject7, SerializableAppearanceObject8, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
+        EditorButtonImageOptions6.Image = CType(resources.GetObject("EditorButtonImageOptions6.Image"), System.Drawing.Image)
+        Me.RepositoryItemButtonEdit3.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions6, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject21, SerializableAppearanceObject22, SerializableAppearanceObject23, SerializableAppearanceObject24, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.RepositoryItemButtonEdit3.Name = "RepositoryItemButtonEdit3"
         Me.RepositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
@@ -853,8 +860,8 @@ Partial Class CRMTasks
         'RepositoryItemButtonEdit4
         '
         Me.RepositoryItemButtonEdit4.AutoHeight = False
-        EditorButtonImageOptions3.Image = CType(resources.GetObject("EditorButtonImageOptions3.Image"), System.Drawing.Image)
-        Me.RepositoryItemButtonEdit4.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions3, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject9, SerializableAppearanceObject10, SerializableAppearanceObject11, SerializableAppearanceObject12, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
+        EditorButtonImageOptions7.Image = CType(resources.GetObject("EditorButtonImageOptions7.Image"), System.Drawing.Image)
+        Me.RepositoryItemButtonEdit4.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions7, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject25, SerializableAppearanceObject26, SerializableAppearanceObject27, SerializableAppearanceObject28, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.RepositoryItemButtonEdit4.Name = "RepositoryItemButtonEdit4"
         Me.RepositoryItemButtonEdit4.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
@@ -885,8 +892,8 @@ Partial Class CRMTasks
         'RepositorySendSMS
         '
         Me.RepositorySendSMS.AutoHeight = False
-        EditorButtonImageOptions4.Image = CType(resources.GetObject("EditorButtonImageOptions4.Image"), System.Drawing.Image)
-        Me.RepositorySendSMS.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions4, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject13, SerializableAppearanceObject14, SerializableAppearanceObject15, SerializableAppearanceObject16, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
+        EditorButtonImageOptions8.Image = CType(resources.GetObject("EditorButtonImageOptions8.Image"), System.Drawing.Image)
+        Me.RepositorySendSMS.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions8, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject29, SerializableAppearanceObject30, SerializableAppearanceObject31, SerializableAppearanceObject32, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.RepositorySendSMS.Name = "RepositorySendSMS"
         Me.RepositorySendSMS.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
@@ -895,42 +902,107 @@ Partial Class CRMTasks
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl1.Location = New System.Drawing.Point(2, 2)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(1140, 107)
+        Me.PanelControl1.Size = New System.Drawing.Size(847, 107)
         Me.PanelControl1.TabIndex = 1
         '
         'TextEdit4
         '
         Me.TextEdit4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextEdit4.Location = New System.Drawing.Point(219, 263)
+        Me.TextEdit4.Location = New System.Drawing.Point(12, 30)
         Me.TextEdit4.Name = "TextEdit4"
         Me.TextEdit4.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.TextEdit4.Properties.Appearance.Options.UseBackColor = True
         Me.TextEdit4.Properties.Appearance.Options.UseTextOptions = True
         Me.TextEdit4.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TextEdit4.Properties.ReadOnly = True
-        Me.TextEdit4.Size = New System.Drawing.Size(75, 20)
+        Me.TextEdit4.Size = New System.Drawing.Size(114, 20)
+        Me.TextEdit4.StyleController = Me.LayoutControl1
         Me.TextEdit4.TabIndex = 4
+        '
+        'LayoutControl1
+        '
+        Me.LayoutControl1.Controls.Add(Me.TextEdit4)
+        Me.LayoutControl1.Controls.Add(Me.TextEdit3)
+        Me.LayoutControl1.Controls.Add(Me.TextEdit2)
+        Me.LayoutControl1.Controls.Add(Me.TextEdit5)
+        Me.LayoutControl1.Controls.Add(Me.AllTasksText)
+        Me.LayoutControl1.Controls.Add(Me.TextEdit6)
+        Me.LayoutControl1.Controls.Add(Me.TextEdit1)
+        Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutControl1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControl1.Name = "LayoutControl1"
+        Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
+        Me.LayoutControl1.Root = Me.LayoutControlGroup1
+        Me.LayoutControl1.Size = New System.Drawing.Size(845, 75)
+        Me.LayoutControl1.TabIndex = 0
+        Me.LayoutControl1.Text = "LayoutControl1"
         '
         'TextEdit3
         '
         Me.TextEdit3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextEdit3.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "CRMTasksAll.Count_TaskID", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0"))
-        Me.TextEdit3.Location = New System.Drawing.Point(704, 263)
+        Me.TextEdit3.Location = New System.Drawing.Point(719, 30)
         Me.TextEdit3.Name = "TextEdit3"
         Me.TextEdit3.Properties.Appearance.Options.UseTextOptions = True
         Me.TextEdit3.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TextEdit3.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.TextEdit3.Properties.AppearanceReadOnly.Options.UseBackColor = True
         Me.TextEdit3.Properties.ReadOnly = True
-        Me.TextEdit3.Size = New System.Drawing.Size(75, 20)
+        Me.TextEdit3.Size = New System.Drawing.Size(114, 20)
+        Me.TextEdit3.StyleController = Me.LayoutControl1
         Me.TextEdit3.TabIndex = 4
+        '
+        'TextEdit2
+        '
+        Me.TextEdit2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextEdit2.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "CRMTasksClose.Count_TaskID", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0"))
+        Me.TextEdit2.Location = New System.Drawing.Point(602, 30)
+        Me.TextEdit2.Name = "TextEdit2"
+        Me.TextEdit2.Properties.Appearance.Options.UseTextOptions = True
+        Me.TextEdit2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TextEdit2.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextEdit2.Properties.AppearanceReadOnly.Options.UseBackColor = True
+        Me.TextEdit2.Properties.ReadOnly = True
+        Me.TextEdit2.Size = New System.Drawing.Size(113, 20)
+        Me.TextEdit2.StyleController = Me.LayoutControl1
+        Me.TextEdit2.TabIndex = 0
+        '
+        'TextEdit5
+        '
+        Me.TextEdit5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextEdit5.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "CRMTasksClosee.Count_TaskID", True))
+        Me.TextEdit5.Location = New System.Drawing.Point(484, 30)
+        Me.TextEdit5.Name = "TextEdit5"
+        Me.TextEdit5.Properties.Appearance.Options.UseTextOptions = True
+        Me.TextEdit5.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TextEdit5.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextEdit5.Properties.AppearanceReadOnly.Options.UseBackColor = True
+        Me.TextEdit5.Properties.ReadOnly = True
+        Me.TextEdit5.Size = New System.Drawing.Size(114, 20)
+        Me.TextEdit5.StyleController = Me.LayoutControl1
+        Me.TextEdit5.TabIndex = 0
+        '
+        'AllTasksText
+        '
+        Me.AllTasksText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.AllTasksText.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "CRMTasksOpen.Count_TaskID", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0"))
+        Me.AllTasksText.Location = New System.Drawing.Point(366, 30)
+        Me.AllTasksText.Name = "AllTasksText"
+        Me.AllTasksText.Properties.Appearance.Options.UseTextOptions = True
+        Me.AllTasksText.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.AllTasksText.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.AllTasksText.Properties.AppearanceReadOnly.Options.UseBackColor = True
+        Me.AllTasksText.Properties.ReadOnly = True
+        Me.AllTasksText.Size = New System.Drawing.Size(114, 20)
+        Me.AllTasksText.StyleController = Me.LayoutControl1
+        Me.AllTasksText.TabIndex = 0
         '
         'TextEdit6
         '
         Me.TextEdit6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextEdit6.DataBindings.Add(New System.Windows.Forms.Binding("ReadOnly", Me.SqlDataSource1, "CRMTasksAccrualToday.Count_TaskID", True))
         Me.TextEdit6.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "CRMTasksAccrualToday.Count_TaskID", True))
-        Me.TextEdit6.Location = New System.Drawing.Point(380, 263)
+        Me.TextEdit6.Location = New System.Drawing.Point(248, 30)
         Me.TextEdit6.Name = "TextEdit6"
         Me.TextEdit6.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TextEdit6.Properties.Appearance.Options.UseBackColor = True
@@ -939,7 +1011,8 @@ Partial Class CRMTasks
         Me.TextEdit6.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.TextEdit6.Properties.AppearanceReadOnly.Options.UseBackColor = True
         Me.TextEdit6.Properties.ReadOnly = True
-        Me.TextEdit6.Size = New System.Drawing.Size(75, 20)
+        Me.TextEdit6.Size = New System.Drawing.Size(114, 20)
+        Me.TextEdit6.StyleController = Me.LayoutControl1
         Me.TextEdit6.TabIndex = 0
         '
         'TextEdit1
@@ -947,152 +1020,312 @@ Partial Class CRMTasks
         Me.TextEdit1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextEdit1.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "CRMTasks.Count_TaskID", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0"))
         Me.TextEdit1.DataBindings.Add(New System.Windows.Forms.Binding("ReadOnly", Me.SqlDataSource1, "CRMTasks.Count_TaskID", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0"))
-        Me.TextEdit1.Location = New System.Drawing.Point(300, 263)
+        Me.TextEdit1.Location = New System.Drawing.Point(130, 30)
         Me.TextEdit1.Name = "TextEdit1"
         Me.TextEdit1.Properties.Appearance.Options.UseTextOptions = True
         Me.TextEdit1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TextEdit1.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.TextEdit1.Properties.AppearanceReadOnly.Options.UseBackColor = True
         Me.TextEdit1.Properties.ReadOnly = True
-        Me.TextEdit1.Size = New System.Drawing.Size(75, 20)
+        Me.TextEdit1.Size = New System.Drawing.Size(114, 20)
+        Me.TextEdit1.StyleController = Me.LayoutControl1
         Me.TextEdit1.TabIndex = 0
         '
-        'TextEdit5
+        'LayoutControlGroup1
         '
-        Me.TextEdit5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextEdit5.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "CRMTasksClosee.Count_TaskID", True))
-        Me.TextEdit5.Location = New System.Drawing.Point(542, 263)
-        Me.TextEdit5.Name = "TextEdit5"
-        Me.TextEdit5.Properties.Appearance.Options.UseTextOptions = True
-        Me.TextEdit5.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.TextEdit5.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.TextEdit5.Properties.AppearanceReadOnly.Options.UseBackColor = True
-        Me.TextEdit5.Properties.ReadOnly = True
-        Me.TextEdit5.Size = New System.Drawing.Size(75, 20)
-        Me.TextEdit5.TabIndex = 0
+        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.LayoutControlGroup1.GroupBordersVisible = False
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.EmptySpaceItem1, Me.LayoutControlItem17, Me.LayoutControlItem18, Me.LayoutControlItem19, Me.LayoutControlItem20, Me.LayoutControlItem21, Me.LayoutControlItem22})
+        Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(845, 75)
+        Me.LayoutControlGroup1.TextVisible = False
         '
-        'TextEdit2
+        'LayoutControlItem1
         '
-        Me.TextEdit2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextEdit2.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "CRMTasksClose.Count_TaskID", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0"))
-        Me.TextEdit2.Location = New System.Drawing.Point(623, 263)
-        Me.TextEdit2.Name = "TextEdit2"
-        Me.TextEdit2.Properties.Appearance.Options.UseTextOptions = True
-        Me.TextEdit2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.TextEdit2.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.TextEdit2.Properties.AppearanceReadOnly.Options.UseBackColor = True
-        Me.TextEdit2.Properties.ReadOnly = True
-        Me.TextEdit2.Size = New System.Drawing.Size(75, 20)
-        Me.TextEdit2.TabIndex = 0
+        Me.LayoutControlItem1.Control = Me.TextEdit3
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(707, 0)
+        Me.LayoutControlItem1.Name = "LayoutControlItem1"
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(118, 42)
+        Me.LayoutControlItem1.Text = "كل المهام"
+        Me.LayoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
+        Me.LayoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(45, 13)
+        Me.LayoutControlItem1.TextToControlDistance = 5
         '
-        'AllTasksText
+        'EmptySpaceItem1
         '
-        Me.AllTasksText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.AllTasksText.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "CRMTasksOpen.Count_TaskID", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0"))
-        Me.AllTasksText.Location = New System.Drawing.Point(461, 264)
-        Me.AllTasksText.Name = "AllTasksText"
-        Me.AllTasksText.Properties.Appearance.Options.UseTextOptions = True
-        Me.AllTasksText.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.AllTasksText.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.AllTasksText.Properties.AppearanceReadOnly.Options.UseBackColor = True
-        Me.AllTasksText.Properties.ReadOnly = True
-        Me.AllTasksText.Size = New System.Drawing.Size(75, 20)
-        Me.AllTasksText.TabIndex = 0
+        Me.EmptySpaceItem1.AllowHotTrack = False
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 42)
+        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(825, 13)
+        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'LayoutControlItem17
+        '
+        Me.LayoutControlItem17.Control = Me.TextEdit2
+        Me.LayoutControlItem17.Location = New System.Drawing.Point(590, 0)
+        Me.LayoutControlItem17.Name = "LayoutControlItem17"
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(117, 42)
+        Me.LayoutControlItem17.Text = "المحصلة"
+        Me.LayoutControlItem17.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
+        Me.LayoutControlItem17.TextLocation = DevExpress.Utils.Locations.Top
+        Me.LayoutControlItem17.TextSize = New System.Drawing.Size(39, 13)
+        Me.LayoutControlItem17.TextToControlDistance = 5
+        '
+        'LayoutControlItem18
+        '
+        Me.LayoutControlItem18.Control = Me.TextEdit5
+        Me.LayoutControlItem18.Location = New System.Drawing.Point(472, 0)
+        Me.LayoutControlItem18.Name = "LayoutControlItem18"
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(118, 42)
+        Me.LayoutControlItem18.Text = "المغلقة"
+        Me.LayoutControlItem18.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
+        Me.LayoutControlItem18.TextLocation = DevExpress.Utils.Locations.Top
+        Me.LayoutControlItem18.TextSize = New System.Drawing.Size(35, 13)
+        Me.LayoutControlItem18.TextToControlDistance = 5
+        '
+        'LayoutControlItem19
+        '
+        Me.LayoutControlItem19.Control = Me.AllTasksText
+        Me.LayoutControlItem19.Location = New System.Drawing.Point(354, 0)
+        Me.LayoutControlItem19.Name = "LayoutControlItem19"
+        Me.LayoutControlItem19.Size = New System.Drawing.Size(118, 42)
+        Me.LayoutControlItem19.Text = "المتبقية"
+        Me.LayoutControlItem19.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
+        Me.LayoutControlItem19.TextLocation = DevExpress.Utils.Locations.Top
+        Me.LayoutControlItem19.TextSize = New System.Drawing.Size(37, 13)
+        Me.LayoutControlItem19.TextToControlDistance = 5
+        '
+        'LayoutControlItem20
+        '
+        Me.LayoutControlItem20.Control = Me.TextEdit6
+        Me.LayoutControlItem20.Location = New System.Drawing.Point(236, 0)
+        Me.LayoutControlItem20.Name = "LayoutControlItem20"
+        Me.LayoutControlItem20.Size = New System.Drawing.Size(118, 42)
+        Me.LayoutControlItem20.Text = "المستحقة"
+        Me.LayoutControlItem20.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
+        Me.LayoutControlItem20.TextLocation = DevExpress.Utils.Locations.Top
+        Me.LayoutControlItem20.TextSize = New System.Drawing.Size(48, 13)
+        Me.LayoutControlItem20.TextToControlDistance = 5
+        '
+        'LayoutControlItem21
+        '
+        Me.LayoutControlItem21.Control = Me.TextEdit1
+        Me.LayoutControlItem21.Location = New System.Drawing.Point(118, 0)
+        Me.LayoutControlItem21.Name = "LayoutControlItem21"
+        Me.LayoutControlItem21.Size = New System.Drawing.Size(118, 42)
+        Me.LayoutControlItem21.Text = "المحصلة اليوم"
+        Me.LayoutControlItem21.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
+        Me.LayoutControlItem21.TextLocation = DevExpress.Utils.Locations.Top
+        Me.LayoutControlItem21.TextSize = New System.Drawing.Size(64, 13)
+        Me.LayoutControlItem21.TextToControlDistance = 5
+        '
+        'LayoutControlItem22
+        '
+        Me.LayoutControlItem22.Control = Me.TextEdit4
+        Me.LayoutControlItem22.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem22.Name = "LayoutControlItem22"
+        Me.LayoutControlItem22.Size = New System.Drawing.Size(118, 42)
+        Me.LayoutControlItem22.Text = "نسبة التحصيل"
+        Me.LayoutControlItem22.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
+        Me.LayoutControlItem22.TextLocation = DevExpress.Utils.Locations.Top
+        Me.LayoutControlItem22.TextSize = New System.Drawing.Size(66, 13)
+        Me.LayoutControlItem22.TextToControlDistance = 5
         '
         'SimpleButton7
         '
         Me.SimpleButton7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton7.Location = New System.Drawing.Point(29, 461)
+        Me.SimpleButton7.Location = New System.Drawing.Point(12, 453)
         Me.SimpleButton7.Name = "SimpleButton7"
-        Me.SimpleButton7.Size = New System.Drawing.Size(246, 22)
-        Me.SimpleButton7.StyleController = Me.LayoutControl1
+        Me.SimpleButton7.Size = New System.Drawing.Size(235, 22)
+        Me.SimpleButton7.StyleController = Me.LayoutControl2
         Me.SimpleButton7.TabIndex = 14
         Me.SimpleButton7.Text = "طباعة"
         '
-        'LayoutControl1
+        'LayoutControl2
         '
-        Me.LayoutControl1.Controls.Add(Me.SimpleButton3)
-        Me.LayoutControl1.Controls.Add(Me.SimpleButton8)
-        Me.LayoutControl1.Controls.Add(Me.SimpleButton5)
-        Me.LayoutControl1.Controls.Add(Me.PictureEdit1)
-        Me.LayoutControl1.Controls.Add(Me.MobileText)
-        Me.LayoutControl1.Controls.Add(Me.LookUpEdit1)
-        Me.LayoutControl1.Controls.Add(Me.TaskMonthText)
-        Me.LayoutControl1.Controls.Add(Me.SimpleButton7)
-        Me.LayoutControl1.Controls.Add(Me.TextEdit7)
-        Me.LayoutControl1.Controls.Add(Me.TaskStatusText)
-        Me.LayoutControl1.Controls.Add(Me.ButtonStop)
-        Me.LayoutControl1.Controls.Add(Me.SimpleButton6)
-        Me.LayoutControl1.Controls.Add(Me.ButtonAlarm)
-        Me.LayoutControl1.Controls.Add(Me.SimpleButton2)
-        Me.LayoutControl1.Controls.Add(Me.TaskTypeCombo)
-        Me.LayoutControl1.Controls.Add(Me.SimpleButton1)
-        Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LayoutControl1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LayoutControl1.Location = New System.Drawing.Point(2, 2)
-        Me.LayoutControl1.Name = "LayoutControl1"
-        Me.LayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(1362, 136, 450, 354)
-        Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
-        Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(287, 507)
-        Me.LayoutControl1.TabIndex = 0
-        Me.LayoutControl1.Text = "LayoutControl1"
+        Me.LayoutControl2.Controls.Add(Me.SimpleButton1)
+        Me.LayoutControl2.Controls.Add(Me.SimpleButton6)
+        Me.LayoutControl2.Controls.Add(Me.SimpleButton5)
+        Me.LayoutControl2.Controls.Add(Me.ButtonStop)
+        Me.LayoutControl2.Controls.Add(Me.SimpleButton3)
+        Me.LayoutControl2.Controls.Add(Me.MobileText)
+        Me.LayoutControl2.Controls.Add(Me.ButtonAlarm)
+        Me.LayoutControl2.Controls.Add(Me.SimpleButton7)
+        Me.LayoutControl2.Controls.Add(Me.SimpleButton2)
+        Me.LayoutControl2.Controls.Add(Me.TaskTypeCombo)
+        Me.LayoutControl2.Controls.Add(Me.TaskStatusText)
+        Me.LayoutControl2.Controls.Add(Me.TaskMonthText)
+        Me.LayoutControl2.Controls.Add(Me.LookUpEdit1)
+        Me.LayoutControl2.Controls.Add(Me.TextEdit7)
+        Me.LayoutControl2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutControl2.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControl2.Name = "LayoutControl2"
+        Me.LayoutControl2.OptionsView.RightToLeftMirroringApplied = True
+        Me.LayoutControl2.Root = Me.Root
+        Me.LayoutControl2.Size = New System.Drawing.Size(259, 511)
+        Me.LayoutControl2.TabIndex = 0
+        Me.LayoutControl2.Text = "LayoutControl2"
         '
-        'SimpleButton3
+        'SimpleButton1
         '
-        Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton3.Location = New System.Drawing.Point(29, 435)
-        Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(246, 22)
-        Me.SimpleButton3.StyleController = Me.LayoutControl1
-        Me.SimpleButton3.TabIndex = 16
-        Me.SimpleButton3.Text = "مسج تبليغ بالحساب"
+        Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton1.Location = New System.Drawing.Point(12, 140)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(235, 22)
+        Me.SimpleButton1.StyleController = Me.LayoutControl2
+        Me.SimpleButton1.TabIndex = 7
+        Me.SimpleButton1.Text = "تحديث"
         '
-        'SimpleButton8
+        'SimpleButton6
         '
-        Me.SimpleButton8.Location = New System.Drawing.Point(29, 357)
-        Me.SimpleButton8.Name = "SimpleButton8"
-        Me.SimpleButton8.Size = New System.Drawing.Size(246, 22)
-        Me.SimpleButton8.StyleController = Me.LayoutControl1
-        Me.SimpleButton8.TabIndex = 15
-        Me.SimpleButton8.Text = "مهام مغلقة"
+        Me.SimpleButton6.ImageOptions.Image = CType(resources.GetObject("SimpleButton6.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton6.Location = New System.Drawing.Point(12, 401)
+        Me.SimpleButton6.Name = "SimpleButton6"
+        Me.SimpleButton6.Size = New System.Drawing.Size(44, 22)
+        Me.SimpleButton6.StyleController = Me.LayoutControl2
+        Me.SimpleButton6.TabIndex = 12
         '
         'SimpleButton5
         '
         Me.SimpleButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton5.ImageOptions.Image = CType(resources.GetObject("SimpleButton5.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton5.Location = New System.Drawing.Point(29, 383)
+        Me.SimpleButton5.Location = New System.Drawing.Point(12, 375)
         Me.SimpleButton5.Name = "SimpleButton5"
-        Me.SimpleButton5.Size = New System.Drawing.Size(30, 22)
-        Me.SimpleButton5.StyleController = Me.LayoutControl1
+        Me.SimpleButton5.Size = New System.Drawing.Size(44, 22)
+        Me.SimpleButton5.StyleController = Me.LayoutControl2
         Me.SimpleButton5.TabIndex = 12
         '
-        'PictureEdit1
+        'ButtonStop
         '
-        Me.PictureEdit1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureEdit1.Location = New System.Drawing.Point(31, 12)
-        Me.PictureEdit1.Name = "PictureEdit1"
-        Me.PictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
-        Me.PictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch
-        Me.PictureEdit1.Size = New System.Drawing.Size(244, 161)
-        Me.PictureEdit1.StyleController = Me.LayoutControl1
-        Me.PictureEdit1.TabIndex = 4
+        Me.ButtonStop.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonStop.ImageOptions.Image = CType(resources.GetObject("ButtonStop.ImageOptions.Image"), System.Drawing.Image)
+        Me.ButtonStop.Location = New System.Drawing.Point(60, 401)
+        Me.ButtonStop.Name = "ButtonStop"
+        Me.ButtonStop.Size = New System.Drawing.Size(187, 22)
+        Me.ButtonStop.StyleController = Me.LayoutControl2
+        Me.ButtonStop.TabIndex = 11
+        Me.ButtonStop.Text = "مسج ايقاف"
+        '
+        'SimpleButton3
+        '
+        Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton3.Location = New System.Drawing.Point(12, 427)
+        Me.SimpleButton3.Name = "SimpleButton3"
+        Me.SimpleButton3.Size = New System.Drawing.Size(235, 22)
+        Me.SimpleButton3.StyleController = Me.LayoutControl2
+        Me.SimpleButton3.TabIndex = 16
+        Me.SimpleButton3.Text = "مسج تبليغ بالحساب"
         '
         'MobileText
         '
         Me.MobileText.EditValue = "0593055055"
-        Me.MobileText.Location = New System.Drawing.Point(29, 487)
+        Me.MobileText.Location = New System.Drawing.Point(12, 479)
         Me.MobileText.Name = "MobileText"
         Me.MobileText.Properties.Appearance.Options.UseTextOptions = True
         Me.MobileText.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.MobileText.Size = New System.Drawing.Size(246, 20)
-        Me.MobileText.StyleController = Me.LayoutControl1
+        Me.MobileText.Size = New System.Drawing.Size(235, 20)
+        Me.MobileText.StyleController = Me.LayoutControl2
         Me.MobileText.TabIndex = 10
+        '
+        'ButtonAlarm
+        '
+        Me.ButtonAlarm.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonAlarm.ImageOptions.Image = CType(resources.GetObject("ButtonAlarm.ImageOptions.Image"), System.Drawing.Image)
+        Me.ButtonAlarm.Location = New System.Drawing.Point(60, 375)
+        Me.ButtonAlarm.Name = "ButtonAlarm"
+        Me.ButtonAlarm.Size = New System.Drawing.Size(187, 22)
+        Me.ButtonAlarm.StyleController = Me.LayoutControl2
+        Me.ButtonAlarm.TabIndex = 11
+        Me.ButtonAlarm.Text = "مسح تحذير"
+        '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton2.Location = New System.Drawing.Point(12, 349)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(235, 22)
+        Me.SimpleButton2.StyleController = Me.LayoutControl2
+        Me.SimpleButton2.TabIndex = 9
+        Me.SimpleButton2.Text = "مهام مستحقة اليوم"
+        '
+        'TaskTypeCombo
+        '
+        Me.TaskTypeCombo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TaskTypeCombo.Location = New System.Drawing.Point(12, 114)
+        Me.TaskTypeCombo.Name = "TaskTypeCombo"
+        Me.TaskTypeCombo.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.TaskTypeCombo.Properties.Appearance.Options.UseFont = True
+        Me.TaskTypeCombo.Properties.Appearance.Options.UseTextOptions = True
+        Me.TaskTypeCombo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TaskTypeCombo.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.TaskTypeCombo.Properties.DataSource = Me.AccSortNamesBindingSource
+        Me.TaskTypeCombo.Properties.DisplayMember = "SortCodeName"
+        Me.TaskTypeCombo.Properties.NullText = ""
+        Me.TaskTypeCombo.Properties.NullValuePrompt = "التصنيف"
+        Me.TaskTypeCombo.Properties.PopupSizeable = False
+        Me.TaskTypeCombo.Properties.PopupView = Me.SearchLookUpEdit1View
+        Me.TaskTypeCombo.Properties.ValueMember = "AccSortCode"
+        Me.TaskTypeCombo.Size = New System.Drawing.Size(235, 22)
+        Me.TaskTypeCombo.StyleController = Me.LayoutControl2
+        Me.TaskTypeCombo.TabIndex = 9
+        '
+        'AccSortNamesBindingSource
+        '
+        Me.AccSortNamesBindingSource.DataMember = "AccSortNames"
+        Me.AccSortNamesBindingSource.DataSource = Me.WizCountDataSet
+        '
+        'WizCountDataSet
+        '
+        Me.WizCountDataSet.DataSetName = "WizCountDataSet"
+        Me.WizCountDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SearchLookUpEdit1View
+        '
+        Me.SearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.SearchLookUpEdit1View.Name = "SearchLookUpEdit1View"
+        Me.SearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.SearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
+        '
+        'TaskStatusText
+        '
+        Me.TaskStatusText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TaskStatusText.Location = New System.Drawing.Point(12, 88)
+        Me.TaskStatusText.Name = "TaskStatusText"
+        Me.TaskStatusText.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.TaskStatusText.Properties.Appearance.Options.UseFont = True
+        Me.TaskStatusText.Properties.Appearance.Options.UseTextOptions = True
+        Me.TaskStatusText.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TaskStatusText.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.TaskStatusText.Properties.Items.AddRange(New Object() {"مفتوحة", "تم التحصيل", "مغلقة"})
+        Me.TaskStatusText.Size = New System.Drawing.Size(235, 22)
+        Me.TaskStatusText.StyleController = Me.LayoutControl2
+        Me.TaskStatusText.TabIndex = 9
+        '
+        'TaskMonthText
+        '
+        Me.TaskMonthText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TaskMonthText.EditValue = New Decimal(New Integer() {201801, 0, 0, 0})
+        Me.TaskMonthText.Location = New System.Drawing.Point(12, 62)
+        Me.TaskMonthText.Name = "TaskMonthText"
+        Me.TaskMonthText.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.TaskMonthText.Properties.Appearance.Options.UseFont = True
+        Me.TaskMonthText.Properties.Appearance.Options.UseTextOptions = True
+        Me.TaskMonthText.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TaskMonthText.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.TaskMonthText.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.TaskMonthText.Properties.Mask.EditMask = "d"
+        Me.TaskMonthText.Properties.MaxValue = New Decimal(New Integer() {203012, 0, 0, 0})
+        Me.TaskMonthText.Properties.MinValue = New Decimal(New Integer() {201801, 0, 0, 0})
+        Me.TaskMonthText.Size = New System.Drawing.Size(235, 22)
+        Me.TaskMonthText.StyleController = Me.LayoutControl2
+        Me.TaskMonthText.TabIndex = 5
         '
         'LookUpEdit1
         '
         Me.LookUpEdit1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LookUpEdit1.Location = New System.Drawing.Point(29, 201)
+        Me.LookUpEdit1.Location = New System.Drawing.Point(12, 36)
         Me.LookUpEdit1.Name = "LookUpEdit1"
         Me.LookUpEdit1.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
         Me.LookUpEdit1.Properties.Appearance.Options.UseFont = True
@@ -1104,9 +1337,9 @@ Partial Class CRMTasks
         Me.LookUpEdit1.Properties.DisplayMember = "UserName"
         Me.LookUpEdit1.Properties.NullText = "الرجاء اختيار المستخدم"
         Me.LookUpEdit1.Properties.ValueMember = "UserID"
-        Me.LookUpEdit1.Size = New System.Drawing.Size(246, 22)
-        Me.LookUpEdit1.StyleController = Me.LayoutControl1
-        Me.LookUpEdit1.TabIndex = 7
+        Me.LookUpEdit1.Size = New System.Drawing.Size(235, 22)
+        Me.LookUpEdit1.StyleController = Me.LayoutControl2
+        Me.LookUpEdit1.TabIndex = 8
         '
         'UsersBindingSource
         '
@@ -1118,290 +1351,168 @@ Partial Class CRMTasks
         Me.CRMDataSet.DataSetName = "CRMDataSet"
         Me.CRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'TaskMonthText
-        '
-        Me.TaskMonthText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TaskMonthText.EditValue = New Decimal(New Integer() {201801, 0, 0, 0})
-        Me.TaskMonthText.Location = New System.Drawing.Point(29, 227)
-        Me.TaskMonthText.Name = "TaskMonthText"
-        Me.TaskMonthText.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
-        Me.TaskMonthText.Properties.Appearance.Options.UseFont = True
-        Me.TaskMonthText.Properties.Appearance.Options.UseTextOptions = True
-        Me.TaskMonthText.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.TaskMonthText.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TaskMonthText.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.TaskMonthText.Properties.Mask.EditMask = "d"
-        Me.TaskMonthText.Properties.MaxValue = New Decimal(New Integer() {203012, 0, 0, 0})
-        Me.TaskMonthText.Properties.MinValue = New Decimal(New Integer() {201801, 0, 0, 0})
-        Me.TaskMonthText.Size = New System.Drawing.Size(246, 22)
-        Me.TaskMonthText.StyleController = Me.LayoutControl1
-        Me.TaskMonthText.TabIndex = 4
-        '
         'TextEdit7
         '
-        Me.TextEdit7.Location = New System.Drawing.Point(29, 177)
+        Me.TextEdit7.Location = New System.Drawing.Point(12, 12)
         Me.TextEdit7.Name = "TextEdit7"
         Me.TextEdit7.Properties.Appearance.Options.UseTextOptions = True
         Me.TextEdit7.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.TextEdit7.Size = New System.Drawing.Size(246, 20)
-        Me.TextEdit7.StyleController = Me.LayoutControl1
-        Me.TextEdit7.TabIndex = 5
+        Me.TextEdit7.Size = New System.Drawing.Size(235, 20)
+        Me.TextEdit7.StyleController = Me.LayoutControl2
+        Me.TextEdit7.TabIndex = 6
         '
-        'TaskStatusText
+        'Root
         '
-        Me.TaskStatusText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TaskStatusText.Location = New System.Drawing.Point(29, 253)
-        Me.TaskStatusText.Name = "TaskStatusText"
-        Me.TaskStatusText.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
-        Me.TaskStatusText.Properties.Appearance.Options.UseFont = True
-        Me.TaskStatusText.Properties.Appearance.Options.UseTextOptions = True
-        Me.TaskStatusText.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.TaskStatusText.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TaskStatusText.Properties.Items.AddRange(New Object() {"مفتوحة", "تم التحصيل", "مغلقة"})
-        Me.TaskStatusText.Size = New System.Drawing.Size(246, 22)
-        Me.TaskStatusText.StyleController = Me.LayoutControl1
-        Me.TaskStatusText.TabIndex = 8
-        '
-        'ButtonStop
-        '
-        Me.ButtonStop.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonStop.ImageOptions.Image = CType(resources.GetObject("ButtonStop.ImageOptions.Image"), System.Drawing.Image)
-        Me.ButtonStop.Location = New System.Drawing.Point(63, 409)
-        Me.ButtonStop.Name = "ButtonStop"
-        Me.ButtonStop.Size = New System.Drawing.Size(212, 22)
-        Me.ButtonStop.StyleController = Me.LayoutControl1
-        Me.ButtonStop.TabIndex = 11
-        Me.ButtonStop.Text = "مسج ايقاف"
-        '
-        'SimpleButton6
-        '
-        Me.SimpleButton6.ImageOptions.Image = CType(resources.GetObject("SimpleButton6.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton6.Location = New System.Drawing.Point(29, 409)
-        Me.SimpleButton6.Name = "SimpleButton6"
-        Me.SimpleButton6.Size = New System.Drawing.Size(30, 22)
-        Me.SimpleButton6.StyleController = Me.LayoutControl1
-        Me.SimpleButton6.TabIndex = 12
-        '
-        'ButtonAlarm
-        '
-        Me.ButtonAlarm.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonAlarm.ImageOptions.Image = CType(resources.GetObject("ButtonAlarm.ImageOptions.Image"), System.Drawing.Image)
-        Me.ButtonAlarm.Location = New System.Drawing.Point(63, 383)
-        Me.ButtonAlarm.Name = "ButtonAlarm"
-        Me.ButtonAlarm.Size = New System.Drawing.Size(212, 22)
-        Me.ButtonAlarm.StyleController = Me.LayoutControl1
-        Me.ButtonAlarm.TabIndex = 11
-        Me.ButtonAlarm.Text = "مسح تحذير"
-        '
-        'SimpleButton2
-        '
-        Me.SimpleButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton2.Location = New System.Drawing.Point(29, 331)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(246, 22)
-        Me.SimpleButton2.StyleController = Me.LayoutControl1
-        Me.SimpleButton2.TabIndex = 9
-        Me.SimpleButton2.Text = "مهام مستحقة اليوم"
-        '
-        'TaskTypeCombo
-        '
-        Me.TaskTypeCombo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TaskTypeCombo.Location = New System.Drawing.Point(29, 279)
-        Me.TaskTypeCombo.Name = "TaskTypeCombo"
-        Me.TaskTypeCombo.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
-        Me.TaskTypeCombo.Properties.Appearance.Options.UseFont = True
-        Me.TaskTypeCombo.Properties.Appearance.Options.UseTextOptions = True
-        Me.TaskTypeCombo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.TaskTypeCombo.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TaskTypeCombo.Properties.Items.AddRange(New Object() {"دين", "مطابقة حسابات", "مهام بطاقات"})
-        Me.TaskTypeCombo.Size = New System.Drawing.Size(246, 22)
-        Me.TaskTypeCombo.StyleController = Me.LayoutControl1
-        Me.TaskTypeCombo.TabIndex = 8
-        '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(29, 305)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(246, 22)
-        Me.SimpleButton1.StyleController = Me.LayoutControl1
-        Me.SimpleButton1.TabIndex = 6
-        Me.SimpleButton1.Text = "تحديث"
-        '
-        'LayoutControlGroup1
-        '
-        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
-        Me.LayoutControlGroup1.GroupBordersVisible = False
-        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.EmptySpaceItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem11, Me.LayoutControlItem13, Me.LayoutControlItem14, Me.LayoutControlItem10, Me.LayoutControlItem12, Me.LayoutControlItem15, Me.LayoutControlItem16})
-        Me.LayoutControlGroup1.Name = "Root"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(270, 529)
-        Me.LayoutControlGroup1.TextVisible = False
-        '
-        'LayoutControlItem1
-        '
-        Me.LayoutControlItem1.Control = Me.PictureEdit1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem1.MaxSize = New System.Drawing.Size(248, 165)
-        Me.LayoutControlItem1.MinSize = New System.Drawing.Size(248, 165)
-        Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(250, 165)
-        Me.LayoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
-        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem1.TextVisible = False
-        '
-        'EmptySpaceItem1
-        '
-        Me.EmptySpaceItem1.AllowHotTrack = False
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 499)
-        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(250, 10)
-        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
+        Me.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.Root.GroupBordersVisible = False
+        Me.Root.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem11, Me.LayoutControlItem12, Me.LayoutControlItem10, Me.LayoutControlItem16, Me.LayoutControlItem13, Me.LayoutControlItem14, Me.EmptySpaceItem2})
+        Me.Root.Name = "Root"
+        Me.Root.Size = New System.Drawing.Size(259, 511)
+        Me.Root.TextVisible = False
         '
         'LayoutControlItem2
         '
         Me.LayoutControlItem2.Control = Me.TextEdit7
-        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 165)
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(250, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(239, 24)
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem2.TextVisible = False
         '
         'LayoutControlItem3
         '
         Me.LayoutControlItem3.Control = Me.LookUpEdit1
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 189)
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(250, 26)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(239, 26)
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
         '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.TaskMonthText
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 215)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 50)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(250, 26)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(239, 26)
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
         'LayoutControlItem5
         '
         Me.LayoutControlItem5.Control = Me.TaskStatusText
-        Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 241)
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 76)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(250, 26)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(239, 26)
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem5.TextVisible = False
         '
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.Control = Me.TaskTypeCombo
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 267)
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 102)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(250, 26)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(239, 26)
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem6.TextVisible = False
         '
         'LayoutControlItem7
         '
         Me.LayoutControlItem7.Control = Me.SimpleButton1
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 293)
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 128)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(250, 26)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(239, 26)
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem7.TextVisible = False
         '
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.SimpleButton2
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 319)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 337)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(250, 26)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(239, 26)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem8.TextVisible = False
         '
         'LayoutControlItem9
         '
         Me.LayoutControlItem9.Control = Me.ButtonAlarm
-        Me.LayoutControlItem9.Location = New System.Drawing.Point(34, 371)
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(48, 363)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(216, 26)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(191, 26)
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem9.TextVisible = False
         '
         'LayoutControlItem11
         '
         Me.LayoutControlItem11.Control = Me.ButtonStop
-        Me.LayoutControlItem11.Location = New System.Drawing.Point(34, 397)
+        Me.LayoutControlItem11.Location = New System.Drawing.Point(48, 389)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(216, 26)
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(191, 26)
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem11.TextVisible = False
+        '
+        'LayoutControlItem12
+        '
+        Me.LayoutControlItem12.Control = Me.SimpleButton5
+        Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 363)
+        Me.LayoutControlItem12.Name = "LayoutControlItem12"
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(48, 26)
+        Me.LayoutControlItem12.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem12.TextVisible = False
+        '
+        'LayoutControlItem10
+        '
+        Me.LayoutControlItem10.Control = Me.SimpleButton6
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 389)
+        Me.LayoutControlItem10.Name = "LayoutControlItem10"
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(48, 26)
+        Me.LayoutControlItem10.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem10.TextVisible = False
+        '
+        'LayoutControlItem16
+        '
+        Me.LayoutControlItem16.Control = Me.SimpleButton3
+        Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 415)
+        Me.LayoutControlItem16.Name = "LayoutControlItem16"
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(239, 26)
+        Me.LayoutControlItem16.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem16.TextVisible = False
         '
         'LayoutControlItem13
         '
         Me.LayoutControlItem13.Control = Me.SimpleButton7
-        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 449)
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 441)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
-        Me.LayoutControlItem13.Size = New System.Drawing.Size(250, 26)
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(239, 26)
         Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem13.TextVisible = False
         '
         'LayoutControlItem14
         '
         Me.LayoutControlItem14.Control = Me.MobileText
-        Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 475)
+        Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 467)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
-        Me.LayoutControlItem14.Size = New System.Drawing.Size(250, 24)
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(239, 24)
         Me.LayoutControlItem14.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem14.TextVisible = False
         '
-        'LayoutControlItem10
+        'EmptySpaceItem2
         '
-        Me.LayoutControlItem10.Control = Me.SimpleButton6
-        Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 397)
-        Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(34, 26)
-        Me.LayoutControlItem10.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem10.TextVisible = False
-        '
-        'LayoutControlItem12
-        '
-        Me.LayoutControlItem12.Control = Me.SimpleButton5
-        Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 371)
-        Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(34, 26)
-        Me.LayoutControlItem12.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem12.TextVisible = False
-        '
-        'LayoutControlItem15
-        '
-        Me.LayoutControlItem15.Control = Me.SimpleButton8
-        Me.LayoutControlItem15.Location = New System.Drawing.Point(0, 345)
-        Me.LayoutControlItem15.Name = "LayoutControlItem15"
-        Me.LayoutControlItem15.Size = New System.Drawing.Size(250, 26)
-        Me.LayoutControlItem15.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem15.TextVisible = False
-        '
-        'LayoutControlItem16
-        '
-        Me.LayoutControlItem16.Control = Me.SimpleButton3
-        Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 423)
-        Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(250, 26)
-        Me.LayoutControlItem16.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem16.TextVisible = False
+        Me.EmptySpaceItem2.AllowHotTrack = False
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 154)
+        Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(239, 183)
+        Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'GroupControl3
         '
         Me.GroupControl3.Controls.Add(Me.ChartControl1)
         Me.GroupControl3.Controls.Add(Me.PanelControl1)
         Me.GroupControl3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GroupControl3.Location = New System.Drawing.Point(0, 511)
+        Me.GroupControl3.Location = New System.Drawing.Point(0, 429)
         Me.GroupControl3.Name = "GroupControl3"
         Me.GroupControl3.ShowCaption = False
-        Me.GroupControl3.Size = New System.Drawing.Size(1144, 111)
+        Me.GroupControl3.Size = New System.Drawing.Size(851, 111)
         Me.GroupControl3.TabIndex = 1
         Me.GroupControl3.Text = "GroupControl3"
         '
@@ -1410,28 +1521,31 @@ Partial Class CRMTasks
         Me.ChartControl1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged
         Me.ChartControl1.AppearanceNameSerializable = "Light"
         Me.ChartControl1.BorderOptions.Thickness = 2
-        XyDiagram1.AxisX.Reverse = True
-        XyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
-        XyDiagram1.AxisY.Interlaced = True
-        XyDiagram1.AxisY.MinorCount = 4
-        XyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
-        XyDiagram1.Rotated = True
-        Me.ChartControl1.Diagram = XyDiagram1
+        Me.ChartControl1.DataSource = Me.WizCountDataSet.Accounts
+        XyDiagram2.AxisX.Reverse = True
+        XyDiagram2.AxisX.VisibleInPanesSerializable = "-1"
+        XyDiagram2.AxisY.Interlaced = True
+        XyDiagram2.AxisY.MinorCount = 4
+        XyDiagram2.AxisY.VisibleInPanesSerializable = "-1"
+        XyDiagram2.Rotated = True
+        Me.ChartControl1.Diagram = XyDiagram2
         Me.ChartControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ChartControl1.Legend.Name = "Default Legend"
         Me.ChartControl1.Legend.TextVisible = False
         Me.ChartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.[False]
         Me.ChartControl1.Location = New System.Drawing.Point(2, 2)
         Me.ChartControl1.Name = "ChartControl1"
-        Series1.ArgumentDataMember = "Summery"
-        Series1.ColorDataMember = "Summery"
-        Series1.Name = "Series 1"
-        Series1.ValueDataMembersSerializable = "Values"
-        SideBySideBarSeriesView1.ColorEach = True
-        Series1.View = SideBySideBarSeriesView1
-        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
-        Me.ChartControl1.Size = New System.Drawing.Size(1140, 107)
+        Series2.ColorDataMember = "Summery"
+        Series2.Name = "Series 1"
+        SideBySideBarSeriesView2.ColorEach = True
+        Series2.View = SideBySideBarSeriesView2
+        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series2}
+        Me.ChartControl1.Size = New System.Drawing.Size(847, 107)
         Me.ChartControl1.TabIndex = 1
+        '
+        'ACCSORT_FILTERTableAdapter
+        '
+        Me.ACCSORT_FILTERTableAdapter.ClearBeforeFill = True
         '
         'usersBindingSource1
         '
@@ -1444,231 +1558,84 @@ Partial Class CRMTasks
         '
         'AlertControl1
         '
-        AlertButton1.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        AlertButton1.Name = "EDITDATE"
-        AlertButton2.ImageOptions.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
-        AlertButton2.Name = "Tahsel"
-        Me.AlertControl1.Buttons.Add(AlertButton1)
-        Me.AlertControl1.Buttons.Add(AlertButton2)
-        '
-        'GroupControl5
-        '
-        Me.GroupControl5.Controls.Add(Me.LayoutControl1)
-        Me.GroupControl5.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GroupControl5.Location = New System.Drawing.Point(853, 0)
-        Me.GroupControl5.Name = "GroupControl5"
-        Me.GroupControl5.ShowCaption = False
-        Me.GroupControl5.Size = New System.Drawing.Size(291, 511)
-        Me.GroupControl5.TabIndex = 4
-        Me.GroupControl5.Text = "GroupControl5"
-        '
-        'PanelControl2
-        '
-        Me.PanelControl2.Controls.Add(Me.TileBar1)
-        Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelControl2.Location = New System.Drawing.Point(0, 0)
-        Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(853, 94)
-        Me.PanelControl2.TabIndex = 5
-        '
-        'TileBar1
-        '
-        Me.TileBar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.TileBar1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.TileBar1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TileBar1.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        Me.TileBar1.Groups.Add(Me.TileBarGroup2)
-        Me.TileBar1.GroupTextToItemsIndent = 0
-        Me.TileBar1.IndentBetweenItems = 15
-        Me.TileBar1.ItemSize = 70
-        Me.TileBar1.Location = New System.Drawing.Point(2, 2)
-        Me.TileBar1.MaxId = 10
-        Me.TileBar1.Name = "TileBar1"
-        Me.TileBar1.Padding = New System.Windows.Forms.Padding(22, 0, 22, 0)
-        Me.TileBar1.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons
-        Me.TileBar1.Size = New System.Drawing.Size(849, 90)
-        Me.TileBar1.TabIndex = 5
-        Me.TileBar1.WideTileWidth = 170
-        '
-        'TileBarGroup2
-        '
-        Me.TileBarGroup2.Items.Add(Me.TileBarItem1)
-        Me.TileBarGroup2.Items.Add(Me.TileBarItem2)
-        Me.TileBarGroup2.Items.Add(Me.TileBarItem3)
-        Me.TileBarGroup2.Items.Add(Me.TileBarItem4)
-        Me.TileBarGroup2.Items.Add(Me.TileBarItem5)
-        Me.TileBarGroup2.Items.Add(Me.TileBarItem6)
-        Me.TileBarGroup2.Name = "TileBarGroup2"
-        '
-        'TileBarItem1
-        '
-        Me.TileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement1.ImageOptions.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
-        TileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
-        TileItemElement1.Text = "كل المهام"
-        TileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter
-        Me.TileBarItem1.Elements.Add(TileItemElement1)
-        Me.TileBarItem1.Id = 3
-        Me.TileBarItem1.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium
-        Me.TileBarItem1.Name = "TileBarItem1"
-        '
-        'TileBarItem2
-        '
-        Me.TileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement2.ImageOptions.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
-        TileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
-        TileItemElement2.Text = "مستحقة"
-        TileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter
-        Me.TileBarItem2.Elements.Add(TileItemElement2)
-        Me.TileBarItem2.Id = 4
-        Me.TileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium
-        Me.TileBarItem2.Name = "TileBarItem2"
-        '
-        'TileBarItem3
-        '
-        Me.TileBarItem3.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement3.ImageOptions.Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
-        TileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement3.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
-        TileItemElement3.Text = "محصلة"
-        Me.TileBarItem3.Elements.Add(TileItemElement3)
-        Me.TileBarItem3.Id = 5
-        Me.TileBarItem3.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium
-        Me.TileBarItem3.Name = "TileBarItem3"
-        '
-        'TileBarItem4
-        '
-        Me.TileBarItem4.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement4.ImageOptions.Image = CType(resources.GetObject("resource.Image5"), System.Drawing.Image)
-        TileItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement4.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
-        TileItemElement4.Text = "مغلقة"
-        Me.TileBarItem4.Elements.Add(TileItemElement4)
-        Me.TileBarItem4.Id = 7
-        Me.TileBarItem4.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium
-        Me.TileBarItem4.Name = "TileBarItem4"
-        '
-        'TileBarItem5
-        '
-        Me.TileBarItem5.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement5.ImageOptions.Image = CType(resources.GetObject("resource.Image6"), System.Drawing.Image)
-        TileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement5.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
-        TileItemElement5.Text = "طباعة"
-        Me.TileBarItem5.Elements.Add(TileItemElement5)
-        Me.TileBarItem5.Id = 8
-        Me.TileBarItem5.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium
-        Me.TileBarItem5.Name = "TileBarItem5"
-        '
-        'TileBarItem6
-        '
-        Me.TileBarItem6.DropDownOptions.BeakColor = System.Drawing.Color.Empty
-        TileItemElement6.ImageOptions.Image = CType(resources.GetObject("resource.Image7"), System.Drawing.Image)
-        TileItemElement6.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter
-        TileItemElement6.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom
-        TileItemElement6.Text = "بحث"
-        Me.TileBarItem6.Elements.Add(TileItemElement6)
-        Me.TileBarItem6.Id = 9
-        Me.TileBarItem6.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium
-        Me.TileBarItem6.Name = "TileBarItem6"
+        AlertButton3.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        AlertButton3.Name = "EDITDATE"
+        AlertButton4.ImageOptions.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
+        AlertButton4.Name = "Tahsel"
+        Me.AlertControl1.Buttons.Add(AlertButton3)
+        Me.AlertControl1.Buttons.Add(AlertButton4)
         '
         'PanelControl3
         '
         Me.PanelControl3.Controls.Add(Me.GridControl1)
         Me.PanelControl3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelControl3.Location = New System.Drawing.Point(0, 94)
+        Me.PanelControl3.Location = New System.Drawing.Point(0, 105)
         Me.PanelControl3.Name = "PanelControl3"
-        Me.PanelControl3.Size = New System.Drawing.Size(853, 417)
+        Me.PanelControl3.Size = New System.Drawing.Size(851, 324)
         Me.PanelControl3.TabIndex = 6
         '
-        'SimpleButton9
+        'ACCSORTFILTERBindingSource
         '
-        Me.SimpleButton9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton9.Location = New System.Drawing.Point(704, 206)
-        Me.SimpleButton9.Name = "SimpleButton9"
-        Me.SimpleButton9.Size = New System.Drawing.Size(75, 55)
-        Me.SimpleButton9.TabIndex = 0
-        Me.SimpleButton9.Text = "كل المهام"
+        Me.ACCSORTFILTERBindingSource.DataMember = "ACCSORT_FILTER"
+        Me.ACCSORTFILTERBindingSource.DataSource = Me.WizCountDataSet
         '
-        'SimpleButton10
+        'AccSortNamesTableAdapter
         '
-        Me.SimpleButton10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton10.Location = New System.Drawing.Point(623, 206)
-        Me.SimpleButton10.Name = "SimpleButton10"
-        Me.SimpleButton10.Size = New System.Drawing.Size(75, 55)
-        Me.SimpleButton10.TabIndex = 0
-        Me.SimpleButton10.Text = "المحصلة"
+        Me.AccSortNamesTableAdapter.ClearBeforeFill = True
         '
-        'SimpleButton11
+        'DockManager1
         '
-        Me.SimpleButton11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton11.Location = New System.Drawing.Point(542, 206)
-        Me.SimpleButton11.Name = "SimpleButton11"
-        Me.SimpleButton11.Size = New System.Drawing.Size(75, 55)
-        Me.SimpleButton11.TabIndex = 0
-        Me.SimpleButton11.Text = "المغلقة"
+        Me.DockManager1.Form = Me
+        Me.DockManager1.RootPanels.AddRange(New DevExpress.XtraBars.Docking.DockPanel() {Me.DockPanel1, Me.DockPanel2})
+        Me.DockManager1.TopZIndexControls.AddRange(New String() {"DevExpress.XtraBars.BarDockControl", "DevExpress.XtraBars.StandaloneBarDockControl", "System.Windows.Forms.MenuStrip", "System.Windows.Forms.StatusStrip", "System.Windows.Forms.StatusBar", "DevExpress.XtraBars.Ribbon.RibbonStatusBar", "DevExpress.XtraBars.Ribbon.RibbonControl", "DevExpress.XtraBars.Navigation.OfficeNavigationBar", "DevExpress.XtraBars.Navigation.TileNavPane", "DevExpress.XtraBars.TabFormControl", "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl", "DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"})
         '
-        'SimpleButton12
+        'DockPanel1
         '
-        Me.SimpleButton12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton12.Location = New System.Drawing.Point(461, 206)
-        Me.SimpleButton12.Name = "SimpleButton12"
-        Me.SimpleButton12.Size = New System.Drawing.Size(75, 55)
-        Me.SimpleButton12.TabIndex = 0
-        Me.SimpleButton12.Text = "المتبقية"
+        Me.DockPanel1.Controls.Add(Me.DockPanel1_Container)
+        Me.DockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
+        Me.DockPanel1.ID = New System.Guid("3cb195de-59eb-4c02-a922-536b10f89d23")
+        Me.DockPanel1.Location = New System.Drawing.Point(851, 0)
+        Me.DockPanel1.Name = "DockPanel1"
+        Me.DockPanel1.OriginalSize = New System.Drawing.Size(266, 200)
+        Me.DockPanel1.Size = New System.Drawing.Size(266, 540)
+        Me.DockPanel1.Text = "DockPanel1"
         '
-        'SimpleButton13
+        'DockPanel1_Container
         '
-        Me.SimpleButton13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton13.Location = New System.Drawing.Point(380, 206)
-        Me.SimpleButton13.Name = "SimpleButton13"
-        Me.SimpleButton13.Size = New System.Drawing.Size(75, 55)
-        Me.SimpleButton13.TabIndex = 0
-        Me.SimpleButton13.Text = "المستحقة"
+        Me.DockPanel1_Container.Controls.Add(Me.LayoutControl2)
+        Me.DockPanel1_Container.Location = New System.Drawing.Point(3, 26)
+        Me.DockPanel1_Container.Name = "DockPanel1_Container"
+        Me.DockPanel1_Container.Size = New System.Drawing.Size(259, 511)
+        Me.DockPanel1_Container.TabIndex = 0
         '
-        'SimpleButton14
+        'DockPanel2
         '
-        Me.SimpleButton14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton14.Location = New System.Drawing.Point(300, 206)
-        Me.SimpleButton14.Name = "SimpleButton14"
-        Me.SimpleButton14.Size = New System.Drawing.Size(75, 55)
-        Me.SimpleButton14.TabIndex = 0
-        Me.SimpleButton14.Text = "المحصلة اليوم"
+        Me.DockPanel2.Controls.Add(Me.DockPanel2_Container)
+        Me.DockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top
+        Me.DockPanel2.ID = New System.Guid("469749f7-c504-4e0f-92b9-8e7c77b5c7a7")
+        Me.DockPanel2.Location = New System.Drawing.Point(0, 0)
+        Me.DockPanel2.Name = "DockPanel2"
+        Me.DockPanel2.OriginalSize = New System.Drawing.Size(200, 105)
+        Me.DockPanel2.Size = New System.Drawing.Size(851, 105)
+        Me.DockPanel2.Text = "تفاصيل"
         '
-        'SimpleButton15
+        'DockPanel2_Container
         '
-        Me.SimpleButton15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton15.Location = New System.Drawing.Point(219, 206)
-        Me.SimpleButton15.Name = "SimpleButton15"
-        Me.SimpleButton15.Size = New System.Drawing.Size(75, 55)
-        Me.SimpleButton15.TabIndex = 0
-        Me.SimpleButton15.Text = "نسبة التحصيل"
+        Me.DockPanel2_Container.Controls.Add(Me.LayoutControl1)
+        Me.DockPanel2_Container.Location = New System.Drawing.Point(3, 26)
+        Me.DockPanel2_Container.Name = "DockPanel2_Container"
+        Me.DockPanel2_Container.Size = New System.Drawing.Size(845, 75)
+        Me.DockPanel2_Container.TabIndex = 0
         '
         'CRMTasks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1144, 622)
+        Me.ClientSize = New System.Drawing.Size(1117, 540)
         Me.Controls.Add(Me.PanelControl3)
-        Me.Controls.Add(Me.TextEdit4)
-        Me.Controls.Add(Me.PanelControl2)
-        Me.Controls.Add(Me.SimpleButton15)
-        Me.Controls.Add(Me.GroupControl5)
-        Me.Controls.Add(Me.SimpleButton14)
         Me.Controls.Add(Me.GroupControl3)
-        Me.Controls.Add(Me.TextEdit3)
-        Me.Controls.Add(Me.SimpleButton9)
-        Me.Controls.Add(Me.SimpleButton13)
-        Me.Controls.Add(Me.AllTasksText)
-        Me.Controls.Add(Me.SimpleButton12)
-        Me.Controls.Add(Me.TextEdit5)
-        Me.Controls.Add(Me.SimpleButton11)
-        Me.Controls.Add(Me.TextEdit2)
-        Me.Controls.Add(Me.SimpleButton10)
-        Me.Controls.Add(Me.TextEdit6)
-        Me.Controls.Add(Me.TextEdit1)
+        Me.Controls.Add(Me.DockPanel2)
+        Me.Controls.Add(Me.DockPanel1)
         Me.Name = "CRMTasks"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Text = "شاشة المهام"
@@ -1681,27 +1648,38 @@ Partial Class CRMTasks
         CType(Me.RepositorySendSMS, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEdit4.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit3.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit6.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit5.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AllTasksText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
-        CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MobileText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TaskMonthText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit7.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TaskStatusText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TaskTypeCombo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit3.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit5.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AllTasksText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit6.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LayoutControl2.ResumeLayout(False)
+        CType(Me.MobileText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TaskTypeCombo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AccSortNamesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WizCountDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TaskStatusText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TaskMonthText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit7.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Root, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1711,25 +1689,27 @@ Partial Class CRMTasks
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl3.ResumeLayout(False)
-        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(XyDiagram2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SideBySideBarSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.usersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GroupControl5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupControl5.ResumeLayout(False)
-        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl2.ResumeLayout(False)
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl3.ResumeLayout(False)
+        CType(Me.ACCSORTFILTERBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.DockPanel1.ResumeLayout(False)
+        Me.DockPanel1_Container.ResumeLayout(False)
+        Me.DockPanel2.ResumeLayout(False)
+        Me.DockPanel2_Container.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1757,15 +1737,11 @@ Partial Class CRMTasks
     Friend WithEvents colUserName As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents SqlDataSource1 As DevExpress.DataAccess.Sql.SqlDataSource
     Friend WithEvents BehaviorManager1 As DevExpress.Utils.Behaviors.BehaviorManager
-    Friend WithEvents TaskMonthText As DevExpress.XtraEditors.SpinEdit
     Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents RepositoryItemButtonEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
-    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents LookUpEdit1 As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents CRMDataSet As CRMDataSet
     Friend WithEvents UsersBindingSource As BindingSource
     Friend WithEvents UsersTableAdapter As CRMDataSetTableAdapters.UsersTableAdapter
-    Friend WithEvents TaskStatusText As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents RepositoryItemButtonEdit3 As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
@@ -1778,7 +1754,6 @@ Partial Class CRMTasks
     Friend WithEvents ColSendSMS As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents RepositoryItemButtonEdit4 As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
     Friend WithEvents AlertControl1 As DevExpress.XtraBars.Alerter.AlertControl
-    Friend WithEvents TaskTypeCombo As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents ButtonStop As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents ButtonAlarm As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton6 As DevExpress.XtraEditors.SimpleButton
@@ -1791,13 +1766,26 @@ Partial Class CRMTasks
     Friend WithEvents usersBindingSource1 As BindingSource
     Friend WithEvents ChartControl1 As DevExpress.XtraCharts.ChartControl
     Friend WithEvents ColAlertMessage As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GroupControl5 As DevExpress.XtraEditors.GroupControl
+    Friend WithEvents PanelControl3 As DevExpress.XtraEditors.PanelControl
+    Friend WithEvents colCustID As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents GridSendSMS As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents RepositorySendSMS As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
+    Friend WithEvents ACCSORT_FILTERTableAdapter As WizCountDataSetTableAdapters.ACCSORT_FILTERTableAdapter
+    Friend WithEvents WizCountDataSet As WizCountDataSet
+    Friend WithEvents ACCSORTFILTERBindingSource As BindingSource
+    Friend WithEvents AccSortNamesBindingSource As BindingSource
+    Friend WithEvents AccSortNamesTableAdapter As WizCountDataSetTableAdapters.AccSortNamesTableAdapter
+    Friend WithEvents LayoutControl2 As DevExpress.XtraLayout.LayoutControl
+    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents TaskTypeCombo As DevExpress.XtraEditors.SearchLookUpEdit
+    Friend WithEvents SearchLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents TaskStatusText As DevExpress.XtraEditors.ComboBoxEdit
+    Friend WithEvents TaskMonthText As DevExpress.XtraEditors.SpinEdit
+    Friend WithEvents LookUpEdit1 As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents TextEdit7 As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents LayoutControl1 As DevExpress.XtraLayout.LayoutControl
-    Friend WithEvents PictureEdit1 As DevExpress.XtraEditors.PictureEdit
-    Friend WithEvents LayoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
-    Friend WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents EmptySpaceItem1 As DevExpress.XtraLayout.EmptySpaceItem
+    Friend WithEvents Root As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents EmptySpaceItem2 As DevExpress.XtraLayout.EmptySpaceItem
     Friend WithEvents LayoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
@@ -1806,33 +1794,25 @@ Partial Class CRMTasks
     Friend WithEvents LayoutControlItem7 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem8 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem9 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents LayoutControlItem10 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem11 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem12 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem10 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem16 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem13 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem14 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents LayoutControlItem12 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents SimpleButton8 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents LayoutControlItem15 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents PanelControl2 As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents SimpleButton14 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton13 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton12 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton11 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton10 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton9 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents PanelControl3 As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents SimpleButton15 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents TileBar1 As DevExpress.XtraBars.Navigation.TileBar
-    Friend WithEvents TileBarGroup2 As DevExpress.XtraBars.Navigation.TileBarGroup
-    Friend WithEvents TileBarItem1 As DevExpress.XtraBars.Navigation.TileBarItem
-    Friend WithEvents TileBarItem2 As DevExpress.XtraBars.Navigation.TileBarItem
-    Friend WithEvents TileBarItem3 As DevExpress.XtraBars.Navigation.TileBarItem
-    Friend WithEvents TileBarItem4 As DevExpress.XtraBars.Navigation.TileBarItem
-    Friend WithEvents TileBarItem5 As DevExpress.XtraBars.Navigation.TileBarItem
-    Friend WithEvents TileBarItem6 As DevExpress.XtraBars.Navigation.TileBarItem
-    Friend WithEvents colCustID As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents LayoutControlItem16 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents GridSendSMS As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents RepositorySendSMS As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
+    Friend WithEvents DockManager1 As DevExpress.XtraBars.Docking.DockManager
+    Friend WithEvents DockPanel1 As DevExpress.XtraBars.Docking.DockPanel
+    Friend WithEvents DockPanel1_Container As DevExpress.XtraBars.Docking.ControlContainer
+    Friend WithEvents LayoutControl1 As DevExpress.XtraLayout.LayoutControl
+    Friend WithEvents LayoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents EmptySpaceItem1 As DevExpress.XtraLayout.EmptySpaceItem
+    Friend WithEvents LayoutControlItem17 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem18 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem19 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem20 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem21 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem22 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents DockPanel2 As DevExpress.XtraBars.Docking.DockPanel
+    Friend WithEvents DockPanel2_Container As DevExpress.XtraBars.Docking.ControlContainer
 End Class

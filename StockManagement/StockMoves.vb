@@ -89,6 +89,10 @@ Public Class StockMoves
         Saving()
     End Sub
     Private Sub Saving()
+        If String.IsNullOrEmpty(SearchToWarehouse.Text) And String.IsNullOrEmpty(SearchFromWarehouse.Text) Then
+            MsgBox("يجب اختبار مستودع")
+            Exit Sub
+        End If
 
         If Me.DocType.Text = "PurchaseDelivery" And DocManualNoTextEdit.Text = "" Then
             MsgBox("يجب تعبئة رقم السند اليدوي في فاتورة المشتريات")
@@ -96,6 +100,7 @@ Public Class StockMoves
         End If
 
         FillColumns()
+
         Me.Validate()
         Me.StockMoveBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.CRMDataSet)
@@ -169,7 +174,6 @@ Public Class StockMoves
             _DoID = CInt(DocID.EditValue)
         End If
 
-
         For i = 0 To GridView1.RowCount - 1
             GridView1.SetRowCellValue(i, colDocID, _DoID)
             GridView1.SetRowCellValue(i, colDocDate, DcDate)
@@ -224,6 +228,13 @@ Public Class StockMoves
                     Dim Pric As Decimal = CDec(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "ItemPrice"))
                     Dim Amont As Decimal = Quant * Pric
                     GridView1.SetRowCellValue(GridView1.FocusedRowHandle, colAmount, Amont)
+                    Dim WhareHouse = ""
+                    If DocType.Text = "SalesDelivery" And Not String.IsNullOrEmpty(SearchFromWarehouse.Text) Then WhareHouse = CStr(SearchFromWarehouse.EditValue)
+                    If DocType.Text = "PurchaseDelivery" And Not String.IsNullOrEmpty(SearchToWarehouse.Text) Then WhareHouse = CStr(SearchToWarehouse.EditValue) : Quant = Quant * (-1)
+                    If DocType.Text = "Transfer" And Not String.IsNullOrEmpty(SearchFromWarehouse.Text) Then WhareHouse = CStr(SearchFromWarehouse.EditValue)
+                    If DocType.Text = "Jard" And Not String.IsNullOrEmpty(SearchToWarehouse.Text) Then WhareHouse = CStr(SearchToWarehouse.EditValue)
+                    '  GridView1.SetRowCellValue(GridView1.FocusedRowHandle, ColStockBalance, GetItemBalanceWallet(StockID, "", "", WhareHouse) - Quant)
+                    GridView1.SetRowCellValue(GridView1.FocusedRowHandle, ColStockBalance, GetBalance(StockID, WhareHouse) - Quant)
                 Catch ex As Exception
                     GridView1.SetRowCellValue(GridView1.FocusedRowHandle, colAmount, "0")
                     ' MsgBox(ex.ToString)
@@ -243,7 +254,10 @@ Public Class StockMoves
                     If DocType.Text = "SalesDelivery" And Not String.IsNullOrEmpty(SearchFromWarehouse.Text) Then WhareHouse = CStr(SearchFromWarehouse.EditValue)
                     If DocType.Text = "PurchaseDelivery" And Not String.IsNullOrEmpty(SearchToWarehouse.Text) Then WhareHouse = CStr(SearchToWarehouse.EditValue)
                     If DocType.Text = "Jard" And Not String.IsNullOrEmpty(SearchToWarehouse.Text) Then WhareHouse = CStr(SearchToWarehouse.EditValue)
-                    GridView1.SetRowCellValue(GridView1.FocusedRowHandle, ColStockBalance, GetItemBalanceWallet(StockID, "", "", WhareHouse))
+                    If DocType.Text = "Transfer" And Not String.IsNullOrEmpty(SearchFromWarehouse.Text) Then WhareHouse = CStr(SearchFromWarehouse.EditValue)
+                    ' GridView1.SetRowCellValue(GridView1.FocusedRowHandle, ColStockBalance, GetItemBalanceWallet(StockID, "", "", WhareHouse))
+                    GridView1.SetRowCellValue(GridView1.FocusedRowHandle, ColStockBalance, GetBalance(StockID, WhareHouse))
+
                 Catch ex As Exception
 
                 End Try
@@ -259,7 +273,6 @@ Public Class StockMoves
                     Else
                         GridView1.SetRowCellValue(GridView1.FocusedRowHandle, colItemPrice, 0)
                     End If
-
 
                 Catch ex As Exception
 
@@ -341,6 +354,27 @@ Public Class StockMoves
                 view.FocusedColumn = _ColAmount
                 view.ShowEditor()
             End If
+
+
+            Dim _ColBalance As GridColumn = view.Columns("ColStockBalance")
+            Dim Q As Decimal = CDec(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "StockBalance"))
+            If Q <= 0 And DocType.Text <> "PurchaseDelivery" Then
+                Dim Ans = CType(MsgBox(" تنبيه: لا يوجد كمية كافية بالمستودع هل تريد المتابعة؟ ", MsgBoxStyle.YesNo, "تحذير"), DialogResult)
+                If Ans = DialogResult.No Then
+                    '  e.Valid = False
+                    '   e.ErrorText = "Error!!!"
+                    view.FocusedRowHandle = e.RowHandle
+                    view.FocusedColumn = _ColQuantity
+                    view.ShowEditor()
+                    GridView1.DeleteSelectedRows()
+                End If
+            End If
+
+
+
+
+
+
 
             GridView1.BestFitColumns()
         Catch ex As Exception
@@ -456,12 +490,18 @@ Public Class StockMoves
     Private Sub StockMoveGridControl_Click(sender As Object, e As EventArgs) Handles StockMoveGridControl.Click
 
     End Sub
-    Private Sub GridControl_ProcessGridKey(ByVal sender As Object, ByVal e As KeyEventArgs) Handles StockMoveGridControl.ProcessGridKey
+    Private Sub StockMoveGridControl_ProcessGridKey(sender As Object, e As KeyEventArgs) Handles StockMoveGridControl.ProcessGridKey
         Dim grid = TryCast(sender, GridControl)
         Dim view = TryCast(grid.FocusedView, GridView)
         If e.KeyData = Keys.Delete Then
-            view.DeleteSelectedRows()
-            e.Handled = True
+            e.Handled = False
+            Dim result As DialogResult = XtraMessageBox.Show("هل انت متأكد من حذف السطر؟", "تنبيه", MessageBoxButtons.YesNo)
+            If result = System.Windows.Forms.DialogResult.Yes Then
+                view.DeleteSelectedRows()
+                e.Handled = True
+            Else
+                XtraMessageBox.Show("لم يتم الحذف")
+            End If
         End If
     End Sub
     Private Function GetLastPrice(Item As String, Account As String) As Decimal
@@ -484,19 +524,21 @@ Public Class StockMoves
         _GetLastPrice = CDec(sql.SQLDS.Tables(0).Rows(0).Item("SMPRICE").ToString)
         Return _GetLastPrice
     End Function
-    Private Function GetBalance(Item As String, whareHouse As String) As Integer
+    Private Function GetBalance(Item As String, whareHouse As String) As Decimal
+
         Try
-            Dim _GetBalance As Integer = 0
+
+            Dim _GetBalance As Decimal = 0
             Dim sql As New SQLControl
             Dim Sqlstring As String = "  select  QuantBalance From (
                                   Select       StockID,
-                                  { fn IFNULL   ((SELECT     SUM(Quantity) AS Expr1  FROM  [CRM].[dbo].[StockMove] AS StockMove_1   WHERE (DebitWhereHouse = " & whareHouse & ") AND (StockID = a.StockID)), 0) } -
-                                  { fn IFNULL   ((SELECT     SUM(Quantity) AS Expr1  FROM  [CRM].[dbo].[StockMove] AS StockMove_1   WHERE (CreditWhereHouse = " & whareHouse & ") AND (StockID = a.StockID)), 0) } AS QuantBalance
+                                  { fn IFNULL   ((SELECT     SUM(Quantity) AS Expr1  FROM  [CRM].[dbo].[StockMove] AS StockMove_1   WHERE ( DocType<>'Jard' ) And (DebitWhereHouse = " & whareHouse & ") AND (StockID = a.StockID)), 0) } -
+                                  { fn IFNULL   ((SELECT     SUM(Quantity) AS Expr1  FROM  [CRM].[dbo].[StockMove] AS StockMove_1   WHERE ( DocType<>'Jard' ) And (CreditWhereHouse = " & whareHouse & ") AND (StockID = a.StockID)), 0) } AS QuantBalance
                                   FROM         [CRM].[dbo].[StockMove] AS a 
                                   GROUP BY StockID  ) c
                                   where  StockID ='" & Item & "'"
             sql.WizCountRunQuery(Sqlstring)
-            _GetBalance = CInt(sql.SQLDS.Tables(0).Rows(0).Item("QuantBalance").ToString)
+            _GetBalance = CDec(sql.SQLDS.Tables(0).Rows(0).Item("QuantBalance").ToString)
             Return _GetBalance
         Catch ex As Exception
             '  MsgBox(ex.ToString)
@@ -550,7 +592,6 @@ Public Class StockMoves
         ElseIf (e.Control AndAlso e.Alt AndAlso e.KeyCode = Keys.P) Then
             PrintCopy(True)
         Else
-
             Exit Sub
         End If
         e.SuppressKeyPress = True 'this will prevent ding sound 
@@ -587,7 +628,7 @@ Public Class StockMoves
             .Parameters("DocID").Value = DocID.Text
             .Parameters("DocType").Value = DocType.Text
             .Parameters("DocSort").Value = DocSortTextEdit.EditValue
-            If IsOrigional = True Then .DocOriginal.Text = "نسخة أصلية"
+            If IsOrigional = True Then .DocOriginal.Text = "أصلية"
             Select Case DocType.Text
                 Case "SalesDelivery"
                     .XrLabelDocName.Text = "ارسالية مبيعات"

@@ -39,10 +39,6 @@ Partial Class LiteEditTrans
         Me.RepositoryItemTimeEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit()
         Me.colFleet = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colVehicle_Number = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.RepositorySearchVechile_Number = New DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit()
-        Me.RepositoryItemSearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.colplate = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colname = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colProductName = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colQuantity = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemCalcEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit()
@@ -59,6 +55,10 @@ Partial Class LiteEditTrans
         Me.colProductCode = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colPrice = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colID = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositorySearchVechile_Number = New DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit()
+        Me.RepositoryItemSearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.colplate = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colname = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryCars = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.Root = New DevExpress.XtraLayout.LayoutControlGroup()
@@ -82,11 +82,11 @@ Partial Class LiteEditTrans
         CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemTimeEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RepositorySearchVechile_Number, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemCalcEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositorySearchVechile_Number, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryCars, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Root, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,14 +130,14 @@ Partial Class LiteEditTrans
         Me.LayoutControl1.Name = "LayoutControl1"
         Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl1.Root = Me.Root
-        Me.LayoutControl1.Size = New System.Drawing.Size(979, 472)
+        Me.LayoutControl1.Size = New System.Drawing.Size(983, 476)
         Me.LayoutControl1.TabIndex = 1
         Me.LayoutControl1.Text = "LayoutControl1"
         '
         'SimpleButton2
         '
         Me.SimpleButton2.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton2.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton2.Location = New System.Drawing.Point(801, 12)
+        Me.SimpleButton2.Location = New System.Drawing.Point(805, 12)
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(78, 36)
         Me.SimpleButton2.StyleController = Me.LayoutControl1
@@ -151,7 +151,7 @@ Partial Class LiteEditTrans
         Me.DATAGridControl.MainView = Me.GridView1
         Me.DATAGridControl.Name = "DATAGridControl"
         Me.DATAGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositorySearchVechile_Number, Me.RepositoryCars, Me.RepositoryAccounts, Me.RepositoryItemTimeEdit1, Me.RepositoryItemCalcEdit1})
-        Me.DATAGridControl.Size = New System.Drawing.Size(955, 408)
+        Me.DATAGridControl.Size = New System.Drawing.Size(959, 412)
         Me.DATAGridControl.TabIndex = 5
         Me.DATAGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -171,6 +171,7 @@ Partial Class LiteEditTrans
         Me.GridView1.GridControl = Me.DATAGridControl
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top
+        Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowFooter = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
         '
@@ -218,45 +219,11 @@ Partial Class LiteEditTrans
         '
         'colVehicle_Number
         '
-        Me.colVehicle_Number.ColumnEdit = Me.RepositorySearchVechile_Number
         Me.colVehicle_Number.FieldName = "Vehicle_Number"
         Me.colVehicle_Number.Name = "colVehicle_Number"
         Me.colVehicle_Number.Visible = True
         Me.colVehicle_Number.VisibleIndex = 7
         Me.colVehicle_Number.Width = 62
-        '
-        'RepositorySearchVechile_Number
-        '
-        Me.RepositorySearchVechile_Number.AutoHeight = False
-        Me.RepositorySearchVechile_Number.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RepositorySearchVechile_Number.DataSource = Me.MeansBindingSource
-        Me.RepositorySearchVechile_Number.DisplayMember = "plate"
-        Me.RepositorySearchVechile_Number.Name = "RepositorySearchVechile_Number"
-        Me.RepositorySearchVechile_Number.NullText = ""
-        Me.RepositorySearchVechile_Number.PopupView = Me.RepositoryItemSearchLookUpEdit1View
-        Me.RepositorySearchVechile_Number.ValueMember = "plate"
-        '
-        'RepositoryItemSearchLookUpEdit1View
-        '
-        Me.RepositoryItemSearchLookUpEdit1View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colplate, Me.colname})
-        Me.RepositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
-        Me.RepositoryItemSearchLookUpEdit1View.Name = "RepositoryItemSearchLookUpEdit1View"
-        Me.RepositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
-        Me.RepositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
-        '
-        'colplate
-        '
-        Me.colplate.FieldName = "plate"
-        Me.colplate.Name = "colplate"
-        Me.colplate.Visible = True
-        Me.colplate.VisibleIndex = 0
-        '
-        'colname
-        '
-        Me.colname.FieldName = "name"
-        Me.colname.Name = "colname"
-        Me.colname.Visible = True
-        Me.colname.VisibleIndex = 1
         '
         'colProductName
         '
@@ -269,6 +236,8 @@ Partial Class LiteEditTrans
         'colQuantity
         '
         Me.colQuantity.ColumnEdit = Me.RepositoryItemCalcEdit1
+        Me.colQuantity.DisplayFormat.FormatString = "n3"
+        Me.colQuantity.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colQuantity.FieldName = "Quantity"
         Me.colQuantity.Name = "colQuantity"
         Me.colQuantity.Visible = True
@@ -378,6 +347,39 @@ Partial Class LiteEditTrans
         Me.colID.VisibleIndex = 0
         Me.colID.Width = 44
         '
+        'RepositorySearchVechile_Number
+        '
+        Me.RepositorySearchVechile_Number.AutoHeight = False
+        Me.RepositorySearchVechile_Number.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositorySearchVechile_Number.DataSource = Me.MeansBindingSource
+        Me.RepositorySearchVechile_Number.DisplayMember = "plate"
+        Me.RepositorySearchVechile_Number.Name = "RepositorySearchVechile_Number"
+        Me.RepositorySearchVechile_Number.NullText = ""
+        Me.RepositorySearchVechile_Number.PopupView = Me.RepositoryItemSearchLookUpEdit1View
+        Me.RepositorySearchVechile_Number.ValueMember = "plate"
+        '
+        'RepositoryItemSearchLookUpEdit1View
+        '
+        Me.RepositoryItemSearchLookUpEdit1View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colplate, Me.colname})
+        Me.RepositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.RepositoryItemSearchLookUpEdit1View.Name = "RepositoryItemSearchLookUpEdit1View"
+        Me.RepositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.RepositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
+        '
+        'colplate
+        '
+        Me.colplate.FieldName = "plate"
+        Me.colplate.Name = "colplate"
+        Me.colplate.Visible = True
+        Me.colplate.VisibleIndex = 0
+        '
+        'colname
+        '
+        Me.colname.FieldName = "name"
+        Me.colname.Name = "colname"
+        Me.colname.Visible = True
+        Me.colname.VisibleIndex = 1
+        '
         'RepositoryCars
         '
         Me.RepositoryCars.AutoHeight = False
@@ -392,7 +394,7 @@ Partial Class LiteEditTrans
         'SimpleButton1
         '
         Me.SimpleButton1.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton1.Location = New System.Drawing.Point(883, 12)
+        Me.SimpleButton1.Location = New System.Drawing.Point(887, 12)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(84, 36)
         Me.SimpleButton1.StyleController = Me.LayoutControl1
@@ -405,13 +407,13 @@ Partial Class LiteEditTrans
         Me.Root.GroupBordersVisible = False
         Me.Root.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.EmptySpaceItem1, Me.LayoutControlItem3})
         Me.Root.Name = "Root"
-        Me.Root.Size = New System.Drawing.Size(979, 472)
+        Me.Root.Size = New System.Drawing.Size(983, 476)
         Me.Root.TextVisible = False
         '
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.SimpleButton1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(871, 0)
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(875, 0)
         Me.LayoutControlItem1.MaxSize = New System.Drawing.Size(88, 40)
         Me.LayoutControlItem1.MinSize = New System.Drawing.Size(88, 40)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
@@ -425,7 +427,7 @@ Partial Class LiteEditTrans
         Me.LayoutControlItem2.Control = Me.DATAGridControl
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 40)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(959, 412)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(963, 416)
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem2.TextVisible = False
         '
@@ -434,13 +436,13 @@ Partial Class LiteEditTrans
         Me.EmptySpaceItem1.AllowHotTrack = False
         Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 0)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(789, 40)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(793, 40)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem3
         '
         Me.LayoutControlItem3.Control = Me.SimpleButton2
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(789, 0)
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(793, 0)
         Me.LayoutControlItem3.MaxSize = New System.Drawing.Size(82, 40)
         Me.LayoutControlItem3.MinSize = New System.Drawing.Size(82, 40)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
@@ -508,7 +510,7 @@ Partial Class LiteEditTrans
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(979, 472)
+        Me.ClientSize = New System.Drawing.Size(983, 476)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "LiteEditTrans"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -525,11 +527,11 @@ Partial Class LiteEditTrans
         CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemTimeEdit1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RepositorySearchVechile_Number, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemCalcEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryAccounts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositorySearchVechile_Number, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryCars, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Root, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()

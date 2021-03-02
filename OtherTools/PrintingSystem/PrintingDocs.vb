@@ -125,4 +125,11 @@ Public Class PrintingDocs
 
     End Sub
 
+    Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
+        PdfViewer2.Print()
+    End Sub
+
+    Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+        GridControl1.ShowPrintPreview()
+    End Sub
 End Class

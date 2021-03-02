@@ -55,6 +55,7 @@ order by DOCID DESC "
         AuditShiftID()
     End Sub
     Private Sub AuditShiftID()
+
         Try
             Dim DocID As Integer
             DocID = CInt(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "REF3"))
@@ -130,5 +131,30 @@ order by DOCID DESC "
 
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
         GridView1.DeleteRow(GridView1.FocusedRowHandle)
+    End Sub
+
+    Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+        Dim i As Integer
+        For i = 0 To 100
+            Try
+                Dim DocID As Integer
+                DocID = CInt(Me.GridView1.GetRowCellValue(i, "REF3"))
+                Dim ACCOUNTKEY As Integer = CInt(Me.GridView1.GetRowCellValue(i, "ACCOUNTKEY"))
+                Dim ShiftType As String = "Station"
+                If ACCOUNTKEY = 111195 Then ShiftType = "ASD"
+                Dim sql As New SQLControl
+                Dim SqlString As String = "  Insert into [CRM].[dbo].[ShiftsAudit] 
+                                        (docid,AuditDate,AuditUser,ShiftType) values
+                                        (" & DocID & ", getdate(), '" & GlobalVariables.UserIDString & "', '" & ShiftType & "' )  "
+
+                sql.CRMRunQuery(SqlString)
+                'GridView1.DeleteRow(GridView1.FocusedRowHandle)
+                'DocID = CInt(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "REF3"))
+                'GetDetails(DocID)
+            Catch ex As Exception
+                MsgBox(ex.ToString)
+            End Try
+        Next
+
     End Sub
 End Class

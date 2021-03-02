@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="SqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="SqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9Im1lYW5zIj48RmllbGQgTmFtZT0iY29kZSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImZsZWV0c19uYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImZsZWV0c19zdGF0dXMiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJuYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InBsYXRlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InN0cmluZyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ0eXBlIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iaWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJzdGF0dXMiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJvcG9zX3Byb21wdF9mb3Jfb2RvbWV0ZXIiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJtb250aF92b2x1bWUiIFR5cGU9IkRvdWJsZSIgLz48RmllbGQgTmFtZT0ibW9udGhfbW9uZXkiIFR5cGU9IkRvdWJsZSIgLz48RmllbGQgTmFtZT0ibW9udGhfdmlzaXRzIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iYXZhaWxhYmxlX2Ftb3VudCIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJ1cGRhdGVfdGltZXN0YW1wIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iaXNzdWVkX2RhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJsYXN0X3VzZWQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJkZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="SimpleButton1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

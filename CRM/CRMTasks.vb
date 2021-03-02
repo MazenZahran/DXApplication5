@@ -18,6 +18,10 @@ Public Class CRMTasks
     End Sub
 
     Private Sub CRMTasks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'WizCountDataSet.AccSortNames' table. You can move, or remove it, as needed.
+        Me.AccSortNamesTableAdapter.Fill(Me.WizCountDataSet.AccSortNames)
+        'TODO: This line of code loads data into the 'WizCountDataSet.ACCSORT_FILTER' table. You can move, or remove it, as needed.
+        Me.ACCSORT_FILTERTableAdapter.Fill(Me.WizCountDataSet.ACCSORT_FILTER)
         TaskMonthText.Text = Format(Today.AddMonths(-1), "yyyyMM")
         'TODO: This line of code loads data into the 'CRMDataSet.Users' table. You can move, or remove it, as needed.
         Me.UsersTableAdapter.Fill(Me.CRMDataSet.Users)
@@ -145,6 +149,10 @@ Public Class CRMTasks
     End Sub
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+        RefreshGrid()
+
+    End Sub
+    Private Sub RefreshGrid()
         Try
 
             Dim aa2 As String = ""
@@ -152,14 +160,17 @@ Public Class CRMTasks
 
             aa2 = TryCast(row2, DataRowView)("userid").ToString()
 
-            LoadData(aa2, TaskMonthText.Text, TaskStatusText.Text, TaskTypeCombo.Text)
+            LoadData(aa2, TaskMonthText.Text, TaskStatusText.Text, CStr(TaskTypeCombo.EditValue))
         Catch ex As Exception
-            MsgBox("خطأ")
+            '   MsgBox("خطأ")
         End Try
-
     End Sub
 
+
+
     Sub LoadData(UserID As String, TaskMonth As String, TaskStatus As String, TaskType As String)
+
+
 
         SqlDataSource1.Queries(0).Parameters(0).Value = UserID
         SqlDataSource1.Queries(0).Parameters(1).Value = TaskMonth
@@ -199,6 +210,7 @@ Public Class CRMTasks
 
         SqlDataSource1.Fill()
 
+
         Percentage()
 
         CreatTableSummery()
@@ -213,7 +225,7 @@ Public Class CRMTasks
         'FinancialAccountsDet.Show()
         My.Forms.FinanceAccDetails.TextEditAccountKey.Text = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "CustID"), String)
         FinanceAccDetails.ShowDialog()
-
+        'XtraTabPage2
 
     End Sub
 
@@ -221,7 +233,7 @@ Public Class CRMTasks
 
     End Sub
 
-    Private Sub LookUpEdit1_EditValueChanged(sender As Object, e As EventArgs) Handles LookUpEdit1.EditValueChanged
+    Private Sub LookUpEdit1_EditValueChanged(sender As Object, e As EventArgs)
         Dim UserID As String
         Dim row2 As Object = LookUpEdit1.Properties.GetDataSourceRowByKeyValue(LookUpEdit1.EditValue)
         UserID = TryCast(row2, DataRowView)("userid").ToString()
@@ -229,7 +241,7 @@ Public Class CRMTasks
         LoadData(UserID, CStr(TaskMonthText.Text), Me.TaskStatusText.Text, TaskTypeCombo.Text)
     End Sub
 
-    Private Sub TaskMonthText_EditValueChanged(sender As Object, e As EventArgs) Handles TaskMonthText.EditValueChanged
+    Private Sub TaskMonthText_EditValueChanged(sender As Object, e As EventArgs)
         Try
             Dim UserID As String
             Dim row2 As Object = LookUpEdit1.Properties.GetDataSourceRowByKeyValue(LookUpEdit1.EditValue)
@@ -242,7 +254,7 @@ Public Class CRMTasks
 
     End Sub
 
-    Private Sub TaskStatusText_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TaskStatusText.SelectedIndexChanged, TaskTypeCombo.SelectedIndexChanged
+    Private Sub TaskStatusText_SelectedIndexChanged(sender As Object, e As EventArgs)
         Try
             Dim UserID As String
             Dim row2 As Object = LookUpEdit1.Properties.GetDataSourceRowByKeyValue(LookUpEdit1.EditValue)
@@ -609,33 +621,33 @@ ByVal e As RowCellCustomDrawEventArgs) Handles GridView1.CustomDrawCell
 
     End Sub
 
-    Private Sub SimpleButton9_Click(sender As Object, e As EventArgs) Handles SimpleButton9.Click
+    Private Sub SimpleButton9_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TileBarItem2_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles TileBarItem2.ItemClick
+    Private Sub TileBarItem2_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs)
         GridView1.ActiveFilter.Clear()
         Dim TodayString As String = Format(Today, "yyyy-MM-dd")
         GridView1.ActiveFilter.NonColumnFilter = "[AccrualDate] Between (#" & TodayString & "#, #" & TodayString & "#) "
     End Sub
 
-    Private Sub TileBarItem5_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles TileBarItem5.ItemClick
+    Private Sub TileBarItem5_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs)
         GridControl1.ShowPrintPreview()
     End Sub
 
     Private Sub GetImage()
-        Dim sql As New SQLControl
-        Dim i As Integer
-        Dim SQLString As String = " SELECT picture  " &
-                                  " FROM    employeesdata" &
-                                  " where  empid= '" & My.Settings.UserName & "'"
-        sql.CRMRunQuery(SQLString)
+        'Dim sql As New SQLControl
+        'Dim i As Integer
+        'Dim SQLString As String = " SELECT picture  " &
+        '                          " FROM    employeesdata" &
+        '                          " where  empid= '" & My.Settings.UserName & "'"
+        'sql.CRMRunQuery(SQLString)
 
-        If sql.SQLDS.Tables(0).Rows(i).Item("picture").ToString <> "" Then
-            Dim bytes As [Byte]() = CType(sql.SQLDS.Tables(0).Rows(i).Item("picture"), Byte())
-            Dim ms As New IO.MemoryStream(bytes)
-            PictureEdit1.Image = Image.FromStream(ms)
-        End If
+        'If sql.SQLDS.Tables(0).Rows(i).Item("picture").ToString <> "" Then
+        '    Dim bytes As [Byte]() = CType(sql.SQLDS.Tables(0).Rows(i).Item("picture"), Byte())
+        '    Dim ms As New IO.MemoryStream(bytes)
+        '    PictureEdit1.Image = Image.FromStream(ms)
+        'End If
     End Sub
 
     Private Sub PanelControl3_Paint(sender As Object, e As PaintEventArgs) Handles PanelControl3.Paint
@@ -698,5 +710,25 @@ ByVal e As RowCellCustomDrawEventArgs) Handles GridView1.CustomDrawCell
         My.Forms.CRMSendSMSMessages.TextMobileNo.Text = CustMobile
         My.Forms.CRMSendSMSMessages.MemoEdit1.Select()
         CRMSendSMSMessages.Show()
+    End Sub
+
+    Private Sub LookUpEdit1_EditValueChanged_1(sender As Object, e As EventArgs) Handles LookUpEdit1.EditValueChanged
+        RefreshGrid()
+    End Sub
+
+    Private Sub TaskMonthText_EditValueChanged_1(sender As Object, e As EventArgs) Handles TaskMonthText.EditValueChanged
+        RefreshGrid()
+    End Sub
+
+    Private Sub TaskStatusText_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles TaskStatusText.SelectedIndexChanged
+        RefreshGrid()
+    End Sub
+
+    Private Sub TaskTypeCombo_EditValueChanged(sender As Object, e As EventArgs) Handles TaskTypeCombo.EditValueChanged
+        RefreshGrid()
+    End Sub
+
+    Private Sub SimpleButton8_Click_1(sender As Object, e As EventArgs)
+        CreatTableSummery()
     End Sub
 End Class

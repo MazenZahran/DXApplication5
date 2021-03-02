@@ -931,31 +931,31 @@ Public Class FinanceReceipt
             MsgBox(ex.ToString)
         End Try
 
-        Try
-            Dim lastRowHandle = GridView5.DataRowCount - 1
-            If Not GridView5.IsValidRowHandle(lastRowHandle) Then Return
+        'Try
+        '    Dim lastRowHandle = GridView5.DataRowCount - 1
+        '    If Not GridView5.IsValidRowHandle(lastRowHandle) Then Return
 
-            GridView5.SetRowCellValue(e.RowHandle, colChequeNO,
-                                     CInt(GridView5.GetRowCellValue(lastRowHandle, colChequeNO)) + 1)
+        '    GridView5.SetRowCellValue(e.RowHandle, colChequeNO,
+        '                             CInt(GridView5.GetRowCellValue(lastRowHandle, colChequeNO)) + 1)
 
-            GridView5.SetRowCellValue(e.RowHandle, colChequeBank,
-                                      GridView5.GetRowCellValue(lastRowHandle, colChequeBank))
+        '    GridView5.SetRowCellValue(e.RowHandle, colChequeBank,
+        '                              GridView5.GetRowCellValue(lastRowHandle, colChequeBank))
 
-            GridView5.SetRowCellValue(e.RowHandle, colChequeBranch,
-                                      GridView5.GetRowCellValue(lastRowHandle, colChequeBranch))
+        '    GridView5.SetRowCellValue(e.RowHandle, colChequeBranch,
+        '                              GridView5.GetRowCellValue(lastRowHandle, colChequeBranch))
 
-            GridView5.SetRowCellValue(e.RowHandle, colChequeAccount,
-                          GridView5.GetRowCellValue(lastRowHandle, colChequeAccount))
+        '    GridView5.SetRowCellValue(e.RowHandle, colChequeAccount,
+        '                  GridView5.GetRowCellValue(lastRowHandle, colChequeAccount))
 
-            GridView5.SetRowCellValue(e.RowHandle, colChequeAmount,
-                          GridView5.GetRowCellValue(lastRowHandle, colChequeAmount))
+        '    GridView5.SetRowCellValue(e.RowHandle, colChequeAmount,
+        '                  GridView5.GetRowCellValue(lastRowHandle, colChequeAmount))
 
-            Dim AccDate As String = CStr(GridView5.GetRowCellValue(lastRowHandle, colChequeAccDate))
-            GridView5.SetRowCellValue(e.RowHandle, colChequeAccDate, CDate(AccDate).AddMonths(1))
+        '    Dim AccDate As String = CStr(GridView5.GetRowCellValue(lastRowHandle, colChequeAccDate))
+        '    GridView5.SetRowCellValue(e.RowHandle, colChequeAccDate, CDate(AccDate).AddMonths(1))
 
-        Catch ex As Exception
+        'Catch ex As Exception
 
-        End Try
+        'End Try
     End Sub
 
     Private Sub GridView5_CellValueChanged(sender As Object, e As CellValueChangedEventArgs) Handles GridView5.CellValueChanged

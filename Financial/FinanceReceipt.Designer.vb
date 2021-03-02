@@ -555,16 +555,12 @@ Partial Class FinanceReceipt
         Me.colChequeReceiptNo.Caption = "رقم القبض"
         Me.colChequeReceiptNo.FieldName = "ChequeReceiptNo"
         Me.colChequeReceiptNo.Name = "colChequeReceiptNo"
-        Me.colChequeReceiptNo.Visible = True
-        Me.colChequeReceiptNo.VisibleIndex = 6
         '
         'colID
         '
         Me.colID.Caption = "رقم"
         Me.colID.FieldName = "ID"
         Me.colID.Name = "colID"
-        Me.colID.Visible = True
-        Me.colID.VisibleIndex = 7
         '
         'SimpleButton17
         '
@@ -621,7 +617,7 @@ Partial Class FinanceReceipt
         Me.TextEditChequeNO.Location = New System.Drawing.Point(603, 601)
         Me.TextEditChequeNO.Name = "TextEditChequeNO"
         Me.TextEditChequeNO.Properties.ReadOnly = True
-        Me.TextEditChequeNO.Size = New System.Drawing.Size(432, 20)
+        Me.TextEditChequeNO.Size = New System.Drawing.Size(423, 20)
         Me.TextEditChequeNO.StyleController = Me.LayoutControl1
         Me.TextEditChequeNO.TabIndex = 27
         '
@@ -630,7 +626,7 @@ Partial Class FinanceReceipt
         Me.TextEditChequesTotal.Location = New System.Drawing.Point(12, 601)
         Me.TextEditChequesTotal.Name = "TextEditChequesTotal"
         Me.TextEditChequesTotal.Properties.ReadOnly = True
-        Me.TextEditChequesTotal.Size = New System.Drawing.Size(509, 20)
+        Me.TextEditChequesTotal.Size = New System.Drawing.Size(500, 20)
         Me.TextEditChequesTotal.StyleController = Me.LayoutControl1
         Me.TextEditChequesTotal.TabIndex = 28
         '
@@ -643,7 +639,7 @@ Partial Class FinanceReceipt
         Me.RecCurrRate.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
         Me.RecCurrRate.Properties.Appearance.Options.UseFont = True
         Me.RecCurrRate.Properties.Appearance.Options.UseForeColor = True
-        Me.RecCurrRate.Size = New System.Drawing.Size(159, 26)
+        Me.RecCurrRate.Size = New System.Drawing.Size(150, 26)
         Me.RecCurrRate.StyleController = Me.LayoutControl1
         Me.RecCurrRate.TabIndex = 5
         '
@@ -662,7 +658,7 @@ Partial Class FinanceReceipt
         Me.RecTotalSpinEdit.Properties.Appearance.Options.UseFont = True
         Me.RecTotalSpinEdit.Properties.Appearance.Options.UseForeColor = True
         Me.RecTotalSpinEdit.Properties.ReadOnly = True
-        Me.RecTotalSpinEdit.Size = New System.Drawing.Size(216, 26)
+        Me.RecTotalSpinEdit.Size = New System.Drawing.Size(207, 26)
         Me.RecTotalSpinEdit.StyleController = Me.LayoutControl1
         Me.RecTotalSpinEdit.TabIndex = 35
         '
@@ -675,7 +671,7 @@ Partial Class FinanceReceipt
         Me.RecOtherSpinEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
         Me.RecOtherSpinEdit.Properties.Appearance.Options.UseFont = True
         Me.RecOtherSpinEdit.Properties.Appearance.Options.UseForeColor = True
-        Me.RecOtherSpinEdit.Size = New System.Drawing.Size(208, 26)
+        Me.RecOtherSpinEdit.Size = New System.Drawing.Size(199, 26)
         Me.RecOtherSpinEdit.StyleController = Me.LayoutControl1
         Me.RecOtherSpinEdit.TabIndex = 8
         '
@@ -688,7 +684,7 @@ Partial Class FinanceReceipt
         Me.RecChequeSpinEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
         Me.RecChequeSpinEdit.Properties.Appearance.Options.UseFont = True
         Me.RecChequeSpinEdit.Properties.Appearance.Options.UseForeColor = True
-        Me.RecChequeSpinEdit.Size = New System.Drawing.Size(169, 26)
+        Me.RecChequeSpinEdit.Size = New System.Drawing.Size(160, 26)
         Me.RecChequeSpinEdit.StyleController = Me.LayoutControl1
         Me.RecChequeSpinEdit.TabIndex = 7
         '
@@ -701,7 +697,7 @@ Partial Class FinanceReceipt
         Me.RecCashSpinEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Blue
         Me.RecCashSpinEdit.Properties.Appearance.Options.UseFont = True
         Me.RecCashSpinEdit.Properties.Appearance.Options.UseForeColor = True
-        Me.RecCashSpinEdit.Size = New System.Drawing.Size(160, 26)
+        Me.RecCashSpinEdit.Size = New System.Drawing.Size(151, 26)
         Me.RecCashSpinEdit.StyleController = Me.LayoutControl1
         Me.RecCashSpinEdit.TabIndex = 6
         '
@@ -987,7 +983,7 @@ Partial Class FinanceReceipt
         Me.RecDateDateEdit.Properties.AutoHeight = False
         Me.RecDateDateEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RecDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RecDateDateEdit.Size = New System.Drawing.Size(277, 26)
+        Me.RecDateDateEdit.Size = New System.Drawing.Size(268, 26)
         Me.RecDateDateEdit.StyleController = Me.LayoutControl1
         Me.RecDateDateEdit.TabIndex = 1
         '
@@ -1008,7 +1004,7 @@ Partial Class FinanceReceipt
         Me.AmountInNisText.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
         Me.AmountInNisText.Properties.Mask.UseMaskAsDisplayFormat = True
         Me.AmountInNisText.Properties.ReadOnly = True
-        Me.AmountInNisText.Size = New System.Drawing.Size(207, 26)
+        Me.AmountInNisText.Size = New System.Drawing.Size(198, 26)
         Me.AmountInNisText.StyleController = Me.LayoutControl1
         Me.AmountInNisText.TabIndex = 23
         '
@@ -1047,7 +1043,7 @@ Partial Class FinanceReceipt
         Me.RecNOSpinEdit.Properties.Mask.BeepOnError = True
         Me.RecNOSpinEdit.Properties.Mask.EditMask = "d"
         Me.RecNOSpinEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.RecNOSpinEdit.Size = New System.Drawing.Size(164, 26)
+        Me.RecNOSpinEdit.Size = New System.Drawing.Size(155, 26)
         Me.RecNOSpinEdit.StyleController = Me.LayoutControl1
         Me.RecNOSpinEdit.TabIndex = 0
         '
@@ -1128,7 +1124,7 @@ Partial Class FinanceReceipt
         Me.RecCurrTextEdit.Properties.AutoHeight = False
         Me.RecCurrTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RecCurrTextEdit.Properties.Items.AddRange(New Object() {"شيكل", "دولار", "دينار", "يورو"})
-        Me.RecCurrTextEdit.Size = New System.Drawing.Size(218, 26)
+        Me.RecCurrTextEdit.Size = New System.Drawing.Size(209, 26)
         Me.RecCurrTextEdit.StyleController = Me.LayoutControl1
         Me.RecCurrTextEdit.TabIndex = 4
         '
@@ -1171,7 +1167,7 @@ Partial Class FinanceReceipt
         Me.RecCustNoTextEdit.Properties.NullText = ""
         Me.RecCustNoTextEdit.Properties.PopupView = Me.SearchLookUpEdit1View
         Me.RecCustNoTextEdit.Properties.ValueMember = "AccountKey"
-        Me.RecCustNoTextEdit.Size = New System.Drawing.Size(175, 26)
+        Me.RecCustNoTextEdit.Size = New System.Drawing.Size(166, 26)
         Me.RecCustNoTextEdit.StyleController = Me.LayoutControl1
         Me.RecCustNoTextEdit.TabIndex = 2
         '
@@ -2319,6 +2315,7 @@ Partial Class FinanceReceipt
         Me.TableAdapterManager.CardsTableAdapter = Nothing
         Me.TableAdapterManager.CardsTransTableAdapter = Nothing
         Me.TableAdapterManager.CarsAccidentTableAdapter = Nothing
+        Me.TableAdapterManager.CarsDriversTableAdapter = Nothing
         Me.TableAdapterManager.CarsInsurancCompaniesTableAdapter = Nothing
         Me.TableAdapterManager.CarsInsuranceTransTableAdapter = Nothing
         Me.TableAdapterManager.CarsMarkaTableAdapter = Nothing
@@ -2332,6 +2329,7 @@ Partial Class FinanceReceipt
         Me.TableAdapterManager.CRMCustomersOrdersTableAdapter = Nothing
         Me.TableAdapterManager.CRMJobNameTableAdapter = Nothing
         Me.TableAdapterManager.CRMTasksTableAdapter = Nothing
+        Me.TableAdapterManager.DATATableAdapter = Nothing
         Me.TableAdapterManager.DevelopNotesTableAdapter = Nothing
         Me.TableAdapterManager.EmployeesDataTableAdapter = Nothing
         Me.TableAdapterManager.FinancialBanksDocTableAdapter = Nothing

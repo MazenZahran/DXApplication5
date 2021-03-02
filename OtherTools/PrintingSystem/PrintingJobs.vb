@@ -269,10 +269,19 @@ Public Class PrintingJobs
                           FROM [CRM].[dbo].[PrintingSystemDocs] where DocID = " & CStr(JobDocNoTextEdit.EditValue)
             sql.CRMRunQuery(SqlString)
 
-            Dim FileLocation As String = "z:\PrintFile.pdf"
-            PdfViewer1.SaveDocument(FileLocation)
-            Dim File As String = FileLocation
-            Dim AttchName As String = sql.SQLDS.Tables(0).Rows(0).Item("DocName").ToString
+            Dim FileLocation As String = "0"
+            Dim File As String = "0"
+            Dim AttchName As String = "0"
+
+            Try
+                FileLocation = "z:\PrintFile.pdf"
+                PdfViewer1.SaveDocument(FileLocation)
+                File = FileLocation
+                AttchName = sql.SQLDS.Tables(0).Rows(0).Item("DocName").ToString
+            Catch ex As Exception
+
+            End Try
+
 
             If Not IsDBNull(sql.SQLDS.Tables(0).Rows(0).Item("DocColorNo")) Then DocColorNo = "عدد الالوان" & sql.SQLDS.Tables(0).Rows(0).Item("DocColorNo").ToString
             If Not IsDBNull(sql.SQLDS.Tables(0).Rows(0).Item("DocSize")) Then DocSize = "الحجم" & sql.SQLDS.Tables(0).Rows(0).Item("DocSize").ToString

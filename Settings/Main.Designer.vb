@@ -118,6 +118,19 @@
         Me.BarButtonItem77 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem78 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem79 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem80 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem81 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem82 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem83 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem84 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem85 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem86 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem87 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem88 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem89 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem90 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem91 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem92 = New DevExpress.XtraBars.BarButtonItem()
         Me.ribbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -137,6 +150,7 @@
         Me.RibbonPageGroup32 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup33 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup31 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup39 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage4 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup5 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup16 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -165,6 +179,9 @@
         Me.RibbonPage11 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup36 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup34 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup38 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup37 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup40 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -189,6 +206,7 @@
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.AlertControl1 = New DevExpress.XtraBars.Alerter.AlertControl(Me.components)
+        Me.BarButtonItem93 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -210,9 +228,9 @@
         '
         Me.ribbonControl1.Enabled = False
         Me.ribbonControl1.ExpandCollapseItem.Id = 0
-        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.ribbonControl1.SearchEditItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarDockingMenuItem1, Me.RibbonGalleryBarItem1, Me.BarButtonItem4, Me.BarButtonItem5, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarButtonItem10, Me.BarButtonItem11, Me.BarButtonItem12, Me.BarButtonItem13, Me.BarButtonItem14, Me.BarButtonItem15, Me.SkinRibbonGalleryBarItem1, Me.BarButtonItem16, Me.BarButtonItem17, Me.BarButtonItem18, Me.BarButtonItem19, Me.BarButtonItem20, Me.BarButtonItem21, Me.BarButtonItem22, Me.BarButtonItem23, Me.BarButtonItem24, Me.BarStaticItem1, Me.BarEditItem1, Me.BarButtonItem25, Me.BarButtonItem26, Me.BarButtonItem27, Me.BarButtonItem28, Me.BarButtonItem29, Me.BarButtonItem30, Me.BarButtonItem31, Me.BarButtonItem32, Me.BarButtonItem33, Me.BarButtonItem34, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonGroup1, Me.BarButtonItem39, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem45, Me.BarButtonItem46, Me.BarButtonItem47, Me.BarButtonItem48, Me.BarButtonItem49, Me.BarButtonItem50, Me.BarButtonItem51, Me.BarButtonItem52, Me.BarButtonItem53, Me.BarButtonItem54, Me.BarButtonItem55, Me.BarButtonItem56, Me.BarButtonItem57, Me.BarButtonItem58, Me.BarButtonItem60, Me.BarButtonItem61, Me.BarButtonItem62, Me.BarButtonItem63, Me.BarButtonItem59, Me.BarButtonItem64, Me.BarButtonItem65, Me.BarButtonItem66, Me.BarButtonItem67, Me.BarButtonItem68, Me.BarButtonItem69, Me.BarButtonItem70, Me.BarButtonItem71, Me.BarButtonItem72, Me.BarButtonItem73, Me.BarButtonItem74, Me.BarButtonItem75, Me.BarButtonItem76, Me.BarButtonItem77, Me.BarButtonItem78, Me.BarButtonItem79})
+        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.ribbonControl1.SearchEditItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarDockingMenuItem1, Me.RibbonGalleryBarItem1, Me.BarButtonItem4, Me.BarButtonItem5, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarButtonItem10, Me.BarButtonItem11, Me.BarButtonItem12, Me.BarButtonItem13, Me.BarButtonItem14, Me.BarButtonItem15, Me.SkinRibbonGalleryBarItem1, Me.BarButtonItem16, Me.BarButtonItem17, Me.BarButtonItem18, Me.BarButtonItem19, Me.BarButtonItem20, Me.BarButtonItem21, Me.BarButtonItem22, Me.BarButtonItem23, Me.BarButtonItem24, Me.BarStaticItem1, Me.BarEditItem1, Me.BarButtonItem25, Me.BarButtonItem26, Me.BarButtonItem27, Me.BarButtonItem28, Me.BarButtonItem29, Me.BarButtonItem30, Me.BarButtonItem31, Me.BarButtonItem32, Me.BarButtonItem33, Me.BarButtonItem34, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonGroup1, Me.BarButtonItem39, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem45, Me.BarButtonItem46, Me.BarButtonItem47, Me.BarButtonItem48, Me.BarButtonItem49, Me.BarButtonItem50, Me.BarButtonItem51, Me.BarButtonItem52, Me.BarButtonItem53, Me.BarButtonItem54, Me.BarButtonItem55, Me.BarButtonItem56, Me.BarButtonItem57, Me.BarButtonItem58, Me.BarButtonItem60, Me.BarButtonItem61, Me.BarButtonItem62, Me.BarButtonItem63, Me.BarButtonItem59, Me.BarButtonItem64, Me.BarButtonItem65, Me.BarButtonItem66, Me.BarButtonItem67, Me.BarButtonItem68, Me.BarButtonItem69, Me.BarButtonItem70, Me.BarButtonItem71, Me.BarButtonItem72, Me.BarButtonItem73, Me.BarButtonItem74, Me.BarButtonItem75, Me.BarButtonItem76, Me.BarButtonItem77, Me.BarButtonItem78, Me.BarButtonItem79, Me.BarButtonItem80, Me.BarButtonItem81, Me.BarButtonItem82, Me.BarButtonItem83, Me.BarButtonItem84, Me.BarButtonItem85, Me.BarButtonItem86, Me.BarButtonItem87, Me.BarButtonItem88, Me.BarButtonItem89, Me.BarButtonItem90, Me.BarButtonItem91, Me.BarButtonItem92, Me.BarButtonItem93})
         Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.ribbonControl1.MaxItemId = 77
+        Me.ribbonControl1.MaxItemId = 91
         Me.ribbonControl1.Name = "ribbonControl1"
         Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarButtonItem2)
         Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.ribbonPage1, Me.RibbonPage2, Me.RibbonPage3, Me.RibbonPage10, Me.RibbonPage4, Me.RibbonPage5, Me.RibbonPage8, Me.RibbonPage6, Me.RibbonPage7, Me.RibbonPage11})
@@ -867,6 +885,99 @@
         Me.BarButtonItem79.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem79.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.BarButtonItem79.Name = "BarButtonItem79"
         '
+        'BarButtonItem80
+        '
+        Me.BarButtonItem80.Caption = "اصدار فواتير"
+        Me.BarButtonItem80.Id = 77
+        Me.BarButtonItem80.ImageOptions.Image = CType(resources.GetObject("BarButtonItem80.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem80.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem80.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BarButtonItem80.Name = "BarButtonItem80"
+        '
+        'BarButtonItem81
+        '
+        Me.BarButtonItem81.Caption = "استعلام الفواتير"
+        Me.BarButtonItem81.Id = 78
+        Me.BarButtonItem81.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem81.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BarButtonItem81.Name = "BarButtonItem81"
+        '
+        'BarButtonItem82
+        '
+        Me.BarButtonItem82.Caption = "سحوبات زبون"
+        Me.BarButtonItem82.Id = 79
+        Me.BarButtonItem82.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem82.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BarButtonItem82.Name = "BarButtonItem82"
+        '
+        'BarButtonItem83
+        '
+        Me.BarButtonItem83.Caption = "اصدار فاتورة"
+        Me.BarButtonItem83.Id = 80
+        Me.BarButtonItem83.ImageOptions.Image = CType(resources.GetObject("BarButtonItem83.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem83.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem83.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BarButtonItem83.Name = "BarButtonItem83"
+        '
+        'BarButtonItem84
+        '
+        Me.BarButtonItem84.Caption = "BarButtonItem84"
+        Me.BarButtonItem84.Id = 81
+        Me.BarButtonItem84.Name = "BarButtonItem84"
+        '
+        'BarButtonItem85
+        '
+        Me.BarButtonItem85.Caption = "تجهيز الفواتير للضريبة"
+        Me.BarButtonItem85.Id = 82
+        Me.BarButtonItem85.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem85.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BarButtonItem85.Name = "BarButtonItem85"
+        '
+        'BarButtonItem86
+        '
+        Me.BarButtonItem86.Caption = "بطاقات زبون"
+        Me.BarButtonItem86.Id = 83
+        Me.BarButtonItem86.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem86.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BarButtonItem86.Name = "BarButtonItem86"
+        '
+        'BarButtonItem87
+        '
+        Me.BarButtonItem87.Caption = "المبيعات حسب التصنيف"
+        Me.BarButtonItem87.Id = 84
+        Me.BarButtonItem87.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem87.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BarButtonItem87.Name = "BarButtonItem87"
+        '
+        'BarButtonItem88
+        '
+        Me.BarButtonItem88.Caption = "ارصدة الاصناف بالمحطات"
+        Me.BarButtonItem88.Id = 85
+        Me.BarButtonItem88.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem88.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BarButtonItem88.Name = "BarButtonItem88"
+        '
+        'BarButtonItem89
+        '
+        Me.BarButtonItem89.Caption = "خصومات الغسيل"
+        Me.BarButtonItem89.Id = 86
+        Me.BarButtonItem89.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem89.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BarButtonItem89.Name = "BarButtonItem89"
+        '
+        'BarButtonItem90
+        '
+        Me.BarButtonItem90.Caption = "تجهيز ملف الداتا"
+        Me.BarButtonItem90.Id = 87
+        Me.BarButtonItem90.ImageOptions.Image = CType(resources.GetObject("BarButtonItem90.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem90.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem90.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BarButtonItem90.Name = "BarButtonItem90"
+        '
+        'BarButtonItem91
+        '
+        Me.BarButtonItem91.Caption = "كشف ارصدة تحليلي"
+        Me.BarButtonItem91.Id = 88
+        Me.BarButtonItem91.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem91.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BarButtonItem91.Name = "BarButtonItem91"
+        '
+        'BarButtonItem92
+        '
+        Me.BarButtonItem92.Caption = "كشف ارصدة تحليلي اجمالي"
+        Me.BarButtonItem92.Id = 89
+        Me.BarButtonItem92.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem92.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BarButtonItem92.Name = "BarButtonItem92"
+        '
         'ribbonPage1
         '
         Me.ribbonPage1.ImageOptions.Image = CType(resources.GetObject("ribbonPage1.ImageOptions.Image"), System.Drawing.Image)
@@ -893,6 +1004,7 @@
         Me.RibbonPageGroup9.ItemLinks.Add(Me.BarButtonItem2)
         Me.RibbonPageGroup9.ItemLinks.Add(Me.BarButtonItem3)
         Me.RibbonPageGroup9.ItemLinks.Add(Me.BarButtonItem61)
+        Me.RibbonPageGroup9.ItemLinks.Add(Me.BarButtonItem86)
         Me.RibbonPageGroup9.Name = "RibbonPageGroup9"
         '
         'RibbonPageGroup26
@@ -959,7 +1071,7 @@
         '
         'RibbonPage10
         '
-        Me.RibbonPage10.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup30, Me.RibbonPageGroup32, Me.RibbonPageGroup33, Me.RibbonPageGroup31})
+        Me.RibbonPage10.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup30, Me.RibbonPageGroup32, Me.RibbonPageGroup33, Me.RibbonPageGroup31, Me.RibbonPageGroup39})
         Me.RibbonPage10.ImageOptions.Image = CType(resources.GetObject("RibbonPage10.ImageOptions.Image"), System.Drawing.Image)
         Me.RibbonPage10.Name = "RibbonPage10"
         Me.RibbonPage10.Text = "المخزون"
@@ -991,7 +1103,12 @@
         Me.RibbonPageGroup31.ItemLinks.Add(Me.BarButtonItem68)
         Me.RibbonPageGroup31.Name = "RibbonPageGroup31"
         Me.RibbonPageGroup31.Text = "تقارير النظام"
-        Me.RibbonPageGroup31.Visible = False
+        '
+        'RibbonPageGroup39
+        '
+        Me.RibbonPageGroup39.ItemLinks.Add(Me.BarButtonItem88)
+        Me.RibbonPageGroup39.Name = "RibbonPageGroup39"
+        Me.RibbonPageGroup39.Text = "اورباك المحطات"
         '
         'RibbonPage4
         '
@@ -1041,6 +1158,7 @@
         '
         Me.RibbonPageGroup27.ItemLinks.Add(Me.BarButtonItem34)
         Me.RibbonPageGroup27.ItemLinks.Add(Me.BarButtonItem37)
+        Me.RibbonPageGroup27.ItemLinks.Add(Me.BarButtonItem87)
         Me.RibbonPageGroup27.Name = "RibbonPageGroup27"
         Me.RibbonPageGroup27.Text = "استعلام"
         '
@@ -1049,6 +1167,9 @@
         Me.RibbonPageGroup28.ItemLinks.Add(Me.BarButtonItem31)
         Me.RibbonPageGroup28.ItemLinks.Add(Me.BarButtonItem35)
         Me.RibbonPageGroup28.ItemLinks.Add(Me.BarButtonItem33)
+        Me.RibbonPageGroup28.ItemLinks.Add(Me.BarButtonItem89)
+        Me.RibbonPageGroup28.ItemLinks.Add(Me.BarButtonItem91)
+        Me.RibbonPageGroup28.ItemLinks.Add(Me.BarButtonItem92)
         Me.RibbonPageGroup28.Name = "RibbonPageGroup28"
         Me.RibbonPageGroup28.Text = "الحسابات"
         '
@@ -1161,10 +1282,11 @@
         '
         Me.RibbonPageGroup19.ItemLinks.Add(Me.BarButtonItem14)
         Me.RibbonPageGroup19.Name = "RibbonPageGroup19"
+        Me.RibbonPageGroup19.Visible = False
         '
         'RibbonPage11
         '
-        Me.RibbonPage11.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup36, Me.RibbonPageGroup34})
+        Me.RibbonPage11.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup36, Me.RibbonPageGroup34, Me.RibbonPageGroup38, Me.RibbonPageGroup37, Me.RibbonPageGroup40})
         Me.RibbonPage11.Name = "RibbonPage11"
         Me.RibbonPage11.Text = "Lite"
         '
@@ -1177,7 +1299,29 @@
         '
         Me.RibbonPageGroup34.ItemLinks.Add(Me.BarButtonItem75)
         Me.RibbonPageGroup34.ItemLinks.Add(Me.BarButtonItem76)
+        Me.RibbonPageGroup34.ItemLinks.Add(Me.BarButtonItem82)
         Me.RibbonPageGroup34.Name = "RibbonPageGroup34"
+        '
+        'RibbonPageGroup38
+        '
+        Me.RibbonPageGroup38.ItemLinks.Add(Me.BarButtonItem83)
+        Me.RibbonPageGroup38.ItemLinks.Add(Me.BarButtonItem80)
+        Me.RibbonPageGroup38.Name = "RibbonPageGroup38"
+        Me.RibbonPageGroup38.Text = "اصدار فواتير"
+        '
+        'RibbonPageGroup37
+        '
+        Me.RibbonPageGroup37.ItemLinks.Add(Me.BarButtonItem81)
+        Me.RibbonPageGroup37.ItemLinks.Add(Me.BarButtonItem85)
+        Me.RibbonPageGroup37.ItemLinks.Add(Me.BarButtonItem93)
+        Me.RibbonPageGroup37.Name = "RibbonPageGroup37"
+        Me.RibbonPageGroup37.Text = "التقارير"
+        '
+        'RibbonPageGroup40
+        '
+        Me.RibbonPageGroup40.ItemLinks.Add(Me.BarButtonItem90)
+        Me.RibbonPageGroup40.Name = "RibbonPageGroup40"
+        Me.RibbonPageGroup40.Text = "تجهيز الداتا"
         '
         'ContextMenuStrip1
         '
@@ -1421,6 +1565,13 @@
         Me.AlertControl1.Buttons.Add(AlertButton1)
         Me.AlertControl1.FormMaxCount = 5
         '
+        'BarButtonItem93
+        '
+        Me.BarButtonItem93.Caption = "تدقيق الفواتير"
+        Me.BarButtonItem93.Id = 90
+        Me.BarButtonItem93.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem93.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BarButtonItem93.Name = "BarButtonItem93"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1437,7 +1588,7 @@
         Me.Ribbon = Me.ribbonControl1
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RightToLeftLayout = True
-        Me.Text = "CRM Alhuda Groups"
+        Me.Text = "Alhuda Group"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1615,4 +1766,22 @@
     Friend WithEvents BarButtonItem78 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup36 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents BarButtonItem79 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem80 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup37 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents BarButtonItem81 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem82 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem83 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup38 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents BarButtonItem84 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem85 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem86 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem87 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem88 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup39 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents BarButtonItem89 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem90 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup40 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents BarButtonItem91 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem92 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem93 As DevExpress.XtraBars.BarButtonItem
 End Class

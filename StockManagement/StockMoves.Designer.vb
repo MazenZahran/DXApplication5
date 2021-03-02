@@ -21,6 +21,9 @@ Partial Class StockMoves
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StockMoves))
+        Dim GridFormatRule1 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleValue1 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
+        Me.ColStockBalance = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.SearchSalesPerson = New DevExpress.XtraEditors.SearchLookUpEdit()
@@ -81,7 +84,6 @@ Partial Class StockMoves
         Me.colStockName = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colInputUser = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colInputDateTime = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ColStockBalance = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colAccountMobile = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colAccountAddress = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colDocManualNo = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -213,6 +215,15 @@ Partial Class StockMoves
         CType(Me.StockMoveDocSort1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'ColStockBalance
+        '
+        Me.ColStockBalance.Caption = "الرصيد"
+        Me.ColStockBalance.FieldName = "StockBalance"
+        Me.ColStockBalance.Name = "ColStockBalance"
+        Me.ColStockBalance.UnboundType = DevExpress.Data.UnboundColumnType.[Integer]
+        Me.ColStockBalance.Visible = True
+        Me.ColStockBalance.VisibleIndex = 6
+        '
         'DockManager1
         '
         Me.DockManager1.Form = Me
@@ -259,20 +270,20 @@ Partial Class StockMoves
         Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(836, 532)
+        Me.LayoutControl1.Size = New System.Drawing.Size(838, 534)
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
         '
         'SearchSalesPerson
         '
-        Me.SearchSalesPerson.Location = New System.Drawing.Point(552, 108)
+        Me.SearchSalesPerson.Location = New System.Drawing.Point(553, 108)
         Me.SearchSalesPerson.Name = "SearchSalesPerson"
         Me.SearchSalesPerson.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.SearchSalesPerson.Properties.DisplayMember = "FullName"
         Me.SearchSalesPerson.Properties.NullText = ""
         Me.SearchSalesPerson.Properties.PopupView = Me.GridView3
         Me.SearchSalesPerson.Properties.ValueMember = "AccountKey"
-        Me.SearchSalesPerson.Size = New System.Drawing.Size(197, 20)
+        Me.SearchSalesPerson.Size = New System.Drawing.Size(198, 20)
         Me.SearchSalesPerson.StyleController = Me.LayoutControl1
         Me.SearchSalesPerson.TabIndex = 30
         '
@@ -330,7 +341,7 @@ Partial Class StockMoves
         '
         'DocStatusLabel
         '
-        Me.DocStatusLabel.Location = New System.Drawing.Point(12, 500)
+        Me.DocStatusLabel.Location = New System.Drawing.Point(12, 502)
         Me.DocStatusLabel.Name = "DocStatusLabel"
         Me.DocStatusLabel.Properties.ReadOnly = True
         Me.DocStatusLabel.Size = New System.Drawing.Size(68, 20)
@@ -359,14 +370,14 @@ Partial Class StockMoves
         Me.TextAccAddress.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.TextAccAddress.Properties.AppearanceFocused.Options.UseBackColor = True
         Me.TextAccAddress.Properties.AppearanceFocused.Options.UseBorderColor = True
-        Me.TextAccAddress.Size = New System.Drawing.Size(203, 20)
+        Me.TextAccAddress.Size = New System.Drawing.Size(204, 20)
         Me.TextAccAddress.StyleController = Me.LayoutControl1
         Me.TextAccAddress.TabIndex = 9
         '
         'SimpleButton2
         '
         Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton2.Location = New System.Drawing.Point(12, 474)
+        Me.SimpleButton2.Location = New System.Drawing.Point(12, 476)
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(68, 22)
         Me.SimpleButton2.StyleController = Me.LayoutControl1
@@ -376,7 +387,7 @@ Partial Class StockMoves
         'SimpleButton1
         '
         Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(84, 474)
+        Me.SimpleButton1.Location = New System.Drawing.Point(84, 476)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(65, 22)
         Me.SimpleButton1.StyleController = Me.LayoutControl1
@@ -385,7 +396,7 @@ Partial Class StockMoves
         '
         'DocStatus
         '
-        Me.DocStatus.Location = New System.Drawing.Point(84, 500)
+        Me.DocStatus.Location = New System.Drawing.Point(84, 502)
         Me.DocStatus.Name = "DocStatus"
         Me.DocStatus.Properties.ReadOnly = True
         Me.DocStatus.Size = New System.Drawing.Size(69, 20)
@@ -394,7 +405,7 @@ Partial Class StockMoves
         '
         'DebitAcc
         '
-        Me.DebitAcc.Location = New System.Drawing.Point(577, 84)
+        Me.DebitAcc.Location = New System.Drawing.Point(578, 84)
         Me.DebitAcc.Name = "DebitAcc"
         Me.DebitAcc.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DebitAcc.Properties.AppearanceFocused.BackColor2 = System.Drawing.Color.White
@@ -406,7 +417,7 @@ Partial Class StockMoves
         Me.DebitAcc.Properties.NullText = ""
         Me.DebitAcc.Properties.PopupView = Me.SearchLookUpEdit1View
         Me.DebitAcc.Properties.ValueMember = "AccountKey"
-        Me.DebitAcc.Size = New System.Drawing.Size(172, 20)
+        Me.DebitAcc.Size = New System.Drawing.Size(173, 20)
         Me.DebitAcc.StyleController = Me.LayoutControl1
         Me.DebitAcc.TabIndex = 3
         '
@@ -419,7 +430,7 @@ Partial Class StockMoves
         '
         'InputDateTime
         '
-        Me.InputDateTime.Location = New System.Drawing.Point(157, 500)
+        Me.InputDateTime.Location = New System.Drawing.Point(157, 502)
         Me.InputDateTime.Name = "InputDateTime"
         Me.InputDateTime.Properties.ReadOnly = True
         Me.InputDateTime.Size = New System.Drawing.Size(139, 20)
@@ -440,7 +451,7 @@ Partial Class StockMoves
         Me.CredAcc.Properties.NullText = ""
         Me.CredAcc.Properties.PopupView = Me.GridView2
         Me.CredAcc.Properties.ValueMember = "AccountKey"
-        Me.CredAcc.Size = New System.Drawing.Size(173, 20)
+        Me.CredAcc.Size = New System.Drawing.Size(174, 20)
         Me.CredAcc.StyleController = Me.LayoutControl1
         Me.CredAcc.TabIndex = 4
         '
@@ -453,7 +464,7 @@ Partial Class StockMoves
         '
         'DocNewOld
         '
-        Me.DocNewOld.Location = New System.Drawing.Point(488, 500)
+        Me.DocNewOld.Location = New System.Drawing.Point(489, 502)
         Me.DocNewOld.Name = "DocNewOld"
         Me.DocNewOld.Properties.ReadOnly = True
         Me.DocNewOld.Size = New System.Drawing.Size(155, 20)
@@ -463,27 +474,27 @@ Partial Class StockMoves
         'DocCurrency
         '
         Me.DocCurrency.EditValue = "NIS"
-        Me.DocCurrency.Location = New System.Drawing.Point(300, 500)
+        Me.DocCurrency.Location = New System.Drawing.Point(300, 502)
         Me.DocCurrency.Name = "DocCurrency"
         Me.DocCurrency.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DocCurrency.Properties.Items.AddRange(New Object() {"NIS", "USD", "JD"})
         Me.DocCurrency.Properties.ReadOnly = True
-        Me.DocCurrency.Size = New System.Drawing.Size(184, 20)
+        Me.DocCurrency.Size = New System.Drawing.Size(185, 20)
         Me.DocCurrency.StyleController = Me.LayoutControl1
         Me.DocCurrency.TabIndex = 2
         '
         'Notes
         '
-        Me.Notes.Location = New System.Drawing.Point(12, 411)
+        Me.Notes.Location = New System.Drawing.Point(12, 412)
         Me.Notes.Name = "Notes"
-        Me.Notes.Size = New System.Drawing.Size(812, 59)
+        Me.Notes.Size = New System.Drawing.Size(814, 60)
         Me.Notes.StyleController = Me.LayoutControl1
         Me.Notes.TabIndex = 2
         '
         'SearchFromWarehouse
         '
         Me.SearchFromWarehouse.EditValue = ""
-        Me.SearchFromWarehouse.Location = New System.Drawing.Point(557, 132)
+        Me.SearchFromWarehouse.Location = New System.Drawing.Point(558, 132)
         Me.SearchFromWarehouse.Name = "SearchFromWarehouse"
         Me.SearchFromWarehouse.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.SearchFromWarehouse.Properties.AppearanceFocused.BackColor2 = System.Drawing.Color.White
@@ -495,7 +506,7 @@ Partial Class StockMoves
         Me.SearchFromWarehouse.Properties.NullText = ""
         Me.SearchFromWarehouse.Properties.PopupView = Me.SearchLookUpEdit2View
         Me.SearchFromWarehouse.Properties.ValueMember = "NameID"
-        Me.SearchFromWarehouse.Size = New System.Drawing.Size(192, 20)
+        Me.SearchFromWarehouse.Size = New System.Drawing.Size(193, 20)
         Me.SearchFromWarehouse.StyleController = Me.LayoutControl1
         Me.SearchFromWarehouse.TabIndex = 6
         '
@@ -537,7 +548,7 @@ Partial Class StockMoves
         Me.SearchToWarehouse.Properties.NullText = ""
         Me.SearchToWarehouse.Properties.PopupView = Me.SearchLookUpEdit3View
         Me.SearchToWarehouse.Properties.ValueMember = "NameID"
-        Me.SearchToWarehouse.Size = New System.Drawing.Size(169, 20)
+        Me.SearchToWarehouse.Size = New System.Drawing.Size(170, 20)
         Me.SearchToWarehouse.StyleController = Me.LayoutControl1
         Me.SearchToWarehouse.TabIndex = 7
         '
@@ -550,10 +561,10 @@ Partial Class StockMoves
         '
         'InputUser
         '
-        Me.InputUser.Location = New System.Drawing.Point(647, 500)
+        Me.InputUser.Location = New System.Drawing.Point(648, 502)
         Me.InputUser.Name = "InputUser"
         Me.InputUser.Properties.ReadOnly = True
-        Me.InputUser.Size = New System.Drawing.Size(177, 20)
+        Me.InputUser.Size = New System.Drawing.Size(178, 20)
         Me.InputUser.StyleController = Me.LayoutControl1
         Me.InputUser.TabIndex = 0
         '
@@ -573,7 +584,7 @@ Partial Class StockMoves
         Me.StockMoveGridControl.MainView = Me.GridView1
         Me.StockMoveGridControl.Name = "StockMoveGridControl"
         Me.StockMoveGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItem})
-        Me.StockMoveGridControl.Size = New System.Drawing.Size(812, 227)
+        Me.StockMoveGridControl.Size = New System.Drawing.Size(814, 228)
         Me.StockMoveGridControl.TabIndex = 0
         Me.StockMoveGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -590,6 +601,18 @@ Partial Class StockMoves
         'GridView1
         '
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID, Me.colDocID, Me.colDocDate, Me.colDocType, Me.colDocStatus, Me.colDocCurrency, Me.colDebitAcc, Me.colCredAcc, Me.colStockID, Me.colQuantity, Me.colItemPrice, Me.colAmount, Me.colUnit, Me.colDebitWhereHouse, Me.colCreditWhereHouse, Me.colNotes, Me.colReferance, Me.colStockName, Me.colInputUser, Me.colInputDateTime, Me.ColStockBalance, Me.colAccountMobile, Me.colAccountAddress, Me.colDocManualNo, Me.colDocSort, Me.colDriver, Me.ColDiff, Me.colCarNo, Me.ColSalesPerson})
+        GridFormatRule1.ApplyToRow = True
+        GridFormatRule1.Column = Me.ColStockBalance
+        GridFormatRule1.ColumnApplyTo = Me.ColStockBalance
+        GridFormatRule1.Name = "Format0"
+        FormatConditionRuleValue1.AllowAnimation = DevExpress.Utils.DefaultBoolean.[True]
+        FormatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        FormatConditionRuleValue1.Appearance.Options.UseBackColor = True
+        FormatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.LessOrEqual
+        FormatConditionRuleValue1.PredefinedName = "Red Fill"
+        FormatConditionRuleValue1.Value1 = New Decimal(New Integer() {0, 0, 0, 0})
+        GridFormatRule1.Rule = FormatConditionRuleValue1
+        Me.GridView1.FormatRules.Add(GridFormatRule1)
         Me.GridView1.GridControl = Me.StockMoveGridControl
         Me.GridView1.IndicatorWidth = 25
         Me.GridView1.Name = "GridView1"
@@ -763,15 +786,6 @@ Partial Class StockMoves
         Me.colInputDateTime.FieldName = "InputDateTime"
         Me.colInputDateTime.Name = "colInputDateTime"
         '
-        'ColStockBalance
-        '
-        Me.ColStockBalance.Caption = "الرصيد"
-        Me.ColStockBalance.FieldName = "StockBalance"
-        Me.ColStockBalance.Name = "ColStockBalance"
-        Me.ColStockBalance.UnboundType = DevExpress.Data.UnboundColumnType.[Integer]
-        Me.ColStockBalance.Visible = True
-        Me.ColStockBalance.VisibleIndex = 6
-        '
         'colAccountMobile
         '
         Me.colAccountMobile.FieldName = "AccountMobile"
@@ -818,7 +832,7 @@ Partial Class StockMoves
         '
         'DocID
         '
-        Me.DocID.Location = New System.Drawing.Point(644, 60)
+        Me.DocID.Location = New System.Drawing.Point(646, 60)
         Me.DocID.Name = "DocID"
         Me.DocID.Properties.ReadOnly = True
         Me.DocID.Size = New System.Drawing.Size(105, 20)
@@ -832,7 +846,7 @@ Partial Class StockMoves
         Me.DocDate.Name = "DocDate"
         Me.DocDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DocDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DocDate.Size = New System.Drawing.Size(154, 20)
+        Me.DocDate.Size = New System.Drawing.Size(155, 20)
         Me.DocDate.StyleController = Me.LayoutControl1
         Me.DocDate.TabIndex = 2
         '
@@ -842,14 +856,14 @@ Partial Class StockMoves
         Me.DocType.Name = "DocType"
         Me.DocType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DocType.Properties.Items.AddRange(New Object() {"SalesDelivery", "PurchaseDelivery", "SalesVoucher", "PurchaseVoucher", "SalesReturn", "PurchaseReturn", "Transfer", "Jard"})
-        Me.DocType.Size = New System.Drawing.Size(737, 20)
+        Me.DocType.Size = New System.Drawing.Size(739, 20)
         Me.DocType.StyleController = Me.LayoutControl1
         Me.DocType.TabIndex = 0
         Me.DocType.Visible = False
         '
         'DocSortTextEdit
         '
-        Me.DocSortTextEdit.Location = New System.Drawing.Point(595, 36)
+        Me.DocSortTextEdit.Location = New System.Drawing.Point(596, 36)
         Me.DocSortTextEdit.Name = "DocSortTextEdit"
         Me.DocSortTextEdit.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Gainsboro
         Me.DocSortTextEdit.Properties.AppearanceFocused.BackColor2 = System.Drawing.Color.White
@@ -861,7 +875,7 @@ Partial Class StockMoves
         Me.DocSortTextEdit.Properties.DisplayMember = "StockMoveDocSort1"
         Me.DocSortTextEdit.Properties.NullText = ""
         Me.DocSortTextEdit.Properties.ValueMember = "Book"
-        Me.DocSortTextEdit.Size = New System.Drawing.Size(154, 20)
+        Me.DocSortTextEdit.Size = New System.Drawing.Size(155, 20)
         Me.DocSortTextEdit.StyleController = Me.LayoutControl1
         Me.DocSortTextEdit.TabIndex = 26
         '
@@ -876,7 +890,7 @@ Partial Class StockMoves
         Me.LayoutControlGroup1.GroupBordersVisible = False
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem4, Me.searchwarehousefrom, Me.SearchWarehouseTo, Me.EmptySpaceItem2, Me.LayoutControlItemDocType, Me.EmptySpaceItem3, Me.LayoutControlItem5, Me.SearchVendors, Me.SearchCustomers, Me.LayoutControlItem3, Me.LayoutControlItem7, Me.LayoutControlItem6, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem11, Me.LayoutControlItem12, Me.LayoutControlItem10, Me.EmptySpaceItem4, Me.EmptySpaceItem5, Me.LayoutControlItem13, Me.LayoutControlItem15, Me.LayoutControlItem14, Me.EmptySpaceItem6, Me.LayoutControlItem16, Me.LayoutControlItem17, Me.LayoutControlItem18, Me.LayoutControlItem19, Me.EmptySpaceItem7, Me.EmptySpaceItem8, Me.LayoutControlItem2, Me.LayoutControlItem20, Me.LayoutControlItem21})
         Me.LayoutControlGroup1.Name = "Root"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(836, 532)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(838, 534)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem1
@@ -884,14 +898,14 @@ Partial Class StockMoves
         Me.LayoutControlItem1.Control = Me.DocDate
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(233, 24)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(234, 24)
         Me.LayoutControlItem1.Text = "التاريخ"
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(72, 13)
         '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.DocID
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(632, 48)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(634, 48)
         Me.LayoutControlItem4.MinSize = New System.Drawing.Size(129, 24)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
         Me.LayoutControlItem4.Size = New System.Drawing.Size(184, 24)
@@ -904,17 +918,17 @@ Partial Class StockMoves
         Me.searchwarehousefrom.Control = Me.SearchToWarehouse
         Me.searchwarehousefrom.Location = New System.Drawing.Point(297, 120)
         Me.searchwarehousefrom.Name = "searchwarehousefrom"
-        Me.searchwarehousefrom.Size = New System.Drawing.Size(248, 24)
+        Me.searchwarehousefrom.Size = New System.Drawing.Size(249, 24)
         Me.searchwarehousefrom.Text = "الى مستودع"
         Me.searchwarehousefrom.TextSize = New System.Drawing.Size(72, 13)
         '
         'SearchWarehouseTo
         '
         Me.SearchWarehouseTo.Control = Me.SearchFromWarehouse
-        Me.SearchWarehouseTo.Location = New System.Drawing.Point(545, 120)
+        Me.SearchWarehouseTo.Location = New System.Drawing.Point(546, 120)
         Me.SearchWarehouseTo.MinSize = New System.Drawing.Size(129, 24)
         Me.SearchWarehouseTo.Name = "SearchWarehouseTo"
-        Me.SearchWarehouseTo.Size = New System.Drawing.Size(271, 24)
+        Me.SearchWarehouseTo.Size = New System.Drawing.Size(272, 24)
         Me.SearchWarehouseTo.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.SearchWarehouseTo.Text = "من مستودع"
         Me.SearchWarehouseTo.TextSize = New System.Drawing.Size(72, 13)
@@ -933,7 +947,7 @@ Partial Class StockMoves
         Me.LayoutControlItemDocType.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItemDocType.MinSize = New System.Drawing.Size(129, 24)
         Me.LayoutControlItemDocType.Name = "LayoutControlItemDocType"
-        Me.LayoutControlItemDocType.Size = New System.Drawing.Size(816, 24)
+        Me.LayoutControlItemDocType.Size = New System.Drawing.Size(818, 24)
         Me.LayoutControlItemDocType.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItemDocType.Text = "نوع السند"
         Me.LayoutControlItemDocType.TextSize = New System.Drawing.Size(72, 13)
@@ -941,10 +955,10 @@ Partial Class StockMoves
         'EmptySpaceItem3
         '
         Me.EmptySpaceItem3.AllowHotTrack = False
-        Me.EmptySpaceItem3.Location = New System.Drawing.Point(233, 48)
+        Me.EmptySpaceItem3.Location = New System.Drawing.Point(234, 48)
         Me.EmptySpaceItem3.MinSize = New System.Drawing.Size(104, 24)
         Me.EmptySpaceItem3.Name = "EmptySpaceItem3"
-        Me.EmptySpaceItem3.Size = New System.Drawing.Size(399, 24)
+        Me.EmptySpaceItem3.Size = New System.Drawing.Size(400, 24)
         Me.EmptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.EmptySpaceItem3.TextSize = New System.Drawing.Size(0, 0)
         '
@@ -962,17 +976,17 @@ Partial Class StockMoves
         Me.SearchVendors.Control = Me.CredAcc
         Me.SearchVendors.Location = New System.Drawing.Point(313, 72)
         Me.SearchVendors.Name = "SearchVendors"
-        Me.SearchVendors.Size = New System.Drawing.Size(252, 24)
+        Me.SearchVendors.Size = New System.Drawing.Size(253, 24)
         Me.SearchVendors.Text = "المورد"
         Me.SearchVendors.TextSize = New System.Drawing.Size(72, 13)
         '
         'SearchCustomers
         '
         Me.SearchCustomers.Control = Me.DebitAcc
-        Me.SearchCustomers.Location = New System.Drawing.Point(565, 72)
+        Me.SearchCustomers.Location = New System.Drawing.Point(566, 72)
         Me.SearchCustomers.MinSize = New System.Drawing.Size(129, 24)
         Me.SearchCustomers.Name = "SearchCustomers"
-        Me.SearchCustomers.Size = New System.Drawing.Size(251, 24)
+        Me.SearchCustomers.Size = New System.Drawing.Size(252, 24)
         Me.SearchCustomers.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.SearchCustomers.Text = "الزبون"
         Me.SearchCustomers.TextSize = New System.Drawing.Size(72, 13)
@@ -983,7 +997,7 @@ Partial Class StockMoves
         Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 168)
         Me.LayoutControlItem3.MinSize = New System.Drawing.Size(104, 24)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(816, 231)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(818, 232)
         Me.LayoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
@@ -991,10 +1005,10 @@ Partial Class StockMoves
         'LayoutControlItem7
         '
         Me.LayoutControlItem7.Control = Me.Notes
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 399)
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 400)
         Me.LayoutControlItem7.MinSize = New System.Drawing.Size(14, 20)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(816, 63)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(818, 64)
         Me.LayoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem7.TextVisible = False
@@ -1002,10 +1016,10 @@ Partial Class StockMoves
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.Control = Me.InputUser
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(635, 488)
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(636, 490)
         Me.LayoutControlItem6.MinSize = New System.Drawing.Size(54, 24)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(181, 24)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(182, 24)
         Me.LayoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem6.TextVisible = False
@@ -1013,7 +1027,7 @@ Partial Class StockMoves
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.DocNewOld
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(476, 488)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(477, 490)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
         Me.LayoutControlItem8.Size = New System.Drawing.Size(159, 24)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
@@ -1022,16 +1036,16 @@ Partial Class StockMoves
         'LayoutControlItem9
         '
         Me.LayoutControlItem9.Control = Me.DocCurrency
-        Me.LayoutControlItem9.Location = New System.Drawing.Point(288, 488)
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(288, 490)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(188, 24)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(189, 24)
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem9.TextVisible = False
         '
         'LayoutControlItem11
         '
         Me.LayoutControlItem11.Control = Me.InputDateTime
-        Me.LayoutControlItem11.Location = New System.Drawing.Point(145, 488)
+        Me.LayoutControlItem11.Location = New System.Drawing.Point(145, 490)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
         Me.LayoutControlItem11.Size = New System.Drawing.Size(143, 24)
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(0, 0)
@@ -1040,7 +1054,7 @@ Partial Class StockMoves
         'LayoutControlItem12
         '
         Me.LayoutControlItem12.Control = Me.DocStatus
-        Me.LayoutControlItem12.Location = New System.Drawing.Point(72, 488)
+        Me.LayoutControlItem12.Location = New System.Drawing.Point(72, 490)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
         Me.LayoutControlItem12.Size = New System.Drawing.Size(73, 24)
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(0, 0)
@@ -1049,7 +1063,7 @@ Partial Class StockMoves
         'LayoutControlItem10
         '
         Me.LayoutControlItem10.Control = Me.SimpleButton1
-        Me.LayoutControlItem10.Location = New System.Drawing.Point(72, 462)
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(72, 464)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
         Me.LayoutControlItem10.Size = New System.Drawing.Size(69, 26)
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(0, 0)
@@ -1058,10 +1072,10 @@ Partial Class StockMoves
         'EmptySpaceItem4
         '
         Me.EmptySpaceItem4.AllowHotTrack = False
-        Me.EmptySpaceItem4.Location = New System.Drawing.Point(141, 462)
+        Me.EmptySpaceItem4.Location = New System.Drawing.Point(141, 464)
         Me.EmptySpaceItem4.MinSize = New System.Drawing.Size(104, 24)
         Me.EmptySpaceItem4.Name = "EmptySpaceItem4"
-        Me.EmptySpaceItem4.Size = New System.Drawing.Size(675, 26)
+        Me.EmptySpaceItem4.Size = New System.Drawing.Size(677, 26)
         Me.EmptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.EmptySpaceItem4.TextSize = New System.Drawing.Size(0, 0)
         '
@@ -1071,14 +1085,14 @@ Partial Class StockMoves
         Me.EmptySpaceItem5.Location = New System.Drawing.Point(0, 144)
         Me.EmptySpaceItem5.MinSize = New System.Drawing.Size(104, 24)
         Me.EmptySpaceItem5.Name = "EmptySpaceItem5"
-        Me.EmptySpaceItem5.Size = New System.Drawing.Size(816, 24)
+        Me.EmptySpaceItem5.Size = New System.Drawing.Size(818, 24)
         Me.EmptySpaceItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.EmptySpaceItem5.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem13
         '
         Me.LayoutControlItem13.Control = Me.SimpleButton2
-        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 462)
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 464)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
         Me.LayoutControlItem13.Size = New System.Drawing.Size(72, 26)
         Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
@@ -1099,7 +1113,7 @@ Partial Class StockMoves
         Me.LayoutControlItem14.Location = New System.Drawing.Point(258, 96)
         Me.LayoutControlItem14.MinSize = New System.Drawing.Size(129, 24)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
-        Me.LayoutControlItem14.Size = New System.Drawing.Size(282, 24)
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(283, 24)
         Me.LayoutControlItem14.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItem14.Text = "العنوان"
         Me.LayoutControlItem14.TextSize = New System.Drawing.Size(72, 13)
@@ -1115,7 +1129,7 @@ Partial Class StockMoves
         'LayoutControlItem16
         '
         Me.LayoutControlItem16.Control = Me.DocStatusLabel
-        Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 488)
+        Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 490)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
         Me.LayoutControlItem16.Size = New System.Drawing.Size(72, 24)
         Me.LayoutControlItem16.TextSize = New System.Drawing.Size(0, 0)
@@ -1135,10 +1149,10 @@ Partial Class StockMoves
         'LayoutControlItem18
         '
         Me.LayoutControlItem18.Control = Me.DocSortTextEdit
-        Me.LayoutControlItem18.Location = New System.Drawing.Point(583, 24)
+        Me.LayoutControlItem18.Location = New System.Drawing.Point(584, 24)
         Me.LayoutControlItem18.MinSize = New System.Drawing.Size(129, 24)
         Me.LayoutControlItem18.Name = "LayoutControlItem18"
-        Me.LayoutControlItem18.Size = New System.Drawing.Size(233, 24)
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(234, 24)
         Me.LayoutControlItem18.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItem18.Text = "نوع السند"
         Me.LayoutControlItem18.TextSize = New System.Drawing.Size(72, 13)
@@ -1165,7 +1179,7 @@ Partial Class StockMoves
         Me.EmptySpaceItem8.AllowHotTrack = False
         Me.EmptySpaceItem8.Location = New System.Drawing.Point(396, 24)
         Me.EmptySpaceItem8.Name = "EmptySpaceItem8"
-        Me.EmptySpaceItem8.Size = New System.Drawing.Size(187, 24)
+        Me.EmptySpaceItem8.Size = New System.Drawing.Size(188, 24)
         Me.EmptySpaceItem8.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem2
@@ -1191,9 +1205,9 @@ Partial Class StockMoves
         'LayoutControlItem21
         '
         Me.LayoutControlItem21.Control = Me.SearchSalesPerson
-        Me.LayoutControlItem21.Location = New System.Drawing.Point(540, 96)
+        Me.LayoutControlItem21.Location = New System.Drawing.Point(541, 96)
         Me.LayoutControlItem21.Name = "LayoutControlItem21"
-        Me.LayoutControlItem21.Size = New System.Drawing.Size(276, 24)
+        Me.LayoutControlItem21.Size = New System.Drawing.Size(277, 24)
         Me.LayoutControlItem21.Text = "مندوب المبيعات"
         Me.LayoutControlItem21.TextSize = New System.Drawing.Size(72, 13)
         '
@@ -1230,6 +1244,7 @@ Partial Class StockMoves
         Me.TableAdapterManager.CRMCustomersOrdersTableAdapter = Nothing
         Me.TableAdapterManager.CRMJobNameTableAdapter = Nothing
         Me.TableAdapterManager.CRMTasksTableAdapter = Nothing
+        Me.TableAdapterManager.DATATableAdapter = Nothing
         Me.TableAdapterManager.DevelopNotesTableAdapter = Nothing
         Me.TableAdapterManager.EmployeesDataTableAdapter = Nothing
         Me.TableAdapterManager.FinancialBanksDocTableAdapter = Nothing
@@ -1264,7 +1279,7 @@ Partial Class StockMoves
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(836, 532)
+        Me.ClientSize = New System.Drawing.Size(838, 534)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "StockMoves"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes

@@ -232,12 +232,12 @@ Public Class DashBoardUser
     End Sub
 
     Private Sub WebBrowser1_DocumentCompleted_1(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
-        On Error Resume Next
-        Dim idfacebook As String
-        SimpleButton4.Enabled = True
-        idfacebook = WebBrowser1.Document.GetElementById("code").InnerText
-        Dim urlIM As String = "http://graph.facebook.com/" & idfacebook & "/picture?type=square"
-        PictureBox1.Load(urlIM)
+        'On Error Resume Next
+        'Dim idfacebook As String
+        'SimpleButton4.Enabled = True
+        'idfacebook = WebBrowser1.Document.GetElementById("code").InnerText
+        'Dim urlIM As String = "http://graph.facebook.com/" & idfacebook & "/picture?type=square"
+        'PictureBox1.Load(urlIM)
     End Sub
 
     Private Sub TextEdit9_EditValueChanged(sender As Object, e As EventArgs) Handles TextEdit9.EditValueChanged

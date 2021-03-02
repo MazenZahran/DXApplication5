@@ -20,12 +20,17 @@ Partial Class OrpakStations
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim EditorButtonImageOptions6 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
+        Dim EditorButtonImageOptions1 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(OrpakStations))
+        Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject2 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject3 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject4 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.NavigationPane1 = New DevExpress.XtraBars.Navigation.NavigationPane()
         Me.NavigationPage1 = New DevExpress.XtraBars.Navigation.NavigationPage()
         Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
+        Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
         Me.TextEditTimerInterval = New DevExpress.XtraEditors.TextEdit()
         Me.TextEditLastUpdate = New DevExpress.XtraEditors.TextEdit()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
@@ -44,6 +49,7 @@ Partial Class OrpakStations
         Me.RepositoryItemTimeSpanEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit()
         Me.ColElapseTimeForConnect = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColElapseTimeForUpdateBalances = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColLastMeansUpdate = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemButtonEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
@@ -52,6 +58,7 @@ Partial Class OrpakStations
         Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.NavigationPage2 = New DevExpress.XtraBars.Navigation.NavigationPage()
         Me.LayoutControl3 = New DevExpress.XtraLayout.LayoutControl()
         Me.ComboBoxEdit1 = New DevExpress.XtraEditors.ComboBoxEdit()
@@ -77,8 +84,6 @@ Partial Class OrpakStations
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
-        Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.NavigationPane1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,6 +91,7 @@ Partial Class OrpakStations
         Me.NavigationPage1.SuspendLayout()
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl2.SuspendLayout()
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEditTimerInterval.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEditLastUpdate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,6 +104,7 @@ Partial Class OrpakStations
         CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavigationPage2.SuspendLayout()
         CType(Me.LayoutControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl3.SuspendLayout()
@@ -113,8 +120,6 @@ Partial Class OrpakStations
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LayoutControl1
@@ -146,9 +151,9 @@ Partial Class OrpakStations
         '
         Me.NavigationPage1.Caption = "المحطات"
         Me.NavigationPage1.Controls.Add(Me.LayoutControl2)
-        Me.NavigationPage1.Image = CType(resources.GetObject("NavigationPage1.Image"), System.Drawing.Image)
+        Me.NavigationPage1.ImageOptions.Image = CType(resources.GetObject("NavigationPage1.ImageOptions.Image"), System.Drawing.Image)
         Me.NavigationPage1.Name = "NavigationPage1"
-        Me.NavigationPage1.Size = New System.Drawing.Size(1097, 379)
+        Me.NavigationPage1.Size = New System.Drawing.Size(1075, 366)
         '
         'LayoutControl2
         '
@@ -162,28 +167,38 @@ Partial Class OrpakStations
         Me.LayoutControl2.Name = "LayoutControl2"
         Me.LayoutControl2.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl2.Root = Me.LayoutControlGroup2
-        Me.LayoutControl2.Size = New System.Drawing.Size(1097, 379)
+        Me.LayoutControl2.Size = New System.Drawing.Size(1075, 366)
         Me.LayoutControl2.TabIndex = 0
         Me.LayoutControl2.Text = "LayoutControl2"
+        '
+        'TextEdit1
+        '
+        Me.TextEdit1.EditValue = CType(60, Short)
+        Me.TextEdit1.Location = New System.Drawing.Point(314, 12)
+        Me.TextEdit1.Name = "TextEdit1"
+        Me.TextEdit1.Properties.ReadOnly = True
+        Me.TextEdit1.Size = New System.Drawing.Size(132, 20)
+        Me.TextEdit1.StyleController = Me.LayoutControl2
+        Me.TextEdit1.TabIndex = 8
         '
         'TextEditTimerInterval
         '
         Me.TextEditTimerInterval.EditValue = "10"
-        Me.TextEditTimerInterval.Location = New System.Drawing.Point(457, 12)
+        Me.TextEditTimerInterval.Location = New System.Drawing.Point(450, 12)
         Me.TextEditTimerInterval.Name = "TextEditTimerInterval"
         Me.TextEditTimerInterval.Properties.Mask.BeepOnError = True
         Me.TextEditTimerInterval.Properties.Mask.EditMask = "n0"
         Me.TextEditTimerInterval.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.TextEditTimerInterval.Size = New System.Drawing.Size(77, 20)
+        Me.TextEditTimerInterval.Size = New System.Drawing.Size(72, 20)
         Me.TextEditTimerInterval.StyleController = Me.LayoutControl2
         Me.TextEditTimerInterval.TabIndex = 7
         '
         'TextEditLastUpdate
         '
-        Me.TextEditLastUpdate.Location = New System.Drawing.Point(660, 12)
+        Me.TextEditLastUpdate.Location = New System.Drawing.Point(648, 12)
         Me.TextEditLastUpdate.Name = "TextEditLastUpdate"
         Me.TextEditLastUpdate.Properties.ReadOnly = True
-        Me.TextEditLastUpdate.Size = New System.Drawing.Size(425, 20)
+        Me.TextEditLastUpdate.Size = New System.Drawing.Size(415, 20)
         Me.TextEditLastUpdate.StyleController = Me.LayoutControl2
         Me.TextEditLastUpdate.TabIndex = 6
         '
@@ -193,13 +208,13 @@ Partial Class OrpakStations
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTimeSpanEdit1, Me.RepositoryItemButtonEdit1})
-        Me.GridControl1.Size = New System.Drawing.Size(1073, 329)
+        Me.GridControl1.Size = New System.Drawing.Size(1051, 316)
         Me.GridControl1.TabIndex = 4
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.Colstn_id, Me.Colstn_name, Me.Colhost_ip, Me.COllast_update, Me.ColTablesSizeMB, Me.ColTotalRows, Me.ColLastUpdateBalances, Me.ColServerName, Me.ColSSIze, Me.ColAvailableSSIze, Me.ColElapseTime, Me.ColElapseTimeForConnect, Me.ColElapseTimeForUpdateBalances})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.Colstn_id, Me.Colstn_name, Me.Colhost_ip, Me.COllast_update, Me.ColTablesSizeMB, Me.ColTotalRows, Me.ColLastUpdateBalances, Me.ColServerName, Me.ColSSIze, Me.ColAvailableSSIze, Me.ColElapseTime, Me.ColElapseTimeForConnect, Me.ColElapseTimeForUpdateBalances, Me.ColLastMeansUpdate})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsBehavior.Editable = False
@@ -269,11 +284,11 @@ Partial Class OrpakStations
         '
         'ColLastUpdateBalances
         '
-        Me.ColLastUpdateBalances.Caption = "اخر اتصال بالمحطة"
+        Me.ColLastUpdateBalances.Caption = "اخر تحديث ل sql"
         Me.ColLastUpdateBalances.FieldName = "LastUpdateBalances"
         Me.ColLastUpdateBalances.Name = "ColLastUpdateBalances"
         Me.ColLastUpdateBalances.Visible = True
-        Me.ColLastUpdateBalances.VisibleIndex = 6
+        Me.ColLastUpdateBalances.VisibleIndex = 9
         '
         'ColServerName
         '
@@ -281,7 +296,7 @@ Partial Class OrpakStations
         Me.ColServerName.FieldName = "ServerName"
         Me.ColServerName.Name = "ColServerName"
         Me.ColServerName.Visible = True
-        Me.ColServerName.VisibleIndex = 7
+        Me.ColServerName.VisibleIndex = 6
         '
         'ColSSIze
         '
@@ -307,8 +322,6 @@ Partial Class OrpakStations
         Me.ColElapseTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom
         Me.ColElapseTime.FieldName = "ElapseTime"
         Me.ColElapseTime.Name = "ColElapseTime"
-        Me.ColElapseTime.Visible = True
-        Me.ColElapseTime.VisibleIndex = 8
         '
         'RepositoryItemTimeSpanEdit1
         '
@@ -327,7 +340,7 @@ Partial Class OrpakStations
         Me.ColElapseTimeForConnect.FieldName = "ElapseTimeForConnect"
         Me.ColElapseTimeForConnect.Name = "ColElapseTimeForConnect"
         Me.ColElapseTimeForConnect.Visible = True
-        Me.ColElapseTimeForConnect.VisibleIndex = 9
+        Me.ColElapseTimeForConnect.VisibleIndex = 7
         '
         'ColElapseTimeForUpdateBalances
         '
@@ -335,14 +348,20 @@ Partial Class OrpakStations
         Me.ColElapseTimeForUpdateBalances.ColumnEdit = Me.RepositoryItemTimeSpanEdit1
         Me.ColElapseTimeForUpdateBalances.FieldName = "ElapseTimeForUpdateBalances"
         Me.ColElapseTimeForUpdateBalances.Name = "ColElapseTimeForUpdateBalances"
-        Me.ColElapseTimeForUpdateBalances.Visible = True
-        Me.ColElapseTimeForUpdateBalances.VisibleIndex = 10
+        '
+        'ColLastMeansUpdate
+        '
+        Me.ColLastMeansUpdate.Caption = "اخر تحديث لارصدة البطاقات"
+        Me.ColLastMeansUpdate.FieldName = "LastMeansUpdate"
+        Me.ColLastMeansUpdate.Name = "ColLastMeansUpdate"
+        Me.ColLastMeansUpdate.Visible = True
+        Me.ColLastMeansUpdate.VisibleIndex = 8
         '
         'RepositoryItemButtonEdit1
         '
         Me.RepositoryItemButtonEdit1.AutoHeight = False
-        EditorButtonImageOptions6.Image = CType(resources.GetObject("EditorButtonImageOptions6.Image"), System.Drawing.Image)
-        Me.RepositoryItemButtonEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(EditorButtonImageOptions6, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, Nothing)})
+        EditorButtonImageOptions1.Image = CType(resources.GetObject("EditorButtonImageOptions1.Image"), System.Drawing.Image)
+        Me.RepositoryItemButtonEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions1, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.RepositoryItemButtonEdit1.Name = "RepositoryItemButtonEdit1"
         Me.RepositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
@@ -361,9 +380,8 @@ Partial Class OrpakStations
         Me.LayoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup2.GroupBordersVisible = False
         Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.EmptySpaceItem2, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem9})
-        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(1097, 379)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(1075, 366)
         Me.LayoutControlGroup2.TextVisible = False
         '
         'LayoutControlItem1
@@ -371,7 +389,7 @@ Partial Class OrpakStations
         Me.LayoutControlItem1.Control = Me.GridControl1
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 26)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(1077, 333)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(1055, 320)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
@@ -392,32 +410,41 @@ Partial Class OrpakStations
         Me.EmptySpaceItem2.AllowHotTrack = False
         Me.EmptySpaceItem2.Location = New System.Drawing.Point(142, 0)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(164, 26)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(160, 26)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem7
         '
         Me.LayoutControlItem7.Control = Me.TextEditLastUpdate
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(648, 0)
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(636, 0)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(429, 26)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(419, 26)
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem7.TextVisible = False
         '
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.TextEditTimerInterval
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(445, 0)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(438, 0)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(203, 26)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(198, 26)
         Me.LayoutControlItem8.Text = "تحديث الكشف كل (دقيقة)"
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(119, 13)
+        '
+        'LayoutControlItem9
+        '
+        Me.LayoutControlItem9.Control = Me.TextEdit1
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(302, 0)
+        Me.LayoutControlItem9.Name = "LayoutControlItem9"
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(136, 26)
+        Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem9.TextVisible = False
         '
         'NavigationPage2
         '
         Me.NavigationPage2.Caption = "Logs"
         Me.NavigationPage2.Controls.Add(Me.LayoutControl3)
-        Me.NavigationPage2.Image = CType(resources.GetObject("NavigationPage2.Image"), System.Drawing.Image)
+        Me.NavigationPage2.ImageOptions.Image = CType(resources.GetObject("NavigationPage2.ImageOptions.Image"), System.Drawing.Image)
         Me.NavigationPage2.Name = "NavigationPage2"
         Me.NavigationPage2.Size = New System.Drawing.Size(1097, 379)
         '
@@ -578,7 +605,6 @@ Partial Class OrpakStations
         Me.LayoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup3.GroupBordersVisible = False
         Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem4, Me.LayoutControlItem5, Me.EmptySpaceItem1, Me.LayoutControlItem6})
-        Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
         Me.LayoutControlGroup3.Size = New System.Drawing.Size(1097, 379)
         Me.LayoutControlGroup3.TextVisible = False
@@ -626,7 +652,6 @@ Partial Class OrpakStations
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup1.GroupBordersVisible = False
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem3})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
         Me.LayoutControlGroup1.Size = New System.Drawing.Size(1187, 463)
         Me.LayoutControlGroup1.TextVisible = False
@@ -643,25 +668,6 @@ Partial Class OrpakStations
         'Timer1
         '
         Me.Timer1.Interval = 1000
-        '
-        'TextEdit1
-        '
-        Me.TextEdit1.EditValue = CType(60, Short)
-        Me.TextEdit1.Location = New System.Drawing.Point(318, 12)
-        Me.TextEdit1.Name = "TextEdit1"
-        Me.TextEdit1.Properties.ReadOnly = True
-        Me.TextEdit1.Size = New System.Drawing.Size(135, 20)
-        Me.TextEdit1.StyleController = Me.LayoutControl2
-        Me.TextEdit1.TabIndex = 8
-        '
-        'LayoutControlItem9
-        '
-        Me.LayoutControlItem9.Control = Me.TextEdit1
-        Me.LayoutControlItem9.Location = New System.Drawing.Point(306, 0)
-        Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(139, 26)
-        Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem9.TextVisible = False
         '
         'OrpakStations
         '
@@ -680,6 +686,7 @@ Partial Class OrpakStations
         Me.NavigationPage1.ResumeLayout(False)
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl2.ResumeLayout(False)
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEditTimerInterval.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEditLastUpdate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -692,6 +699,7 @@ Partial Class OrpakStations
         CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavigationPage2.ResumeLayout(False)
         CType(Me.LayoutControl3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl3.ResumeLayout(False)
@@ -707,8 +715,6 @@ Partial Class OrpakStations
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -770,4 +776,5 @@ Partial Class OrpakStations
     Friend WithEvents ColStationName As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents TextEdit1 As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem9 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents ColLastMeansUpdate As DevExpress.XtraGrid.Columns.GridColumn
 End Class

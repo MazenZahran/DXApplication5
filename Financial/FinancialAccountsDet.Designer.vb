@@ -20,6 +20,8 @@ Partial Class FinancialAccountsDet
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim GridFormatRule1 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleExpression1 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
         Dim SelectQuery1 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
         Dim Column1 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
         Dim ColumnExpression1 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
@@ -93,15 +95,30 @@ Partial Class FinancialAccountsDet
         Dim ColumnExpression30 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
         Dim QueryParameter2 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FinancialAccountsDet))
-        Dim GridFormatRule1 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
-        Dim FormatConditionRuleExpression1 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
         Me.ColSorting = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
         Me.XtraTabControl1 = New DevExpress.XtraTab.XtraTabControl()
+        Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage()
+        Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
+        Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
+        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.ColDate = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColDocNo1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColDoc2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColDescription = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColDebit = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColCredit = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColID = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.DateEditTo = New DevExpress.XtraEditors.DateEdit()
+        Me.DateEditFrom = New DevExpress.XtraEditors.DateEdit()
+        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
+        Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.XtraTabPage1 = New DevExpress.XtraTab.XtraTabPage()
         Me.DataLayoutControl1 = New DevExpress.XtraDataLayout.DataLayoutControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
-        Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colCName = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colCTitle = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -153,23 +170,6 @@ Partial Class FinancialAccountsDet
         Me.LayoutControlItem22 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem34 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage()
-        Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
-        Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
-        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.ColDate = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ColDocNo1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ColDoc2 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ColDescription = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ColDebit = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ColCredit = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ColID = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.DateEditTo = New DevExpress.XtraEditors.DateEdit()
-        Me.DateEditFrom = New DevExpress.XtraEditors.DateEdit()
-        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
         Me.XtraTabPage3 = New DevExpress.XtraTab.XtraTabPage()
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.CRMJobNameGridControl = New DevExpress.XtraGrid.GridControl()
@@ -187,6 +187,18 @@ Partial Class FinancialAccountsDet
         Me.PanelControl2.SuspendLayout()
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.XtraTabControl1.SuspendLayout()
+        Me.XtraTabPage2.SuspendLayout()
+        CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelControl3.SuspendLayout()
+        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelControl1.SuspendLayout()
+        CType(Me.DateEditTo.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEditTo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEditFrom.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEditFrom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.XtraTabPage1.SuspendLayout()
         CType(Me.DataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DataLayoutControl1.SuspendLayout()
@@ -237,18 +249,6 @@ Partial Class FinancialAccountsDet
         CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.XtraTabPage2.SuspendLayout()
-        CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl3.SuspendLayout()
-        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl1.SuspendLayout()
-        CType(Me.DateEditTo.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DateEditTo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DateEditFrom.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DateEditFrom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.XtraTabPage3.SuspendLayout()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
@@ -294,55 +294,240 @@ Partial Class FinancialAccountsDet
         Me.XtraTabControl1.TabIndex = 1
         Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2, Me.XtraTabPage3})
         '
-        'XtraTabPage1
+        'XtraTabPage2
         '
-        Me.XtraTabPage1.Controls.Add(Me.DataLayoutControl1)
-        Me.XtraTabPage1.Name = "XtraTabPage1"
-        Me.XtraTabPage1.Size = New System.Drawing.Size(1198, 432)
-        Me.XtraTabPage1.Text = "بيانات الزبون"
+        Me.XtraTabPage2.Controls.Add(Me.PanelControl3)
+        Me.XtraTabPage2.Controls.Add(Me.PanelControl1)
+        Me.XtraTabPage2.Name = "XtraTabPage2"
+        Me.XtraTabPage2.Size = New System.Drawing.Size(1202, 435)
+        Me.XtraTabPage2.Text = "كشف حساب"
         '
-        'DataLayoutControl1
+        'PanelControl3
         '
-        Me.DataLayoutControl1.Controls.Add(Me.GridControl1)
-        Me.DataLayoutControl1.Controls.Add(Me.FullNameTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.SortGroupTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.AddressTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.CityTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.ZipTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.CountryTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.PhoneTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.FaxTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.FilterTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.DetailsTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.BankCodeTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.BranchCodeTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.BankAccountTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.CostCodeTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.EMailTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.SPhoneTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.WebSiteTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.IDSpinEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.AccountKeyTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.PictureEdit1)
-        Me.DataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.DataLayoutControl1.Location = New System.Drawing.Point(0, 0)
-        Me.DataLayoutControl1.Name = "DataLayoutControl1"
-        Me.DataLayoutControl1.OptionsView.RightToLeftMirroringApplied = True
-        Me.DataLayoutControl1.Root = Me.LayoutControlGroup1
-        Me.DataLayoutControl1.Size = New System.Drawing.Size(1198, 389)
-        Me.DataLayoutControl1.TabIndex = 1
-        Me.DataLayoutControl1.Text = "DataLayoutControl1"
+        Me.PanelControl3.Controls.Add(Me.GridControl2)
+        Me.PanelControl3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelControl3.Location = New System.Drawing.Point(0, 41)
+        Me.PanelControl3.Name = "PanelControl3"
+        Me.PanelControl3.Size = New System.Drawing.Size(1202, 394)
+        Me.PanelControl3.TabIndex = 1
         '
-        'GridControl1
+        'GridControl2
         '
-        Me.GridControl1.DataMember = "CRMContact"
-        Me.GridControl1.DataSource = Me.SqlDataSource1
-        Me.GridControl1.Location = New System.Drawing.Point(12, 204)
-        Me.GridControl1.MainView = Me.GridView1
-        Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(1174, 173)
-        Me.GridControl1.TabIndex = 47
-        Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
+        Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridControl2.EmbeddedNavigator.Appearance.Options.UseTextOptions = True
+        Me.GridControl2.EmbeddedNavigator.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.GridControl2.EmbeddedNavigator.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.GridControl2.Location = New System.Drawing.Point(2, 2)
+        Me.GridControl2.MainView = Me.GridView2
+        Me.GridControl2.Name = "GridControl2"
+        Me.GridControl2.Size = New System.Drawing.Size(1198, 390)
+        Me.GridControl2.TabIndex = 0
+        Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
+        '
+        'GridView2
+        '
+        Me.GridView2.Appearance.EvenRow.Options.UseTextOptions = True
+        Me.GridView2.Appearance.EvenRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.GridView2.Appearance.FixedLine.Options.UseTextOptions = True
+        Me.GridView2.Appearance.FixedLine.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.GridView2.Appearance.GroupRow.Options.UseTextOptions = True
+        Me.GridView2.Appearance.GroupRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.GridView2.Appearance.HeaderPanel.Options.UseTextOptions = True
+        Me.GridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.GridView2.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.GridView2.Appearance.HorzLine.Options.UseTextOptions = True
+        Me.GridView2.Appearance.HorzLine.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.GridView2.Appearance.OddRow.Options.UseTextOptions = True
+        Me.GridView2.Appearance.OddRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.GridView2.Appearance.Preview.Options.UseTextOptions = True
+        Me.GridView2.Appearance.Preview.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.GridView2.Appearance.Preview.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.GridView2.Appearance.Row.Options.UseTextOptions = True
+        Me.GridView2.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.GridView2.AppearancePrint.HeaderPanel.Options.UseTextOptions = True
+        Me.GridView2.AppearancePrint.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.GridView2.AppearancePrint.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.ColDate, Me.ColDocNo1, Me.ColDoc2, Me.ColDescription, Me.ColDebit, Me.ColCredit, Me.ColSorting, Me.ColID})
+        GridFormatRule1.ApplyToRow = True
+        GridFormatRule1.Name = "Format0"
+        FormatConditionRuleExpression1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        FormatConditionRuleExpression1.Appearance.Options.UseBackColor = True
+        FormatConditionRuleExpression1.Expression = "[SORTING] < 999999999"
+        GridFormatRule1.Rule = FormatConditionRuleExpression1
+        Me.GridView2.FormatRules.Add(GridFormatRule1)
+        Me.GridView2.GridControl = Me.GridControl2
+        Me.GridView2.GroupFormat = ""
+        Me.GridView2.Name = "GridView2"
+        Me.GridView2.OptionsBehavior.Editable = False
+        Me.GridView2.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click
+        Me.GridView2.OptionsBehavior.ReadOnly = True
+        Me.GridView2.OptionsSelection.MultiSelect = True
+        Me.GridView2.OptionsView.ShowFooter = True
+        Me.GridView2.OptionsView.ShowGroupPanel = False
+        '
+        'ColDate
+        '
+        Me.ColDate.AppearanceCell.Options.UseTextOptions = True
+        Me.ColDate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColDate.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColDate.AppearanceHeader.Options.UseTextOptions = True
+        Me.ColDate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColDate.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColDate.Caption = "التاريخ"
+        Me.ColDate.FieldName = "ALIAS6F"
+        Me.ColDate.Name = "ColDate"
+        Me.ColDate.OptionsColumn.AllowEdit = False
+        Me.ColDate.Visible = True
+        Me.ColDate.VisibleIndex = 0
+        '
+        'ColDocNo1
+        '
+        Me.ColDocNo1.AppearanceCell.Options.UseTextOptions = True
+        Me.ColDocNo1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColDocNo1.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColDocNo1.AppearanceHeader.Options.UseTextOptions = True
+        Me.ColDocNo1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColDocNo1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColDocNo1.Caption = "رقم السند1"
+        Me.ColDocNo1.FieldName = "ALIAS8F"
+        Me.ColDocNo1.Name = "ColDocNo1"
+        Me.ColDocNo1.OptionsColumn.AllowEdit = False
+        Me.ColDocNo1.Visible = True
+        Me.ColDocNo1.VisibleIndex = 1
+        '
+        'ColDoc2
+        '
+        Me.ColDoc2.AppearanceCell.Options.UseTextOptions = True
+        Me.ColDoc2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColDoc2.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColDoc2.AppearanceHeader.Options.UseTextOptions = True
+        Me.ColDoc2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColDoc2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColDoc2.Caption = "رقم السند2"
+        Me.ColDoc2.FieldName = "ALIAS9F"
+        Me.ColDoc2.Name = "ColDoc2"
+        Me.ColDoc2.OptionsColumn.AllowEdit = False
+        Me.ColDoc2.Visible = True
+        Me.ColDoc2.VisibleIndex = 2
+        '
+        'ColDescription
+        '
+        Me.ColDescription.AppearanceCell.Options.UseTextOptions = True
+        Me.ColDescription.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColDescription.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColDescription.AppearanceHeader.Options.UseTextOptions = True
+        Me.ColDescription.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColDescription.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColDescription.Caption = "البيان"
+        Me.ColDescription.FieldName = "ALIAS10F"
+        Me.ColDescription.Name = "ColDescription"
+        Me.ColDescription.OptionsColumn.AllowEdit = False
+        Me.ColDescription.Visible = True
+        Me.ColDescription.VisibleIndex = 3
+        '
+        'ColDebit
+        '
+        Me.ColDebit.AppearanceCell.Options.UseTextOptions = True
+        Me.ColDebit.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColDebit.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColDebit.AppearanceHeader.Options.UseTextOptions = True
+        Me.ColDebit.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColDebit.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColDebit.Caption = "المدين"
+        Me.ColDebit.FieldName = "ALIAS12F_DEB"
+        Me.ColDebit.Name = "ColDebit"
+        Me.ColDebit.OptionsColumn.AllowEdit = False
+        Me.ColDebit.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ALIAS12F_DEB", "{0}")})
+        Me.ColDebit.Visible = True
+        Me.ColDebit.VisibleIndex = 4
+        '
+        'ColCredit
+        '
+        Me.ColCredit.AppearanceCell.Options.UseTextOptions = True
+        Me.ColCredit.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColCredit.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColCredit.AppearanceHeader.Options.UseTextOptions = True
+        Me.ColCredit.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.ColCredit.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.ColCredit.Caption = "دائن"
+        Me.ColCredit.FieldName = "ALIAS12F_CR"
+        Me.ColCredit.Name = "ColCredit"
+        Me.ColCredit.OptionsColumn.AllowEdit = False
+        Me.ColCredit.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ALIAS12F_CR", "{0}")})
+        Me.ColCredit.Visible = True
+        Me.ColCredit.VisibleIndex = 5
+        '
+        'ColID
+        '
+        Me.ColID.Caption = "رقم الحركة"
+        Me.ColID.FieldName = "ALIAS2F"
+        Me.ColID.Name = "ColID"
+        Me.ColID.OptionsColumn.AllowEdit = False
+        '
+        'PanelControl1
+        '
+        Me.PanelControl1.Controls.Add(Me.SimpleButton1)
+        Me.PanelControl1.Controls.Add(Me.CheckBox1)
+        Me.PanelControl1.Controls.Add(Me.DateEditTo)
+        Me.PanelControl1.Controls.Add(Me.DateEditFrom)
+        Me.PanelControl1.Controls.Add(Me.TextEdit2)
+        Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
+        Me.PanelControl1.Name = "PanelControl1"
+        Me.PanelControl1.Size = New System.Drawing.Size(1202, 41)
+        Me.PanelControl1.TabIndex = 0
+        '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton1.Location = New System.Drawing.Point(501, 8)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(100, 20)
+        Me.SimpleButton1.TabIndex = 3
+        Me.SimpleButton1.Text = "موافق"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(5, 12)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(114, 17)
+        Me.CheckBox1.TabIndex = 2
+        Me.CheckBox1.Text = "ترتيب حسب wallet"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'DateEditTo
+        '
+        Me.DateEditTo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DateEditTo.EditValue = Nothing
+        Me.DateEditTo.Location = New System.Drawing.Point(607, 8)
+        Me.DateEditTo.Name = "DateEditTo"
+        Me.DateEditTo.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEditTo.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEditTo.Size = New System.Drawing.Size(135, 20)
+        Me.DateEditTo.TabIndex = 1
+        '
+        'DateEditFrom
+        '
+        Me.DateEditFrom.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DateEditFrom.EditValue = Nothing
+        Me.DateEditFrom.Location = New System.Drawing.Point(748, 8)
+        Me.DateEditFrom.Name = "DateEditFrom"
+        Me.DateEditFrom.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEditFrom.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEditFrom.Size = New System.Drawing.Size(135, 20)
+        Me.DateEditFrom.TabIndex = 1
+        '
+        'TextEdit2
+        '
+        Me.TextEdit2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextEdit2.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.FullName", True))
+        Me.TextEdit2.DataBindings.Add(New System.Windows.Forms.Binding("ReadOnly", Me.SqlDataSource1, "Accounts.FullName", True))
+        Me.TextEdit2.Location = New System.Drawing.Point(889, 9)
+        Me.TextEdit2.Name = "TextEdit2"
+        Me.TextEdit2.Properties.ReadOnly = True
+        Me.TextEdit2.Size = New System.Drawing.Size(308, 20)
+        Me.TextEdit2.TabIndex = 0
         '
         'SqlDataSource1
         '
@@ -510,6 +695,56 @@ Partial Class FinancialAccountsDet
         Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {SelectQuery1, SelectQuery2})
         Me.SqlDataSource1.ResultSchemaSerializable = resources.GetString("SqlDataSource1.ResultSchemaSerializable")
         '
+        'XtraTabPage1
+        '
+        Me.XtraTabPage1.Controls.Add(Me.DataLayoutControl1)
+        Me.XtraTabPage1.Name = "XtraTabPage1"
+        Me.XtraTabPage1.Size = New System.Drawing.Size(1202, 435)
+        Me.XtraTabPage1.Text = "بيانات الزبون"
+        '
+        'DataLayoutControl1
+        '
+        Me.DataLayoutControl1.Controls.Add(Me.GridControl1)
+        Me.DataLayoutControl1.Controls.Add(Me.FullNameTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.SortGroupTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.AddressTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.CityTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.ZipTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.CountryTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.PhoneTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.FaxTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.FilterTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.DetailsTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.BankCodeTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.BranchCodeTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.BankAccountTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.CostCodeTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.EMailTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.SPhoneTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.WebSiteTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.IDSpinEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.AccountKeyTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.PictureEdit1)
+        Me.DataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.DataLayoutControl1.Location = New System.Drawing.Point(0, 0)
+        Me.DataLayoutControl1.Name = "DataLayoutControl1"
+        Me.DataLayoutControl1.OptionsView.RightToLeftMirroringApplied = True
+        Me.DataLayoutControl1.Root = Me.LayoutControlGroup1
+        Me.DataLayoutControl1.Size = New System.Drawing.Size(1202, 389)
+        Me.DataLayoutControl1.TabIndex = 1
+        Me.DataLayoutControl1.Text = "DataLayoutControl1"
+        '
+        'GridControl1
+        '
+        Me.GridControl1.DataMember = "CRMContact"
+        Me.GridControl1.DataSource = Me.SqlDataSource1
+        Me.GridControl1.Location = New System.Drawing.Point(12, 204)
+        Me.GridControl1.MainView = Me.GridView1
+        Me.GridControl1.Name = "GridControl1"
+        Me.GridControl1.Size = New System.Drawing.Size(1178, 173)
+        Me.GridControl1.TabIndex = 47
+        Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
+        '
         'GridView1
         '
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colCName, Me.colCTitle, Me.colCMail, Me.colCPhone, Me.colC2Phone})
@@ -555,81 +790,81 @@ Partial Class FinancialAccountsDet
         'FullNameTextEdit
         '
         Me.FullNameTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.FullName", True))
-        Me.FullNameTextEdit.Location = New System.Drawing.Point(374, 12)
+        Me.FullNameTextEdit.Location = New System.Drawing.Point(375, 12)
         Me.FullNameTextEdit.Name = "FullNameTextEdit"
-        Me.FullNameTextEdit.Size = New System.Drawing.Size(422, 20)
+        Me.FullNameTextEdit.Size = New System.Drawing.Size(424, 20)
         Me.FullNameTextEdit.StyleController = Me.DataLayoutControl1
         Me.FullNameTextEdit.TabIndex = 9
         '
         'SortGroupTextEdit
         '
         Me.SortGroupTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.SortGroup", True))
-        Me.SortGroupTextEdit.Location = New System.Drawing.Point(826, 36)
+        Me.SortGroupTextEdit.Location = New System.Drawing.Point(829, 36)
         Me.SortGroupTextEdit.Name = "SortGroupTextEdit"
-        Me.SortGroupTextEdit.Size = New System.Drawing.Size(281, 20)
+        Me.SortGroupTextEdit.Size = New System.Drawing.Size(282, 20)
         Me.SortGroupTextEdit.StyleController = Me.DataLayoutControl1
         Me.SortGroupTextEdit.TabIndex = 11
         '
         'AddressTextEdit
         '
         Me.AddressTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.Address", True))
-        Me.AddressTextEdit.Location = New System.Drawing.Point(721, 84)
+        Me.AddressTextEdit.Location = New System.Drawing.Point(724, 84)
         Me.AddressTextEdit.Name = "AddressTextEdit"
-        Me.AddressTextEdit.Size = New System.Drawing.Size(386, 20)
+        Me.AddressTextEdit.Size = New System.Drawing.Size(387, 20)
         Me.AddressTextEdit.StyleController = Me.DataLayoutControl1
         Me.AddressTextEdit.TabIndex = 13
         '
         'CityTextEdit
         '
         Me.CityTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.City", True))
-        Me.CityTextEdit.Location = New System.Drawing.Point(433, 84)
+        Me.CityTextEdit.Location = New System.Drawing.Point(435, 84)
         Me.CityTextEdit.Name = "CityTextEdit"
-        Me.CityTextEdit.Size = New System.Drawing.Size(205, 20)
+        Me.CityTextEdit.Size = New System.Drawing.Size(206, 20)
         Me.CityTextEdit.StyleController = Me.DataLayoutControl1
         Me.CityTextEdit.TabIndex = 15
         '
         'ZipTextEdit
         '
         Me.ZipTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.CostCode", True))
-        Me.ZipTextEdit.Location = New System.Drawing.Point(209, 84)
+        Me.ZipTextEdit.Location = New System.Drawing.Point(210, 84)
         Me.ZipTextEdit.Name = "ZipTextEdit"
-        Me.ZipTextEdit.Size = New System.Drawing.Size(141, 20)
+        Me.ZipTextEdit.Size = New System.Drawing.Size(142, 20)
         Me.ZipTextEdit.StyleController = Me.DataLayoutControl1
         Me.ZipTextEdit.TabIndex = 17
         '
         'CountryTextEdit
         '
         Me.CountryTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.Country", True))
-        Me.CountryTextEdit.Location = New System.Drawing.Point(729, 60)
+        Me.CountryTextEdit.Location = New System.Drawing.Point(732, 60)
         Me.CountryTextEdit.Name = "CountryTextEdit"
-        Me.CountryTextEdit.Size = New System.Drawing.Size(378, 20)
+        Me.CountryTextEdit.Size = New System.Drawing.Size(379, 20)
         Me.CountryTextEdit.StyleController = Me.DataLayoutControl1
         Me.CountryTextEdit.TabIndex = 19
         '
         'PhoneTextEdit
         '
         Me.PhoneTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.Phone", True))
-        Me.PhoneTextEdit.Location = New System.Drawing.Point(209, 108)
+        Me.PhoneTextEdit.Location = New System.Drawing.Point(210, 108)
         Me.PhoneTextEdit.Name = "PhoneTextEdit"
-        Me.PhoneTextEdit.Size = New System.Drawing.Size(411, 20)
+        Me.PhoneTextEdit.Size = New System.Drawing.Size(413, 20)
         Me.PhoneTextEdit.StyleController = Me.DataLayoutControl1
         Me.PhoneTextEdit.TabIndex = 21
         '
         'FaxTextEdit
         '
         Me.FaxTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.Fax", True))
-        Me.FaxTextEdit.Location = New System.Drawing.Point(703, 108)
+        Me.FaxTextEdit.Location = New System.Drawing.Point(706, 108)
         Me.FaxTextEdit.Name = "FaxTextEdit"
-        Me.FaxTextEdit.Size = New System.Drawing.Size(404, 20)
+        Me.FaxTextEdit.Size = New System.Drawing.Size(405, 20)
         Me.FaxTextEdit.StyleController = Me.DataLayoutControl1
         Me.FaxTextEdit.TabIndex = 23
         '
         'FilterTextEdit
         '
         Me.FilterTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.Filter", True))
-        Me.FilterTextEdit.Location = New System.Drawing.Point(209, 36)
+        Me.FilterTextEdit.Location = New System.Drawing.Point(210, 36)
         Me.FilterTextEdit.Name = "FilterTextEdit"
-        Me.FilterTextEdit.Size = New System.Drawing.Size(223, 20)
+        Me.FilterTextEdit.Size = New System.Drawing.Size(224, 20)
         Me.FilterTextEdit.StyleController = Me.DataLayoutControl1
         Me.FilterTextEdit.TabIndex = 25
         '
@@ -638,77 +873,77 @@ Partial Class FinancialAccountsDet
         Me.DetailsTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.Details", True))
         Me.DetailsTextEdit.Location = New System.Drawing.Point(12, 180)
         Me.DetailsTextEdit.Name = "DetailsTextEdit"
-        Me.DetailsTextEdit.Size = New System.Drawing.Size(1095, 20)
+        Me.DetailsTextEdit.Size = New System.Drawing.Size(1099, 20)
         Me.DetailsTextEdit.StyleController = Me.DataLayoutControl1
         Me.DetailsTextEdit.TabIndex = 27
         '
         'BankCodeTextEdit
         '
         Me.BankCodeTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.BankCode", True))
-        Me.BankCodeTextEdit.Location = New System.Drawing.Point(815, 132)
+        Me.BankCodeTextEdit.Location = New System.Drawing.Point(818, 132)
         Me.BankCodeTextEdit.Name = "BankCodeTextEdit"
-        Me.BankCodeTextEdit.Size = New System.Drawing.Size(292, 20)
+        Me.BankCodeTextEdit.Size = New System.Drawing.Size(293, 20)
         Me.BankCodeTextEdit.StyleController = Me.DataLayoutControl1
         Me.BankCodeTextEdit.TabIndex = 31
         '
         'BranchCodeTextEdit
         '
         Me.BranchCodeTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.BranchCode", True))
-        Me.BranchCodeTextEdit.Location = New System.Drawing.Point(555, 132)
+        Me.BranchCodeTextEdit.Location = New System.Drawing.Point(557, 132)
         Me.BranchCodeTextEdit.Name = "BranchCodeTextEdit"
-        Me.BranchCodeTextEdit.Size = New System.Drawing.Size(177, 20)
+        Me.BranchCodeTextEdit.Size = New System.Drawing.Size(178, 20)
         Me.BranchCodeTextEdit.StyleController = Me.DataLayoutControl1
         Me.BranchCodeTextEdit.TabIndex = 33
         '
         'BankAccountTextEdit
         '
         Me.BankAccountTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.BankAccount", True))
-        Me.BankAccountTextEdit.Location = New System.Drawing.Point(209, 132)
+        Me.BankAccountTextEdit.Location = New System.Drawing.Point(210, 132)
         Me.BankAccountTextEdit.Name = "BankAccountTextEdit"
-        Me.BankAccountTextEdit.Size = New System.Drawing.Size(263, 20)
+        Me.BankAccountTextEdit.Size = New System.Drawing.Size(264, 20)
         Me.BankAccountTextEdit.StyleController = Me.DataLayoutControl1
         Me.BankAccountTextEdit.TabIndex = 35
         '
         'CostCodeTextEdit
         '
         Me.CostCodeTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.CostCode", True))
-        Me.CostCodeTextEdit.Location = New System.Drawing.Point(515, 36)
+        Me.CostCodeTextEdit.Location = New System.Drawing.Point(517, 36)
         Me.CostCodeTextEdit.Name = "CostCodeTextEdit"
-        Me.CostCodeTextEdit.Size = New System.Drawing.Size(228, 20)
+        Me.CostCodeTextEdit.Size = New System.Drawing.Size(229, 20)
         Me.CostCodeTextEdit.StyleController = Me.DataLayoutControl1
         Me.CostCodeTextEdit.TabIndex = 37
         '
         'EMailTextEdit
         '
         Me.EMailTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.EMail", True))
-        Me.EMailTextEdit.Location = New System.Drawing.Point(209, 156)
+        Me.EMailTextEdit.Location = New System.Drawing.Point(210, 156)
         Me.EMailTextEdit.Name = "EMailTextEdit"
-        Me.EMailTextEdit.Size = New System.Drawing.Size(437, 20)
+        Me.EMailTextEdit.Size = New System.Drawing.Size(439, 20)
         Me.EMailTextEdit.StyleController = Me.DataLayoutControl1
         Me.EMailTextEdit.TabIndex = 39
         '
         'SPhoneTextEdit
         '
         Me.SPhoneTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.SPhone", True))
-        Me.SPhoneTextEdit.Location = New System.Drawing.Point(209, 60)
+        Me.SPhoneTextEdit.Location = New System.Drawing.Point(210, 60)
         Me.SPhoneTextEdit.Name = "SPhoneTextEdit"
-        Me.SPhoneTextEdit.Size = New System.Drawing.Size(437, 20)
+        Me.SPhoneTextEdit.Size = New System.Drawing.Size(439, 20)
         Me.SPhoneTextEdit.StyleController = Me.DataLayoutControl1
         Me.SPhoneTextEdit.TabIndex = 43
         '
         'WebSiteTextEdit
         '
         Me.WebSiteTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.WebSite", True))
-        Me.WebSiteTextEdit.Location = New System.Drawing.Point(729, 156)
+        Me.WebSiteTextEdit.Location = New System.Drawing.Point(732, 156)
         Me.WebSiteTextEdit.Name = "WebSiteTextEdit"
-        Me.WebSiteTextEdit.Size = New System.Drawing.Size(378, 20)
+        Me.WebSiteTextEdit.Size = New System.Drawing.Size(379, 20)
         Me.WebSiteTextEdit.StyleController = Me.DataLayoutControl1
         Me.WebSiteTextEdit.TabIndex = 45
         '
         'IDSpinEdit
         '
         Me.IDSpinEdit.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.IDSpinEdit.Location = New System.Drawing.Point(209, 12)
+        Me.IDSpinEdit.Location = New System.Drawing.Point(210, 12)
         Me.IDSpinEdit.Name = "IDSpinEdit"
         Me.IDSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
         Me.IDSpinEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
@@ -718,15 +953,15 @@ Partial Class FinancialAccountsDet
         '
         'AccountKeyTextEdit
         '
-        Me.AccountKeyTextEdit.Location = New System.Drawing.Point(879, 12)
+        Me.AccountKeyTextEdit.Location = New System.Drawing.Point(882, 12)
         Me.AccountKeyTextEdit.Name = "AccountKeyTextEdit"
         Me.AccountKeyTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.AccountKeyTextEdit.Properties.DataSource = Me.Accounts1BindingSource
         Me.AccountKeyTextEdit.Properties.DisplayMember = "AccountKey"
         Me.AccountKeyTextEdit.Properties.NullText = ""
+        Me.AccountKeyTextEdit.Properties.PopupView = Me.SearchLookUpEdit1View
         Me.AccountKeyTextEdit.Properties.ValueMember = "AccountKey"
-        Me.AccountKeyTextEdit.Properties.View = Me.SearchLookUpEdit1View
-        Me.AccountKeyTextEdit.Size = New System.Drawing.Size(228, 20)
+        Me.AccountKeyTextEdit.Size = New System.Drawing.Size(229, 20)
         Me.AccountKeyTextEdit.StyleController = Me.DataLayoutControl1
         Me.AccountKeyTextEdit.TabIndex = 7
         '
@@ -754,7 +989,7 @@ Partial Class FinancialAccountsDet
         Me.PictureEdit1.Location = New System.Drawing.Point(12, 12)
         Me.PictureEdit1.Name = "PictureEdit1"
         Me.PictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
-        Me.PictureEdit1.Size = New System.Drawing.Size(193, 164)
+        Me.PictureEdit1.Size = New System.Drawing.Size(194, 164)
         Me.PictureEdit1.StyleController = Me.DataLayoutControl1
         Me.PictureEdit1.TabIndex = 46
         '
@@ -763,33 +998,32 @@ Partial Class FinancialAccountsDet
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup1.GroupBordersVisible = False
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem18, Me.LayoutControlItem28, Me.LayoutControlItem2, Me.LayoutControlItem12, Me.LayoutControlItem10, Me.LayoutControlItem16, Me.LayoutControlItem40, Me.LayoutControlItem20, Me.LayoutControlItem30, Me.LayoutControlItem32, Me.LayoutControlItem36, Me.LayoutControlItem42, Me.LayoutControlItem14, Me.LayoutControlItem3, Me.LayoutControlItem24, Me.LayoutControlItem4, Me.LayoutControlItem6, Me.LayoutControlItem8, Me.LayoutControlItem22, Me.LayoutControlItem34, Me.LayoutControlItem1})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "Root"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1198, 389)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1202, 389)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem18
         '
         Me.LayoutControlItem18.Control = Me.PhoneTextEdit
-        Me.LayoutControlItem18.Location = New System.Drawing.Point(197, 96)
+        Me.LayoutControlItem18.Location = New System.Drawing.Point(198, 96)
         Me.LayoutControlItem18.Name = "LayoutControlItem18"
-        Me.LayoutControlItem18.Size = New System.Drawing.Size(494, 24)
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(496, 24)
         Me.LayoutControlItem18.Text = "هاتف"
         Me.LayoutControlItem18.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem28
         '
         Me.LayoutControlItem28.Control = Me.BankCodeTextEdit
-        Me.LayoutControlItem28.Location = New System.Drawing.Point(803, 120)
+        Me.LayoutControlItem28.Location = New System.Drawing.Point(806, 120)
         Me.LayoutControlItem28.Name = "LayoutControlItem28"
-        Me.LayoutControlItem28.Size = New System.Drawing.Size(375, 24)
+        Me.LayoutControlItem28.Size = New System.Drawing.Size(376, 24)
         Me.LayoutControlItem28.Text = "الحساب البنكي"
         Me.LayoutControlItem28.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem2
         '
         Me.LayoutControlItem2.Control = Me.IDSpinEdit
-        Me.LayoutControlItem2.Location = New System.Drawing.Point(197, 0)
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(198, 0)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
         Me.LayoutControlItem2.Size = New System.Drawing.Size(165, 24)
         Me.LayoutControlItem2.Text = "ID:"
@@ -798,90 +1032,90 @@ Partial Class FinancialAccountsDet
         'LayoutControlItem12
         '
         Me.LayoutControlItem12.Control = Me.CityTextEdit
-        Me.LayoutControlItem12.Location = New System.Drawing.Point(421, 72)
+        Me.LayoutControlItem12.Location = New System.Drawing.Point(423, 72)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(288, 24)
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(289, 24)
         Me.LayoutControlItem12.Text = "المدينة"
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem10
         '
         Me.LayoutControlItem10.Control = Me.AddressTextEdit
-        Me.LayoutControlItem10.Location = New System.Drawing.Point(709, 72)
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(712, 72)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(469, 24)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(470, 24)
         Me.LayoutControlItem10.Text = "العنوان"
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem16
         '
         Me.LayoutControlItem16.Control = Me.CountryTextEdit
-        Me.LayoutControlItem16.Location = New System.Drawing.Point(717, 48)
+        Me.LayoutControlItem16.Location = New System.Drawing.Point(720, 48)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(461, 24)
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(462, 24)
         Me.LayoutControlItem16.Text = "المسؤول"
         Me.LayoutControlItem16.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem40
         '
         Me.LayoutControlItem40.Control = Me.SPhoneTextEdit
-        Me.LayoutControlItem40.Location = New System.Drawing.Point(197, 48)
+        Me.LayoutControlItem40.Location = New System.Drawing.Point(198, 48)
         Me.LayoutControlItem40.Name = "LayoutControlItem40"
-        Me.LayoutControlItem40.Size = New System.Drawing.Size(520, 24)
+        Me.LayoutControlItem40.Size = New System.Drawing.Size(522, 24)
         Me.LayoutControlItem40.Text = "المحمول"
         Me.LayoutControlItem40.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem20
         '
         Me.LayoutControlItem20.Control = Me.FaxTextEdit
-        Me.LayoutControlItem20.Location = New System.Drawing.Point(691, 96)
+        Me.LayoutControlItem20.Location = New System.Drawing.Point(694, 96)
         Me.LayoutControlItem20.Name = "LayoutControlItem20"
-        Me.LayoutControlItem20.Size = New System.Drawing.Size(487, 24)
+        Me.LayoutControlItem20.Size = New System.Drawing.Size(488, 24)
         Me.LayoutControlItem20.Text = "فاكس"
         Me.LayoutControlItem20.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem30
         '
         Me.LayoutControlItem30.Control = Me.BranchCodeTextEdit
-        Me.LayoutControlItem30.Location = New System.Drawing.Point(543, 120)
+        Me.LayoutControlItem30.Location = New System.Drawing.Point(545, 120)
         Me.LayoutControlItem30.Name = "LayoutControlItem30"
-        Me.LayoutControlItem30.Size = New System.Drawing.Size(260, 24)
+        Me.LayoutControlItem30.Size = New System.Drawing.Size(261, 24)
         Me.LayoutControlItem30.Text = "الفرع"
         Me.LayoutControlItem30.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem32
         '
         Me.LayoutControlItem32.Control = Me.BankAccountTextEdit
-        Me.LayoutControlItem32.Location = New System.Drawing.Point(197, 120)
+        Me.LayoutControlItem32.Location = New System.Drawing.Point(198, 120)
         Me.LayoutControlItem32.Name = "LayoutControlItem32"
-        Me.LayoutControlItem32.Size = New System.Drawing.Size(346, 24)
+        Me.LayoutControlItem32.Size = New System.Drawing.Size(347, 24)
         Me.LayoutControlItem32.Text = "البنك"
         Me.LayoutControlItem32.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem36
         '
         Me.LayoutControlItem36.Control = Me.EMailTextEdit
-        Me.LayoutControlItem36.Location = New System.Drawing.Point(197, 144)
+        Me.LayoutControlItem36.Location = New System.Drawing.Point(198, 144)
         Me.LayoutControlItem36.Name = "LayoutControlItem36"
-        Me.LayoutControlItem36.Size = New System.Drawing.Size(520, 24)
+        Me.LayoutControlItem36.Size = New System.Drawing.Size(522, 24)
         Me.LayoutControlItem36.Text = "الايميل"
         Me.LayoutControlItem36.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem42
         '
         Me.LayoutControlItem42.Control = Me.WebSiteTextEdit
-        Me.LayoutControlItem42.Location = New System.Drawing.Point(717, 144)
+        Me.LayoutControlItem42.Location = New System.Drawing.Point(720, 144)
         Me.LayoutControlItem42.Name = "LayoutControlItem42"
-        Me.LayoutControlItem42.Size = New System.Drawing.Size(461, 24)
+        Me.LayoutControlItem42.Size = New System.Drawing.Size(462, 24)
         Me.LayoutControlItem42.Text = "ملاحظات الفاتورة"
         Me.LayoutControlItem42.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem14
         '
         Me.LayoutControlItem14.Control = Me.ZipTextEdit
-        Me.LayoutControlItem14.Location = New System.Drawing.Point(197, 72)
+        Me.LayoutControlItem14.Location = New System.Drawing.Point(198, 72)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
-        Me.LayoutControlItem14.Size = New System.Drawing.Size(224, 24)
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(225, 24)
         Me.LayoutControlItem14.Text = "سعر الغسلة"
         Me.LayoutControlItem14.TextSize = New System.Drawing.Size(76, 13)
         '
@@ -891,7 +1125,7 @@ Partial Class FinancialAccountsDet
         Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem3.MinSize = New System.Drawing.Size(24, 24)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(197, 168)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(198, 168)
         Me.LayoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
@@ -901,52 +1135,52 @@ Partial Class FinancialAccountsDet
         Me.LayoutControlItem24.Control = Me.DetailsTextEdit
         Me.LayoutControlItem24.Location = New System.Drawing.Point(0, 168)
         Me.LayoutControlItem24.Name = "LayoutControlItem24"
-        Me.LayoutControlItem24.Size = New System.Drawing.Size(1178, 24)
+        Me.LayoutControlItem24.Size = New System.Drawing.Size(1182, 24)
         Me.LayoutControlItem24.Text = "ملاحظات"
         Me.LayoutControlItem24.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.AccountKeyTextEdit
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(867, 0)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(870, 0)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(311, 24)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(312, 24)
         Me.LayoutControlItem4.Text = "رقم الحساب"
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.Control = Me.FullNameTextEdit
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(362, 0)
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(363, 0)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(505, 24)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(507, 24)
         Me.LayoutControlItem6.Text = "الحساب"
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.SortGroupTextEdit
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(814, 24)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(817, 24)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(364, 24)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(365, 24)
         Me.LayoutControlItem8.Text = "التصنيف"
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem22
         '
         Me.LayoutControlItem22.Control = Me.FilterTextEdit
-        Me.LayoutControlItem22.Location = New System.Drawing.Point(197, 24)
+        Me.LayoutControlItem22.Location = New System.Drawing.Point(198, 24)
         Me.LayoutControlItem22.Name = "LayoutControlItem22"
-        Me.LayoutControlItem22.Size = New System.Drawing.Size(306, 24)
+        Me.LayoutControlItem22.Size = New System.Drawing.Size(307, 24)
         Me.LayoutControlItem22.Text = "فلتر"
         Me.LayoutControlItem22.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem34
         '
         Me.LayoutControlItem34.Control = Me.CostCodeTextEdit
-        Me.LayoutControlItem34.Location = New System.Drawing.Point(503, 24)
+        Me.LayoutControlItem34.Location = New System.Drawing.Point(505, 24)
         Me.LayoutControlItem34.Name = "LayoutControlItem34"
-        Me.LayoutControlItem34.Size = New System.Drawing.Size(311, 24)
+        Me.LayoutControlItem34.Size = New System.Drawing.Size(312, 24)
         Me.LayoutControlItem34.Text = "المنطقة"
         Me.LayoutControlItem34.TextSize = New System.Drawing.Size(76, 13)
         '
@@ -955,251 +1189,16 @@ Partial Class FinancialAccountsDet
         Me.LayoutControlItem1.Control = Me.GridControl1
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 192)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(1178, 177)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(1182, 177)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
-        '
-        'XtraTabPage2
-        '
-        Me.XtraTabPage2.Controls.Add(Me.PanelControl3)
-        Me.XtraTabPage2.Controls.Add(Me.PanelControl1)
-        Me.XtraTabPage2.Name = "XtraTabPage2"
-        Me.XtraTabPage2.Size = New System.Drawing.Size(1198, 432)
-        Me.XtraTabPage2.Text = "كشف حساب"
-        '
-        'PanelControl3
-        '
-        Me.PanelControl3.Controls.Add(Me.GridControl2)
-        Me.PanelControl3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelControl3.Location = New System.Drawing.Point(0, 41)
-        Me.PanelControl3.Name = "PanelControl3"
-        Me.PanelControl3.Size = New System.Drawing.Size(1198, 391)
-        Me.PanelControl3.TabIndex = 1
-        '
-        'GridControl2
-        '
-        Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl2.EmbeddedNavigator.Appearance.Options.UseTextOptions = True
-        Me.GridControl2.EmbeddedNavigator.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.GridControl2.EmbeddedNavigator.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.GridControl2.Location = New System.Drawing.Point(2, 2)
-        Me.GridControl2.MainView = Me.GridView2
-        Me.GridControl2.Name = "GridControl2"
-        Me.GridControl2.Size = New System.Drawing.Size(1194, 387)
-        Me.GridControl2.TabIndex = 0
-        Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
-        '
-        'GridView2
-        '
-        Me.GridView2.Appearance.EvenRow.Options.UseTextOptions = True
-        Me.GridView2.Appearance.EvenRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.GridView2.Appearance.FixedLine.Options.UseTextOptions = True
-        Me.GridView2.Appearance.FixedLine.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.GridView2.Appearance.GroupRow.Options.UseTextOptions = True
-        Me.GridView2.Appearance.GroupRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.GridView2.Appearance.HeaderPanel.Options.UseTextOptions = True
-        Me.GridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.GridView2.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.GridView2.Appearance.HorzLine.Options.UseTextOptions = True
-        Me.GridView2.Appearance.HorzLine.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.GridView2.Appearance.OddRow.Options.UseTextOptions = True
-        Me.GridView2.Appearance.OddRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.GridView2.Appearance.Preview.Options.UseTextOptions = True
-        Me.GridView2.Appearance.Preview.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.GridView2.Appearance.Preview.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.GridView2.Appearance.Row.Options.UseTextOptions = True
-        Me.GridView2.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.GridView2.AppearancePrint.HeaderPanel.Options.UseTextOptions = True
-        Me.GridView2.AppearancePrint.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.GridView2.AppearancePrint.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.ColDate, Me.ColDocNo1, Me.ColDoc2, Me.ColDescription, Me.ColDebit, Me.ColCredit, Me.ColSorting, Me.ColID})
-        GridFormatRule1.ApplyToRow = True
-        GridFormatRule1.Name = "Format0"
-        FormatConditionRuleExpression1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        FormatConditionRuleExpression1.Appearance.Options.UseBackColor = True
-        FormatConditionRuleExpression1.Expression = "[SORTING] < 999999999"
-        GridFormatRule1.Rule = FormatConditionRuleExpression1
-        Me.GridView2.FormatRules.Add(GridFormatRule1)
-        Me.GridView2.GridControl = Me.GridControl2
-        Me.GridView2.GroupFormat = ""
-        Me.GridView2.Name = "GridView2"
-        Me.GridView2.OptionsBehavior.Editable = False
-        Me.GridView2.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click
-        Me.GridView2.OptionsBehavior.ReadOnly = True
-        Me.GridView2.OptionsSelection.MultiSelect = True
-        Me.GridView2.OptionsView.ShowFooter = True
-        Me.GridView2.OptionsView.ShowGroupPanel = False
-        '
-        'ColDate
-        '
-        Me.ColDate.AppearanceCell.Options.UseTextOptions = True
-        Me.ColDate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColDate.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColDate.AppearanceHeader.Options.UseTextOptions = True
-        Me.ColDate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColDate.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColDate.Caption = "التاريخ"
-        Me.ColDate.FieldName = "ALIAS6F"
-        Me.ColDate.Name = "ColDate"
-        Me.ColDate.OptionsColumn.AllowEdit = False
-        Me.ColDate.Visible = True
-        Me.ColDate.VisibleIndex = 0
-        '
-        'ColDocNo1
-        '
-        Me.ColDocNo1.AppearanceCell.Options.UseTextOptions = True
-        Me.ColDocNo1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColDocNo1.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColDocNo1.AppearanceHeader.Options.UseTextOptions = True
-        Me.ColDocNo1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColDocNo1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColDocNo1.Caption = "رقم السند1"
-        Me.ColDocNo1.FieldName = "ALIAS8F"
-        Me.ColDocNo1.Name = "ColDocNo1"
-        Me.ColDocNo1.OptionsColumn.AllowEdit = False
-        Me.ColDocNo1.Visible = True
-        Me.ColDocNo1.VisibleIndex = 1
-        '
-        'ColDoc2
-        '
-        Me.ColDoc2.AppearanceCell.Options.UseTextOptions = True
-        Me.ColDoc2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColDoc2.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColDoc2.AppearanceHeader.Options.UseTextOptions = True
-        Me.ColDoc2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColDoc2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColDoc2.Caption = "رقم السند2"
-        Me.ColDoc2.FieldName = "ALIAS9F"
-        Me.ColDoc2.Name = "ColDoc2"
-        Me.ColDoc2.OptionsColumn.AllowEdit = False
-        Me.ColDoc2.Visible = True
-        Me.ColDoc2.VisibleIndex = 2
-        '
-        'ColDescription
-        '
-        Me.ColDescription.AppearanceCell.Options.UseTextOptions = True
-        Me.ColDescription.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColDescription.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColDescription.AppearanceHeader.Options.UseTextOptions = True
-        Me.ColDescription.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColDescription.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColDescription.Caption = "البيان"
-        Me.ColDescription.FieldName = "ALIAS10F"
-        Me.ColDescription.Name = "ColDescription"
-        Me.ColDescription.OptionsColumn.AllowEdit = False
-        Me.ColDescription.Visible = True
-        Me.ColDescription.VisibleIndex = 3
-        '
-        'ColDebit
-        '
-        Me.ColDebit.AppearanceCell.Options.UseTextOptions = True
-        Me.ColDebit.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColDebit.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColDebit.AppearanceHeader.Options.UseTextOptions = True
-        Me.ColDebit.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColDebit.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColDebit.Caption = "المدين"
-        Me.ColDebit.FieldName = "ALIAS12F_DEB"
-        Me.ColDebit.Name = "ColDebit"
-        Me.ColDebit.OptionsColumn.AllowEdit = False
-        Me.ColDebit.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ALIAS12F_DEB", "{0}")})
-        Me.ColDebit.Visible = True
-        Me.ColDebit.VisibleIndex = 4
-        '
-        'ColCredit
-        '
-        Me.ColCredit.AppearanceCell.Options.UseTextOptions = True
-        Me.ColCredit.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColCredit.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColCredit.AppearanceHeader.Options.UseTextOptions = True
-        Me.ColCredit.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.ColCredit.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.ColCredit.Caption = "دائن"
-        Me.ColCredit.FieldName = "ALIAS12F_CR"
-        Me.ColCredit.Name = "ColCredit"
-        Me.ColCredit.OptionsColumn.AllowEdit = False
-        Me.ColCredit.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ALIAS12F_CR", "{0}")})
-        Me.ColCredit.Visible = True
-        Me.ColCredit.VisibleIndex = 5
-        '
-        'ColID
-        '
-        Me.ColID.Caption = "رقم الحركة"
-        Me.ColID.FieldName = "ALIAS2F"
-        Me.ColID.Name = "ColID"
-        Me.ColID.OptionsColumn.AllowEdit = False
-        '
-        'PanelControl1
-        '
-        Me.PanelControl1.Controls.Add(Me.SimpleButton1)
-        Me.PanelControl1.Controls.Add(Me.CheckBox1)
-        Me.PanelControl1.Controls.Add(Me.DateEditTo)
-        Me.PanelControl1.Controls.Add(Me.DateEditFrom)
-        Me.PanelControl1.Controls.Add(Me.TextEdit2)
-        Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
-        Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(1198, 41)
-        Me.PanelControl1.TabIndex = 0
-        '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton1.Location = New System.Drawing.Point(497, 8)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(100, 20)
-        Me.SimpleButton1.TabIndex = 3
-        Me.SimpleButton1.Text = "موافق"
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(5, 12)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(114, 17)
-        Me.CheckBox1.TabIndex = 2
-        Me.CheckBox1.Text = "ترتيب حسب wallet"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'DateEditTo
-        '
-        Me.DateEditTo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateEditTo.EditValue = Nothing
-        Me.DateEditTo.Location = New System.Drawing.Point(603, 8)
-        Me.DateEditTo.Name = "DateEditTo"
-        Me.DateEditTo.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEditTo.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEditTo.Size = New System.Drawing.Size(135, 20)
-        Me.DateEditTo.TabIndex = 1
-        '
-        'DateEditFrom
-        '
-        Me.DateEditFrom.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateEditFrom.EditValue = Nothing
-        Me.DateEditFrom.Location = New System.Drawing.Point(744, 8)
-        Me.DateEditFrom.Name = "DateEditFrom"
-        Me.DateEditFrom.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEditFrom.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEditFrom.Size = New System.Drawing.Size(135, 20)
-        Me.DateEditFrom.TabIndex = 1
-        '
-        'TextEdit2
-        '
-        Me.TextEdit2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextEdit2.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.SqlDataSource1, "Accounts.FullName", True))
-        Me.TextEdit2.DataBindings.Add(New System.Windows.Forms.Binding("ReadOnly", Me.SqlDataSource1, "Accounts.FullName", True))
-        Me.TextEdit2.Location = New System.Drawing.Point(885, 9)
-        Me.TextEdit2.Name = "TextEdit2"
-        Me.TextEdit2.Properties.ReadOnly = True
-        Me.TextEdit2.Size = New System.Drawing.Size(308, 20)
-        Me.TextEdit2.TabIndex = 0
         '
         'XtraTabPage3
         '
         Me.XtraTabPage3.AutoScroll = True
         Me.XtraTabPage3.Controls.Add(Me.LayoutControl1)
         Me.XtraTabPage3.Name = "XtraTabPage3"
-        Me.XtraTabPage3.Size = New System.Drawing.Size(1196, 430)
+        Me.XtraTabPage3.Size = New System.Drawing.Size(1202, 435)
         Me.XtraTabPage3.Text = "تفاصيل المهمة"
         '
         'LayoutControl1
@@ -1210,7 +1209,7 @@ Partial Class FinancialAccountsDet
         Me.LayoutControl1.Name = "LayoutControl1"
         Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl1.Root = Me.LayoutControlGroup2
-        Me.LayoutControl1.Size = New System.Drawing.Size(1196, 430)
+        Me.LayoutControl1.Size = New System.Drawing.Size(1202, 435)
         Me.LayoutControl1.TabIndex = 1
         Me.LayoutControl1.Text = "LayoutControl1"
         '
@@ -1219,7 +1218,7 @@ Partial Class FinancialAccountsDet
         Me.CRMJobNameGridControl.Location = New System.Drawing.Point(12, 12)
         Me.CRMJobNameGridControl.MainView = Me.GridView3
         Me.CRMJobNameGridControl.Name = "CRMJobNameGridControl"
-        Me.CRMJobNameGridControl.Size = New System.Drawing.Size(1172, 361)
+        Me.CRMJobNameGridControl.Size = New System.Drawing.Size(1178, 365)
         Me.CRMJobNameGridControl.TabIndex = 0
         Me.CRMJobNameGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
@@ -1234,9 +1233,8 @@ Partial Class FinancialAccountsDet
         Me.LayoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup2.GroupBordersVisible = False
         Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem5, Me.EmptySpaceItem2})
-        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(1196, 430)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(1202, 435)
         Me.LayoutControlGroup2.TextVisible = False
         '
         'LayoutControlItem5
@@ -1244,16 +1242,16 @@ Partial Class FinancialAccountsDet
         Me.LayoutControlItem5.Control = Me.CRMJobNameGridControl
         Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(1176, 365)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(1182, 369)
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem5.TextVisible = False
         '
         'EmptySpaceItem2
         '
         Me.EmptySpaceItem2.AllowHotTrack = False
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 365)
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 369)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(1176, 45)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(1182, 46)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'CRMJobNameBindingSource
@@ -1279,6 +1277,8 @@ Partial Class FinancialAccountsDet
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CardsTableAdapter = Nothing
         Me.TableAdapterManager.CardsTransTableAdapter = Nothing
+        Me.TableAdapterManager.CarsAccidentTableAdapter = Nothing
+        Me.TableAdapterManager.CarsDriversTableAdapter = Nothing
         Me.TableAdapterManager.CarsInsurancCompaniesTableAdapter = Nothing
         Me.TableAdapterManager.CarsInsuranceTransTableAdapter = Nothing
         Me.TableAdapterManager.CarsMarkaTableAdapter = Nothing
@@ -1293,13 +1293,19 @@ Partial Class FinancialAccountsDet
         Me.TableAdapterManager.CRMCustomersOrdersTableAdapter = Nothing
         Me.TableAdapterManager.CRMJobNameTableAdapter = Nothing
         Me.TableAdapterManager.CRMTasksTableAdapter = Nothing
+        Me.TableAdapterManager.DATATableAdapter = Nothing
         Me.TableAdapterManager.DevelopNotesTableAdapter = Nothing
         Me.TableAdapterManager.EmployeesDataTableAdapter = Nothing
         Me.TableAdapterManager.FinancialBanksDocTableAdapter = Nothing
-        'Me.TableAdapterManager.FinancialChequesBackTableAdapter = Nothing
+        Me.TableAdapterManager.FinancialChequesBackTableAdapter = Nothing
         Me.TableAdapterManager.PrintingSystemDocsTableAdapter = Nothing
         Me.TableAdapterManager.PrintingSystemJobsTableAdapter = Nothing
         Me.TableAdapterManager.ReceiptDataTableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveDocSort11TableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveDocSort1TableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveDocStatusTableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveDocumentsTableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveTableAdapter = Nothing
         Me.TableAdapterManager.transDocTableAdapter = Nothing
         Me.TableAdapterManager.transTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = DXApplication5.CRMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -1324,6 +1330,19 @@ Partial Class FinancialAccountsDet
         Me.PanelControl2.ResumeLayout(False)
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.XtraTabControl1.ResumeLayout(False)
+        Me.XtraTabPage2.ResumeLayout(False)
+        CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelControl3.ResumeLayout(False)
+        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelControl1.ResumeLayout(False)
+        Me.PanelControl1.PerformLayout()
+        CType(Me.DateEditTo.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEditTo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEditFrom.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEditFrom.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.XtraTabPage1.ResumeLayout(False)
         CType(Me.DataLayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DataLayoutControl1.ResumeLayout(False)
@@ -1374,19 +1393,6 @@ Partial Class FinancialAccountsDet
         CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.XtraTabPage2.ResumeLayout(False)
-        CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl3.ResumeLayout(False)
-        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl1.ResumeLayout(False)
-        Me.PanelControl1.PerformLayout()
-        CType(Me.DateEditTo.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DateEditTo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DateEditFrom.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DateEditFrom.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.XtraTabPage3.ResumeLayout(False)
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)

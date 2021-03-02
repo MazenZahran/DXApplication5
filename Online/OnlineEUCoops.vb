@@ -9,6 +9,7 @@ Public Class OnlineEUCoops
         Try
             Dim MySqlConnection = New MySqlConnection
             Dim MySqlString As String = "server=alhuda.ps;Port=3306; User ID=alhudaps_mazen; password=1031342@mM; database= " & DataBaseName.Text & " ; Connect Timeout=1000"
+            '  Dim MySqlString As String = "server=alhuda.ps;Port=3306; User ID=alhudaps_mazen; password=1031342@mM; database= " & DataBaseName.Text & " ; Connect Timeout=1000"
             MySqlConnection.ConnectionString = MySqlString
 
             MySqlConnection.Open()

@@ -20,483 +20,622 @@ Partial Class OrpakTransactions
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim SelectQuery1 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
-        Dim Column1 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression1 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table1 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim Column2 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression2 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column3 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression3 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column4 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression4 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column5 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression5 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column6 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression6 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column7 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression7 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column8 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression8 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column9 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression9 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column10 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression10 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column11 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression11 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column12 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression12 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table2 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim Column13 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression13 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column14 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression14 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Table3 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
-        Dim Column15 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression15 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column16 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression16 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column17 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression17 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column18 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression18 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column19 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression19 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim Column20 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
-        Dim ColumnExpression20 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
-        Dim QueryParameter1 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim QueryParameter2 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
-        Dim Join1 As DevExpress.DataAccess.Sql.Join = New DevExpress.DataAccess.Sql.Join()
-        Dim RelationColumnInfo1 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
-        Dim Join2 As DevExpress.DataAccess.Sql.Join = New DevExpress.DataAccess.Sql.Join()
-        Dim RelationColumnInfo2 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(OrpakTransactions))
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
-        Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.colshift_id = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.coltimestamp = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colid = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.coltype = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colpump = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colproduct_code = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colsale = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colppv = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colquantity = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colmean_name = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colproduct_name = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colcode = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colname = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colstn_name = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.Colshift_id = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColID = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColTransDate = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColTransTime = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Coltype = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colpump = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colproduct_code = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colproduct_name = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colquantity = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colppv = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colsale = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Coltag = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colfleet_id = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colmean_id = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colplate = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colmean_name = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colstn_id = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colcode = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColFleetName = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Colstn_name = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
+        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SearchStations = New DevExpress.XtraEditors.SearchLookUpEdit()
+        Me.StationsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HO_DATADataSet = New DXApplication5.HO_DATADataSet()
+        Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.colstn_id1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colstn_name1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.TextTransCount = New DevExpress.XtraEditors.TextEdit()
+        Me.DateEdit2 = New DevExpress.XtraEditors.DateEdit()
+        Me.DateEdit1 = New DevExpress.XtraEditors.DateEdit()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
-        Me.colplate = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colodometer = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colmean_id = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colfleet_id = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.coldate = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.coltime = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Root = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
+        Me.DockPanel1 = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
+        Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
+        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.StationsTableAdapter = New DXApplication5.HO_DATADataSetTableAdapters.stationsTableAdapter()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl1.SuspendLayout()
-        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl2.SuspendLayout()
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LayoutControl1.SuspendLayout()
+        CType(Me.SearchStations.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StationsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HO_DATADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextTransCount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit2.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit1.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Root, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DockPanel1.SuspendLayout()
+        Me.DockPanel1_Container.SuspendLayout()
+        CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LayoutControl2.SuspendLayout()
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridControl1
         '
         Me.GridControl1.DataMember = "transactions"
-        Me.GridControl1.DataSource = Me.SqlDataSource1
-        Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl1.Location = New System.Drawing.Point(2, 2)
+        Me.GridControl1.Location = New System.Drawing.Point(12, 12)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(1200, 491)
+        Me.GridControl1.Size = New System.Drawing.Size(1004, 530)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
-        'SqlDataSource1
-        '
-        Me.SqlDataSource1.ConnectionName = "HO_DATAConnectionString"
-        Me.SqlDataSource1.Name = "SqlDataSource1"
-        ColumnExpression1.ColumnName = "shift_id"
-        Table1.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""1426"" />"
-        Table1.Name = "transactions"
-        ColumnExpression1.Table = Table1
-        Column1.Expression = ColumnExpression1
-        ColumnExpression2.ColumnName = "timestamp"
-        ColumnExpression2.Table = Table1
-        Column2.Expression = ColumnExpression2
-        ColumnExpression3.ColumnName = "id"
-        ColumnExpression3.Table = Table1
-        Column3.Expression = ColumnExpression3
-        ColumnExpression4.ColumnName = "type"
-        ColumnExpression4.Table = Table1
-        Column4.Expression = ColumnExpression4
-        ColumnExpression5.ColumnName = "pump"
-        ColumnExpression5.Table = Table1
-        Column5.Expression = ColumnExpression5
-        ColumnExpression6.ColumnName = "product_code"
-        ColumnExpression6.Table = Table1
-        Column6.Expression = ColumnExpression6
-        ColumnExpression7.ColumnName = "sale"
-        ColumnExpression7.Table = Table1
-        Column7.Expression = ColumnExpression7
-        ColumnExpression8.ColumnName = "ppv"
-        ColumnExpression8.Table = Table1
-        Column8.Expression = ColumnExpression8
-        ColumnExpression9.ColumnName = "quantity"
-        ColumnExpression9.Table = Table1
-        Column9.Expression = ColumnExpression9
-        ColumnExpression10.ColumnName = "mean_name"
-        ColumnExpression10.Table = Table1
-        Column10.Expression = ColumnExpression10
-        ColumnExpression11.ColumnName = "product_name"
-        ColumnExpression11.Table = Table1
-        Column11.Expression = ColumnExpression11
-        ColumnExpression12.ColumnName = "code"
-        Table2.MetaSerializable = "<Meta X=""185"" Y=""30"" Width=""125"" Height=""1046"" />"
-        Table2.Name = "fleets"
-        ColumnExpression12.Table = Table2
-        Column12.Expression = ColumnExpression12
-        ColumnExpression13.ColumnName = "name"
-        ColumnExpression13.Table = Table2
-        Column13.Expression = ColumnExpression13
-        ColumnExpression14.ColumnName = "stn_name"
-        Table3.MetaSerializable = "<Meta X=""340"" Y=""30"" Width=""125"" Height=""875"" />"
-        Table3.Name = "stations"
-        ColumnExpression14.Table = Table3
-        Column14.Expression = ColumnExpression14
-        ColumnExpression15.ColumnName = "odometer"
-        ColumnExpression15.Table = Table1
-        Column15.Expression = ColumnExpression15
-        ColumnExpression16.ColumnName = "fleet_id"
-        ColumnExpression16.Table = Table1
-        Column16.Expression = ColumnExpression16
-        ColumnExpression17.ColumnName = "mean_id"
-        ColumnExpression17.Table = Table1
-        Column17.Expression = ColumnExpression17
-        ColumnExpression18.ColumnName = "plate"
-        ColumnExpression18.Table = Table1
-        Column18.Expression = ColumnExpression18
-        ColumnExpression19.ColumnName = "date"
-        ColumnExpression19.Table = Table1
-        Column19.Expression = ColumnExpression19
-        ColumnExpression20.ColumnName = "time"
-        ColumnExpression20.Table = Table1
-        Column20.Expression = ColumnExpression20
-        SelectQuery1.Columns.Add(Column1)
-        SelectQuery1.Columns.Add(Column2)
-        SelectQuery1.Columns.Add(Column3)
-        SelectQuery1.Columns.Add(Column4)
-        SelectQuery1.Columns.Add(Column5)
-        SelectQuery1.Columns.Add(Column6)
-        SelectQuery1.Columns.Add(Column7)
-        SelectQuery1.Columns.Add(Column8)
-        SelectQuery1.Columns.Add(Column9)
-        SelectQuery1.Columns.Add(Column10)
-        SelectQuery1.Columns.Add(Column11)
-        SelectQuery1.Columns.Add(Column12)
-        SelectQuery1.Columns.Add(Column13)
-        SelectQuery1.Columns.Add(Column14)
-        SelectQuery1.Columns.Add(Column15)
-        SelectQuery1.Columns.Add(Column16)
-        SelectQuery1.Columns.Add(Column17)
-        SelectQuery1.Columns.Add(Column18)
-        SelectQuery1.Columns.Add(Column19)
-        SelectQuery1.Columns.Add(Column20)
-        SelectQuery1.FilterString = "[transactions.date] Between(?Parameter2, ?Parameter3)"
-        SelectQuery1.GroupFilterString = ""
-        SelectQuery1.MetaSerializable = Nothing
-        SelectQuery1.Name = "transactions"
-        QueryParameter1.Name = "Parameter2"
-        QueryParameter1.Type = GetType(Date)
-        QueryParameter1.ValueInfo = "1753-01-01"
-        QueryParameter2.Name = "Parameter3"
-        QueryParameter2.Type = GetType(Date)
-        QueryParameter2.ValueInfo = "1753-01-01"
-        SelectQuery1.Parameters.Add(QueryParameter1)
-        SelectQuery1.Parameters.Add(QueryParameter2)
-        RelationColumnInfo1.NestedKeyColumn = "id"
-        RelationColumnInfo1.ParentKeyColumn = "fleet_id"
-        Join1.KeyColumns.Add(RelationColumnInfo1)
-        Join1.Nested = Table2
-        Join1.Parent = Table1
-        RelationColumnInfo2.NestedKeyColumn = "stn_id"
-        RelationColumnInfo2.ParentKeyColumn = "stn_id"
-        Join2.KeyColumns.Add(RelationColumnInfo2)
-        Join2.Nested = Table3
-        Join2.Parent = Table1
-        SelectQuery1.Relations.Add(Join1)
-        SelectQuery1.Relations.Add(Join2)
-        SelectQuery1.Tables.Add(Table1)
-        SelectQuery1.Tables.Add(Table2)
-        SelectQuery1.Tables.Add(Table3)
-        SelectQuery1.Top = 1000000
-        Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {SelectQuery1})
-        Me.SqlDataSource1.ResultSchemaSerializable = resources.GetString("SqlDataSource1.ResultSchemaSerializable")
-        '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colshift_id, Me.coltimestamp, Me.colid, Me.coltype, Me.colpump, Me.colproduct_code, Me.colsale, Me.colppv, Me.colquantity, Me.colmean_name, Me.colproduct_name, Me.colcode, Me.colname, Me.colstn_name, Me.colplate, Me.colodometer, Me.colmean_id, Me.colfleet_id, Me.coldate, Me.coltime})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.Colshift_id, Me.ColID, Me.ColTransDate, Me.ColTransTime, Me.Coltype, Me.Colpump, Me.Colproduct_code, Me.Colproduct_name, Me.Colquantity, Me.Colppv, Me.Colsale, Me.Coltag, Me.Colfleet_id, Me.Colmean_id, Me.Colplate, Me.Colmean_name, Me.Colstn_id, Me.Colcode, Me.ColFleetName, Me.Colstn_name})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsBehavior.Editable = False
+        Me.GridView1.OptionsBehavior.ReadOnly = True
+        Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowFooter = True
         '
-        'colshift_id
+        'Colshift_id
         '
-        Me.colshift_id.FieldName = "shift_id"
-        Me.colshift_id.GroupFormat.FormatString = "yyyy/MM/dd HH:mm"
-        Me.colshift_id.GroupFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.colshift_id.Name = "colshift_id"
-        Me.colshift_id.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "shift_id", "عدد {0}")})
-        Me.colshift_id.Visible = True
-        Me.colshift_id.VisibleIndex = 0
+        Me.Colshift_id.Caption = "رقم الشفت"
+        Me.Colshift_id.FieldName = "shift_id"
+        Me.Colshift_id.Name = "Colshift_id"
+        Me.Colshift_id.Visible = True
+        Me.Colshift_id.VisibleIndex = 1
         '
-        'coltimestamp
+        'ColID
         '
-        Me.coltimestamp.DisplayFormat.FormatString = "yyyy/MM/dd HH:mm"
-        Me.coltimestamp.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.coltimestamp.FieldName = "timestamp"
-        Me.coltimestamp.Name = "coltimestamp"
-        Me.coltimestamp.Visible = True
-        Me.coltimestamp.VisibleIndex = 1
+        Me.ColID.Caption = "رقم الحركة"
+        Me.ColID.FieldName = "id"
+        Me.ColID.Name = "ColID"
+        Me.ColID.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "id", "عدد الحركات{0}")})
+        Me.ColID.Visible = True
+        Me.ColID.VisibleIndex = 2
         '
-        'colid
+        'ColTransDate
         '
-        Me.colid.FieldName = "id"
-        Me.colid.Name = "colid"
-        Me.colid.Visible = True
-        Me.colid.VisibleIndex = 2
+        Me.ColTransDate.Caption = "التاريخ"
+        Me.ColTransDate.FieldName = "TransDate"
+        Me.ColTransDate.Name = "ColTransDate"
+        Me.ColTransDate.Visible = True
+        Me.ColTransDate.VisibleIndex = 3
         '
-        'coltype
+        'ColTransTime
         '
-        Me.coltype.FieldName = "type"
-        Me.coltype.Name = "coltype"
-        Me.coltype.Visible = True
-        Me.coltype.VisibleIndex = 3
+        Me.ColTransTime.Caption = "الوقت"
+        Me.ColTransTime.FieldName = "TransTime"
+        Me.ColTransTime.Name = "ColTransTime"
+        Me.ColTransTime.Visible = True
+        Me.ColTransTime.VisibleIndex = 4
         '
-        'colpump
+        'Coltype
         '
-        Me.colpump.FieldName = "pump"
-        Me.colpump.Name = "colpump"
-        Me.colpump.Visible = True
-        Me.colpump.VisibleIndex = 4
+        Me.Coltype.Caption = "النوع"
+        Me.Coltype.FieldName = "type"
+        Me.Coltype.Name = "Coltype"
+        Me.Coltype.Visible = True
+        Me.Coltype.VisibleIndex = 5
         '
-        'colproduct_code
+        'Colpump
         '
-        Me.colproduct_code.FieldName = "product_code"
-        Me.colproduct_code.Name = "colproduct_code"
-        Me.colproduct_code.Visible = True
-        Me.colproduct_code.VisibleIndex = 5
+        Me.Colpump.Caption = "الطرمبة"
+        Me.Colpump.FieldName = "pump"
+        Me.Colpump.Name = "Colpump"
+        Me.Colpump.Visible = True
+        Me.Colpump.VisibleIndex = 6
         '
-        'colsale
+        'Colproduct_code
         '
-        Me.colsale.FieldName = "sale"
-        Me.colsale.Name = "colsale"
-        Me.colsale.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "sale", "SUM={0:0.##}")})
-        Me.colsale.Visible = True
-        Me.colsale.VisibleIndex = 6
+        Me.Colproduct_code.Caption = "رقم الصنف"
+        Me.Colproduct_code.FieldName = "product_code"
+        Me.Colproduct_code.Name = "Colproduct_code"
+        Me.Colproduct_code.Visible = True
+        Me.Colproduct_code.VisibleIndex = 7
         '
-        'colppv
+        'Colproduct_name
         '
-        Me.colppv.FieldName = "ppv"
-        Me.colppv.Name = "colppv"
-        Me.colppv.Visible = True
-        Me.colppv.VisibleIndex = 7
+        Me.Colproduct_name.Caption = "اسم الصنف"
+        Me.Colproduct_name.FieldName = "product_name"
+        Me.Colproduct_name.Name = "Colproduct_name"
+        Me.Colproduct_name.Visible = True
+        Me.Colproduct_name.VisibleIndex = 8
         '
-        'colquantity
+        'Colquantity
         '
-        Me.colquantity.FieldName = "quantity"
-        Me.colquantity.Name = "colquantity"
-        Me.colquantity.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", "SUM={0:0.##}")})
-        Me.colquantity.Visible = True
-        Me.colquantity.VisibleIndex = 8
+        Me.Colquantity.Caption = "الكمية"
+        Me.Colquantity.FieldName = "quantity"
+        Me.Colquantity.Name = "Colquantity"
+        Me.Colquantity.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", "SUM={0:0.#}")})
+        Me.Colquantity.Visible = True
+        Me.Colquantity.VisibleIndex = 9
         '
-        'colmean_name
+        'Colppv
         '
-        Me.colmean_name.FieldName = "mean_name"
-        Me.colmean_name.Name = "colmean_name"
-        Me.colmean_name.Visible = True
-        Me.colmean_name.VisibleIndex = 9
+        Me.Colppv.Caption = "السعر"
+        Me.Colppv.FieldName = "ppv"
+        Me.Colppv.Name = "Colppv"
+        Me.Colppv.Visible = True
+        Me.Colppv.VisibleIndex = 10
         '
-        'colproduct_name
+        'Colsale
         '
-        Me.colproduct_name.FieldName = "product_name"
-        Me.colproduct_name.Name = "colproduct_name"
-        Me.colproduct_name.Visible = True
-        Me.colproduct_name.VisibleIndex = 10
+        Me.Colsale.Caption = "المبلغ"
+        Me.Colsale.FieldName = "sale"
+        Me.Colsale.Name = "Colsale"
+        Me.Colsale.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "sale", "SUM={0:0.#}")})
+        Me.Colsale.Visible = True
+        Me.Colsale.VisibleIndex = 11
         '
-        'colcode
+        'Coltag
         '
-        Me.colcode.FieldName = "code"
-        Me.colcode.Name = "colcode"
-        Me.colcode.Visible = True
-        Me.colcode.VisibleIndex = 11
+        Me.Coltag.Caption = "كود البطاقة"
+        Me.Coltag.FieldName = "tag"
+        Me.Coltag.Name = "Coltag"
         '
-        'colname
+        'Colfleet_id
         '
-        Me.colname.FieldName = "name"
-        Me.colname.Name = "colname"
-        Me.colname.Visible = True
-        Me.colname.VisibleIndex = 12
+        Me.Colfleet_id.Caption = "fleet_id"
+        Me.Colfleet_id.FieldName = "fleet_id"
+        Me.Colfleet_id.Name = "Colfleet_id"
         '
-        'colstn_name
+        'Colmean_id
         '
-        Me.colstn_name.FieldName = "stn_name"
-        Me.colstn_name.Name = "colstn_name"
-        Me.colstn_name.Visible = True
-        Me.colstn_name.VisibleIndex = 13
+        Me.Colmean_id.Caption = "mean_id"
+        Me.Colmean_id.FieldName = "mean_id"
+        Me.Colmean_id.Name = "Colmean_id"
         '
-        'PanelControl1
+        'Colplate
         '
-        Me.PanelControl1.Controls.Add(Me.SimpleButton2)
-        Me.PanelControl1.Controls.Add(Me.SimpleButton1)
-        Me.PanelControl1.Controls.Add(Me.DateTimePicker2)
-        Me.PanelControl1.Controls.Add(Me.DateTimePicker1)
-        Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
-        Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(1204, 59)
-        Me.PanelControl1.TabIndex = 1
+        Me.Colplate.Caption = "المركبة"
+        Me.Colplate.FieldName = "plate"
+        Me.Colplate.Name = "Colplate"
+        Me.Colplate.Visible = True
+        Me.Colplate.VisibleIndex = 12
+        '
+        'Colmean_name
+        '
+        Me.Colmean_name.Caption = "رقم البطاقة"
+        Me.Colmean_name.FieldName = "mean_name"
+        Me.Colmean_name.Name = "Colmean_name"
+        Me.Colmean_name.Visible = True
+        Me.Colmean_name.VisibleIndex = 13
+        '
+        'Colstn_id
+        '
+        Me.Colstn_id.Caption = "رقم المحطة"
+        Me.Colstn_id.FieldName = "stn_id"
+        Me.Colstn_id.Name = "Colstn_id"
+        Me.Colstn_id.Visible = True
+        Me.Colstn_id.VisibleIndex = 14
+        '
+        'Colcode
+        '
+        Me.Colcode.Caption = "رقم الزبون"
+        Me.Colcode.FieldName = "code"
+        Me.Colcode.Name = "Colcode"
+        Me.Colcode.Visible = True
+        Me.Colcode.VisibleIndex = 15
+        '
+        'ColFleetName
+        '
+        Me.ColFleetName.Caption = "الزبون"
+        Me.ColFleetName.FieldName = "FleetName"
+        Me.ColFleetName.Name = "ColFleetName"
+        Me.ColFleetName.Visible = True
+        Me.ColFleetName.VisibleIndex = 16
+        '
+        'Colstn_name
+        '
+        Me.Colstn_name.Caption = "المحطة"
+        Me.Colstn_name.FieldName = "stn_name"
+        Me.Colstn_name.Name = "Colstn_name"
+        Me.Colstn_name.Visible = True
+        Me.Colstn_name.VisibleIndex = 0
         '
         'SimpleButton2
         '
-        Me.SimpleButton2.Location = New System.Drawing.Point(60, 20)
+        Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton2.Location = New System.Drawing.Point(96, 491)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(54, 34)
+        Me.SimpleButton2.Size = New System.Drawing.Size(85, 22)
+        Me.SimpleButton2.StyleController = Me.LayoutControl1
         Me.SimpleButton2.TabIndex = 3
         Me.SimpleButton2.Text = "طباعة"
+        '
+        'LayoutControl1
+        '
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton3)
+        Me.LayoutControl1.Controls.Add(Me.SearchStations)
+        Me.LayoutControl1.Controls.Add(Me.TextTransCount)
+        Me.LayoutControl1.Controls.Add(Me.DateEdit2)
+        Me.LayoutControl1.Controls.Add(Me.DateEdit1)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton1)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton2)
+        Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutControl1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControl1.Name = "LayoutControl1"
+        Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
+        Me.LayoutControl1.Root = Me.Root
+        Me.LayoutControl1.Size = New System.Drawing.Size(193, 525)
+        Me.LayoutControl1.TabIndex = 0
+        Me.LayoutControl1.Text = "LayoutControl1"
+        '
+        'SimpleButton3
+        '
+        Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton3.Location = New System.Drawing.Point(12, 491)
+        Me.SimpleButton3.Name = "SimpleButton3"
+        Me.SimpleButton3.Size = New System.Drawing.Size(80, 22)
+        Me.SimpleButton3.StyleController = Me.LayoutControl1
+        Me.SimpleButton3.TabIndex = 8
+        Me.SimpleButton3.Text = "نسخ"
+        '
+        'SearchStations
+        '
+        Me.SearchStations.Location = New System.Drawing.Point(12, 84)
+        Me.SearchStations.Name = "SearchStations"
+        Me.SearchStations.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.SearchStations.Properties.DataSource = Me.StationsBindingSource
+        Me.SearchStations.Properties.DisplayMember = "stn_name"
+        Me.SearchStations.Properties.NullText = ""
+        Me.SearchStations.Properties.PopupView = Me.SearchLookUpEdit1View
+        Me.SearchStations.Properties.ValueMember = "stn_id"
+        Me.SearchStations.Size = New System.Drawing.Size(169, 20)
+        Me.SearchStations.StyleController = Me.LayoutControl1
+        Me.SearchStations.TabIndex = 7
+        '
+        'StationsBindingSource
+        '
+        Me.StationsBindingSource.DataMember = "stations"
+        Me.StationsBindingSource.DataSource = Me.HO_DATADataSet
+        '
+        'HO_DATADataSet
+        '
+        Me.HO_DATADataSet.DataSetName = "HO_DATADataSet"
+        Me.HO_DATADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SearchLookUpEdit1View
+        '
+        Me.SearchLookUpEdit1View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colstn_id1, Me.colstn_name1})
+        Me.SearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.SearchLookUpEdit1View.Name = "SearchLookUpEdit1View"
+        Me.SearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.SearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
+        '
+        'colstn_id1
+        '
+        Me.colstn_id1.FieldName = "stn_id"
+        Me.colstn_id1.Name = "colstn_id1"
+        Me.colstn_id1.Visible = True
+        Me.colstn_id1.VisibleIndex = 0
+        '
+        'colstn_name1
+        '
+        Me.colstn_name1.FieldName = "stn_name"
+        Me.colstn_name1.Name = "colstn_name1"
+        Me.colstn_name1.Visible = True
+        Me.colstn_name1.VisibleIndex = 1
+        '
+        'TextTransCount
+        '
+        Me.TextTransCount.Location = New System.Drawing.Point(12, 12)
+        Me.TextTransCount.Name = "TextTransCount"
+        Me.TextTransCount.Size = New System.Drawing.Size(101, 20)
+        Me.TextTransCount.StyleController = Me.LayoutControl1
+        Me.TextTransCount.TabIndex = 6
+        '
+        'DateEdit2
+        '
+        Me.DateEdit2.EditValue = Nothing
+        Me.DateEdit2.Location = New System.Drawing.Point(12, 60)
+        Me.DateEdit2.Name = "DateEdit2"
+        Me.DateEdit2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit2.Size = New System.Drawing.Size(169, 20)
+        Me.DateEdit2.StyleController = Me.LayoutControl1
+        Me.DateEdit2.TabIndex = 5
+        '
+        'DateEdit1
+        '
+        Me.DateEdit1.EditValue = Nothing
+        Me.DateEdit1.Location = New System.Drawing.Point(12, 36)
+        Me.DateEdit1.Name = "DateEdit1"
+        Me.DateEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit1.Size = New System.Drawing.Size(169, 20)
+        Me.DateEdit1.StyleController = Me.LayoutControl1
+        Me.DateEdit1.TabIndex = 4
         '
         'SimpleButton1
         '
         Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(12, 20)
+        Me.SimpleButton1.Location = New System.Drawing.Point(12, 465)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(42, 33)
+        Me.SimpleButton1.Size = New System.Drawing.Size(169, 22)
+        Me.SimpleButton1.StyleController = Me.LayoutControl1
         Me.SimpleButton1.TabIndex = 2
-        Me.SimpleButton1.Text = "SimpleButton1"
+        Me.SimpleButton1.Text = "تحديث"
         '
-        'DateTimePicker2
+        'Root
         '
-        Me.DateTimePicker2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateTimePicker2.Location = New System.Drawing.Point(985, 33)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(207, 20)
-        Me.DateTimePicker2.TabIndex = 1
+        Me.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.Root.GroupBordersVisible = False
+        Me.Root.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.EmptySpaceItem1, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem7, Me.LayoutControlItem6, Me.LayoutControlItem8})
+        Me.Root.Name = "Root"
+        Me.Root.Size = New System.Drawing.Size(193, 525)
+        Me.Root.TextVisible = False
         '
-        'DateTimePicker1
+        'EmptySpaceItem1
         '
-        Me.DateTimePicker1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateTimePicker1.Location = New System.Drawing.Point(985, 7)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(207, 20)
-        Me.DateTimePicker1.TabIndex = 0
+        Me.EmptySpaceItem1.AllowHotTrack = False
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 96)
+        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(173, 357)
+        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
-        'PanelControl2
+        'LayoutControlItem4
         '
-        Me.PanelControl2.Controls.Add(Me.GridControl1)
-        Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelControl2.Location = New System.Drawing.Point(0, 59)
-        Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(1204, 495)
-        Me.PanelControl2.TabIndex = 2
+        Me.LayoutControlItem4.Control = Me.SimpleButton2
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(84, 479)
+        Me.LayoutControlItem4.Name = "LayoutControlItem4"
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(89, 26)
+        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem4.TextVisible = False
         '
-        'colplate
+        'LayoutControlItem5
         '
-        Me.colplate.FieldName = "plate"
-        Me.colplate.Name = "colplate"
-        Me.colplate.Visible = True
-        Me.colplate.VisibleIndex = 14
+        Me.LayoutControlItem5.Control = Me.SimpleButton1
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 453)
+        Me.LayoutControlItem5.Name = "LayoutControlItem5"
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(173, 26)
+        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem5.TextVisible = False
         '
-        'colodometer
+        'LayoutControlItem1
         '
-        Me.colodometer.FieldName = "odometer"
-        Me.colodometer.Name = "colodometer"
-        Me.colodometer.Visible = True
-        Me.colodometer.VisibleIndex = 15
+        Me.LayoutControlItem1.Control = Me.DateEdit1
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem1.Name = "LayoutControlItem1"
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(173, 24)
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem1.TextVisible = False
         '
-        'colmean_id
+        'LayoutControlItem2
         '
-        Me.colmean_id.FieldName = "mean_id"
-        Me.colmean_id.Name = "colmean_id"
-        Me.colmean_id.Visible = True
-        Me.colmean_id.VisibleIndex = 16
+        Me.LayoutControlItem2.Control = Me.DateEdit2
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 48)
+        Me.LayoutControlItem2.Name = "LayoutControlItem2"
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(173, 24)
+        Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem2.TextVisible = False
         '
-        'colfleet_id
+        'LayoutControlItem7
         '
-        Me.colfleet_id.FieldName = "fleet_id"
-        Me.colfleet_id.Name = "colfleet_id"
-        Me.colfleet_id.Visible = True
-        Me.colfleet_id.VisibleIndex = 17
+        Me.LayoutControlItem7.Control = Me.SearchStations
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 72)
+        Me.LayoutControlItem7.Name = "LayoutControlItem7"
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(173, 24)
+        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem7.TextVisible = False
         '
-        'coldate
+        'LayoutControlItem6
         '
-        Me.coldate.FieldName = "date"
-        Me.coldate.Name = "coldate"
-        Me.coldate.Visible = True
-        Me.coldate.VisibleIndex = 18
+        Me.LayoutControlItem6.Control = Me.TextTransCount
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem6.Name = "LayoutControlItem6"
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(173, 24)
+        Me.LayoutControlItem6.Text = "عدد الحركات"
+        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(56, 13)
         '
-        'coltime
+        'LayoutControlItem8
         '
-        Me.coltime.FieldName = "time"
-        Me.coltime.Name = "coltime"
-        Me.coltime.Visible = True
-        Me.coltime.VisibleIndex = 19
+        Me.LayoutControlItem8.Control = Me.SimpleButton3
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 479)
+        Me.LayoutControlItem8.Name = "LayoutControlItem8"
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(84, 26)
+        Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem8.TextVisible = False
+        '
+        'DockManager1
+        '
+        Me.DockManager1.Form = Me
+        Me.DockManager1.RootPanels.AddRange(New DevExpress.XtraBars.Docking.DockPanel() {Me.DockPanel1})
+        Me.DockManager1.TopZIndexControls.AddRange(New String() {"DevExpress.XtraBars.BarDockControl", "DevExpress.XtraBars.StandaloneBarDockControl", "System.Windows.Forms.MenuStrip", "System.Windows.Forms.StatusStrip", "System.Windows.Forms.StatusBar", "DevExpress.XtraBars.Ribbon.RibbonStatusBar", "DevExpress.XtraBars.Ribbon.RibbonControl", "DevExpress.XtraBars.Navigation.OfficeNavigationBar", "DevExpress.XtraBars.Navigation.TileNavPane", "DevExpress.XtraBars.TabFormControl", "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl", "DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"})
+        '
+        'DockPanel1
+        '
+        Me.DockPanel1.Controls.Add(Me.DockPanel1_Container)
+        Me.DockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
+        Me.DockPanel1.ID = New System.Guid("418fda37-1fd3-4ad8-971f-2478ab9e076b")
+        Me.DockPanel1.Location = New System.Drawing.Point(1028, 0)
+        Me.DockPanel1.Name = "DockPanel1"
+        Me.DockPanel1.OriginalSize = New System.Drawing.Size(200, 200)
+        Me.DockPanel1.Size = New System.Drawing.Size(200, 554)
+        Me.DockPanel1.Text = "DockPanel1"
+        '
+        'DockPanel1_Container
+        '
+        Me.DockPanel1_Container.Controls.Add(Me.LayoutControl1)
+        Me.DockPanel1_Container.Location = New System.Drawing.Point(3, 26)
+        Me.DockPanel1_Container.Name = "DockPanel1_Container"
+        Me.DockPanel1_Container.Size = New System.Drawing.Size(193, 525)
+        Me.DockPanel1_Container.TabIndex = 0
+        '
+        'LayoutControl2
+        '
+        Me.LayoutControl2.Controls.Add(Me.GridControl1)
+        Me.LayoutControl2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutControl2.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControl2.Name = "LayoutControl2"
+        Me.LayoutControl2.OptionsView.RightToLeftMirroringApplied = True
+        Me.LayoutControl2.Root = Me.LayoutControlGroup1
+        Me.LayoutControl2.Size = New System.Drawing.Size(1028, 554)
+        Me.LayoutControl2.TabIndex = 3
+        Me.LayoutControl2.Text = "LayoutControl2"
+        '
+        'LayoutControlGroup1
+        '
+        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.LayoutControlGroup1.GroupBordersVisible = False
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem3})
+        Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1028, 554)
+        Me.LayoutControlGroup1.TextVisible = False
+        '
+        'LayoutControlItem3
+        '
+        Me.LayoutControlItem3.Control = Me.GridControl1
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem3.Name = "LayoutControlItem3"
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(1008, 534)
+        Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem3.TextVisible = False
+        '
+        'StationsTableAdapter
+        '
+        Me.StationsTableAdapter.ClearBeforeFill = True
         '
         'OrpakTransactions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1204, 554)
-        Me.Controls.Add(Me.PanelControl2)
-        Me.Controls.Add(Me.PanelControl1)
+        Me.ClientSize = New System.Drawing.Size(1228, 554)
+        Me.Controls.Add(Me.LayoutControl2)
+        Me.Controls.Add(Me.DockPanel1)
         Me.Name = "OrpakTransactions"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Text = "حركات اورباك"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl1.ResumeLayout(False)
-        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl2.ResumeLayout(False)
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LayoutControl1.ResumeLayout(False)
+        CType(Me.SearchStations.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StationsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HO_DATADataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextTransCount.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit2.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit1.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Root, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.DockPanel1.ResumeLayout(False)
+        Me.DockPanel1_Container.ResumeLayout(False)
+        CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LayoutControl2.ResumeLayout(False)
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
-    Friend WithEvents SqlDataSource1 As DevExpress.DataAccess.Sql.SqlDataSource
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents colshift_id As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents coltimestamp As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colid As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents coltype As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colpump As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colproduct_code As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colsale As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colppv As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colquantity As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colmean_name As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colproduct_name As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colcode As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colname As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colstn_name As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents PanelControl2 As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents colplate As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colodometer As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colmean_id As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colfleet_id As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents coldate As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents coltime As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents LayoutControl1 As DevExpress.XtraLayout.LayoutControl
+    Friend WithEvents Root As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents EmptySpaceItem1 As DevExpress.XtraLayout.EmptySpaceItem
+    Friend WithEvents LayoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem5 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents DockManager1 As DevExpress.XtraBars.Docking.DockManager
+    Friend WithEvents LayoutControl2 As DevExpress.XtraLayout.LayoutControl
+    Friend WithEvents LayoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents DockPanel1 As DevExpress.XtraBars.Docking.DockPanel
+    Friend WithEvents DockPanel1_Container As DevExpress.XtraBars.Docking.ControlContainer
+    Friend WithEvents DateEdit2 As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents DateEdit1 As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents TextTransCount As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControlItem6 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents SearchStations As DevExpress.XtraEditors.SearchLookUpEdit
+    Friend WithEvents SearchLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents LayoutControlItem7 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents HO_DATADataSet As HO_DATADataSet
+    Friend WithEvents Colshift_id As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents ColID As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents ColTransDate As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents ColTransTime As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Coltype As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colpump As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colproduct_code As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colproduct_name As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colquantity As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colppv As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colsale As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Coltag As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colfleet_id As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colmean_id As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colplate As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colmean_name As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colstn_id As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colcode As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents ColFleetName As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Colstn_name As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents StationsBindingSource As BindingSource
+    Friend WithEvents StationsTableAdapter As HO_DATADataSetTableAdapters.stationsTableAdapter
+    Friend WithEvents colstn_id1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colstn_name1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents LayoutControlItem8 As DevExpress.XtraLayout.LayoutControlItem
 End Class

@@ -31,20 +31,11 @@ Partial Class CarsListCards
         Dim SerializableAppearanceObject6 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim SerializableAppearanceObject7 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim SerializableAppearanceObject8 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim ItemTemplate1 As DevExpress.XtraGrid.Views.Tile.ItemTemplate = New DevExpress.XtraGrid.Views.Tile.ItemTemplate()
         Dim TableColumnDefinition1 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
         Dim TableColumnDefinition2 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
         Dim TableColumnDefinition3 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
         Dim TableColumnDefinition4 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableRowDefinition1 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition2 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition3 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition4 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition5 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition6 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition7 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableSpan1 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TableSpan2 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TableSpan3 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
         Dim TileViewItemElement1 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
         Dim TileViewItemElement2 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
         Dim TileViewItemElement3 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
@@ -58,6 +49,71 @@ Partial Class CarsListCards
         Dim TileViewItemElement11 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
         Dim TileViewItemElement12 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
         Dim TileViewItemElement13 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TableRowDefinition1 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition2 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition3 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition4 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition5 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition6 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition7 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableSpan1 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan2 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan3 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim ItemTemplate2 As DevExpress.XtraGrid.Views.Tile.ItemTemplate = New DevExpress.XtraGrid.Views.Tile.ItemTemplate()
+        Dim TableColumnDefinition5 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition6 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition7 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition8 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TileViewItemElement14 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement15 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement16 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement17 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement18 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement19 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement20 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement21 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement22 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement23 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement24 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement25 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement26 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TableRowDefinition8 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition9 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition10 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition11 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition12 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition13 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition14 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableSpan4 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan5 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan6 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableColumnDefinition9 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition10 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition11 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition12 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableRowDefinition15 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition16 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition17 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition18 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition19 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition20 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition21 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableSpan7 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan8 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan9 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TileViewItemElement27 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement28 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement29 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement30 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement31 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement32 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement33 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement34 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement35 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement36 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement37 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement38 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement39 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
         Me.TileViewColumn2 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.TileViewColumn4 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.RepositoryMarka = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
@@ -69,6 +125,8 @@ Partial Class CarsListCards
         Me.TileViewColumn9 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.RepositorySearchDriver = New DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit()
         Me.RepositoryItemSearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.ColAccountKey2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ColFullName2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.TileViewColumn16 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.TileViewColumn24 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.TileViewColumn6 = New DevExpress.XtraGrid.Columns.TileViewColumn()
@@ -181,8 +239,6 @@ Partial Class CarsListCards
         Me.CarsModelTableAdapter = New DXApplication5.CRMDataSetTableAdapters.CarsModelTableAdapter()
         Me.CarsSortTableAdapter = New DXApplication5.CRMDataSetTableAdapters.CarsSortTableAdapter()
         Me.CarsTableAdapter = New DXApplication5.CRMDataSetTableAdapters.carsTableAdapter()
-        Me.ColAccountKey2 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ColFullName2 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.RepositoryMarka, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CarsMarkaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -325,6 +381,22 @@ Partial Class CarsListCards
         Me.RepositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
         Me.RepositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
         '
+        'ColAccountKey2
+        '
+        Me.ColAccountKey2.Caption = "رقم الحساب"
+        Me.ColAccountKey2.FieldName = "AccountKey"
+        Me.ColAccountKey2.Name = "ColAccountKey2"
+        Me.ColAccountKey2.Visible = True
+        Me.ColAccountKey2.VisibleIndex = 0
+        '
+        'ColFullName2
+        '
+        Me.ColFullName2.Caption = "الحساب"
+        Me.ColFullName2.FieldName = "FullName"
+        Me.ColFullName2.Name = "ColFullName2"
+        Me.ColFullName2.Visible = True
+        Me.ColFullName2.VisibleIndex = 1
+        '
         'TileViewColumn16
         '
         Me.TileViewColumn16.Caption = "صورة المركبة"
@@ -405,9 +477,9 @@ Partial Class CarsListCards
         'DockPanel1_Container
         '
         Me.DockPanel1_Container.Controls.Add(Me.LayoutControl1)
-        Me.DockPanel1_Container.Location = New System.Drawing.Point(4, 30)
+        Me.DockPanel1_Container.Location = New System.Drawing.Point(4, 26)
         Me.DockPanel1_Container.Name = "DockPanel1_Container"
-        Me.DockPanel1_Container.Size = New System.Drawing.Size(193, 447)
+        Me.DockPanel1_Container.Size = New System.Drawing.Size(193, 451)
         Me.DockPanel1_Container.TabIndex = 0
         '
         'LayoutControl1
@@ -427,14 +499,14 @@ Partial Class CarsListCards
         Me.LayoutControl1.Name = "LayoutControl1"
         Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(193, 447)
+        Me.LayoutControl1.Size = New System.Drawing.Size(193, 451)
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
         '
         'SimpleButton3
         '
         Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton3.Location = New System.Drawing.Point(12, 361)
+        Me.SimpleButton3.Location = New System.Drawing.Point(12, 365)
         Me.SimpleButton3.Name = "SimpleButton3"
         Me.SimpleButton3.Size = New System.Drawing.Size(169, 22)
         Me.SimpleButton3.StyleController = Me.LayoutControl1
@@ -444,17 +516,17 @@ Partial Class CarsListCards
         'RadioGroup2
         '
         Me.RadioGroup2.EditValue = "1"
-        Me.RadioGroup2.Location = New System.Drawing.Point(12, 253)
+        Me.RadioGroup2.Location = New System.Drawing.Point(12, 255)
         Me.RadioGroup2.Name = "RadioGroup2"
         Me.RadioGroup2.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem("1", "فعال"), New DevExpress.XtraEditors.Controls.RadioGroupItem("2", "غير فعال"), New DevExpress.XtraEditors.Controls.RadioGroupItem("0", "اظهار الكل")})
-        Me.RadioGroup2.Size = New System.Drawing.Size(169, 64)
+        Me.RadioGroup2.Size = New System.Drawing.Size(169, 65)
         Me.RadioGroup2.StyleController = Me.LayoutControl1
         Me.RadioGroup2.TabIndex = 14
         '
         'SimpleButton2
         '
         Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton2.Location = New System.Drawing.Point(12, 387)
+        Me.SimpleButton2.Location = New System.Drawing.Point(12, 391)
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(169, 22)
         Me.SimpleButton2.StyleController = Me.LayoutControl1
@@ -614,14 +686,14 @@ Partial Class CarsListCards
         Me.RadioGroup1.Name = "RadioGroup1"
         Me.RadioGroup1.Properties.Columns = 1
         Me.RadioGroup1.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem("Grid", "عرض جدول"), New DevExpress.XtraEditors.Controls.RadioGroupItem("Cards", "عرض بطاقات")})
-        Me.RadioGroup1.Size = New System.Drawing.Size(169, 117)
+        Me.RadioGroup1.Size = New System.Drawing.Size(169, 119)
         Me.RadioGroup1.StyleController = Me.LayoutControl1
         Me.RadioGroup1.TabIndex = 7
         '
         'SimpleButton1
         '
         Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(12, 413)
+        Me.SimpleButton1.Location = New System.Drawing.Point(12, 417)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(169, 22)
         Me.SimpleButton1.StyleController = Me.LayoutControl1
@@ -634,7 +706,7 @@ Partial Class CarsListCards
         Me.LayoutControlGroup1.GroupBordersVisible = False
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem4, Me.LayoutControlItem1, Me.EmptySpaceItem2, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem10})
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(193, 447)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(193, 451)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem4
@@ -642,14 +714,14 @@ Partial Class CarsListCards
         Me.LayoutControlItem4.Control = Me.RadioGroup1
         Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 120)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(173, 121)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(173, 123)
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.SimpleButton1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 401)
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 405)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
         Me.LayoutControlItem1.Size = New System.Drawing.Size(173, 26)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
@@ -658,9 +730,9 @@ Partial Class CarsListCards
         'EmptySpaceItem2
         '
         Me.EmptySpaceItem2.AllowHotTrack = False
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 309)
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 312)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(173, 40)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(173, 41)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem2
@@ -712,7 +784,7 @@ Partial Class CarsListCards
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.SimpleButton2
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 375)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 379)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
         Me.LayoutControlItem8.Size = New System.Drawing.Size(173, 26)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
@@ -721,16 +793,16 @@ Partial Class CarsListCards
         'LayoutControlItem9
         '
         Me.LayoutControlItem9.Control = Me.RadioGroup2
-        Me.LayoutControlItem9.Location = New System.Drawing.Point(0, 241)
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(0, 243)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(173, 68)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(173, 69)
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem9.TextVisible = False
         '
         'LayoutControlItem10
         '
         Me.LayoutControlItem10.Control = Me.SimpleButton3
-        Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 349)
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 353)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
         Me.LayoutControlItem10.Size = New System.Drawing.Size(173, 26)
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(0, 0)
@@ -1100,42 +1172,17 @@ Partial Class CarsListCards
         Me.TileView1.ContextButtonOptions.TopPanelPadding = New System.Windows.Forms.Padding(3)
         Me.TileView1.GridControl = Me.GridControl1
         Me.TileView1.Name = "TileView1"
-        Me.TileView1.OptionsTiles.ItemSize = New System.Drawing.Size(436, 346)
-        Me.TileView1.OptionsTiles.LayoutMode = DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.Kanban
+        Me.TileView1.OptionsTiles.ItemSize = New System.Drawing.Size(400, 250)
         Me.TileView1.OptionsTiles.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.TileView1.OptionsTiles.RowCount = 0
         TableColumnDefinition1.Length.Value = 108.0R
         TableColumnDefinition2.Length.Value = 73.0R
         TableColumnDefinition3.Length.Value = 143.0R
         TableColumnDefinition4.Length.Value = 108.0R
-        Me.TileView1.TileColumns.Add(TableColumnDefinition1)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition2)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition3)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition4)
-        TableRowDefinition1.Length.Value = 38.0R
-        TableRowDefinition2.Length.Value = 36.0R
-        TableRowDefinition3.Length.Value = 30.0R
-        TableRowDefinition4.Length.Value = 29.0R
-        TableRowDefinition5.Length.Value = 105.0R
-        TableRowDefinition6.Length.Value = 46.0R
-        TableRowDefinition7.Length.Value = 42.0R
-        Me.TileView1.TileRows.Add(TableRowDefinition1)
-        Me.TileView1.TileRows.Add(TableRowDefinition2)
-        Me.TileView1.TileRows.Add(TableRowDefinition3)
-        Me.TileView1.TileRows.Add(TableRowDefinition4)
-        Me.TileView1.TileRows.Add(TableRowDefinition5)
-        Me.TileView1.TileRows.Add(TableRowDefinition6)
-        Me.TileView1.TileRows.Add(TableRowDefinition7)
-        TableSpan1.ColumnIndex = 2
-        TableSpan1.ColumnSpan = 2
-        TableSpan2.ColumnIndex = 2
-        TableSpan2.ColumnSpan = 2
-        TableSpan2.RowIndex = 1
-        TableSpan2.RowSpan = 4
-        TableSpan3.ColumnSpan = 4
-        TableSpan3.RowIndex = 6
-        Me.TileView1.TileSpans.Add(TableSpan1)
-        Me.TileView1.TileSpans.Add(TableSpan2)
-        Me.TileView1.TileSpans.Add(TableSpan3)
+        ItemTemplate1.Columns.Add(TableColumnDefinition1)
+        ItemTemplate1.Columns.Add(TableColumnDefinition2)
+        ItemTemplate1.Columns.Add(TableColumnDefinition3)
+        ItemTemplate1.Columns.Add(TableColumnDefinition4)
         TileViewItemElement1.AnimateTransition = DevExpress.Utils.DefaultBoolean.[True]
         TileViewItemElement1.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         TileViewItemElement1.Appearance.Normal.ForeColor = System.Drawing.Color.White
@@ -1265,19 +1312,398 @@ Partial Class CarsListCards
         TileViewItemElement13.RowIndex = 5
         TileViewItemElement13.Text = "TileViewColumn8"
         TileViewItemElement13.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        Me.TileView1.TileTemplate.Add(TileViewItemElement1)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement2)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement3)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement4)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement5)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement6)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement7)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement8)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement9)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement10)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement11)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement12)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement13)
+        ItemTemplate1.Elements.Add(TileViewItemElement1)
+        ItemTemplate1.Elements.Add(TileViewItemElement2)
+        ItemTemplate1.Elements.Add(TileViewItemElement3)
+        ItemTemplate1.Elements.Add(TileViewItemElement4)
+        ItemTemplate1.Elements.Add(TileViewItemElement5)
+        ItemTemplate1.Elements.Add(TileViewItemElement6)
+        ItemTemplate1.Elements.Add(TileViewItemElement7)
+        ItemTemplate1.Elements.Add(TileViewItemElement8)
+        ItemTemplate1.Elements.Add(TileViewItemElement9)
+        ItemTemplate1.Elements.Add(TileViewItemElement10)
+        ItemTemplate1.Elements.Add(TileViewItemElement11)
+        ItemTemplate1.Elements.Add(TileViewItemElement12)
+        ItemTemplate1.Elements.Add(TileViewItemElement13)
+        ItemTemplate1.Name = "Car"
+        TableRowDefinition1.Length.Value = 38.0R
+        TableRowDefinition2.Length.Value = 36.0R
+        TableRowDefinition3.Length.Value = 30.0R
+        TableRowDefinition4.Length.Value = 29.0R
+        TableRowDefinition5.Length.Value = 105.0R
+        TableRowDefinition6.Length.Value = 46.0R
+        TableRowDefinition7.Length.Value = 42.0R
+        ItemTemplate1.Rows.Add(TableRowDefinition1)
+        ItemTemplate1.Rows.Add(TableRowDefinition2)
+        ItemTemplate1.Rows.Add(TableRowDefinition3)
+        ItemTemplate1.Rows.Add(TableRowDefinition4)
+        ItemTemplate1.Rows.Add(TableRowDefinition5)
+        ItemTemplate1.Rows.Add(TableRowDefinition6)
+        ItemTemplate1.Rows.Add(TableRowDefinition7)
+        TableSpan1.ColumnIndex = 2
+        TableSpan1.ColumnSpan = 2
+        TableSpan2.ColumnIndex = 2
+        TableSpan2.ColumnSpan = 2
+        TableSpan2.RowIndex = 1
+        TableSpan2.RowSpan = 4
+        TableSpan3.ColumnSpan = 4
+        TableSpan3.RowIndex = 6
+        ItemTemplate1.Spans.Add(TableSpan1)
+        ItemTemplate1.Spans.Add(TableSpan2)
+        ItemTemplate1.Spans.Add(TableSpan3)
+        TableColumnDefinition5.Length.Value = 108.0R
+        TableColumnDefinition6.Length.Value = 73.0R
+        TableColumnDefinition7.Length.Value = 143.0R
+        TableColumnDefinition8.Length.Value = 108.0R
+        ItemTemplate2.Columns.Add(TableColumnDefinition5)
+        ItemTemplate2.Columns.Add(TableColumnDefinition6)
+        ItemTemplate2.Columns.Add(TableColumnDefinition7)
+        ItemTemplate2.Columns.Add(TableColumnDefinition8)
+        TileViewItemElement14.AnimateTransition = DevExpress.Utils.DefaultBoolean.[True]
+        TileViewItemElement14.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement14.Appearance.Normal.ForeColor = System.Drawing.Color.White
+        TileViewItemElement14.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement14.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement14.Column = Me.TileViewColumn2
+        TileViewItemElement14.ColumnIndex = 3
+        TileViewItemElement14.ImageOptions.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
+        TileViewItemElement14.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement14.ImageOptions.ImageBorderColor = System.Drawing.Color.White
+        TileViewItemElement14.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Stretch
+        TileViewItemElement14.Text = "TileViewColumn2"
+        TileViewItemElement14.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement15.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement15.Appearance.Normal.ForeColor = System.Drawing.SystemColors.HotTrack
+        TileViewItemElement15.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement15.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement15.Column = Me.TileViewColumn4
+        TileViewItemElement15.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement15.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement15.RowIndex = 1
+        TileViewItemElement15.Text = "TileViewColumn4"
+        TileViewItemElement15.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement16.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement16.Appearance.Normal.ForeColor = System.Drawing.SystemColors.HotTrack
+        TileViewItemElement16.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement16.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement16.Column = Me.TileViewColumn5
+        TileViewItemElement16.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement16.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement16.RowIndex = 2
+        TileViewItemElement16.Text = "TileViewColumn5"
+        TileViewItemElement16.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement17.Appearance.Normal.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement17.Appearance.Normal.ForeColor = System.Drawing.Color.White
+        TileViewItemElement17.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement17.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement17.Column = Me.TileViewColumn9
+        TileViewItemElement17.ColumnIndex = 3
+        TileViewItemElement17.ImageOptions.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
+        TileViewItemElement17.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement17.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Stretch
+        TileViewItemElement17.RowIndex = 6
+        TileViewItemElement17.Text = "TileViewColumn9"
+        TileViewItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement18.Column = Me.TileViewColumn16
+        TileViewItemElement18.ColumnIndex = 3
+        TileViewItemElement18.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement18.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement18.RowIndex = 3
+        TileViewItemElement18.Text = "TileViewColumn16"
+        TileViewItemElement18.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement19.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement19.Appearance.Normal.ForeColor = System.Drawing.SystemColors.HotTrack
+        TileViewItemElement19.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement19.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement19.Column = Me.TileViewColumn24
+        TileViewItemElement19.ColumnIndex = 2
+        TileViewItemElement19.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement19.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement19.RowIndex = 5
+        TileViewItemElement19.Text = "TileViewColumn24"
+        TileViewItemElement19.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
+        TileViewItemElement20.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement20.Appearance.Normal.ForeColor = System.Drawing.SystemColors.HotTrack
+        TileViewItemElement20.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement20.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement20.Column = Me.TileViewColumn6
+        TileViewItemElement20.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement20.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement20.RowIndex = 3
+        TileViewItemElement20.Text = "TileViewColumn6"
+        TileViewItemElement20.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement21.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement21.Appearance.Normal.ForeColor = System.Drawing.Color.Gray
+        TileViewItemElement21.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement21.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement21.ColumnIndex = 3
+        TileViewItemElement21.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement21.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement21.RowIndex = 5
+        TileViewItemElement21.Text = "الترخيص"
+        TileViewItemElement21.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement22.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement22.Appearance.Normal.ForeColor = System.Drawing.Color.Gray
+        TileViewItemElement22.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement22.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement22.ColumnIndex = 1
+        TileViewItemElement22.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement22.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement22.RowIndex = 1
+        TileViewItemElement22.Text = "النوع"
+        TileViewItemElement22.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement23.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement23.Appearance.Normal.ForeColor = System.Drawing.Color.Gray
+        TileViewItemElement23.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement23.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement23.ColumnIndex = 1
+        TileViewItemElement23.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement23.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement23.RowIndex = 2
+        TileViewItemElement23.Text = "موديل"
+        TileViewItemElement23.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement24.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement24.Appearance.Normal.ForeColor = System.Drawing.Color.Gray
+        TileViewItemElement24.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement24.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement24.ColumnIndex = 1
+        TileViewItemElement24.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement24.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement24.RowIndex = 3
+        TileViewItemElement24.Text = "السنة"
+        TileViewItemElement24.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement25.Column = Me.TileViewColumn18
+        TileViewItemElement25.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement25.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Stretch
+        TileViewItemElement25.Text = "TileViewColumn18"
+        TileViewItemElement25.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement25.TextVisible = False
+        TileViewItemElement26.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement26.Appearance.Normal.ForeColor = System.Drawing.SystemColors.HotTrack
+        TileViewItemElement26.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement26.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement26.Column = Me.TileViewColumn8
+        TileViewItemElement26.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement26.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement26.RowIndex = 5
+        TileViewItemElement26.Text = "TileViewColumn8"
+        TileViewItemElement26.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        ItemTemplate2.Elements.Add(TileViewItemElement14)
+        ItemTemplate2.Elements.Add(TileViewItemElement15)
+        ItemTemplate2.Elements.Add(TileViewItemElement16)
+        ItemTemplate2.Elements.Add(TileViewItemElement17)
+        ItemTemplate2.Elements.Add(TileViewItemElement18)
+        ItemTemplate2.Elements.Add(TileViewItemElement19)
+        ItemTemplate2.Elements.Add(TileViewItemElement20)
+        ItemTemplate2.Elements.Add(TileViewItemElement21)
+        ItemTemplate2.Elements.Add(TileViewItemElement22)
+        ItemTemplate2.Elements.Add(TileViewItemElement23)
+        ItemTemplate2.Elements.Add(TileViewItemElement24)
+        ItemTemplate2.Elements.Add(TileViewItemElement25)
+        ItemTemplate2.Elements.Add(TileViewItemElement26)
+        ItemTemplate2.Name = "car"
+        TableRowDefinition8.Length.Value = 38.0R
+        TableRowDefinition9.Length.Value = 36.0R
+        TableRowDefinition10.Length.Value = 30.0R
+        TableRowDefinition11.Length.Value = 29.0R
+        TableRowDefinition12.Length.Value = 105.0R
+        TableRowDefinition13.Length.Value = 46.0R
+        TableRowDefinition14.Length.Value = 42.0R
+        ItemTemplate2.Rows.Add(TableRowDefinition8)
+        ItemTemplate2.Rows.Add(TableRowDefinition9)
+        ItemTemplate2.Rows.Add(TableRowDefinition10)
+        ItemTemplate2.Rows.Add(TableRowDefinition11)
+        ItemTemplate2.Rows.Add(TableRowDefinition12)
+        ItemTemplate2.Rows.Add(TableRowDefinition13)
+        ItemTemplate2.Rows.Add(TableRowDefinition14)
+        TableSpan4.ColumnIndex = 2
+        TableSpan4.ColumnSpan = 2
+        TableSpan5.ColumnIndex = 2
+        TableSpan5.ColumnSpan = 2
+        TableSpan5.RowIndex = 1
+        TableSpan5.RowSpan = 4
+        TableSpan6.ColumnSpan = 4
+        TableSpan6.RowIndex = 6
+        ItemTemplate2.Spans.Add(TableSpan4)
+        ItemTemplate2.Spans.Add(TableSpan5)
+        ItemTemplate2.Spans.Add(TableSpan6)
+        Me.TileView1.Templates.Add(ItemTemplate1)
+        Me.TileView1.Templates.Add(ItemTemplate2)
+        TableColumnDefinition9.Length.Value = 108.0R
+        TableColumnDefinition10.Length.Value = 73.0R
+        TableColumnDefinition11.Length.Value = 143.0R
+        TableColumnDefinition12.Length.Value = 108.0R
+        Me.TileView1.TileColumns.Add(TableColumnDefinition9)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition10)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition11)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition12)
+        TableRowDefinition15.Length.Value = 38.0R
+        TableRowDefinition16.Length.Value = 36.0R
+        TableRowDefinition17.Length.Value = 30.0R
+        TableRowDefinition18.Length.Value = 29.0R
+        TableRowDefinition19.Length.Value = 105.0R
+        TableRowDefinition20.Length.Value = 46.0R
+        TableRowDefinition21.Length.Value = 42.0R
+        Me.TileView1.TileRows.Add(TableRowDefinition15)
+        Me.TileView1.TileRows.Add(TableRowDefinition16)
+        Me.TileView1.TileRows.Add(TableRowDefinition17)
+        Me.TileView1.TileRows.Add(TableRowDefinition18)
+        Me.TileView1.TileRows.Add(TableRowDefinition19)
+        Me.TileView1.TileRows.Add(TableRowDefinition20)
+        Me.TileView1.TileRows.Add(TableRowDefinition21)
+        TableSpan7.ColumnIndex = 2
+        TableSpan7.ColumnSpan = 2
+        TableSpan8.ColumnIndex = 2
+        TableSpan8.ColumnSpan = 2
+        TableSpan8.RowIndex = 1
+        TableSpan8.RowSpan = 4
+        TableSpan9.ColumnSpan = 4
+        TableSpan9.RowIndex = 6
+        Me.TileView1.TileSpans.Add(TableSpan7)
+        Me.TileView1.TileSpans.Add(TableSpan8)
+        Me.TileView1.TileSpans.Add(TableSpan9)
+        TileViewItemElement27.AnimateTransition = DevExpress.Utils.DefaultBoolean.[True]
+        TileViewItemElement27.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement27.Appearance.Normal.ForeColor = System.Drawing.Color.White
+        TileViewItemElement27.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement27.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement27.Column = Me.TileViewColumn2
+        TileViewItemElement27.ColumnIndex = 3
+        TileViewItemElement27.ImageOptions.Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
+        TileViewItemElement27.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement27.ImageOptions.ImageBorderColor = System.Drawing.Color.White
+        TileViewItemElement27.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Stretch
+        TileViewItemElement27.Text = "TileViewColumn2"
+        TileViewItemElement27.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement28.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement28.Appearance.Normal.ForeColor = System.Drawing.SystemColors.HotTrack
+        TileViewItemElement28.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement28.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement28.Column = Me.TileViewColumn4
+        TileViewItemElement28.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement28.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement28.RowIndex = 1
+        TileViewItemElement28.Text = "TileViewColumn4"
+        TileViewItemElement28.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement29.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement29.Appearance.Normal.ForeColor = System.Drawing.SystemColors.HotTrack
+        TileViewItemElement29.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement29.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement29.Column = Me.TileViewColumn5
+        TileViewItemElement29.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement29.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement29.RowIndex = 2
+        TileViewItemElement29.Text = "TileViewColumn5"
+        TileViewItemElement29.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement30.Appearance.Normal.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement30.Appearance.Normal.ForeColor = System.Drawing.Color.White
+        TileViewItemElement30.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement30.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement30.Column = Me.TileViewColumn9
+        TileViewItemElement30.ColumnIndex = 3
+        TileViewItemElement30.ImageOptions.Image = CType(resources.GetObject("resource.Image5"), System.Drawing.Image)
+        TileViewItemElement30.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement30.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Stretch
+        TileViewItemElement30.RowIndex = 6
+        TileViewItemElement30.Text = "TileViewColumn9"
+        TileViewItemElement30.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement31.Column = Me.TileViewColumn16
+        TileViewItemElement31.ColumnIndex = 3
+        TileViewItemElement31.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement31.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement31.RowIndex = 3
+        TileViewItemElement31.Text = "TileViewColumn16"
+        TileViewItemElement31.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement32.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement32.Appearance.Normal.ForeColor = System.Drawing.SystemColors.HotTrack
+        TileViewItemElement32.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement32.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement32.Column = Me.TileViewColumn24
+        TileViewItemElement32.ColumnIndex = 2
+        TileViewItemElement32.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement32.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement32.RowIndex = 5
+        TileViewItemElement32.Text = "TileViewColumn24"
+        TileViewItemElement32.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
+        TileViewItemElement33.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement33.Appearance.Normal.ForeColor = System.Drawing.SystemColors.HotTrack
+        TileViewItemElement33.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement33.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement33.Column = Me.TileViewColumn6
+        TileViewItemElement33.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement33.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement33.RowIndex = 3
+        TileViewItemElement33.Text = "TileViewColumn6"
+        TileViewItemElement33.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement34.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement34.Appearance.Normal.ForeColor = System.Drawing.Color.Gray
+        TileViewItemElement34.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement34.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement34.ColumnIndex = 3
+        TileViewItemElement34.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement34.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement34.RowIndex = 5
+        TileViewItemElement34.Text = "الترخيص"
+        TileViewItemElement34.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement35.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement35.Appearance.Normal.ForeColor = System.Drawing.Color.Gray
+        TileViewItemElement35.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement35.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement35.ColumnIndex = 1
+        TileViewItemElement35.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement35.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement35.RowIndex = 1
+        TileViewItemElement35.Text = "النوع"
+        TileViewItemElement35.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement36.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement36.Appearance.Normal.ForeColor = System.Drawing.Color.Gray
+        TileViewItemElement36.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement36.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement36.ColumnIndex = 1
+        TileViewItemElement36.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement36.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement36.RowIndex = 2
+        TileViewItemElement36.Text = "موديل"
+        TileViewItemElement36.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement37.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement37.Appearance.Normal.ForeColor = System.Drawing.Color.Gray
+        TileViewItemElement37.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement37.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement37.ColumnIndex = 1
+        TileViewItemElement37.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement37.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement37.RowIndex = 3
+        TileViewItemElement37.Text = "السنة"
+        TileViewItemElement37.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement38.Column = Me.TileViewColumn18
+        TileViewItemElement38.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement38.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Stretch
+        TileViewItemElement38.Text = "TileViewColumn18"
+        TileViewItemElement38.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement38.TextVisible = False
+        TileViewItemElement39.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement39.Appearance.Normal.ForeColor = System.Drawing.SystemColors.HotTrack
+        TileViewItemElement39.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement39.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement39.Column = Me.TileViewColumn8
+        TileViewItemElement39.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement39.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement39.RowIndex = 5
+        TileViewItemElement39.Text = "TileViewColumn8"
+        TileViewItemElement39.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        Me.TileView1.TileTemplate.Add(TileViewItemElement27)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement28)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement29)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement30)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement31)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement32)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement33)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement34)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement35)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement36)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement37)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement38)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement39)
         '
         'TileViewColumn1
         '
@@ -1465,22 +1891,6 @@ Partial Class CarsListCards
         'CarsTableAdapter
         '
         Me.CarsTableAdapter.ClearBeforeFill = True
-        '
-        'ColAccountKey2
-        '
-        Me.ColAccountKey2.Caption = "رقم الحساب"
-        Me.ColAccountKey2.FieldName = "AccountKey"
-        Me.ColAccountKey2.Name = "ColAccountKey2"
-        Me.ColAccountKey2.Visible = True
-        Me.ColAccountKey2.VisibleIndex = 0
-        '
-        'ColFullName2
-        '
-        Me.ColFullName2.Caption = "الحساب"
-        Me.ColFullName2.FieldName = "FullName"
-        Me.ColFullName2.Name = "ColFullName2"
-        Me.ColFullName2.Visible = True
-        Me.ColFullName2.VisibleIndex = 1
         '
         'CarsListCards
         '

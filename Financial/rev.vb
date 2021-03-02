@@ -13,7 +13,7 @@
             Dim Sql As New SQLControl
             Dim SqlString As String = " SELECT u.ItemKey,u.ItemName,ItemBalance,ItemJard,ItemBalance-ItemJard as Adjust,isnull(LastPrice,0) as LastPrice,isnull(LastPrice,0)*(ItemBalance-ItemJard)*-1  as Amount, 'Jard' AS Notes
                                         FROM 
-                                               (SELECT [ItemKey],[ItemName],isnull(ItemBalance,0) as ItemBalance,LastPrice =(select top 1  SMPRICE From [ALHUDA].[dbo].TEMPDYNJOINQUERY_WIZCOUNT v Where  DDOCNAME ='Purchase invoice'  and v.[IITEMKEY]=ww.ItemKey) 
+                                               (SELECT [ItemKey],[ItemName],isnull(ItemBalance,0) as ItemBalance,LastPrice =(select top 1  SMPRICE From [ALHUDA].[dbo].TEMPDYNJOINQUERY_WIZCOUNT v Where  DDOCNAME ='Purchase invoice'  and v.[IITEMKEY]=ww.ItemKey order by SMBASEDATE desc) 
                                                 FROM [ALHUDA].[dbo].[Items] ww
                                                 LEFT JOIN  (Select    DISTINCT (SMITEMKEY) , IITEMNAME ,SUM(SMSUPPLYQUANTITY*(1-2*DSALESDOC)) as ItemBalance 
                                                 FROM      [ALHUDA].[dbo].TEMPDYNJOINQUERY_WIZCOUNT  

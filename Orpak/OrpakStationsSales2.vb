@@ -60,7 +60,7 @@ Public Class OrpakStationsSales2
         Me.ItemsTableAdapter.Fill(Me.WizCountDataSet.Items)
         Me.DateEdit1.DateTime = Today
 
-        Dim Timer1 As System.Timers.Timer = New Timer(600000)
+        Dim Timer1 As System.Timers.Timer = New Timer(60000)
         AddHandler Timer1.Elapsed, AddressOf OnTimedEvent
         Timer1.Enabled = True
         CreatChart()

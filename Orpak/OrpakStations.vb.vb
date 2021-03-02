@@ -5,7 +5,7 @@ Public Class OrpakStations
         Try
             Dim sql As New SQLControl
             Dim SqlGetStations As String
-            SqlGetStations = "Select stn_id,stn_name,host_ip,last_update from stations where stn_id <> '1010' order by  stn_id "
+            SqlGetStations = "Select stn_id,stn_name,host_ip,last_update from stations  order by  stn_id "
             sql.RunQuery(SqlGetStations)
 
             Dim StationsTable As New DataTable
@@ -21,14 +21,15 @@ Public Class OrpakStations
                 .Columns.Add("ElapseTime", GetType(TimeSpan))
                 .Columns.Add("ElapseTimeForConnect", GetType(TimeSpan))
                 .Columns.Add("ElapseTimeForUpdateBalances", GetType(TimeSpan))
+                .Columns.Add("LastMeansUpdate", GetType(String))
             End With
 
             Try
                 For i As Integer = 0 To StationsTable.Rows.Count - 1
                     Dim sql2 As New SQLControl
-                    Dim SqlString As String = "select top(1) * from [CRM].[dbo].OrpakUpdateBalanceLogs
-                                                where [LogStationName]= '" & StationsTable.Rows(i).Item("host_ip").ToString & "' order by LogID desc"
-                    sql2.RunQuery(SqlString)
+                    Dim SqlString As String = " Select top(1) * from [CRM].[dbo].OrpakUpdateBalanceLogs
+                                                Where LastMeansUpdate is null and [LogStationName]= '" & StationsTable.Rows(i).Item("host_ip").ToString & "' order by LogID desc"
+                    sql2.CRMRunQuery(SqlString)
                     If sql2.SQLDS.Tables(0).Rows.Count > 0 Then
                         StationsTable.Rows(i).Item("TablesSizeMB") = sql2.SQLDS.Tables(0).Rows(0).Item("TablesSizeMB").ToString
                         StationsTable.Rows(i).Item("TotalRows") = sql2.SQLDS.Tables(0).Rows(0).Item("TablesRowCount").ToString
@@ -43,10 +44,12 @@ Public Class OrpakStations
                             StationsTable.Rows(i).Item("ElapseTimeForConnect") = (Now).Subtract(Convert.ToDateTime(StationsTable.Rows(i).Item("last_update")))
                         End If
 
-                        If Not IsDBNull(StationsTable.Rows(i).Item("LastUpdateBalances")) Then
-                            StationsTable.Rows(i).Item("ElapseTimeForUpdateBalances") = (Now).Subtract(Convert.ToDateTime(StationsTable.Rows(i).Item("LastUpdateBalances")))
-                        End If
+                        'If Not IsDBNull(StationsTable.Rows(i).Item("LastUpdateBalances")) Then
+                        '    StationsTable.Rows(i).Item("ElapseTimeForUpdateBalances") = (Now).Subtract(Convert.ToDateTime(StationsTable.Rows(i).Item("LastUpdateBalances")))
+                        'End If
 
+                        ' LastMeansUpdate
+                        StationsTable.Rows(i).Item("LastMeansUpdate") = GetLastMeansUpdate(StationsTable.Rows(i).Item("host_ip").ToString)
                     End If
 
 
@@ -120,7 +123,7 @@ Public Class OrpakStations
     End Sub
 
     Private Sub OrpakStations_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TextEditTimerInterval.EditValue = 1
+        TextEditTimerInterval.EditValue = 60
         ComboBoxEdit1.EditValue = 1000
 
         'Dim Timer1 As System.Timers.Timer = New Timer(10000)
@@ -167,4 +170,19 @@ Public Class OrpakStations
     '    GetStationsData()
     '    GetLogs()
     'End Sub
+
+    Private Function GetLastMeansUpdate(Stn_Ip As String) As String
+        Dim _LastTransDate As String
+        Try
+            Dim Sql As New SQLControl
+            Sql.CRMRunQuery("Select top(1) LastMeansUpdate from OrpakUpdateBalanceLogs
+             where LogStationName='" & Stn_Ip & "'   AND LastMeansUpdate IS NOT NULL order by LogID desc ")
+            _LastTransDate = Sql.SQLDS.Tables(0).Rows(0).Item("LastMeansUpdate").ToString
+        Catch ex As Exception
+            _LastTransDate = "0"
+        End Try
+        Return _LastTransDate
+
+    End Function
+
 End Class

@@ -21,7 +21,12 @@ Partial Class FinancialAlhudaWherhouses
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FinancialAlhudaWherhouses))
         Dim EditorButtonImageOptions1 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
+        Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject2 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject3 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject4 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.CheckEdit1 = New DevExpress.XtraEditors.CheckEdit()
         Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
         Me.AccountNameText = New DevExpress.XtraEditors.TextEdit()
         Me.AccountIDText = New DevExpress.XtraEditors.TextEdit()
@@ -36,13 +41,17 @@ Partial Class FinancialAlhudaWherhouses
         Me.DateEditFrom = New DevExpress.XtraEditors.DateEdit()
         Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
-        Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
+        Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColDelete = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemButtonEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
+        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
         Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
         Me.GridControl3 = New DevExpress.XtraGrid.GridControl()
         Me.GridView3 = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -65,13 +74,9 @@ Partial Class FinancialAlhudaWherhouses
         Me.TransportText = New DevExpress.XtraEditors.TextEdit()
         Me.NaqelPrice = New DevExpress.XtraEditors.TextEdit()
         Me.TtayorText = New DevExpress.XtraEditors.TextEdit()
-        Me.CheckEdit1 = New DevExpress.XtraEditors.CheckEdit()
-        Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
-        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AccountNameText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AccountIDText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToStock.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,11 +85,16 @@ Partial Class FinancialAlhudaWherhouses
         CType(Me.DateEditTo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateEditFrom.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateEditFrom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl2.SuspendLayout()
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LayoutControl1.SuspendLayout()
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelControl2.SuspendLayout()
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl3.SuspendLayout()
         CType(Me.GridControl3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,12 +107,6 @@ Partial Class FinancialAlhudaWherhouses
         CType(Me.TransportText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NaqelPrice.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TtayorText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.LayoutControl1.SuspendLayout()
-        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelControl1
@@ -125,6 +129,15 @@ Partial Class FinancialAlhudaWherhouses
         Me.PanelControl1.Name = "PanelControl1"
         Me.PanelControl1.Size = New System.Drawing.Size(1013, 108)
         Me.PanelControl1.TabIndex = 0
+        '
+        'CheckEdit1
+        '
+        Me.CheckEdit1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckEdit1.Location = New System.Drawing.Point(173, 74)
+        Me.CheckEdit1.Name = "CheckEdit1"
+        Me.CheckEdit1.Properties.Caption = "سولار وبنزين"
+        Me.CheckEdit1.Size = New System.Drawing.Size(90, 20)
+        Me.CheckEdit1.TabIndex = 9
         '
         'SimpleButton4
         '
@@ -244,7 +257,7 @@ Partial Class FinancialAlhudaWherhouses
         '
         Me.SimpleButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton5.ImageOptions.Image = CType(resources.GetObject("SimpleButton5.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton5.Location = New System.Drawing.Point(171, 10)
+        Me.SimpleButton5.Location = New System.Drawing.Point(130, 10)
         Me.SimpleButton5.Name = "SimpleButton5"
         Me.SimpleButton5.Size = New System.Drawing.Size(43, 45)
         Me.SimpleButton5.TabIndex = 9
@@ -254,21 +267,25 @@ Partial Class FinancialAlhudaWherhouses
         'SimpleButton3
         '
         Me.SimpleButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton3.Location = New System.Drawing.Point(12, 481)
+        Me.SimpleButton3.Location = New System.Drawing.Point(12, 483)
         Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(307, 22)
+        Me.SimpleButton3.Size = New System.Drawing.Size(352, 22)
         Me.SimpleButton3.StyleController = Me.LayoutControl1
         Me.SimpleButton3.TabIndex = 6
         Me.SimpleButton3.Text = "تقرير للقائمة ادناه"
         '
-        'PanelControl2
+        'LayoutControl1
         '
-        Me.PanelControl2.Controls.Add(Me.LayoutControl1)
-        Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PanelControl2.Location = New System.Drawing.Point(0, 108)
-        Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(337, 521)
-        Me.PanelControl2.TabIndex = 1
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton3)
+        Me.LayoutControl1.Controls.Add(Me.GridControl2)
+        Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutControl1.Location = New System.Drawing.Point(2, 2)
+        Me.LayoutControl1.Name = "LayoutControl1"
+        Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
+        Me.LayoutControl1.Root = Me.LayoutControlGroup1
+        Me.LayoutControl1.Size = New System.Drawing.Size(376, 517)
+        Me.LayoutControl1.TabIndex = 1
+        Me.LayoutControl1.Text = "LayoutControl1"
         '
         'GridControl2
         '
@@ -276,7 +293,7 @@ Partial Class FinancialAlhudaWherhouses
         Me.GridControl2.MainView = Me.GridView2
         Me.GridControl2.Name = "GridControl2"
         Me.GridControl2.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit1})
-        Me.GridControl2.Size = New System.Drawing.Size(307, 465)
+        Me.GridControl2.Size = New System.Drawing.Size(352, 467)
         Me.GridControl2.TabIndex = 0
         Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -285,6 +302,7 @@ Partial Class FinancialAlhudaWherhouses
         Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.ColDelete})
         Me.GridView2.GridControl = Me.GridControl2
         Me.GridView2.Name = "GridView2"
+        Me.GridView2.OptionsView.ColumnAutoWidth = False
         Me.GridView2.OptionsView.ShowGroupPanel = False
         '
         'GridColumn1
@@ -316,27 +334,63 @@ Partial Class FinancialAlhudaWherhouses
         'RepositoryItemButtonEdit1
         '
         EditorButtonImageOptions1.Image = CType(resources.GetObject("EditorButtonImageOptions1.Image"), System.Drawing.Image)
-        Me.RepositoryItemButtonEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(EditorButtonImageOptions1, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, Nothing)})
+        Me.RepositoryItemButtonEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions1, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.RepositoryItemButtonEdit1.Name = "RepositoryItemButtonEdit1"
         Me.RepositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
+        '
+        'LayoutControlGroup1
+        '
+        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.LayoutControlGroup1.GroupBordersVisible = False
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2})
+        Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(376, 517)
+        Me.LayoutControlGroup1.TextVisible = False
+        '
+        'LayoutControlItem1
+        '
+        Me.LayoutControlItem1.Control = Me.GridControl2
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem1.Name = "LayoutControlItem1"
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(356, 471)
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem1.TextVisible = False
+        '
+        'LayoutControlItem2
+        '
+        Me.LayoutControlItem2.Control = Me.SimpleButton3
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 471)
+        Me.LayoutControlItem2.Name = "LayoutControlItem2"
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(356, 26)
+        Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem2.TextVisible = False
+        '
+        'PanelControl2
+        '
+        Me.PanelControl2.Controls.Add(Me.LayoutControl1)
+        Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PanelControl2.Location = New System.Drawing.Point(0, 108)
+        Me.PanelControl2.Name = "PanelControl2"
+        Me.PanelControl2.Size = New System.Drawing.Size(380, 521)
+        Me.PanelControl2.TabIndex = 1
         '
         'PanelControl3
         '
         Me.PanelControl3.Controls.Add(Me.GridControl3)
         Me.PanelControl3.Controls.Add(Me.GroupControl3)
         Me.PanelControl3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelControl3.Location = New System.Drawing.Point(337, 108)
+        Me.PanelControl3.Location = New System.Drawing.Point(380, 108)
         Me.PanelControl3.Name = "PanelControl3"
-        Me.PanelControl3.Size = New System.Drawing.Size(676, 521)
+        Me.PanelControl3.Size = New System.Drawing.Size(633, 521)
         Me.PanelControl3.TabIndex = 2
         '
         'GridControl3
         '
         Me.GridControl3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl3.Location = New System.Drawing.Point(3, 68)
+        Me.GridControl3.Location = New System.Drawing.Point(2, 67)
         Me.GridControl3.MainView = Me.GridView3
         Me.GridControl3.Name = "GridControl3"
-        Me.GridControl3.Size = New System.Drawing.Size(670, 450)
+        Me.GridControl3.Size = New System.Drawing.Size(629, 452)
         Me.GridControl3.TabIndex = 2
         Me.GridControl3.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
@@ -458,10 +512,10 @@ Partial Class FinancialAlhudaWherhouses
         Me.GroupControl3.Controls.Add(Me.NaqelPrice)
         Me.GroupControl3.Controls.Add(Me.TtayorText)
         Me.GroupControl3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupControl3.Location = New System.Drawing.Point(3, 3)
+        Me.GroupControl3.Location = New System.Drawing.Point(2, 2)
         Me.GroupControl3.Name = "GroupControl3"
         Me.GroupControl3.ShowCaption = False
-        Me.GroupControl3.Size = New System.Drawing.Size(670, 65)
+        Me.GroupControl3.Size = New System.Drawing.Size(629, 65)
         Me.GroupControl3.TabIndex = 0
         Me.GroupControl3.Text = "GroupControl3"
         '
@@ -469,7 +523,7 @@ Partial Class FinancialAlhudaWherhouses
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(592, 37)
+        Me.Label2.Location = New System.Drawing.Point(551, 37)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(31, 13)
         Me.Label2.TabIndex = 1
@@ -479,7 +533,7 @@ Partial Class FinancialAlhudaWherhouses
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(592, 13)
+        Me.Label1.Location = New System.Drawing.Point(551, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 13)
         Me.Label1.TabIndex = 1
@@ -488,7 +542,7 @@ Partial Class FinancialAlhudaWherhouses
         'MyTotal
         '
         Me.MyTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MyTotal.Location = New System.Drawing.Point(222, 10)
+        Me.MyTotal.Location = New System.Drawing.Point(181, 10)
         Me.MyTotal.Name = "MyTotal"
         Me.MyTotal.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!, System.Drawing.FontStyle.Bold)
         Me.MyTotal.Properties.Appearance.Options.UseFont = True
@@ -504,7 +558,7 @@ Partial Class FinancialAlhudaWherhouses
         'TtayorAmountText
         '
         Me.TtayorAmountText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TtayorAmountText.Location = New System.Drawing.Point(319, 9)
+        Me.TtayorAmountText.Location = New System.Drawing.Point(278, 9)
         Me.TtayorAmountText.Name = "TtayorAmountText"
         Me.TtayorAmountText.Properties.Mask.EditMask = "n2"
         Me.TtayorAmountText.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
@@ -515,7 +569,7 @@ Partial Class FinancialAlhudaWherhouses
         'UnleadedPriceText
         '
         Me.UnleadedPriceText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.UnleadedPriceText.Location = New System.Drawing.Point(416, 9)
+        Me.UnleadedPriceText.Location = New System.Drawing.Point(375, 9)
         Me.UnleadedPriceText.Name = "UnleadedPriceText"
         Me.UnleadedPriceText.Properties.Mask.EditMask = "n2"
         Me.UnleadedPriceText.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
@@ -526,7 +580,7 @@ Partial Class FinancialAlhudaWherhouses
         'TransportText
         '
         Me.TransportText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TransportText.Location = New System.Drawing.Point(319, 35)
+        Me.TransportText.Location = New System.Drawing.Point(278, 35)
         Me.TransportText.Name = "TransportText"
         Me.TransportText.Properties.ReadOnly = True
         Me.TransportText.Size = New System.Drawing.Size(186, 20)
@@ -536,7 +590,7 @@ Partial Class FinancialAlhudaWherhouses
         '
         Me.NaqelPrice.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.NaqelPrice.EditValue = "0"
-        Me.NaqelPrice.Location = New System.Drawing.Point(511, 34)
+        Me.NaqelPrice.Location = New System.Drawing.Point(470, 34)
         Me.NaqelPrice.Name = "NaqelPrice"
         Me.NaqelPrice.Size = New System.Drawing.Size(79, 20)
         Me.NaqelPrice.TabIndex = 0
@@ -544,61 +598,11 @@ Partial Class FinancialAlhudaWherhouses
         'TtayorText
         '
         Me.TtayorText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TtayorText.Location = New System.Drawing.Point(485, 9)
+        Me.TtayorText.Location = New System.Drawing.Point(444, 9)
         Me.TtayorText.Name = "TtayorText"
         Me.TtayorText.Properties.ReadOnly = True
         Me.TtayorText.Size = New System.Drawing.Size(101, 20)
         Me.TtayorText.TabIndex = 0
-        '
-        'CheckEdit1
-        '
-        Me.CheckEdit1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CheckEdit1.Location = New System.Drawing.Point(173, 74)
-        Me.CheckEdit1.Name = "CheckEdit1"
-        Me.CheckEdit1.Properties.Caption = "سولار وبنزين"
-        Me.CheckEdit1.Size = New System.Drawing.Size(90, 19)
-        Me.CheckEdit1.TabIndex = 9
-        '
-        'LayoutControl1
-        '
-        Me.LayoutControl1.Controls.Add(Me.SimpleButton3)
-        Me.LayoutControl1.Controls.Add(Me.GridControl2)
-        Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LayoutControl1.Location = New System.Drawing.Point(3, 3)
-        Me.LayoutControl1.Name = "LayoutControl1"
-        Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
-        Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(331, 515)
-        Me.LayoutControl1.TabIndex = 1
-        Me.LayoutControl1.Text = "LayoutControl1"
-        '
-        'LayoutControlGroup1
-        '
-        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
-        Me.LayoutControlGroup1.GroupBordersVisible = False
-        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(331, 515)
-        Me.LayoutControlGroup1.TextVisible = False
-        '
-        'LayoutControlItem1
-        '
-        Me.LayoutControlItem1.Control = Me.GridControl2
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(311, 469)
-        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem1.TextVisible = False
-        '
-        'LayoutControlItem2
-        '
-        Me.LayoutControlItem2.Control = Me.SimpleButton3
-        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 469)
-        Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(311, 26)
-        Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem2.TextVisible = False
         '
         'FinancialAlhudaWherhouses
         '
@@ -614,6 +618,7 @@ Partial Class FinancialAlhudaWherhouses
         Me.Text = "تقرير الهيئات"
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AccountNameText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AccountIDText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToStock.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -622,11 +627,16 @@ Partial Class FinancialAlhudaWherhouses
         CType(Me.DateEditTo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateEditFrom.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateEditFrom.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl2.ResumeLayout(False)
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LayoutControl1.ResumeLayout(False)
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelControl2.ResumeLayout(False)
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl3.ResumeLayout(False)
         CType(Me.GridControl3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -640,12 +650,6 @@ Partial Class FinancialAlhudaWherhouses
         CType(Me.TransportText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NaqelPrice.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TtayorText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.LayoutControl1.ResumeLayout(False)
-        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

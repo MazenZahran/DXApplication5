@@ -30,31 +30,43 @@ Public Class StockManagementLists
                         ColDebitAcc.Visible = True
                         ColDebitWhereHouse.Visible = False
                         ColAmount.Visible = True
+                        ColVoucherNo.Visible = True
+                        ColIssueVouchers.Visible = True
                         gridBand2.Visible = True
                         Me.Text = "ارسالية مبيعات"
+                        LayoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
                     Case "PurchaseDelivery"
                         ColDebitAcc.Visible = False
                         ColDebitWhereHouse.Visible = True
                         ColCredAcc.Visible = True
                         ColCreditWhereHouse.Visible = False
+                        ColVoucherNo.Visible = False
+                        ColIssueVouchers.Visible = False
                         ColAmount.Visible = True
                         gridBand2.Visible = True
                         Me.Text = "ارسالية مشتريات"
+                        LayoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
                     Case "Transfer"
                         ColDebitAcc.Visible = False
                         ColDebitWhereHouse.Visible = True
                         ColCredAcc.Visible = False
                         ColCreditWhereHouse.Visible = True
+                        ColVoucherNo.Visible = False
+                        ColIssueVouchers.Visible = False
                         ColAmount.Visible = False
                         gridBand2.Visible = False
                         Me.Text = "ارسالية داخلية"
+                        LayoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
                     Case "Jard"
                         ColDebitAcc.Visible = False
                         ColDebitWhereHouse.Visible = True
                         ColCredAcc.Visible = True
                         ColCreditWhereHouse.Visible = False
+                        ColVoucherNo.Visible = False
+                        ColIssueVouchers.Visible = False
                         ColAmount.Visible = True
                         gridBand2.Visible = False
+                        SimpleButton3.Visible = True
                         LayoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
                         Me.Text = "سند تسوية جرد"
                 End Select
@@ -67,32 +79,32 @@ Public Class StockManagementLists
             If CheckShowDetails.Checked = True Then
                 SqlString = " SELECT distinct DocID, DocDate, DocType, DocStatus, DebitAcc, CredAcc,
                                                  DebitWhereHouse, CreditWhereHouse, Referance, Sum(Amount) as Amount,Driver,DocSort,DocManualNo,
-                                                 Sum(Quantity) as Quantity, Count(S.ID) as CountItems, '' as Audit,D.ID as DocSortID,A.IDDocName,WalletDocID,DocAhditDate,DocAuditUser
+                                                 Sum(Quantity) as Quantity, Count(S.ID) as CountItems, '' as Audit,D.ID as DocSortID,A.IDDocName,WalletDocID,DocAhditDate,DocAuditUser,'False' As IssueVouchers,VoucherNo
                                           FROM StockMove S
                 left join StockMoveDocSort1 D on S.DocSort=D.Book
                 Left join StockMoveDocuments A on S.DocType=A.DocEnglishName
-                                          Where   DocID > 0 "
+                                          Where   DocID > 0 and DocStatus < 9 "
                 If Me.DocType.Text <> "" Then SqlString += " and DocType='" & CStr(Me.DocType.EditValue) & "'"
                 If SearchDocSort.Text <> "" Then SqlString += " and DocSort='" & CStr(SearchDocSort.EditValue) & "'"
                 If CStr(LookDocStatus.EditValue) <> "99" Then SqlString = SqlString + " And DocStatus= '" & CStr(LookDocStatus.EditValue) & "'"
                 SqlString += "  Group By DocID, DocDate, DocType, DocStatus, DebitAcc, CredAcc,DebitWhereHouse,
-                                                   CreditWhereHouse, Referance,Driver,DocSort,DocManualNo,D.ID,IDDocName,WalletDocID,DocAhditDate,DocAuditUser "
+                                                   CreditWhereHouse, Referance,Driver,DocSort,DocManualNo,D.ID,IDDocName,WalletDocID,DocAhditDate,DocAuditUser,VoucherNo "
                 ColAmount.Visible = True
                 ColQuantity.Visible = True
                 ColCountItems.Visible = True
             Else
                 SqlString = " SELECT distinct DocID , DocDate, DocType, DocStatus, DebitAcc, CredAcc,
                                  DebitWhereHouse, CreditWhereHouse, Referance,Driver,DocSort,DocManualNo,
-                                 '' as Audit,D.ID as DocSortID,A.IDDocName,WalletDocID,DocAhditDate,DocAuditUser
+                                 '' as Audit,D.ID as DocSortID,A.IDDocName,WalletDocID,DocAhditDate,DocAuditUser,'False' as IssueVouchers,VoucherNo
                           FROM StockMove S
                 left join StockMoveDocSort1 D on S.DocSort=D.Book
                 Left join StockMoveDocuments A on S.DocType=A.DocEnglishName
-                          Where   DocID > 0 "
+                          Where   DocID > 0 and DocStatus < 9 "
                 If Me.DocType.Text <> "" Then SqlString += " and DocType='" & CStr(Me.DocType.EditValue) & "'"
                 If SearchDocSort.Text <> "" Then SqlString += " and DocSort='" & CStr(SearchDocSort.EditValue) & "'"
                 If CStr(LookDocStatus.EditValue) <> "99" Then SqlString = SqlString + " And DocStatus= '" & CStr(LookDocStatus.EditValue) & "'"
                 SqlString += "  Group By DocID, DocDate, DocType, DocStatus, DebitAcc, CredAcc,DebitWhereHouse,
-                                                   CreditWhereHouse, Referance,Driver,DocSort,DocManualNo,D.ID,IDDocName,WalletDocID,DocAhditDate,DocAuditUser "
+                                                   CreditWhereHouse, Referance,Driver,DocSort,DocManualNo,D.ID,IDDocName,WalletDocID,DocAhditDate,DocAuditUser,VoucherNo "
                 ColAmount.Visible = False
                 ColQuantity.Visible = False
                 ColCountItems.Visible = False
@@ -151,7 +163,10 @@ Public Class StockManagementLists
 
         FillData()
         BandedGridView1.BestFitColumns()
-        LayoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
+
+
+        DateVoucherDate.DateTime = Today
+
     End Sub
     Private Function GetDefaultDocSort() As String
         Try
@@ -249,7 +264,7 @@ Public Class StockManagementLists
 
             Dim Refereance As String = DocYear.ToString("00") & DocNameID.ToString("0") & DocSortID.ToString("0") & DocID.ToString("00")
 
-                Dim Sql As New SQLControl
+            Dim Sql As New SQLControl
             Dim SqlString As String = "Update StockMove
                                                 set WalletDocID= " & WalletID & ", DocAhditDate='" & DocAhditDate & "' , DocAuditUser=' " & DocAuditUser & "', Referance='" & Refereance & "' , DocStatus='2' 
                                                 where DocID =" & DocID & " And DocType ='" & DocType & "' and DocSort='" & DocSort & "'"
@@ -550,6 +565,129 @@ Public Class StockManagementLists
         End If
     End Sub
 
+    Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
+
+        If IssueVoucherAuthentication() = False Then
+            MsgBox("البرنامج تحت الصيانة ، اصبر اشوي يا  " & CStr(GlobalVariables.UserNameString))
+            Exit Sub
+        End If
+
+        If DateVoucherDate.DateTime < CDate("2020-03-31") Then
+            MsgBox("التاريخ قديم")
+            Exit Sub
+        End If
+        Dim i As Integer
+        Dim j As Integer = 0
+        For i = 0 To BandedGridView1.RowCount - 1
+            If CStr(Me.BandedGridView1.GetRowCellValue(i, "IssueVouchers")) = "True" Then
+                j += 1
+            End If
+        Next
+
+        If j = 0 Then
+            MsgBox("لم يتم تحديد اي ارسالية ")
+            Exit Sub
+        End If
+
+
+
+        Dim result As DialogResult = XtraMessageBox.Show(" سيتم اصدار فواتير عدد " & j, "تنبيه", MessageBoxButtons.YesNo)
+        If result = System.Windows.Forms.DialogResult.Yes Then
+            For i = 0 To BandedGridView1.RowCount - 1
+                If CStr(Me.BandedGridView1.GetRowCellValue(i, "IssueVouchers")) = "True" Then
+                    Dim DocID As Integer = CInt(Me.BandedGridView1.GetRowCellValue(i, "DocID"))
+                    Dim DocType As String = CStr(Me.BandedGridView1.GetRowCellValue(i, "DocType"))
+                    Dim AccId As String = CStr(Me.BandedGridView1.GetRowCellValue(i, "DebitAcc"))
+                    Dim _SearchDocSort As String = SearchDocSort.EditValue
+                    Dim Amount As Decimal = GetAmountFotStockMove(DocID, DocType)
+                    Dim _VoucherNo As String = IssueVoucher(DocID, DocType, AccId, Amount, _SearchDocSort)
+                    Dim Sql As New SQLControl
+                    Sql.CRMRunQuery("Update [CRM].[dbo].[StockMove]
+                                     Set VoucherNo=" & _VoucherNo & " 
+                                     Where DocID=" & DocID & " and DocType='" & DocType & "'")
+                End If
+            Next
+
+            FillData()
+
+            MsgBox("تم اصدار الفواتير")
+        End If
+
+    End Sub
+
+    Private Function GetAmountFotStockMove(DocID As Integer, DocType As String) As Decimal
+        Dim _Amount As Decimal
+
+        Try
+            Dim Sql As New SQLControl
+            Dim SqlString As String = " Select SUM(Amount) as Amount
+                                        From  [CRM].[dbo].[StockMove]
+                                        Where DocID=" & DocID & " and DocType='" & DocType & "'"
+            Sql.CRMRunQuery(SqlString)
+            _Amount = CDec(Sql.SQLDS.Tables(0).Rows(0).Item("Amount"))
+
+        Catch ex As Exception
+            _Amount = 0
+        End Try
+        Return _Amount
+    End Function
+    Private Function IssueVoucher(DocId As Integer, DocType As String, AccId As String, Amount As Decimal, DocSort As String) As String
+
+        Dim _VoucherCode As String = "0"
+        _VoucherCode = GetRandomString()
+
+        Dim StockData As New DataTable
+        Try
+            Dim Sql As New SQLControl
+            Sql.CRMRunQuery(" Select StockName as SotckName,Quantity,ItemPrice as Price,Amount,StockID
+                          From [CRM].[dbo].[StockMove]
+                          Where DocSort ='" & DocSort & "' and  DocID=" & DocId & " and DocType = '" & CStr(Me.DocType.EditValue) & "'")
+            StockData = Sql.SQLDS.Tables(0)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            Return 0
+        End Try
+
+
+        Dim _VoucherNo As String
+        _VoucherNo = IssueVoucherFromOut(Format(Me.DateVoucherDate.DateTime, "yyyy-MM-dd"),
+                            AccId, GetAccData(AccId).FullNamee, GetAccData(AccId).SortGroup,
+                            GetAccData(AccId).costcode, GetAccData(AccId).Addresss, Amount,
+                            _VoucherCode, MemoVoucherMemo.Text, CInt(Format(DateVoucherDate.DateTime, "MM")),
+                            CInt(Format(DateVoucherDate.DateTime, "yyyy")), "Delivary", "NIS", StockData)
+
+        Return _VoucherNo
+    End Function
+
+    Private Sub CheckEditIssueVoucher_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEditIssueVoucher.CheckedChanged
+        If CheckEditIssueVoucher.Checked = True Then
+            LayoutControlGroup2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
+        Else
+            LayoutControlGroup2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
+        End If
+    End Sub
+
+    Private Sub RepositoryOpenVoucher_Click(sender As Object, e As EventArgs) Handles RepositoryOpenVoucher.Click
+        Try
+            PrintVoucher(False, CInt(BandedGridView1.GetRowCellValue(BandedGridView1.FocusedRowHandle, "VoucherNo")), True, "NIS")
+        Catch ex As Exception
+            MsgBox("لا يوجد فاتورة ")
+        End Try
+
+    End Sub
+
+    Private Sub GridControl1_Click(sender As Object, e As EventArgs) Handles GridControl1.Click
+
+    End Sub
+
+    Private Sub RepositoryIssueVoucher_Click(sender As Object, e As EventArgs) Handles RepositoryIssueVoucher.Click
+        MemoVoucherMemo.Text = "وذلك عن ارسالية رقم " & BandedGridView1.GetRowCellValue(BandedGridView1.FocusedRowHandle, "DocID").ToString
+    End Sub
+
+    Private Sub RepositoryEmail_ButtonClick(sender As Object, e As Controls.ButtonPressedEventArgs) Handles RepositoryEmail.ButtonClick
+        Dim report As New LiteCustomerTrans()
+        EmailDataTrans("accounting@alhuda.ps", report, "تست")
+    End Sub
     'Private Sub CopyjardDoc()
     '    Try
     '        Dim StockbalanceTable As New DataTable

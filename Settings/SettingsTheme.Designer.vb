@@ -152,13 +152,13 @@ Partial Class SettingsTheme
         Me.SimpleButton1.TabIndex = 13
         Me.SimpleButton1.Text = "VS2010"
         '
-        'Theme
+        'SettingsTheme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1415, 708)
         Me.Controls.Add(Me.PanelControl1)
-        Me.Name = "Theme"
+        Me.Name = "SettingsTheme"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RightToLeftLayout = True
         Me.Text = "اعدادات الالوان"

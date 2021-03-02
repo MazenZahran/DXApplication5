@@ -111,16 +111,6 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.EmptySpaceItem3 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.TabbedControlGroup1 = New DevExpress.XtraLayout.TabbedControlGroup()
-        Me.LayoutControlGroup13 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem27 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem23 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.EmptySpaceItem7 = New DevExpress.XtraLayout.EmptySpaceItem()
-        Me.LayoutControlGroup7 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem19 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem30 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.EmptySpaceItem6 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.LayoutControlGroup3 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlGroup4 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem20 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -139,6 +129,16 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem34 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem36 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem26 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup13 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem27 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem23 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem7 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.LayoutControlGroup7 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem19 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem30 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem6 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.LayoutControlGroup14 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem17 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup15 = New DevExpress.XtraLayout.LayoutControlGroup()
@@ -245,16 +245,6 @@ Partial Class FinanceAccDetails
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TabbedControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlGroup13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem27, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem23, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem30, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmptySpaceItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem20, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -273,6 +263,16 @@ Partial Class FinanceAccDetails
         CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem26, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem27, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem30, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup15, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -309,9 +309,9 @@ Partial Class FinanceAccDetails
         Me.NavigationPane1.Location = New System.Drawing.Point(0, 0)
         Me.NavigationPane1.Name = "NavigationPane1"
         Me.NavigationPane1.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.NavigationPage1, Me.NavigationPage2, Me.NavigationPage3})
-        Me.NavigationPane1.RegularSize = New System.Drawing.Size(931, 545)
+        Me.NavigationPane1.RegularSize = New System.Drawing.Size(933, 547)
         Me.NavigationPane1.SelectedPage = Me.NavigationPage1
-        Me.NavigationPane1.Size = New System.Drawing.Size(931, 545)
+        Me.NavigationPane1.Size = New System.Drawing.Size(933, 547)
         Me.NavigationPane1.TabIndex = 0
         Me.NavigationPane1.Text = "NavigationPane1"
         '
@@ -324,7 +324,6 @@ Partial Class FinanceAccDetails
         '
         'LayoutControl1
         '
-        Me.LayoutControl1.Controls.Add(Me.EmployeeCodeText)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton3)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton2)
         Me.LayoutControl1.Controls.Add(Me.CheckEditAudited)
@@ -338,10 +337,6 @@ Partial Class FinanceAccDetails
         Me.LayoutControl1.Controls.Add(Me.TextEditAccountKey)
         Me.LayoutControl1.Controls.Add(Me.SortGroupTextEdit)
         Me.LayoutControl1.Controls.Add(Me.FilterTextEdit)
-        Me.LayoutControl1.Controls.Add(Me.OwnerCheckEdit)
-        Me.LayoutControl1.Controls.Add(Me.AboutJobTextEdit)
-        Me.LayoutControl1.Controls.Add(Me.WorkATTextEdit)
-        Me.LayoutControl1.Controls.Add(Me.PositionTextEdit)
         Me.LayoutControl1.Controls.Add(Me.AddressTextEdit)
         Me.LayoutControl1.Controls.Add(Me.CityTextEdit)
         Me.LayoutControl1.Controls.Add(Me.CountryTextEdit)
@@ -350,6 +345,11 @@ Partial Class FinanceAccDetails
         Me.LayoutControl1.Controls.Add(Me.EMailTextEdit)
         Me.LayoutControl1.Controls.Add(Me.SPhoneTextEdit)
         Me.LayoutControl1.Controls.Add(Me.CostCodeTextEdit)
+        Me.LayoutControl1.Controls.Add(Me.EmployeeCodeText)
+        Me.LayoutControl1.Controls.Add(Me.OwnerCheckEdit)
+        Me.LayoutControl1.Controls.Add(Me.AboutJobTextEdit)
+        Me.LayoutControl1.Controls.Add(Me.WorkATTextEdit)
+        Me.LayoutControl1.Controls.Add(Me.PositionTextEdit)
         Me.LayoutControl1.Controls.Add(Me.CRMContactGridControl)
         Me.LayoutControl1.Controls.Add(Me.MaxCreditTextEdit)
         Me.LayoutControl1.Controls.Add(Me.ZipTextEdit)
@@ -371,45 +371,45 @@ Partial Class FinanceAccDetails
         '
         'EmployeeCodeText
         '
-        Me.EmployeeCodeText.Location = New System.Drawing.Point(370, 263)
+        Me.EmployeeCodeText.Location = New System.Drawing.Point(379, 267)
         Me.EmployeeCodeText.Name = "EmployeeCodeText"
-        Me.EmployeeCodeText.Size = New System.Drawing.Size(269, 20)
+        Me.EmployeeCodeText.Size = New System.Drawing.Size(251, 20)
         Me.EmployeeCodeText.StyleController = Me.LayoutControl1
         Me.EmployeeCodeText.TabIndex = 98
         '
         'SimpleButton3
         '
-        Me.SimpleButton3.Location = New System.Drawing.Point(301, 428)
+        Me.SimpleButton3.Location = New System.Drawing.Point(312, 436)
         Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(148, 22)
+        Me.SimpleButton3.Size = New System.Drawing.Size(145, 22)
         Me.SimpleButton3.StyleController = Me.LayoutControl1
         Me.SimpleButton3.TabIndex = 97
         Me.SimpleButton3.Text = "طباعة"
         '
         'SimpleButton2
         '
-        Me.SimpleButton2.Location = New System.Drawing.Point(154, 428)
+        Me.SimpleButton2.Location = New System.Drawing.Point(168, 436)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(143, 22)
+        Me.SimpleButton2.Size = New System.Drawing.Size(140, 22)
         Me.SimpleButton2.StyleController = Me.LayoutControl1
         Me.SimpleButton2.TabIndex = 96
         Me.SimpleButton2.Text = "تحديث"
         '
         'CheckEditAudited
         '
-        Me.CheckEditAudited.Location = New System.Drawing.Point(668, 392)
+        Me.CheckEditAudited.Location = New System.Drawing.Point(671, 400)
         Me.CheckEditAudited.Name = "CheckEditAudited"
         Me.CheckEditAudited.Properties.Caption = "مدقق"
-        Me.CheckEditAudited.Size = New System.Drawing.Size(110, 20)
+        Me.CheckEditAudited.Size = New System.Drawing.Size(107, 20)
         Me.CheckEditAudited.StyleController = Me.LayoutControl1
         Me.CheckEditAudited.TabIndex = 95
         '
         'TextEditAccCreateDate
         '
-        Me.TextEditAccCreateDate.Location = New System.Drawing.Point(346, 392)
+        Me.TextEditAccCreateDate.Location = New System.Drawing.Point(356, 400)
         Me.TextEditAccCreateDate.Name = "TextEditAccCreateDate"
         Me.TextEditAccCreateDate.Properties.ReadOnly = True
-        Me.TextEditAccCreateDate.Size = New System.Drawing.Size(191, 20)
+        Me.TextEditAccCreateDate.Size = New System.Drawing.Size(175, 20)
         Me.TextEditAccCreateDate.StyleController = Me.LayoutControl1
         Me.TextEditAccCreateDate.TabIndex = 94
         '
@@ -435,61 +435,61 @@ Partial Class FinanceAccDetails
         'AccountKeyTextEdit
         '
         Me.AccountKeyTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "AccountKey", True))
-        Me.AccountKeyTextEdit.Location = New System.Drawing.Point(24, 87)
+        Me.AccountKeyTextEdit.Location = New System.Drawing.Point(41, 83)
         Me.AccountKeyTextEdit.Name = "AccountKeyTextEdit"
         Me.AccountKeyTextEdit.Properties.ReadOnly = True
-        Me.AccountKeyTextEdit.Size = New System.Drawing.Size(58, 20)
+        Me.AccountKeyTextEdit.Size = New System.Drawing.Size(50, 20)
         Me.AccountKeyTextEdit.StyleController = Me.LayoutControl1
         Me.AccountKeyTextEdit.TabIndex = 52
         '
         'AuditEmployeeTextEdit
         '
-        Me.AuditEmployeeTextEdit.Location = New System.Drawing.Point(24, 392)
+        Me.AuditEmployeeTextEdit.Location = New System.Drawing.Point(41, 400)
         Me.AuditEmployeeTextEdit.Name = "AuditEmployeeTextEdit"
         Me.AuditEmployeeTextEdit.Properties.ReadOnly = True
-        Me.AuditEmployeeTextEdit.Size = New System.Drawing.Size(191, 20)
+        Me.AuditEmployeeTextEdit.Size = New System.Drawing.Size(175, 20)
         Me.AuditEmployeeTextEdit.StyleController = Me.LayoutControl1
         Me.AuditEmployeeTextEdit.TabIndex = 9
         '
         'FullNameTextEdit
         '
         Me.FullNameTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "FullName", True))
-        Me.FullNameTextEdit.Location = New System.Drawing.Point(24, 63)
+        Me.FullNameTextEdit.Location = New System.Drawing.Point(41, 59)
         Me.FullNameTextEdit.Name = "FullNameTextEdit"
-        Me.FullNameTextEdit.Size = New System.Drawing.Size(297, 20)
+        Me.FullNameTextEdit.Size = New System.Drawing.Size(278, 20)
         Me.FullNameTextEdit.StyleController = Me.LayoutControl1
         Me.FullNameTextEdit.TabIndex = 54
         '
         'WebSiteTextEdit
         '
         Me.WebSiteTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "WebSite", True))
-        Me.WebSiteTextEdit.Location = New System.Drawing.Point(213, 87)
+        Me.WebSiteTextEdit.Location = New System.Drawing.Point(231, 83)
         Me.WebSiteTextEdit.Name = "WebSiteTextEdit"
-        Me.WebSiteTextEdit.Size = New System.Drawing.Size(438, 20)
+        Me.WebSiteTextEdit.Size = New System.Drawing.Size(411, 20)
         Me.WebSiteTextEdit.StyleController = Me.LayoutControl1
         Me.WebSiteTextEdit.TabIndex = 92
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(12, 428)
+        Me.SimpleButton1.Location = New System.Drawing.Point(29, 436)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(138, 22)
+        Me.SimpleButton1.Size = New System.Drawing.Size(135, 22)
         Me.SimpleButton1.StyleController = Me.LayoutControl1
         Me.SimpleButton1.TabIndex = 49
         Me.SimpleButton1.Text = "حفظ  F3"
         '
         'TextEditAccountKey
         '
-        Me.TextEditAccountKey.Location = New System.Drawing.Point(452, 63)
+        Me.TextEditAccountKey.Location = New System.Drawing.Point(459, 59)
         Me.TextEditAccountKey.Name = "TextEditAccountKey"
-        Me.TextEditAccountKey.Size = New System.Drawing.Size(199, 20)
+        Me.TextEditAccountKey.Size = New System.Drawing.Size(183, 20)
         Me.TextEditAccountKey.StyleController = Me.LayoutControl1
         Me.TextEditAccountKey.TabIndex = 48
         '
         'SortGroupTextEdit
         '
         Me.SortGroupTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "SortGroup", True))
-        Me.SortGroupTextEdit.Location = New System.Drawing.Point(403, 111)
+        Me.SortGroupTextEdit.Location = New System.Drawing.Point(411, 107)
         Me.SortGroupTextEdit.Name = "SortGroupTextEdit"
         Me.SortGroupTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.SortGroupTextEdit.Properties.DataSource = Me.AccSortNamesBindingSource
@@ -497,7 +497,7 @@ Partial Class FinanceAccDetails
         Me.SortGroupTextEdit.Properties.NullText = ""
         Me.SortGroupTextEdit.Properties.PopupView = Me.SearchLookUpEdit1View
         Me.SortGroupTextEdit.Properties.ValueMember = "AccSortCode"
-        Me.SortGroupTextEdit.Size = New System.Drawing.Size(248, 20)
+        Me.SortGroupTextEdit.Size = New System.Drawing.Size(231, 20)
         Me.SortGroupTextEdit.StyleController = Me.LayoutControl1
         Me.SortGroupTextEdit.TabIndex = 56
         '
@@ -516,112 +516,112 @@ Partial Class FinanceAccDetails
         'FilterTextEdit
         '
         Me.FilterTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "Filter", True))
-        Me.FilterTextEdit.Location = New System.Drawing.Point(24, 111)
+        Me.FilterTextEdit.Location = New System.Drawing.Point(41, 107)
         Me.FilterTextEdit.Name = "FilterTextEdit"
-        Me.FilterTextEdit.Size = New System.Drawing.Size(248, 20)
+        Me.FilterTextEdit.Size = New System.Drawing.Size(230, 20)
         Me.FilterTextEdit.StyleController = Me.LayoutControl1
         Me.FilterTextEdit.TabIndex = 70
         '
         'OwnerCheckEdit
         '
-        Me.OwnerCheckEdit.Location = New System.Drawing.Point(36, 215)
+        Me.OwnerCheckEdit.Location = New System.Drawing.Point(53, 219)
         Me.OwnerCheckEdit.Name = "OwnerCheckEdit"
         Me.OwnerCheckEdit.Properties.Caption = "صاحب مهنة"
-        Me.OwnerCheckEdit.Size = New System.Drawing.Size(306, 20)
+        Me.OwnerCheckEdit.Size = New System.Drawing.Size(298, 20)
         Me.OwnerCheckEdit.StyleController = Me.LayoutControl1
         Me.OwnerCheckEdit.TabIndex = 13
         '
         'AboutJobTextEdit
         '
-        Me.AboutJobTextEdit.Location = New System.Drawing.Point(36, 239)
+        Me.AboutJobTextEdit.Location = New System.Drawing.Point(53, 243)
         Me.AboutJobTextEdit.Name = "AboutJobTextEdit"
-        Me.AboutJobTextEdit.Size = New System.Drawing.Size(179, 20)
+        Me.AboutJobTextEdit.Size = New System.Drawing.Size(162, 20)
         Me.AboutJobTextEdit.StyleController = Me.LayoutControl1
         Me.AboutJobTextEdit.TabIndex = 15
         '
         'WorkATTextEdit
         '
-        Me.WorkATTextEdit.Location = New System.Drawing.Point(370, 239)
+        Me.WorkATTextEdit.Location = New System.Drawing.Point(379, 243)
         Me.WorkATTextEdit.Name = "WorkATTextEdit"
-        Me.WorkATTextEdit.Size = New System.Drawing.Size(269, 20)
+        Me.WorkATTextEdit.Size = New System.Drawing.Size(251, 20)
         Me.WorkATTextEdit.StyleController = Me.LayoutControl1
         Me.WorkATTextEdit.TabIndex = 17
         '
         'PositionTextEdit
         '
-        Me.PositionTextEdit.Location = New System.Drawing.Point(370, 215)
+        Me.PositionTextEdit.Location = New System.Drawing.Point(379, 219)
         Me.PositionTextEdit.Name = "PositionTextEdit"
-        Me.PositionTextEdit.Size = New System.Drawing.Size(269, 20)
+        Me.PositionTextEdit.Size = New System.Drawing.Size(251, 20)
         Me.PositionTextEdit.StyleController = Me.LayoutControl1
         Me.PositionTextEdit.TabIndex = 19
         '
         'AddressTextEdit
         '
         Me.AddressTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "Address", True))
-        Me.AddressTextEdit.Location = New System.Drawing.Point(36, 239)
+        Me.AddressTextEdit.Location = New System.Drawing.Point(53, 243)
         Me.AddressTextEdit.Name = "AddressTextEdit"
-        Me.AddressTextEdit.Size = New System.Drawing.Size(603, 20)
+        Me.AddressTextEdit.Size = New System.Drawing.Size(577, 20)
         Me.AddressTextEdit.StyleController = Me.LayoutControl1
         Me.AddressTextEdit.TabIndex = 58
         '
         'CityTextEdit
         '
         Me.CityTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "City", True))
-        Me.CityTextEdit.Location = New System.Drawing.Point(381, 215)
+        Me.CityTextEdit.Location = New System.Drawing.Point(390, 219)
         Me.CityTextEdit.Name = "CityTextEdit"
-        Me.CityTextEdit.Size = New System.Drawing.Size(258, 20)
+        Me.CityTextEdit.Size = New System.Drawing.Size(240, 20)
         Me.CityTextEdit.StyleController = Me.LayoutControl1
         Me.CityTextEdit.TabIndex = 60
         '
         'CountryTextEdit
         '
         Me.CountryTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "Country", True))
-        Me.CountryTextEdit.Location = New System.Drawing.Point(381, 287)
+        Me.CountryTextEdit.Location = New System.Drawing.Point(390, 291)
         Me.CountryTextEdit.Name = "CountryTextEdit"
-        Me.CountryTextEdit.Size = New System.Drawing.Size(258, 20)
+        Me.CountryTextEdit.Size = New System.Drawing.Size(240, 20)
         Me.CountryTextEdit.StyleController = Me.LayoutControl1
         Me.CountryTextEdit.TabIndex = 64
         '
         'PhoneTextEdit
         '
         Me.PhoneTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "Phone", True))
-        Me.PhoneTextEdit.Location = New System.Drawing.Point(381, 263)
+        Me.PhoneTextEdit.Location = New System.Drawing.Point(390, 267)
         Me.PhoneTextEdit.Name = "PhoneTextEdit"
-        Me.PhoneTextEdit.Size = New System.Drawing.Size(258, 20)
+        Me.PhoneTextEdit.Size = New System.Drawing.Size(240, 20)
         Me.PhoneTextEdit.StyleController = Me.LayoutControl1
         Me.PhoneTextEdit.TabIndex = 66
         '
         'FaxTextEdit
         '
         Me.FaxTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "Fax", True))
-        Me.FaxTextEdit.Location = New System.Drawing.Point(36, 263)
+        Me.FaxTextEdit.Location = New System.Drawing.Point(53, 267)
         Me.FaxTextEdit.Name = "FaxTextEdit"
-        Me.FaxTextEdit.Size = New System.Drawing.Size(214, 20)
+        Me.FaxTextEdit.Size = New System.Drawing.Size(197, 20)
         Me.FaxTextEdit.StyleController = Me.LayoutControl1
         Me.FaxTextEdit.TabIndex = 68
         '
         'EMailTextEdit
         '
         Me.EMailTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "EMail", True))
-        Me.EMailTextEdit.Location = New System.Drawing.Point(36, 311)
+        Me.EMailTextEdit.Location = New System.Drawing.Point(53, 315)
         Me.EMailTextEdit.Name = "EMailTextEdit"
-        Me.EMailTextEdit.Size = New System.Drawing.Size(603, 20)
+        Me.EMailTextEdit.Size = New System.Drawing.Size(577, 20)
         Me.EMailTextEdit.StyleController = Me.LayoutControl1
         Me.EMailTextEdit.TabIndex = 86
         '
         'SPhoneTextEdit
         '
         Me.SPhoneTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "SPhone", True))
-        Me.SPhoneTextEdit.Location = New System.Drawing.Point(36, 287)
+        Me.SPhoneTextEdit.Location = New System.Drawing.Point(53, 291)
         Me.SPhoneTextEdit.Name = "SPhoneTextEdit"
-        Me.SPhoneTextEdit.Size = New System.Drawing.Size(214, 20)
+        Me.SPhoneTextEdit.Size = New System.Drawing.Size(197, 20)
         Me.SPhoneTextEdit.StyleController = Me.LayoutControl1
         Me.SPhoneTextEdit.TabIndex = 90
         '
         'CostCodeTextEdit
         '
         Me.CostCodeTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "CostCode", True))
-        Me.CostCodeTextEdit.Location = New System.Drawing.Point(36, 215)
+        Me.CostCodeTextEdit.Location = New System.Drawing.Point(53, 219)
         Me.CostCodeTextEdit.Name = "CostCodeTextEdit"
         Me.CostCodeTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.CostCodeTextEdit.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("CostCodeID", "Cost Code ID", 87, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("CostCodeName", "Cost Code Name", 90, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Split", "Split", 30, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("CostCode", "Cost Code", 60, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Dumi", "Dumi", 33, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Filter", "Filter", 34, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.[Default])})
@@ -629,7 +629,7 @@ Partial Class FinanceAccDetails
         Me.CostCodeTextEdit.Properties.DisplayMember = "CostCodeName"
         Me.CostCodeTextEdit.Properties.NullText = ""
         Me.CostCodeTextEdit.Properties.ValueMember = "CostCode"
-        Me.CostCodeTextEdit.Size = New System.Drawing.Size(214, 20)
+        Me.CostCodeTextEdit.Size = New System.Drawing.Size(197, 20)
         Me.CostCodeTextEdit.StyleController = Me.LayoutControl1
         Me.CostCodeTextEdit.TabIndex = 84
         '
@@ -641,10 +641,10 @@ Partial Class FinanceAccDetails
         'CRMContactGridControl
         '
         Me.CRMContactGridControl.DataSource = Me.CRMContactBindingSource
-        Me.CRMContactGridControl.Location = New System.Drawing.Point(24, 182)
+        Me.CRMContactGridControl.Location = New System.Drawing.Point(41, 182)
         Me.CRMContactGridControl.MainView = Me.GridView1
         Me.CRMContactGridControl.Name = "CRMContactGridControl"
-        Me.CRMContactGridControl.Size = New System.Drawing.Size(754, 161)
+        Me.CRMContactGridControl.Size = New System.Drawing.Size(737, 165)
         Me.CRMContactGridControl.TabIndex = 97
         Me.CRMContactGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -741,62 +741,62 @@ Partial Class FinanceAccDetails
         'MaxCreditTextEdit
         '
         Me.MaxCreditTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "MaxCredit", True))
-        Me.MaxCreditTextEdit.Location = New System.Drawing.Point(404, 215)
+        Me.MaxCreditTextEdit.Location = New System.Drawing.Point(412, 219)
         Me.MaxCreditTextEdit.Name = "MaxCreditTextEdit"
-        Me.MaxCreditTextEdit.Size = New System.Drawing.Size(235, 20)
+        Me.MaxCreditTextEdit.Size = New System.Drawing.Size(218, 20)
         Me.MaxCreditTextEdit.StyleController = Me.LayoutControl1
         Me.MaxCreditTextEdit.TabIndex = 93
         '
         'ZipTextEdit
         '
         Me.ZipTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "Zip", True))
-        Me.ZipTextEdit.Location = New System.Drawing.Point(36, 215)
+        Me.ZipTextEdit.Location = New System.Drawing.Point(53, 219)
         Me.ZipTextEdit.Name = "ZipTextEdit"
-        Me.ZipTextEdit.Size = New System.Drawing.Size(237, 20)
+        Me.ZipTextEdit.Size = New System.Drawing.Size(219, 20)
         Me.ZipTextEdit.StyleController = Me.LayoutControl1
         Me.ZipTextEdit.TabIndex = 62
         '
         'DetailsTextEdit
         '
         Me.DetailsTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "Details", True))
-        Me.DetailsTextEdit.Location = New System.Drawing.Point(36, 263)
+        Me.DetailsTextEdit.Location = New System.Drawing.Point(53, 267)
         Me.DetailsTextEdit.Name = "DetailsTextEdit"
-        Me.DetailsTextEdit.Size = New System.Drawing.Size(603, 20)
+        Me.DetailsTextEdit.Size = New System.Drawing.Size(577, 20)
         Me.DetailsTextEdit.StyleController = Me.LayoutControl1
         Me.DetailsTextEdit.TabIndex = 72
         '
         'BankCodeTextEdit
         '
         Me.BankCodeTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "BankCode", True))
-        Me.BankCodeTextEdit.Location = New System.Drawing.Point(453, 239)
+        Me.BankCodeTextEdit.Location = New System.Drawing.Point(472, 243)
         Me.BankCodeTextEdit.Name = "BankCodeTextEdit"
-        Me.BankCodeTextEdit.Size = New System.Drawing.Size(186, 20)
+        Me.BankCodeTextEdit.Size = New System.Drawing.Size(158, 20)
         Me.BankCodeTextEdit.StyleController = Me.LayoutControl1
         Me.BankCodeTextEdit.TabIndex = 78
         '
         'BranchCodeTextEdit
         '
         Me.BranchCodeTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "BranchCode", True))
-        Me.BranchCodeTextEdit.Location = New System.Drawing.Point(270, 239)
+        Me.BranchCodeTextEdit.Location = New System.Drawing.Point(282, 243)
         Me.BranchCodeTextEdit.Name = "BranchCodeTextEdit"
-        Me.BranchCodeTextEdit.Size = New System.Drawing.Size(52, 20)
+        Me.BranchCodeTextEdit.Size = New System.Drawing.Size(50, 20)
         Me.BranchCodeTextEdit.StyleController = Me.LayoutControl1
         Me.BranchCodeTextEdit.TabIndex = 80
         '
         'BankAccountTextEdit
         '
         Me.BankAccountTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AccountsBindingSource, "BankAccount", True))
-        Me.BankAccountTextEdit.Location = New System.Drawing.Point(36, 239)
+        Me.BankAccountTextEdit.Location = New System.Drawing.Point(53, 243)
         Me.BankAccountTextEdit.Name = "BankAccountTextEdit"
-        Me.BankAccountTextEdit.Size = New System.Drawing.Size(103, 20)
+        Me.BankAccountTextEdit.Size = New System.Drawing.Size(89, 20)
         Me.BankAccountTextEdit.StyleController = Me.LayoutControl1
         Me.BankAccountTextEdit.TabIndex = 82
         '
         'NotesTextEdit
         '
-        Me.NotesTextEdit.Location = New System.Drawing.Point(24, 182)
+        Me.NotesTextEdit.Location = New System.Drawing.Point(41, 182)
         Me.NotesTextEdit.Name = "NotesTextEdit"
-        Me.NotesTextEdit.Size = New System.Drawing.Size(754, 161)
+        Me.NotesTextEdit.Size = New System.Drawing.Size(737, 165)
         Me.NotesTextEdit.StyleController = Me.LayoutControl1
         Me.NotesTextEdit.TabIndex = 21
         '
@@ -815,32 +815,32 @@ Partial Class FinanceAccDetails
         Me.LayoutControlGroup1.GroupBordersVisible = False
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup2, Me.EmptySpaceItem1, Me.EmptySpaceItem2, Me.LayoutControlGroup8, Me.LayoutControlItem3, Me.LayoutControlItem9, Me.LayoutControlItem13, Me.EmptySpaceItem3, Me.TabbedControlGroup1})
         Me.LayoutControlGroup1.Name = "Root"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(802, 472)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(785, 480)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlGroup2
         '
         Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem46, Me.LayoutControlItem10, Me.LayoutControlItem24, Me.LayoutControlItem8, Me.LayoutControlItem1, Me.LayoutControlItem6})
-        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 18)
+        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 10)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(782, 117)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(765, 121)
         Me.LayoutControlGroup2.Text = "الحساب"
         '
         'LayoutControlItem46
         '
         Me.LayoutControlItem46.Control = Me.WebSiteTextEdit
-        Me.LayoutControlItem46.Location = New System.Drawing.Point(189, 24)
+        Me.LayoutControlItem46.Location = New System.Drawing.Point(190, 24)
         Me.LayoutControlItem46.Name = "LayoutControlItem46"
-        Me.LayoutControlItem46.Size = New System.Drawing.Size(569, 24)
+        Me.LayoutControlItem46.Size = New System.Drawing.Size(551, 24)
         Me.LayoutControlItem46.Text = "رقم الهوية/مشتغل مرخص:"
         Me.LayoutControlItem46.TextSize = New System.Drawing.Size(124, 13)
         '
         'LayoutControlItem10
         '
         Me.LayoutControlItem10.Control = Me.SortGroupTextEdit
-        Me.LayoutControlItem10.Location = New System.Drawing.Point(379, 48)
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(370, 48)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(379, 24)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(371, 24)
         Me.LayoutControlItem10.Text = "التصنيف:"
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -849,7 +849,7 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem24.Control = Me.FilterTextEdit
         Me.LayoutControlItem24.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem24.Name = "LayoutControlItem24"
-        Me.LayoutControlItem24.Size = New System.Drawing.Size(379, 24)
+        Me.LayoutControlItem24.Size = New System.Drawing.Size(370, 24)
         Me.LayoutControlItem24.Text = "فلتر:"
         Me.LayoutControlItem24.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -858,16 +858,16 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem8.Control = Me.FullNameTextEdit
         Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(428, 24)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(418, 24)
         Me.LayoutControlItem8.Text = "الاسم:"
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(124, 13)
         '
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.TextEditAccountKey
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(428, 0)
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(418, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(330, 24)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(323, 24)
         Me.LayoutControlItem1.Text = "رقم الحساب"
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -876,32 +876,32 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem6.Control = Me.AccountKeyTextEdit
         Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(189, 24)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(190, 24)
         Me.LayoutControlItem6.Text = "الحساب:"
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(124, 13)
         '
         'EmptySpaceItem1
         '
         Me.EmptySpaceItem1.AllowHotTrack = False
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 442)
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 450)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(782, 10)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(765, 10)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'EmptySpaceItem2
         '
         Me.EmptySpaceItem2.AllowHotTrack = False
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(441, 416)
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(432, 424)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(341, 26)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(333, 26)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlGroup8
         '
         Me.LayoutControlGroup8.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem31, Me.LayoutControlItem2, Me.LayoutControlItem7})
-        Me.LayoutControlGroup8.Location = New System.Drawing.Point(0, 347)
+        Me.LayoutControlGroup8.Location = New System.Drawing.Point(0, 351)
         Me.LayoutControlGroup8.Name = "LayoutControlGroup8"
-        Me.LayoutControlGroup8.Size = New System.Drawing.Size(782, 69)
+        Me.LayoutControlGroup8.Size = New System.Drawing.Size(765, 73)
         Me.LayoutControlGroup8.Text = "تدقيق البيانات"
         '
         'LayoutControlItem31
@@ -909,52 +909,52 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem31.Control = Me.AuditEmployeeTextEdit
         Me.LayoutControlItem31.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem31.Name = "LayoutControlItem31"
-        Me.LayoutControlItem31.Size = New System.Drawing.Size(322, 24)
+        Me.LayoutControlItem31.Size = New System.Drawing.Size(315, 24)
         Me.LayoutControlItem31.Text = "مدقق الحساب:"
         Me.LayoutControlItem31.TextSize = New System.Drawing.Size(124, 13)
         '
         'LayoutControlItem2
         '
         Me.LayoutControlItem2.Control = Me.TextEditAccCreateDate
-        Me.LayoutControlItem2.Location = New System.Drawing.Point(322, 0)
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(315, 0)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(322, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(315, 24)
         Me.LayoutControlItem2.Text = "تاريخ فتح الحساب:"
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(124, 13)
         '
         'LayoutControlItem7
         '
         Me.LayoutControlItem7.Control = Me.CheckEditAudited
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(644, 0)
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(630, 0)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(114, 24)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(111, 24)
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem7.TextVisible = False
         '
         'LayoutControlItem3
         '
         Me.LayoutControlItem3.Control = Me.SimpleButton1
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 416)
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 424)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(142, 26)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(139, 26)
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
         '
         'LayoutControlItem9
         '
         Me.LayoutControlItem9.Control = Me.SimpleButton2
-        Me.LayoutControlItem9.Location = New System.Drawing.Point(142, 416)
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(139, 424)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(147, 26)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(144, 26)
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem9.TextVisible = False
         '
         'LayoutControlItem13
         '
         Me.LayoutControlItem13.Control = Me.SimpleButton3
-        Me.LayoutControlItem13.Location = New System.Drawing.Point(289, 416)
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(283, 424)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
-        Me.LayoutControlItem13.Size = New System.Drawing.Size(152, 26)
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(149, 26)
         Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem13.TextVisible = False
         '
@@ -963,102 +963,16 @@ Partial Class FinanceAccDetails
         Me.EmptySpaceItem3.AllowHotTrack = False
         Me.EmptySpaceItem3.Location = New System.Drawing.Point(0, 0)
         Me.EmptySpaceItem3.Name = "EmptySpaceItem3"
-        Me.EmptySpaceItem3.Size = New System.Drawing.Size(782, 18)
+        Me.EmptySpaceItem3.Size = New System.Drawing.Size(765, 10)
         Me.EmptySpaceItem3.TextSize = New System.Drawing.Size(0, 0)
         '
         'TabbedControlGroup1
         '
-        Me.TabbedControlGroup1.Location = New System.Drawing.Point(0, 135)
+        Me.TabbedControlGroup1.Location = New System.Drawing.Point(0, 131)
         Me.TabbedControlGroup1.Name = "TabbedControlGroup1"
         Me.TabbedControlGroup1.SelectedTabPage = Me.LayoutControlGroup3
-        Me.TabbedControlGroup1.Size = New System.Drawing.Size(782, 212)
+        Me.TabbedControlGroup1.Size = New System.Drawing.Size(765, 220)
         Me.TabbedControlGroup1.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup3, Me.LayoutControlGroup12, Me.LayoutControlGroup13, Me.LayoutControlGroup14, Me.LayoutControlGroup15})
-        '
-        'LayoutControlGroup13
-        '
-        Me.LayoutControlGroup13.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup6, Me.LayoutControlGroup7})
-        Me.LayoutControlGroup13.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup13.Name = "LayoutControlGroup13"
-        Me.LayoutControlGroup13.Size = New System.Drawing.Size(758, 165)
-        Me.LayoutControlGroup13.Text = "صاحب عمل"
-        '
-        'LayoutControlGroup6
-        '
-        Me.LayoutControlGroup6.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem27, Me.LayoutControlItem23, Me.EmptySpaceItem7})
-        Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
-        Me.LayoutControlGroup6.Size = New System.Drawing.Size(334, 165)
-        Me.LayoutControlGroup6.Text = "صاحب عمل"
-        '
-        'LayoutControlItem27
-        '
-        Me.LayoutControlItem27.Control = Me.OwnerCheckEdit
-        Me.LayoutControlItem27.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem27.Name = "LayoutControlItem27"
-        Me.LayoutControlItem27.Size = New System.Drawing.Size(310, 24)
-        Me.LayoutControlItem27.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem27.TextVisible = False
-        '
-        'LayoutControlItem23
-        '
-        Me.LayoutControlItem23.Control = Me.AboutJobTextEdit
-        Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 24)
-        Me.LayoutControlItem23.Name = "LayoutControlItem23"
-        Me.LayoutControlItem23.Size = New System.Drawing.Size(310, 24)
-        Me.LayoutControlItem23.Text = "طبيعة العمل:"
-        Me.LayoutControlItem23.TextSize = New System.Drawing.Size(124, 13)
-        '
-        'EmptySpaceItem7
-        '
-        Me.EmptySpaceItem7.AllowHotTrack = False
-        Me.EmptySpaceItem7.Location = New System.Drawing.Point(0, 48)
-        Me.EmptySpaceItem7.Name = "EmptySpaceItem7"
-        Me.EmptySpaceItem7.Size = New System.Drawing.Size(310, 72)
-        Me.EmptySpaceItem7.TextSize = New System.Drawing.Size(0, 0)
-        '
-        'LayoutControlGroup7
-        '
-        Me.LayoutControlGroup7.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem15, Me.LayoutControlItem19, Me.LayoutControlItem30, Me.EmptySpaceItem6})
-        Me.LayoutControlGroup7.Location = New System.Drawing.Point(334, 0)
-        Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
-        Me.LayoutControlGroup7.Size = New System.Drawing.Size(424, 165)
-        Me.LayoutControlGroup7.Text = "موظف"
-        '
-        'LayoutControlItem15
-        '
-        Me.LayoutControlItem15.Control = Me.PositionTextEdit
-        Me.LayoutControlItem15.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem15.Name = "LayoutControlItem15"
-        Me.LayoutControlItem15.Size = New System.Drawing.Size(400, 24)
-        Me.LayoutControlItem15.Text = "المسمى الوظيفي:"
-        Me.LayoutControlItem15.TextSize = New System.Drawing.Size(124, 13)
-        '
-        'LayoutControlItem19
-        '
-        Me.LayoutControlItem19.Control = Me.WorkATTextEdit
-        Me.LayoutControlItem19.Location = New System.Drawing.Point(0, 24)
-        Me.LayoutControlItem19.Name = "LayoutControlItem19"
-        Me.LayoutControlItem19.Size = New System.Drawing.Size(400, 24)
-        Me.LayoutControlItem19.Text = "موظف لدى:"
-        Me.LayoutControlItem19.TextSize = New System.Drawing.Size(124, 13)
-        '
-        'LayoutControlItem30
-        '
-        Me.LayoutControlItem30.Control = Me.EmployeeCodeText
-        Me.LayoutControlItem30.CustomizationFormText = "الرقم الوطيفي"
-        Me.LayoutControlItem30.Location = New System.Drawing.Point(0, 48)
-        Me.LayoutControlItem30.Name = "LayoutControlItem30"
-        Me.LayoutControlItem30.Size = New System.Drawing.Size(400, 24)
-        Me.LayoutControlItem30.Text = "الرقم الوظيفي"
-        Me.LayoutControlItem30.TextSize = New System.Drawing.Size(124, 13)
-        '
-        'EmptySpaceItem6
-        '
-        Me.EmptySpaceItem6.AllowHotTrack = False
-        Me.EmptySpaceItem6.Location = New System.Drawing.Point(0, 72)
-        Me.EmptySpaceItem6.Name = "EmptySpaceItem6"
-        Me.EmptySpaceItem6.Size = New System.Drawing.Size(400, 48)
-        Me.EmptySpaceItem6.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlGroup3
         '
@@ -1066,7 +980,7 @@ Partial Class FinanceAccDetails
         Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup4})
         Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(758, 165)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(741, 169)
         Me.LayoutControlGroup3.Text = "العنوان وبيانات الاتصال"
         '
         'LayoutControlGroup4
@@ -1074,15 +988,15 @@ Partial Class FinanceAccDetails
         Me.LayoutControlGroup4.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem20, Me.LayoutControlItem22, Me.LayoutControlItem38, Me.LayoutControlItem14, Me.LayoutControlItem12, Me.LayoutControlItem18, Me.LayoutControlItem44, Me.LayoutControlItem40})
         Me.LayoutControlGroup4.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
-        Me.LayoutControlGroup4.Size = New System.Drawing.Size(758, 165)
+        Me.LayoutControlGroup4.Size = New System.Drawing.Size(741, 169)
         Me.LayoutControlGroup4.Text = "العنوان وبيانات الاتصال"
         '
         'LayoutControlItem20
         '
         Me.LayoutControlItem20.Control = Me.PhoneTextEdit
-        Me.LayoutControlItem20.Location = New System.Drawing.Point(345, 48)
+        Me.LayoutControlItem20.Location = New System.Drawing.Point(337, 48)
         Me.LayoutControlItem20.Name = "LayoutControlItem20"
-        Me.LayoutControlItem20.Size = New System.Drawing.Size(389, 24)
+        Me.LayoutControlItem20.Size = New System.Drawing.Size(380, 24)
         Me.LayoutControlItem20.Text = "الهاتف:"
         Me.LayoutControlItem20.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -1091,7 +1005,7 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem22.Control = Me.FaxTextEdit
         Me.LayoutControlItem22.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem22.Name = "LayoutControlItem22"
-        Me.LayoutControlItem22.Size = New System.Drawing.Size(345, 24)
+        Me.LayoutControlItem22.Size = New System.Drawing.Size(337, 24)
         Me.LayoutControlItem22.Text = "فاكس:"
         Me.LayoutControlItem22.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -1100,16 +1014,16 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem38.Control = Me.CostCodeTextEdit
         Me.LayoutControlItem38.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem38.Name = "LayoutControlItem38"
-        Me.LayoutControlItem38.Size = New System.Drawing.Size(345, 24)
+        Me.LayoutControlItem38.Size = New System.Drawing.Size(337, 24)
         Me.LayoutControlItem38.Text = "المنطقة:"
         Me.LayoutControlItem38.TextSize = New System.Drawing.Size(124, 13)
         '
         'LayoutControlItem14
         '
         Me.LayoutControlItem14.Control = Me.CityTextEdit
-        Me.LayoutControlItem14.Location = New System.Drawing.Point(345, 0)
+        Me.LayoutControlItem14.Location = New System.Drawing.Point(337, 0)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
-        Me.LayoutControlItem14.Size = New System.Drawing.Size(389, 24)
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(380, 24)
         Me.LayoutControlItem14.Text = "المدينة:"
         Me.LayoutControlItem14.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -1118,16 +1032,16 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem12.Control = Me.AddressTextEdit
         Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(734, 24)
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(717, 24)
         Me.LayoutControlItem12.Text = "العنوان:"
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(124, 13)
         '
         'LayoutControlItem18
         '
         Me.LayoutControlItem18.Control = Me.CountryTextEdit
-        Me.LayoutControlItem18.Location = New System.Drawing.Point(345, 72)
+        Me.LayoutControlItem18.Location = New System.Drawing.Point(337, 72)
         Me.LayoutControlItem18.Name = "LayoutControlItem18"
-        Me.LayoutControlItem18.Size = New System.Drawing.Size(389, 24)
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(380, 24)
         Me.LayoutControlItem18.Text = "الشخص المسؤول:"
         Me.LayoutControlItem18.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -1136,7 +1050,7 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem44.Control = Me.SPhoneTextEdit
         Me.LayoutControlItem44.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem44.Name = "LayoutControlItem44"
-        Me.LayoutControlItem44.Size = New System.Drawing.Size(345, 24)
+        Me.LayoutControlItem44.Size = New System.Drawing.Size(337, 24)
         Me.LayoutControlItem44.Text = "موبايل:"
         Me.LayoutControlItem44.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -1145,7 +1059,7 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem40.Control = Me.EMailTextEdit
         Me.LayoutControlItem40.Location = New System.Drawing.Point(0, 96)
         Me.LayoutControlItem40.Name = "LayoutControlItem40"
-        Me.LayoutControlItem40.Size = New System.Drawing.Size(734, 24)
+        Me.LayoutControlItem40.Size = New System.Drawing.Size(717, 24)
         Me.LayoutControlItem40.Text = "ايميل:"
         Me.LayoutControlItem40.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -1155,7 +1069,7 @@ Partial Class FinanceAccDetails
         Me.LayoutControlGroup12.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup11})
         Me.LayoutControlGroup12.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup12.Name = "LayoutControlGroup12"
-        Me.LayoutControlGroup12.Size = New System.Drawing.Size(758, 165)
+        Me.LayoutControlGroup12.Size = New System.Drawing.Size(741, 169)
         Me.LayoutControlGroup12.Text = "بيانات مالية"
         '
         'LayoutControlGroup11
@@ -1163,15 +1077,15 @@ Partial Class FinanceAccDetails
         Me.LayoutControlGroup11.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem5, Me.LayoutControlItem16, Me.LayoutControlItem32, Me.LayoutControlItem34, Me.LayoutControlItem36, Me.LayoutControlItem26})
         Me.LayoutControlGroup11.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup11.Name = "LayoutControlGroup11"
-        Me.LayoutControlGroup11.Size = New System.Drawing.Size(758, 165)
+        Me.LayoutControlGroup11.Size = New System.Drawing.Size(741, 169)
         Me.LayoutControlGroup11.Text = "بيانات مالية"
         '
         'LayoutControlItem5
         '
         Me.LayoutControlItem5.Control = Me.MaxCreditTextEdit
-        Me.LayoutControlItem5.Location = New System.Drawing.Point(368, 0)
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(359, 0)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(366, 24)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(358, 24)
         Me.LayoutControlItem5.Text = "السقف المالي:"
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -1180,25 +1094,25 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem16.Control = Me.ZipTextEdit
         Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(368, 24)
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(359, 24)
         Me.LayoutControlItem16.Text = "سعر الغسلة:"
         Me.LayoutControlItem16.TextSize = New System.Drawing.Size(124, 13)
         '
         'LayoutControlItem32
         '
         Me.LayoutControlItem32.Control = Me.BankCodeTextEdit
-        Me.LayoutControlItem32.Location = New System.Drawing.Point(417, 24)
+        Me.LayoutControlItem32.Location = New System.Drawing.Point(419, 24)
         Me.LayoutControlItem32.Name = "LayoutControlItem32"
-        Me.LayoutControlItem32.Size = New System.Drawing.Size(317, 24)
+        Me.LayoutControlItem32.Size = New System.Drawing.Size(298, 24)
         Me.LayoutControlItem32.Text = "البنك:"
         Me.LayoutControlItem32.TextSize = New System.Drawing.Size(124, 13)
         '
         'LayoutControlItem34
         '
         Me.LayoutControlItem34.Control = Me.BranchCodeTextEdit
-        Me.LayoutControlItem34.Location = New System.Drawing.Point(234, 24)
+        Me.LayoutControlItem34.Location = New System.Drawing.Point(229, 24)
         Me.LayoutControlItem34.Name = "LayoutControlItem34"
-        Me.LayoutControlItem34.Size = New System.Drawing.Size(183, 24)
+        Me.LayoutControlItem34.Size = New System.Drawing.Size(190, 24)
         Me.LayoutControlItem34.Text = "الفرع:"
         Me.LayoutControlItem34.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -1207,7 +1121,7 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem36.Control = Me.BankAccountTextEdit
         Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem36.Name = "LayoutControlItem36"
-        Me.LayoutControlItem36.Size = New System.Drawing.Size(234, 24)
+        Me.LayoutControlItem36.Size = New System.Drawing.Size(229, 24)
         Me.LayoutControlItem36.Text = "رقم الحساب البنكي:"
         Me.LayoutControlItem36.TextSize = New System.Drawing.Size(124, 13)
         '
@@ -1216,16 +1130,102 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem26.Control = Me.DetailsTextEdit
         Me.LayoutControlItem26.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem26.Name = "LayoutControlItem26"
-        Me.LayoutControlItem26.Size = New System.Drawing.Size(734, 72)
+        Me.LayoutControlItem26.Size = New System.Drawing.Size(717, 72)
         Me.LayoutControlItem26.Text = "السحوبات الشهرية:"
         Me.LayoutControlItem26.TextSize = New System.Drawing.Size(124, 13)
+        '
+        'LayoutControlGroup13
+        '
+        Me.LayoutControlGroup13.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup6, Me.LayoutControlGroup7})
+        Me.LayoutControlGroup13.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup13.Name = "LayoutControlGroup13"
+        Me.LayoutControlGroup13.Size = New System.Drawing.Size(741, 169)
+        Me.LayoutControlGroup13.Text = "صاحب عمل"
+        '
+        'LayoutControlGroup6
+        '
+        Me.LayoutControlGroup6.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem27, Me.LayoutControlItem23, Me.EmptySpaceItem7})
+        Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
+        Me.LayoutControlGroup6.Size = New System.Drawing.Size(326, 169)
+        Me.LayoutControlGroup6.Text = "صاحب عمل"
+        '
+        'LayoutControlItem27
+        '
+        Me.LayoutControlItem27.Control = Me.OwnerCheckEdit
+        Me.LayoutControlItem27.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem27.Name = "LayoutControlItem27"
+        Me.LayoutControlItem27.Size = New System.Drawing.Size(302, 24)
+        Me.LayoutControlItem27.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem27.TextVisible = False
+        '
+        'LayoutControlItem23
+        '
+        Me.LayoutControlItem23.Control = Me.AboutJobTextEdit
+        Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem23.Name = "LayoutControlItem23"
+        Me.LayoutControlItem23.Size = New System.Drawing.Size(302, 24)
+        Me.LayoutControlItem23.Text = "طبيعة العمل:"
+        Me.LayoutControlItem23.TextSize = New System.Drawing.Size(124, 13)
+        '
+        'EmptySpaceItem7
+        '
+        Me.EmptySpaceItem7.AllowHotTrack = False
+        Me.EmptySpaceItem7.Location = New System.Drawing.Point(0, 48)
+        Me.EmptySpaceItem7.Name = "EmptySpaceItem7"
+        Me.EmptySpaceItem7.Size = New System.Drawing.Size(302, 72)
+        Me.EmptySpaceItem7.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'LayoutControlGroup7
+        '
+        Me.LayoutControlGroup7.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem15, Me.LayoutControlItem19, Me.LayoutControlItem30, Me.EmptySpaceItem6})
+        Me.LayoutControlGroup7.Location = New System.Drawing.Point(326, 0)
+        Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
+        Me.LayoutControlGroup7.Size = New System.Drawing.Size(415, 169)
+        Me.LayoutControlGroup7.Text = "موظف"
+        '
+        'LayoutControlItem15
+        '
+        Me.LayoutControlItem15.Control = Me.PositionTextEdit
+        Me.LayoutControlItem15.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem15.Name = "LayoutControlItem15"
+        Me.LayoutControlItem15.Size = New System.Drawing.Size(391, 24)
+        Me.LayoutControlItem15.Text = "المسمى الوظيفي:"
+        Me.LayoutControlItem15.TextSize = New System.Drawing.Size(124, 13)
+        '
+        'LayoutControlItem19
+        '
+        Me.LayoutControlItem19.Control = Me.WorkATTextEdit
+        Me.LayoutControlItem19.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem19.Name = "LayoutControlItem19"
+        Me.LayoutControlItem19.Size = New System.Drawing.Size(391, 24)
+        Me.LayoutControlItem19.Text = "موظف لدى:"
+        Me.LayoutControlItem19.TextSize = New System.Drawing.Size(124, 13)
+        '
+        'LayoutControlItem30
+        '
+        Me.LayoutControlItem30.Control = Me.EmployeeCodeText
+        Me.LayoutControlItem30.CustomizationFormText = "الرقم الوطيفي"
+        Me.LayoutControlItem30.Location = New System.Drawing.Point(0, 48)
+        Me.LayoutControlItem30.Name = "LayoutControlItem30"
+        Me.LayoutControlItem30.Size = New System.Drawing.Size(391, 24)
+        Me.LayoutControlItem30.Text = "الرقم الوظيفي"
+        Me.LayoutControlItem30.TextSize = New System.Drawing.Size(124, 13)
+        '
+        'EmptySpaceItem6
+        '
+        Me.EmptySpaceItem6.AllowHotTrack = False
+        Me.EmptySpaceItem6.Location = New System.Drawing.Point(0, 72)
+        Me.EmptySpaceItem6.Name = "EmptySpaceItem6"
+        Me.EmptySpaceItem6.Size = New System.Drawing.Size(391, 48)
+        Me.EmptySpaceItem6.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlGroup14
         '
         Me.LayoutControlGroup14.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem17})
         Me.LayoutControlGroup14.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup14.Name = "LayoutControlGroup14"
-        Me.LayoutControlGroup14.Size = New System.Drawing.Size(758, 165)
+        Me.LayoutControlGroup14.Size = New System.Drawing.Size(741, 169)
         Me.LayoutControlGroup14.Text = "أشخاص ذو علاقة"
         '
         'LayoutControlItem17
@@ -1233,7 +1233,7 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem17.Control = Me.CRMContactGridControl
         Me.LayoutControlItem17.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem17.Name = "LayoutControlItem17"
-        Me.LayoutControlItem17.Size = New System.Drawing.Size(758, 165)
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(741, 169)
         Me.LayoutControlItem17.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem17.TextVisible = False
         '
@@ -1242,7 +1242,7 @@ Partial Class FinanceAccDetails
         Me.LayoutControlGroup15.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem11})
         Me.LayoutControlGroup15.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup15.Name = "LayoutControlGroup15"
-        Me.LayoutControlGroup15.Size = New System.Drawing.Size(758, 165)
+        Me.LayoutControlGroup15.Size = New System.Drawing.Size(741, 169)
         Me.LayoutControlGroup15.Text = "ملاحظات"
         '
         'LayoutControlItem11
@@ -1250,7 +1250,7 @@ Partial Class FinanceAccDetails
         Me.LayoutControlItem11.Control = Me.NotesTextEdit
         Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(758, 165)
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(741, 169)
         Me.LayoutControlItem11.Text = "ملاحظات:"
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem11.TextVisible = False
@@ -1281,7 +1281,7 @@ Partial Class FinanceAccDetails
         Me.TextEditOrderID.Location = New System.Drawing.Point(689, 12)
         Me.TextEditOrderID.Name = "TextEditOrderID"
         Me.TextEditOrderID.Properties.ReadOnly = True
-        Me.TextEditOrderID.Size = New System.Drawing.Size(74, 20)
+        Me.TextEditOrderID.Size = New System.Drawing.Size(65, 20)
         Me.TextEditOrderID.StyleController = Me.LayoutControl2
         Me.TextEditOrderID.TabIndex = 60
         '
@@ -1604,7 +1604,7 @@ Partial Class FinanceAccDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(931, 545)
+        Me.ClientSize = New System.Drawing.Size(933, 547)
         Me.Controls.Add(Me.NavigationPane1)
         Me.Name = "FinanceAccDetails"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -1673,16 +1673,6 @@ Partial Class FinanceAccDetails
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmptySpaceItem3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TabbedControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlGroup13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem27, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem23, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem30, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmptySpaceItem6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem20, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1701,6 +1691,16 @@ Partial Class FinanceAccDetails
         CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem27, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup15, System.ComponentModel.ISupportInitialize).EndInit()

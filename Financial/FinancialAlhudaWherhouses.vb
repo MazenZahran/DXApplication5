@@ -8,10 +8,9 @@ Public Class FinancialAlhudaWherhouses
 
     Private Sub FinancialAlhudaWherhouses_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim sql_string As String = " SELECT     [AccountKey] ,  [FullName]
-                                     FROM  [ALHUDA].[dbo].[Accounts]
-                                     where AccountKey= '2100006' or AccountKey= '2100007' or AccountKey= '2100023' or AccountKey= '2100002' or AccountKey= '2100022' or  AccountKey= '2100021'
-                                     or AccountKey= '2100041'  or AccountKey= '2100005' or AccountKey= '2100042' "
+        Dim sql_string As String = "   SELECT     [AccountKey] ,  [FullName]
+   FROM  [ALHUDA].[dbo].[Accounts]
+   where [AccountKey] BETWEEN '2100002' AND '2100099' AND FullName LIKE '%هيئ%' "
 
         Dim sql As New SQLControl
         sql.WizCountRunQuery(sql_string)

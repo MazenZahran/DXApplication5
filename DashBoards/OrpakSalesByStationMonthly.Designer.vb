@@ -37,11 +37,11 @@
             Dim DashboardLayoutItem1 As DevExpress.DashboardCommon.DashboardLayoutItem = New DevExpress.DashboardCommon.DashboardLayoutItem()
             Dim DashboardLayoutItem2 As DevExpress.DashboardCommon.DashboardLayoutItem = New DevExpress.DashboardCommon.DashboardLayoutItem()
             Me.HO_DATADataSet1 = New DXApplication5.HO_DATADataSet()
-            Me.TransactionsTableAdapter1 = New DXApplication5.HO_DATADataSetTableAdapters.transactionsTableAdapter()
+            '   Me.TransactionsTableAdapter1 = New DXApplication5.HO_DATADataSetTableAdapters.transactionsTableAdapter()
             Me.HO_DATADataSet2 = New DXApplication5.HO_DATADataSet()
-            Me.TransactionsTableAdapter2 = New DXApplication5.HO_DATADataSetTableAdapters.transactionsTableAdapter()
+            '    Me.TransactionsTableAdapter2 = New DXApplication5.HO_DATADataSetTableAdapters.transactionsTableAdapter()
             Me.HO_DATADataSet3 = New DXApplication5.HO_DATADataSet()
-            Me.TransactionsTableAdapter3 = New DXApplication5.HO_DATADataSetTableAdapters.transactionsTableAdapter()
+            '   Me.TransactionsTableAdapter3 = New DXApplication5.HO_DATADataSetTableAdapters.transactionsTableAdapter()
             Me.DashboardSqlDataSource1 = New DevExpress.DashboardCommon.DashboardSqlDataSource()
             Me.ChartDashboardItem1 = New DevExpress.DashboardCommon.ChartDashboardItem()
             Me.ListBoxDashboardItem1 = New DevExpress.DashboardCommon.ListBoxDashboardItem()
@@ -64,7 +64,7 @@
             '
             'TransactionsTableAdapter1
             '
-            Me.TransactionsTableAdapter1.ClearBeforeFill = True
+            '  Me.TransactionsTableAdapter1.ClearBeforeFill = True
             '
             'HO_DATADataSet2
             '
@@ -73,7 +73,7 @@
             '
             'TransactionsTableAdapter2
             '
-            Me.TransactionsTableAdapter2.ClearBeforeFill = True
+            '   Me.TransactionsTableAdapter2.ClearBeforeFill = True
             '
             'HO_DATADataSet3
             '
@@ -82,7 +82,7 @@
             '
             'TransactionsTableAdapter3
             '
-            Me.TransactionsTableAdapter3.ClearBeforeFill = True
+            '  Me.TransactionsTableAdapter3.ClearBeforeFill = True
             '
             'DashboardSqlDataSource1
             '
@@ -175,11 +175,11 @@
 
         End Sub
         Friend WithEvents HO_DATADataSet1 As HO_DATADataSet
-        Friend WithEvents TransactionsTableAdapter1 As HO_DATADataSetTableAdapters.transactionsTableAdapter
+        '    Friend WithEvents TransactionsTableAdapter1 As HO_DATADataSetTableAdapters.transactionsTableAdapter
         Friend WithEvents HO_DATADataSet2 As HO_DATADataSet
-        Friend WithEvents TransactionsTableAdapter2 As HO_DATADataSetTableAdapters.transactionsTableAdapter
+        '   Friend WithEvents TransactionsTableAdapter2 As HO_DATADataSetTableAdapters.transactionsTableAdapter
         Friend WithEvents HO_DATADataSet3 As HO_DATADataSet
-        Friend WithEvents TransactionsTableAdapter3 As HO_DATADataSetTableAdapters.transactionsTableAdapter
+        '  Friend WithEvents TransactionsTableAdapter3 As HO_DATADataSetTableAdapters.transactionsTableAdapter
         Friend WithEvents DashboardSqlDataSource1 As DevExpress.DashboardCommon.DashboardSqlDataSource
         Friend WithEvents ChartDashboardItem1 As DevExpress.DashboardCommon.ChartDashboardItem
         Friend WithEvents ListBoxDashboardItem1 As DevExpress.DashboardCommon.ListBoxDashboardItem

@@ -29,20 +29,22 @@ Public Class FinanceAllAccounts
 
         Dim Sql As New SQLControl
         Dim SQlString As String
-        SQlString = "  Select [ID], AccountID,[FullName],[SortGroup],AccAudit,[Address],[City],[Zip],[Country],[Phone],[Fax] ,[Filter],[Details],
+        SQlString = "  Select [ID], AccountID,[FullName],[SortGroup],SortCodeName,AccAudit,[Address],[City],[Zip],[Country],[Phone],[Fax] ,[Filter],[Details],
                               [MaxCredit],[CustomerNote] ,[BankCode],[BranchCode],[BankAccount],[CostCode],[EMail],[SbPhone],[SPhone]
-                              ,convert(datetime,'2000-01-01') As AccLastTrans , case when Status=1 then 'InActive' when Status=2 then 'Active' when Status=0 then 'Deleted'  end  as AccStatus
+                              ,convert(datetime,'2000-01-01') As AccLastTrans ,FleetID, case when [Status]=1 then 'InActive' when [Status]=2 then 'Active' when [Status]=0 then 'Deleted'  end  as AccStatus
                        From 
 	                    (
-	                        SELECT  [ALHUDA].[dbo].[Accounts].* ,ISNULL(FinanceAccounts.AccAudit,0) as AccAudit,status,
+	                        SELECT  [ALHUDA].[dbo].[Accounts].* ,ISNULL(FinanceAccounts.AccAudit,0) as AccAudit,isnull(F.ID,0)  as FleetID ,[status],s.SortCodeName,
 			                         CONVERT(INT,CASE WHEN IsNumeric(CONVERT(VARCHAR(12), [Accounts].AccountKey)) = 1 THEN CONVERT(VARCHAR(12),[Accounts].AccountKey) ELSE 0 END) as AccountID
 	                        FROM [ALHUDA].[dbo].[Accounts]
-		                         Left join [CRM].[dbo].[FinanceAccounts]
-		                         on [ALHUDA].[dbo].[Accounts].AccountKey=[CRM].[dbo].[FinanceAccounts].AccountKey
-		                         left join [ho].[HO_DATA].[dbo].[fleets]
-		                         on [ALHUDA].[dbo].[Accounts].AccountKey=[code]
+							left join [ALHUDA].[dbo].AccSortNames S
+							on [ALHUDA].[dbo].[Accounts].SortGroup = S.AccSortCode  
+		                    Left join [CRM].[dbo].[FinanceAccounts]
+		                    on [ALHUDA].[dbo].[Accounts].AccountKey=[CRM].[dbo].[FinanceAccounts].AccountKey
+		                    left join [ho].[HO_DATA].[dbo].[fleets] F
+		                    on [ALHUDA].[dbo].[Accounts].AccountKey=F.[code]
 	                             ) a
-                       Where AccountID > 0 "
+                       Where AccountID > 0  "
 
         If CStr(AccountFrom) <> "Null" And CStr(AccountTo) <> "Null" Then
             SQlString = SQlString + " And ( AccountID between " & AccountFrom & " and " & AccountTo & ")    "
@@ -72,31 +74,35 @@ Public Class FinanceAllAccounts
         Sql.CRMRunQuery(SQlString)
         GridControl1.DataSource = Sql.SQLDS.Tables(0)
 
-        Dim i As Integer
-        Dim SqlCmd As SqlCommand
-        Dim SQLDA As SqlDataAdapter
-        Dim SQLDS As DataSet
-        Dim SqlConWizCount As New SqlConnection With {.ConnectionString = WizCountString}
-        SqlConWizCount.Open()
-        For i = 0 To Me.GridView1.RowCount - 1
-            Try
-                Dim LastDate As String
-                Dim AccountKey As String = CType(GridView1.GetRowCellValue(i, "AccountID"), String)
-                Dim query As String = "    Select top 1 JVALUEDATE  from [ALHUDA].[dbo].RPHSTRANSRETRIV      
+        If CheckEditShowLastTrans.Checked = True Then
+            Dim i As Integer
+            Dim SqlCmd As SqlCommand
+            Dim SQLDA As SqlDataAdapter
+            Dim SQLDS As DataSet
+            Dim SqlConWizCount As New SqlConnection With {.ConnectionString = WizCountString}
+            SqlConWizCount.Open()
+            For i = 0 To Me.GridView1.RowCount - 1
+                Try
+                    Dim LastDate As String
+                    Dim AccountKey As String = CType(GridView1.GetRowCellValue(i, "AccountID"), String)
+                    Dim query As String = "    Select top 1 JVALUEDATE  from [ALHUDA].[dbo].RPHSTRANSRETRIV      
                                            Where  JMACCOUNTKEY     ='" & AccountKey & "'
                                            Order by  jmtransid   desc"
-                SqlCmd = New SqlCommand(query, SqlConWizCount)
-                SQLDA = New SqlDataAdapter(SqlCmd)
-                SQLDS = New DataSet
-                SQLDA.Fill(SQLDS)
-                LastDate = Format(CDate(SQLDS.Tables(0).Rows(0).Item("JVALUEDATE")), "yyyy-MM-dd")
-                GridView1.SetRowCellValue(i, ColAccLastTrans, LastDate)
-            Catch ex As Exception
-                GridView1.SetRowCellValue(i, ColAccLastTrans, "2000-01-01")
+                    SqlCmd = New SqlCommand(query, SqlConWizCount)
+                    SQLDA = New SqlDataAdapter(SqlCmd)
+                    SQLDS = New DataSet
+                    SQLDA.Fill(SQLDS)
+                    LastDate = Format(CDate(SQLDS.Tables(0).Rows(0).Item("JVALUEDATE")), "yyyy-MM-dd")
+                    GridView1.SetRowCellValue(i, ColAccLastTrans, LastDate)
+                Catch ex As Exception
+                    GridView1.SetRowCellValue(i, ColAccLastTrans, "2000-01-01")
+                    SqlConWizCount.Close()
+                End Try
                 SqlConWizCount.Close()
-            End Try
-            SqlConWizCount.Close()
-        Next
+            Next
+        End If
+
+
 
         GridView1.BestFitColumns()
 
@@ -236,5 +242,62 @@ ByVal e As RowCellCustomDrawEventArgs) Handles GridView1.CustomDrawCell
             End Select
 #Enable Warning BC42019 ' Operands of type Object used for operator
         End If
+    End Sub
+
+    Private Sub CheckEdit1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckShowDetails.CheckedChanged
+        If CheckShowDetails.Checked = True Then
+            ColZip.Visible = True
+            ColEMail.Visible = True
+            ColFax.Visible = True
+            ColPhone.Visible = True
+            ColSPhone.Visible = True
+            ColCountry.Visible = True
+            ColCity.Visible = True
+            ColAddress.Visible = True
+        Else
+            ColZip.Visible = False
+            ColEMail.Visible = False
+            ColFax.Visible = False
+            ColPhone.Visible = False
+            ColSPhone.Visible = False
+            ColCountry.Visible = False
+            ColCity.Visible = False
+            ColAddress.Visible = False
+        End If
+    End Sub
+
+    Private Sub RepositoryStopFleet_Click(sender As Object, e As EventArgs) Handles RepositoryStopFleet.Click
+        '  MsgBox("Stop Card")
+        Dim _FleetID As Integer = CInt(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "FleetID"))
+        Dim _Status As Integer
+
+        If _FleetID = 0 Then
+            MsgBox("رقم الزبون خطا")
+            Exit Sub
+        End If
+
+        Try
+            Dim Sql As New SQLControl
+            Dim SqlString As String
+            SqlString = " Select [status]  FROM [HO_DATA].[dbo].[fleets] where id = " & _FleetID
+            Sql.RunQuery(SqlString)
+            _Status = CInt(Sql.SQLDS.Tables(0).Rows(0).Item("status"))
+        Catch ex As Exception
+            _Status = 0
+        End Try
+
+
+
+        If _Status = 0 Then
+            MsgBox("الحالة خطأ")
+            Exit Sub
+        End If
+
+        If _Status = 1 Then StopFleet(_FleetID, 2)
+
+        If _Status = 2 Then StopFleet(_FleetID, 1)
+
+        LoadData()
+
     End Sub
 End Class

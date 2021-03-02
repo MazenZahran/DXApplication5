@@ -361,10 +361,10 @@ Partial Class CarsEdit
         'ActiveCheckEdit
         '
         Me.ActiveCheckEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "active", True))
-        Me.ActiveCheckEdit.Location = New System.Drawing.Point(12, 355)
+        Me.ActiveCheckEdit.Location = New System.Drawing.Point(12, 347)
         Me.ActiveCheckEdit.Name = "ActiveCheckEdit"
         Me.ActiveCheckEdit.Properties.Caption = "فعال"
-        Me.ActiveCheckEdit.Size = New System.Drawing.Size(1035, 20)
+        Me.ActiveCheckEdit.Size = New System.Drawing.Size(972, 20)
         Me.ActiveCheckEdit.StyleController = Me.LayoutControl1
         Me.ActiveCheckEdit.TabIndex = 19
         '
@@ -413,7 +413,7 @@ Partial Class CarsEdit
         Me.LayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(1272, 312, 450, 400)
         Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(1059, 641)
+        Me.LayoutControl1.Size = New System.Drawing.Size(996, 641)
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
         '
@@ -422,7 +422,7 @@ Partial Class CarsEdit
         Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
         Me.SimpleButton2.Location = New System.Drawing.Point(12, 12)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(111, 22)
+        Me.SimpleButton2.Size = New System.Drawing.Size(104, 22)
         Me.SimpleButton2.StyleController = Me.LayoutControl1
         Me.SimpleButton2.TabIndex = 48
         Me.SimpleButton2.Text = "تحديث"
@@ -430,9 +430,9 @@ Partial Class CarsEdit
         'BegSpedometaerTextEdit
         '
         Me.BegSpedometaerTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "BegSpedometaer", True))
-        Me.BegSpedometaerTextEdit.Location = New System.Drawing.Point(58, 295)
+        Me.BegSpedometaerTextEdit.Location = New System.Drawing.Point(56, 287)
         Me.BegSpedometaerTextEdit.Name = "BegSpedometaerTextEdit"
-        Me.BegSpedometaerTextEdit.Size = New System.Drawing.Size(162, 20)
+        Me.BegSpedometaerTextEdit.Size = New System.Drawing.Size(148, 20)
         Me.BegSpedometaerTextEdit.StyleController = Me.LayoutControl1
         Me.BegSpedometaerTextEdit.TabIndex = 15
         '
@@ -445,24 +445,24 @@ Partial Class CarsEdit
         Me.PicturePictureEdit.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray
         Me.PicturePictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
         Me.PicturePictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch
-        Me.PicturePictureEdit.Size = New System.Drawing.Size(243, 216)
+        Me.PicturePictureEdit.Size = New System.Drawing.Size(228, 212)
         Me.PicturePictureEdit.StyleController = Me.LayoutControl1
         Me.PicturePictureEdit.TabIndex = 47
         '
         'TextEditCarID
         '
-        Me.TextEditCarID.Location = New System.Drawing.Point(922, 75)
+        Me.TextEditCarID.Location = New System.Drawing.Point(866, 71)
         Me.TextEditCarID.Name = "TextEditCarID"
-        Me.TextEditCarID.Size = New System.Drawing.Size(91, 20)
+        Me.TextEditCarID.Size = New System.Drawing.Size(84, 20)
         Me.TextEditCarID.StyleController = Me.LayoutControl1
         Me.TextEditCarID.TabIndex = 0
         '
         'SimpleButton1
         '
         Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(794, 12)
+        Me.SimpleButton1.Location = New System.Drawing.Point(747, 12)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(128, 22)
+        Me.SimpleButton1.Size = New System.Drawing.Size(120, 22)
         Me.SimpleButton1.StyleController = Me.LayoutControl1
         Me.SimpleButton1.TabIndex = 44
         Me.SimpleButton1.Text = "تعريف مركبة جديدة"
@@ -470,9 +470,9 @@ Partial Class CarsEdit
         'SimpleButtonSave
         '
         Me.SimpleButtonSave.ImageOptions.Image = CType(resources.GetObject("SimpleButtonSave.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButtonSave.Location = New System.Drawing.Point(926, 12)
+        Me.SimpleButtonSave.Location = New System.Drawing.Point(871, 12)
         Me.SimpleButtonSave.Name = "SimpleButtonSave"
-        Me.SimpleButtonSave.Size = New System.Drawing.Size(121, 22)
+        Me.SimpleButtonSave.Size = New System.Drawing.Size(113, 22)
         Me.SimpleButtonSave.StyleController = Me.LayoutControl1
         Me.SimpleButtonSave.TabIndex = 20
         Me.SimpleButtonSave.Text = "حفظ F3"
@@ -486,13 +486,13 @@ Partial Class CarsEdit
         Me.TabPane1.Controls.Add(Me.TabNavigationPage5)
         Me.TabPane1.Controls.Add(Me.TabNavigationPage6)
         Me.TabPane1.Controls.Add(Me.TabNavigationPage7)
-        Me.TabPane1.Location = New System.Drawing.Point(12, 379)
+        Me.TabPane1.Location = New System.Drawing.Point(12, 371)
         Me.TabPane1.Name = "TabPane1"
         Me.TabPane1.PageProperties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText
         Me.TabPane1.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.TabNavigationPage1, Me.TabNavigationPage2, Me.TabNavigationPage3, Me.TabNavigationPage4, Me.TabNavigationPage5, Me.TabNavigationPage6, Me.TabNavigationPage7})
-        Me.TabPane1.RegularSize = New System.Drawing.Size(1035, 226)
+        Me.TabPane1.RegularSize = New System.Drawing.Size(972, 234)
         Me.TabPane1.SelectedPage = Me.TabNavigationPage1
-        Me.TabPane1.Size = New System.Drawing.Size(1035, 226)
+        Me.TabPane1.Size = New System.Drawing.Size(972, 234)
         Me.TabPane1.TabIndex = 42
         Me.TabPane1.Text = "TabPane1"
         '
@@ -502,7 +502,7 @@ Partial Class CarsEdit
         Me.TabNavigationPage1.Controls.Add(Me.CarsTarkhesTransGridControl)
         Me.TabNavigationPage1.ImageOptions.Image = CType(resources.GetObject("TabNavigationPage1.ImageOptions.Image"), System.Drawing.Image)
         Me.TabNavigationPage1.Name = "TabNavigationPage1"
-        Me.TabNavigationPage1.Size = New System.Drawing.Size(1035, 194)
+        Me.TabNavigationPage1.Size = New System.Drawing.Size(972, 205)
         '
         'CarsTarkhesTransGridControl
         '
@@ -511,7 +511,7 @@ Partial Class CarsEdit
         Me.CarsTarkhesTransGridControl.Location = New System.Drawing.Point(0, 0)
         Me.CarsTarkhesTransGridControl.MainView = Me.GridView6
         Me.CarsTarkhesTransGridControl.Name = "CarsTarkhesTransGridControl"
-        Me.CarsTarkhesTransGridControl.Size = New System.Drawing.Size(1035, 194)
+        Me.CarsTarkhesTransGridControl.Size = New System.Drawing.Size(972, 205)
         Me.CarsTarkhesTransGridControl.TabIndex = 0
         Me.CarsTarkhesTransGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView6})
         '
@@ -1261,53 +1261,53 @@ Partial Class CarsEdit
         Me.IDTextEdit.Location = New System.Drawing.Point(12, 609)
         Me.IDTextEdit.Name = "IDTextEdit"
         Me.IDTextEdit.Properties.ReadOnly = True
-        Me.IDTextEdit.Size = New System.Drawing.Size(451, 20)
+        Me.IDTextEdit.Size = New System.Drawing.Size(411, 20)
         Me.IDTextEdit.StyleController = Me.LayoutControl1
         Me.IDTextEdit.TabIndex = 5
         '
         'CarIDTextEdit
         '
         Me.CarIDTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "CarID", True))
-        Me.CarIDTextEdit.Location = New System.Drawing.Point(531, 609)
+        Me.CarIDTextEdit.Location = New System.Drawing.Point(500, 609)
         Me.CarIDTextEdit.Name = "CarIDTextEdit"
         Me.CarIDTextEdit.Properties.ReadOnly = True
-        Me.CarIDTextEdit.Size = New System.Drawing.Size(452, 20)
+        Me.CarIDTextEdit.Size = New System.Drawing.Size(411, 20)
         Me.CarIDTextEdit.StyleController = Me.LayoutControl1
         Me.CarIDTextEdit.TabIndex = 7
         '
         'CARNOTextEdit
         '
         Me.CARNOTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "CARNO", True))
-        Me.CARNOTextEdit.Location = New System.Drawing.Point(704, 75)
+        Me.CARNOTextEdit.Location = New System.Drawing.Point(662, 71)
         Me.CARNOTextEdit.Name = "CARNOTextEdit"
-        Me.CARNOTextEdit.Size = New System.Drawing.Size(156, 20)
+        Me.CARNOTextEdit.Size = New System.Drawing.Size(142, 20)
         Me.CARNOTextEdit.StyleController = Me.LayoutControl1
         Me.CARNOTextEdit.TabIndex = 1
         '
         'ChassiNoCarTextEdit
         '
         Me.ChassiNoCarTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "ChassiNoCar", True))
-        Me.ChassiNoCarTextEdit.Location = New System.Drawing.Point(271, 75)
+        Me.ChassiNoCarTextEdit.Location = New System.Drawing.Point(256, 71)
         Me.ChassiNoCarTextEdit.Name = "ChassiNoCarTextEdit"
-        Me.ChassiNoCarTextEdit.Size = New System.Drawing.Size(363, 20)
+        Me.ChassiNoCarTextEdit.Size = New System.Drawing.Size(336, 20)
         Me.ChassiNoCarTextEdit.StyleController = Me.LayoutControl1
         Me.ChassiNoCarTextEdit.TabIndex = 2
         '
         'YearCarTextEdit
         '
         Me.YearCarTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "YearCar", True))
-        Me.YearCarTextEdit.Location = New System.Drawing.Point(469, 109)
+        Me.YearCarTextEdit.Location = New System.Drawing.Point(442, 105)
         Me.YearCarTextEdit.Name = "YearCarTextEdit"
-        Me.YearCarTextEdit.Size = New System.Drawing.Size(153, 20)
+        Me.YearCarTextEdit.Size = New System.Drawing.Size(141, 20)
         Me.YearCarTextEdit.StyleController = Me.LayoutControl1
         Me.YearCarTextEdit.TabIndex = 5
         '
         'ColorCarTextEdit
         '
         Me.ColorCarTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "ColorCar", True))
-        Me.ColorCarTextEdit.Location = New System.Drawing.Point(271, 109)
+        Me.ColorCarTextEdit.Location = New System.Drawing.Point(256, 105)
         Me.ColorCarTextEdit.Name = "ColorCarTextEdit"
-        Me.ColorCarTextEdit.Size = New System.Drawing.Size(167, 20)
+        Me.ColorCarTextEdit.Size = New System.Drawing.Size(155, 20)
         Me.ColorCarTextEdit.StyleController = Me.LayoutControl1
         Me.ColorCarTextEdit.TabIndex = 6
         '
@@ -1315,29 +1315,29 @@ Partial Class CarsEdit
         '
         Me.DatePurchaseDateEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "DatePurchase", True))
         Me.DatePurchaseDateEdit.EditValue = Nothing
-        Me.DatePurchaseDateEdit.Location = New System.Drawing.Point(492, 295)
+        Me.DatePurchaseDateEdit.Location = New System.Drawing.Point(463, 287)
         Me.DatePurchaseDateEdit.Name = "DatePurchaseDateEdit"
         Me.DatePurchaseDateEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DatePurchaseDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DatePurchaseDateEdit.Size = New System.Drawing.Size(165, 20)
+        Me.DatePurchaseDateEdit.Size = New System.Drawing.Size(142, 20)
         Me.DatePurchaseDateEdit.StyleController = Me.LayoutControl1
         Me.DatePurchaseDateEdit.TabIndex = 13
         '
         'CostCarTextEdit
         '
         Me.CostCarTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "CostCar", True))
-        Me.CostCarTextEdit.Location = New System.Drawing.Point(725, 295)
+        Me.CostCarTextEdit.Location = New System.Drawing.Point(682, 287)
         Me.CostCarTextEdit.Name = "CostCarTextEdit"
-        Me.CostCarTextEdit.Size = New System.Drawing.Size(246, 20)
+        Me.CostCarTextEdit.Size = New System.Drawing.Size(217, 20)
         Me.CostCarTextEdit.StyleController = Me.LayoutControl1
         Me.CostCarTextEdit.TabIndex = 12
         '
         'VenderTextEdit
         '
         Me.VenderTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "Vender", True))
-        Me.VenderTextEdit.Location = New System.Drawing.Point(286, 295)
+        Me.VenderTextEdit.Location = New System.Drawing.Point(270, 287)
         Me.VenderTextEdit.Name = "VenderTextEdit"
-        Me.VenderTextEdit.Size = New System.Drawing.Size(170, 20)
+        Me.VenderTextEdit.Size = New System.Drawing.Size(157, 20)
         Me.VenderTextEdit.StyleController = Me.LayoutControl1
         Me.VenderTextEdit.TabIndex = 14
         '
@@ -1345,41 +1345,41 @@ Partial Class CarsEdit
         '
         Me.DateSaleDateEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "DateSale", True))
         Me.DateSaleDateEdit.EditValue = Nothing
-        Me.DateSaleDateEdit.Location = New System.Drawing.Point(492, 319)
+        Me.DateSaleDateEdit.Location = New System.Drawing.Point(463, 311)
         Me.DateSaleDateEdit.Name = "DateSaleDateEdit"
         Me.DateSaleDateEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DateSaleDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateSaleDateEdit.Size = New System.Drawing.Size(165, 20)
+        Me.DateSaleDateEdit.Size = New System.Drawing.Size(142, 20)
         Me.DateSaleDateEdit.StyleController = Me.LayoutControl1
         Me.DateSaleDateEdit.TabIndex = 17
         '
         'SaleCarTextEdit
         '
         Me.SaleCarTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "SaleCar", True))
-        Me.SaleCarTextEdit.Location = New System.Drawing.Point(725, 319)
+        Me.SaleCarTextEdit.Location = New System.Drawing.Point(682, 311)
         Me.SaleCarTextEdit.Name = "SaleCarTextEdit"
-        Me.SaleCarTextEdit.Size = New System.Drawing.Size(246, 20)
+        Me.SaleCarTextEdit.Size = New System.Drawing.Size(217, 20)
         Me.SaleCarTextEdit.StyleController = Me.LayoutControl1
         Me.SaleCarTextEdit.TabIndex = 16
         '
         'CustomerTextEdit
         '
         Me.CustomerTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "Customer", True))
-        Me.CustomerTextEdit.Location = New System.Drawing.Point(123, 319)
+        Me.CustomerTextEdit.Location = New System.Drawing.Point(117, 311)
         Me.CustomerTextEdit.Name = "CustomerTextEdit"
-        Me.CustomerTextEdit.Size = New System.Drawing.Size(334, 20)
+        Me.CustomerTextEdit.Size = New System.Drawing.Size(311, 20)
         Me.CustomerTextEdit.StyleController = Me.LayoutControl1
         Me.CustomerTextEdit.TabIndex = 18
         '
         'DriverIDTextEdit
         '
         Me.DriverIDTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "DriverID", True))
-        Me.DriverIDTextEdit.Location = New System.Drawing.Point(746, 178)
+        Me.DriverIDTextEdit.Location = New System.Drawing.Point(701, 174)
         Me.DriverIDTextEdit.Name = "DriverIDTextEdit"
         Me.DriverIDTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DriverIDTextEdit.Properties.NullText = ""
         Me.DriverIDTextEdit.Properties.PopupView = Me.SearchLookUpEdit1View
-        Me.DriverIDTextEdit.Size = New System.Drawing.Size(250, 20)
+        Me.DriverIDTextEdit.Size = New System.Drawing.Size(232, 20)
         Me.DriverIDTextEdit.StyleController = Me.LayoutControl1
         Me.DriverIDTextEdit.TabIndex = 9
         '
@@ -1410,23 +1410,23 @@ Partial Class CarsEdit
         'FuelsCarTextEdit
         '
         Me.FuelsCarTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "FuelsCar", True))
-        Me.FuelsCarTextEdit.Location = New System.Drawing.Point(271, 143)
+        Me.FuelsCarTextEdit.Location = New System.Drawing.Point(256, 139)
         Me.FuelsCarTextEdit.Name = "FuelsCarTextEdit"
         Me.FuelsCarTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.FuelsCarTextEdit.Properties.Items.AddRange(New Object() {"سولار", "بنزين"})
-        Me.FuelsCarTextEdit.Size = New System.Drawing.Size(358, 20)
+        Me.FuelsCarTextEdit.Size = New System.Drawing.Size(332, 20)
         Me.FuelsCarTextEdit.StyleController = Me.LayoutControl1
         Me.FuelsCarTextEdit.TabIndex = 8
         '
         'AccountKeyTextEdit
         '
         Me.AccountKeyTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "AccountKey", True))
-        Me.AccountKeyTextEdit.Location = New System.Drawing.Point(271, 178)
+        Me.AccountKeyTextEdit.Location = New System.Drawing.Point(256, 174)
         Me.AccountKeyTextEdit.Name = "AccountKeyTextEdit"
         Me.AccountKeyTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.AccountKeyTextEdit.Properties.NullText = ""
         Me.AccountKeyTextEdit.Properties.PopupView = Me.GridView4
-        Me.AccountKeyTextEdit.Size = New System.Drawing.Size(401, 20)
+        Me.AccountKeyTextEdit.Size = New System.Drawing.Size(371, 20)
         Me.AccountKeyTextEdit.StyleController = Me.LayoutControl1
         Me.AccountKeyTextEdit.TabIndex = 10
         '
@@ -1457,12 +1457,12 @@ Partial Class CarsEdit
         'OrpakCarTextEdit
         '
         Me.OrpakCarTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "OrpakCar", True))
-        Me.OrpakCarTextEdit.Location = New System.Drawing.Point(271, 212)
+        Me.OrpakCarTextEdit.Location = New System.Drawing.Point(256, 208)
         Me.OrpakCarTextEdit.Name = "OrpakCarTextEdit"
         Me.OrpakCarTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.OrpakCarTextEdit.Properties.NullText = ""
         Me.OrpakCarTextEdit.Properties.PopupView = Me.GridView10
-        Me.OrpakCarTextEdit.Size = New System.Drawing.Size(642, 20)
+        Me.OrpakCarTextEdit.Size = New System.Drawing.Size(594, 20)
         Me.OrpakCarTextEdit.StyleController = Me.LayoutControl1
         Me.OrpakCarTextEdit.TabIndex = 11
         '
@@ -1493,7 +1493,7 @@ Partial Class CarsEdit
         'MarkaCarTextEdit
         '
         Me.MarkaCarTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "MarkaCar", True))
-        Me.MarkaCarTextEdit.Location = New System.Drawing.Point(864, 109)
+        Me.MarkaCarTextEdit.Location = New System.Drawing.Point(812, 105)
         Me.MarkaCarTextEdit.Name = "MarkaCarTextEdit"
         Me.MarkaCarTextEdit.Properties.AcceptEditorTextAsNewValue = DevExpress.Utils.DefaultBoolean.[True]
         Me.MarkaCarTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
@@ -1503,7 +1503,7 @@ Partial Class CarsEdit
         Me.MarkaCarTextEdit.Properties.NullText = ""
         Me.MarkaCarTextEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard
         Me.MarkaCarTextEdit.Properties.ValueMember = "Marka"
-        Me.MarkaCarTextEdit.Size = New System.Drawing.Size(144, 20)
+        Me.MarkaCarTextEdit.Size = New System.Drawing.Size(133, 20)
         Me.MarkaCarTextEdit.StyleController = Me.LayoutControl1
         Me.MarkaCarTextEdit.TabIndex = 3
         '
@@ -1515,7 +1515,7 @@ Partial Class CarsEdit
         'ModelCarTextEdit
         '
         Me.ModelCarTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "ModelCar", True))
-        Me.ModelCarTextEdit.Location = New System.Drawing.Point(659, 109)
+        Me.ModelCarTextEdit.Location = New System.Drawing.Point(620, 105)
         Me.ModelCarTextEdit.Name = "ModelCarTextEdit"
         Me.ModelCarTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.ModelCarTextEdit.Properties.DataSource = Me.CarsModelBindingSource
@@ -1523,7 +1523,7 @@ Partial Class CarsEdit
         Me.ModelCarTextEdit.Properties.NullText = ""
         Me.ModelCarTextEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard
         Me.ModelCarTextEdit.Properties.ValueMember = "Model"
-        Me.ModelCarTextEdit.Size = New System.Drawing.Size(162, 20)
+        Me.ModelCarTextEdit.Size = New System.Drawing.Size(149, 20)
         Me.ModelCarTextEdit.StyleController = Me.LayoutControl1
         Me.ModelCarTextEdit.TabIndex = 4
         '
@@ -1535,7 +1535,7 @@ Partial Class CarsEdit
         'SortCarTextEdit
         '
         Me.SortCarTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CarsBindingSource, "SortCar", True))
-        Me.SortCarTextEdit.Location = New System.Drawing.Point(685, 143)
+        Me.SortCarTextEdit.Location = New System.Drawing.Point(644, 139)
         Me.SortCarTextEdit.Name = "SortCarTextEdit"
         Me.SortCarTextEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.SortCarTextEdit.Properties.DataSource = Me.CarsSortBindingSource
@@ -1543,7 +1543,7 @@ Partial Class CarsEdit
         Me.SortCarTextEdit.Properties.NullText = ""
         Me.SortCarTextEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard
         Me.SortCarTextEdit.Properties.ValueMember = "CarSort"
-        Me.SortCarTextEdit.Size = New System.Drawing.Size(315, 20)
+        Me.SortCarTextEdit.Size = New System.Drawing.Size(293, 20)
         Me.SortCarTextEdit.StyleController = Me.LayoutControl1
         Me.SortCarTextEdit.TabIndex = 7
         '
@@ -1558,50 +1558,50 @@ Partial Class CarsEdit
         Me.LayoutControlGroup1.GroupBordersVisible = False
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlGroup2, Me.LayoutControlItem39, Me.LayoutControlGroup3, Me.LayoutControlItem3, Me.EmptySpaceItem1, Me.LayoutControlItem5, Me.LayoutControlItem13, Me.LayoutControlItem4, Me.LayoutControlItem2, Me.LayoutControlItem11})
         Me.LayoutControlGroup1.Name = "Root"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1059, 641)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(996, 641)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.TabPane1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 367)
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 359)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(1039, 230)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(976, 238)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
         'LayoutControlGroup2
         '
         Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem25, Me.LayoutControlItem23, Me.LayoutControlItem27, Me.LayoutControlItem33, Me.LayoutControlItem29, Me.LayoutControlItem31, Me.LayoutControlItem18, Me.EmptySpaceItem7, Me.EmptySpaceItem8})
-        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 246)
+        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 242)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(1039, 97)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(976, 93)
         Me.LayoutControlGroup2.Text = "البيع والشراء"
         '
         'LayoutControlItem25
         '
         Me.LayoutControlItem25.Control = Me.CostCarTextEdit
-        Me.LayoutControlItem25.Location = New System.Drawing.Point(701, 0)
+        Me.LayoutControlItem25.Location = New System.Drawing.Point(658, 0)
         Me.LayoutControlItem25.Name = "LayoutControlItem25"
-        Me.LayoutControlItem25.Size = New System.Drawing.Size(314, 24)
+        Me.LayoutControlItem25.Size = New System.Drawing.Size(294, 24)
         Me.LayoutControlItem25.Text = "تكلفة المركبة"
         Me.LayoutControlItem25.TextSize = New System.Drawing.Size(61, 13)
         '
         'LayoutControlItem23
         '
         Me.LayoutControlItem23.Control = Me.DatePurchaseDateEdit
-        Me.LayoutControlItem23.Location = New System.Drawing.Point(468, 0)
+        Me.LayoutControlItem23.Location = New System.Drawing.Point(439, 0)
         Me.LayoutControlItem23.Name = "LayoutControlItem23"
-        Me.LayoutControlItem23.Size = New System.Drawing.Size(233, 24)
+        Me.LayoutControlItem23.Size = New System.Drawing.Size(219, 24)
         Me.LayoutControlItem23.Text = "تاريخ الشراء"
         Me.LayoutControlItem23.TextSize = New System.Drawing.Size(61, 13)
         '
         'LayoutControlItem27
         '
         Me.LayoutControlItem27.Control = Me.VenderTextEdit
-        Me.LayoutControlItem27.Location = New System.Drawing.Point(262, 0)
+        Me.LayoutControlItem27.Location = New System.Drawing.Point(246, 0)
         Me.LayoutControlItem27.Name = "LayoutControlItem27"
-        Me.LayoutControlItem27.Size = New System.Drawing.Size(206, 24)
+        Me.LayoutControlItem27.Size = New System.Drawing.Size(193, 24)
         Me.LayoutControlItem27.Text = "المورد"
         Me.LayoutControlItem27.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem27.TextSize = New System.Drawing.Size(27, 13)
@@ -1610,9 +1610,9 @@ Partial Class CarsEdit
         'LayoutControlItem33
         '
         Me.LayoutControlItem33.Control = Me.CustomerTextEdit
-        Me.LayoutControlItem33.Location = New System.Drawing.Point(99, 24)
+        Me.LayoutControlItem33.Location = New System.Drawing.Point(93, 24)
         Me.LayoutControlItem33.Name = "LayoutControlItem33"
-        Me.LayoutControlItem33.Size = New System.Drawing.Size(369, 24)
+        Me.LayoutControlItem33.Size = New System.Drawing.Size(346, 24)
         Me.LayoutControlItem33.Text = "الزبون"
         Me.LayoutControlItem33.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem33.TextSize = New System.Drawing.Size(26, 13)
@@ -1621,27 +1621,27 @@ Partial Class CarsEdit
         'LayoutControlItem29
         '
         Me.LayoutControlItem29.Control = Me.DateSaleDateEdit
-        Me.LayoutControlItem29.Location = New System.Drawing.Point(468, 24)
+        Me.LayoutControlItem29.Location = New System.Drawing.Point(439, 24)
         Me.LayoutControlItem29.Name = "LayoutControlItem29"
-        Me.LayoutControlItem29.Size = New System.Drawing.Size(233, 24)
+        Me.LayoutControlItem29.Size = New System.Drawing.Size(219, 24)
         Me.LayoutControlItem29.Text = "تاريخ البيع"
         Me.LayoutControlItem29.TextSize = New System.Drawing.Size(61, 13)
         '
         'LayoutControlItem31
         '
         Me.LayoutControlItem31.Control = Me.SaleCarTextEdit
-        Me.LayoutControlItem31.Location = New System.Drawing.Point(701, 24)
+        Me.LayoutControlItem31.Location = New System.Drawing.Point(658, 24)
         Me.LayoutControlItem31.Name = "LayoutControlItem31"
-        Me.LayoutControlItem31.Size = New System.Drawing.Size(314, 24)
+        Me.LayoutControlItem31.Size = New System.Drawing.Size(294, 24)
         Me.LayoutControlItem31.Text = "مبلغ البيع"
         Me.LayoutControlItem31.TextSize = New System.Drawing.Size(61, 13)
         '
         'LayoutControlItem18
         '
         Me.LayoutControlItem18.Control = Me.BegSpedometaerTextEdit
-        Me.LayoutControlItem18.Location = New System.Drawing.Point(34, 0)
+        Me.LayoutControlItem18.Location = New System.Drawing.Point(32, 0)
         Me.LayoutControlItem18.Name = "LayoutControlItem18"
-        Me.LayoutControlItem18.Size = New System.Drawing.Size(228, 24)
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(214, 24)
         Me.LayoutControlItem18.Text = "عداد المركبة"
         Me.LayoutControlItem18.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem18.TextSize = New System.Drawing.Size(57, 13)
@@ -1652,7 +1652,7 @@ Partial Class CarsEdit
         Me.EmptySpaceItem7.AllowHotTrack = False
         Me.EmptySpaceItem7.Location = New System.Drawing.Point(0, 0)
         Me.EmptySpaceItem7.Name = "EmptySpaceItem7"
-        Me.EmptySpaceItem7.Size = New System.Drawing.Size(34, 24)
+        Me.EmptySpaceItem7.Size = New System.Drawing.Size(32, 24)
         Me.EmptySpaceItem7.TextSize = New System.Drawing.Size(0, 0)
         '
         'EmptySpaceItem8
@@ -1660,15 +1660,15 @@ Partial Class CarsEdit
         Me.EmptySpaceItem8.AllowHotTrack = False
         Me.EmptySpaceItem8.Location = New System.Drawing.Point(0, 24)
         Me.EmptySpaceItem8.Name = "EmptySpaceItem8"
-        Me.EmptySpaceItem8.Size = New System.Drawing.Size(99, 24)
+        Me.EmptySpaceItem8.Size = New System.Drawing.Size(93, 24)
         Me.EmptySpaceItem8.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem39
         '
         Me.LayoutControlItem39.Control = Me.ActiveCheckEdit
-        Me.LayoutControlItem39.Location = New System.Drawing.Point(0, 343)
+        Me.LayoutControlItem39.Location = New System.Drawing.Point(0, 335)
         Me.LayoutControlItem39.Name = "LayoutControlItem39"
-        Me.LayoutControlItem39.Size = New System.Drawing.Size(1039, 24)
+        Me.LayoutControlItem39.Size = New System.Drawing.Size(976, 24)
         Me.LayoutControlItem39.Text = "active:"
         Me.LayoutControlItem39.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem39.TextVisible = False
@@ -1676,17 +1676,17 @@ Partial Class CarsEdit
         'LayoutControlGroup3
         '
         Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem6, Me.LayoutControlItem8, Me.LayoutControlItem12, Me.LayoutControlItem15, Me.LayoutControlItem17, Me.LayoutControlItem19, Me.LayoutControlItem10, Me.LayoutControlItem9, Me.LayoutControlItem7, Me.LayoutControlItem37, Me.LayoutControlItem21, Me.LayoutControlItem16, Me.EmptySpaceItem6, Me.EmptySpaceItem5, Me.EmptySpaceItem4, Me.EmptySpaceItem3, Me.EmptySpaceItem2})
-        Me.LayoutControlGroup3.Location = New System.Drawing.Point(247, 26)
+        Me.LayoutControlGroup3.Location = New System.Drawing.Point(232, 26)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(792, 220)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(744, 216)
         Me.LayoutControlGroup3.Text = "البيانات الأساسية"
         '
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.Control = Me.CARNOTextEdit
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(433, 0)
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(406, 0)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(218, 24)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(204, 24)
         Me.LayoutControlItem6.Text = "رقم المركبة"
         Me.LayoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(53, 13)
@@ -1697,7 +1697,7 @@ Partial Class CarsEdit
         Me.LayoutControlItem8.Control = Me.ChassiNoCarTextEdit
         Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(433, 24)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(406, 24)
         Me.LayoutControlItem8.Text = "رقم الشاصي"
         Me.LayoutControlItem8.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(61, 13)
@@ -1706,9 +1706,9 @@ Partial Class CarsEdit
         'LayoutControlItem12
         '
         Me.LayoutControlItem12.Control = Me.ModelCarTextEdit
-        Me.LayoutControlItem12.Location = New System.Drawing.Point(388, 34)
+        Me.LayoutControlItem12.Location = New System.Drawing.Point(364, 34)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(205, 24)
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(192, 24)
         Me.LayoutControlItem12.Text = "الموديل"
         Me.LayoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(34, 13)
@@ -1717,9 +1717,9 @@ Partial Class CarsEdit
         'LayoutControlItem15
         '
         Me.LayoutControlItem15.Control = Me.YearCarTextEdit
-        Me.LayoutControlItem15.Location = New System.Drawing.Point(198, 34)
+        Me.LayoutControlItem15.Location = New System.Drawing.Point(186, 34)
         Me.LayoutControlItem15.Name = "LayoutControlItem15"
-        Me.LayoutControlItem15.Size = New System.Drawing.Size(190, 24)
+        Me.LayoutControlItem15.Size = New System.Drawing.Size(178, 24)
         Me.LayoutControlItem15.Text = "السنة"
         Me.LayoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem15.TextSize = New System.Drawing.Size(28, 13)
@@ -1730,7 +1730,7 @@ Partial Class CarsEdit
         Me.LayoutControlItem17.Control = Me.ColorCarTextEdit
         Me.LayoutControlItem17.Location = New System.Drawing.Point(0, 34)
         Me.LayoutControlItem17.Name = "LayoutControlItem17"
-        Me.LayoutControlItem17.Size = New System.Drawing.Size(198, 24)
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(186, 24)
         Me.LayoutControlItem17.Text = "اللون"
         Me.LayoutControlItem17.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem17.TextSize = New System.Drawing.Size(22, 13)
@@ -1741,7 +1741,7 @@ Partial Class CarsEdit
         Me.LayoutControlItem19.Control = Me.FuelsCarTextEdit
         Me.LayoutControlItem19.Location = New System.Drawing.Point(0, 68)
         Me.LayoutControlItem19.Name = "LayoutControlItem19"
-        Me.LayoutControlItem19.Size = New System.Drawing.Size(414, 24)
+        Me.LayoutControlItem19.Size = New System.Drawing.Size(388, 24)
         Me.LayoutControlItem19.Text = "المحروقات"
         Me.LayoutControlItem19.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem19.TextSize = New System.Drawing.Size(47, 13)
@@ -1750,9 +1750,9 @@ Partial Class CarsEdit
         'LayoutControlItem10
         '
         Me.LayoutControlItem10.Control = Me.MarkaCarTextEdit
-        Me.LayoutControlItem10.Location = New System.Drawing.Point(593, 34)
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(556, 34)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(175, 24)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(164, 24)
         Me.LayoutControlItem10.Text = "النوع"
         Me.LayoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(22, 13)
@@ -1763,7 +1763,7 @@ Partial Class CarsEdit
         Me.LayoutControlItem9.Control = Me.AccountKeyTextEdit
         Me.LayoutControlItem9.Location = New System.Drawing.Point(0, 103)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(475, 24)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(445, 24)
         Me.LayoutControlItem9.Text = "حساب الصيانة"
         Me.LayoutControlItem9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(65, 13)
@@ -1772,9 +1772,9 @@ Partial Class CarsEdit
         'LayoutControlItem7
         '
         Me.LayoutControlItem7.Control = Me.TextEditCarID
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(651, 0)
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(610, 0)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(117, 24)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(110, 24)
         Me.LayoutControlItem7.Text = "رقم"
         Me.LayoutControlItem7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(17, 13)
@@ -1783,9 +1783,9 @@ Partial Class CarsEdit
         'LayoutControlItem37
         '
         Me.LayoutControlItem37.Control = Me.SortCarTextEdit
-        Me.LayoutControlItem37.Location = New System.Drawing.Point(414, 68)
+        Me.LayoutControlItem37.Location = New System.Drawing.Point(388, 68)
         Me.LayoutControlItem37.Name = "LayoutControlItem37"
-        Me.LayoutControlItem37.Size = New System.Drawing.Size(354, 24)
+        Me.LayoutControlItem37.Size = New System.Drawing.Size(332, 24)
         Me.LayoutControlItem37.Text = "تصنيف"
         Me.LayoutControlItem37.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem37.TextSize = New System.Drawing.Size(30, 13)
@@ -1794,9 +1794,9 @@ Partial Class CarsEdit
         'LayoutControlItem21
         '
         Me.LayoutControlItem21.Control = Me.DriverIDTextEdit
-        Me.LayoutControlItem21.Location = New System.Drawing.Point(475, 103)
+        Me.LayoutControlItem21.Location = New System.Drawing.Point(445, 103)
         Me.LayoutControlItem21.Name = "LayoutControlItem21"
-        Me.LayoutControlItem21.Size = New System.Drawing.Size(293, 24)
+        Me.LayoutControlItem21.Size = New System.Drawing.Size(275, 24)
         Me.LayoutControlItem21.Text = "السائق"
         Me.LayoutControlItem21.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem21.TextSize = New System.Drawing.Size(34, 13)
@@ -1807,7 +1807,7 @@ Partial Class CarsEdit
         Me.LayoutControlItem16.Control = Me.OrpakCarTextEdit
         Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 137)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(768, 24)
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(720, 24)
         Me.LayoutControlItem16.Text = "رقم المركبة ببرنامج اورباك"
         Me.LayoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem16.TextSize = New System.Drawing.Size(117, 13)
@@ -1820,7 +1820,7 @@ Partial Class CarsEdit
         Me.EmptySpaceItem6.MaxSize = New System.Drawing.Size(0, 10)
         Me.EmptySpaceItem6.MinSize = New System.Drawing.Size(10, 10)
         Me.EmptySpaceItem6.Name = "EmptySpaceItem6"
-        Me.EmptySpaceItem6.Size = New System.Drawing.Size(768, 10)
+        Me.EmptySpaceItem6.Size = New System.Drawing.Size(720, 10)
         Me.EmptySpaceItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.EmptySpaceItem6.TextSize = New System.Drawing.Size(0, 0)
         '
@@ -1831,7 +1831,7 @@ Partial Class CarsEdit
         Me.EmptySpaceItem5.MaxSize = New System.Drawing.Size(0, 10)
         Me.EmptySpaceItem5.MinSize = New System.Drawing.Size(10, 10)
         Me.EmptySpaceItem5.Name = "EmptySpaceItem5"
-        Me.EmptySpaceItem5.Size = New System.Drawing.Size(768, 10)
+        Me.EmptySpaceItem5.Size = New System.Drawing.Size(720, 10)
         Me.EmptySpaceItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.EmptySpaceItem5.TextSize = New System.Drawing.Size(0, 0)
         '
@@ -1842,7 +1842,7 @@ Partial Class CarsEdit
         Me.EmptySpaceItem4.MaxSize = New System.Drawing.Size(0, 11)
         Me.EmptySpaceItem4.MinSize = New System.Drawing.Size(10, 11)
         Me.EmptySpaceItem4.Name = "EmptySpaceItem4"
-        Me.EmptySpaceItem4.Size = New System.Drawing.Size(768, 11)
+        Me.EmptySpaceItem4.Size = New System.Drawing.Size(720, 11)
         Me.EmptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.EmptySpaceItem4.TextSize = New System.Drawing.Size(0, 0)
         '
@@ -1853,7 +1853,7 @@ Partial Class CarsEdit
         Me.EmptySpaceItem3.MaxSize = New System.Drawing.Size(0, 10)
         Me.EmptySpaceItem3.MinSize = New System.Drawing.Size(10, 10)
         Me.EmptySpaceItem3.Name = "EmptySpaceItem3"
-        Me.EmptySpaceItem3.Size = New System.Drawing.Size(768, 10)
+        Me.EmptySpaceItem3.Size = New System.Drawing.Size(720, 10)
         Me.EmptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.EmptySpaceItem3.TextSize = New System.Drawing.Size(0, 0)
         '
@@ -1864,16 +1864,16 @@ Partial Class CarsEdit
         Me.EmptySpaceItem2.MaxSize = New System.Drawing.Size(0, 10)
         Me.EmptySpaceItem2.MinSize = New System.Drawing.Size(10, 10)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(768, 10)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(720, 10)
         Me.EmptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem3
         '
         Me.LayoutControlItem3.Control = Me.SimpleButtonSave
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(914, 0)
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(859, 0)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(125, 26)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(117, 26)
         Me.LayoutControlItem3.Text = "حفظ"
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
@@ -1881,17 +1881,17 @@ Partial Class CarsEdit
         'EmptySpaceItem1
         '
         Me.EmptySpaceItem1.AllowHotTrack = False
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(115, 0)
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(108, 0)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(667, 26)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(627, 26)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem5
         '
         Me.LayoutControlItem5.Control = Me.SimpleButton1
-        Me.LayoutControlItem5.Location = New System.Drawing.Point(782, 0)
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(735, 0)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(132, 26)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(124, 26)
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem5.TextVisible = False
         '
@@ -1900,7 +1900,7 @@ Partial Class CarsEdit
         Me.LayoutControlItem13.Control = Me.PicturePictureEdit
         Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 26)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
-        Me.LayoutControlItem13.Size = New System.Drawing.Size(247, 220)
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(232, 216)
         Me.LayoutControlItem13.Text = "Picture:"
         Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem13.TextVisible = False
@@ -1908,9 +1908,9 @@ Partial Class CarsEdit
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.CarIDTextEdit
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(519, 597)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(488, 597)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(520, 24)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(488, 24)
         Me.LayoutControlItem4.Text = "رقم"
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(61, 13)
         '
@@ -1919,7 +1919,7 @@ Partial Class CarsEdit
         Me.LayoutControlItem2.Control = Me.IDTextEdit
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 597)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(519, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(488, 24)
         Me.LayoutControlItem2.Text = "ID:"
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(61, 13)
         '
@@ -1928,7 +1928,7 @@ Partial Class CarsEdit
         Me.LayoutControlItem11.Control = Me.SimpleButton2
         Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(115, 26)
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(108, 26)
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem11.TextVisible = False
         '
@@ -1960,6 +1960,7 @@ Partial Class CarsEdit
         Me.TableAdapterManager.CRMCustomersOrdersTableAdapter = Nothing
         Me.TableAdapterManager.CRMJobNameTableAdapter = Nothing
         Me.TableAdapterManager.CRMTasksTableAdapter = Nothing
+        Me.TableAdapterManager.DATATableAdapter = Nothing
         Me.TableAdapterManager.DevelopNotesTableAdapter = Nothing
         Me.TableAdapterManager.EmployeesDataTableAdapter = Nothing
         Me.TableAdapterManager.FinancialBanksDocTableAdapter = Nothing
@@ -2027,7 +2028,7 @@ Partial Class CarsEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1059, 641)
+        Me.ClientSize = New System.Drawing.Size(996, 641)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "CarsEdit"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes

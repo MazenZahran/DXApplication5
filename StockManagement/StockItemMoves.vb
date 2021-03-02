@@ -33,4 +33,8 @@
 
 
     End Sub
+
+    Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
+        GridControl1.ShowPrintPreview()
+    End Sub
 End Class

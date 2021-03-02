@@ -7,6 +7,17 @@ Public Class FinancialAccountsBalances
     Dim AccTable As DataTable
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         If FromSortText.Text = "" Or ToSortText.Text = "" Then MsgBox("يرجى اختيار التصنيف") : Exit Sub
+
+        If CInt(FromSortText.EditValue) < 2000 Or CInt(FromSortText.EditValue) > 2700 Then
+            MsgBox("لا يوجد صلاحية")
+            Exit Sub
+        End If
+
+        If CInt(ToSortText.EditValue) < 2000 Or CInt(ToSortText.EditValue) > 2700 Then
+            MsgBox("لا يوجد صلاحية")
+            Exit Sub
+        End If
+
         SplashScreenManager1.ShowWaitForm()
         Getbalance2()
         SplashScreenManager1.CloseWaitForm()
@@ -274,7 +285,7 @@ Public Class FinancialAccountsBalances
                                             " & "'" & "مفتوحة" & "', " & "
                                             " & "'" & CStr(ToUserText.EditValue) & "', " & "
                                             " & "'" & Format(Today, "yyyy-MM-dd") & "', " & "
-                                            " & "'" & "دين" & "', " & "
+                                            " & "'" & FromSortText.Text & "', " & "
                                             " & "'" & AccTable.Rows(i).Item("ASORTGROUP").ToString & "', " & "
                                             " & "'" & AccTable.Rows(i).Item("AccBalance").ToString & "', " & "
                                             " & "'" & MonthText.Text & "', " & "
@@ -353,5 +364,30 @@ ByVal e As RowCellCustomDrawEventArgs) Handles GridView1.CustomDrawCell
     Private Sub RepositoryItemOpen_Click(sender As Object, e As EventArgs) Handles RepositoryItemOpen.Click
         My.Forms.FinanceAccDetails.TextEditAccountKey.Text = CStr(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "AccountID"))
         FinanceAccDetails.Show()
+    End Sub
+
+    Private Sub RepositoryAccStatment_ButtonClick(sender As Object, e As Controls.ButtonPressedEventArgs) Handles RepositoryAccStatment.ButtonClick
+        'Try
+        '    My.Forms.VouchersProccess.YyearText.Text = Format(DateEditFrom.DateTime, "yyyy")
+        '    My.Forms.VouchersProccess.MmonthText.Text = Format(DateEditFrom.DateTime, "mm")
+        '    My.Forms.VouchersProccess.SearchFleetID.EditValue = GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "AccountID")
+        '    '  My.Forms.VouchersProccess.TextDiff.Text = CStr(GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "Diff"))
+        '    VouchersProccess.ShowDialog()
+        'Catch ex As Exception
+        '    MsgBox(ex.ToString)
+        'End Try
+
+        My.Forms.FinancialAccountsDet.AccountKeyTextEdit.Text = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "AccountID"), String)
+        My.Forms.FinancialAccountsDet.SqlDataSource1.Queries(0).Parameters(0).Value = CType(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "AccountID"), String)
+        My.Forms.FinancialAccountsDet.SqlDataSource1.Fill()
+        My.Forms.FinancialAccountsDet.FullNameTextEdit.Select()
+        FinancialAccountsDet.Show()
+    End Sub
+
+    Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
+        GridView1.OptionsSelection.MultiSelect = True
+        GridView1.SelectAll()
+        GridView1.CopyToClipboard()
+        GridView1.OptionsSelection.MultiSelect = False
     End Sub
 End Class

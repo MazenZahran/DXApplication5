@@ -18,7 +18,12 @@ Partial Public Class Main
         InitializeComponent()
         Me.KeyPreview = True
     End Sub
-
+    Private Sub Me_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.F10 Then
+            FinanceSelectAccount.TextEdit1.Text = "Home"
+            FinanceSelectAccount.Show()
+        End If
+    End Sub
     Private Sub BarButtonItem1_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
 
         If GetSreenAccess("OrpakCardsQuery", GlobalVariables.UserIDString) = False Then Exit Sub
@@ -98,9 +103,9 @@ Partial Public Class Main
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RadialMenu1.ShowPopup(New Point)
-
-        Timer1.Start()
-
+        Me.KeyPreview = True
+        '    Timer1.Start()
+        '1
         ribbonControl1.Enabled = False
         PanelControl2.Visible = True
         Try
@@ -130,7 +135,7 @@ Partial Public Class Main
         '    child.Activate()
         'End If
 
-        'Dim child As Form = Nothing
+        Dim child As Form = Nothing
         'For Each f As Form In MdiChildren
         '    If TypeOf f Is DashBoardUser Then
         '        child = f
@@ -171,16 +176,16 @@ Partial Public Class Main
     End Sub
 
     Private Sub BarButtonItem7_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem7.ItemClick
-
+        'OrpakCustDataTrans.ShowDialog()
         Dim child As Form = Nothing
         For Each f As Form In MdiChildren
-            If TypeOf f Is OrpakCustomerTrans2 Then
+            If TypeOf f Is OrpakCustomerTrans3 Then
                 child = f
                 Exit For
             End If
         Next f
         If child Is Nothing Then
-            child = New OrpakCustomerTrans2()
+            child = New OrpakCustomerTrans3()
             child.MdiParent = Me
             child.Show()
         Else
@@ -662,9 +667,6 @@ Partial Public Class Main
 
     End Sub
 
-    Private Sub ribbonControl1_Click(sender As Object, e As EventArgs) Handles ribbonControl1.Click
-
-    End Sub
 
     Private Sub BarButtonItem37_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem37.ItemClick
         Dim child As Form = Nothing
@@ -817,20 +819,20 @@ ByVal e As DevExpress.XtraBars.Alerter.AlertFormEventArgs) Handles AlertControl1
     End Sub
 
     Private Sub BarButtonItem44_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem44.ItemClick
-        Dim child As Form = Nothing
-        For Each f As Form In MdiChildren
-            If TypeOf f Is ArchiveInputFromScanner Then
-                child = f
-                Exit For
-            End If
-        Next f
-        If child Is Nothing Then
-            child = New ArchiveInputFromScanner()
-            child.MdiParent = Me
-            child.Show()
-        Else
-            child.Activate()
-        End If
+        'Dim child As Form = Nothing
+        'For Each f As Form In MdiChildren
+        '    If TypeOf f Is ArchiveInputFromScanner Then
+        '        child = f
+        '        Exit For
+        '    End If
+        'Next f
+        'If child Is Nothing Then
+        '    child = New ArchiveInputFromScanner()
+        '    child.MdiParent = Me
+        '    child.Show()
+        'Else
+        '    child.Activate()
+        'End If
     End Sub
 
     Private Sub BarButtonItem45_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem45.ItemClick
@@ -1341,6 +1343,231 @@ ByVal e As DevExpress.XtraBars.Alerter.AlertFormEventArgs) Handles AlertControl1
         Next f
         If child Is Nothing Then
             child = New OprpakSalesDashForm()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem80_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem80.ItemClick
+        If GetSreenAccess("VouchersWriting", GlobalVariables.UserIDString) = False Then Exit Sub
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is VouchersWriting Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New VouchersWriting()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem81_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem81.ItemClick
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is VouchersQuery Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New VouchersQuery()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem82_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem82.ItemClick
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is OrpakCustDataTrans Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New OrpakCustDataTrans()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem83_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem83.ItemClick
+        VoucherIssue.Show()
+    End Sub
+
+    Private Sub BarButtonItem84_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem84.ItemClick
+
+
+
+    End Sub
+
+    Private Sub BarButtonItem85_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem85.ItemClick
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is VouchersForTax Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New VouchersForTax()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem86_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem86.ItemClick
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is OrpakCustomerCards Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New OrpakCustomerCards()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem87_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem87.ItemClick
+        If GetSreenAccess("FinanceSortAnalysis", GlobalVariables.UserIDString) = False Then Exit Sub
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is FinanceSortAnalysis Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New FinanceSortAnalysis()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem88_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem88.ItemClick
+        If GetSreenAccess("StockUpdateQuantityOnStation", GlobalVariables.UserIDString) = False Then Exit Sub
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is StockUpdateQuantityOnStation Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New StockUpdateQuantityOnStation()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem89_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem89.ItemClick
+        If GetSreenAccess("FinanceSetDiscount", GlobalVariables.UserIDString) = False Then Exit Sub
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is FinanceSetDiscount Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New FinanceSetDiscount()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem90_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem90.ItemClick
+        If GetSreenAccess("LiteImportDataToData", GlobalVariables.UserIDString) = False Then Exit Sub
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is LiteImportDataToData Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New LiteImportDataToData()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub ribbonControl1_Click(sender As Object, e As EventArgs) Handles ribbonControl1.Click
+
+    End Sub
+
+    Private Sub BarButtonItem91_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem91.ItemClick
+        If GetSreenAccess("FinanceCustomersBalancesWithPeriods", GlobalVariables.UserIDString) = False Then Exit Sub
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is FinanceCustomersBalancesWithPeriods Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New FinanceCustomersBalancesWithPeriods()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem92_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem92.ItemClick
+        If GetSreenAccess("FinanceCustomersBalancesWithPeriodsDet", GlobalVariables.UserIDString) = False Then Exit Sub
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is FinanceCustomersBalancesWithPeriodsDet Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New FinanceCustomersBalancesWithPeriodsDet()
+            child.MdiParent = Me
+            child.Show()
+        Else
+            child.Activate()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem93_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem93.ItemClick
+        Dim child As Form = Nothing
+        For Each f As Form In MdiChildren
+            If TypeOf f Is VouchersAudit Then
+                child = f
+                Exit For
+            End If
+        Next f
+        If child Is Nothing Then
+            child = New VouchersAudit()
             child.MdiParent = Me
             child.Show()
         Else

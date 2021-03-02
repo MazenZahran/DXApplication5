@@ -193,7 +193,7 @@ Partial Class FinancialVouchers
         Me.NavigationPage1.Controls.Add(Me.PanelControl2)
         Me.NavigationPage1.Controls.Add(Me.PanelControl1)
         Me.NavigationPage1.Name = "NavigationPage1"
-        Me.NavigationPage1.Size = New System.Drawing.Size(796, 378)
+        Me.NavigationPage1.Size = New System.Drawing.Size(768, 361)
         '
         'PanelControl2
         '
@@ -201,18 +201,18 @@ Partial Class FinancialVouchers
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl2.Location = New System.Drawing.Point(0, 34)
         Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(796, 344)
+        Me.PanelControl2.Size = New System.Drawing.Size(768, 327)
         Me.PanelControl2.TabIndex = 2
         '
         'GridControl1
         '
         Me.GridControl1.DataSource = Me.ExcelDataSource1
         Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl1.Location = New System.Drawing.Point(3, 3)
+        Me.GridControl1.Location = New System.Drawing.Point(2, 2)
         Me.GridControl1.MainView = Me.BandedGridView1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemDateEdit1})
-        Me.GridControl1.Size = New System.Drawing.Size(790, 338)
+        Me.GridControl1.Size = New System.Drawing.Size(764, 323)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.BandedGridView1})
         '
@@ -410,7 +410,7 @@ Partial Class FinancialVouchers
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(796, 34)
+        Me.PanelControl1.Size = New System.Drawing.Size(768, 34)
         Me.PanelControl1.TabIndex = 1
         '
         'SimpleButton3
@@ -424,7 +424,7 @@ Partial Class FinancialVouchers
         'SimpleButton1
         '
         Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton1.Location = New System.Drawing.Point(610, 5)
+        Me.SimpleButton1.Location = New System.Drawing.Point(582, 5)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(100, 23)
         Me.SimpleButton1.TabIndex = 2
@@ -433,7 +433,7 @@ Partial Class FinancialVouchers
         'SimpleButton2
         '
         Me.SimpleButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SimpleButton2.Location = New System.Drawing.Point(716, 5)
+        Me.SimpleButton2.Location = New System.Drawing.Point(688, 5)
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(75, 23)
         Me.SimpleButton2.TabIndex = 3
@@ -460,11 +460,11 @@ Partial Class FinancialVouchers
         '
         Me.GridControl2.DataSource = Me.ExcelDataSource2
         Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl2.Location = New System.Drawing.Point(3, 3)
+        Me.GridControl2.Location = New System.Drawing.Point(2, 2)
         Me.GridControl2.MainView = Me.BandedGridView2
         Me.GridControl2.Name = "GridControl2"
         Me.GridControl2.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemDateEdit2})
-        Me.GridControl2.Size = New System.Drawing.Size(790, 335)
+        Me.GridControl2.Size = New System.Drawing.Size(792, 337)
         Me.GridControl2.TabIndex = 0
         Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.BandedGridView2})
         '

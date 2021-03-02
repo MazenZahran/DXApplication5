@@ -3,11 +3,12 @@ Imports DevExpress.XtraGrid.Views.Base
 Imports DevExpress.XtraCharts
 Imports DevExpress.DataAccess.Sql
 Imports DevExpress.XtraPrinting
+Imports DevExpress.XtraEditors
 
 Public Class OrpakCardsQuery
-    Dim cn As New SqlConnection(OrbakString)
-    Dim cmd As New SqlCommand
-    Dim da As New SqlDataAdapter
+    ReadOnly cn As New SqlConnection(OrbakString)
+    ReadOnly cmd As New SqlCommand
+    ReadOnly da As New SqlDataAdapter
     Dim dt As New DataTable
     Dim i As Integer
     Dim SQlText As String
@@ -70,7 +71,9 @@ Public Class OrpakCardsQuery
     End Sub
 
     Private Sub SearchFleetsLogs()
-
+        Dim Table1 As New DataTable
+        Dim Table2 As New DataTable
+        Dim AllData As New DataTable
 
         Try
             Dim SQLString As String = " SELECT [date],field1,field2,field6,field7,field8 " &
@@ -82,14 +85,31 @@ Public Class OrpakCardsQuery
 
             Dim s As New DataSet()
             Dim Table As New DataTable
-            GridControl4.DataSource = sql2.SQLDS.Tables(0)
+            Table1 = sql2.SQLDS.Tables(0)
+            AllData.Merge(Table1)
         Catch ex As Exception
 
         End Try
 
+        If CheckEditOldData.Checked = True Then
+            Try
+                Dim SQLString As String = " SELECT [date],field1,field2,field6,field7,field8 " &
+                                          " FROM      history_log_t where [field5] = '" & TextFleetID.Text & "' order by [date] desc"
+
+                sql2.OldOrpakRunQuery(SQLString)
+
+                Dim s As New DataSet()
+                Dim Table As New DataTable
+                Table2 = sql2.SQLDS.Tables(0)
+                AllData.Merge(Table2)
+            Catch ex As Exception
+
+            End Try
+        End If
 
 
 
+        GridControl4.DataSource = AllData
 
     End Sub
 
@@ -212,6 +232,10 @@ Public Class OrpakCardsQuery
     End Sub
 
     Private Sub CardsQuery_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'HO_DATADataSet.group_rules' table. You can move, or remove it, as needed.
+        '   Me.Group_rulesTableAdapter.Fill(Me.HO_DATADataSet.group_rules)
+        'TODO: This line of code loads data into the 'WizCountDataSet.Accounts1' table. You can move, or remove it, as needed.
+        '     Me.Accounts1TableAdapter.Fill(Me.WizCountDataSet.Accounts1)
         'TODO: This line of code loads data into the 'ALHUDADataSet.Accounts' table. You can move, or remove it, as needed.
         '  Me.AccountsTableAdapter.Fill(Me.ALHUDADataSet.Accounts)
         'TODO: This line of code loads data into the 'ALHUDADataSet.Accounts' table. You can move, or remove it, as needed.
@@ -241,6 +265,8 @@ Public Class OrpakCardsQuery
 
         End Try
 
+        FleetCode.Properties.DataSource = GetFleets()
+
     End Sub
 
     Private Sub Form1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
@@ -252,28 +278,29 @@ Public Class OrpakCardsQuery
 
     Private Sub Search()
 
+        If String.IsNullOrEmpty(Card.Text) And String.IsNullOrEmpty(Plate.Text) And
+            String.IsNullOrEmpty(PlatePart.Text) And String.IsNullOrEmpty(CardCode.Text) And String.IsNullOrEmpty(FleetCode.Text) Then
+            Exit Sub
+        End If
+
         Try
-            Dim query As CustomSqlQuery = TryCast(SqlDataSource1.Queries(0), CustomSqlQuery)
-            query.Sql = "select  means.name,means.plate,fleets.name as fleets_name,means.id,means.string,means.issued_date," &
-                        " group_rules.Description,means.last_used,means.month_money,fleets.code,month_money,month_volume, CASE means.status WHEN 2 THEN  'Active'  ELSE 'Not Active' END AS status " &
+
+            Dim query As String = "select  means.name,means.plate,fleets.name as fleets_name,means.id,means.string,means.issued_date," &
+                        " group_rules.description,means.last_used,means.month_money,fleets.code,month_money,month_volume, CASE means.status WHEN 2 THEN  'Active'  ELSE 'Not Active' END AS status " &
                         " from means,fleets,group_rules" &
-                        " where fleets.id = means.fleet_id And means.[rule] = group_rules.id  "
-            If Card.Text <> "" Then query.Sql = query.Sql + " And means.name = " & "'" & Card.Text & "'"
-            If Plate.Text <> "" Then query.Sql = query.Sql + " and means.plate = " & "'" & Plate.Text & "'"
-            If PlatePart.Text <> "" Then query.Sql = query.Sql + " and means.plate like " & "'%" & PlatePart.Text & "%'"
-            If CardCode.Text <> "" Then query.Sql = query.Sql + " and means.string = " & "'" & CardCode.Text & "'"
-            If FleetCode.Text <> "" Then query.Sql = query.Sql + " and fleets.code = " & "'" & FleetCode.Text & "'"
-            If CheckActive.Checked = True Then query.Sql = query.Sql + " and means.status=2   "
-            query.Sql = query.Sql + " order by means.id desc "
-
-            Dim s As New DataSet()
-            Dim Table As New DataTable
-
-            SqlDataSource1.Fill()
-
-            CardView1.CardCaptionFormat = "{3}:{7} "
-
-            GroupControl1.Text = "بيانات البحث ... عدد البطاقات   " + " " + CardView1.RowCount.ToString
+                        " where fleets.id = means.fleet_id And means.[rule] = group_rules.id and means.[rule]=group_rules.[id] "
+            If Card.Text <> "" Then query = query + " And means.name = " & "'" & Card.Text & "'"
+            If Plate.Text <> "" Then query = query + " and means.plate = " & "'" & Plate.Text & "'"
+            If PlatePart.Text <> "" Then query = query + " and means.plate like " & "'%" & PlatePart.Text & "%'"
+            If CardCode.Text <> "" Then query = query + " and means.string = " & "'" & CardCode.Text & "'"
+            If FleetCode.Text <> "" Then query = query + " and fleets.code = " & "'" & CInt(FleetCode.EditValue) & "'"
+            If CheckActive.Checked = True Then query = query + " and means.status=2   "
+            query = query + " order by means. last_used desc "
+            sql.RunQuery(query)
+            LayoutView1.CardCaptionFormat = "{2}  {4} "
+            '   LayoutView1.CardCaptionFormat = "{3}:{7} "
+            GridControl3.DataSource = sql.SQLDS.Tables(0)
+            '   GroupControl1.Text = "بيانات البحث ... عدد البطاقات   " + " " + LayoutView1.RowCount.ToString
         Catch ex As Exception
 
         End Try
@@ -283,13 +310,13 @@ Public Class OrpakCardsQuery
     End Sub
 
 
-    Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+    Private Sub SimpleButton3_Click(sender As Object, e As EventArgs)
         Search()
         'Dim row As Object = Me.SearchLookUpEdit1.Properties.View.GetFocusedRowCellValue("MarketId")
         'Dim aa As String = TryCast(row, DataRowView)("userid").ToString()
         'If aa = "" Then MsgBox("الرجاء اختيار الموظف") : Exit Sub
         'SqlDataSource1.Queries(0).Parameters(0).Value = aa
-        SqlDataSource1.Fill()
+        '  SqlDataSource1.Fill()
     End Sub
 
     Private Sub CardsQuery_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
@@ -390,17 +417,17 @@ Public Class OrpakCardsQuery
         Search()
     End Sub
 
-    Private Sub SimpleButton6_Click(sender As Object, e As EventArgs) Handles SimpleButton6.Click
+    Private Sub SimpleButton6_Click(sender As Object, e As EventArgs)
         '  GridControl3.ShowPrintPreview()
         'SqlDataSource2.Queries(0).Parameters(0).Value = TextID.Text
         'SqlDataSource2.Fill()
     End Sub
 
-    Private Sub LabelControl2_Click(sender As Object, e As EventArgs) Handles LabelControl2.Click
+    Private Sub LabelControl2_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub GroupControl1_Paint(sender As Object, e As PaintEventArgs) Handles GroupControl1.Paint
+    Private Sub GroupControl1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
@@ -410,10 +437,12 @@ Public Class OrpakCardsQuery
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
 
-        Dim link As New PrintableComponentLink(New DevExpress.XtraPrinting.PrintingSystem) With {
+#Disable Warning CA2000 ' Dispose objects before losing scope
+        Dim link As New PrintableComponentLink(New PrintingSystem) With {
             .Component = GridControl11,
             .Landscape = True
         }
+#Enable Warning CA2000 ' Dispose objects before losing scope
         link.Margins.Left = 10
         link.Margins.Right = 10
         link.Margins.Top = 20
@@ -444,7 +473,7 @@ Public Class OrpakCardsQuery
     End Sub
 
     Private Sub SimpleButton7_Click(sender As Object, e As EventArgs) Handles SimpleButton7.Click
-        CraetMonthlyChart(CInt(CardView1.GetRowCellValue(CardView1.FocusedRowHandle, "id")))
+        CraetMonthlyChart(CInt(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "id")))
     End Sub
 
     Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
@@ -471,7 +500,7 @@ Public Class OrpakCardsQuery
     End Sub
 
     Private Sub FleetCode_EditValueChanged(sender As Object, e As EventArgs) Handles FleetCode.EditValueChanged
-
+        Search()
     End Sub
 
     Private Sub FleetCode_DoubleClick(sender As Object, e As EventArgs) Handles FleetCode.DoubleClick
@@ -503,40 +532,78 @@ Public Class OrpakCardsQuery
 
 
     Private Sub GetTrans()
+        Dim _OldDataTable As New DataTable
+        Dim _DataTable As New DataTable
 
 
         Try
             Dim SqlString As String = ""
             If Card.Text = "" And Plate.Text = "" And PlatePart.Text = "" And CardCode.Text = "" And FleetCode.Text = "" Then Exit Sub
 
-            If CardView1.RowCount > 0 Then
-                SqlString = " select    transactions.Date as TransDate , DATENAME(dw, transactions.Date) as theDayName ,
+
+            SqlString = " select    transactions.Date as TransDate , DATENAME(dw, transactions.Date) as theDayName ,
                                         transactions.time,       transactions.quantity,       transactions.ppv,
                                         transactions.sale,       transactions.plate,       transactions.product_name,
                                         stations.stn_name,       transactions.pump,     transactions.mean_name, fleets.Name As FleetName,transactions.odometer,transactions.tag
                               from transactions,stations,fleets
                               where transactions.fleet_id = fleets.id and  transactions.stn_id = stations.stn_id and "
-                If RadioButton1.Checked = True Then
-                    SqlString = SqlString + " (transactions.mean_id = " & CInt(CardView1.GetRowCellValue(CardView1.FocusedRowHandle, "id")) & ")"
-                ElseIf RadioButton2.Checked = True Then
-                    SqlString = SqlString + " (transactions.plate = '" & CStr(CardView1.GetRowCellValue(CardView1.FocusedRowHandle, "plate")) & "')"
-                ElseIf RadioButton3.Checked = True Then
-                    SqlString = SqlString + " (transactions.mean_name = '" & CStr(CardView1.GetRowCellValue(CardView1.FocusedRowHandle, "name")) & "')"
-                ElseIf RadioButton4.Checked = True Then
-                    SqlString = SqlString + " (transactions.tag = '" & CStr(CardView1.GetRowCellValue(CardView1.FocusedRowHandle, "string")) & "')"
-                Else
-                    SqlString = SqlString + " (transactions.plate = '" & CStr(CardView1.GetRowCellValue(CardView1.FocusedRowHandle, "plate")) & "')"
-                    SqlString = SqlString + "And  (transactions.mean_name = '" & CStr(CardView1.GetRowCellValue(CardView1.FocusedRowHandle, "name")) & "')"
-                End If
-
-                SqlString = SqlString + " order by transactions.Date desc"
-                sql.RunQuery(SqlString)
-                GridControl11.DataSource = sql.SQLDS.Tables(0)
+            If RadioButton1.Checked = True Then
+                SqlString = SqlString + " (transactions.mean_id = " & CInt(TextID.Text) & ")"
+            ElseIf RadioButton2.Checked = True Then
+                SqlString = SqlString + " (transactions.plate = '" & CStr(TextPlate.Text) & "')"
+            ElseIf RadioButton3.Checked = True Then
+                SqlString = SqlString + " (transactions.mean_name = '" & CStr(TextName.Text) & "')"
+            ElseIf RadioButton4.Checked = True Then
+                SqlString = SqlString + " (transactions.tag = '" & CStr(TextString.Text) & "')"
+            Else
+                SqlString = SqlString + " (transactions.mean_id = " & CInt(TextID.Text) & ")"
             End If
+
+            SqlString = SqlString + " order by transactions.Date desc"
+            sql.RunQuery(SqlString)
+            _DataTable = sql.SQLDS.Tables(0)
+
         Catch ex As Exception
 
         End Try
 
+
+        If CheckEditOldData.Checked = True Then
+            Try
+                Dim SqlString As String = ""
+                If Card.Text = "" And Plate.Text = "" And PlatePart.Text = "" And CardCode.Text = "" And FleetCode.Text = "" Then Exit Sub
+
+                If LayoutView1.RowCount > 0 Then
+                    SqlString = " select    transactions.Date as TransDate , DATENAME(dw, transactions.Date) as theDayName ,
+                                        transactions.time,       transactions.quantity,       transactions.ppv,
+                                        transactions.sale,       transactions.plate,       transactions.product_name,
+                                        stations.stn_name,       transactions.pump,     transactions.mean_name, fleets.Name As FleetName,transactions.odometer,transactions.tag
+                              from transactions,stations,fleets
+                              where transactions.fleet_id = fleets.id and  transactions.stn_id = stations.stn_id and "
+                    If RadioButton1.Checked = True Then
+                        SqlString = SqlString + " (transactions.mean_id = " & CInt(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "id")) & ")"
+                    ElseIf RadioButton2.Checked = True Then
+                        SqlString = SqlString + " (transactions.plate = '" & CStr(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "plate")) & "')"
+                    ElseIf RadioButton3.Checked = True Then
+                        SqlString = SqlString + " (transactions.mean_name = '" & CStr(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "name")) & "')"
+                    ElseIf RadioButton4.Checked = True Then
+                        SqlString = SqlString + " (transactions.tag = '" & CStr(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "string")) & "')"
+                    Else
+                        SqlString = SqlString + " (transactions.plate = '" & CStr(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "plate")) & "')"
+                        SqlString = SqlString + "And  (transactions.mean_name = '" & CStr(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "name")) & "')"
+                    End If
+
+                    SqlString = SqlString + " order by transactions.Date desc"
+                    sql.OldOrpakRunQuery(SqlString)
+                    _OldDataTable = sql.SQLDS.Tables(0)
+                End If
+            Catch ex As Exception
+
+            End Try
+        End If
+
+        _DataTable.Merge(_OldDataTable)
+        GridControl11.DataSource = _DataTable
         Me.GridView2.BestFitColumns()
 
     End Sub
@@ -547,20 +614,46 @@ Public Class OrpakCardsQuery
 
     Private Sub GridControl3_DoubleClick(sender As Object, e As EventArgs) Handles GridControl3.DoubleClick
 
-
+        ShowEditForm()
 
     End Sub
 
-    Private Sub GridControl3_Click_1(sender As Object, e As EventArgs) Handles GridControl3.Click
+    Private Sub GridControl3_Click_1(sender As Object, e As EventArgs) Handles GridControl3.Click, GridView6.Click
 
         '   SplashScreenManager1.ShowWaitForm()
 
+
+        GetCardDetails()
+
+
+        '  SplashScreenManager1.CloseWaitForm()
+    End Sub
+    Private Sub GetCardDetails()
         Try
             '  If sql.SQLDS.Tables(0).Rows.Count = 0 Then Exit Sub
             Me.GridControl11.DataSource = ""
-            Dim CardID As Integer = CInt(CardView1.GetRowCellValue(CardView1.FocusedRowHandle, "id"))
-            SearchCardsByID(CardID)
             ListBoxControl1.Items.Clear()
+
+            Dim CardID As Integer = 0
+            If CheckEditViewAsList.Checked = False Then
+                CardID = CInt(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "id"))
+            Else
+                CardID = CInt(GridView6.GetRowCellValue(GridView6.FocusedRowHandle, "id"))
+            End If
+
+            '  SearchCardsByID(CardID)
+
+
+            Dim SQLString As String = " SELECT  means.ID, means.name ,  means.string, means.type, means.status, means.[rule], means.plate, means.fleet_id, means.available_amount as CardAmount," &
+                           " means.update_timestamp,means.opos_prompt_for_odometer, means.day_volume, means.week_volume, means.month_volume, means.day_money, " &
+                           " means.week_money,means.month_money , means.day_visits, means.week_visits, means.month_visits, means.issued_date, means.last_used, " &
+                           " fleets.code, group_rules.Description,fleets.name as FleetName,fleets.status as Fstatus,fleets.available_amount,fleets.acctyp" &
+                           " FROM      means,group_rules,fleets" &
+                           " where means.[rule] = group_rules.id" &
+                           " and means.fleet_id = fleets.id"
+            If CStr(CardID) <> "" Then SQLString = SQLString + " and means.id = " & CardID
+            Dim sql As New SQLControl
+            sql.RunQuery(SQLString)
             TextName.Text = CType(sql.SQLDS.Tables(0).Rows(i).Item("name"), String)
             TextPlate.Text = CType(sql.SQLDS.Tables(0).Rows(i).Item("plate"), String)
             TextID.Text = CType(sql.SQLDS.Tables(0).Rows(i).Item("ID"), String)
@@ -609,16 +702,12 @@ Public Class OrpakCardsQuery
                 SqlDataSource4.Queries(0).Parameters(1).Value = CStr(Format(DateEdit1.DateTime, "yyyy-MM-dd"))
                 SqlDataSource4.Queries(0).Parameters(2).Value = CStr(Format(DateEdit2.DateTime, "yyyy-MM-dd"))
                 SqlDataSource4.Fill()
-                CraetMonthlyChart(CInt(CardView1.GetRowCellValue(CardView1.FocusedRowHandle, "id")))
+                CraetMonthlyChart(CInt(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "id")))
                 GridView3.Columns("ALIAS6F").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
             End If
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
-
-
-
-        '  SplashScreenManager1.CloseWaitForm()
     End Sub
 
     Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
@@ -646,10 +735,154 @@ Public Class OrpakCardsQuery
     End Sub
 
     Private Sub Card_EditValueChanged(sender As Object, e As EventArgs) Handles Card.EditValueChanged
-
+        Search()
     End Sub
 
     Private Sub RadioButton4_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton4.CheckedChanged
         If RadioButton4.Checked = True Then GetTrans()
+    End Sub
+
+    Private Sub RepositoryEdit_Click(sender As Object, e As EventArgs) Handles RepositoryEditActive.Click, RepositoryStopActive.Click
+        ShowEditForm()
+    End Sub
+    Private Sub ShowEditForm()
+        Dim CardId As Integer
+        CardId = CInt(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "id"))
+        My.Forms.OrpakEditCard.TextID.EditValue = CardId
+        ''OrpakEditCard.ShowDialog()
+
+        '' FrmNewContact.ShowDialog()
+        'If OrpakEditCard.ShowDialog() = DialogResult.OK Then
+        '    MsgBox("ok")
+
+        'End If
+
+        If OrpakEditCard.ShowDialog() = DialogResult.OK Then
+            ' Form was closed via OK button or similar, continue normally... '
+            MsgBox("ok")
+        Else
+            ' Form was aborted via Cancel, Close, or some other way; do something '
+            ' else like quitting the application... '
+            Search()
+        End If
+
+    End Sub
+
+    Private Sub CheckEdit1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEditViewAsList.CheckedChanged
+        If CheckEditViewAsList.Checked = False Then
+            GridControl3.MainView = LayoutView1
+            DockPanel2.Width = 300
+        Else
+            GridControl3.MainView = GridView6
+            DockPanel2.Width = 350
+        End If
+
+    End Sub
+
+    Private Sub SimpleButton12_Click(sender As Object, e As EventArgs) Handles SimpleButton12.Click
+        Search()
+    End Sub
+
+    Private Sub SimpleButton13_Click(sender As Object, e As EventArgs) Handles SimpleButton13.Click
+        GridControl3.ShowPrintPreview()
+    End Sub
+
+    Private Sub RepositoryStopActive_Click(sender As Object, e As EventArgs) Handles RepositoryStopActive.Click
+        '  My.Forms.OrpakEditCard.TextEditID.EditValue = CInt(GridView6.GetRowCellValue(GridView6.FocusedRowHandle, "id"))
+        '  My.Forms.OrpakEditCard.ShowDialog()
+    End Sub
+
+    Private Sub StopActiveCard()
+
+
+
+        Dim CardID As Integer = 0
+        Dim CardStatus As String = ""
+        If CheckEditViewAsList.Checked = False Then
+            CardID = CInt(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "id"))
+            CardStatus = CStr(LayoutView1.GetRowCellValue(LayoutView1.FocusedRowHandle, "status"))
+        Else
+            CardID = CInt(LayoutView1.GetRowCellValue(GridView6.FocusedRowHandle, "id"))
+            CardStatus = CStr(LayoutView1.GetRowCellValue(GridView6.FocusedRowHandle, "status"))
+        End If
+
+        If CardID = 0 Or String.IsNullOrEmpty(CStr(CardID)) Or String.IsNullOrEmpty(CStr(CardStatus)) Then
+            XtraMessageBox.Show("لا يمكن تفعيل/الغاء البطاقة")
+            Exit Sub
+        End If
+
+        Dim Mess As String = ""
+        If CardStatus = "Active" Then
+            Mess = " هل تريد ايقاف البطاقة ؟ "
+        ElseIf CardStatus = "Not Active" Then
+            Mess = " هل تريد تفعيل البطاقة ؟ "
+        End If
+
+
+        If XtraMessageBox.Show(Mess, "Confirmation", MessageBoxButtons.YesNo) <> DialogResult.No Then
+            If CardStatus = "Active" Then
+                StopCard(CardID, 1)
+                XtraMessageBox.Show("تم ايقاف البطاقة")
+            End If
+            If CardStatus = "Not Active" Then
+                StopCard(CardID, 2)
+                XtraMessageBox.Show("تم تفعيل البطاقة")
+            End If
+        End If
+
+        Search()
+
+    End Sub
+
+    Private Sub Plate_EditValueChanged(sender As Object, e As EventArgs) Handles Plate.EditValueChanged
+        Search()
+    End Sub
+
+    Private Sub PlatePart_EditValueChanged(sender As Object, e As EventArgs) Handles PlatePart.EditValueChanged
+        Search()
+    End Sub
+
+    Private Sub CardCode_EditValueChanged(sender As Object, e As EventArgs) Handles CardCode.EditValueChanged
+        Search()
+    End Sub
+    Private Function GetFleets() As DataTable
+        Dim FleetTable As New DataTable
+        Try
+            Dim SqlString As String
+            Dim sql As New SQLControl
+            SqlString = "Select AccountKey,FullName from   [WIZCOUNT].[ALHUDA].[dbo].[Accounts] A
+					 Right join fleets F
+					 On A.AccountKey=CONVERT(nvarchar, CONVERT(VARCHAR(12), F.code))
+                     where F.status <> 0 order by AccountKey desc ,SortGroup"
+            sql.RunQuery(SqlString)
+            FleetTable = sql.SQLDS.Tables(0)
+        Catch ex As Exception
+            Return FleetTable
+        End Try
+        Return FleetTable
+
+    End Function
+
+    Private Sub CheckEdit2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEdit2.CheckedChanged
+        Search()
+    End Sub
+
+    Private Sub CheckEditOldData_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEditOldData.CheckedChanged
+        Search()
+    End Sub
+
+    Private Sub DockPanel2_Click(sender As Object, e As EventArgs) Handles DockPanel2.Click
+
+    End Sub
+
+    Private Sub SimpleButton3_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub SimpleButton3_Click_2(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+        GridView2.OptionsSelection.MultiSelect = True
+        GridView2.SelectAll()
+        GridView2.CopyToClipboard()
+        '  GridView2.OptionsSelection.MultiSelect = False
     End Sub
 End Class

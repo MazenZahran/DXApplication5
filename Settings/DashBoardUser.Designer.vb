@@ -408,7 +408,7 @@ Partial Class DashBoardUser
         Me.NavigationPage2.Controls.Add(Me.LayoutControl1)
         Me.NavigationPage2.ImageOptions.Image = CType(resources.GetObject("NavigationPage2.ImageOptions.Image"), System.Drawing.Image)
         Me.NavigationPage2.Name = "NavigationPage2"
-        Me.NavigationPage2.Size = New System.Drawing.Size(1020, 546)
+        Me.NavigationPage2.Size = New System.Drawing.Size(1046, 571)
         '
         'LayoutControl1
         '
@@ -419,30 +419,32 @@ Partial Class DashBoardUser
         Me.LayoutControl1.Controls.Add(Me.GroupControl1)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton7)
         Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutControl1.HiddenItems.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem3, Me.LayoutControlItem1, Me.LayoutControlItem6})
         Me.LayoutControl1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControl1.Name = "LayoutControl1"
+        Me.LayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(1104, 346, 650, 400)
         Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(1020, 546)
+        Me.LayoutControl1.Size = New System.Drawing.Size(1046, 571)
         Me.LayoutControl1.TabIndex = 7
         Me.LayoutControl1.Text = "LayoutControl1"
         '
         'GroupControl6
         '
         Me.GroupControl6.Controls.Add(Me.GridControl2)
-        Me.GroupControl6.Location = New System.Drawing.Point(578, 207)
+        Me.GroupControl6.Location = New System.Drawing.Point(593, 12)
         Me.GroupControl6.Name = "GroupControl6"
-        Me.GroupControl6.Size = New System.Drawing.Size(430, 301)
+        Me.GroupControl6.Size = New System.Drawing.Size(441, 521)
         Me.GroupControl6.TabIndex = 7
         Me.GroupControl6.Text = "أسعار العملات"
         '
         'GridControl2
         '
         Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl2.Location = New System.Drawing.Point(2, 23)
+        Me.GridControl2.Location = New System.Drawing.Point(2, 27)
         Me.GridControl2.MainView = Me.GridView2
         Me.GridControl2.Name = "GridControl2"
-        Me.GridControl2.Size = New System.Drawing.Size(426, 276)
+        Me.GridControl2.Size = New System.Drawing.Size(437, 492)
         Me.GridControl2.TabIndex = 9
         Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -463,9 +465,9 @@ Partial Class DashBoardUser
         Me.GroupControl2.Controls.Add(Me.SimpleButton5)
         Me.GroupControl2.Controls.Add(Me.LabelControl12)
         Me.GroupControl2.Controls.Add(Me.LabelControl11)
-        Me.GroupControl2.Location = New System.Drawing.Point(368, 12)
+        Me.GroupControl2.Location = New System.Drawing.Point(377, 12)
         Me.GroupControl2.Name = "GroupControl2"
-        Me.GroupControl2.Size = New System.Drawing.Size(326, 191)
+        Me.GroupControl2.Size = New System.Drawing.Size(657, 200)
         Me.GroupControl2.TabIndex = 4
         Me.GroupControl2.Text = "تواريخ هامة"
         Me.GroupControl2.Visible = False
@@ -535,7 +537,7 @@ Partial Class DashBoardUser
         Me.GroupControl3.Controls.Add(Me.LabelControl14)
         Me.GroupControl3.Location = New System.Drawing.Point(12, 12)
         Me.GroupControl3.Name = "GroupControl3"
-        Me.GroupControl3.Size = New System.Drawing.Size(352, 191)
+        Me.GroupControl3.Size = New System.Drawing.Size(1022, 200)
         Me.GroupControl3.TabIndex = 5
         Me.GroupControl3.Text = "بيانات الاتصال"
         Me.GroupControl3.Visible = False
@@ -655,19 +657,19 @@ Partial Class DashBoardUser
         '
         Me.GroupControl5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupControl5.Controls.Add(Me.WebBrowser2)
-        Me.GroupControl5.Location = New System.Drawing.Point(12, 207)
+        Me.GroupControl5.Location = New System.Drawing.Point(12, 12)
         Me.GroupControl5.Name = "GroupControl5"
-        Me.GroupControl5.Size = New System.Drawing.Size(562, 327)
+        Me.GroupControl5.Size = New System.Drawing.Size(1022, 547)
         Me.GroupControl5.TabIndex = 6
         Me.GroupControl5.Text = "طقس فلسطين"
         '
         'WebBrowser2
         '
         Me.WebBrowser2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser2.Location = New System.Drawing.Point(2, 23)
+        Me.WebBrowser2.Location = New System.Drawing.Point(2, 27)
         Me.WebBrowser2.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser2.Name = "WebBrowser2"
-        Me.WebBrowser2.Size = New System.Drawing.Size(558, 302)
+        Me.WebBrowser2.Size = New System.Drawing.Size(1018, 518)
         Me.WebBrowser2.TabIndex = 0
         Me.WebBrowser2.Url = New System.Uri("http://palweather.ps/temps/days/web_service", System.UriKind.Absolute)
         '
@@ -681,9 +683,9 @@ Partial Class DashBoardUser
         Me.GroupControl1.Controls.Add(Me.LabelControl9)
         Me.GroupControl1.Controls.Add(Me.NewPassword2Text)
         Me.GroupControl1.Controls.Add(Me.LabelControl8)
-        Me.GroupControl1.Location = New System.Drawing.Point(698, 12)
+        Me.GroupControl1.Location = New System.Drawing.Point(716, 12)
         Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.Size = New System.Drawing.Size(310, 191)
+        Me.GroupControl1.Size = New System.Drawing.Size(318, 200)
         Me.GroupControl1.TabIndex = 3
         Me.GroupControl1.Text = "تغيير كلمة المرور"
         Me.GroupControl1.Visible = False
@@ -747,9 +749,9 @@ Partial Class DashBoardUser
         '
         'SimpleButton7
         '
-        Me.SimpleButton7.Location = New System.Drawing.Point(578, 512)
+        Me.SimpleButton7.Location = New System.Drawing.Point(593, 12)
         Me.SimpleButton7.Name = "SimpleButton7"
-        Me.SimpleButton7.Size = New System.Drawing.Size(430, 22)
+        Me.SimpleButton7.Size = New System.Drawing.Size(441, 22)
         Me.SimpleButton7.StyleController = Me.LayoutControl1
         Me.SimpleButton7.TabIndex = 8
         Me.SimpleButton7.Text = "تحديث"
@@ -758,9 +760,9 @@ Partial Class DashBoardUser
         '
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup1.GroupBordersVisible = False
-        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem2, Me.LayoutControlItem1, Me.LayoutControlItem6})
-        Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1020, 546)
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem2})
+        Me.LayoutControlGroup1.Name = "Root"
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1046, 571)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem3
@@ -768,52 +770,52 @@ Partial Class DashBoardUser
         Me.LayoutControlItem3.Control = Me.GroupControl3
         Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(356, 195)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(1026, 204)
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
         '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.GroupControl1
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(686, 0)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(704, 0)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(314, 195)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(322, 204)
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
         'LayoutControlItem5
         '
         Me.LayoutControlItem5.Control = Me.GroupControl2
-        Me.LayoutControlItem5.Location = New System.Drawing.Point(356, 0)
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(365, 0)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(330, 195)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(661, 204)
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem5.TextVisible = False
         '
         'LayoutControlItem2
         '
         Me.LayoutControlItem2.Control = Me.GroupControl5
-        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 195)
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(566, 331)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(1026, 551)
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem2.TextVisible = False
         '
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.GroupControl6
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(566, 195)
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(581, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(434, 305)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(445, 525)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.Control = Me.SimpleButton7
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(566, 500)
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(581, 0)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(434, 26)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(445, 551)
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem6.TextVisible = False
         '

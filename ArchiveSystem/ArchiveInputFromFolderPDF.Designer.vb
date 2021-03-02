@@ -20,8 +20,12 @@ Partial Class ArchiveInputFromFolderPDF
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim EditorButtonImageOptions2 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
+        Dim EditorButtonImageOptions1 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ArchiveInputFromFolderPDF))
+        Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject2 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject3 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject4 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
@@ -107,7 +111,7 @@ Partial Class ArchiveInputFromFolderPDF
         Me.LayoutControlItem11 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.ArchiveDocTypesTableAdapter = New DXApplication5.CRMDataSetTableAdapters.ArchiveDocTypesTableAdapter()
         Me.Accounts1TableAdapter = New DXApplication5.WizCountDataSetTableAdapters.Accounts1TableAdapter()
-        Me.PdfBarController1 = New DevExpress.XtraPdfViewer.Bars.PdfBarController()
+        Me.PdfBarController1 = New DevExpress.XtraPdfViewer.Bars.PdfBarController(Me.components)
         Me.STATIONSTableAdapter = New DXApplication5.WALLETDataSetTableAdapters.STATIONSTableAdapter()
         Me.ArchiveDocsSortTableAdapter = New DXApplication5.CRMDataSetTableAdapters.ArchiveDocsSortTableAdapter()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -199,7 +203,7 @@ Partial Class ArchiveInputFromFolderPDF
         '
         'SearchLookSort
         '
-        Me.SearchLookSort.EditValue = "Null"
+        Me.SearchLookSort.EditValue = "-2"
         Me.SearchLookSort.Location = New System.Drawing.Point(12, 36)
         Me.SearchLookSort.MenuManager = Me.BarManager1
         Me.SearchLookSort.Name = "SearchLookSort"
@@ -208,10 +212,8 @@ Partial Class ArchiveInputFromFolderPDF
         Me.SearchLookSort.Properties.DisplayMember = "ArchiveSort"
         Me.SearchLookSort.Properties.NullText = "نوع الوثيقة"
         Me.SearchLookSort.Properties.NullValuePrompt = "نوع الوثيقة"
-        Me.SearchLookSort.Properties.NullValuePromptShowForEmptyValue = True
-        Me.SearchLookSort.Properties.ShowNullValuePromptWhenFocused = True
+        Me.SearchLookSort.Properties.PopupView = Me.GridView3
         Me.SearchLookSort.Properties.ValueMember = "ArchiveSortFolder"
-        Me.SearchLookSort.Properties.View = Me.GridView3
         Me.SearchLookSort.Size = New System.Drawing.Size(249, 20)
         Me.SearchLookSort.StyleController = Me.LayoutControl1
         Me.SearchLookSort.TabIndex = 20
@@ -441,10 +443,8 @@ Partial Class ArchiveInputFromFolderPDF
         Me.SearchCostCenter.Properties.DisplayMember = "NAME_AR"
         Me.SearchCostCenter.Properties.NullText = ""
         Me.SearchCostCenter.Properties.NullValuePrompt = "مركز التكلفة"
-        Me.SearchCostCenter.Properties.NullValuePromptShowForEmptyValue = True
-        Me.SearchCostCenter.Properties.ShowNullValuePromptWhenFocused = True
+        Me.SearchCostCenter.Properties.PopupView = Me.GridView2
         Me.SearchCostCenter.Properties.ValueMember = "ID"
-        Me.SearchCostCenter.Properties.View = Me.GridView2
         Me.SearchCostCenter.Size = New System.Drawing.Size(249, 20)
         Me.SearchCostCenter.StyleController = Me.LayoutControl1
         Me.SearchCostCenter.TabIndex = 19
@@ -502,10 +502,8 @@ Partial Class ArchiveInputFromFolderPDF
         Me.SearchAccounts.Properties.DisplayMember = "FullName"
         Me.SearchAccounts.Properties.NullText = "اختيار حساب"
         Me.SearchAccounts.Properties.NullValuePrompt = "اختيار حساب"
-        Me.SearchAccounts.Properties.NullValuePromptShowForEmptyValue = True
-        Me.SearchAccounts.Properties.ShowNullValuePromptWhenFocused = True
+        Me.SearchAccounts.Properties.PopupView = Me.SearchLookUpEdit1View
         Me.SearchAccounts.Properties.ValueMember = "AccountKey"
-        Me.SearchAccounts.Properties.View = Me.SearchLookUpEdit1View
         Me.SearchAccounts.Size = New System.Drawing.Size(249, 20)
         Me.SearchAccounts.StyleController = Me.LayoutControl1
         Me.SearchAccounts.TabIndex = 14
@@ -534,8 +532,6 @@ Partial Class ArchiveInputFromFolderPDF
         Me.TextDocName.Name = "TextDocName"
         Me.TextDocName.Properties.NullText = "اسم الوثيقة"
         Me.TextDocName.Properties.NullValuePrompt = "اسم الوثيقة"
-        Me.TextDocName.Properties.NullValuePromptShowForEmptyValue = True
-        Me.TextDocName.Properties.ShowNullValuePromptWhenFocused = True
         Me.TextDocName.Size = New System.Drawing.Size(249, 20)
         Me.TextDocName.StyleController = Me.LayoutControl1
         Me.TextDocName.TabIndex = 13
@@ -550,10 +546,8 @@ Partial Class ArchiveInputFromFolderPDF
         Me.SearchDocTypes.Properties.DisplayMember = "DocTypes"
         Me.SearchDocTypes.Properties.NullText = "التصنيف"
         Me.SearchDocTypes.Properties.NullValuePrompt = "التصنيف"
-        Me.SearchDocTypes.Properties.NullValuePromptShowForEmptyValue = True
-        Me.SearchDocTypes.Properties.ShowNullValuePromptWhenFocused = True
+        Me.SearchDocTypes.Properties.PopupView = Me.SearchLookUpEdit2View
         Me.SearchDocTypes.Properties.ValueMember = "DocTypes"
-        Me.SearchDocTypes.Properties.View = Me.SearchLookUpEdit2View
         Me.SearchDocTypes.Size = New System.Drawing.Size(249, 20)
         Me.SearchDocTypes.StyleController = Me.LayoutControl1
         Me.SearchDocTypes.TabIndex = 11
@@ -665,8 +659,8 @@ Partial Class ArchiveInputFromFolderPDF
         'DeleteButton
         '
         Me.DeleteButton.AutoHeight = False
-        EditorButtonImageOptions2.Image = CType(resources.GetObject("EditorButtonImageOptions2.Image"), System.Drawing.Image)
-        Me.DeleteButton.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(EditorButtonImageOptions2, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, Nothing)})
+        EditorButtonImageOptions1.Image = CType(resources.GetObject("EditorButtonImageOptions1.Image"), System.Drawing.Image)
+        Me.DeleteButton.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions1, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.DeleteButton.Name = "DeleteButton"
         Me.DeleteButton.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
@@ -677,7 +671,6 @@ Partial Class ArchiveInputFromFolderPDF
         Me.TextDocementDetails.Name = "TextDocementDetails"
         Me.TextDocementDetails.Properties.NullText = "تفاصيل اخرى"
         Me.TextDocementDetails.Properties.NullValuePrompt = "تفاصيل اخرى"
-        Me.TextDocementDetails.Properties.NullValuePromptShowForEmptyValue = True
         Me.TextDocementDetails.Size = New System.Drawing.Size(249, 107)
         Me.TextDocementDetails.StyleController = Me.LayoutControl1
         Me.TextDocementDetails.TabIndex = 15
@@ -687,7 +680,6 @@ Partial Class ArchiveInputFromFolderPDF
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup1.GroupBordersVisible = False
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem5, Me.LayoutControlItem4, Me.EmptySpaceItem1, Me.LayoutControlItem9, Me.LayoutControlItem10, Me.EmptySpaceItem3, Me.LayoutControlItem6, Me.LayoutControlItem8, Me.LayoutControlItem7, Me.LayoutControlItem12, Me.LayoutControlItem13, Me.LayoutControlItem3, Me.LayoutControlItem11})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
         Me.LayoutControlGroup1.Size = New System.Drawing.Size(1004, 550)
         Me.LayoutControlGroup1.TextVisible = False

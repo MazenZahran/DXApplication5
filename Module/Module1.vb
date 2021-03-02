@@ -10,13 +10,13 @@ Imports System.Data.SqlClient
 
 Public Class SQLControl
 
-    Public SqlCon As New SqlConnection With {.ConnectionString = OrbakString}
+    Public SqlConOrpak As New SqlConnection With {.ConnectionString = OrbakString}
     Public SqlConWizCount As New SqlConnection With {.ConnectionString = WizCountString}
     Public SqlConCRM As New SqlConnection With {.ConnectionString = CRMString}
     Public SqlConCheuqes As New SqlConnection With {.ConnectionString = CheuqesString}
     Public SqlConWallet As New SqlConnection With {.ConnectionString = WalletString}
     Public SqlConTrueTime As New SqlConnection With {.ConnectionString = TrueTimeString}
-
+    Public SqlConOldOrpak As New SqlConnection With {.ConnectionString = OrbakOldString}
 
     ' Public SqlExcel As New SqlConnection With {.ConnectionString = ExcelString}
     Public SqlCmd As SqlCommand
@@ -26,8 +26,8 @@ Public Class SQLControl
 
     Public Function HasConnection() As Boolean
         Try
-            SqlCon.Open()
-            SqlCon.Close()
+            SqlConOrpak.Open()
+            SqlConOrpak.Close()
             Return True
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -37,7 +37,7 @@ Public Class SQLControl
 
     Public Function WizCountHasConnection() As Boolean
         Try
-            SqlCon.Open()
+            SqlConWizCount.Open()
             SqlConWizCount.Close()
             Return True
         Catch ex As Exception
@@ -47,7 +47,7 @@ Public Class SQLControl
     End Function
     Public Function CRMHasConnection() As Boolean
         Try
-            SqlCon.Open()
+            SqlConCRM.Open()
             SqlConCRM.Close()
             Return True
         Catch ex As Exception
@@ -58,7 +58,7 @@ Public Class SQLControl
 
     Public Function CheuqesHasConnection() As Boolean
         Try
-            SqlCon.Open()
+            SqlConCRM.Open()
             SqlConCRM.Close()
             Return True
         Catch ex As Exception
@@ -68,7 +68,7 @@ Public Class SQLControl
     End Function
     Public Function TrueTimeHasConnection() As Boolean
         Try
-            SqlCon.Open()
+            SqlConTrueTime.Open()
             SqlConTrueTime.Close()
             Return True
         Catch ex As Exception
@@ -79,22 +79,21 @@ Public Class SQLControl
 
 
     Public Sub RunQuery(query As String)
+
         Try
-            SqlCon.Open()
-            SqlCmd = New SqlCommand(query, SqlCon)
+            SqlConOrpak.Open()
+            SqlCmd = New SqlCommand(query, SqlConOrpak)
             SQLDA = New SqlDataAdapter(SqlCmd)
             SQLDS = New DataSet
             SQLDA.Fill(SQLDS)
-
-
-            SqlCon.Close()
-
+            SqlConOrpak.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
-            If SqlCon.State = ConnectionState.Open Then
-                SqlCon.Close()
+            If SqlConOrpak.State = ConnectionState.Open Then
+                SqlConOrpak.Close()
             End If
         End Try
+
     End Sub
 
     Public Sub WizCountRunQuery(query As String)
@@ -189,6 +188,25 @@ Public Class SQLControl
             End If
         End Try
     End Sub
+
+    Public Sub OldOrpakRunQuery(query As String)
+        Try
+            SqlConOldOrpak.Open()
+            SqlCmd = New SqlCommand(query, SqlConOldOrpak)
+            SQLDA = New SqlDataAdapter(SqlCmd)
+            SQLDS = New DataSet
+            SQLDA.Fill(SQLDS)
+
+            SqlConOldOrpak.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            If SqlConOldOrpak.State = ConnectionState.Open Then
+                SqlConOldOrpak.Close()
+            End If
+        End Try
+    End Sub
+
 End Class
 
 

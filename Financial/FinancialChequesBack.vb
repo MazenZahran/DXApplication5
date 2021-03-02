@@ -60,13 +60,25 @@ Public Class FinancialChequesBack
             BandedGridView1.SetRowCellValue(BandedGridView1.FocusedRowHandle, BandedGridView1.Columns("BankName"), ComboBoxEdit1.SelectedItem)
         End If
 
-        If BandedGridView1.GetRowCellValue(BandedGridView1.FocusedRowHandle, "BankAccNo") Is DBNull.Value Then
-            BandedGridView1.SetRowCellValue(BandedGridView1.FocusedRowHandle, BandedGridView1.Columns("BankAccNo"), ComboBoxEdit1.SelectedItem)
-        End If
+        'If BandedGridView1.GetRowCellValue(BandedGridView1.FocusedRowHandle, "OrpakStatus") Is DBNull.Value Then
+        '    BandedGridView1.SetRowCellValue(BandedGridView1.FocusedRowHandle, BandedGridView1.Columns("OrpakStatus"), GetOrpakStatus(Me.GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "AccID").ToString))
+        'End If
+
+
+
 
     End Sub
 
-
+    Private Function GetOrpakStatus(AccID As String) As String
+        Try
+            Dim SqlString As String = "SELECT case when [status]=2 then 'Active' Else 'Stop' End as FStatus FROM [HO_DATA].[dbo].[fleets] where code ='" & AccID & "'"
+            Dim Sql As New SQLControl
+            Sql.RunQuery(SqlString)
+            Return CStr(Sql.SQLDS.Tables(0).Rows(0).Item("FStatus"))
+        Catch ex As Exception
+            Return "No Data"
+        End Try
+    End Function
     Private Sub Saving()
         Try
             If ComboBoxEdit1.Text = "" Then MsgBox("يجب اختيار البنك ") : Exit Sub
@@ -139,7 +151,10 @@ Public Class FinancialChequesBack
         Dim valu10 As String = TryCast(row, DataRowView).Row("DepositID").ToString()
         BandedGridView1.SetRowCellValue(BandedGridView1.FocusedRowHandle, BandedGridView1.Columns("DepositID"), valu10)
 
+        ' Dim valu11 As String = TryCast(row, DataRowView).Row("AlhudabankNo").ToString()
+        BandedGridView1.SetRowCellValue(BandedGridView1.FocusedRowHandle, BandedGridView1.Columns("OrpakStatus"), GetOrpakStatus(valu5))
 
+        If GetOrpakStatus(valu5) = "Active" Then MsgBox(GlobalVariables.UserNameString & " دير بالك الزبون شغال ")
 
         If TryCast(row, DataRowView).Row("Currency").ToString() = "NIS" Then
             Dim valu7 As String = TryCast(row, DataRowView).Row("SuF").ToString()
@@ -218,6 +233,7 @@ Public Class FinancialChequesBack
         Me.Validate()
         Me.FinancialChequesBackBindingSource.EndEdit()
         Me.TableAdapterManager1.UpdateAll(Me.CRMDataSet)
+
     End Sub
 
     Private Sub RepositoryPrint_ButtonClick(sender As Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles RepositoryPrint.ButtonClick
@@ -252,4 +268,127 @@ Public Class FinancialChequesBack
         FinancialChequesBackGridControl1.ShowPrintPreview()
     End Sub
 
+    Private Sub SimpleButton8_Click(sender As Object, e As EventArgs) Handles SimpleButton8.Click
+
+        Try
+            'Dim LastID As Integer = 0
+            'LastID = GetLastWalletDocID() + 1
+            'BandedGridView1.SetRowCellValue(BandedGridView1.FocusedRowHandle, ColWalletDocID, LastID)
+            'BandedGridView1.SetRowCellValue(BandedGridView1.FocusedRowHandle, ColDocAhditDate, Format(Now, "yyyy-MM-dd HH:mm"))
+            'BandedGridView1.SetRowCellValue(BandedGridView1.FocusedRowHandle, ColDocAuditUser, GlobalVariables.UserIDString)
+
+
+            Dim WalletTable As New DataTable
+            Dim ColId As New DataColumn With {
+                .DataType = System.Type.GetType("System.Int32"),
+                .AutoIncrement = True,
+                .AutoIncrementSeed = 1,
+                .AutoIncrementStep = 1
+            }
+
+            With WalletTable
+                .Columns.Add(ColId)
+                .Columns.Add("ColAccID", GetType(Integer))
+                .Columns.Add("ColCheqNo", GetType(String))
+                .Columns.Add("ColCheqAccDate", GetType(String))
+                .Columns.Add("ColAmount", GetType(Decimal))
+                .Columns.Add("ColCurrName", GetType(String))
+                .Columns.Add("ColCurrPrice", GetType(Decimal))
+                .Columns.Add("ColAmountNIS", GetType(Decimal))
+                .Columns.Add("ColNotes", GetType(String))
+            End With
+
+            Dim RowsCount As Integer = GridView1.RowCount
+            For i = 0 To RowsCount - 1
+                Dim R As DataRow = WalletTable.NewRow
+                If Me.GridView1.GetRowCellValue(i, "AccID").ToString = "111199" Then
+                    MsgBox("لا يمكن نسخ السند بسبب وجود شيكات ع ح/وسيط المحطات")
+                End If
+                R("ColAccID") = Me.GridView1.GetRowCellValue(i, "AccID").ToString
+                R("ColCheqNo") = Me.GridView1.GetRowCellValue(i, "ChequNO").ToString
+                R("ColCheqAccDate") = Format(CDate(Me.GridView1.GetRowCellValue(i, "ChequeDate").ToString), "yyyy-MM-dd")
+                R("ColAmount") = Me.GridView1.GetRowCellValue(i, "Amount").ToString
+                R("ColCurrName") = Me.GridView1.GetRowCellValue(i, "Currency").ToString
+                R("ColCurrPrice") = CDec(Me.GridView1.GetRowCellValue(i, "AmountNIS").ToString) / CDec(Me.GridView1.GetRowCellValue(i, "Amount").ToString)
+                R("ColAmountNIS") = Me.GridView1.GetRowCellValue(i, "AmountNIS").ToString
+                R("ColNotes") = "شيك راجع"
+                WalletTable.Rows.Add(R)
+
+                Dim RR As DataRow = WalletTable.NewRow
+                RR("ColAccID") = Me.GridView1.GetRowCellValue(i, "TransDebID").ToString
+                RR("ColCheqNo") = Me.GridView1.GetRowCellValue(i, "ChequNO").ToString
+                RR("ColCheqAccDate") = Format(CDate(Me.GridView1.GetRowCellValue(i, "ChequeDate").ToString), "yyyy-MM-dd")
+                RR("ColAmount") = -1 * CDec(Me.GridView1.GetRowCellValue(i, "Amount").ToString)
+                RR("ColCurrName") = Me.GridView1.GetRowCellValue(i, "Currency").ToString
+                RR("ColCurrPrice") = CDec(Me.GridView1.GetRowCellValue(i, "AmountNIS").ToString) / CDec(Me.GridView1.GetRowCellValue(i, "Amount").ToString)
+                RR("ColAmountNIS") = -1 * CDec(Me.GridView1.GetRowCellValue(i, "AmountNIS").ToString)
+                RR("ColNotes") = "راجع" + "/" + Me.GridView1.GetRowCellValue(i, "AccountName").ToString
+                WalletTable.Rows.Add(RR)
+            Next
+
+            'Dim DocTable As New DataTable
+            'Dim DocType As String = Me.BandedGridView1.GetRowCellValue(BandedGridView1.FocusedRowHandle, "DocType").ToString
+            'Dim DocSort As String = Me.BandedGridView1.GetRowCellValue(BandedGridView1.FocusedRowHandle, "DocSort").ToString
+            'Dim DocID As Integer = CInt(Me.BandedGridView1.GetRowCellValue(BandedGridView1.FocusedRowHandle, "DocID"))
+            'Dim DocYear As Integer = CInt(Format(CDate(Me.BandedGridView1.GetRowCellValue(BandedGridView1.FocusedRowHandle, "DocDate")), "yy"))
+            'Dim DocNameID As Integer = CInt(Me.BandedGridView1.GetRowCellValue(BandedGridView1.FocusedRowHandle, "IDDocName"))
+            'Dim DocSortID As Integer = CInt(Me.BandedGridView1.GetRowCellValue(BandedGridView1.FocusedRowHandle, "DocSortID"))
+
+            'Dim Refereance As String = DocYear.ToString("00") & DocNameID.ToString("0") & DocSortID.ToString("0") & DocID.ToString("00")
+            'BandedGridView1.SetRowCellValue(BandedGridView1.FocusedRowHandle, ColReferance, Refereance)
+
+            'If CheckReferance(CInt(Refereance)) = True Then
+            '    MsgBox("لا يمكن نسخ السند لانه مرحل")
+            'End If
+
+            'Dim sql As New SQLControl
+            'Dim SqlString As String = " Select DocID , DocType,DebitAcc,CredAcc,Quantity,ItemPrice,Amount,StockID,DebitWhereHouse,CreditWhereHouse,DocManualNo,DocSort
+            '                        From StockMove
+            '                        Where DocID =" & DocID & " And DocType ='" & DocType & "' and DocSort='" & DocSort & "'"
+            'sql.CRMRunQuery(SqlString)
+            'Dim TempTable As New DataTable
+            'TempTable = sql.SQLDS.Tables(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Dim ClipText As String = String.Empty
+            For Each row As DataRow In WalletTable.Rows
+                Dim ClipRow As String = String.Empty
+                ClipRow = String.Empty
+
+                For Each col As DataColumn In WalletTable.Columns
+                    If Not String.IsNullOrEmpty(ClipRow) Then
+                        ClipRow += ControlChars.Tab
+                    End If
+
+                    ClipRow += row(col.ColumnName).ToString
+                Next
+
+                ClipText += ClipRow + ControlChars.NewLine
+            Next
+
+            Clipboard.SetText(ClipText)
+        Catch ex As Exception
+            MsgBox("لا يمكن ترحيل السند")
+            MsgBox(ex.ToString)
+        End Try
+    End Sub
+
+    Private Function GetEmployeeName() As String
+        Dim Sql As New SQLControl
+        Dim SqlString As String
+        SqlString = ""
+        Return 0
+    End Function
 End Class

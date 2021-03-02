@@ -71,6 +71,8 @@ Partial Class StockItemMoves
         Me.ItemsTableAdapter = New DXApplication5.WizCountDataSetTableAdapters.ItemsTableAdapter()
         Me.AgentWarehouseNamesTableAdapter = New DXApplication5.WizCountDataSetTableAdapters.AgentWarehouseNamesTableAdapter()
         Me.Accounts1TableAdapter = New DXApplication5.WizCountDataSetTableAdapters.Accounts1TableAdapter()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DockPanel1.SuspendLayout()
         Me.DockPanel1_Container.SuspendLayout()
@@ -95,6 +97,7 @@ Partial Class StockItemMoves
         CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryDebitWhereHouse, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryCreditWheerHouse, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DockManager1
@@ -117,13 +120,14 @@ Partial Class StockItemMoves
         'DockPanel1_Container
         '
         Me.DockPanel1_Container.Controls.Add(Me.LayoutControl1)
-        Me.DockPanel1_Container.Location = New System.Drawing.Point(3, 24)
+        Me.DockPanel1_Container.Location = New System.Drawing.Point(4, 26)
         Me.DockPanel1_Container.Name = "DockPanel1_Container"
-        Me.DockPanel1_Container.Size = New System.Drawing.Size(195, 469)
+        Me.DockPanel1_Container.Size = New System.Drawing.Size(193, 466)
         Me.DockPanel1_Container.TabIndex = 0
         '
         'LayoutControl1
         '
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton2)
         Me.LayoutControl1.Controls.Add(Me.SearchWarehouse)
         Me.LayoutControl1.Controls.Add(Me.SearchLookItems)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton1)
@@ -132,7 +136,7 @@ Partial Class StockItemMoves
         Me.LayoutControl1.Name = "LayoutControl1"
         Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(195, 469)
+        Me.LayoutControl1.Size = New System.Drawing.Size(193, 466)
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
         '
@@ -146,10 +150,9 @@ Partial Class StockItemMoves
         Me.SearchWarehouse.Properties.DisplayMember = "Name"
         Me.SearchWarehouse.Properties.NullText = ""
         Me.SearchWarehouse.Properties.NullValuePrompt = "المستودع"
-        Me.SearchWarehouse.Properties.NullValuePromptShowForEmptyValue = True
+        Me.SearchWarehouse.Properties.PopupView = Me.SearchLookUpEdit2View
         Me.SearchWarehouse.Properties.ValueMember = "NameID"
-        Me.SearchWarehouse.Properties.View = Me.SearchLookUpEdit2View
-        Me.SearchWarehouse.Size = New System.Drawing.Size(171, 20)
+        Me.SearchWarehouse.Size = New System.Drawing.Size(169, 20)
         Me.SearchWarehouse.StyleController = Me.LayoutControl1
         Me.SearchWarehouse.TabIndex = 20
         '
@@ -197,10 +200,9 @@ Partial Class StockItemMoves
         Me.SearchLookItems.Properties.DisplayMember = "ItemName"
         Me.SearchLookItems.Properties.NullText = ""
         Me.SearchLookItems.Properties.NullValuePrompt = "الصنف"
-        Me.SearchLookItems.Properties.NullValuePromptShowForEmptyValue = True
+        Me.SearchLookItems.Properties.PopupView = Me.SearchLookUpEdit1View
         Me.SearchLookItems.Properties.ValueMember = "ItemKey"
-        Me.SearchLookItems.Properties.View = Me.SearchLookUpEdit1View
-        Me.SearchLookItems.Size = New System.Drawing.Size(171, 20)
+        Me.SearchLookItems.Size = New System.Drawing.Size(169, 20)
         Me.SearchLookItems.StyleController = Me.LayoutControl1
         Me.SearchLookItems.TabIndex = 19
         '
@@ -233,9 +235,9 @@ Partial Class StockItemMoves
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(12, 435)
+        Me.SimpleButton1.Location = New System.Drawing.Point(12, 432)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(171, 22)
+        Me.SimpleButton1.Size = New System.Drawing.Size(169, 22)
         Me.SimpleButton1.StyleController = Me.LayoutControl1
         Me.SimpleButton1.TabIndex = 4
         Me.SimpleButton1.Text = "تحديث"
@@ -244,10 +246,9 @@ Partial Class StockItemMoves
         '
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup1.GroupBordersVisible = False
-        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.EmptySpaceItem1, Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem3})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.EmptySpaceItem1, Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4})
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(195, 469)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(193, 466)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'EmptySpaceItem1
@@ -255,15 +256,15 @@ Partial Class StockItemMoves
         Me.EmptySpaceItem1.AllowHotTrack = False
         Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 48)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(175, 375)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(173, 346)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.SimpleButton1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 423)
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 420)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(175, 26)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(173, 26)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
@@ -272,7 +273,7 @@ Partial Class StockItemMoves
         Me.LayoutControlItem2.Control = Me.SearchLookItems
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(175, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(173, 24)
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem2.TextVisible = False
         '
@@ -281,7 +282,7 @@ Partial Class StockItemMoves
         Me.LayoutControlItem3.Control = Me.SearchWarehouse
         Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(175, 24)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(173, 24)
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
         '
@@ -365,8 +366,8 @@ Partial Class StockItemMoves
         Me.RepositoryItemAccount.DisplayMember = "FullName"
         Me.RepositoryItemAccount.Name = "RepositoryItemAccount"
         Me.RepositoryItemAccount.NullText = ""
+        Me.RepositoryItemAccount.PopupView = Me.RepositoryItemSearchLookUpEdit1View
         Me.RepositoryItemAccount.ValueMember = "AccountKey"
-        Me.RepositoryItemAccount.View = Me.RepositoryItemSearchLookUpEdit1View
         '
         'Accounts1BindingSource
         '
@@ -521,6 +522,24 @@ Partial Class StockItemMoves
         '
         Me.Accounts1TableAdapter.ClearBeforeFill = True
         '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.Location = New System.Drawing.Point(12, 406)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(169, 22)
+        Me.SimpleButton2.StyleController = Me.LayoutControl1
+        Me.SimpleButton2.TabIndex = 21
+        Me.SimpleButton2.Text = "طباعة"
+        '
+        'LayoutControlItem4
+        '
+        Me.LayoutControlItem4.Control = Me.SimpleButton2
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 394)
+        Me.LayoutControlItem4.Name = "LayoutControlItem4"
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(173, 26)
+        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem4.TextVisible = False
+        '
         'StockItemMoves
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -556,6 +575,7 @@ Partial Class StockItemMoves
         CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryDebitWhereHouse, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryCreditWheerHouse, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -611,4 +631,6 @@ Partial Class StockItemMoves
     Friend WithEvents Accounts1TableAdapter As WizCountDataSetTableAdapters.Accounts1TableAdapter
     Friend WithEvents RepositoryDebitWhereHouse As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
     Friend WithEvents RepositoryCreditWheerHouse As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+    Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents LayoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
 End Class

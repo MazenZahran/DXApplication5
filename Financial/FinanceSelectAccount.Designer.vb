@@ -20,7 +20,6 @@ Partial Class FinanceSelectAccount
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FinanceSelectAccount))
         Dim SelectQuery1 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
         Dim Column1 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
         Dim ColumnExpression1 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
@@ -43,9 +42,9 @@ Partial Class FinanceSelectAccount
         Dim Table3 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
         Dim Column6 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
         Dim ColumnExpression8 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FinanceSelectAccount))
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.AreaText = New DevExpress.XtraEditors.TextEdit()
         Me.SortText = New DevExpress.XtraEditors.TextEdit()
         Me.AccNoText = New DevExpress.XtraEditors.TextEdit()
@@ -71,6 +70,10 @@ Partial Class FinanceSelectAccount
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
         Me.AccNameText = New DevExpress.XtraEditors.TextEdit()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
+        Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.ColAccountKey = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -79,6 +82,12 @@ Partial Class FinanceSelectAccount
         Me.ColSPhone = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Colsortcodename = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColCostCodeName = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Root = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,14 +106,21 @@ Partial Class FinanceSelectAccount
         CType(Me.AccNameText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl2.SuspendLayout()
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Root, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelControl1
         '
         Me.PanelControl1.Controls.Add(Me.TextEdit1)
-        Me.PanelControl1.Controls.Add(Me.SimpleButton1)
         Me.PanelControl1.Controls.Add(Me.AreaText)
         Me.PanelControl1.Controls.Add(Me.SortText)
         Me.PanelControl1.Controls.Add(Me.AccNoText)
@@ -119,7 +135,7 @@ Partial Class FinanceSelectAccount
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(880, 122)
+        Me.PanelControl1.Size = New System.Drawing.Size(890, 122)
         Me.PanelControl1.TabIndex = 0
         '
         'TextEdit1
@@ -129,14 +145,6 @@ Partial Class FinanceSelectAccount
         Me.TextEdit1.Size = New System.Drawing.Size(86, 20)
         Me.TextEdit1.TabIndex = 5
         Me.TextEdit1.Visible = False
-        '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(5, 71)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(43, 47)
-        Me.SimpleButton1.TabIndex = 4
         '
         'AreaText
         '
@@ -168,8 +176,8 @@ Partial Class FinanceSelectAccount
         Me.SearchLookUpEdit2.Properties.DataSource = Me.costCodesBindingSource
         Me.SearchLookUpEdit2.Properties.DisplayMember = "اسم المنطقة"
         Me.SearchLookUpEdit2.Properties.NullText = ""
+        Me.SearchLookUpEdit2.Properties.PopupView = Me.GridView2
         Me.SearchLookUpEdit2.Properties.ValueMember = "رقم المنطقة"
-        Me.SearchLookUpEdit2.Properties.View = Me.GridView2
         Me.SearchLookUpEdit2.Size = New System.Drawing.Size(342, 20)
         Me.SearchLookUpEdit2.TabIndex = 2
         '
@@ -196,7 +204,6 @@ Partial Class FinanceSelectAccount
         SelectQuery1.Columns.Add(Column2)
         SelectQuery1.FilterString = ""
         SelectQuery1.GroupFilterString = ""
-        SelectQuery1.MetaSerializable = Nothing
         SelectQuery1.Name = "Accounts"
         ColumnExpression3.ColumnName = "AccountKey"
         ColumnExpression3.Table = Table1
@@ -217,7 +224,6 @@ Partial Class FinanceSelectAccount
         SelectQuery2.Columns.Add(Column4)
         SelectQuery2.FilterString = ""
         SelectQuery2.GroupFilterString = ""
-        SelectQuery2.MetaSerializable = Nothing
         SelectQuery2.Name = "AccSortNames"
         ColumnExpression6.ColumnName = "AccSortCode"
         ColumnExpression6.Table = Table2
@@ -236,7 +242,6 @@ Partial Class FinanceSelectAccount
         Column6.Expression = ColumnExpression8
         SelectQuery3.Columns.Add(Column5)
         SelectQuery3.Columns.Add(Column6)
-        SelectQuery3.MetaSerializable = Nothing
         SelectQuery3.Name = "CostCodes"
         SelectQuery3.Tables.Add(Table3)
         Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {SelectQuery1, SelectQuery2, SelectQuery3})
@@ -273,8 +278,8 @@ Partial Class FinanceSelectAccount
         Me.SearchLookUpEdit3.Properties.DataSource = Me.accSortNamesBindingSource
         Me.SearchLookUpEdit3.Properties.DisplayMember = "اسم التصنيف"
         Me.SearchLookUpEdit3.Properties.NullText = ""
+        Me.SearchLookUpEdit3.Properties.PopupView = Me.GridView3
         Me.SearchLookUpEdit3.Properties.ValueMember = "رقم التصنيف"
-        Me.SearchLookUpEdit3.Properties.View = Me.GridView3
         Me.SearchLookUpEdit3.Size = New System.Drawing.Size(342, 20)
         Me.SearchLookUpEdit3.TabIndex = 2
         '
@@ -314,8 +319,8 @@ Partial Class FinanceSelectAccount
         Me.SearchLookUpEdit1.Properties.DataSource = Me.accountsBindingSource
         Me.SearchLookUpEdit1.Properties.DisplayMember = "الحساب"
         Me.SearchLookUpEdit1.Properties.NullText = ""
+        Me.SearchLookUpEdit1.Properties.PopupView = Me.SearchLookUpEdit1View
         Me.SearchLookUpEdit1.Properties.ValueMember = "رقم الحساب"
-        Me.SearchLookUpEdit1.Properties.View = Me.SearchLookUpEdit1View
         Me.SearchLookUpEdit1.Size = New System.Drawing.Size(342, 20)
         Me.SearchLookUpEdit1.TabIndex = 2
         '
@@ -349,7 +354,7 @@ Partial Class FinanceSelectAccount
         'LabelControl4
         '
         Me.LabelControl4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LabelControl4.Location = New System.Drawing.Point(833, 100)
+        Me.LabelControl4.Location = New System.Drawing.Point(843, 100)
         Me.LabelControl4.Name = "LabelControl4"
         Me.LabelControl4.Size = New System.Drawing.Size(29, 13)
         Me.LabelControl4.TabIndex = 1
@@ -358,7 +363,7 @@ Partial Class FinanceSelectAccount
         'LabelControl1
         '
         Me.LabelControl1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LabelControl1.Location = New System.Drawing.Point(825, 71)
+        Me.LabelControl1.Location = New System.Drawing.Point(835, 71)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(37, 13)
         Me.LabelControl1.TabIndex = 1
@@ -367,7 +372,7 @@ Partial Class FinanceSelectAccount
         'LabelControl3
         '
         Me.LabelControl3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LabelControl3.Location = New System.Drawing.Point(825, 45)
+        Me.LabelControl3.Location = New System.Drawing.Point(835, 45)
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New System.Drawing.Size(37, 13)
         Me.LabelControl3.TabIndex = 1
@@ -376,7 +381,7 @@ Partial Class FinanceSelectAccount
         'LabelControl2
         '
         Me.LabelControl2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LabelControl2.Location = New System.Drawing.Point(827, 19)
+        Me.LabelControl2.Location = New System.Drawing.Point(837, 19)
         Me.LabelControl2.Name = "LabelControl2"
         Me.LabelControl2.Size = New System.Drawing.Size(37, 13)
         Me.LabelControl2.TabIndex = 1
@@ -385,27 +390,68 @@ Partial Class FinanceSelectAccount
         'AccNameText
         '
         Me.AccNameText.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.AccNameText.Location = New System.Drawing.Point(370, 93)
+        Me.AccNameText.Location = New System.Drawing.Point(380, 93)
         Me.AccNameText.Name = "AccNameText"
         Me.AccNameText.Size = New System.Drawing.Size(449, 20)
         Me.AccNameText.TabIndex = 0
         '
         'PanelControl2
         '
-        Me.PanelControl2.Controls.Add(Me.GridControl1)
+        Me.PanelControl2.Controls.Add(Me.LayoutControl1)
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl2.Location = New System.Drawing.Point(0, 122)
         Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(880, 414)
+        Me.PanelControl2.Size = New System.Drawing.Size(890, 416)
         Me.PanelControl2.TabIndex = 1
+        '
+        'LayoutControl1
+        '
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton1)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton3)
+        Me.LayoutControl1.Controls.Add(Me.SimpleButton2)
+        Me.LayoutControl1.Controls.Add(Me.GridControl1)
+        Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutControl1.Location = New System.Drawing.Point(2, 2)
+        Me.LayoutControl1.Name = "LayoutControl1"
+        Me.LayoutControl1.OptionsView.RightToLeftMirroringApplied = True
+        Me.LayoutControl1.Root = Me.Root
+        Me.LayoutControl1.Size = New System.Drawing.Size(886, 412)
+        Me.LayoutControl1.TabIndex = 1
+        Me.LayoutControl1.Text = "LayoutControl1"
+        '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Location = New System.Drawing.Point(12, 378)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(163, 22)
+        Me.SimpleButton1.StyleController = Me.LayoutControl1
+        Me.SimpleButton1.TabIndex = 6
+        Me.SimpleButton1.Text = "طباعة"
+        '
+        'SimpleButton3
+        '
+        Me.SimpleButton3.Location = New System.Drawing.Point(619, 378)
+        Me.SimpleButton3.Name = "SimpleButton3"
+        Me.SimpleButton3.Size = New System.Drawing.Size(123, 22)
+        Me.SimpleButton3.StyleController = Me.LayoutControl1
+        Me.SimpleButton3.TabIndex = 5
+        Me.SimpleButton3.Text = "كشف حساب F5"
+        '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.Location = New System.Drawing.Point(746, 378)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(128, 22)
+        Me.SimpleButton2.StyleController = Me.LayoutControl1
+        Me.SimpleButton2.TabIndex = 4
+        Me.SimpleButton2.Text = "تعديل"
         '
         'GridControl1
         '
-        Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl1.Location = New System.Drawing.Point(2, 2)
+        Me.GridControl1.Location = New System.Drawing.Point(12, 12)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(876, 410)
+        Me.GridControl1.Size = New System.Drawing.Size(862, 362)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -415,7 +461,6 @@ Partial Class FinanceSelectAccount
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsBehavior.Editable = False
-        Me.GridView1.OptionsBehavior.ReadOnly = True
         Me.GridView1.OptionsView.ShowFooter = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
         '
@@ -424,6 +469,7 @@ Partial Class FinanceSelectAccount
         Me.ColAccountKey.Caption = "رقم الحساب"
         Me.ColAccountKey.FieldName = "AccountKey"
         Me.ColAccountKey.Name = "ColAccountKey"
+        Me.ColAccountKey.OptionsColumn.ReadOnly = True
         Me.ColAccountKey.Visible = True
         Me.ColAccountKey.VisibleIndex = 0
         Me.ColAccountKey.Width = 80
@@ -433,6 +479,7 @@ Partial Class FinanceSelectAccount
         Me.ColFullName.Caption = "الحساب"
         Me.ColFullName.FieldName = "FullName"
         Me.ColFullName.Name = "ColFullName"
+        Me.ColFullName.OptionsColumn.ReadOnly = True
         Me.ColFullName.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "FullName", "عدد الحسابات {0}")})
         Me.ColFullName.Visible = True
         Me.ColFullName.VisibleIndex = 1
@@ -443,6 +490,7 @@ Partial Class FinanceSelectAccount
         Me.ColCountry.Caption = "المسؤول"
         Me.ColCountry.FieldName = "Country"
         Me.ColCountry.Name = "ColCountry"
+        Me.ColCountry.OptionsColumn.ReadOnly = True
         Me.ColCountry.Visible = True
         Me.ColCountry.VisibleIndex = 2
         Me.ColCountry.Width = 133
@@ -452,6 +500,7 @@ Partial Class FinanceSelectAccount
         Me.ColSPhone.Caption = "هاتف محمول"
         Me.ColSPhone.FieldName = "SPhone"
         Me.ColSPhone.Name = "ColSPhone"
+        Me.ColSPhone.OptionsColumn.ReadOnly = True
         Me.ColSPhone.Visible = True
         Me.ColSPhone.VisibleIndex = 3
         Me.ColSPhone.Width = 123
@@ -461,6 +510,7 @@ Partial Class FinanceSelectAccount
         Me.Colsortcodename.Caption = "التصنيف"
         Me.Colsortcodename.FieldName = "sortcodename"
         Me.Colsortcodename.Name = "Colsortcodename"
+        Me.Colsortcodename.OptionsColumn.ReadOnly = True
         Me.Colsortcodename.Visible = True
         Me.Colsortcodename.VisibleIndex = 4
         Me.Colsortcodename.Width = 150
@@ -470,20 +520,75 @@ Partial Class FinanceSelectAccount
         Me.ColCostCodeName.Caption = "المنطقة"
         Me.ColCostCodeName.FieldName = "CostCodeName"
         Me.ColCostCodeName.Name = "ColCostCodeName"
+        Me.ColCostCodeName.OptionsColumn.ReadOnly = True
         Me.ColCostCodeName.Visible = True
         Me.ColCostCodeName.VisibleIndex = 5
         Me.ColCostCodeName.Width = 90
+        '
+        'Root
+        '
+        Me.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.Root.GroupBordersVisible = False
+        Me.Root.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.EmptySpaceItem1, Me.LayoutControlItem4})
+        Me.Root.Name = "Root"
+        Me.Root.Size = New System.Drawing.Size(886, 412)
+        Me.Root.TextVisible = False
+        '
+        'LayoutControlItem1
+        '
+        Me.LayoutControlItem1.Control = Me.GridControl1
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem1.Name = "LayoutControlItem1"
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(866, 366)
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem1.TextVisible = False
+        '
+        'LayoutControlItem2
+        '
+        Me.LayoutControlItem2.Control = Me.SimpleButton2
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(734, 366)
+        Me.LayoutControlItem2.Name = "LayoutControlItem2"
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(132, 26)
+        Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem2.TextVisible = False
+        '
+        'LayoutControlItem3
+        '
+        Me.LayoutControlItem3.Control = Me.SimpleButton3
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(607, 366)
+        Me.LayoutControlItem3.Name = "LayoutControlItem3"
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(127, 26)
+        Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem3.TextVisible = False
+        '
+        'EmptySpaceItem1
+        '
+        Me.EmptySpaceItem1.AllowHotTrack = False
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(167, 366)
+        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(440, 26)
+        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'LayoutControlItem4
+        '
+        Me.LayoutControlItem4.Control = Me.SimpleButton1
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 366)
+        Me.LayoutControlItem4.Name = "LayoutControlItem4"
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(167, 26)
+        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem4.TextVisible = False
         '
         'FinanceSelectAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(880, 536)
+        Me.ClientSize = New System.Drawing.Size(890, 538)
         Me.Controls.Add(Me.PanelControl2)
         Me.Controls.Add(Me.PanelControl1)
         Me.Name = "FinanceSelectAccount"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RightToLeftLayout = True
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "الحسابات"
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
@@ -504,8 +609,16 @@ Partial Class FinanceSelectAccount
         CType(Me.AccNameText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl2.ResumeLayout(False)
+        CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LayoutControl1.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Root, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -538,7 +651,6 @@ Partial Class FinanceSelectAccount
     Friend WithEvents SortText As DevExpress.XtraEditors.TextEdit
     Friend WithEvents AccNoText As DevExpress.XtraEditors.TextEdit
     Friend WithEvents AreaText As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents ColAccountKey As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ColFullName As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ColCountry As DevExpress.XtraGrid.Columns.GridColumn
@@ -546,4 +658,14 @@ Partial Class FinanceSelectAccount
     Friend WithEvents Colsortcodename As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ColCostCodeName As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents TextEdit1 As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControl1 As DevExpress.XtraLayout.LayoutControl
+    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents Root As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents EmptySpaceItem1 As DevExpress.XtraLayout.EmptySpaceItem
+    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents LayoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
 End Class

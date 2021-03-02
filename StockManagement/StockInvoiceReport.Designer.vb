@@ -69,6 +69,7 @@ Partial Public Class StockInvoiceReport
         Dim ColumnExpression22 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
         Dim QueryParameter1 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
         Dim QueryParameter2 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
+        Dim QueryParameter3 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary2 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary3 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
@@ -105,6 +106,8 @@ Partial Public Class StockInvoiceReport
         Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.ReportHeaderBand1 = New DevExpress.XtraReports.UI.ReportHeaderBand()
         Me.XrPanel4 = New DevExpress.XtraReports.UI.XRPanel()
+        Me.XrLabel41 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel40 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel39 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel38 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel37 = New DevExpress.XtraReports.UI.XRLabel()
@@ -168,9 +171,9 @@ Partial Public Class StockInvoiceReport
         Me.DocSort = New DevExpress.XtraReports.Parameters.Parameter()
         Me.CarNo = New DevExpress.XtraReports.Parameters.Parameter()
         Me.SalesPerson = New DevExpress.XtraReports.Parameters.Parameter()
-        Me.XrLabel40 = New DevExpress.XtraReports.UI.XRLabel()
         Me.SalesPersonName = New DevExpress.XtraReports.Parameters.Parameter()
-        Me.XrLabel41 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel43 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel44 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -424,7 +427,7 @@ Partial Public Class StockInvoiceReport
         '
         'BottomMargin
         '
-        Me.BottomMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel31, Me.XrLabel30, Me.XrLabel25, Me.XrLabel24, Me.XrPageInfo2})
+        Me.BottomMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel44, Me.XrLabel43, Me.XrLabel31, Me.XrLabel30, Me.XrLabel25, Me.XrLabel24, Me.XrPageInfo2})
         Me.BottomMargin.HeightF = 125.3085!
         Me.BottomMargin.Name = "BottomMargin"
         Me.BottomMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
@@ -492,7 +495,7 @@ Partial Public Class StockInvoiceReport
         Me.SqlDataSource1.ConnectionName = "DXApplication5.Settings.CRMConnectionString"
         Me.SqlDataSource1.Name = "SqlDataSource1"
         ColumnExpression1.ColumnName = "ID"
-        Table1.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""495"" />"
+        Table1.MetaSerializable = "<Meta X=""30"" Y=""30"" Width=""125"" Height=""685"" />"
         Table1.Name = "StockMove"
         ColumnExpression1.Table = Table1
         Column1.Expression = ColumnExpression1
@@ -581,7 +584,8 @@ Partial Public Class StockInvoiceReport
         SelectQuery1.Columns.Add(Column20)
         SelectQuery1.Columns.Add(Column21)
         SelectQuery1.Columns.Add(Column22)
-        SelectQuery1.FilterString = "[StockMove.DocID] = ?DocID And [StockMove.DocType] = ?DocType"
+        SelectQuery1.FilterString = "[StockMove.DocID] = ?DocID And [StockMove.DocType] = ?DocType And [StockMove.DocS" &
+    "ort] = ?DocSort"
         SelectQuery1.GroupFilterString = ""
         SelectQuery1.Name = "StockMove"
         QueryParameter1.Name = "DocID"
@@ -590,8 +594,12 @@ Partial Public Class StockInvoiceReport
         QueryParameter2.Name = "DocType"
         QueryParameter2.Type = GetType(DevExpress.DataAccess.Expression)
         QueryParameter2.Value = New DevExpress.DataAccess.Expression("?DocType", GetType(String))
+        QueryParameter3.Name = "DocSort"
+        QueryParameter3.Type = GetType(DevExpress.DataAccess.Expression)
+        QueryParameter3.Value = New DevExpress.DataAccess.Expression("?DocSort", GetType(String))
         SelectQuery1.Parameters.Add(QueryParameter1)
         SelectQuery1.Parameters.Add(QueryParameter2)
+        SelectQuery1.Parameters.Add(QueryParameter3)
         SelectQuery1.Tables.Add(Table1)
         Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {SelectQuery1})
         Me.SqlDataSource1.ResultSchemaSerializable = resources.GetString("SqlDataSource1.ResultSchemaSerializable")
@@ -608,6 +616,30 @@ Partial Public Class StockInvoiceReport
         Me.XrPanel4.LocationFloat = New DevExpress.Utils.PointFloat(11.52649!, 10.00001!)
         Me.XrPanel4.Name = "XrPanel4"
         Me.XrPanel4.SizeF = New System.Drawing.SizeF(628.4735!, 114.5833!)
+        '
+        'XrLabel41
+        '
+        Me.XrLabel41.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?SalesPersonName")})
+        Me.XrLabel41.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel41.LocationFloat = New DevExpress.Utils.PointFloat(428.9094!, 79.00006!)
+        Me.XrLabel41.Multiline = True
+        Me.XrLabel41.Name = "XrLabel41"
+        Me.XrLabel41.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel41.SizeF = New System.Drawing.SizeF(183.3085!, 23.0!)
+        Me.XrLabel41.StylePriority.UseFont = False
+        Me.XrLabel41.Text = "XrLabel41"
+        '
+        'XrLabel40
+        '
+        Me.XrLabel40.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?SalesPerson")})
+        Me.XrLabel40.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel40.LocationFloat = New DevExpress.Utils.PointFloat(506.2483!, 56.00004!)
+        Me.XrLabel40.Multiline = True
+        Me.XrLabel40.Name = "XrLabel40"
+        Me.XrLabel40.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel40.SizeF = New System.Drawing.SizeF(105.9696!, 23.00001!)
+        Me.XrLabel40.StylePriority.UseFont = False
+        Me.XrLabel40.Text = "XrLabel40"
         '
         'XrLabel39
         '
@@ -1192,35 +1224,37 @@ Partial Public Class StockInvoiceReport
         Me.SalesPerson.Name = "SalesPerson"
         Me.SalesPerson.Visible = False
         '
-        'XrLabel40
-        '
-        Me.XrLabel40.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?SalesPerson")})
-        Me.XrLabel40.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel40.LocationFloat = New DevExpress.Utils.PointFloat(506.2483!, 56.00004!)
-        Me.XrLabel40.Multiline = True
-        Me.XrLabel40.Name = "XrLabel40"
-        Me.XrLabel40.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
-        Me.XrLabel40.SizeF = New System.Drawing.SizeF(105.9696!, 23.00001!)
-        Me.XrLabel40.StylePriority.UseFont = False
-        Me.XrLabel40.Text = "XrLabel40"
-        '
         'SalesPersonName
         '
         Me.SalesPersonName.Description = "SalesPersonName"
         Me.SalesPersonName.Name = "SalesPersonName"
         Me.SalesPersonName.Visible = False
         '
-        'XrLabel41
+        'XrLabel43
         '
-        Me.XrLabel41.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?SalesPersonName")})
-        Me.XrLabel41.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel41.LocationFloat = New DevExpress.Utils.PointFloat(428.9094!, 79.00006!)
-        Me.XrLabel41.Multiline = True
-        Me.XrLabel41.Name = "XrLabel41"
-        Me.XrLabel41.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
-        Me.XrLabel41.SizeF = New System.Drawing.SizeF(183.3085!, 23.0!)
-        Me.XrLabel41.StylePriority.UseFont = False
-        Me.XrLabel41.Text = "XrLabel41"
+        Me.XrLabel43.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot
+        Me.XrLabel43.Borders = DevExpress.XtraPrinting.BorderSide.Bottom
+        Me.XrLabel43.LocationFloat = New DevExpress.Utils.PointFloat(12.64026!, 27.45832!)
+        Me.XrLabel43.Name = "XrLabel43"
+        Me.XrLabel43.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel43.SizeF = New System.Drawing.SizeF(214.0417!, 16.0!)
+        Me.XrLabel43.StyleName = "TotalCaption3"
+        Me.XrLabel43.StylePriority.UseBorderDashStyle = False
+        Me.XrLabel43.StylePriority.UseBorders = False
+        Me.XrLabel43.Text = "أمين المستودع:"
+        '
+        'XrLabel44
+        '
+        Me.XrLabel44.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot
+        Me.XrLabel44.Borders = DevExpress.XtraPrinting.BorderSide.Bottom
+        Me.XrLabel44.LocationFloat = New DevExpress.Utils.PointFloat(423.072!, 27.45832!)
+        Me.XrLabel44.Name = "XrLabel44"
+        Me.XrLabel44.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel44.SizeF = New System.Drawing.SizeF(214.0417!, 16.0!)
+        Me.XrLabel44.StyleName = "TotalCaption3"
+        Me.XrLabel44.StylePriority.UseBorderDashStyle = False
+        Me.XrLabel44.StylePriority.UseBorders = False
+        Me.XrLabel44.Text = "تدقيق:"
         '
         'StockInvoiceReport
         '
@@ -1234,7 +1268,7 @@ Partial Public Class StockInvoiceReport
         Me.RightToLeftLayout = DevExpress.XtraReports.UI.RightToLeftLayout.Yes
         Me.ScriptLanguage = DevExpress.XtraReports.ScriptLanguage.VisualBasic
         Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() {Me.Title, Me.GroupCaption3, Me.GroupData3, Me.DetailCaption3, Me.DetailData3, Me.DetailData3_Odd, Me.DetailCaptionBackground3, Me.TotalCaption3, Me.TotalData3, Me.TotalBackground3, Me.GrandTotalCaption3, Me.GrandTotalData3, Me.GrandTotalBackground3, Me.PageInfo})
-        Me.Version = "19.2"
+        Me.Version = "20.1"
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1339,4 +1373,6 @@ Partial Public Class StockInvoiceReport
     Friend WithEvents XrLabel40 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel41 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents SalesPersonName As DevExpress.XtraReports.Parameters.Parameter
+    Friend WithEvents XrLabel44 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel43 As DevExpress.XtraReports.UI.XRLabel
 End Class

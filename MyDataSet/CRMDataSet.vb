@@ -21,6 +21,9 @@
 End Class
 
 Namespace CRMDataSetTableAdapters
+    Partial Public Class DATATableAdapter
+    End Class
+
     Partial Public Class PrintingSystemDocsTableAdapter
     End Class
 

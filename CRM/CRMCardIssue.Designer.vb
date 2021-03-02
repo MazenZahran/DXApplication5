@@ -22,6 +22,7 @@ Partial Class CRMCardIssue
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CRMCardIssue))
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
+        Me.TextFleetID = New DevExpress.XtraEditors.TextEdit()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.CheckPrintDoc = New DevExpress.XtraEditors.CheckEdit()
         Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
@@ -39,6 +40,7 @@ Partial Class CRMCardIssue
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colID1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colCardID1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryCardNo = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
         Me.colCardTransDate1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colAccountNo1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colAccountName1 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -49,12 +51,20 @@ Partial Class CRMCardIssue
         Me.colCardSerial1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colCardStatus1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colDocID = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colGroupRule = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryRules = New DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HODATADataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HO_DATADataSet = New DXApplication5.HO_DATADataSet()
+        Me.RepositoryItemSearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.colname = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colid = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colPlateNo = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryPlateNo = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.TextEditPerson = New DevExpress.XtraEditors.TextEdit()
         Me.IssueDate = New DevExpress.XtraEditors.DateEdit()
         Me.SearchLookUpEdit1 = New DevExpress.XtraEditors.SearchLookUpEdit()
-        Me.Accounts1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.WizCountDataSet = New DXApplication5.WizCountDataSet()
         Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colAccountKey = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colFullName = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -67,13 +77,14 @@ Partial Class CRMCardIssue
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem11 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup3 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem18 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup4 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem()
@@ -83,11 +94,15 @@ Partial Class CRMCardIssue
         Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem17 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.Accounts1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.WizCountDataSet = New DXApplication5.WizCountDataSet()
         Me.Accounts1TableAdapter = New DXApplication5.WizCountDataSetTableAdapters.Accounts1TableAdapter()
         Me.CardsTransTableAdapter = New DXApplication5.CRMDataSetTableAdapters.CardsTransTableAdapter()
         Me.TableAdapterManager = New DXApplication5.CRMDataSetTableAdapters.TableAdapterManager()
+        Me.Group_rulesTableAdapter = New DXApplication5.HO_DATADataSetTableAdapters.group_rulesTableAdapter()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
+        CType(Me.TextFleetID.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CheckPrintDoc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,12 +116,17 @@ Partial Class CRMCardIssue
         CType(Me.RadioGroup1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CardsTransGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryCardNo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryRules, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HODATADataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HO_DATADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryPlateNo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEditPerson.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IssueDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IssueDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchLookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Accounts1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.WizCountDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEditNotes.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,13 +137,14 @@ Partial Class CRMCardIssue
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,10 +154,13 @@ Partial Class CRMCardIssue
         CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Accounts1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.WizCountDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LayoutControl1
         '
+        Me.LayoutControl1.Controls.Add(Me.TextFleetID)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton2)
         Me.LayoutControl1.Controls.Add(Me.CheckPrintDoc)
         Me.LayoutControl1.Controls.Add(Me.TextEdit1)
@@ -164,6 +188,15 @@ Partial Class CRMCardIssue
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
         '
+        'TextFleetID
+        '
+        Me.TextFleetID.Location = New System.Drawing.Point(224, 171)
+        Me.TextFleetID.Name = "TextFleetID"
+        Me.TextFleetID.Properties.ReadOnly = True
+        Me.TextFleetID.Size = New System.Drawing.Size(161, 20)
+        Me.TextFleetID.StyleController = Me.LayoutControl1
+        Me.TextFleetID.TabIndex = 13
+        '
         'SimpleButton2
         '
         Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
@@ -180,7 +213,7 @@ Partial Class CRMCardIssue
         Me.CheckPrintDoc.Location = New System.Drawing.Point(12, 64)
         Me.CheckPrintDoc.Name = "CheckPrintDoc"
         Me.CheckPrintDoc.Properties.Caption = "طباعة نموذج استلام"
-        Me.CheckPrintDoc.Size = New System.Drawing.Size(220, 19)
+        Me.CheckPrintDoc.Size = New System.Drawing.Size(220, 20)
         Me.CheckPrintDoc.StyleController = Me.LayoutControl1
         Me.CheckPrintDoc.TabIndex = 8
         '
@@ -215,7 +248,7 @@ Partial Class CRMCardIssue
         'PersonName
         '
         Me.PersonName.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CardsTransBindingSource, "PersonName", True))
-        Me.PersonName.Location = New System.Drawing.Point(25, 507)
+        Me.PersonName.Location = New System.Drawing.Point(24, 508)
         Me.PersonName.Name = "PersonName"
         Me.PersonName.Properties.ReadOnly = True
         Me.PersonName.Size = New System.Drawing.Size(111, 20)
@@ -235,17 +268,17 @@ Partial Class CRMCardIssue
         'TransNotes
         '
         Me.TransNotes.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CardsTransBindingSource, "TransNotes", True))
-        Me.TransNotes.Location = New System.Drawing.Point(186, 531)
+        Me.TransNotes.Location = New System.Drawing.Point(185, 532)
         Me.TransNotes.Name = "TransNotes"
         Me.TransNotes.Properties.ReadOnly = True
-        Me.TransNotes.Size = New System.Drawing.Size(433, 20)
+        Me.TransNotes.Size = New System.Drawing.Size(435, 20)
         Me.TransNotes.StyleController = Me.LayoutControl1
         Me.TransNotes.TabIndex = 11
         '
         'TransUser
         '
         Me.TransUser.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CardsTransBindingSource, "TransUser", True))
-        Me.TransUser.Location = New System.Drawing.Point(25, 531)
+        Me.TransUser.Location = New System.Drawing.Point(24, 532)
         Me.TransUser.Name = "TransUser"
         Me.TransUser.Properties.ReadOnly = True
         Me.TransUser.Size = New System.Drawing.Size(103, 20)
@@ -255,29 +288,29 @@ Partial Class CRMCardIssue
         'AccountNo
         '
         Me.AccountNo.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CardsTransBindingSource, "AccountName", True))
-        Me.AccountNo.Location = New System.Drawing.Point(186, 507)
+        Me.AccountNo.Location = New System.Drawing.Point(185, 508)
         Me.AccountNo.Name = "AccountNo"
         Me.AccountNo.Properties.ReadOnly = True
-        Me.AccountNo.Size = New System.Drawing.Size(308, 20)
+        Me.AccountNo.Size = New System.Drawing.Size(309, 20)
         Me.AccountNo.StyleController = Me.LayoutControl1
         Me.AccountNo.TabIndex = 9
         '
         'CardTransDate
         '
         Me.CardTransDate.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CardsTransBindingSource, "CardTransDate", True))
-        Me.CardTransDate.Location = New System.Drawing.Point(529, 507)
+        Me.CardTransDate.Location = New System.Drawing.Point(529, 508)
         Me.CardTransDate.Name = "CardTransDate"
         Me.CardTransDate.Properties.Mask.EditMask = "d"
         Me.CardTransDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime
         Me.CardTransDate.Properties.ReadOnly = True
-        Me.CardTransDate.Size = New System.Drawing.Size(108, 20)
+        Me.CardTransDate.Size = New System.Drawing.Size(109, 20)
         Me.CardTransDate.StyleController = Me.LayoutControl1
         Me.CardTransDate.TabIndex = 8
         '
         'DocID
         '
         Me.DocID.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.DocID.Location = New System.Drawing.Point(594, 104)
+        Me.DocID.Location = New System.Drawing.Point(596, 102)
         Me.DocID.Name = "DocID"
         Me.DocID.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DocID.Size = New System.Drawing.Size(50, 20)
@@ -286,20 +319,21 @@ Partial Class CRMCardIssue
         '
         'RadioGroup1
         '
-        Me.RadioGroup1.Location = New System.Drawing.Point(25, 199)
+        Me.RadioGroup1.Location = New System.Drawing.Point(24, 195)
         Me.RadioGroup1.Name = "RadioGroup1"
         Me.RadioGroup1.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem("Phone", "اتصال"), New DevExpress.XtraEditors.Controls.RadioGroupItem("Email", "ايميل"), New DevExpress.XtraEditors.Controls.RadioGroupItem("Document", "كتاب"), New DevExpress.XtraEditors.Controls.RadioGroupItem("Other", "أخرى")})
-        Me.RadioGroup1.Size = New System.Drawing.Size(594, 25)
+        Me.RadioGroup1.Size = New System.Drawing.Size(596, 25)
         Me.RadioGroup1.StyleController = Me.LayoutControl1
         Me.RadioGroup1.TabIndex = 2
         '
         'CardsTransGridControl
         '
         Me.CardsTransGridControl.DataSource = Me.CardsTransBindingSource
-        Me.CardsTransGridControl.Location = New System.Drawing.Point(12, 241)
+        Me.CardsTransGridControl.Location = New System.Drawing.Point(12, 236)
         Me.CardsTransGridControl.MainView = Me.GridView2
         Me.CardsTransGridControl.Name = "CardsTransGridControl"
-        Me.CardsTransGridControl.Size = New System.Drawing.Size(699, 134)
+        Me.CardsTransGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryRules, Me.RepositoryPlateNo, Me.RepositoryCardNo})
+        Me.CardsTransGridControl.Size = New System.Drawing.Size(699, 140)
         Me.CardsTransGridControl.TabIndex = 3
         Me.CardsTransGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -307,7 +341,7 @@ Partial Class CRMCardIssue
         '
         Me.GridView2.Appearance.TopNewRow.BackColor = System.Drawing.Color.White
         Me.GridView2.Appearance.TopNewRow.Options.UseBackColor = True
-        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID1, Me.colCardID1, Me.colCardTransDate1, Me.colAccountNo1, Me.colAccountName1, Me.colTransUser1, Me.colTransNotes1, Me.colPersonName1, Me.colDocType1, Me.colCardSerial1, Me.colCardStatus1, Me.colDocID})
+        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID1, Me.colCardID1, Me.colCardTransDate1, Me.colAccountNo1, Me.colAccountName1, Me.colTransUser1, Me.colTransNotes1, Me.colPersonName1, Me.colDocType1, Me.colCardSerial1, Me.colCardStatus1, Me.colDocID, Me.colGroupRule, Me.colPlateNo})
         Me.GridView2.GridControl = Me.CardsTransGridControl
         Me.GridView2.Name = "GridView2"
         Me.GridView2.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.[True]
@@ -324,11 +358,17 @@ Partial Class CRMCardIssue
         'colCardID1
         '
         Me.colCardID1.Caption = "رقم الكرت"
+        Me.colCardID1.ColumnEdit = Me.RepositoryCardNo
         Me.colCardID1.FieldName = "CardID"
         Me.colCardID1.Name = "colCardID1"
         Me.colCardID1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "CardID", "{0}")})
         Me.colCardID1.Visible = True
         Me.colCardID1.VisibleIndex = 0
+        '
+        'RepositoryCardNo
+        '
+        Me.RepositoryCardNo.AutoHeight = False
+        Me.RepositoryCardNo.Name = "RepositoryCardNo"
         '
         'colCardTransDate1
         '
@@ -371,21 +411,89 @@ Partial Class CRMCardIssue
         Me.colCardSerial1.FieldName = "CardSerial"
         Me.colCardSerial1.Name = "colCardSerial1"
         Me.colCardSerial1.OptionsColumn.ReadOnly = True
+        Me.colCardSerial1.UnboundType = DevExpress.Data.UnboundColumnType.[Integer]
         Me.colCardSerial1.Visible = True
-        Me.colCardSerial1.VisibleIndex = 1
+        Me.colCardSerial1.VisibleIndex = 3
         '
         'colCardStatus1
         '
         Me.colCardStatus1.Caption = "حالة الكرت"
         Me.colCardStatus1.FieldName = "CardStatus"
         Me.colCardStatus1.Name = "colCardStatus1"
-        Me.colCardStatus1.Visible = True
-        Me.colCardStatus1.VisibleIndex = 2
         '
         'colDocID
         '
         Me.colDocID.FieldName = "DocID"
         Me.colDocID.Name = "colDocID"
+        '
+        'colGroupRule
+        '
+        Me.colGroupRule.Caption = "السقف"
+        Me.colGroupRule.ColumnEdit = Me.RepositoryRules
+        Me.colGroupRule.FieldName = "GroupRule"
+        Me.colGroupRule.Name = "colGroupRule"
+        Me.colGroupRule.Visible = True
+        Me.colGroupRule.VisibleIndex = 2
+        '
+        'RepositoryRules
+        '
+        Me.RepositoryRules.AutoHeight = False
+        Me.RepositoryRules.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryRules.DataSource = Me.BindingSource1
+        Me.RepositoryRules.DisplayMember = "name"
+        Me.RepositoryRules.Name = "RepositoryRules"
+        Me.RepositoryRules.NullText = ""
+        Me.RepositoryRules.PopupView = Me.RepositoryItemSearchLookUpEdit1View
+        Me.RepositoryRules.ValueMember = "id"
+        '
+        'BindingSource1
+        '
+        Me.BindingSource1.DataMember = "group_rules"
+        Me.BindingSource1.DataSource = Me.HODATADataSetBindingSource
+        '
+        'HODATADataSetBindingSource
+        '
+        Me.HODATADataSetBindingSource.DataSource = Me.HO_DATADataSet
+        Me.HODATADataSetBindingSource.Position = 0
+        '
+        'HO_DATADataSet
+        '
+        Me.HO_DATADataSet.DataSetName = "HO_DATADataSet"
+        Me.HO_DATADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RepositoryItemSearchLookUpEdit1View
+        '
+        Me.RepositoryItemSearchLookUpEdit1View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colname, Me.colid})
+        Me.RepositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.RepositoryItemSearchLookUpEdit1View.Name = "RepositoryItemSearchLookUpEdit1View"
+        Me.RepositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.RepositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
+        '
+        'colname
+        '
+        Me.colname.FieldName = "name"
+        Me.colname.Name = "colname"
+        Me.colname.Visible = True
+        Me.colname.VisibleIndex = 0
+        '
+        'colid
+        '
+        Me.colid.FieldName = "id"
+        Me.colid.Name = "colid"
+        '
+        'colPlateNo
+        '
+        Me.colPlateNo.Caption = "المركبة"
+        Me.colPlateNo.ColumnEdit = Me.RepositoryPlateNo
+        Me.colPlateNo.FieldName = "PlateNo"
+        Me.colPlateNo.Name = "colPlateNo"
+        Me.colPlateNo.Visible = True
+        Me.colPlateNo.VisibleIndex = 1
+        '
+        'RepositoryPlateNo
+        '
+        Me.RepositoryPlateNo.AutoHeight = False
+        Me.RepositoryPlateNo.Name = "RepositoryPlateNo"
         '
         'SimpleButton1
         '
@@ -399,48 +507,37 @@ Partial Class CRMCardIssue
         '
         'TextEditPerson
         '
-        Me.TextEditPerson.Location = New System.Drawing.Point(25, 175)
+        Me.TextEditPerson.Location = New System.Drawing.Point(24, 171)
         Me.TextEditPerson.Name = "TextEditPerson"
-        Me.TextEditPerson.Size = New System.Drawing.Size(288, 20)
+        Me.TextEditPerson.Size = New System.Drawing.Size(150, 20)
         Me.TextEditPerson.StyleController = Me.LayoutControl1
         Me.TextEditPerson.TabIndex = 1
         '
         'IssueDate
         '
         Me.IssueDate.EditValue = Nothing
-        Me.IssueDate.Location = New System.Drawing.Point(26, 104)
+        Me.IssueDate.Location = New System.Drawing.Point(24, 102)
         Me.IssueDate.Name = "IssueDate"
         Me.IssueDate.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
         Me.IssueDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.IssueDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.IssueDate.Size = New System.Drawing.Size(156, 20)
+        Me.IssueDate.Size = New System.Drawing.Size(157, 20)
         Me.IssueDate.StyleController = Me.LayoutControl1
         Me.IssueDate.TabIndex = 10
         '
         'SearchLookUpEdit1
         '
         Me.SearchLookUpEdit1.EditValue = "Null"
-        Me.SearchLookUpEdit1.Location = New System.Drawing.Point(363, 175)
+        Me.SearchLookUpEdit1.Location = New System.Drawing.Point(389, 171)
         Me.SearchLookUpEdit1.Name = "SearchLookUpEdit1"
         Me.SearchLookUpEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SearchLookUpEdit1.Properties.DataSource = Me.Accounts1BindingSource
         Me.SearchLookUpEdit1.Properties.DisplayMember = "FullName"
         Me.SearchLookUpEdit1.Properties.NullText = "الرجاء اختيار زبون"
+        Me.SearchLookUpEdit1.Properties.PopupView = Me.SearchLookUpEdit1View
         Me.SearchLookUpEdit1.Properties.ValueMember = "AccountKey"
-        Me.SearchLookUpEdit1.Properties.View = Me.SearchLookUpEdit1View
-        Me.SearchLookUpEdit1.Size = New System.Drawing.Size(304, 20)
+        Me.SearchLookUpEdit1.Size = New System.Drawing.Size(279, 20)
         Me.SearchLookUpEdit1.StyleController = Me.LayoutControl1
         Me.SearchLookUpEdit1.TabIndex = 0
-        '
-        'Accounts1BindingSource
-        '
-        Me.Accounts1BindingSource.DataMember = "Accounts1"
-        Me.Accounts1BindingSource.DataSource = Me.WizCountDataSet
-        '
-        'WizCountDataSet
-        '
-        Me.WizCountDataSet.DataSetName = "WizCountDataSet"
-        Me.WizCountDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'SearchLookUpEdit1View
         '
@@ -468,9 +565,9 @@ Partial Class CRMCardIssue
         '
         'TextEditNotes
         '
-        Me.TextEditNotes.Location = New System.Drawing.Point(25, 412)
+        Me.TextEditNotes.Location = New System.Drawing.Point(24, 413)
         Me.TextEditNotes.Name = "TextEditNotes"
-        Me.TextEditNotes.Size = New System.Drawing.Size(673, 45)
+        Me.TextEditNotes.Size = New System.Drawing.Size(675, 46)
         Me.TextEditNotes.StyleController = Me.LayoutControl1
         Me.TextEditNotes.TabIndex = 4
         '
@@ -479,7 +576,6 @@ Partial Class CRMCardIssue
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup1.GroupBordersVisible = False
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem4, Me.LayoutControlItem7, Me.EmptySpaceItem1, Me.LayoutControlItem14, Me.LayoutControlGroup2, Me.LayoutControlGroup3, Me.LayoutControlGroup4, Me.LayoutControlGroup5, Me.LayoutControlItem15, Me.LayoutControlItem16, Me.LayoutControlItem17})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
         Me.LayoutControlGroup1.Size = New System.Drawing.Size(723, 576)
         Me.LayoutControlGroup1.TextVisible = False
@@ -487,9 +583,9 @@ Partial Class CRMCardIssue
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.CardsTransGridControl
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 229)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 224)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(703, 138)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(703, 144)
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
@@ -528,17 +624,17 @@ Partial Class CRMCardIssue
         'LayoutControlGroup2
         '
         Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem9, Me.LayoutControlItem10, Me.LayoutControlItem12, Me.LayoutControlItem11, Me.LayoutControlItem13})
-        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 462)
+        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 463)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(703, 94)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(703, 93)
         Me.LayoutControlGroup2.Text = "تفاصيل"
         '
         'LayoutControlItem9
         '
         Me.LayoutControlItem9.Control = Me.CardTransDate
-        Me.LayoutControlItem9.Location = New System.Drawing.Point(504, 0)
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(505, 0)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(173, 24)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(174, 24)
         Me.LayoutControlItem9.Text = "تاريخ الاصدار"
         Me.LayoutControlItem9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(56, 13)
@@ -549,11 +645,20 @@ Partial Class CRMCardIssue
         Me.LayoutControlItem10.Control = Me.AccountNo
         Me.LayoutControlItem10.Location = New System.Drawing.Point(161, 0)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(343, 24)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(344, 24)
         Me.LayoutControlItem10.Text = "الزبون"
         Me.LayoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(26, 13)
         Me.LayoutControlItem10.TextToControlDistance = 5
+        '
+        'LayoutControlItem12
+        '
+        Me.LayoutControlItem12.Control = Me.TransNotes
+        Me.LayoutControlItem12.Location = New System.Drawing.Point(161, 24)
+        Me.LayoutControlItem12.Name = "LayoutControlItem12"
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(518, 24)
+        Me.LayoutControlItem12.Text = "ملاحظات الاصدار"
+        Me.LayoutControlItem12.TextSize = New System.Drawing.Size(76, 13)
         '
         'LayoutControlItem11
         '
@@ -577,29 +682,20 @@ Partial Class CRMCardIssue
         Me.LayoutControlItem13.TextSize = New System.Drawing.Size(41, 13)
         Me.LayoutControlItem13.TextToControlDistance = 5
         '
-        'LayoutControlItem12
-        '
-        Me.LayoutControlItem12.Control = Me.TransNotes
-        Me.LayoutControlItem12.Location = New System.Drawing.Point(161, 24)
-        Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(516, 24)
-        Me.LayoutControlItem12.Text = "ملاحظات الاصدار"
-        Me.LayoutControlItem12.TextSize = New System.Drawing.Size(76, 13)
-        '
         'LayoutControlGroup3
         '
-        Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem3, Me.LayoutControlItem6})
-        Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 130)
+        Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem3, Me.LayoutControlItem6, Me.LayoutControlItem18})
+        Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 126)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(703, 99)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(703, 98)
         Me.LayoutControlGroup3.Text = "بيانات المستلم"
         '
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.SearchLookUpEdit1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(338, 0)
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(365, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(339, 24)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(314, 24)
         Me.LayoutControlItem1.Text = "الزبون"
         Me.LayoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(26, 13)
@@ -610,7 +706,7 @@ Partial Class CRMCardIssue
         Me.LayoutControlItem3.Control = Me.TextEditPerson
         Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(338, 24)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(200, 24)
         Me.LayoutControlItem3.Text = "المستلم"
         Me.LayoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(41, 13)
@@ -623,24 +719,33 @@ Partial Class CRMCardIssue
         Me.LayoutControlItem6.MaxSize = New System.Drawing.Size(0, 29)
         Me.LayoutControlItem6.MinSize = New System.Drawing.Size(98, 29)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(677, 29)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(679, 29)
         Me.LayoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.LayoutControlItem6.Text = "المصادقة"
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(76, 13)
+        '
+        'LayoutControlItem18
+        '
+        Me.LayoutControlItem18.Control = Me.TextFleetID
+        Me.LayoutControlItem18.Location = New System.Drawing.Point(200, 0)
+        Me.LayoutControlItem18.Name = "LayoutControlItem18"
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(165, 24)
+        Me.LayoutControlItem18.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem18.TextVisible = False
         '
         'LayoutControlGroup4
         '
         Me.LayoutControlGroup4.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem8, Me.EmptySpaceItem2, Me.LayoutControlItem2})
         Me.LayoutControlGroup4.Location = New System.Drawing.Point(0, 78)
         Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
-        Me.LayoutControlGroup4.Size = New System.Drawing.Size(703, 52)
+        Me.LayoutControlGroup4.Size = New System.Drawing.Size(703, 48)
         Me.LayoutControlGroup4.Text = "السند"
         Me.LayoutControlGroup4.TextVisible = False
         '
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.DocID
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(568, 0)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(572, 0)
         Me.LayoutControlItem8.MaxSize = New System.Drawing.Size(107, 24)
         Me.LayoutControlItem8.MinSize = New System.Drawing.Size(107, 24)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
@@ -654,9 +759,9 @@ Partial Class CRMCardIssue
         'EmptySpaceItem2
         '
         Me.EmptySpaceItem2.AllowHotTrack = False
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(193, 0)
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(194, 0)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(375, 24)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(378, 24)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem2
@@ -664,7 +769,7 @@ Partial Class CRMCardIssue
         Me.LayoutControlItem2.Control = Me.IssueDate
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(193, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(194, 24)
         Me.LayoutControlItem2.Text = "التاريخ"
         Me.LayoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(28, 13)
@@ -673,7 +778,7 @@ Partial Class CRMCardIssue
         'LayoutControlGroup5
         '
         Me.LayoutControlGroup5.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem5})
-        Me.LayoutControlGroup5.Location = New System.Drawing.Point(0, 367)
+        Me.LayoutControlGroup5.Location = New System.Drawing.Point(0, 368)
         Me.LayoutControlGroup5.Name = "LayoutControlGroup5"
         Me.LayoutControlGroup5.Size = New System.Drawing.Size(703, 95)
         Me.LayoutControlGroup5.Text = "ملاحظات"
@@ -683,7 +788,7 @@ Partial Class CRMCardIssue
         Me.LayoutControlItem5.Control = Me.TextEditNotes
         Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(677, 49)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(679, 50)
         Me.LayoutControlItem5.Text = "ملاحظات"
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem5.TextVisible = False
@@ -715,6 +820,16 @@ Partial Class CRMCardIssue
         Me.LayoutControlItem17.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem17.TextVisible = False
         '
+        'Accounts1BindingSource
+        '
+        Me.Accounts1BindingSource.DataMember = "Accounts1"
+        Me.Accounts1BindingSource.DataSource = Me.WizCountDataSet
+        '
+        'WizCountDataSet
+        '
+        Me.WizCountDataSet.DataSetName = "WizCountDataSet"
+        Me.WizCountDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Accounts1TableAdapter
         '
         Me.Accounts1TableAdapter.ClearBeforeFill = True
@@ -733,6 +848,7 @@ Partial Class CRMCardIssue
         Me.TableAdapterManager.CardsTableAdapter = Nothing
         Me.TableAdapterManager.CardsTransTableAdapter = Me.CardsTransTableAdapter
         Me.TableAdapterManager.CarsAccidentTableAdapter = Nothing
+        Me.TableAdapterManager.CarsDriversTableAdapter = Nothing
         Me.TableAdapterManager.CarsInsurancCompaniesTableAdapter = Nothing
         Me.TableAdapterManager.CarsInsuranceTransTableAdapter = Nothing
         Me.TableAdapterManager.CarsMarkaTableAdapter = Nothing
@@ -746,18 +862,28 @@ Partial Class CRMCardIssue
         Me.TableAdapterManager.CRMCustomersOrdersTableAdapter = Nothing
         Me.TableAdapterManager.CRMJobNameTableAdapter = Nothing
         Me.TableAdapterManager.CRMTasksTableAdapter = Nothing
+        Me.TableAdapterManager.DATATableAdapter = Nothing
         Me.TableAdapterManager.DevelopNotesTableAdapter = Nothing
         Me.TableAdapterManager.EmployeesDataTableAdapter = Nothing
         Me.TableAdapterManager.FinancialBanksDocTableAdapter = Nothing
-        'Me.TableAdapterManager.FinancialChequesBackTableAdapter = Nothing
+        Me.TableAdapterManager.FinancialChequesBackTableAdapter = Nothing
         Me.TableAdapterManager.PrintingSystemDocsTableAdapter = Nothing
         Me.TableAdapterManager.PrintingSystemJobsTableAdapter = Nothing
         Me.TableAdapterManager.ReceiptDataTableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveDocSort11TableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveDocSort1TableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveDocStatusTableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveDocumentsTableAdapter = Nothing
+        Me.TableAdapterManager.StockMoveTableAdapter = Nothing
         Me.TableAdapterManager.transDocTableAdapter = Nothing
         Me.TableAdapterManager.transTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = DXApplication5.CRMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UsersLogInLogsTableAdapter = Nothing
         Me.TableAdapterManager.UsersTableAdapter = Nothing
+        '
+        'Group_rulesTableAdapter
+        '
+        Me.Group_rulesTableAdapter.ClearBeforeFill = True
         '
         'CRMCardIssue
         '
@@ -768,10 +894,11 @@ Partial Class CRMCardIssue
         Me.Name = "CRMCardIssue"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RightToLeftLayout = True
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "اصدار بطاقة"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
+        CType(Me.TextFleetID.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CheckPrintDoc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -785,12 +912,17 @@ Partial Class CRMCardIssue
         CType(Me.RadioGroup1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CardsTransGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryCardNo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryRules, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HODATADataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HO_DATADataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryPlateNo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEditPerson.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IssueDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IssueDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchLookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Accounts1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.WizCountDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEditNotes.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -801,13 +933,14 @@ Partial Class CRMCardIssue
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -817,6 +950,8 @@ Partial Class CRMCardIssue
         CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Accounts1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WizCountDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -886,4 +1021,21 @@ Partial Class CRMCardIssue
     Friend WithEvents LayoutControlItem16 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LayoutControlItem17 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents colGroupRule As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents RepositoryRules As DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit
+    Friend WithEvents RepositoryItemSearchLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
+
+    Friend WithEvents GrouprulesBindingSource As BindingSource
+    '   Friend WithEvents Group_rulesTableAdapter As HO_DATADataSetTableAdapters.group_rulesTableAdapter
+    Friend WithEvents colname As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colid As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents HODATADataSetBindingSource As BindingSource
+    Friend WithEvents HO_DATADataSet As HO_DATADataSet
+    Friend WithEvents BindingSource1 As BindingSource
+    Friend WithEvents Group_rulesTableAdapter As HO_DATADataSetTableAdapters.group_rulesTableAdapter
+    Friend WithEvents colPlateNo As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents TextFleetID As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControlItem18 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents RepositoryPlateNo As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
+    Friend WithEvents RepositoryCardNo As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
 End Class

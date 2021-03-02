@@ -28,10 +28,10 @@ Public Class StockBalances
             Dim WhareHouse As String = "'" & CStr(SearchFromWarehouse.EditValue) & "'"
             SqlString = " select  StockID,QuanIN,QuanOUT,QuantBalance,SortGroup,i.ItemName as StockName From (
                                   Select       StockID,
-                                  { fn IFNULL   ((SELECT     isnull( SUM(Quantity) ,0) AS Expr1  FROM  StockMove AS StockMove_1   WHERE DocDate <= '" & _DateEditAtDate & "' and  (DebitWhereHouse = " & WhareHouse & ") AND (StockID = a.StockID)), 0) } AS QuanIN,
-                                  { fn IFNULL   ((SELECT     isnull( SUM(Quantity) ,0) AS Expr1  FROM  StockMove AS StockMove_1   WHERE DocDate <= '" & _DateEditAtDate & "' and  (CreditWhereHouse = " & WhareHouse & ") AND (StockID = a.StockID)), 0) } AS QuanOUT,
-                                  { fn IFNULL   ((SELECT     isnull( SUM(Quantity) ,0) AS Expr1  FROM  StockMove AS StockMove_1   WHERE DocDate <= '" & _DateEditAtDate & "' and  (DebitWhereHouse = " & WhareHouse & ") AND (StockID = a.StockID)), 0) } -
-                                  { fn IFNULL   ((SELECT     isnull( SUM(Quantity) ,0) AS Expr1  FROM  StockMove AS StockMove_1   WHERE DocDate <= '" & _DateEditAtDate & "' and  (CreditWhereHouse = " & WhareHouse & ") AND (StockID = a.StockID)), 0) } AS QuantBalance
+                                  { fn IFNULL   ((SELECT     isnull( SUM(Quantity) ,0) AS Expr1  FROM  StockMove AS StockMove_1   WHERE ( DocType<>'Jard' )  And DocDate <= '" & _DateEditAtDate & "' and  (DebitWhereHouse = " & WhareHouse & ") AND (StockID = a.StockID)), 0) } AS QuanIN,
+                                  { fn IFNULL   ((SELECT     isnull( SUM(Quantity) ,0) AS Expr1  FROM  StockMove AS StockMove_1   WHERE ( DocType<>'Jard' )  And DocDate <= '" & _DateEditAtDate & "' and  (CreditWhereHouse = " & WhareHouse & ") AND (StockID = a.StockID)), 0) } AS QuanOUT,
+                                  { fn IFNULL   ((SELECT     isnull( SUM(Quantity) ,0) AS Expr1  FROM  StockMove AS StockMove_1   WHERE ( DocType<>'Jard' )  And DocDate <= '" & _DateEditAtDate & "' and  (DebitWhereHouse = " & WhareHouse & ") AND (StockID = a.StockID)), 0) } -
+                                  { fn IFNULL   ((SELECT     isnull( SUM(Quantity) ,0) AS Expr1  FROM  StockMove AS StockMove_1   WHERE ( DocType<>'Jard' )  And DocDate <= '" & _DateEditAtDate & "' and  (CreditWhereHouse = " & WhareHouse & ") AND (StockID = a.StockID)), 0) } AS QuantBalance
                      FROM         StockMove AS a 
                      GROUP BY StockID  ) c
                      Left join ALHUDA.dbo.Items i on i.ItemKey =CAST(c.StockID AS nvarchar(50))  

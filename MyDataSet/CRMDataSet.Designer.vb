@@ -6543,6 +6543,12 @@ Partial Public Class CRMDataSet
         
         Private columnTransAudit As Global.System.Data.DataColumn
         
+        Private columnGroupRule As Global.System.Data.DataColumn
+        
+        Private columnPlateNo As Global.System.Data.DataColumn
+        
+        Private columnTransType As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -6683,6 +6689,30 @@ Partial Public Class CRMDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property GroupRuleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnGroupRule
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property PlateNoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPlateNo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TransTypeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTransType
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -6719,9 +6749,9 @@ Partial Public Class CRMDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddCardsTransRow(ByVal CardID As Integer, ByVal CardTransDate As Date, ByVal AccountNo As String, ByVal AccountName As String, ByVal TransUser As String, ByVal TransNotes As String, ByVal PersonName As String, ByVal DocType As String, ByVal CardSerial As String, ByVal CardStatus As String, ByVal DocID As Integer, ByVal TransAudit As Boolean) As CardsTransRow
+        Public Overloads Function AddCardsTransRow(ByVal CardID As Integer, ByVal CardTransDate As Date, ByVal AccountNo As String, ByVal AccountName As String, ByVal TransUser As String, ByVal TransNotes As String, ByVal PersonName As String, ByVal DocType As String, ByVal CardSerial As String, ByVal CardStatus As String, ByVal DocID As Integer, ByVal TransAudit As Boolean, ByVal GroupRule As Integer, ByVal PlateNo As String, ByVal TransType As String) As CardsTransRow
             Dim rowCardsTransRow As CardsTransRow = CType(Me.NewRow,CardsTransRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, CardID, CardTransDate, AccountNo, AccountName, TransUser, TransNotes, PersonName, DocType, CardSerial, CardStatus, DocID, TransAudit}
+            Dim columnValuesArray() As Object = New Object() {Nothing, CardID, CardTransDate, AccountNo, AccountName, TransUser, TransNotes, PersonName, DocType, CardSerial, CardStatus, DocID, TransAudit, GroupRule, PlateNo, TransType}
             rowCardsTransRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowCardsTransRow)
             Return rowCardsTransRow
@@ -6763,6 +6793,9 @@ Partial Public Class CRMDataSet
             Me.columnCardStatus = MyBase.Columns("CardStatus")
             Me.columnDocID = MyBase.Columns("DocID")
             Me.columnTransAudit = MyBase.Columns("TransAudit")
+            Me.columnGroupRule = MyBase.Columns("GroupRule")
+            Me.columnPlateNo = MyBase.Columns("PlateNo")
+            Me.columnTransType = MyBase.Columns("TransType")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6794,6 +6827,12 @@ Partial Public Class CRMDataSet
             MyBase.Columns.Add(Me.columnDocID)
             Me.columnTransAudit = New Global.System.Data.DataColumn("TransAudit", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTransAudit)
+            Me.columnGroupRule = New Global.System.Data.DataColumn("GroupRule", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnGroupRule)
+            Me.columnPlateNo = New Global.System.Data.DataColumn("PlateNo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPlateNo)
+            Me.columnTransType = New Global.System.Data.DataColumn("TransType", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTransType)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -6810,6 +6849,8 @@ Partial Public Class CRMDataSet
             Me.columnDocType.MaxLength = 10
             Me.columnCardSerial.MaxLength = 50
             Me.columnCardStatus.MaxLength = 10
+            Me.columnPlateNo.MaxLength = 50
+            Me.columnTransType.MaxLength = 20
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13058,6 +13099,8 @@ Partial Public Class CRMDataSet
         
         Private columnTransCredID As Global.System.Data.DataColumn
         
+        Private columnOrpakStatus As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -13262,6 +13305,14 @@ Partial Public Class CRMDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property OrpakStatusColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOrpakStatus
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -13318,9 +13369,10 @@ Partial Public Class CRMDataSet
                     ByVal DepositID As Integer,  _
                     ByVal TransDebID As Integer,  _
                     ByVal DebName As String,  _
-                    ByVal TransCredID As Integer) As FinancialChequesBackRow
+                    ByVal TransCredID As Integer,  _
+                    ByVal OrpakStatus As String) As FinancialChequesBackRow
             Dim rowFinancialChequesBackRow As FinancialChequesBackRow = CType(Me.NewRow,FinancialChequesBackRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, AccID, AccountName, ChequesNo, BankName, Amount, ChequeDate, InputDate, Notes, ReBackDate, Currency, CheckPic, ChequeStatus, ExchangeRate, AmountNIS, BankAccNo, ChequNO, DepositID, TransDebID, DebName, TransCredID}
+            Dim columnValuesArray() As Object = New Object() {Nothing, AccID, AccountName, ChequesNo, BankName, Amount, ChequeDate, InputDate, Notes, ReBackDate, Currency, CheckPic, ChequeStatus, ExchangeRate, AmountNIS, BankAccNo, ChequNO, DepositID, TransDebID, DebName, TransCredID, OrpakStatus}
             rowFinancialChequesBackRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowFinancialChequesBackRow)
             Return rowFinancialChequesBackRow
@@ -13370,6 +13422,7 @@ Partial Public Class CRMDataSet
             Me.columnTransDebID = MyBase.Columns("TransDebID")
             Me.columnDebName = MyBase.Columns("DebName")
             Me.columnTransCredID = MyBase.Columns("TransCredID")
+            Me.columnOrpakStatus = MyBase.Columns("OrpakStatus")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13417,6 +13470,8 @@ Partial Public Class CRMDataSet
             MyBase.Columns.Add(Me.columnDebName)
             Me.columnTransCredID = New Global.System.Data.DataColumn("TransCredID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTransCredID)
+            Me.columnOrpakStatus = New Global.System.Data.DataColumn("OrpakStatus", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnOrpakStatus)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -13437,6 +13492,7 @@ Partial Public Class CRMDataSet
             Me.columnBankAccNo.MaxLength = 50
             Me.columnChequNO.MaxLength = 50
             Me.columnDebName.MaxLength = 100
+            Me.columnOrpakStatus.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -20365,6 +20421,51 @@ Partial Public Class CRMDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property GroupRule() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableCardsTrans.GroupRuleColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'GroupRule' in table 'CardsTrans' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCardsTrans.GroupRuleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property PlateNo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCardsTrans.PlateNoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PlateNo' in table 'CardsTrans' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCardsTrans.PlateNoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TransType() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCardsTrans.TransTypeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TransType' in table 'CardsTrans' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCardsTrans.TransTypeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsCardTransDateNull() As Boolean
             Return Me.IsNull(Me.tableCardsTrans.CardTransDateColumn)
         End Function
@@ -20493,6 +20594,42 @@ Partial Public Class CRMDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetTransAuditNull()
             Me(Me.tableCardsTrans.TransAuditColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsGroupRuleNull() As Boolean
+            Return Me.IsNull(Me.tableCardsTrans.GroupRuleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetGroupRuleNull()
+            Me(Me.tableCardsTrans.GroupRuleColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsPlateNoNull() As Boolean
+            Return Me.IsNull(Me.tableCardsTrans.PlateNoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetPlateNoNull()
+            Me(Me.tableCardsTrans.PlateNoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTransTypeNull() As Boolean
+            Return Me.IsNull(Me.tableCardsTrans.TransTypeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTransTypeNull()
+            Me(Me.tableCardsTrans.TransTypeColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -23780,6 +23917,21 @@ Partial Public Class CRMDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property OrpakStatus() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableFinancialChequesBack.OrpakStatusColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'OrpakStatus' in table 'FinancialChequesBack' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableFinancialChequesBack.OrpakStatusColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsAccountNameNull() As Boolean
             Return Me.IsNull(Me.tableFinancialChequesBack.AccountNameColumn)
         End Function
@@ -23956,6 +24108,18 @@ Partial Public Class CRMDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetTransCredIDNull()
             Me(Me.tableFinancialChequesBack.TransCredIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsOrpakStatusNull() As Boolean
+            Return Me.IsNull(Me.tableFinancialChequesBack.OrpakStatusColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetOrpakStatusNull()
+            Me(Me.tableFinancialChequesBack.OrpakStatusColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -34760,6 +34924,9 @@ Namespace CRMDataSetTableAdapters
             tableMapping.ColumnMappings.Add("CardStatus", "CardStatus")
             tableMapping.ColumnMappings.Add("DocID", "DocID")
             tableMapping.ColumnMappings.Add("TransAudit", "TransAudit")
+            tableMapping.ColumnMappings.Add("GroupRule", "GroupRule")
+            tableMapping.ColumnMappings.Add("PlateNo", "PlateNo")
+            tableMapping.ColumnMappings.Add("TransType", "TransType")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -34775,7 +34942,11 @@ Namespace CRMDataSetTableAdapters
                 "OR ([CardSerial] = @Original_CardSerial)) AND ((@IsNull_CardStatus = 1 AND [Card"& _ 
                 "Status] IS NULL) OR ([CardStatus] = @Original_CardStatus)) AND ((@IsNull_DocID ="& _ 
                 " 1 AND [DocID] IS NULL) OR ([DocID] = @Original_DocID)) AND ((@IsNull_TransAudit"& _ 
-                " = 1 AND [TransAudit] IS NULL) OR ([TransAudit] = @Original_TransAudit)))"
+                " = 1 AND [TransAudit] IS NULL) OR ([TransAudit] = @Original_TransAudit)) AND ((@"& _ 
+                "IsNull_GroupRule = 1 AND [GroupRule] IS NULL) OR ([GroupRule] = @Original_GroupR"& _ 
+                "ule)) AND ((@IsNull_PlateNo = 1 AND [PlateNo] IS NULL) OR ([PlateNo] = @Original"& _ 
+                "_PlateNo)) AND ((@IsNull_TransType = 1 AND [TransType] IS NULL) OR ([TransType] "& _ 
+                "= @Original_TransType)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CardID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CardID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -34799,15 +34970,22 @@ Namespace CRMDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DocID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DocID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_TransAudit", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransAudit", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_TransAudit", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransAudit", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_GroupRule", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GroupRule", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_GroupRule", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GroupRule", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PlateNo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PlateNo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PlateNo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PlateNo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_TransType", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransType", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_TransType", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransType", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [CardsTrans] ([CardID], [CardTransDate], [AccountNo], [AccountName], "& _ 
                 "[TransUser], [TransNotes], [PersonName], [DocType], [CardSerial], [CardStatus], "& _ 
-                "[DocID], [TransAudit]) VALUES (@CardID, @CardTransDate, @AccountNo, @AccountName"& _ 
-                ", @TransUser, @TransNotes, @PersonName, @DocType, @CardSerial, @CardStatus, @Doc"& _ 
-                "ID, @TransAudit);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, CardID, CardTransDate, AccountNo, AccountName, Tra"& _ 
-                "nsUser, TransNotes, PersonName, DocType, CardSerial, CardStatus, DocID, TransAud"& _ 
-                "it FROM CardsTrans WHERE (ID = SCOPE_IDENTITY())"
+                "[DocID], [TransAudit], [GroupRule], [PlateNo], [TransType]) VALUES (@CardID, @Ca"& _ 
+                "rdTransDate, @AccountNo, @AccountName, @TransUser, @TransNotes, @PersonName, @Do"& _ 
+                "cType, @CardSerial, @CardStatus, @DocID, @TransAudit, @GroupRule, @PlateNo, @Tra"& _ 
+                "nsType);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, CardID, CardTransDate, AccountNo, AccountName, TransUser, T"& _ 
+                "ransNotes, PersonName, DocType, CardSerial, CardStatus, DocID, TransAudit, Group"& _ 
+                "Rule, PlateNo, TransType FROM CardsTrans WHERE (ID = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CardID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CardID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CardTransDate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CardTransDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -34821,28 +34999,35 @@ Namespace CRMDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CardStatus", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CardStatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DocID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DocID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TransAudit", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransAudit", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@GroupRule", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GroupRule", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PlateNo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PlateNo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TransType", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransType", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [CardsTrans] SET [CardID] = @CardID, [CardTransDate] = @CardTransDate, [Ac"& _ 
                 "countNo] = @AccountNo, [AccountName] = @AccountName, [TransUser] = @TransUser, ["& _ 
                 "TransNotes] = @TransNotes, [PersonName] = @PersonName, [DocType] = @DocType, [Ca"& _ 
                 "rdSerial] = @CardSerial, [CardStatus] = @CardStatus, [DocID] = @DocID, [TransAud"& _ 
-                "it] = @TransAudit WHERE (([ID] = @Original_ID) AND ([CardID] = @Original_CardID)"& _ 
-                " AND ((@IsNull_CardTransDate = 1 AND [CardTransDate] IS NULL) OR ([CardTransDate"& _ 
-                "] = @Original_CardTransDate)) AND ((@IsNull_AccountNo = 1 AND [AccountNo] IS NUL"& _ 
-                "L) OR ([AccountNo] = @Original_AccountNo)) AND ((@IsNull_AccountName = 1 AND [Ac"& _ 
-                "countName] IS NULL) OR ([AccountName] = @Original_AccountName)) AND ((@IsNull_Tr"& _ 
-                "ansUser = 1 AND [TransUser] IS NULL) OR ([TransUser] = @Original_TransUser)) AND"& _ 
-                " ((@IsNull_PersonName = 1 AND [PersonName] IS NULL) OR ([PersonName] = @Original"& _ 
-                "_PersonName)) AND ((@IsNull_DocType = 1 AND [DocType] IS NULL) OR ([DocType] = @"& _ 
-                "Original_DocType)) AND ((@IsNull_CardSerial = 1 AND [CardSerial] IS NULL) OR ([C"& _ 
-                "ardSerial] = @Original_CardSerial)) AND ((@IsNull_CardStatus = 1 AND [CardStatus"& _ 
-                "] IS NULL) OR ([CardStatus] = @Original_CardStatus)) AND ((@IsNull_DocID = 1 AND"& _ 
-                " [DocID] IS NULL) OR ([DocID] = @Original_DocID)) AND ((@IsNull_TransAudit = 1 A"& _ 
-                "ND [TransAudit] IS NULL) OR ([TransAudit] = @Original_TransAudit)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID,"& _ 
-                " CardID, CardTransDate, AccountNo, AccountName, TransUser, TransNotes, PersonNam"& _ 
-                "e, DocType, CardSerial, CardStatus, DocID, TransAudit FROM CardsTrans WHERE (ID "& _ 
-                "= @ID)"
+                "it] = @TransAudit, [GroupRule] = @GroupRule, [PlateNo] = @PlateNo, [TransType] ="& _ 
+                " @TransType WHERE (([ID] = @Original_ID) AND ([CardID] = @Original_CardID) AND ("& _ 
+                "(@IsNull_CardTransDate = 1 AND [CardTransDate] IS NULL) OR ([CardTransDate] = @O"& _ 
+                "riginal_CardTransDate)) AND ((@IsNull_AccountNo = 1 AND [AccountNo] IS NULL) OR "& _ 
+                "([AccountNo] = @Original_AccountNo)) AND ((@IsNull_AccountName = 1 AND [AccountN"& _ 
+                "ame] IS NULL) OR ([AccountName] = @Original_AccountName)) AND ((@IsNull_TransUse"& _ 
+                "r = 1 AND [TransUser] IS NULL) OR ([TransUser] = @Original_TransUser)) AND ((@Is"& _ 
+                "Null_PersonName = 1 AND [PersonName] IS NULL) OR ([PersonName] = @Original_Perso"& _ 
+                "nName)) AND ((@IsNull_DocType = 1 AND [DocType] IS NULL) OR ([DocType] = @Origin"& _ 
+                "al_DocType)) AND ((@IsNull_CardSerial = 1 AND [CardSerial] IS NULL) OR ([CardSer"& _ 
+                "ial] = @Original_CardSerial)) AND ((@IsNull_CardStatus = 1 AND [CardStatus] IS N"& _ 
+                "ULL) OR ([CardStatus] = @Original_CardStatus)) AND ((@IsNull_DocID = 1 AND [DocI"& _ 
+                "D] IS NULL) OR ([DocID] = @Original_DocID)) AND ((@IsNull_TransAudit = 1 AND [Tr"& _ 
+                "ansAudit] IS NULL) OR ([TransAudit] = @Original_TransAudit)) AND ((@IsNull_Group"& _ 
+                "Rule = 1 AND [GroupRule] IS NULL) OR ([GroupRule] = @Original_GroupRule)) AND (("& _ 
+                "@IsNull_PlateNo = 1 AND [PlateNo] IS NULL) OR ([PlateNo] = @Original_PlateNo)) A"& _ 
+                "ND ((@IsNull_TransType = 1 AND [TransType] IS NULL) OR ([TransType] = @Original_"& _ 
+                "TransType)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, CardID, CardTransDate, AccountNo, AccountName, TransUs"& _ 
+                "er, TransNotes, PersonName, DocType, CardSerial, CardStatus, DocID, TransAudit, "& _ 
+                "GroupRule, PlateNo, TransType FROM CardsTrans WHERE (ID = @ID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CardID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CardID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CardTransDate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CardTransDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -34856,6 +35041,9 @@ Namespace CRMDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CardStatus", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CardStatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DocID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DocID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TransAudit", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransAudit", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@GroupRule", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GroupRule", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PlateNo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PlateNo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TransType", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransType", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CardID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CardID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_CardTransDate", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CardTransDate", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -34878,6 +35066,12 @@ Namespace CRMDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DocID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DocID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_TransAudit", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransAudit", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_TransAudit", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransAudit", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_GroupRule", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GroupRule", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_GroupRule", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GroupRule", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PlateNo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PlateNo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PlateNo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PlateNo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_TransType", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransType", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_TransType", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransType", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -34895,37 +35089,37 @@ Namespace CRMDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        ID, CardID, CardTransDate, AccountNo, AccountName, TransUser, Trans"& _ 
-                "Notes, PersonName, DocType, CardSerial, CardStatus, DocID, TransAudit"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     "& _ 
-                "       CardsTrans"
+                "Notes, PersonName, DocType, CardSerial, CardStatus, DocID, TransAudit, GroupRule"& _ 
+                ", PlateNo, TransType"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            CardsTrans"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT        ID, CardID, CardTransDate, AccountNo, AccountName, TransUser, Trans"& _ 
-                "Notes, PersonName, DocType, CardSerial, CardStatus, DocID, TransAudit"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     "& _ 
-                "       CardsTrans"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CardTransDate BETWEEN @DateFilter1 AND @DateFil"& _ 
-                "ter2)"
+            Me._commandCollection(1).CommandText = "SELECT AccountName, AccountNo, CardID, CardSerial, CardStatus, CardTransDate, Doc"& _ 
+                "ID, DocType, GroupRule, ID, PersonName, PlateNo, TransAudit, TransNotes, TransTy"& _ 
+                "pe, TransUser FROM CardsTrans WHERE (CardTransDate BETWEEN @DateFilter1 AND @Dat"& _ 
+                "eFilter2)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DateFilter1", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "CardTransDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DateFilter2", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "CardTransDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT AccountName, AccountNo, CardID, CardSerial, CardStatus, CardTransDate, Doc"& _ 
-                "ID, DocType, ID, PersonName, TransAudit, TransNotes, TransUser FROM CardsTrans W"& _ 
-                "HERE (DocID = @DocID)"
+                "ID, DocType, GroupRule, ID, PersonName, PlateNo, TransAudit, TransNotes, TransTy"& _ 
+                "pe, TransUser FROM CardsTrans WHERE (DocID = @DocID)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DocID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "DocID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "SELECT AccountName, AccountNo, CardID, CardSerial, CardStatus, CardTransDate, Doc"& _ 
-                "ID, DocType, ID, PersonName, TransAudit, TransNotes, TransUser FROM CardsTrans W"& _ 
-                "HERE (CardID = @CardID)"
+                "ID, DocType, GroupRule, ID, PersonName, PlateNo, TransAudit, TransNotes, TransTy"& _ 
+                "pe, TransUser FROM CardsTrans WHERE (CardID = @CardID)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CardID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "CardID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "SELECT        ID, CardID, CardTransDate, AccountNo, AccountName, TransUser, Trans"& _ 
-                "Notes, PersonName, DocType, CardSerial, CardStatus, DocID, TransAudit"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     "& _ 
-                "       CardsTrans"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (TransAudit IS NULL)"
+            Me._commandCollection(4).CommandText = "SELECT AccountName, AccountNo, CardID, CardSerial, CardStatus, CardTransDate, Doc"& _ 
+                "ID, DocType, GroupRule, ID, PersonName, PlateNo, TransAudit, TransNotes, TransTy"& _ 
+                "pe, TransUser FROM CardsTrans WHERE (TransAudit IS NULL)"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -35113,7 +35307,7 @@ Namespace CRMDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_CardID As Integer, ByVal Original_CardTransDate As Global.System.Nullable(Of Date), ByVal Original_AccountNo As String, ByVal Original_AccountName As String, ByVal Original_TransUser As String, ByVal Original_PersonName As String, ByVal Original_DocType As String, ByVal Original_CardSerial As String, ByVal Original_CardStatus As String, ByVal Original_DocID As Global.System.Nullable(Of Integer), ByVal Original_TransAudit As Global.System.Nullable(Of Boolean)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_CardID As Integer, ByVal Original_CardTransDate As Global.System.Nullable(Of Date), ByVal Original_AccountNo As String, ByVal Original_AccountName As String, ByVal Original_TransUser As String, ByVal Original_PersonName As String, ByVal Original_DocType As String, ByVal Original_CardSerial As String, ByVal Original_CardStatus As String, ByVal Original_DocID As Global.System.Nullable(Of Integer), ByVal Original_TransAudit As Global.System.Nullable(Of Boolean), ByVal Original_GroupRule As Global.System.Nullable(Of Integer), ByVal Original_PlateNo As String, ByVal Original_TransType As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_CardID,Integer)
             If (Original_CardTransDate.HasValue = true) Then
@@ -35186,6 +35380,27 @@ Namespace CRMDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(20).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
+            If (Original_GroupRule.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(Original_GroupRule.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(23).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PlateNo Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(25).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(Original_PlateNo,String)
+            End If
+            If (Original_TransType Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(27).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(Original_TransType,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -35205,7 +35420,7 @@ Namespace CRMDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal CardID As Integer, ByVal CardTransDate As Global.System.Nullable(Of Date), ByVal AccountNo As String, ByVal AccountName As String, ByVal TransUser As String, ByVal TransNotes As String, ByVal PersonName As String, ByVal DocType As String, ByVal CardSerial As String, ByVal CardStatus As String, ByVal DocID As Global.System.Nullable(Of Integer), ByVal TransAudit As Global.System.Nullable(Of Boolean)) As Integer
+        Public Overloads Overridable Function Insert(ByVal CardID As Integer, ByVal CardTransDate As Global.System.Nullable(Of Date), ByVal AccountNo As String, ByVal AccountName As String, ByVal TransUser As String, ByVal TransNotes As String, ByVal PersonName As String, ByVal DocType As String, ByVal CardSerial As String, ByVal CardStatus As String, ByVal DocID As Global.System.Nullable(Of Integer), ByVal TransAudit As Global.System.Nullable(Of Boolean), ByVal GroupRule As Global.System.Nullable(Of Integer), ByVal PlateNo As String, ByVal TransType As String) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(CardID,Integer)
             If (CardTransDate.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(CardTransDate.Value,Date)
@@ -35262,6 +35477,21 @@ Namespace CRMDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
             End If
+            If (GroupRule.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(GroupRule.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (PlateNo Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(PlateNo,String)
+            End If
+            If (TransType Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(TransType,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -35294,6 +35524,9 @@ Namespace CRMDataSetTableAdapters
                     ByVal CardStatus As String,  _
                     ByVal DocID As Global.System.Nullable(Of Integer),  _
                     ByVal TransAudit As Global.System.Nullable(Of Boolean),  _
+                    ByVal GroupRule As Global.System.Nullable(Of Integer),  _
+                    ByVal PlateNo As String,  _
+                    ByVal TransType As String,  _
                     ByVal Original_ID As Integer,  _
                     ByVal Original_CardID As Integer,  _
                     ByVal Original_CardTransDate As Global.System.Nullable(Of Date),  _
@@ -35306,6 +35539,9 @@ Namespace CRMDataSetTableAdapters
                     ByVal Original_CardStatus As String,  _
                     ByVal Original_DocID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_TransAudit As Global.System.Nullable(Of Boolean),  _
+                    ByVal Original_GroupRule As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PlateNo As String,  _
+                    ByVal Original_TransType As String,  _
                     ByVal ID As Integer) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(CardID,Integer)
             If (CardTransDate.HasValue = true) Then
@@ -35363,79 +35599,115 @@ Namespace CRMDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_ID,Integer)
-            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_CardID,Integer)
-            If (Original_CardTransDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_CardTransDate.Value,Date)
+            If (GroupRule.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(GroupRule.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (PlateNo Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(PlateNo,String)
+            End If
+            If (TransType Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(TransType,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_ID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_CardID,Integer)
+            If (Original_CardTransDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_CardTransDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             End If
             If (Original_AccountNo Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_AccountNo,String)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_AccountNo,String)
             End If
             If (Original_AccountName Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_AccountName,String)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_AccountName,String)
             End If
             If (Original_TransUser Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_TransUser,String)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_TransUser,String)
             End If
             If (Original_PersonName Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_PersonName,String)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_PersonName,String)
             End If
             If (Original_DocType Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_DocType,String)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_DocType,String)
             End If
             If (Original_CardSerial Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_CardSerial,String)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_CardSerial,String)
             End If
             If (Original_CardStatus Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_CardStatus,String)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_CardStatus,String)
             End If
             If (Original_DocID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_DocID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_DocID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
             End If
             If (Original_TransAudit.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_TransAudit.Value,Boolean)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_TransAudit.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(34).Value = CType(ID,Integer)
+            If (Original_GroupRule.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_GroupRule.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PlateNo Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_PlateNo,String)
+            End If
+            If (Original_TransType Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_TransType,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(43).Value = CType(ID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -35468,6 +35740,9 @@ Namespace CRMDataSetTableAdapters
                     ByVal CardStatus As String,  _
                     ByVal DocID As Global.System.Nullable(Of Integer),  _
                     ByVal TransAudit As Global.System.Nullable(Of Boolean),  _
+                    ByVal GroupRule As Global.System.Nullable(Of Integer),  _
+                    ByVal PlateNo As String,  _
+                    ByVal TransType As String,  _
                     ByVal Original_ID As Integer,  _
                     ByVal Original_CardID As Integer,  _
                     ByVal Original_CardTransDate As Global.System.Nullable(Of Date),  _
@@ -35479,8 +35754,11 @@ Namespace CRMDataSetTableAdapters
                     ByVal Original_CardSerial As String,  _
                     ByVal Original_CardStatus As String,  _
                     ByVal Original_DocID As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_TransAudit As Global.System.Nullable(Of Boolean)) As Integer
-            Return Me.Update(CardID, CardTransDate, AccountNo, AccountName, TransUser, TransNotes, PersonName, DocType, CardSerial, CardStatus, DocID, TransAudit, Original_ID, Original_CardID, Original_CardTransDate, Original_AccountNo, Original_AccountName, Original_TransUser, Original_PersonName, Original_DocType, Original_CardSerial, Original_CardStatus, Original_DocID, Original_TransAudit, Original_ID)
+                    ByVal Original_TransAudit As Global.System.Nullable(Of Boolean),  _
+                    ByVal Original_GroupRule As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PlateNo As String,  _
+                    ByVal Original_TransType As String) As Integer
+            Return Me.Update(CardID, CardTransDate, AccountNo, AccountName, TransUser, TransNotes, PersonName, DocType, CardSerial, CardStatus, DocID, TransAudit, GroupRule, PlateNo, TransType, Original_ID, Original_CardID, Original_CardTransDate, Original_AccountNo, Original_AccountName, Original_TransUser, Original_PersonName, Original_DocType, Original_CardSerial, Original_CardStatus, Original_DocID, Original_TransAudit, Original_GroupRule, Original_PlateNo, Original_TransType, Original_ID)
         End Function
     End Class
     
@@ -44695,6 +44973,7 @@ Namespace CRMDataSetTableAdapters
             tableMapping.ColumnMappings.Add("TransDebID", "TransDebID")
             tableMapping.ColumnMappings.Add("DebName", "DebName")
             tableMapping.ColumnMappings.Add("TransCredID", "TransCredID")
+            tableMapping.ColumnMappings.Add("OrpakStatus", "OrpakStatus")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -44716,7 +44995,8 @@ Namespace CRMDataSetTableAdapters
                 "ND ((@IsNull_TransDebID = 1 AND [TransDebID] IS NULL) OR ([TransDebID] = @Origin"& _ 
                 "al_TransDebID)) AND ((@IsNull_DebName = 1 AND [DebName] IS NULL) OR ([DebName] ="& _ 
                 " @Original_DebName)) AND ((@IsNull_TransCredID = 1 AND [TransCredID] IS NULL) OR"& _ 
-                " ([TransCredID] = @Original_TransCredID)))"
+                " ([TransCredID] = @Original_TransCredID)) AND ((@IsNull_OrpakStatus = 1 AND [Orp"& _ 
+                "akStatus] IS NULL) OR ([OrpakStatus] = @Original_OrpakStatus)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_AccID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -44750,19 +45030,21 @@ Namespace CRMDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DebName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DebName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_TransCredID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransCredID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_TransCredID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransCredID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OrpakStatus", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrpakStatus", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OrpakStatus", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrpakStatus", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [FinancialChequesBack] ([AccID], [AccountName], [ChequesNo], [BankNam"& _ 
                 "e], [Amount], [ChequeDate], [InputDate], [Notes], [ReBackDate], [Currency], [Che"& _ 
                 "ckPic], [ChequeStatus], [ExchangeRate], [AmountNIS], [BankAccNo], [ChequNO], [De"& _ 
-                "positID], [TransDebID], [DebName], [TransCredID]) VALUES (@AccID, @AccountName, "& _ 
-                "@ChequesNo, @BankName, @Amount, @ChequeDate, @InputDate, @Notes, @ReBackDate, @C"& _ 
-                "urrency, @CheckPic, @ChequeStatus, @ExchangeRate, @AmountNIS, @BankAccNo, @Chequ"& _ 
-                "NO, @DepositID, @TransDebID, @DebName, @TransCredID);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, AccID, Account"& _ 
-                "Name, ChequesNo, BankName, Amount, ChequeDate, InputDate, Notes, ReBackDate, Cur"& _ 
-                "rency, CheckPic, ChequeStatus, ExchangeRate, AmountNIS, BankAccNo, ChequNO, Depo"& _ 
-                "sitID, TransDebID, DebName, TransCredID FROM FinancialChequesBack WHERE (ID = SC"& _ 
-                "OPE_IDENTITY())"
+                "positID], [TransDebID], [DebName], [TransCredID], [OrpakStatus]) VALUES (@AccID,"& _ 
+                " @AccountName, @ChequesNo, @BankName, @Amount, @ChequeDate, @InputDate, @Notes, "& _ 
+                "@ReBackDate, @Currency, @CheckPic, @ChequeStatus, @ExchangeRate, @AmountNIS, @Ba"& _ 
+                "nkAccNo, @ChequNO, @DepositID, @TransDebID, @DebName, @TransCredID, @OrpakStatus"& _ 
+                ");"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, AccID, AccountName, ChequesNo, BankName, Amount, ChequeDate, Inpu"& _ 
+                "tDate, Notes, ReBackDate, Currency, CheckPic, ChequeStatus, ExchangeRate, Amount"& _ 
+                "NIS, BankAccNo, ChequNO, DepositID, TransDebID, DebName, TransCredID, OrpakStatu"& _ 
+                "s FROM FinancialChequesBack WHERE (ID = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AccID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AccountName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccountName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -44784,6 +45066,7 @@ Namespace CRMDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TransDebID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransDebID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DebName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DebName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TransCredID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransCredID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@OrpakStatus", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrpakStatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [FinancialChequesBack] SET [AccID] = @AccID, [AccountName] = @AccountName,"& _ 
@@ -44792,29 +45075,31 @@ Namespace CRMDataSetTableAdapters
                 "eBackDate, [Currency] = @Currency, [CheckPic] = @CheckPic, [ChequeStatus] = @Che"& _ 
                 "queStatus, [ExchangeRate] = @ExchangeRate, [AmountNIS] = @AmountNIS, [BankAccNo]"& _ 
                 " = @BankAccNo, [ChequNO] = @ChequNO, [DepositID] = @DepositID, [TransDebID] = @T"& _ 
-                "ransDebID, [DebName] = @DebName, [TransCredID] = @TransCredID WHERE (([ID] = @Or"& _ 
-                "iginal_ID) AND ([AccID] = @Original_AccID) AND ((@IsNull_AccountName = 1 AND [Ac"& _ 
-                "countName] IS NULL) OR ([AccountName] = @Original_AccountName)) AND ([ChequesNo]"& _ 
-                " = @Original_ChequesNo) AND ((@IsNull_BankName = 1 AND [BankName] IS NULL) OR (["& _ 
-                "BankName] = @Original_BankName)) AND ([Amount] = @Original_Amount) AND ((@IsNull"& _ 
-                "_ChequeDate = 1 AND [ChequeDate] IS NULL) OR ([ChequeDate] = @Original_ChequeDat"& _ 
-                "e)) AND ((@IsNull_InputDate = 1 AND [InputDate] IS NULL) OR ([InputDate] = @Orig"& _ 
-                "inal_InputDate)) AND ((@IsNull_ReBackDate = 1 AND [ReBackDate] IS NULL) OR ([ReB"& _ 
-                "ackDate] = @Original_ReBackDate)) AND ([Currency] = @Original_Currency) AND ([Ch"& _ 
-                "equeStatus] = @Original_ChequeStatus) AND ((@IsNull_ExchangeRate = 1 AND [Exchan"& _ 
-                "geRate] IS NULL) OR ([ExchangeRate] = @Original_ExchangeRate)) AND ((@IsNull_Amo"& _ 
-                "untNIS = 1 AND [AmountNIS] IS NULL) OR ([AmountNIS] = @Original_AmountNIS)) AND "& _ 
-                "((@IsNull_BankAccNo = 1 AND [BankAccNo] IS NULL) OR ([BankAccNo] = @Original_Ban"& _ 
-                "kAccNo)) AND ((@IsNull_ChequNO = 1 AND [ChequNO] IS NULL) OR ([ChequNO] = @Origi"& _ 
-                "nal_ChequNO)) AND ((@IsNull_DepositID = 1 AND [DepositID] IS NULL) OR ([DepositI"& _ 
-                "D] = @Original_DepositID)) AND ((@IsNull_TransDebID = 1 AND [TransDebID] IS NULL"& _ 
-                ") OR ([TransDebID] = @Original_TransDebID)) AND ((@IsNull_DebName = 1 AND [DebNa"& _ 
-                "me] IS NULL) OR ([DebName] = @Original_DebName)) AND ((@IsNull_TransCredID = 1 A"& _ 
-                "ND [TransCredID] IS NULL) OR ([TransCredID] = @Original_TransCredID)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT "& _ 
-                "ID, AccID, AccountName, ChequesNo, BankName, Amount, ChequeDate, InputDate, Note"& _ 
-                "s, ReBackDate, Currency, CheckPic, ChequeStatus, ExchangeRate, AmountNIS, BankAc"& _ 
-                "cNo, ChequNO, DepositID, TransDebID, DebName, TransCredID FROM FinancialChequesB"& _ 
-                "ack WHERE (ID = @ID)"
+                "ransDebID, [DebName] = @DebName, [TransCredID] = @TransCredID, [OrpakStatus] = @"& _ 
+                "OrpakStatus WHERE (([ID] = @Original_ID) AND ([AccID] = @Original_AccID) AND ((@"& _ 
+                "IsNull_AccountName = 1 AND [AccountName] IS NULL) OR ([AccountName] = @Original_"& _ 
+                "AccountName)) AND ([ChequesNo] = @Original_ChequesNo) AND ((@IsNull_BankName = 1"& _ 
+                " AND [BankName] IS NULL) OR ([BankName] = @Original_BankName)) AND ([Amount] = @"& _ 
+                "Original_Amount) AND ((@IsNull_ChequeDate = 1 AND [ChequeDate] IS NULL) OR ([Che"& _ 
+                "queDate] = @Original_ChequeDate)) AND ((@IsNull_InputDate = 1 AND [InputDate] IS"& _ 
+                " NULL) OR ([InputDate] = @Original_InputDate)) AND ((@IsNull_ReBackDate = 1 AND "& _ 
+                "[ReBackDate] IS NULL) OR ([ReBackDate] = @Original_ReBackDate)) AND ([Currency] "& _ 
+                "= @Original_Currency) AND ([ChequeStatus] = @Original_ChequeStatus) AND ((@IsNul"& _ 
+                "l_ExchangeRate = 1 AND [ExchangeRate] IS NULL) OR ([ExchangeRate] = @Original_Ex"& _ 
+                "changeRate)) AND ((@IsNull_AmountNIS = 1 AND [AmountNIS] IS NULL) OR ([AmountNIS"& _ 
+                "] = @Original_AmountNIS)) AND ((@IsNull_BankAccNo = 1 AND [BankAccNo] IS NULL) O"& _ 
+                "R ([BankAccNo] = @Original_BankAccNo)) AND ((@IsNull_ChequNO = 1 AND [ChequNO] I"& _ 
+                "S NULL) OR ([ChequNO] = @Original_ChequNO)) AND ((@IsNull_DepositID = 1 AND [Dep"& _ 
+                "ositID] IS NULL) OR ([DepositID] = @Original_DepositID)) AND ((@IsNull_TransDebI"& _ 
+                "D = 1 AND [TransDebID] IS NULL) OR ([TransDebID] = @Original_TransDebID)) AND (("& _ 
+                "@IsNull_DebName = 1 AND [DebName] IS NULL) OR ([DebName] = @Original_DebName)) A"& _ 
+                "ND ((@IsNull_TransCredID = 1 AND [TransCredID] IS NULL) OR ([TransCredID] = @Ori"& _ 
+                "ginal_TransCredID)) AND ((@IsNull_OrpakStatus = 1 AND [OrpakStatus] IS NULL) OR "& _ 
+                "([OrpakStatus] = @Original_OrpakStatus)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, AccID, AccountName, Chequ"& _ 
+                "esNo, BankName, Amount, ChequeDate, InputDate, Notes, ReBackDate, Currency, Chec"& _ 
+                "kPic, ChequeStatus, ExchangeRate, AmountNIS, BankAccNo, ChequNO, DepositID, Tran"& _ 
+                "sDebID, DebName, TransCredID, OrpakStatus FROM FinancialChequesBack WHERE (ID = "& _ 
+                "@ID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AccID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AccountName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccountName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -44836,6 +45121,7 @@ Namespace CRMDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TransDebID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransDebID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DebName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DebName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TransCredID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransCredID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@OrpakStatus", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrpakStatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_AccID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_AccountName", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccountName", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -44868,6 +45154,8 @@ Namespace CRMDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DebName", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DebName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_TransCredID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransCredID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_TransCredID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TransCredID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OrpakStatus", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrpakStatus", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OrpakStatus", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrpakStatus", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -44884,24 +45172,25 @@ Namespace CRMDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        FinancialChequesBack.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            FinancialChequesBack"
+            Me._commandCollection(0).CommandText = "SELECT        ID, AccID, AccountName, ChequesNo, BankName, Amount, ChequeDate, In"& _ 
+                "putDate, Notes, ReBackDate, Currency, CheckPic, ChequeStatus, ExchangeRate, Amou"& _ 
+                "ntNIS, BankAccNo, ChequNO, DepositID, TransDebID, DebName, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                   "& _ 
+                "      TransCredID, OrpakStatus"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            FinancialChequesBack"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT        ID, AccID, AccountName, ChequesNo, BankName, Amount, ChequeDate, In"& _ 
-                "putDate, Notes, ReBackDate, Currency, CheckPic, ChequeStatus, ExchangeRate, Amou"& _ 
-                "ntNIS, BankAccNo, ChequNO, DepositID, TransDebID, DebName, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                   "& _ 
-                "      TransCredID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            FinancialChequesBack"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (ID = @ID)"& _ 
-                ""
+            Me._commandCollection(1).CommandText = "SELECT AccID, AccountName, Amount, AmountNIS, BankAccNo, BankName, CheckPic, Cheq"& _ 
+                "uNO, ChequeDate, ChequeStatus, ChequesNo, Currency, DebName, DepositID, Exchange"& _ 
+                "Rate, ID, InputDate, Notes, OrpakStatus, ReBackDate, TransCredID, TransDebID FRO"& _ 
+                "M FinancialChequesBack WHERE (ID = @ID)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT        ID, AccID, AccountName, ChequesNo, BankName, Amount, ChequeDate, In"& _ 
-                "putDate, Notes, ReBackDate, Currency, CheckPic, ChequeStatus, ExchangeRate, Amou"& _ 
-                "ntNIS, BankAccNo, ChequNO, DepositID, TransDebID, DebName, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                   "& _ 
-                "      TransCredID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            FinancialChequesBack"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (ChequeSta"& _ 
-                "tus = @Status)"
+            Me._commandCollection(2).CommandText = "SELECT AccID, AccountName, Amount, AmountNIS, BankAccNo, BankName, CheckPic, Cheq"& _ 
+                "uNO, ChequeDate, ChequeStatus, ChequesNo, Currency, DebName, DepositID, Exchange"& _ 
+                "Rate, ID, InputDate, Notes, OrpakStatus, ReBackDate, TransCredID, TransDebID FRO"& _ 
+                "M FinancialChequesBack WHERE (ChequeStatus = @Status)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Status", Global.System.Data.SqlDbType.NVarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "ChequeStatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
@@ -45041,7 +45330,8 @@ Namespace CRMDataSetTableAdapters
                     ByVal Original_DepositID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_TransDebID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DebName As String,  _
-                    ByVal Original_TransCredID As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_TransCredID As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_OrpakStatus As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_AccID,Integer)
             If (Original_AccountName Is Nothing) Then
@@ -45147,6 +45437,13 @@ Namespace CRMDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(30).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(31).Value = Global.System.DBNull.Value
             End If
+            If (Original_OrpakStatus Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(33).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(Original_OrpakStatus,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -45186,7 +45483,8 @@ Namespace CRMDataSetTableAdapters
                     ByVal DepositID As Global.System.Nullable(Of Integer),  _
                     ByVal TransDebID As Global.System.Nullable(Of Integer),  _
                     ByVal DebName As String,  _
-                    ByVal TransCredID As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal TransCredID As Global.System.Nullable(Of Integer),  _
+                    ByVal OrpakStatus As String) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(AccID,Integer)
             If (AccountName Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
@@ -45275,6 +45573,11 @@ Namespace CRMDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
+            If (OrpakStatus Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(OrpakStatus,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -45315,6 +45618,7 @@ Namespace CRMDataSetTableAdapters
                     ByVal TransDebID As Global.System.Nullable(Of Integer),  _
                     ByVal DebName As String,  _
                     ByVal TransCredID As Global.System.Nullable(Of Integer),  _
+                    ByVal OrpakStatus As String,  _
                     ByVal Original_ID As Integer,  _
                     ByVal Original_AccID As Integer,  _
                     ByVal Original_AccountName As String,  _
@@ -45334,6 +45638,7 @@ Namespace CRMDataSetTableAdapters
                     ByVal Original_TransDebID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DebName As String,  _
                     ByVal Original_TransCredID As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_OrpakStatus As String,  _
                     ByVal ID As Integer) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(AccID,Integer)
             If (AccountName Is Nothing) Then
@@ -45423,112 +45728,124 @@ Namespace CRMDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_ID,Integer)
-            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_AccID,Integer)
+            If (OrpakStatus Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(OrpakStatus,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_ID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_AccID,Integer)
             If (Original_AccountName Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_AccountName,String)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_AccountName,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_ChequesNo,Integer)
+            Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_ChequesNo,Integer)
             If (Original_BankName Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_BankName,String)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_BankName,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Amount,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_Amount,Decimal)
             If (Original_ChequeDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_ChequeDate.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_ChequeDate.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
             End If
             If (Original_InputDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_InputDate.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_InputDate.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
             End If
             If (Original_ReBackDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_ReBackDate.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_ReBackDate.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
             End If
             If (Original_Currency Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Currency")
             Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_Currency,String)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_Currency,String)
             End If
             If (Original_ChequeStatus Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_ChequeStatus")
             Else
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_ChequeStatus,String)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_ChequeStatus,String)
             End If
             If (Original_ExchangeRate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_ExchangeRate.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_ExchangeRate.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
             End If
             If (Original_AmountNIS.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_AmountNIS.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_AmountNIS.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
             End If
             If (Original_BankAccNo Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(41).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_BankAccNo,String)
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_BankAccNo,String)
             End If
             If (Original_ChequNO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(43).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(Original_ChequNO,String)
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_ChequNO,String)
             End If
             If (Original_DepositID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(Original_DepositID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_DepositID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(45).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
             End If
             If (Original_TransDebID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(Original_TransDebID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_TransDebID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(47).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
             End If
             If (Original_DebName Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(49).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(50).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(Original_DebName,String)
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_DebName,String)
             End If
             If (Original_TransCredID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(Original_TransCredID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Original_TransCredID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(51).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(52).Value = CType(ID,Integer)
+            If (Original_OrpakStatus Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(54).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Original_OrpakStatus,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(55).Value = CType(ID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -45569,6 +45886,7 @@ Namespace CRMDataSetTableAdapters
                     ByVal TransDebID As Global.System.Nullable(Of Integer),  _
                     ByVal DebName As String,  _
                     ByVal TransCredID As Global.System.Nullable(Of Integer),  _
+                    ByVal OrpakStatus As String,  _
                     ByVal Original_ID As Integer,  _
                     ByVal Original_AccID As Integer,  _
                     ByVal Original_AccountName As String,  _
@@ -45587,8 +45905,9 @@ Namespace CRMDataSetTableAdapters
                     ByVal Original_DepositID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_TransDebID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DebName As String,  _
-                    ByVal Original_TransCredID As Global.System.Nullable(Of Integer)) As Integer
-            Return Me.Update(AccID, AccountName, ChequesNo, BankName, Amount, ChequeDate, InputDate, Notes, ReBackDate, Currency, CheckPic, ChequeStatus, ExchangeRate, AmountNIS, BankAccNo, ChequNO, DepositID, TransDebID, DebName, TransCredID, Original_ID, Original_AccID, Original_AccountName, Original_ChequesNo, Original_BankName, Original_Amount, Original_ChequeDate, Original_InputDate, Original_ReBackDate, Original_Currency, Original_ChequeStatus, Original_ExchangeRate, Original_AmountNIS, Original_BankAccNo, Original_ChequNO, Original_DepositID, Original_TransDebID, Original_DebName, Original_TransCredID, Original_ID)
+                    ByVal Original_TransCredID As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_OrpakStatus As String) As Integer
+            Return Me.Update(AccID, AccountName, ChequesNo, BankName, Amount, ChequeDate, InputDate, Notes, ReBackDate, Currency, CheckPic, ChequeStatus, ExchangeRate, AmountNIS, BankAccNo, ChequNO, DepositID, TransDebID, DebName, TransCredID, OrpakStatus, Original_ID, Original_AccID, Original_AccountName, Original_ChequesNo, Original_BankName, Original_Amount, Original_ChequeDate, Original_InputDate, Original_ReBackDate, Original_Currency, Original_ChequeStatus, Original_ExchangeRate, Original_AmountNIS, Original_BankAccNo, Original_ChequNO, Original_DepositID, Original_TransDebID, Original_DebName, Original_TransCredID, Original_OrpakStatus, Original_ID)
         End Function
     End Class
     
@@ -49016,7 +49335,7 @@ Namespace CRMDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        TransID, SerNo, TransDate, TransTime, Fleet, Vehicle_Number, Produc"& _ 
@@ -49024,6 +49343,16 @@ Namespace CRMDataSetTableAdapters
                 "nth, TransYear, Odometer, ProductCode, Price, ID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            DATA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY"& _ 
                 " ID DESC"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        TransID, SerNo, TransDate, TransTime, Fleet, Vehicle_Number, Produc"& _ 
+                "tName, Quantity, TotalSale, StationName, Receipt, FleetCode, DeviceName, TransMo"& _ 
+                "nth, TransYear, Odometer, ProductCode, Price, ID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            DATA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE   "& _ 
+                "     (FleetCode = @FleetCode) AND (TransYear = @Year) AND (TransMonth = @Month)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY ID DESC"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FleetCode", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "FleetCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Year", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "TransYear", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Month", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "TransMonth", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -49045,6 +49374,60 @@ Namespace CRMDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As CRMDataSet.DATADataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As CRMDataSet.DATADataTable = New CRMDataSet.DATADataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByFleetMonthYear(ByVal dataTable As CRMDataSet.DATADataTable, ByVal FleetCode As String, ByVal Year As String, ByVal Month As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (FleetCode Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(FleetCode,String)
+            End If
+            If (Year Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Year,String)
+            End If
+            If (Month Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(Month,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy(ByVal FleetCode As String, ByVal Year As String, ByVal Month As String) As CRMDataSet.DATADataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (FleetCode Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(FleetCode,String)
+            End If
+            If (Year Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Year,String)
+            End If
+            If (Month Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(Month,String)
+            End If
             Dim dataTable As CRMDataSet.DATADataTable = New CRMDataSet.DATADataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable

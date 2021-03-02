@@ -24,7 +24,15 @@ Partial Class FinancialChequesBack
         Dim FormatConditionRuleValue1 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
         Dim EditorButtonImageOptions1 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FinancialChequesBack))
+        Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject2 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject3 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject4 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim EditorButtonImageOptions2 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
+        Dim SerializableAppearanceObject5 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject6 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject7 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+        Dim SerializableAppearanceObject8 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Me.colChequeStatus = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.RepositoryItemComboBox2 = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.NavigationPane1 = New DevExpress.XtraBars.Navigation.NavigationPane()
@@ -58,6 +66,7 @@ Partial Class FinancialChequesBack
         Me.colTransDebID = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.colAccID = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.colAccountName = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
+        Me.ColOrpakStatus = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.colChequeDate = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.colAmount = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.colCurrency = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
@@ -105,7 +114,13 @@ Partial Class FinancialChequesBack
         Me.colAmountNIS1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColPrintCheque = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryPrint = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
+        Me.colCheckPic2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colDebName1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colDepositID1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colTransCredID = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colTransDebID1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
+        Me.SimpleButton8 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton6 = New DevExpress.XtraEditors.SimpleButton()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -187,7 +202,7 @@ Partial Class FinancialChequesBack
         Me.NavigationPage2.Controls.Add(Me.PanelControl2)
         Me.NavigationPage2.Controls.Add(Me.PanelControl1)
         Me.NavigationPage2.Name = "NavigationPage2"
-        Me.NavigationPage2.Size = New System.Drawing.Size(1145, 751)
+        Me.NavigationPage2.Size = New System.Drawing.Size(1117, 739)
         '
         'PanelControl2
         '
@@ -195,18 +210,18 @@ Partial Class FinancialChequesBack
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl2.Location = New System.Drawing.Point(0, 39)
         Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(1145, 712)
+        Me.PanelControl2.Size = New System.Drawing.Size(1117, 700)
         Me.PanelControl2.TabIndex = 1
         '
         'FinancialChequesBackGridControl
         '
         Me.FinancialChequesBackGridControl.DataSource = Me.FinancialChequesBackBindingSource
         Me.FinancialChequesBackGridControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FinancialChequesBackGridControl.Location = New System.Drawing.Point(3, 3)
+        Me.FinancialChequesBackGridControl.Location = New System.Drawing.Point(2, 2)
         Me.FinancialChequesBackGridControl.MainView = Me.BandedGridView1
         Me.FinancialChequesBackGridControl.Name = "FinancialChequesBackGridControl"
         Me.FinancialChequesBackGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemSearchLookUpEdit1, Me.RepositoryItemComboBox1, Me.RepositoryItemComboBox2, Me.RepositoryChequeImage})
-        Me.FinancialChequesBackGridControl.Size = New System.Drawing.Size(1139, 706)
+        Me.FinancialChequesBackGridControl.Size = New System.Drawing.Size(1113, 696)
         Me.FinancialChequesBackGridControl.TabIndex = 1
         Me.FinancialChequesBackGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.BandedGridView1})
         '
@@ -228,7 +243,7 @@ Partial Class FinancialChequesBack
         'BandedGridView1
         '
         Me.BandedGridView1.Bands.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.GridBand() {Me.GridBand1, Me.gridBand2})
-        Me.BandedGridView1.Columns.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn() {Me.colID, Me.colAccID, Me.colAccountName, Me.colChequesNo, Me.colBankName, Me.colAmount, Me.colChequeDate, Me.colInputDate, Me.colNotes, Me.colReBackDate, Me.colCurrency, Me.colCheckPic, Me.colChequeStatus, Me.colAmountNIS, Me.colExchangeRate, Me.colBankAccNo, Me.colChequNO, Me.ColDepositID, Me.colTransDebID, Me.colCurrency3, Me.colDebName})
+        Me.BandedGridView1.Columns.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn() {Me.colID, Me.colAccID, Me.colAccountName, Me.colChequesNo, Me.colBankName, Me.colAmount, Me.colChequeDate, Me.colInputDate, Me.colNotes, Me.colReBackDate, Me.colCurrency, Me.colCheckPic, Me.colChequeStatus, Me.colAmountNIS, Me.colExchangeRate, Me.colBankAccNo, Me.colChequNO, Me.ColDepositID, Me.colTransDebID, Me.colCurrency3, Me.colDebName, Me.ColOrpakStatus})
         GridFormatRule1.ApplyToRow = True
         GridFormatRule1.Column = Me.colChequeStatus
         GridFormatRule1.Name = "Format0"
@@ -257,6 +272,7 @@ Partial Class FinancialChequesBack
         Me.GridBand1.Columns.Add(Me.colTransDebID)
         Me.GridBand1.Columns.Add(Me.colAccID)
         Me.GridBand1.Columns.Add(Me.colAccountName)
+        Me.GridBand1.Columns.Add(Me.ColOrpakStatus)
         Me.GridBand1.Columns.Add(Me.colChequeDate)
         Me.GridBand1.Columns.Add(Me.colAmount)
         Me.GridBand1.Columns.Add(Me.colCurrency)
@@ -265,10 +281,10 @@ Partial Class FinancialChequesBack
         Me.GridBand1.Columns.Add(Me.colChequNO)
         Me.GridBand1.Columns.Add(Me.colCheckPic)
         Me.GridBand1.Columns.Add(Me.colExchangeRate)
-        Me.GridBand1.ImageAlignment = System.Drawing.StringAlignment.Center
+        Me.GridBand1.ImageOptions.Alignment = System.Drawing.StringAlignment.Center
         Me.GridBand1.Name = "GridBand1"
         Me.GridBand1.VisibleIndex = 0
-        Me.GridBand1.Width = 1163
+        Me.GridBand1.Width = 1238
         '
         'colID
         '
@@ -295,8 +311,8 @@ Partial Class FinancialChequesBack
         Me.RepositoryItemSearchLookUpEdit1.Name = "RepositoryItemSearchLookUpEdit1"
         Me.RepositoryItemSearchLookUpEdit1.PopupFormMinSize = New System.Drawing.Size(1000, 0)
         Me.RepositoryItemSearchLookUpEdit1.PopupFormSize = New System.Drawing.Size(1000, 0)
+        Me.RepositoryItemSearchLookUpEdit1.PopupView = Me.RepositoryItemSearchLookUpEdit1View
         Me.RepositoryItemSearchLookUpEdit1.ValueMember = "ID"
-        Me.RepositoryItemSearchLookUpEdit1.View = Me.RepositoryItemSearchLookUpEdit1View
         '
         'Cheqs1BindingSource
         '
@@ -433,6 +449,13 @@ Partial Class FinancialChequesBack
         Me.colAccountName.Visible = True
         Me.colAccountName.Width = 108
         '
+        'ColOrpakStatus
+        '
+        Me.ColOrpakStatus.Caption = "حالة الزبون"
+        Me.ColOrpakStatus.FieldName = "OrpakStatus"
+        Me.ColOrpakStatus.Name = "ColOrpakStatus"
+        Me.ColOrpakStatus.Visible = True
+        '
         'colChequeDate
         '
         Me.colChequeDate.Caption = "تاريخ الاستحقاق"
@@ -495,7 +518,7 @@ Partial Class FinancialChequesBack
         '
         Me.RepositoryChequeImage.AutoHeight = False
         EditorButtonImageOptions1.Image = CType(resources.GetObject("EditorButtonImageOptions1.Image"), System.Drawing.Image)
-        Me.RepositoryChequeImage.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(EditorButtonImageOptions1, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, Nothing)})
+        Me.RepositoryChequeImage.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions1, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.RepositoryChequeImage.Name = "RepositoryChequeImage"
         Me.RepositoryChequeImage.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
@@ -573,14 +596,14 @@ Partial Class FinancialChequesBack
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(1145, 39)
+        Me.PanelControl1.Size = New System.Drawing.Size(1117, 39)
         Me.PanelControl1.TabIndex = 0
         '
         'SimpleButton4
         '
         Me.SimpleButton4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton4.ImageOptions.Image = CType(resources.GetObject("SimpleButton4.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton4.Location = New System.Drawing.Point(509, 7)
+        Me.SimpleButton4.Location = New System.Drawing.Point(481, 7)
         Me.SimpleButton4.Name = "SimpleButton4"
         Me.SimpleButton4.Size = New System.Drawing.Size(93, 26)
         Me.SimpleButton4.TabIndex = 5
@@ -590,7 +613,7 @@ Partial Class FinancialChequesBack
         '
         Me.SimpleButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton3.Location = New System.Drawing.Point(608, 7)
+        Me.SimpleButton3.Location = New System.Drawing.Point(580, 7)
         Me.SimpleButton3.Name = "SimpleButton3"
         Me.SimpleButton3.Size = New System.Drawing.Size(93, 26)
         Me.SimpleButton3.TabIndex = 4
@@ -599,7 +622,7 @@ Partial Class FinancialChequesBack
         'LabelControl1
         '
         Me.LabelControl1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LabelControl1.Location = New System.Drawing.Point(1109, 15)
+        Me.LabelControl1.Location = New System.Drawing.Point(1081, 15)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(23, 13)
         Me.LabelControl1.TabIndex = 3
@@ -608,11 +631,11 @@ Partial Class FinancialChequesBack
         'ComboBoxEdit1
         '
         Me.ComboBoxEdit1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ComboBoxEdit1.Location = New System.Drawing.Point(905, 7)
+        Me.ComboBoxEdit1.Location = New System.Drawing.Point(877, 7)
         Me.ComboBoxEdit1.Name = "ComboBoxEdit1"
         Me.ComboBoxEdit1.Properties.AutoHeight = False
         Me.ComboBoxEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.ComboBoxEdit1.Properties.Items.AddRange(New Object() {"الوطني", "الاسكان", "العربي", "فلسطين", "فلسطين نابلس", "الاسلامي الفلسطيني", "الاسلامي العربي", "القدس", "ابو فخيدة"})
+        Me.ComboBoxEdit1.Properties.Items.AddRange(New Object() {"الوطني", "الاسكان", "العربي", "فلسطين", "فلسطين نابلس", "الاسلامي الفلسطيني", "الاسلامي العربي", "القدس", "ابو فخيدة", "الاستثمار الفلسطيني", "شيكات معادة"})
         Me.ComboBoxEdit1.Size = New System.Drawing.Size(188, 26)
         Me.ComboBoxEdit1.TabIndex = 2
         '
@@ -620,7 +643,7 @@ Partial Class FinancialChequesBack
         '
         Me.SimpleButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton2.Location = New System.Drawing.Point(806, 7)
+        Me.SimpleButton2.Location = New System.Drawing.Point(778, 7)
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(93, 26)
         Me.SimpleButton2.TabIndex = 1
@@ -630,7 +653,7 @@ Partial Class FinancialChequesBack
         '
         Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(707, 7)
+        Me.SimpleButton1.Location = New System.Drawing.Point(679, 7)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(93, 26)
         Me.SimpleButton1.TabIndex = 0
@@ -642,7 +665,7 @@ Partial Class FinancialChequesBack
         Me.NavigationPage3.Controls.Add(Me.PanelControl4)
         Me.NavigationPage3.Controls.Add(Me.PanelControl3)
         Me.NavigationPage3.Name = "NavigationPage3"
-        Me.NavigationPage3.Size = New System.Drawing.Size(1145, 751)
+        Me.NavigationPage3.Size = New System.Drawing.Size(1117, 739)
         '
         'PanelControl4
         '
@@ -650,24 +673,24 @@ Partial Class FinancialChequesBack
         Me.PanelControl4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl4.Location = New System.Drawing.Point(0, 39)
         Me.PanelControl4.Name = "PanelControl4"
-        Me.PanelControl4.Size = New System.Drawing.Size(1145, 712)
+        Me.PanelControl4.Size = New System.Drawing.Size(1117, 700)
         Me.PanelControl4.TabIndex = 1
         '
         'FinancialChequesBackGridControl1
         '
         Me.FinancialChequesBackGridControl1.DataSource = Me.FinancialChequesBackBindingSource
         Me.FinancialChequesBackGridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FinancialChequesBackGridControl1.Location = New System.Drawing.Point(3, 3)
+        Me.FinancialChequesBackGridControl1.Location = New System.Drawing.Point(2, 2)
         Me.FinancialChequesBackGridControl1.MainView = Me.GridView1
         Me.FinancialChequesBackGridControl1.Name = "FinancialChequesBackGridControl1"
         Me.FinancialChequesBackGridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryComboBoxCheqStatus, Me.RepositoryPrint})
-        Me.FinancialChequesBackGridControl1.Size = New System.Drawing.Size(1139, 706)
+        Me.FinancialChequesBackGridControl1.Size = New System.Drawing.Size(1113, 696)
         Me.FinancialChequesBackGridControl1.TabIndex = 0
         Me.FinancialChequesBackGridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID1, Me.colAccID1, Me.colAccountName1, Me.colChequNO1, Me.colChequesNo1, Me.colBankName1, Me.colAmount1, Me.colBankAccNo1, Me.colChequeDate1, Me.colInputDate1, Me.colNotes1, Me.colReBackDate1, Me.colCurrency1, Me.colCheckPic1, Me.colChequeStatus1, Me.colExchangeRate1, Me.colAmountNIS1, Me.ColPrintCheque})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID1, Me.colAccID1, Me.colAccountName1, Me.colChequNO1, Me.colChequesNo1, Me.colBankName1, Me.colAmount1, Me.colBankAccNo1, Me.colChequeDate1, Me.colInputDate1, Me.colNotes1, Me.colReBackDate1, Me.colCurrency1, Me.colCheckPic1, Me.colChequeStatus1, Me.colExchangeRate1, Me.colAmountNIS1, Me.ColPrintCheque, Me.colCheckPic2, Me.colDebName1, Me.colDepositID1, Me.colTransCredID, Me.colTransDebID1})
         Me.GridView1.GridControl = Me.FinancialChequesBackGridControl1
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsView.ShowFooter = True
@@ -836,12 +859,40 @@ Partial Class FinancialChequesBack
         '
         Me.RepositoryPrint.AutoHeight = False
         EditorButtonImageOptions2.Image = CType(resources.GetObject("EditorButtonImageOptions2.Image"), System.Drawing.Image)
-        Me.RepositoryPrint.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(EditorButtonImageOptions2, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, Nothing)})
+        Me.RepositoryPrint.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions2, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject5, SerializableAppearanceObject6, SerializableAppearanceObject7, SerializableAppearanceObject8, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
         Me.RepositoryPrint.Name = "RepositoryPrint"
         Me.RepositoryPrint.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
+        'colCheckPic2
+        '
+        Me.colCheckPic2.FieldName = "CheckPic"
+        Me.colCheckPic2.Name = "colCheckPic2"
+        '
+        'colDebName1
+        '
+        Me.colDebName1.FieldName = "DebName"
+        Me.colDebName1.Name = "colDebName1"
+        '
+        'colDepositID1
+        '
+        Me.colDepositID1.FieldName = "DepositID"
+        Me.colDepositID1.Name = "colDepositID1"
+        '
+        'colTransCredID
+        '
+        Me.colTransCredID.FieldName = "TransCredID"
+        Me.colTransCredID.Name = "colTransCredID"
+        '
+        'colTransDebID1
+        '
+        Me.colTransDebID1.FieldName = "TransDebID"
+        Me.colTransDebID1.Name = "colTransDebID1"
+        Me.colTransDebID1.Visible = True
+        Me.colTransDebID1.VisibleIndex = 14
+        '
         'PanelControl3
         '
+        Me.PanelControl3.Controls.Add(Me.SimpleButton8)
         Me.PanelControl3.Controls.Add(Me.SimpleButton7)
         Me.PanelControl3.Controls.Add(Me.SimpleButton6)
         Me.PanelControl3.Controls.Add(Me.Label1)
@@ -850,14 +901,22 @@ Partial Class FinancialChequesBack
         Me.PanelControl3.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelControl3.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl3.Name = "PanelControl3"
-        Me.PanelControl3.Size = New System.Drawing.Size(1145, 39)
+        Me.PanelControl3.Size = New System.Drawing.Size(1117, 39)
         Me.PanelControl3.TabIndex = 0
+        '
+        'SimpleButton8
+        '
+        Me.SimpleButton8.Location = New System.Drawing.Point(573, 6)
+        Me.SimpleButton8.Name = "SimpleButton8"
+        Me.SimpleButton8.Size = New System.Drawing.Size(75, 26)
+        Me.SimpleButton8.TabIndex = 5
+        Me.SimpleButton8.Text = "نسخ القيد"
         '
         'SimpleButton7
         '
         Me.SimpleButton7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton7.ImageOptions.Image = CType(resources.GetObject("SimpleButton7.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton7.Location = New System.Drawing.Point(682, 6)
+        Me.SimpleButton7.Location = New System.Drawing.Point(654, 6)
         Me.SimpleButton7.Name = "SimpleButton7"
         Me.SimpleButton7.Size = New System.Drawing.Size(93, 26)
         Me.SimpleButton7.TabIndex = 4
@@ -867,7 +926,7 @@ Partial Class FinancialChequesBack
         '
         Me.SimpleButton6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButton6.ImageOptions.Image = CType(resources.GetObject("SimpleButton6.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton6.Location = New System.Drawing.Point(781, 6)
+        Me.SimpleButton6.Location = New System.Drawing.Point(753, 6)
         Me.SimpleButton6.Name = "SimpleButton6"
         Me.SimpleButton6.Size = New System.Drawing.Size(93, 26)
         Me.SimpleButton6.TabIndex = 3
@@ -877,7 +936,7 @@ Partial Class FinancialChequesBack
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1074, 12)
+        Me.Label1.Location = New System.Drawing.Point(1046, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(60, 13)
         Me.Label1.TabIndex = 2
@@ -886,7 +945,7 @@ Partial Class FinancialChequesBack
         'ComboChekStatus
         '
         Me.ComboChekStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ComboChekStatus.Location = New System.Drawing.Point(880, 6)
+        Me.ComboChekStatus.Location = New System.Drawing.Point(852, 6)
         Me.ComboChekStatus.Name = "ComboChekStatus"
         Me.ComboChekStatus.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboChekStatus.Properties.Appearance.Options.UseFont = True
@@ -909,15 +968,17 @@ Partial Class FinancialChequesBack
         Me.NavigationPage1.Caption = "الشيكات الراجعة"
         Me.NavigationPage1.Controls.Add(Me.DashboardViewer1)
         Me.NavigationPage1.Name = "NavigationPage1"
-        Me.NavigationPage1.Size = New System.Drawing.Size(1139, 752)
+        Me.NavigationPage1.Size = New System.Drawing.Size(1117, 739)
         '
         'DashboardViewer1
         '
+        Me.DashboardViewer1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
+        Me.DashboardViewer1.Appearance.Options.UseBackColor = True
         Me.DashboardViewer1.DashboardSource = "DXApplication5.Win_Dashboards.FinanceBackCheks"
         Me.DashboardViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DashboardViewer1.Location = New System.Drawing.Point(0, 0)
         Me.DashboardViewer1.Name = "DashboardViewer1"
-        Me.DashboardViewer1.Size = New System.Drawing.Size(1139, 752)
+        Me.DashboardViewer1.Size = New System.Drawing.Size(1117, 739)
         Me.DashboardViewer1.TabIndex = 0
         '
         'FinancialChequesBackTableAdapter
@@ -943,6 +1004,7 @@ Partial Class FinancialChequesBack
         Me.TableAdapterManager1.CardsTableAdapter = Nothing
         Me.TableAdapterManager1.CardsTransTableAdapter = Nothing
         Me.TableAdapterManager1.CarsAccidentTableAdapter = Nothing
+        Me.TableAdapterManager1.CarsDriversTableAdapter = Nothing
         Me.TableAdapterManager1.CarsInsurancCompaniesTableAdapter = Nothing
         Me.TableAdapterManager1.CarsInsuranceTransTableAdapter = Nothing
         Me.TableAdapterManager1.CarsMarkaTableAdapter = Nothing
@@ -956,6 +1018,7 @@ Partial Class FinancialChequesBack
         Me.TableAdapterManager1.CRMCustomersOrdersTableAdapter = Nothing
         Me.TableAdapterManager1.CRMJobNameTableAdapter = Nothing
         Me.TableAdapterManager1.CRMTasksTableAdapter = Nothing
+        Me.TableAdapterManager1.DATATableAdapter = Nothing
         Me.TableAdapterManager1.DevelopNotesTableAdapter = Nothing
         Me.TableAdapterManager1.EmployeesDataTableAdapter = Nothing
         Me.TableAdapterManager1.FinancialBanksDocTableAdapter = Nothing
@@ -963,6 +1026,11 @@ Partial Class FinancialChequesBack
         Me.TableAdapterManager1.PrintingSystemDocsTableAdapter = Nothing
         Me.TableAdapterManager1.PrintingSystemJobsTableAdapter = Nothing
         Me.TableAdapterManager1.ReceiptDataTableAdapter = Nothing
+        Me.TableAdapterManager1.StockMoveDocSort11TableAdapter = Nothing
+        Me.TableAdapterManager1.StockMoveDocSort1TableAdapter = Nothing
+        Me.TableAdapterManager1.StockMoveDocStatusTableAdapter = Nothing
+        Me.TableAdapterManager1.StockMoveDocumentsTableAdapter = Nothing
+        Me.TableAdapterManager1.StockMoveTableAdapter = Nothing
         Me.TableAdapterManager1.transDocTableAdapter = Nothing
         Me.TableAdapterManager1.transTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = DXApplication5.CRMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -1107,6 +1175,13 @@ Partial Class FinancialChequesBack
     Friend WithEvents Cheqs1TableAdapter As WizCountDataSetTableAdapters.Cheqs1TableAdapter
     Friend WithEvents FinancialChequesBackBindingSource1 As BindingSource
     Friend WithEvents TableAdapterManager1 As CRMDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents ColOrpakStatus As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+    Friend WithEvents colCheckPic2 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colDebName1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colDepositID1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colTransCredID As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colTransDebID1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents SimpleButton8 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents GridBand1 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
     Friend WithEvents gridBand2 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
 End Class

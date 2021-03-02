@@ -11,18 +11,53 @@
     End Sub
 
     Private Sub OrpakTransactions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'TODO: This line of code loads data into the 'HO_DATADataSet.stations' table. You can move, or remove it, as needed.
+        Me.StationsTableAdapter.Fill(Me.HO_DATADataSet.stations)
+        'TODO: This line of code loads data into the 'HO_DATADataSet.fleets' table. You can move, or remove it, as needed.
+        '  Me.FleetsTableAdapter.Fill(Me.HO_DATADataSet.fleets)
+        TextTransCount.EditValue = 1000
     End Sub
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+        Try
+            Dim _SearchStations As String
+            _SearchStations = CStr(SearchStations.EditValue)
+            Dim dateFrom As String = Format(DateEdit1.DateTime, "yyyy-MM-dd")
+            Dim DateTo As String = Format(DateEdit2.DateTime, "yyyy-MM-dd")
+            Dim SqlString As String
+            Dim sql As New SQLControl
+            SqlString = " SELECT TOP (" & TextTransCount.Text & ") [shift_id]
+                          ,T.[id]      ,CONVERT(CHAR(10),[date],120) as TransDate
+                          ,CONVERT(varchar, T.[time], 108) as TransTime
+                          ,[type]      ,[pump]      ,[product_code]      ,[sale]
+                          ,[ppv]      ,[quantity]      ,[tag]      ,[odometer]
+                          ,[fleet_id]      ,[mean_id]      ,[plate]      ,[mean_name]
+                          ,[product_name]      ,T.[stn_id]	  , F.code 	  ,F.[name] as FleetName
+	                      ,S.stn_name 
+  FROM [HO_DATA].[dbo].[transactions] T
+  Left join fleets F on F.id =T.fleet_id 
+  Left join stations S on S.stn_id = T.stn_id 
+  Where T.[timestamp] between '" & Format(DateEdit1.DateTime, "yyyy-MM-dd") & " 00:00:00" & "' and '" & Format(DateEdit2.DateTime, "yyyy-MM-dd") & " 23:59:59" & "'"
+            If Not String.IsNullOrEmpty(_SearchStations) Then
+                SqlString += " and T.[stn_id]='" & _SearchStations & "'"
+            End If
+            SqlString += "  order by T.timestamp "
+            sql.RunQuery(SqlString)
+            GridControl1.DataSource = sql.SQLDS.Tables(0)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
 
-        SqlDataSource1.Queries(0).Parameters(0).Value = Format(DateTimePicker1.Value, "MM/dd/yyyy")
-        SqlDataSource1.Queries(0).Parameters(1).Value = Format(DateTimePicker2.Value, "MM/dd/yyyy")
-        SqlDataSource1.Fill()
     End Sub
 
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
         GridControl1.ShowPrintPreview()
     End Sub
 
+    Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+        GridView1.OptionsSelection.MultiSelect = True
+        GridView1.SelectAll()
+        GridView1.CopyToClipboard()
+        GridView1.OptionsSelection.MultiSelect = False
+    End Sub
 End Class

@@ -71,4 +71,8 @@ Public Class FinanceChequesAllReport
 
         End Try
     End Sub
+
+    Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+        GridControl1.ShowPrintPreview()
+    End Sub
 End Class

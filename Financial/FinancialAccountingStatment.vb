@@ -1,4 +1,5 @@
 ﻿
+Imports System.Collections
 Imports System.Windows.Documents
 Imports DevExpress.LookAndFeel
 Imports DevExpress.Xpf.Printing
@@ -6,6 +7,7 @@ Imports DevExpress.XtraCharts
 Imports DevExpress.XtraCharts.Printing
 Imports DevExpress.XtraEditors
 Imports DevExpress.XtraEditors.Controls
+Imports DevExpress.XtraGrid.Columns
 Imports DevExpress.XtraGrid.Views.Base
 Imports DevExpress.XtraGrid.Views.Grid
 Imports DevExpress.XtraReports.UI
@@ -37,14 +39,69 @@ Public Class FinancialAccountingStatment
         Me.Accounts1TableAdapter.Fill(Me.WizCountDataSet.Accounts1)
 
         DateEditTo.DateTime = CDate(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000"))
-        DateEditFrom.DateTime = CDate(DateTime.Now.AddYears(-1).ToString("yyyy-MM-dd 00:00:00.000"))
-        AccountKeyTextEdit.Select()
+        DateEditFrom.DateTime = CDate(DateTime.Now.AddMonths(-6).ToString("yyyy-MM-dd 00:00:00.000"))
+        'AccountKeyTextEdit.Select()
 
         DateEdit1.DateTime = CDate(DateTime.Now.AddMonths(-1).ToString("yyyy-MM-dd 00:00:00.000"))
         DateEdit2.DateTime = CDate(DateTime.Now.AddYears(+1).ToString("yyyy-MM-dd 00:00:00.000"))
         CheckBox1.Checked = True
+
+        Me.KeyPreview = True
+
     End Sub
 
+    Private Sub Me_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.F12 Then
+            Dim TransID As String
+            TransID = CStr(GridView2.GetRowCellValue(GridView2.FocusedRowHandle, "JMTRANSID"))
+            If String.IsNullOrEmpty(TransID) Or TransID = "0" Then
+                Exit Sub
+            Else
+                My.Forms.FinanceEditTransNote.TextTransID.EditValue = TransID
+                My.Forms.FinanceEditTransNote.ShowDialog()
+            End If
+        ElseIf e.KeyCode = Keys.F5 Then
+            AccountStatmentReport()
+        ElseIf e.KeyCode = Keys.F1 Then
+            Dim view As ColumnView = CType(GridControl2.MainView, ColumnView)
+            Dim rowHandle As Integer
+            rowHandle = view.FocusedRowHandle
+            Matching()
+            AccountStatmentReport()
+            view.FocusedRowHandle = (rowHandle)
+            view.SelectRow(rowHandle + 1)
+        End If
+    End Sub
+    Private Sub Matching()
+        Dim Sql As New SQLControl
+        Dim SqlString As String
+        Dim TransID As Integer
+        Dim Sorting As Integer
+
+        If GridView2.GetRowCellValue(GridView2.FocusedRowHandle, "ALIAS2F") Is Nothing Or IsDBNull(GridView2.GetRowCellValue(GridView2.FocusedRowHandle, "ALIAS2F")) Then
+            Exit Sub
+        Else
+            TransID = CInt(GridView2.GetRowCellValue(GridView2.FocusedRowHandle, "ALIAS2F")) 'رقم الحركة
+            Sorting = CInt(GridView2.GetRowCellValue(GridView2.FocusedRowHandle, "SORTING"))
+            If Sorting = 999999999 Then
+                SqlString = " Insert Into ACCMATCHING (JMID,ACCOUNTKEY,SORTING) Values ( 
+                          " & TransID & ",
+                          '" & CStr(AccountKeyTextEdit.EditValue) & "',
+                          (SELECT MAX(SORTING)+1 FROM ACCMATCHING where [ACCOUNTKEY]='" & CStr(AccountKeyTextEdit.EditValue) & "'))"
+                Sql.WizCountRunQuery(SqlString)
+            Else
+                SqlString = " Delete From ACCMATCHING where JMID =" & TransID & " and SORTING= " & Sorting & " and ACCOUNTKEY='" & CStr(AccountKeyTextEdit.EditValue) & "'"
+                Sql.WizCountRunQuery(SqlString)
+            End If
+
+
+        End If
+
+
+
+
+
+    End Sub
     Private Sub GridView2_PrintInitialize(sender As System.Object,
             e As DevExpress.XtraGrid.Views.Base.PrintInitializeEventArgs) _
             Handles GridView2.PrintInitialize
@@ -82,135 +139,160 @@ Public Class FinancialAccountingStatment
 
             Dim AccountStatmentss As String
             If CheckBox1.Checked = True Then
-                AccountStatmentss = " SELECT     JVALUEDATE  AS ALIAS6F,    JREFERANCE  AS ALIAS8F,  JREF2  AS ALIAS9F,  JDESCRIPTION  AS ALIAS10F,   CASE JMDEBITCREDIT WHEN 1 THEN  JMSUF  ELSE 0 END AS ALIAS12F_DEB, CASE JMDEBITCREDIT WHEN 0 THEN  JMSUF  ELSE 0 END AS ALIAS12F_CR " _
+                AccountStatmentss = " SELECT   '0' as Balance,  JMTRANSID,JVALUEDATE  AS ALIAS6F,    JREFERANCE  AS ALIAS8F,  JREF2  AS ALIAS9F,  JDESCRIPTION  AS ALIAS10F,   CASE JMDEBITCREDIT WHEN 1 THEN  JMSUF  ELSE 0 END AS ALIAS12F_DEB, CASE JMDEBITCREDIT WHEN 0 THEN  JMSUF  ELSE 0 END AS ALIAS12F_CR " _
                         & " ,  IsNull(SORTING, 999999999) AS SORTING   ,RPHSTRANSRETRIV. JMID  AS ALIAS2F  from RPHSTRANSRETRIV" _
                         & " LEFT JOIN [ALHUDA].[dbo].[ACCMATCHING] ON [ALHUDA].[dbo].  RPHSTRANSRETRIV.JMID = [ALHUDA].[dbo].  [ACCMATCHING] .JMID" _
                         & " WHERE          ( JMACCOUNTKEY = '" & AccountKeyTextEdit.Text & "'  AND ('" & ToDate & "' >= JVALUEDATE) AND ('" & FromDate & "' <= JVALUEDATE) AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 " _
-                        & "  order by  ISNULL([ACCMATCHING].SORTING*0,1)   ,ASORTGROUP ASC  , JMACCOUNTKEY ASC  , JVALUEDATE ASC  , RPHSTRANSRETRIV.JMID ASC   "
+                        & "  order by  SORTING   "
             Else
-                AccountStatmentss = " SELECT     JVALUEDATE  AS ALIAS6F,    JREFERANCE  AS ALIAS8F,  JREF2  AS ALIAS9F,  JDESCRIPTION  AS ALIAS10F,   CASE JMDEBITCREDIT WHEN 1 THEN  JMSUF  ELSE 0 END AS ALIAS12F_DEB, CASE JMDEBITCREDIT WHEN 0 THEN  JMSUF  ELSE 0 END AS ALIAS12F_CR " _
+                AccountStatmentss = " SELECT  '0' as Balance,   JMTRANSID,JVALUEDATE  AS ALIAS6F,    JREFERANCE  AS ALIAS8F,  JREF2  AS ALIAS9F,  JDESCRIPTION  AS ALIAS10F,   CASE JMDEBITCREDIT WHEN 1 THEN  JMSUF  ELSE 0 END AS ALIAS12F_DEB, CASE JMDEBITCREDIT WHEN 0 THEN  JMSUF  ELSE 0 END AS ALIAS12F_CR " _
                         & "   ,RPHSTRANSRETRIV. JMID  AS ALIAS2F  from RPHSTRANSRETRIV" _
                         & " WHERE          ( JMACCOUNTKEY = '" & AccountKeyTextEdit.Text & "'  AND ('" & ToDate & "' >= JVALUEDATE) AND ('" & FromDate & "' <= JVALUEDATE) AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 " _
                         & " order by   JVALUEDATE ASC  , JMID ASC   "
 
             End If
-            Dim DebitBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2)) as Debit    " _
-        & " from RPHSTRANSRETRIV" _
-        & " WHERE   JMDEBITCREDIT=1 and       ( JMACCOUNTKEY = '" & AccountKeyTextEdit.Text & "'  AND ('" & FromDate & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
+            '    Dim DebitBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2)) as Debit    " _
+            '& " from RPHSTRANSRETRIV" _
+            '& " WHERE   JMDEBITCREDIT=1 and       ( JMACCOUNTKEY = '" & AccountKeyTextEdit.Text & "'  AND ('" & FromDate & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
 
-            Dim CreditBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2))  as Credit " _
-        & " from RPHSTRANSRETRIV" _
-        & " WHERE   JMDEBITCREDIT=0 and       ( JMACCOUNTKEY = '" & AccountKeyTextEdit.Text & "'  AND ('" & FromDate & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
+            '    Dim CreditBalance = " SELECT   cast(  sum( JMSUF ) as decimal(10,2))  as Credit " _
+            '& " from RPHSTRANSRETRIV" _
+            '& " WHERE   JMDEBITCREDIT=0 and       ( JMACCOUNTKEY = '" & AccountKeyTextEdit.Text & "'  AND ('" & FromDate & "' > JVALUEDATE)  AND ('12/31/2050' >= JDUEDATE) AND ('01/01/1980' <= JDUEDATE) AND ('12/31/2050' >= JDATF3) AND ('01/01/1980' <= JDATF3) AND (0 <> JMSUF) )  AND JTYPE<>1 AND JTYPE <>2 AND ((JSTATUS = 1 AND JTYPE<>1) OR (JSTATUS = 0 AND JTYPE=1)) AND ADUMI <> 3 "
 
-            Dim i As Integer
+            Dim JouranlTable As New DataTable
             Dim sql As New SQLControl
             sql.WizCountRunQuery(AccountStatmentss)
+            JouranlTable = sql.SQLDS.Tables(0)
+            Dim BegBalce As Decimal = 0
+            Dim R As DataRow = JouranlTable.NewRow
 
-            GridControl2.DataSource = sql.SQLDS.Tables(0)
-
-            Dim DebitBalanceString As String = "0", CreditBalanceString As String = "0"
-
-
+            'Dim DebitBalanceString As String = "0", CreditBalanceString As String = "0"
+            'If CheckBox4.Checked = True Then
+            '    sql.WizCountRunQuery(DebitBalance)
+            '    If Not IsDBNull(sql.SQLDS.Tables(0).Rows(0).Item("Debit")) Then DebitBalanceString = CType(sql.SQLDS.Tables(0).Rows(0).Item("Debit"), String)
+            '    sql.WizCountRunQuery(CreditBalance)
+            '    If Not IsDBNull(sql.SQLDS.Tables(0).Rows(0).Item("Credit")) Then CreditBalanceString = CType(sql.SQLDS.Tables(0).Rows(0).Item("Credit"), String)
+            'End If
             If CheckBox4.Checked = True Then
-                sql.WizCountRunQuery(DebitBalance)
-                If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("Debit")) Then DebitBalanceString = CType(sql.SQLDS.Tables(0).Rows(i).Item("Debit"), String)
+                BegBalce = GetBegBalance(CStr(AccountKeyTextEdit.EditValue), CDate(FromDate))
+                If BegBalce > 0 Then R("ALIAS12F_DEB") = BegBalce
+                If BegBalce < 0 Then R("ALIAS12F_CR") = Math.Abs(BegBalce)
+                R("ALIAS6F") = CDate(DateEditFrom.DateTime).AddDays(-1)
+                R("ALIAS10F") = "  رصيد مدور"
+                R("SORTING") = "-1"
+                JouranlTable.Rows.Add(R)
+                If CheckBox1.Checked = True Then
+                    JouranlTable.DefaultView.Sort = "SORTING,ALIAS6F"
+                Else
+                    JouranlTable.DefaultView.Sort = "JMTRANSID"
+                End If
 
-                sql.WizCountRunQuery(CreditBalance)
-                If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("Credit")) Then CreditBalanceString = CType(sql.SQLDS.Tables(0).Rows(i).Item("Credit"), String)
+                JouranlTable = JouranlTable.DefaultView.ToTable()
             End If
 
 
-            Dim DrBalance, CrBalance As Integer
-            DrBalance = 0 : CrBalance = 0
-            Dim Balance = CInt(DebitBalanceString) - CInt(CreditBalanceString)
-            If Balance >= 0 Then DrBalance = Balance Else CrBalance = -1 * Balance
+
+            For i As Integer = 0 To JouranlTable.Rows.Count - 1
+                Dim row As DataRow = JouranlTable.Rows(i)
+                Dim credit As Decimal = 0, debit As Decimal = 0, previousBalance As Decimal = 0
+                Decimal.TryParse(row("ALIAS12F_CR").ToString(), credit)
+                Decimal.TryParse(row("ALIAS12F_DEB").ToString(), debit)
+                If i > 0 Then Decimal.TryParse(JouranlTable.Rows(i - 1)("Balance").ToString(), previousBalance)
+                row("Balance") = If(i = 0, debit - credit, previousBalance - credit + debit).ToString("N")
+            Next
 
 
-            GridView2.AddNewRow()
-            Dim rowHandle As Integer = GridView2.GetRowHandle(GridView2.DataRowCount)
-            If GridView2.IsNewItemRow(rowHandle) Then
-                GridView2.SetRowCellValue(rowHandle, GridView2.Columns(0), FromDate)
-                GridView2.SetRowCellValue(rowHandle, GridView2.Columns(1), 0)
-                GridView2.SetRowCellValue(rowHandle, GridView2.Columns(2), 0)
-                GridView2.SetRowCellValue(rowHandle, GridView2.Columns(3), "رصيد مدور")
-                GridView2.SetRowCellValue(rowHandle, GridView2.Columns(4), DrBalance)
-                GridView2.SetRowCellValue(rowHandle, GridView2.Columns(5), CrBalance)
-                GridView2.SetRowCellValue(rowHandle, GridView2.Columns(6), 0)
-            End If
+            GridControl2.DataSource = JouranlTable
 
-            If GridView2.Columns.Count = 9 Then
-
-                'If CheckBox1.Checked = True Then
-                '    GridView2.Columns("SORTING").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
+            If CheckBox1.Checked = True Then
+                GridView2.Columns("SORTING").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
                 'Else
                 '    GridView2.Columns("ALIAS6F").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
-                '    GridView2.Columns("ALIAS9F").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
-                'End If
-
-                GridView2.UpdateCurrentRow()
-            Else
-
-                'If CheckBox1.Checked = True Then
-                '    GridView2.Columns("SORTING").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
-                'Else
-                '    GridView2.Columns("ALIAS6F").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
-                '    GridView2.Columns("ALIAS9F").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
-                'End If
-
-                GridView2.UpdateCurrentRow()
-                OptimizeGrid()
             End If
+
+
+            'Dim DebitBalanceString As String = "0", CreditBalanceString As String = "0"
+            'If CheckBox4.Checked = True Then
+            '    sql.WizCountRunQuery(DebitBalance)
+            '    If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("Debit")) Then DebitBalanceString = CType(sql.SQLDS.Tables(0).Rows(i).Item("Debit"), String)
+            '    sql.WizCountRunQuery(CreditBalance)
+            '    If Not IsDBNull(sql.SQLDS.Tables(0).Rows(i).Item("Credit")) Then CreditBalanceString = CType(sql.SQLDS.Tables(0).Rows(i).Item("Credit"), String)
+            'End If
+            'Dim DrBalance, CrBalance As Integer
+            'DrBalance = 0 : CrBalance = 0
+            'Dim Balance = CInt(DebitBalanceString) - CInt(CreditBalanceString)
+            'If Balance >= 0 Then DrBalance = Balance Else CrBalance = -1 * Balance
+            'GridView2.AddNewRow()
+            'Dim rowHandle As Integer = GridView2.GetRowHandle(GridView2.DataRowCount)
+            'If GridView2.IsNewItemRow(rowHandle) Then
+            '    GridView2.SetRowCellValue(rowHandle, GridView2.Columns(0), FromDate)
+            '    GridView2.SetRowCellValue(rowHandle, GridView2.Columns(1), 0)
+            '    GridView2.SetRowCellValue(rowHandle, GridView2.Columns(2), 0)
+            '    GridView2.SetRowCellValue(rowHandle, GridView2.Columns(3), "رصيد مدور")
+            '    GridView2.SetRowCellValue(rowHandle, GridView2.Columns(4), DrBalance)
+            '    GridView2.SetRowCellValue(rowHandle, GridView2.Columns(5), CrBalance)
+            '    GridView2.SetRowCellValue(rowHandle, GridView2.Columns(6), 0)
+            '    GridView2.SetRowCellValue(rowHandle, GridView2.Columns(7), 0)
+            'End If
+            'If GridView2.Columns.Count = 10 Then
+            '    GridView2.UpdateCurrentRow()
+            'Else
+            '    GridView2.UpdateCurrentRow()
+            '    OptimizeGrid()
+            'End If
+
+            GridView2.FocusedRowHandle = GridView2.RowCount - 2
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
 
     End Sub
 
-    Public Sub OptimizeGrid()
-        Dim col As DevExpress.XtraGrid.Columns.GridColumn = GridView2.Columns.AddField("colRunningBalance")
-        col.UnboundType = DevExpress.Data.UnboundColumnType.Decimal
-        col.VisibleIndex = 7
-        col.Caption = "الرصيد"
-        col.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom
-        col.DisplayFormat.FormatString = "{0:#,##0.00}"
-        col.Visible = True
-        col.MaxWidth = 180
-        col.MinWidth = 100
-        col.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        col.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+    'Public Sub OptimizeGrid()
+    '    Dim col As DevExpress.XtraGrid.Columns.GridColumn = GridView2.Columns.AddField("colRunningBalance")
+    '    col.UnboundType = DevExpress.Data.UnboundColumnType.Decimal
+    '    col.VisibleIndex = 7
+    '    col.Caption = "الرصيد"
+    '    col.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom
+    '    col.DisplayFormat.FormatString = "{0:#,##0.00}"
+    '    col.Visible = True
+    '    col.MaxWidth = 180
+    '    col.MinWidth = 100
+    '    col.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+    '    col.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
 
-    End Sub
+    'End Sub
 
-    Private Sub GridView2_CustomUnboundColumnData(sender As Object, e As DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs) Handles GridView2.CustomUnboundColumnData
+    'Private Sub GridView2_CustomUnboundColumnData(sender As Object, e As DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs) Handles GridView2.CustomUnboundColumnData
 
-        Try
+    '    Try
 
-            Dim view As DevExpress.XtraGrid.Views.Grid.GridView = TryCast(sender, DevExpress.XtraGrid.Views.Grid.GridView)
+    '        Dim view As DevExpress.XtraGrid.Views.Grid.GridView = TryCast(sender, DevExpress.XtraGrid.Views.Grid.GridView)
 
-            If e.Column.FieldName = "colRunningBalance" Then
-                If e.IsGetData Then
-                    Dim total As Decimal = 0
-                    Dim rHandle As Integer = view.GetRowHandle(e.ListSourceRowIndex)
+    '        If e.Column.FieldName = "colRunningBalance" Then
+    '            If e.IsGetData Then
+    '                Dim total As Decimal = 0
+    '                Dim rHandle As Integer = view.GetRowHandle(e.ListSourceRowIndex)
 
-                    For i As Integer = -1 To (rHandle - 1)
-                        total -= Convert.ToDecimal(view.GetRowCellValue(i + 1, "ALIAS12F_DEB"))
-                        total += Convert.ToDecimal(view.GetRowCellValue(i + 1, "ALIAS12F_CR"))
-                    Next
+    '                For i As Integer = -1 To (rHandle - 1)
+    '                    total -= Convert.ToDecimal(view.GetRowCellValue(i + 1, "ALIAS12F_DEB"))
+    '                    total += Convert.ToDecimal(view.GetRowCellValue(i + 1, "ALIAS12F_CR"))
+    '                Next
 
-                    e.Value = total
-                End If
-            End If
+    '                e.Value = total
+    '            End If
+    '        End If
 
-            If CheckBox1.Checked = True Then
-                GridView2.Columns("SORTING").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
-            Else
-                GridView2.Columns("ALIAS6F").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
-            End If
-        Catch ex As Exception
+    '        If CheckBox1.Checked = True Then
+    '            GridView2.Columns("SORTING").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
+    '        Else
+    '            GridView2.Columns("ALIAS6F").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
+    '        End If
+    '    Catch ex As Exception
 
-        End Try
+    '    End Try
 
-    End Sub
+    'End Sub
 
     Private Sub AccountKeyTextEdit_EditValueChanged(sender As Object, e As EventArgs) Handles AccountKeyTextEdit.EditValueChanged
         AccountStatmentReport()
@@ -221,7 +303,7 @@ Public Class FinancialAccountingStatment
         GridControl2.DataSource = ""
         GetDat()
         Dim CustSort As String = GetAccData(AccountKeyTextEdit.Text).SortGroup
-        If CheckIfAuth(GlobalVariables.UserIDWallet, CInt(CustSort)) = False Then XtraMessageBox.Show("لا يوجد صلاحية") : Exit Sub
+        If CheckIfAuth(GlobalVariables.UserIDWallet, CInt(CustSort)) = False Then Exit Sub
 
         AccounStatment(CStr(Format(DateEditFrom.DateTime, "yyyy-MM-dd")), CStr(Format(DateEditTo.DateTime, "yyyy-MM-dd")))
 
@@ -232,9 +314,8 @@ Public Class FinancialAccountingStatment
         InsertLog(Me.Name, AccountKeyTextEdit.Text)
     End Sub
 
-    Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
+    Private Sub SimpleButton2_Click(sender As Object, e As EventArgs)
         InsertLog(Me.Name, AccountKeyTextEdit.Text & "Chk")
-        If AccountKeyTextEdit.Text = "1800013" Then Exit Sub
         GetCheks(CStr(Format(DateEdit1.DateTime, "yyyy-MM-dd")), CStr(Format(DateEdit2.DateTime, "yyyy-MM-dd")), AccountKeyTextEdit.Text)
 
     End Sub
@@ -338,71 +419,15 @@ Public Class FinancialAccountingStatment
         WizCountOrpak.Text = "تقرير اورباك"
     End Sub
 
-    Private Sub SimpleButton1_Click_1(sender As Object, e As EventArgs) Handles SimpleButton1.Click
-        AccountStatmentReport()
+    Private Sub SimpleButton1_Click_1(sender As Object, e As EventArgs)
+
     End Sub
 
 
 
 
-    Private Sub SimpleButton5_Click(sender As Object, e As EventArgs) Handles SimpleButton5.Click
-        Try
-            Dim RightHeader As String, MiddleHeader As String, LeftHeader As String
-            RightHeader = String.Empty
-            MiddleHeader = "  كشف حساب  " & " " & " " & Me.TextEdit2.Text & " " & Me.AccountKeyTextEdit.Text
-            LeftHeader = WizCountOrpak.Text
+    Private Sub SimpleButton5_Click(sender As Object, e As EventArgs)
 
-            Dim RightFooter As String = "Pages: [Page # of Pages #]"
-            Dim MiddleFooter As String = "User: [User Name]"
-            Dim LeftFooter As String = "Date: [Date Printed]"
-
-
-
-
-            Dim grids As Control() = New Control() {GridControl2}
-
-            Dim ps As New DevExpress.XtraPrinting.PrintingSystem()
-            Dim compositeLink As New DevExpress.XtraPrintingLinks.CompositeLink()
-            compositeLink.PrintingSystem = ps
-
-            For Each grid As Control In grids
-                Dim link As New DevExpress.XtraPrinting.PrintableComponentLink()
-                link.Component = CType(grid, DevExpress.XtraPrinting.IPrintable)
-                compositeLink.Links.Add(link)
-                link.PrintingSystem.Document.AutoFitToPagesWidth = 1
-            Next
-
-            compositeLink.Landscape = False
-            compositeLink.Margins.Left = 2
-            compositeLink.Margins.Right = 2
-
-            compositeLink.Margins.Bottom = 10
-            compositeLink.Margins.Top = 10
-
-            'compositeLink.PrintingSystem.PageMargins.Left = 0
-            'compositeLink.PrintingSystem.PageMargins.Right = 0
-            'compositeLink.PrintingSystem.PageMargins.Top = 0
-            'compositeLink.PrintingSystem.PageMargins.Bottom = 0
-
-            Dim phf As DevExpress.XtraPrinting.PageHeaderFooter =
-           TryCast(compositeLink.PageHeaderFooter, DevExpress.XtraPrinting.PageHeaderFooter)
-            phf.Header.Content.Clear()
-            phf.Header.Content.AddRange(New String() _
-            {RightHeader, MiddleHeader, LeftHeader})
-            phf.Header.LineAlignment = DevExpress.XtraPrinting.BrickAlignment.Far
-
-            phf.Footer.Content.Clear()
-            phf.Footer.Content.AddRange(New String() _
-            {RightFooter, MiddleFooter, LeftFooter})
-            phf.Footer.LineAlignment = DevExpress.XtraPrinting.BrickAlignment.Far
-
-
-            compositeLink.CreateDocument()
-
-            compositeLink.ShowPreview()
-        Catch ex As Exception
-            MsgBox("لا يوجد بيانات")
-        End Try
     End Sub
 
     Private Sub SimpleButton6_Click(sender As Object, e As EventArgs) Handles SimpleButton6.Click
@@ -457,12 +482,17 @@ Public Class FinancialAccountingStatment
         My.Forms.FinancialTransDet.SqlDataSource1.Queries(0).Parameters(0).Value = Ref2
         My.Forms.FinancialTransDet.SqlDataSource1.Queries(0).Parameters(1).Value = TransDAte
         My.Forms.FinancialTransDet.SqlDataSource1.Fill()
-        FinancialTransDet.Show()
+        FinancialTransDet.ShowDialog()
     End Sub
 
     Private Sub GridControl2_Click(sender As Object, e As EventArgs) Handles GridControl2.Click
 
     End Sub
+    Private Sub gridView1_CustomRowFilter(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.RowFilterEventArgs) Handles GridView2.CustomRowFilter
+        e.Handled = True
+        e.Visible = True
+    End Sub
+
 
     Private Sub SimpleButton9_Click(sender As Object, e As EventArgs)
         Dim FileName As String = "E:\Grid.xls"
@@ -581,9 +611,6 @@ Public Class FinancialAccountingStatment
 
     Private Function GetCheks(FromDate As String, ToDate As String, AccNo As String) As Integer
 
-        If AccNo = "1800013" Then
-            ToDate = "2020-12-31"
-        End If
 
         Try
             Dim sql As New SQLControl
@@ -604,7 +631,7 @@ Public Class FinancialAccountingStatment
 
     Private Sub SimpleButton9_Click_1(sender As Object, e As EventArgs) Handles SimpleButton9.Click
         DateEdit1.DateTime = CDate(DateTime.Now.ToString("yyyy-MM-dd 00:00:00.000"))
-        DateEdit2.DateTime = CDate(DateTime.Now.AddYears(+1).ToString("yyyy-MM-dd 00:00:00.000"))
+        DateEdit2.DateTime = CDate(DateTime.Now.AddYears(+10).ToString("yyyy-MM-dd 00:00:00.000"))
         GetCheks(CStr(Format(DateEdit1.DateTime, "yyyy-MM-dd")), CStr(Format(DateEdit2.DateTime, "yyyy-MM-dd")), AccountKeyTextEdit.Text)
         InsertLog(Me.Name, AccountKeyTextEdit.Text & "Chk")
     End Sub
@@ -617,7 +644,6 @@ Public Class FinancialAccountingStatment
                                            [Currency]      ,[DepositID]      ,[DepositFlag]      ,CASE WHEN SuFDlr  = 0 THEN SuF   else SuFDlr   END AS NIS
                                     FROM [ALHUDA].[dbo].[Cheqs]
                                     Where DepositFlag=0 and AccKey='" & AccountKeyTextEdit.Text & "' "
-            If AccountKeyTextEdit.Text = "1800013" Then SqlString = SqlString + " and ValueDate <  '2020-12-31' "
             SqlString = SqlString + "  Order By ValueDate "
             sql.WizCountRunQuery(SqlString)
             GridControl1.DataSource = sql.SQLDS.Tables(0)
@@ -906,35 +932,7 @@ Public Class FinancialAccountingStatment
     End Sub
 
     Private Sub SimpleButton16_Click(sender As Object, e As EventArgs) Handles SimpleButton16.Click
-        Dim i As Integer
-        Dim CheqNO As String
-        Dim CheqAccNo As String
-        Dim SqlString As String
-        Dim sql As New SQLControl
-        Dim ArrCheq(GridView1.RowCount - 1) As Integer
-        Dim myList As String = ""
-        Dim ChequesCount As Integer = 0
-        Dim IDTable As New DataTable
 
-
-
-
-
-
-        For i = 0 To GridView1.RowCount - 1
-            CheqNO = CType(GridView1.GetRowCellValue(i, "CheqNumber"), String)
-            CheqAccNo = CType(GridView1.GetRowCellValue(i, "BankAccNum"), String)
-            SqlString = "Select (ID) As ChequeID ,FrontImage,CHECK_NO,ACCOUNT_NO,SORT_ID,IB_BANK_ID  from Checks where [ACCOUNT_NO]= '" & CheqAccNo & "' and [CHECK_NO] ='" & CheqNO & "'"
-            sql.ChuquesRunQuery(SqlString)
-            If sql.SQLDS.Tables(0).Rows.Count > 0 Then
-                IDTable.Merge(sql.SQLDS.Tables(0))
-            End If
-        Next i
-
-
-
-
-        GridControl4.DataSource = IDTable
     End Sub
 
     Private Sub SimpleButton17_Click(sender As Object, e As EventArgs) Handles SimpleButton17.Click
@@ -996,7 +994,7 @@ ByVal e As RowCellCustomDrawEventArgs) Handles GridView1.CustomDrawCell
         'lnk.ShowPreview()
     End Sub
 
-    Private Sub SimpleButton18_Click(sender As Object, e As EventArgs) Handles SimpleButton18.Click
+    Private Sub SimpleButton18_Click(sender As Object, e As EventArgs)
         ShowGridPreview()
     End Sub
 
@@ -1039,4 +1037,126 @@ ByVal e As RowCellCustomDrawEventArgs) Handles GridView1.CustomDrawCell
         End Try
 
     End Function
+
+    Private Sub SimpleButton20_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub SimpleButton21_Click(sender As Object, e As EventArgs) Handles SimpleButton21.Click
+        Dim AccNo As String
+        AccNo = CStr(AccountKeyTextEdit.EditValue)
+        If String.IsNullOrEmpty(AccNo) Then
+            Exit Sub
+        Else
+            My.Forms.FinanceAccDetails.TextEditAccountKey.Text = CStr(AccNo)
+            FinanceAccDetails.Show()
+        End If
+    End Sub
+
+    Private Sub SimpleButton20_Click_1(sender As Object, e As EventArgs) Handles SimpleButton20.Click
+        Try
+            Dim RightHeader As String, MiddleHeader As String, LeftHeader As String
+            RightHeader = String.Empty
+            MiddleHeader = "  كشف حساب  " & " " & " " & Me.TextEdit2.Text & " " & Me.AccountKeyTextEdit.Text
+            LeftHeader = WizCountOrpak.Text
+
+            Dim RightFooter As String = "Pages: [Page # of Pages #]"
+            Dim MiddleFooter As String = "User: [User Name]"
+            Dim LeftFooter As String = "Date: [Date Printed]"
+
+
+
+
+            Dim grids As Control() = New Control() {GridControl2}
+
+            Dim ps As New DevExpress.XtraPrinting.PrintingSystem()
+            Dim compositeLink As New DevExpress.XtraPrintingLinks.CompositeLink()
+            compositeLink.PrintingSystem = ps
+
+            For Each grid As Control In grids
+                Dim link As New DevExpress.XtraPrinting.PrintableComponentLink()
+                link.Component = CType(grid, DevExpress.XtraPrinting.IPrintable)
+                compositeLink.Links.Add(link)
+                link.PrintingSystem.Document.AutoFitToPagesWidth = 1
+                link.RightToLeftLayout = True
+            Next
+
+            'compositeLink.Landscape = False
+            'compositeLink.Margins.Left = 50
+            'compositeLink.Margins.Right = 50
+
+            'compositeLink.Margins.Bottom = 50
+            'compositeLink.Margins.Top = 50
+
+            'compositeLink.PrintingSystem.PageMargins.Left = 0
+            'compositeLink.PrintingSystem.PageMargins.Right = 0
+            'compositeLink.PrintingSystem.PageMargins.Top = 0
+            'compositeLink.PrintingSystem.PageMargins.Bottom = 0
+
+            Dim phf As DevExpress.XtraPrinting.PageHeaderFooter =
+           TryCast(compositeLink.PageHeaderFooter, DevExpress.XtraPrinting.PageHeaderFooter)
+            phf.Header.Content.Clear()
+            phf.Header.Content.AddRange(New String() _
+            {RightHeader, MiddleHeader, LeftHeader})
+            phf.Header.LineAlignment = DevExpress.XtraPrinting.BrickAlignment.Far
+
+            phf.Footer.Content.Clear()
+            phf.Footer.Content.AddRange(New String() _
+            {RightFooter, MiddleFooter, LeftFooter})
+            phf.Footer.LineAlignment = DevExpress.XtraPrinting.BrickAlignment.Far
+            compositeLink.RightToLeftLayout = True
+
+            compositeLink.CreateDocument()
+
+            compositeLink.ShowPreview()
+        Catch ex As Exception
+            MsgBox("لا يوجد بيانات")
+        End Try
+    End Sub
+
+    Private Sub SimpleButton5_Click_1(sender As Object, e As EventArgs) Handles SimpleButton5.Click
+        AccountStatmentReport()
+    End Sub
+
+    Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+        GridView2.OptionsSelection.MultiSelect = True
+        GridView2.SelectAll()
+        GridView2.CopyToClipboard()
+        GridView2.OptionsSelection.MultiSelect = False
+    End Sub
+
+    Private Sub SimpleButton22_Click(sender As Object, e As EventArgs)
+        Dim i As Integer
+        Dim CheqNO As String
+        Dim CheqAccNo As String
+        Dim SqlString As String
+        Dim sql As New SQLControl
+        Dim ArrCheq(GridView1.RowCount - 1) As Integer
+        Dim IDTable As New DataTable
+
+        '  Dim _CheksImagesDateFrom As String = Format(CheksImagesDateFrom.DateTime, "yyyy-MM-dd")
+        ' Dim _CheksImagesDateTo As String = Format(CheksImagesDateTo.DateTime, "yyyy-MM-dd")
+
+
+
+
+        For i = 0 To GridView1.RowCount - 1
+            CheqNO = CType(GridView1.GetRowCellValue(i, "CheqNumber"), String)
+            CheqAccNo = CType(GridView1.GetRowCellValue(i, "BankAccNum"), String)
+            SqlString = "Select (ID) As ChequeID ,FrontImage,CHECK_NO,ACCOUNT_NO,SORT_ID,IB_BANK_ID  from Checks where [ACCOUNT_NO]= '" & CheqAccNo & "' and [CHECK_NO] ='" & CheqNO & "'"
+            sql.ChuquesRunQuery(SqlString)
+            If sql.SQLDS.Tables(0).Rows.Count > 0 Then
+                IDTable.Merge(sql.SQLDS.Tables(0))
+            End If
+        Next i
+
+
+
+
+        GridControl4.DataSource = IDTable
+    End Sub
+
+    Private Sub SimpleButton2_Click_1(sender As Object, e As EventArgs) Handles SimpleButton2.Click
+
+    End Sub
 End Class
